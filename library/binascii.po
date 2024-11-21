@@ -10,30 +10,30 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-12-11 17:00+0100\n"
 "Last-Translator: José Luis Salgado Banda\n"
-"Language-Team: python-doc-es\n"
 "Language: es_CO\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.0.1\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/binascii.rst:2
-msgid ":mod:`binascii` --- Convert between binary and ASCII"
+#, fuzzy
+msgid ":mod:`!binascii` --- Convert between binary and ASCII"
 msgstr ":mod:`binascii` --- Convertir entre binario y ASCII"
 
-#: ../Doc/library/binascii.rst:14
+#: ../Doc/library/binascii.rst:13
+#, fuzzy
 msgid ""
 "The :mod:`binascii` module contains a number of methods to convert between "
 "binary and various ASCII-encoded binary representations. Normally, you will "
-"not use these functions directly but use wrapper modules like :mod:`uu` or :"
-"mod:`base64` instead. The :mod:`binascii` module contains low-level "
-"functions written in C for greater speed that are used by the higher-level "
-"modules."
+"not use these functions directly but use wrapper modules like :mod:`base64` "
+"instead. The :mod:`binascii` module contains low-level functions written in "
+"C for greater speed that are used by the higher-level modules."
 msgstr ""
 "El módulo :mod:`binascii` contiene una serie de métodos para convertir entre "
 "representaciones binarias y varias representaciones binarias codificadas en "
@@ -42,7 +42,7 @@ msgstr ""
 "módulo :mod:`binascii` contiene funciones de bajo nivel escritas en C para "
 "una mayor velocidad que son utilizadas por los módulos de nivel superior."
 
-#: ../Doc/library/binascii.rst:23
+#: ../Doc/library/binascii.rst:22
 msgid ""
 "``a2b_*`` functions accept Unicode strings containing only ASCII characters. "
 "Other functions only accept :term:`bytes-like objects <bytes-like object>` "
@@ -54,17 +54,17 @@ msgstr ""
 "<bytes-like object>` (como :class:`bytes`, :class:`bytearray` y otros "
 "objetos que admiten el protocolo de búfer)."
 
-#: ../Doc/library/binascii.rst:28
+#: ../Doc/library/binascii.rst:27
 msgid "ASCII-only unicode strings are now accepted by the ``a2b_*`` functions."
 msgstr ""
 "Las cadenas unicode con sólo caracteres ASCII son ahora aceptadas por las "
 "funciones ``a2b_*``."
 
-#: ../Doc/library/binascii.rst:32
+#: ../Doc/library/binascii.rst:31
 msgid "The :mod:`binascii` module defines the following functions:"
 msgstr "El módulo :mod:`binascii` define las siguientes funciones:"
 
-#: ../Doc/library/binascii.rst:37
+#: ../Doc/library/binascii.rst:36
 msgid ""
 "Convert a single line of uuencoded data back to binary and return the binary "
 "data. Lines normally contain 45 (binary) bytes, except for the last line. "
@@ -75,7 +75,7 @@ msgstr ""
 "excepto por la última línea. Los datos de línea pueden ir seguidos de "
 "espacios en blanco."
 
-#: ../Doc/library/binascii.rst:44
+#: ../Doc/library/binascii.rst:43
 msgid ""
 "Convert binary data to a line of ASCII characters, the return value is the "
 "converted line, including a newline char. The length of *data* should be at "
@@ -87,11 +87,11 @@ msgstr ""
 "*data* debe ser como máximo 45. Si *backtick* es verdadero, los ceros se "
 "representan mediante ``'`'`` en lugar de espacios."
 
-#: ../Doc/library/binascii.rst:48
+#: ../Doc/library/binascii.rst:47
 msgid "Added the *backtick* parameter."
 msgstr "Se ha añadido el parámetro *backtick*."
 
-#: ../Doc/library/binascii.rst:54
+#: ../Doc/library/binascii.rst:53
 msgid ""
 "Convert a block of base64 data back to binary and return the binary data. "
 "More than one line may be passed at a time."
@@ -99,7 +99,7 @@ msgstr ""
 "Convierte un bloque de datos en base64 de nuevo a binario y retorna los "
 "datos binarios. Se puede pasar más de una línea a la vez."
 
-#: ../Doc/library/binascii.rst:57
+#: ../Doc/library/binascii.rst:56
 msgid ""
 "If *strict_mode* is true, only valid base64 data will be converted. Invalid "
 "base64 data will raise :exc:`binascii.Error`."
@@ -108,7 +108,7 @@ msgstr ""
 "válidos. Los datos en base64 no válidos lanzarán :exc:`binascii.Error`."
 
 # la traducción es correcta
-#: ../Doc/library/binascii.rst:64
+#: ../Doc/library/binascii.rst:59
 msgid "Valid base64:"
 msgstr "base64 válido:"
 
@@ -194,9 +194,9 @@ msgid ""
 "used in the binhex4 format."
 msgstr ""
 "Calcula un valor CRC de 16 bits de *data*, comenzando con *value* como el "
-"CRC inicial, y retorna el resultado. Utiliza el polinomio CRC-CCITT *x*:sup:"
-"`16` + *x*:sup:`12` + *x*:sup:`5` + 1, a menudo representado como 0x1021. "
-"Este CRC se utiliza en el formato binhex4."
+"CRC inicial, y retorna el resultado. Utiliza el polinomio CRC-CCITT "
+"*x*:sup:`16` + *x*:sup:`12` + *x*:sup:`5` + 1, a menudo representado como "
+"0x1021. Este CRC se utiliza en el formato binhex4."
 
 #: ../Doc/library/binascii.rst:110
 msgid ""
@@ -212,6 +212,15 @@ msgstr ""
 "verificación del archivo ZIP. Dado que el algoritmo está diseñado para "
 "usarse como un algoritmo de suma de verificación, no es adecuado para usarlo "
 "como algoritmo hash general. Úselo de la siguiente manera::"
+
+#: ../Doc/library/binascii.rst:116
+msgid ""
+"print(binascii.crc32(b\"hello world\"))\n"
+"# Or, in two pieces:\n"
+"crc = binascii.crc32(b\"hello\")\n"
+"crc = binascii.crc32(b\" world\", crc)\n"
+"print('crc32 = {:#010x}'.format(crc))"
+msgstr ""
 
 #: ../Doc/library/binascii.rst:122
 msgid "The result is always unsigned."
@@ -268,8 +277,8 @@ msgstr ""
 #: ../Doc/library/binascii.rst:161
 msgid ""
 "Similar functionality (accepting only text string arguments, but more "
-"liberal towards whitespace) is also accessible using the :meth:`bytes."
-"fromhex` class method."
+"liberal towards whitespace) is also accessible using "
+"the :meth:`bytes.fromhex` class method."
 msgstr ""
 "Funcionalidad similar (aceptar sólo argumentos de cadena de texto, pero más "
 "liberal hacia espacios en blanco) también es accesible mediante el método de "
@@ -300,19 +309,11 @@ msgstr ""
 "Soporte para compatibilidad con RFC de codificación de estilo base64 en base "
 "16, 32, 64 y 85."
 
-#: ../Doc/library/binascii.rst:183
-msgid "Module :mod:`uu`"
-msgstr "Módulo :mod:`uu`"
-
-#: ../Doc/library/binascii.rst:183
-msgid "Support for UU encoding used on Unix."
-msgstr "Soporte para codificación *UU* usada en Unix."
-
-#: ../Doc/library/binascii.rst:185
+#: ../Doc/library/binascii.rst:182
 msgid "Module :mod:`quopri`"
 msgstr "Módulo :mod:`quopri`"
 
-#: ../Doc/library/binascii.rst:186
+#: ../Doc/library/binascii.rst:183
 msgid "Support for quoted-printable encoding used in MIME email messages."
 msgstr ""
 "Soporte para codificación imprimible entre comillas utilizada en mensajes de "
@@ -321,10 +322,6 @@ msgstr ""
 #: ../Doc/library/binascii.rst:8
 msgid "module"
 msgstr "module"
-
-#: ../Doc/library/binascii.rst:8
-msgid "uu"
-msgstr "uu"
 
 #: ../Doc/library/binascii.rst:8
 msgid "base64"

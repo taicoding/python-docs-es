@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-02-07 09:17-0600\n"
 "Last-Translator: Cristián Maureira-Fredes <cmaureirafredes@gmail.com>\n"
 "Language: es_AR\n"
@@ -19,10 +19,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/http.client.rst:2
-msgid ":mod:`http.client` --- HTTP protocol client"
+#, fuzzy
+msgid ":mod:`!http.client` --- HTTP protocol client"
 msgstr ":mod:`http.client` --- Cliente de protocolo HTTP"
 
 #: ../Doc/library/http.client.rst:7
@@ -32,12 +33,13 @@ msgstr "**Código fuente:** :source:`Lib/http/client.py`"
 #: ../Doc/library/http.client.rst:17
 msgid ""
 "This module defines classes that implement the client side of the HTTP and "
-"HTTPS protocols.  It is normally not used directly --- the module :mod:"
-"`urllib.request` uses it to handle URLs that use HTTP and HTTPS."
+"HTTPS protocols.  It is normally not used directly --- the "
+"module :mod:`urllib.request` uses it to handle URLs that use HTTP and HTTPS."
 msgstr ""
 "Este módulo define clases que implementan el lado del cliente de los "
-"protocolos HTTP y HTTPS. Normalmente no se usa directamente --- el módulo :"
-"mod:`urllib.request` lo usa para gestionar URLs que utilizan HTTP y HTTPS."
+"protocolos HTTP y HTTPS. Normalmente no se usa directamente --- el "
+"módulo :mod:`urllib.request` lo usa para gestionar URLs que utilizan HTTP y "
+"HTTPS."
 
 #: ../Doc/library/http.client.rst:23
 #, fuzzy
@@ -58,14 +60,14 @@ msgstr ""
 
 #: ../Doc/includes/wasm-notavail.rst:3
 #, fuzzy
-msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
+msgid ":ref:`Availability <availability>`: not WASI."
 msgstr ":ref:`Disponibilidad <availability>`: no Emscripten, no WASI."
 
 #: ../Doc/includes/wasm-notavail.rst:5
+#, fuzzy
 msgid ""
-"This module does not work or is not available on WebAssembly platforms "
-"``wasm32-emscripten`` and ``wasm32-wasi``. See :ref:`wasm-availability` for "
-"more information."
+"This module does not work or is not available on WebAssembly. See :ref:`wasm-"
+"availability` for more information."
 msgstr ""
 "Este módulo no funciona o no está disponible en plataformas WebAssembly "
 "``wasm32-emscripten`` y ``wasm32-wasi``. Véase :ref:`wasm-availability` para "
@@ -109,6 +111,14 @@ msgstr ""
 "Por ejemplo, las siguientes llamadas crean instancias que se conectan al "
 "servidor en el mismo host y puerto::"
 
+#: ../Doc/library/http.client.rst:54
+msgid ""
+">>> h1 = http.client.HTTPConnection('www.python.org')\n"
+">>> h2 = http.client.HTTPConnection('www.python.org:80')\n"
+">>> h3 = http.client.HTTPConnection('www.python.org', 80)\n"
+">>> h4 = http.client.HTTPConnection('www.python.org', 80, timeout=10)"
+msgstr ""
+
 #: ../Doc/library/http.client.rst:59
 msgid "*source_address* was added."
 msgstr "*source_address* fue adicionado."
@@ -150,8 +160,8 @@ msgstr "*source_address*, *context* y *check_hostname* fueron adicionados."
 #: ../Doc/library/http.client.rst:84
 #, fuzzy
 msgid ""
-"This class now supports HTTPS virtual hosts if possible (that is, if :const:"
-"`ssl.HAS_SNI` is true)."
+"This class now supports HTTPS virtual hosts if possible (that is, "
+"if :const:`ssl.HAS_SNI` is true)."
 msgstr ""
 "Esta clase ahora soporta *hosts* virtuales HTTPS si es posible (es decir, "
 "si :data:`ssl.HAS_SNI` es verdadero)."
@@ -165,10 +175,11 @@ msgstr ""
 "0.9 ya no son compatibles."
 
 #: ../Doc/library/http.client.rst:92
+#, fuzzy
 msgid ""
 "This class now performs all the necessary certificate and hostname checks by "
-"default. To revert to the previous, unverified, behavior :func:`ssl."
-"_create_unverified_context` can be passed to the *context* parameter."
+"default. To revert to the previous, unverified, behavior :func:`!"
+"ssl._create_unverified_context` can be passed to the *context* parameter."
 msgstr ""
 "Esta clase ahora realiza todas las comprobaciones necesarias de certificados "
 "y nombres de host de forma predeterminada. Para volver al comportamiento "
@@ -186,15 +197,16 @@ msgstr ""
 "*context* personalizado."
 
 #: ../Doc/library/http.client.rst:103
+#, fuzzy
 msgid ""
 "This class now sends an ALPN extension with protocol indicator ``http/1.1`` "
-"when no *context* is given. Custom *context* should set ALPN protocols with :"
-"meth:`~ssl.SSLContext.set_alpn_protocol`."
+"when no *context* is given. Custom *context* should set ALPN protocols "
+"with :meth:`~ssl.SSLContext.set_alpn_protocols`."
 msgstr ""
 "Esta clase ahora envía una extensión ALPN con el indicador de protocolo "
 "``http/1.1`` cuando no se proporciona *context*. El *context* personalizado "
-"debe configurar los protocolos ALPN con :meth:`~ssl.SSLContext."
-"set_alpn_protocol`."
+"debe configurar los protocolos ALPN "
+"con :meth:`~ssl.SSLContext.set_alpn_protocol`."
 
 #: ../Doc/library/http.client.rst:108
 msgid ""
@@ -223,28 +235,30 @@ msgid "This module provides the following function:"
 msgstr "Este módulo proporciona la siguiente función:"
 
 #: ../Doc/library/http.client.rst:126
+#, fuzzy
 msgid ""
 "Parse the headers from a file pointer *fp* representing a HTTP request/"
-"response. The file has to be a :class:`BufferedIOBase` reader (i.e. not "
+"response. The file has to be a :class:`~io.BufferedIOBase` reader (i.e. not "
 "text) and must provide a valid :rfc:`2822` style header."
 msgstr ""
 "Analiza los encabezados desde un puntero de archivo *fp* que representa una "
-"solicitud/respuesta HTTP. El archivo debe ser un lector :class:"
-"`BufferedIOBase` (es decir, no texto) y debe proporcionar un encabezado de "
-"estilo válido :rfc:`2822`."
+"solicitud/respuesta HTTP. El archivo debe ser un "
+"lector :class:`BufferedIOBase` (es decir, no texto) y debe proporcionar un "
+"encabezado de estilo válido :rfc:`2822`."
 
 #: ../Doc/library/http.client.rst:130
 msgid ""
 "This function returns an instance of :class:`http.client.HTTPMessage` that "
-"holds the header fields, but no payload (the same as :attr:`HTTPResponse."
-"msg` and :attr:`http.server.BaseHTTPRequestHandler.headers`). After "
-"returning, the file pointer *fp* is ready to read the HTTP body."
+"holds the header fields, but no payload (the same "
+"as :attr:`HTTPResponse.msg` "
+"and :attr:`http.server.BaseHTTPRequestHandler.headers`). After returning, "
+"the file pointer *fp* is ready to read the HTTP body."
 msgstr ""
 "Esta función retorna una instancia de :class:`http.client.HTTPMessage` que "
-"contiene los campos de encabezado, pero no un *payload* (lo mismo que :attr:"
-"`HTTPResponse.msg` y :attr:`http.server.BaseHTTPRequestHandler.headers` ) "
-"Después de regresar, el puntero de archivo *fp* está listo para leer el "
-"cuerpo HTTP."
+"contiene los campos de encabezado, pero no un *payload* (lo mismo "
+"que :attr:`HTTPResponse.msg` "
+"y :attr:`http.server.BaseHTTPRequestHandler.headers` ) Después de regresar, "
+"el puntero de archivo *fp* está listo para leer el cuerpo HTTP."
 
 #: ../Doc/library/http.client.rst:137
 msgid ""
@@ -264,11 +278,11 @@ msgstr "Las siguientes excepciones son lanzadas según corresponda:"
 
 #: ../Doc/library/http.client.rst:147
 msgid ""
-"The base class of the other exceptions in this module.  It is a subclass of :"
-"exc:`Exception`."
+"The base class of the other exceptions in this module.  It is a subclass "
+"of :exc:`Exception`."
 msgstr ""
-"La clase base de las otras excepciones en este módulo. Es una subclase de :"
-"exc:`Exception`."
+"La clase base de las otras excepciones en este módulo. Es una subclase "
+"de :exc:`Exception`."
 
 #: ../Doc/library/http.client.rst:153 ../Doc/library/http.client.rst:164
 #: ../Doc/library/http.client.rst:169 ../Doc/library/http.client.rst:174
@@ -372,29 +386,29 @@ msgstr ""
 #: ../Doc/library/http.client.rst:262
 msgid ""
 "If *body* is specified, the specified data is sent after the headers are "
-"finished.  It may be a :class:`str`, a :term:`bytes-like object`, an open :"
-"term:`file object`, or an iterable of :class:`bytes`.  If *body* is a "
+"finished.  It may be a :class:`str`, a :term:`bytes-like object`, an "
+"open :term:`file object`, or an iterable of :class:`bytes`.  If *body* is a "
 "string, it is encoded as ISO-8859-1, the default for HTTP.  If it is a bytes-"
 "like object, the bytes are sent as is.  If it is a :term:`file object`, the "
 "contents of the file is sent; this file object should support at least the "
-"``read()`` method.  If the file object is an instance of :class:`io."
-"TextIOBase`, the data returned by the ``read()`` method will be encoded as "
-"ISO-8859-1, otherwise the data returned by ``read()`` is sent as is.  If "
-"*body* is an iterable, the elements of the iterable are sent as is until the "
-"iterable is exhausted."
+"``read()`` method.  If the file object is an instance "
+"of :class:`io.TextIOBase`, the data returned by the ``read()`` method will "
+"be encoded as ISO-8859-1, otherwise the data returned by ``read()`` is sent "
+"as is.  If *body* is an iterable, the elements of the iterable are sent as "
+"is until the iterable is exhausted."
 msgstr ""
 "Si se especifica *body*, los datos especificados se envían una vez "
 "finalizados los encabezados. Puede ser :class:`str`, un objeto :term:`bytes-"
-"like object`, un objeto :term:`file object` abierto, o un iterable de :class:"
-"`bytes`. Si *body* es una cadena, se codifica como ISO-8859-1, el valor "
-"predeterminado para HTTP. Si es un objeto de tipo bytes, los bytes se envían "
-"tal cual. Si es un objeto :term:`file object`, se envía el contenido del "
-"archivo; Este objeto de archivo debe soportar al menos el método ``read()``. "
-"Si el objeto de archivo es una instancia de :class:`io.TextIOBase`, los "
-"datos retornados por el método ``read()`` se codificarán como ISO-8859-1, de "
-"lo contrario, los datos retornados por ``read()`` se envía como está. Si "
-"*body* es un iterable, los elementos del iterable se envían tal cual hasta "
-"que se agota el iterable."
+"like object`, un objeto :term:`file object` abierto, o un iterable "
+"de :class:`bytes`. Si *body* es una cadena, se codifica como ISO-8859-1, el "
+"valor predeterminado para HTTP. Si es un objeto de tipo bytes, los bytes se "
+"envían tal cual. Si es un objeto :term:`file object`, se envía el contenido "
+"del archivo; Este objeto de archivo debe soportar al menos el método "
+"``read()``. Si el objeto de archivo es una instancia "
+"de :class:`io.TextIOBase`, los datos retornados por el método ``read()`` se "
+"codificarán como ISO-8859-1, de lo contrario, los datos retornados por "
+"``read()`` se envía como está. Si *body* es un iterable, los elementos del "
+"iterable se envían tal cual hasta que se agota el iterable."
 
 #: ../Doc/library/http.client.rst:274
 msgid ""
@@ -445,6 +459,17 @@ msgid ""
 "For example, to perform a ``GET`` request to ``https://docs.python.org/3/``::"
 msgstr ""
 
+#: ../Doc/library/http.client.rst:299
+msgid ""
+">>> import http.client\n"
+">>> host = \"docs.python.org\"\n"
+">>> conn = http.client.HTTPSConnection(host)\n"
+">>> conn.request(\"GET\", \"/3/\", headers={\"Host\": host})\n"
+">>> response = conn.getresponse()\n"
+">>> print(response.status, response.reason)\n"
+"200 OK"
+msgstr ""
+
 #: ../Doc/library/http.client.rst:308
 msgid ""
 "Chunked transfer encoding has been added to the HTTP protocol version 1.1.  "
@@ -454,9 +479,9 @@ msgid ""
 msgstr ""
 "La codificación de transferencia fragmentada se ha agregado al protocolo "
 "HTTP versión 1.1. A menos que se sepa que el servidor HTTP maneja HTTP 1.1, "
-"el llamador debe especificar la longitud del contenido o debe pasar un :"
-"class:`str` o un objeto similar a bytes que no sea también un archivo como "
-"la representación del cuerpo."
+"el llamador debe especificar la longitud del contenido o debe pasar "
+"un :class:`str` o un objeto similar a bytes que no sea también un archivo "
+"como la representación del cuerpo."
 
 #: ../Doc/library/http.client.rst:314
 msgid "*body* can now be an iterable."
@@ -492,13 +517,13 @@ msgstr ""
 
 #: ../Doc/library/http.client.rst:334
 msgid ""
-"If a :exc:`ConnectionError` or subclass is raised, the :class:"
-"`HTTPConnection` object will be ready to reconnect when a new request is "
-"sent."
+"If a :exc:`ConnectionError` or subclass is raised, "
+"the :class:`HTTPConnection` object will be ready to reconnect when a new "
+"request is sent."
 msgstr ""
-"Si una :exc:`ConnectionError` o una subclase fue lanzada, el objeto :class:"
-"`HTTPConnection` estará listo para volver a conectarse cuando se envíe una "
-"nueva solicitud."
+"Si una :exc:`ConnectionError` o una subclase fue lanzada, el "
+"objeto :class:`HTTPConnection` estará listo para volver a conectarse cuando "
+"se envíe una nueva solicitud."
 
 #: ../Doc/library/http.client.rst:342
 msgid ""
@@ -563,6 +588,14 @@ msgstr ""
 "constructor :class:`HTTPSConnection`, y la dirección del host al que "
 "finalmente queremos llegar al método :meth:`~HTTPConnection.set_tunnel`::"
 
+#: ../Doc/library/http.client.rst:374
+msgid ""
+">>> import http.client\n"
+">>> conn = http.client.HTTPSConnection(\"localhost\", 8080)\n"
+">>> conn.set_tunnel(\"www.python.org\")\n"
+">>> conn.request(\"HEAD\",\"/index.html\")"
+msgstr ""
+
 #: ../Doc/library/http.client.rst:381
 msgid ""
 "HTTP CONNECT tunnelling requests use protocol HTTP/1.1, upgraded from "
@@ -591,7 +624,7 @@ msgstr ""
 "defecto, esto se llama automáticamente cuando se realiza una solicitud si el "
 "cliente aún no tiene una conexión."
 
-#: ../Doc/library/http.client.rst:413
+#: ../Doc/library/http.client.rst:404
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``http.client.connect`` with "
 "arguments ``self``, ``host``, ``port``."
@@ -609,9 +642,11 @@ msgstr ""
 "Tamaño del búfer en bytes para enviar un archivo como cuerpo del mensaje."
 
 #: ../Doc/library/http.client.rst:419
+#, fuzzy
 msgid ""
-"As an alternative to using the :meth:`request` method described above, you "
-"can also send your request step by step, by using the four functions below."
+"As an alternative to using the :meth:`~HTTPConnection.request` method "
+"described above, you can also send your request step by step, by using the "
+"four functions below."
 msgstr ""
 "Como alternativa al uso del método :meth:`request` descrito anteriormente, "
 "también puede enviar su solicitud paso a paso, utilizando las cuatro "
@@ -628,11 +663,11 @@ msgid ""
 msgstr ""
 "Esta debería ser la primera llamada después de que se haya realizado la "
 "conexión al servidor. Envía una línea al servidor que consta de la cadena de "
-"caracteres *method*, la cadena de caracteres *url* y la versión HTTP "
-"(``HTTP/1.1``). Para deshabilitar el envío automático de encabezados ``Host:"
-"`` o ``Accept-Encoding:`` (por ejemplo, para aceptar codificaciones de "
-"contenido adicionales), especifique *skip_host* o *skip_accept_encoding* con "
-"valores no Falsos."
+"caracteres *method*, la cadena de caracteres *url* y la versión HTTP (``HTTP/"
+"1.1``). Para deshabilitar el envío automático de encabezados ``Host:`` o "
+"``Accept-Encoding:`` (por ejemplo, para aceptar codificaciones de contenido "
+"adicionales), especifique *skip_host* o *skip_accept_encoding* con valores "
+"no Falsos."
 
 #: ../Doc/library/http.client.rst:436
 msgid ""
@@ -662,22 +697,23 @@ msgid ""
 "*message_body* will be chunk-encoded as specified in :rfc:`7230`, Section "
 "3.3.1.  How the data is encoded is dependent on the type of *message_body*.  "
 "If *message_body* implements the :ref:`buffer interface <bufferobjects>` the "
-"encoding will result in a single chunk. If *message_body* is a :class:"
-"`collections.abc.Iterable`, each iteration of *message_body* will result in "
-"a chunk.  If *message_body* is a :term:`file object`, each call to ``."
-"read()`` will result in a chunk. The method automatically signals the end of "
-"the chunk-encoded data immediately after *message_body*."
+"encoding will result in a single chunk. If *message_body* is "
+"a :class:`collections.abc.Iterable`, each iteration of *message_body* will "
+"result in a chunk.  If *message_body* is a :term:`file object`, each call to "
+"``.read()`` will result in a chunk. The method automatically signals the end "
+"of the chunk-encoded data immediately after *message_body*."
 msgstr ""
 "Si *encode_chunked* es ``True``, el resultado de cada iteración de "
-"*message_body* se codificará en fragmentos como se especifica en :rfc:"
-"`7230`, Sección 3.3.1. La forma en que se codifican los datos depende del "
-"tipo de *message_body*. Si *message_body* implementa :ref:`buffer interface "
-"<bufferobjects>` la codificación dará como resultado un solo fragmento. Si "
-"*message_body* es una :class:`collections.abc.Iterable`, cada iteración de "
-"*message_body* dará como resultado un fragmento. Si *message_body* es un "
-"objeto :term:`file object`, cada llamada a ``.read()`` dará como resultado "
-"un fragmento. El método señala automáticamente el final de los datos "
-"codificados en fragmentos inmediatamente después de *message_body*."
+"*message_body* se codificará en fragmentos como se especifica "
+"en :rfc:`7230`, Sección 3.3.1. La forma en que se codifican los datos "
+"depende del tipo de *message_body*. Si *message_body* "
+"implementa :ref:`buffer interface <bufferobjects>` la codificación dará como "
+"resultado un solo fragmento. Si *message_body* es "
+"una :class:`collections.abc.Iterable`, cada iteración de *message_body* dará "
+"como resultado un fragmento. Si *message_body* es un objeto :term:`file "
+"object`, cada llamada a ``.read()`` dará como resultado un fragmento. El "
+"método señala automáticamente el final de los datos codificados en "
+"fragmentos inmediatamente después de *message_body*."
 
 #: ../Doc/library/http.client.rst:459
 msgid ""
@@ -693,20 +729,22 @@ msgstr ""
 "formato incorrecto."
 
 #: ../Doc/library/http.client.rst:464
-msgid "Chunked encoding support.  The *encode_chunked* parameter was added."
+#, fuzzy
+msgid "Added chunked encoding support and the *encode_chunked* parameter."
 msgstr ""
 "Soporte de codificación fragmentada. Se agregó el parámetro *encode_chunked*."
 
-#: ../Doc/library/http.client.rst:471
+#: ../Doc/library/http.client.rst:470
 msgid ""
-"Send data to the server.  This should be used directly only after the :meth:"
-"`endheaders` method has been called and before :meth:`getresponse` is called."
+"Send data to the server.  This should be used directly only after "
+"the :meth:`endheaders` method has been called and before :meth:`getresponse` "
+"is called."
 msgstr ""
 "Envía datos al servidor. Esto debe usarse directamente solo después de que "
 "se haya llamado al método :meth:`endheaders` y antes de que se llame al "
 "método :meth:`getresponse`."
 
-#: ../Doc/library/http.client.rst:484
+#: ../Doc/library/http.client.rst:474
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``http.client.send`` with "
 "arguments ``self``, ``data``."
@@ -714,11 +752,11 @@ msgstr ""
 "Lanza un :ref:`evento de auditoría <auditing>` ``http.client.send`` con los "
 "argumentos ``self``, ``data``."
 
-#: ../Doc/library/http.client.rst:481
+#: ../Doc/library/http.client.rst:480
 msgid "HTTPResponse Objects"
 msgstr "Objetos de ``HTTPResponse``"
 
-#: ../Doc/library/http.client.rst:483
+#: ../Doc/library/http.client.rst:482
 msgid ""
 "An :class:`HTTPResponse` instance wraps the HTTP response from the server.  "
 "It provides access to the request headers and the entity body.  The response "
@@ -729,7 +767,7 @@ msgstr ""
 "de la entidad. La respuesta es un objeto iterable y puede usarse en una "
 "declaración ``with``."
 
-#: ../Doc/library/http.client.rst:488
+#: ../Doc/library/http.client.rst:487
 msgid ""
 "The :class:`io.BufferedIOBase` interface is now implemented and all of its "
 "reader operations are supported."
@@ -737,12 +775,12 @@ msgstr ""
 "La interfaz :class:`io.BufferedIOBase` ahora está implementada y todas sus "
 "operaciones de lectura están soportadas."
 
-#: ../Doc/library/http.client.rst:495
+#: ../Doc/library/http.client.rst:494
 msgid "Reads and returns the response body, or up to the next *amt* bytes."
 msgstr ""
 "Lee y retorna el cuerpo de respuesta, o hasta los siguientes bytes *amt*."
 
-#: ../Doc/library/http.client.rst:499
+#: ../Doc/library/http.client.rst:498
 msgid ""
 "Reads up to the next len(b) bytes of the response body into the buffer *b*. "
 "Returns the number of bytes read."
@@ -750,7 +788,7 @@ msgstr ""
 "Lee hasta los siguientes bytes ``len(b)`` del cuerpo de respuesta en el "
 "búfer *b*. Retorna el número de bytes leídos."
 
-#: ../Doc/library/http.client.rst:506
+#: ../Doc/library/http.client.rst:505
 msgid ""
 "Return the value of the header *name*, or *default* if there is no header "
 "matching *name*.  If there is more than one  header with the name *name*, "
@@ -763,32 +801,32 @@ msgstr ""
 "iterable que no sea una sola cadena de caracteres sus elementos se retornan, "
 "de manera similar, unidos por comas."
 
-#: ../Doc/library/http.client.rst:513
+#: ../Doc/library/http.client.rst:512
 msgid "Return a list of (header, value) tuples."
 msgstr "Retorna una lista de tuplas (encabezado, valor)."
 
-#: ../Doc/library/http.client.rst:517
+#: ../Doc/library/http.client.rst:516
 msgid "Return the ``fileno`` of the underlying socket."
 msgstr "Retorna el ``fileno`` del socket implícito."
 
-#: ../Doc/library/http.client.rst:521
+#: ../Doc/library/http.client.rst:520
 msgid ""
 "A :class:`http.client.HTTPMessage` instance containing the response "
-"headers.  :class:`http.client.HTTPMessage` is a subclass of :class:`email."
-"message.Message`."
+"headers.  :class:`http.client.HTTPMessage` is a subclass "
+"of :class:`email.message.Message`."
 msgstr ""
 "Una instancia :class:`http.client.HTTPMessage` que contiene los encabezados "
-"de respuesta. :class:`http.client.HTTPMessage` es una subclase de :class:"
-"`email.message.Message`."
+"de respuesta. :class:`http.client.HTTPMessage` es una subclase "
+"de :class:`email.message.Message`."
 
-#: ../Doc/library/http.client.rst:527
+#: ../Doc/library/http.client.rst:526
 msgid ""
 "HTTP protocol version used by server.  10 for HTTP/1.0, 11 for HTTP/1.1."
 msgstr ""
 "Versión del protocolo HTTP utilizada por el servidor. 10 para HTTP/1.0, 11 "
 "para HTTP/1.1."
 
-#: ../Doc/library/http.client.rst:531
+#: ../Doc/library/http.client.rst:530
 msgid ""
 "URL of the resource retrieved, commonly used to determine if a redirect was "
 "followed."
@@ -796,23 +834,23 @@ msgstr ""
 "URL del recurso recuperado, comúnmente utilizado para determinar si se "
 "siguió una redirección."
 
-#: ../Doc/library/http.client.rst:535
+#: ../Doc/library/http.client.rst:534
 msgid ""
-"Headers of the response in the form of an :class:`email.message."
-"EmailMessage` instance."
+"Headers of the response in the form of "
+"an :class:`email.message.EmailMessage` instance."
 msgstr ""
-"Cabeceras de la respuesta en forma de una instancia :class:`email.message."
-"EmailMessage`."
+"Cabeceras de la respuesta en forma de una "
+"instancia :class:`email.message.EmailMessage`."
 
-#: ../Doc/library/http.client.rst:539
+#: ../Doc/library/http.client.rst:538
 msgid "Status code returned by server."
 msgstr "Código del estado retornado por el servidor."
 
-#: ../Doc/library/http.client.rst:543
+#: ../Doc/library/http.client.rst:542
 msgid "Reason phrase returned by server."
 msgstr "Una frase de la razón es retornada por el servidor."
 
-#: ../Doc/library/http.client.rst:547
+#: ../Doc/library/http.client.rst:546
 msgid ""
 "A debugging hook.  If :attr:`debuglevel` is greater than zero, messages will "
 "be printed to stdout as the response is read and parsed."
@@ -820,31 +858,57 @@ msgstr ""
 "Un depurador. Si :attr:`debuglevel` es mayor que cero, los mensajes se "
 "imprimirán en ``stdout`` a medida que se lee y analiza la respuesta."
 
-#: ../Doc/library/http.client.rst:552
+#: ../Doc/library/http.client.rst:551
 msgid "Is ``True`` if the stream is closed."
 msgstr "Es ``True`` si la transmisión está cerrada."
 
-#: ../Doc/library/http.client.rst:556
+#: ../Doc/library/http.client.rst:555
 msgid "Deprecated in favor of :attr:`~HTTPResponse.url`."
 msgstr "Deprecada a favor de :attr:`~HTTPResponse.url`."
 
-#: ../Doc/library/http.client.rst:561
+#: ../Doc/library/http.client.rst:560
 msgid "Deprecated in favor of :attr:`~HTTPResponse.headers`."
 msgstr "Deprecada a favor de :attr:`~HTTPResponse.headers`."
 
-#: ../Doc/library/http.client.rst:566
+#: ../Doc/library/http.client.rst:565
 msgid "Deprecated in favor of :attr:`~HTTPResponse.status`."
 msgstr "Deprecada a favor de :attr:`~HTTPResponse.status`."
 
-#: ../Doc/library/http.client.rst:570
+#: ../Doc/library/http.client.rst:569
 msgid "Examples"
 msgstr "Ejemplos"
 
-#: ../Doc/library/http.client.rst:572
+#: ../Doc/library/http.client.rst:571
 msgid "Here is an example session that uses the ``GET`` method::"
 msgstr "Aquí hay una sesión de ejemplo que usa el método ``GET`` *method*::"
 
-#: ../Doc/library/http.client.rst:597
+#: ../Doc/library/http.client.rst:573
+msgid ""
+">>> import http.client\n"
+">>> conn = http.client.HTTPSConnection(\"www.python.org\")\n"
+">>> conn.request(\"GET\", \"/\")\n"
+">>> r1 = conn.getresponse()\n"
+">>> print(r1.status, r1.reason)\n"
+"200 OK\n"
+">>> data1 = r1.read()  # This will return entire content.\n"
+">>> # The following example demonstrates reading data in chunks.\n"
+">>> conn.request(\"GET\", \"/\")\n"
+">>> r1 = conn.getresponse()\n"
+">>> while chunk := r1.read(200):\n"
+"...     print(repr(chunk))\n"
+"b'<!doctype html>\\n<!--[if\"...\n"
+"...\n"
+">>> # Example of an invalid request\n"
+">>> conn = http.client.HTTPSConnection(\"docs.python.org\")\n"
+">>> conn.request(\"GET\", \"/parrot.spam\")\n"
+">>> r2 = conn.getresponse()\n"
+">>> print(r2.status, r2.reason)\n"
+"404 Not Found\n"
+">>> data2 = r2.read()\n"
+">>> conn.close()"
+msgstr ""
+
+#: ../Doc/library/http.client.rst:596
 msgid ""
 "Here is an example session that uses the ``HEAD`` method.  Note that the "
 "``HEAD`` method never returns any data. ::"
@@ -852,11 +916,45 @@ msgstr ""
 "Aquí hay una sesión de ejemplo que usa el método ``HEAD``. Tenga en cuenta "
 "que el método ``HEAD`` nunca retorna ningún dato. ::"
 
-#: ../Doc/library/http.client.rst:612
+#: ../Doc/library/http.client.rst:599
+msgid ""
+">>> import http.client\n"
+">>> conn = http.client.HTTPSConnection(\"www.python.org\")\n"
+">>> conn.request(\"HEAD\", \"/\")\n"
+">>> res = conn.getresponse()\n"
+">>> print(res.status, res.reason)\n"
+"200 OK\n"
+">>> data = res.read()\n"
+">>> print(len(data))\n"
+"0\n"
+">>> data == b''\n"
+"True"
+msgstr ""
+
+#: ../Doc/library/http.client.rst:611
 msgid "Here is an example session that uses the ``POST`` method::"
 msgstr "Aquí hay una sesión de ejemplo que usa el método ``POST``::"
 
-#: ../Doc/library/http.client.rst:628
+#: ../Doc/library/http.client.rst:613
+msgid ""
+">>> import http.client, urllib.parse\n"
+">>> params = urllib.parse.urlencode({'@number': 12524, '@type': 'issue', "
+"'@action': 'show'})\n"
+">>> headers = {\"Content-type\": \"application/x-www-form-urlencoded\",\n"
+"...            \"Accept\": \"text/plain\"}\n"
+">>> conn = http.client.HTTPConnection(\"bugs.python.org\")\n"
+">>> conn.request(\"POST\", \"\", params, headers)\n"
+">>> response = conn.getresponse()\n"
+">>> print(response.status, response.reason)\n"
+"302 Found\n"
+">>> data = response.read()\n"
+">>> data\n"
+"b'Redirecting to <a href=\"https://bugs.python.org/issue12524\">https://"
+"bugs.python.org/issue12524</a>'\n"
+">>> conn.close()"
+msgstr ""
+
+#: ../Doc/library/http.client.rst:627
 msgid ""
 "Client side HTTP ``PUT`` requests are very similar to ``POST`` requests. The "
 "difference lies only on the server side where HTTP servers will allow "
@@ -873,18 +971,33 @@ msgstr ""
 "método apropiado. Aquí hay una sesión de ejemplo que muestra cómo enviar una "
 "solicitud ``PUT``::"
 
-#: ../Doc/library/http.client.rst:649
+#: ../Doc/library/http.client.rst:633
+msgid ""
+">>> # This creates an HTTP request\n"
+">>> # with the content of BODY as the enclosed representation\n"
+">>> # for the resource http://localhost:8080/file\n"
+"...\n"
+">>> import http.client\n"
+">>> BODY = \"***filecontents***\"\n"
+">>> conn = http.client.HTTPConnection(\"localhost\", 8080)\n"
+">>> conn.request(\"PUT\", \"/file\", BODY)\n"
+">>> response = conn.getresponse()\n"
+">>> print(response.status, response.reason)\n"
+"200, OK"
+msgstr ""
+
+#: ../Doc/library/http.client.rst:648
 msgid "HTTPMessage Objects"
 msgstr "Objetos de ``HTTPMessage``"
 
-#: ../Doc/library/http.client.rst:651
+#: ../Doc/library/http.client.rst:652
 msgid ""
 "An :class:`http.client.HTTPMessage` instance holds the headers from an HTTP "
 "response.  It is implemented using the :class:`email.message.Message` class."
 msgstr ""
 "Una instancia de :class:`http.client.HTTPMessage` contiene los encabezados "
-"de una respuesta HTTP. Se implementa utilizando la clase :class:`email."
-"message.Message`."
+"de una respuesta HTTP. Se implementa utilizando la "
+"clase :class:`email.message.Message`."
 
 #: ../Doc/library/http.client.rst:9
 msgid "HTTP"
@@ -905,35 +1018,3 @@ msgstr ""
 #: ../Doc/library/http.client.rst:13
 msgid "urllib.request"
 msgstr ""
-
-#~ msgid ""
-#~ "*key_file* and *cert_file* are deprecated in favor of *context*. Please "
-#~ "use :meth:`ssl.SSLContext.load_cert_chain` instead, or let :func:`ssl."
-#~ "create_default_context` select the system's trusted CA certificates for "
-#~ "you."
-#~ msgstr ""
-#~ "*key_file* y *cert_file* están discontinuadas en favor de *context*. Por "
-#~ "favor use :meth:`ssl.SSLContext.load_cert_chain` en su lugar, o deje que :"
-#~ "func:`ssl.create_default_context` seleccione los certificados de CA de "
-#~ "confianza del sistema para usted."
-
-#~ msgid ""
-#~ "The *check_hostname* parameter is also deprecated; the :attr:`ssl."
-#~ "SSLContext.check_hostname` attribute of *context* should be used instead."
-#~ msgstr ""
-#~ "El argumento *check_hostname* también está discontinuado; el atributo :"
-#~ "attr:`ssl.SSLContext.check_hostname` de *context* debe usarse en su lugar."
-
-#~ msgid ""
-#~ "This will send a request to the server using the HTTP request method "
-#~ "*method* and the selector *url*."
-#~ msgstr ""
-#~ "Esto enviará una solicitud al servidor utilizando el método de solicitud "
-#~ "HTTP *method* y el selector *url*."
-
-#~ msgid ""
-#~ "The *headers* argument should be a mapping of extra HTTP headers to send "
-#~ "with the request."
-#~ msgstr ""
-#~ "El argumento *headers* debe ser un mapeo de encabezados HTTP extras para "
-#~ "enviar con la solicitud."

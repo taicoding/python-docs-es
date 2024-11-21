@@ -1,26 +1,29 @@
 # Copyright (C) 2001-2020, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # Maintained by the python-doc-es workteam.
-# docs-es@python.org / https://mail.python.org/mailman3/lists/docs-es.python.org/
-# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get the list of volunteers
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get
+# the list of volunteers
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 11:59-0400\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2020-07-07 23:33+0200\n"
-"Language-Team: python-doc-es\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Last-Translator: Cristián Maureira-Fredes <cmaureirafredes@gmail.com>\n"
 "Language: es\n"
-"X-Generator: Poedit 2.3\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/getopt.rst:2
-msgid ":mod:`getopt` --- C-style parser for command line options"
+#, fuzzy
+msgid ":mod:`!getopt` --- C-style parser for command line options"
 msgstr ""
 ":mod:`getopt` --- Analizador de estilo C para opciones de línea de comando"
 
@@ -28,25 +31,33 @@ msgstr ""
 msgid "**Source code:** :source:`Lib/getopt.py`"
 msgstr "**Código fuente:** :source:`Lib/getopt.py`"
 
-#: ../Doc/library/getopt.rst:12
+#: ../Doc/library/getopt.rst:10
+msgid ""
+"The :mod:`getopt` module is :term:`soft deprecated` and will not be "
+"developed further; development will continue with the :mod:`argparse` module."
+msgstr ""
+
+#: ../Doc/library/getopt.rst:17
+#, fuzzy
 msgid ""
 "The :mod:`getopt` module is a parser for command line options whose API is "
-"designed to be familiar to users of the C :c:func:`getopt` function. Users "
-"who are unfamiliar with the C :c:func:`getopt` function or who would like to "
-"write less code and get better help and error messages should consider using "
-"the :mod:`argparse` module instead."
+"designed to be familiar to users of the C :c:func:`!getopt` function. Users "
+"who are unfamiliar with the C :c:func:`!getopt` function or who would like "
+"to write less code and get better help and error messages should consider "
+"using the :mod:`argparse` module instead."
 msgstr ""
 "El módulo :mod:`getopt` es un analizador de opciones de línea de comando "
-"cuya API está diseñada para que los usuarios de la función C :c:func:"
-"`getopt` estén familiarizados. Los usuarios que no estén familiarizados con "
-"la función C :c:func:`getopt` o que deseen escribir menos código y obtener "
-"mejor ayuda y mensajes de error deberían considerar el uso del módulo :mod:"
-"`argparse`."
+"cuya API está diseñada para que los usuarios de la función "
+"C :c:func:`getopt` estén familiarizados. Los usuarios que no estén "
+"familiarizados con la función C :c:func:`getopt` o que deseen escribir menos "
+"código y obtener mejor ayuda y mensajes de error deberían considerar el uso "
+"del módulo :mod:`argparse`."
 
-#: ../Doc/library/getopt.rst:20
+#: ../Doc/library/getopt.rst:25
+#, fuzzy
 msgid ""
-"This module helps scripts to parse the command line arguments in ``sys."
-"argv``. It supports the same conventions as the Unix :c:func:`getopt` "
+"This module helps scripts to parse the command line arguments in "
+"``sys.argv``. It supports the same conventions as the Unix :c:func:`!getopt` "
 "function (including the special meanings of arguments of the form '``-``' "
 "and '``--``').  Long options similar to those supported by GNU software may "
 "be used as well via an optional third argument."
@@ -58,18 +69,19 @@ msgstr ""
 "largas similares a las admitidas por el software GNU a través de un tercer "
 "argumento opcional."
 
-#: ../Doc/library/getopt.rst:26
+#: ../Doc/library/getopt.rst:31
 msgid "This module provides two functions and an exception:"
 msgstr "Este módulo proporciona dos funciones y una excepción:"
 
-#: ../Doc/library/getopt.rst:32
+#: ../Doc/library/getopt.rst:37
+#, fuzzy
 msgid ""
 "Parses command line options and parameter list.  *args* is the argument list "
 "to be parsed, without the leading reference to the running program. "
 "Typically, this means ``sys.argv[1:]``. *shortopts* is the string of option "
 "letters that the script wants to recognize, with options that require an "
-"argument followed by a colon (``':'``; i.e., the same format that Unix :c:"
-"func:`getopt` uses)."
+"argument followed by a colon (``':'``; i.e., the same format that "
+"Unix :c:func:`!getopt` uses)."
 msgstr ""
 "Analiza las opciones de la línea de comandos y la lista de parámetros. "
 "*args* es la lista de argumentos a analizar, sin la referencia principal al "
@@ -78,9 +90,10 @@ msgstr ""
 "reconocer, con opciones que requieren un argumento seguido de dos puntos "
 "(``':'``; es decir, el mismo formato que Unix :c:func:`getopt` usa)."
 
-#: ../Doc/library/getopt.rst:40
+#: ../Doc/library/getopt.rst:45
+#, fuzzy
 msgid ""
-"Unlike GNU :c:func:`getopt`, after a non-option argument, all further "
+"Unlike GNU :c:func:`!getopt`, after a non-option argument, all further "
 "arguments are considered also non-options. This is similar to the way non-"
 "GNU Unix systems work."
 msgstr ""
@@ -88,7 +101,7 @@ msgstr ""
 "todos los argumentos adicionales se consideran también no-opcionales. Esto "
 "es similar a la forma en que funcionan los sistemas Unix que no son GNU."
 
-#: ../Doc/library/getopt.rst:44
+#: ../Doc/library/getopt.rst:49
 msgid ""
 "*longopts*, if specified, must be a list of strings with the names of the "
 "long options which should be supported.  The leading ``'--'`` characters "
@@ -113,15 +126,15 @@ msgstr ""
 "fo`` coincidirá como ``--foo``, pero ``--f`` no coincidirá de forma "
 "exclusiva, por lo que se lanzará :exc:`GetoptError`."
 
-#: ../Doc/library/getopt.rst:55
+#: ../Doc/library/getopt.rst:60
 msgid ""
 "The return value consists of two elements: the first is a list of ``(option, "
 "value)`` pairs; the second is the list of program arguments left after the "
 "option list was stripped (this is a trailing slice of *args*).  Each option-"
 "and-value pair returned has the option as its first element, prefixed with a "
-"hyphen for short options (e.g., ``'-x'``) or two hyphens for long options (e."
-"g., ``'--long-option'``), and the option argument as its second element, or "
-"an empty string if the option has no argument.  The options occur in the "
+"hyphen for short options (e.g., ``'-x'``) or two hyphens for long options "
+"(e.g., ``'--long-option'``), and the option argument as its second element, "
+"or an empty string if the option has no argument.  The options occur in the "
 "list in the same order in which they were found, thus allowing multiple "
 "occurrences.  Long and short options may be mixed."
 msgstr ""
@@ -136,7 +149,7 @@ msgstr ""
 "lista en el mismo orden en que se encontraron, lo que permite múltiples "
 "ocurrencias. Las opciones largas y cortas pueden ser mixtas."
 
-#: ../Doc/library/getopt.rst:68
+#: ../Doc/library/getopt.rst:73
 msgid ""
 "This function works like :func:`getopt`, except that GNU style scanning mode "
 "is used by default. This means that option and non-option arguments may be "
@@ -149,10 +162,11 @@ msgstr ""
 "procesamiento de opciones tan pronto como se encuentra un argumento no-"
 "opcionales."
 
-#: ../Doc/library/getopt.rst:73
+#: ../Doc/library/getopt.rst:78
+#, fuzzy
 msgid ""
 "If the first character of the option string is ``'+'``, or if the "
-"environment variable :envvar:`POSIXLY_CORRECT` is set, then option "
+"environment variable :envvar:`!POSIXLY_CORRECT` is set, then option "
 "processing stops as soon as a non-option argument is encountered."
 msgstr ""
 "Si el primer carácter de la cadena de opciones es ``'+'``, o si la variable "
@@ -160,57 +174,103 @@ msgstr ""
 "opciones se detiene tan pronto como se encuentre un argumento que no sea de "
 "opción."
 
-#: ../Doc/library/getopt.rst:80
+#: ../Doc/library/getopt.rst:85
+#, fuzzy
 msgid ""
 "This is raised when an unrecognized option is found in the argument list or "
 "when an option requiring an argument is given none. The argument to the "
 "exception is a string indicating the cause of the error.  For long options, "
 "an argument given to an option which does not require one will also cause "
-"this exception to be raised.  The attributes :attr:`msg` and :attr:`opt` "
+"this exception to be raised.  The attributes :attr:`!msg` and :attr:`!opt` "
 "give the error message and related option; if there is no specific option to "
-"which the exception relates, :attr:`opt` is an empty string."
+"which the exception relates, :attr:`!opt` is an empty string."
 msgstr ""
 "Esto se lanza cuando se encuentra una opción no reconocida en la lista de "
 "argumentos o cuando una opción que requiere un argumento no recibe ninguna. "
 "El argumento de la excepción es una cadena que indica la causa del error. "
 "Para opciones largas, un argumento dado a una opción que no requiere una "
-"también provocará que se lance esta excepción. Los atributos :attr:`msg` y :"
-"attr:`opt` dan el mensaje de error y la opción relacionada; si no hay una "
+"también provocará que se lance esta excepción. Los atributos :attr:`msg` "
+"y :attr:`opt` dan el mensaje de error y la opción relacionada; si no hay una "
 "opción específica con la cual se relaciona la excepción, :attr:`opt` es una "
 "cadena vacía."
 
-#: ../Doc/library/getopt.rst:91
+#: ../Doc/library/getopt.rst:96
 msgid "Alias for :exc:`GetoptError`; for backward compatibility."
 msgstr ""
 "Alias para :exc:`GetoptError`; para compatibilidad con versiones anteriores."
 
-#: ../Doc/library/getopt.rst:93
+#: ../Doc/library/getopt.rst:98
 msgid "An example using only Unix style options:"
 msgstr "Un ejemplo que usa solo opciones de estilo Unix:"
 
-#: ../Doc/library/getopt.rst:105
+#: ../Doc/library/getopt.rst:110
 msgid "Using long option names is equally easy:"
 msgstr "Usar nombres largos de opciones es igualmente fácil:"
 
-#: ../Doc/library/getopt.rst:118
+#: ../Doc/library/getopt.rst:123
 msgid "In a script, typical usage is something like this::"
 msgstr "En un script, el uso típico es algo como esto::"
 
-#: ../Doc/library/getopt.rst:147
+#: ../Doc/library/getopt.rst:125
+msgid ""
+"import getopt, sys\n"
+"\n"
+"def main():\n"
+"    try:\n"
+"        opts, args = getopt.getopt(sys.argv[1:], \"ho:v\", [\"help\", "
+"\"output=\"])\n"
+"    except getopt.GetoptError as err:\n"
+"        # print help information and exit:\n"
+"        print(err)  # will print something like \"option -a not "
+"recognized\"\n"
+"        usage()\n"
+"        sys.exit(2)\n"
+"    output = None\n"
+"    verbose = False\n"
+"    for o, a in opts:\n"
+"        if o == \"-v\":\n"
+"            verbose = True\n"
+"        elif o in (\"-h\", \"--help\"):\n"
+"            usage()\n"
+"            sys.exit()\n"
+"        elif o in (\"-o\", \"--output\"):\n"
+"            output = a\n"
+"        else:\n"
+"            assert False, \"unhandled option\"\n"
+"    # ...\n"
+"\n"
+"if __name__ == \"__main__\":\n"
+"    main()"
+msgstr ""
+
+#: ../Doc/library/getopt.rst:152
 msgid ""
 "Note that an equivalent command line interface could be produced with less "
-"code and more informative help and error messages by using the :mod:"
-"`argparse` module::"
+"code and more informative help and error messages by using "
+"the :mod:`argparse` module::"
 msgstr ""
 "Tenga en cuenta que se podría generar una interfaz de línea de comando "
 "equivalente con menos código y más ayuda informativa y mensajes de error "
 "utilizando el módulo :mod:`argparse`::"
 
-#: ../Doc/library/getopt.rst:162
+#: ../Doc/library/getopt.rst:155
+msgid ""
+"import argparse\n"
+"\n"
+"if __name__ == '__main__':\n"
+"    parser = argparse.ArgumentParser()\n"
+"    parser.add_argument('-o', '--output')\n"
+"    parser.add_argument('-v', dest='verbose', action='store_true')\n"
+"    args = parser.parse_args()\n"
+"    # ... do something with args.output ...\n"
+"    # ... do something with args.verbose .."
+msgstr ""
+
+#: ../Doc/library/getopt.rst:167
 msgid "Module :mod:`argparse`"
 msgstr "Módulo :mod:`argparse`"
 
-#: ../Doc/library/getopt.rst:163
+#: ../Doc/library/getopt.rst:168
 msgid "Alternative command line option and argument parsing library."
 msgstr ""
 "Opción de línea de comando alternativa y biblioteca de análisis de "

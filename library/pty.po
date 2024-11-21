@@ -10,20 +10,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-11-02 12:50+0100\n"
 "Last-Translator: Marcos Medrano <marcosmedrano0@gmail.com>\n"
-"Language-Team: python-doc-es\n"
 "Language: es\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.4\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/pty.rst:2
-msgid ":mod:`pty` --- Pseudo-terminal utilities"
+#, fuzzy
+msgid ":mod:`!pty` --- Pseudo-terminal utilities"
 msgstr ":mod:`pty` --- Utilidades para Pseudo-terminal"
 
 #: ../Doc/library/pty.rst:11
@@ -41,6 +41,10 @@ msgstr ""
 "propia terminal mediante programación."
 
 #: ../Doc/library/pty.rst:19
+msgid ":ref:`Availability <availability>`: Unix."
+msgstr ""
+
+#: ../Doc/library/pty.rst:21
 msgid ""
 "Pseudo-terminal handling is highly platform dependent. This code is mainly "
 "tested on Linux, FreeBSD, and macOS (it is supposed to work on other POSIX "
@@ -50,11 +54,11 @@ msgstr ""
 "código se prueba principalmente en Linux, FreeBSD y macOS (se supone que "
 "funciona en otras plataformas POSIX, pero no se ha probado a fondo)."
 
-#: ../Doc/library/pty.rst:23
+#: ../Doc/library/pty.rst:25
 msgid "The :mod:`pty` module defines the following functions:"
 msgstr "El modulo :mod:`pty` define las siguientes funciones:"
 
-#: ../Doc/library/pty.rst:28
+#: ../Doc/library/pty.rst:30
 msgid ""
 "Fork. Connect the child's controlling terminal to a pseudo-terminal. Return "
 "value is ``(pid, fd)``. Note that the child  gets *pid* 0, and the *fd* is "
@@ -69,7 +73,13 @@ msgstr ""
 "conectado a la terminal hijo (también a la salida y entrada estándar de la "
 "terminal hijo)"
 
-#: ../Doc/library/pty.rst:37
+#: ../Doc/library/pty.rst:36
+msgid ""
+"On macOS the use of this function is unsafe when mixed with using higher-"
+"level system APIs, and that includes using :mod:`urllib.request`."
+msgstr ""
+
+#: ../Doc/library/pty.rst:42
 msgid ""
 "Open a new pseudo-terminal pair, using :func:`os.openpty` if possible, or "
 "emulation code for generic Unix systems. Return a pair of file descriptors "
@@ -80,7 +90,7 @@ msgstr ""
 "de archivo ``(master, slave)``, para el *master* y el *slave* "
 "respectivamente."
 
-#: ../Doc/library/pty.rst:44
+#: ../Doc/library/pty.rst:49
 msgid ""
 "Spawn a process, and connect its controlling terminal with the current "
 "process's standard io. This is often used to baffle programs which insist on "
@@ -93,7 +103,7 @@ msgstr ""
 "en leer desde la terminal de control. Se espera que el proceso generado "
 "detrás de pty sea finalizado y cuando lo haga *spawn* se retornará."
 
-#: ../Doc/library/pty.rst:50
+#: ../Doc/library/pty.rst:55
 msgid ""
 "A loop copies STDIN of the current process to the child and data received "
 "from the child to STDOUT of the current process. It is not signaled to the "
@@ -103,7 +113,7 @@ msgstr ""
 "niño a STDOUT del proceso actual. No se le indica al hijo si STDIN del "
 "proceso actual se cierra."
 
-#: ../Doc/library/pty.rst:54
+#: ../Doc/library/pty.rst:59
 msgid ""
 "The functions *master_read* and *stdin_read* are passed a file descriptor "
 "which they should read from, and they should always return a byte string. In "
@@ -115,7 +125,7 @@ msgstr ""
 "Para forzar el retorno de spawn antes de que el proceso hijo salga, se debe "
 "retornar un arreglo de bytes vacía para señalar el final del archivo."
 
-#: ../Doc/library/pty.rst:59
+#: ../Doc/library/pty.rst:64
 msgid ""
 "The default implementation for both functions will read and return up to "
 "1024 bytes each time the function is called. The *master_read* callback is "
@@ -129,7 +139,7 @@ msgstr ""
 "*stdin_read* pasa el descriptor de archivo 0, para leer desde la entrada del "
 "proceso padre."
 
-#: ../Doc/library/pty.rst:65
+#: ../Doc/library/pty.rst:70
 msgid ""
 "Returning an empty byte string from either callback is interpreted as an end-"
 "of-file (EOF) condition, and that callback will not be called after that. If "
@@ -146,14 +156,14 @@ msgstr ""
 "Si *master_read* retorna EOF se produce el mismo comportamiento (al menos en "
 "Linux)"
 
-#: ../Doc/library/pty.rst:72
+#: ../Doc/library/pty.rst:77
 msgid ""
 "Return the exit status value from :func:`os.waitpid` on the child process."
 msgstr ""
 "Retorna el valor del estado de salida de :func:`os.waitpid` en el proceso "
 "hijo."
 
-#: ../Doc/library/pty.rst:74
+#: ../Doc/library/pty.rst:79
 msgid ""
 ":func:`os.waitstatus_to_exitcode` can be used to convert the exit status "
 "into an exit code."
@@ -161,7 +171,7 @@ msgstr ""
 ":func:`os.waitstatus_to_exitcode` se puede utilizar para convertir el estado "
 "de salida en un código de salida."
 
-#: ../Doc/library/pty.rst:77
+#: ../Doc/library/pty.rst:82
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``pty.spawn`` with argument "
 "``argv``."
@@ -169,7 +179,7 @@ msgstr ""
 "Lanza un :ref:`evento de auditoria <auditing>` ``pty.spawn``  con el "
 "argumento ``argv``."
 
-#: ../Doc/library/pty.rst:79
+#: ../Doc/library/pty.rst:84
 msgid ""
 ":func:`spawn` now returns the status value from :func:`os.waitpid` on the "
 "child process."
@@ -177,11 +187,11 @@ msgstr ""
 ":func:`spawn` ahora retorna el valor de estado de  :func:`os.waitpid` para "
 "los procesos hijos."
 
-#: ../Doc/library/pty.rst:84
+#: ../Doc/library/pty.rst:89
 msgid "Example"
 msgstr "Ejemplo"
 
-#: ../Doc/library/pty.rst:88
+#: ../Doc/library/pty.rst:93
 msgid ""
 "The following program acts like the Unix command :manpage:`script(1)`, using "
 "a pseudo-terminal to record all input and output of a terminal session in a "
@@ -190,3 +200,38 @@ msgstr ""
 "El siguiente programa actúa como el comando de Unix :manpage:`script(1)`, "
 "usando una pseudo-terminal para registrar todas las entradas y salidas de "
 "una sesión en \"typescript\". ::"
+
+#: ../Doc/library/pty.rst:97
+#, python-format
+msgid ""
+"import argparse\n"
+"import os\n"
+"import pty\n"
+"import sys\n"
+"import time\n"
+"\n"
+"parser = argparse.ArgumentParser()\n"
+"parser.add_argument('-a', dest='append', action='store_true')\n"
+"parser.add_argument('-p', dest='use_python', action='store_true')\n"
+"parser.add_argument('filename', nargs='?', default='typescript')\n"
+"options = parser.parse_args()\n"
+"\n"
+"shell = sys.executable if options.use_python else os.environ.get('SHELL', "
+"'sh')\n"
+"filename = options.filename\n"
+"mode = 'ab' if options.append else 'wb'\n"
+"\n"
+"with open(filename, mode) as script:\n"
+"    def read(fd):\n"
+"        data = os.read(fd, 1024)\n"
+"        script.write(data)\n"
+"        return data\n"
+"\n"
+"    print('Script started, file is', filename)\n"
+"    script.write(('Script started on %s\\n' % time.asctime()).encode())\n"
+"\n"
+"    pty.spawn(shell, read)\n"
+"\n"
+"    script.write(('Script done on %s\\n' % time.asctime()).encode())\n"
+"    print('Script done, file is', filename)"
+msgstr ""

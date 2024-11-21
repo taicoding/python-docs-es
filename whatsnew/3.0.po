@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2020-11-29 11:59-0300\n"
 "Last-Translator: \n"
 "Language: es_ES\n"
@@ -19,7 +19,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/whatsnew/3.0.rst:3
 msgid "What's New In Python 3.0"
@@ -112,13 +112,39 @@ msgstr ""
 "argumentos de palabra clave para reemplazar la mayor parte de la sintaxis "
 "especial de la antigua declaración ``print`` (:pep:`3105`). Ejemplos::"
 
+#: ../Doc/whatsnew/3.0.rst:101
+msgid ""
+"Old: print \"The answer is\", 2*2\n"
+"New: print(\"The answer is\", 2*2)\n"
+"\n"
+"Old: print x,           # Trailing comma suppresses newline\n"
+"New: print(x, end=\" \")  # Appends a space instead of a newline\n"
+"\n"
+"Old: print              # Prints a newline\n"
+"New: print()            # You must call the function!\n"
+"\n"
+"Old: print >>sys.stderr, \"fatal error\"\n"
+"New: print(\"fatal error\", file=sys.stderr)\n"
+"\n"
+"Old: print (x, y)       # prints repr((x, y))\n"
+"New: print((x, y))      # Not the same as print(x, y)!"
+msgstr ""
+
 #: ../Doc/whatsnew/3.0.rst:116
 msgid "You can also customize the separator between items, e.g.::"
 msgstr "También se puede personalizar el separador entre ítems, por ejemplo::"
 
+#: ../Doc/whatsnew/3.0.rst:118
+msgid "print(\"There are <\", 2**32, \"> possibilities!\", sep=\"\")"
+msgstr ""
+
 #: ../Doc/whatsnew/3.0.rst:120
 msgid "which produces:"
 msgstr "que genera:"
+
+#: ../Doc/whatsnew/3.0.rst:122
+msgid "There are <4294967296> possibilities!"
+msgstr ""
 
 #: ../Doc/whatsnew/3.0.rst:126
 msgid "Note:"
@@ -166,32 +192,32 @@ msgstr "Algunas APIs bien conocidas no retornan más listas:"
 
 #: ../Doc/whatsnew/3.0.rst:147
 msgid ""
-":class:`dict` methods :meth:`dict.keys`, :meth:`dict.items` and :meth:`dict."
-"values` return \"views\" instead of lists.  For example, this no longer "
-"works: ``k = d.keys(); k.sort()``.  Use ``k = sorted(d)`` instead (this "
-"works in Python 2.5 too and is just as efficient)."
+":class:`dict` methods :meth:`dict.keys`, :meth:`dict.items` "
+"and :meth:`dict.values` return \"views\" instead of lists.  For example, "
+"this no longer works: ``k = d.keys(); k.sort()``.  Use ``k = sorted(d)`` "
+"instead (this works in Python 2.5 too and is just as efficient)."
 msgstr ""
-"Los métodos :class:`dict` :meth:`dict.keys`, :meth:`dict.items` y :meth:"
-"`dict.values` retornan \"vistas\" en lugar de listas. Por ejemplo, esto no "
-"funciona más: ``k = d.keys(); k.sort()``. Se usa ``k = sorted(d)`` en su "
-"lugar (esto funciona también en Python 2.5 y es igual de eficiente)."
+"Los métodos :class:`dict` :meth:`dict.keys`, :meth:`dict.items` "
+"y :meth:`dict.values` retornan \"vistas\" en lugar de listas. Por ejemplo, "
+"esto no funciona más: ``k = d.keys(); k.sort()``. Se usa ``k = sorted(d)`` "
+"en su lugar (esto funciona también en Python 2.5 y es igual de eficiente)."
 
 #: ../Doc/whatsnew/3.0.rst:153
 msgid ""
-"Also, the :meth:`dict.iterkeys`, :meth:`dict.iteritems` and :meth:`dict."
-"itervalues` methods are no longer supported."
+"Also, the :meth:`dict.iterkeys`, :meth:`dict.iteritems` "
+"and :meth:`dict.itervalues` methods are no longer supported."
 msgstr ""
-"Además, los métodos :meth:`dict.iterkeys`, :meth:`dict.iteritems` y :meth:"
-"`dict.itervalues` ya no son compatibles."
+"Además, los métodos :meth:`dict.iterkeys`, :meth:`dict.iteritems` "
+"y :meth:`dict.itervalues` ya no son compatibles."
 
 #: ../Doc/whatsnew/3.0.rst:156
 msgid ""
 ":func:`map` and :func:`filter` return iterators.  If you really need a list "
-"and the input sequences are all of equal length, a quick fix is to wrap :"
-"func:`map` in :func:`list`, e.g. ``list(map(...))``, but a better fix is "
-"often to use a list comprehension (especially when the original code uses :"
-"keyword:`lambda`), or rewriting the code so it doesn't need a list at all.  "
-"Particularly tricky is :func:`map` invoked for the side effects of the "
+"and the input sequences are all of equal length, a quick fix is to "
+"wrap :func:`map` in :func:`list`, e.g. ``list(map(...))``, but a better fix "
+"is often to use a list comprehension (especially when the original code "
+"uses :keyword:`lambda`), or rewriting the code so it doesn't need a list at "
+"all.  Particularly tricky is :func:`map` invoked for the side effects of the "
 "function; the correct transformation is to use a regular :keyword:`for` loop "
 "(since creating a list would just be wasteful)."
 msgstr ""
@@ -199,27 +225,27 @@ msgstr ""
 "una lista y las secuencias de entrada son todas de igual longitud, una "
 "solución rápida es envolver :func:`map` en :func:`list`, por ejemplo "
 "``list(map(...))``, pero una mejor solución es a menudo utilizar una lista "
-"por comprensión (especialmente cuando el código original utiliza :keyword:"
-"`lambda`), o reescribir el código para que no necesite una lista en "
-"absoluto. Particularmente complicado es :func:`map` invocado para los "
-"efectos secundarios de la función; la transformación correcta es usar un "
+"por comprensión (especialmente cuando el código original "
+"utiliza :keyword:`lambda`), o reescribir el código para que no necesite una "
+"lista en absoluto. Particularmente complicado es :func:`map` invocado para "
+"los efectos secundarios de la función; la transformación correcta es usar un "
 "bucle :keyword:`for` normal (ya que crear una lista sería simplemente un "
 "desperdicio)."
 
 #: ../Doc/whatsnew/3.0.rst:167
 msgid ""
 "If the input sequences are not of equal length, :func:`map` will stop at the "
-"termination of the shortest of the sequences. For full compatibility with :"
-"func:`map` from Python 2.x, also wrap the sequences in :func:`itertools."
-"zip_longest`, e.g. ``map(func, *sequences)`` becomes ``list(map(func, "
-"itertools.zip_longest(*sequences)))``."
+"termination of the shortest of the sequences. For full compatibility "
+"with :func:`map` from Python 2.x, also wrap the sequences "
+"in :func:`itertools.zip_longest`, e.g. ``map(func, *sequences)`` becomes "
+"``list(map(func, itertools.zip_longest(*sequences)))``."
 msgstr ""
 "Si las secuencias de entrada no tienen la misma longitud, :func:`map` se "
 "detendrá en la terminación de la más corta de las secuencias. Para una "
 "compatibilidad completa con :func:`map` de Python 2.x, también se envuelve "
 "las secuencias en :func:`itertools.zip_longest`, por ejemplo ``map(func, "
-"*sequences)`` se convierte en ``list(map(func, itertools."
-"zip_longest(*sequences)))``."
+"*sequences)`` se convierte en ``list(map(func, "
+"itertools.zip_longest(*sequences)))``."
 
 #: ../Doc/whatsnew/3.0.rst:173
 msgid ""
@@ -267,8 +293,8 @@ msgstr ""
 #: ../Doc/whatsnew/3.0.rst:195
 msgid ""
 ":meth:`builtin.sorted` and :meth:`list.sort` no longer accept the *cmp* "
-"argument providing a comparison function.  Use the *key* argument instead. N."
-"B. the *key* and *reverse* arguments are now \"keyword-only\"."
+"argument providing a comparison function.  Use the *key* argument instead. "
+"N.B. the *key* and *reverse* arguments are now \"keyword-only\"."
 msgstr ""
 ":meth:`builtin.sorted` y :meth:`list.sort` ya no aceptan el argumento *cmp* "
 "que proporciona una función de comparación. Utilice el argumento *key* en su "
@@ -278,17 +304,17 @@ msgstr ""
 #: ../Doc/whatsnew/3.0.rst:200
 msgid ""
 "The :func:`cmp` function should be treated as gone, and the :meth:`__cmp__` "
-"special method is no longer supported.  Use :meth:`__lt__` for sorting, :"
-"meth:`__eq__` with :meth:`__hash__`, and other rich comparisons as needed. "
-"(If you really need the :func:`cmp` functionality, you could use the "
+"special method is no longer supported.  Use :meth:`__lt__` for "
+"sorting, :meth:`__eq__` with :meth:`__hash__`, and other rich comparisons as "
+"needed. (If you really need the :func:`cmp` functionality, you could use the "
 "expression ``(a > b) - (a < b)`` as the equivalent for ``cmp(a, b)``.)"
 msgstr ""
-"La función :func:`cmp` debe tratarse como quitada, y el método especial :"
-"meth:`__cmp__` ya no es compatible. Utilizar :meth:`__lt__` para el "
-"ordenamiento, :meth:`__eq__` con :meth:`__hash__`, y otras comparaciones "
-"costosas según sea necesario. (Si realmente se necesita la funcionalidad :"
-"func:`cmp`, se puede utilizar la expresión ``(a > b) - (a < b)`` como el "
-"equivalente para ``cmp(a, b)``.)"
+"La función :func:`cmp` debe tratarse como quitada, y el método "
+"especial :meth:`__cmp__` ya no es compatible. Utilizar :meth:`__lt__` para "
+"el ordenamiento, :meth:`__eq__` con :meth:`__hash__`, y otras comparaciones "
+"costosas según sea necesario. (Si realmente se necesita la "
+"funcionalidad :func:`cmp`, se puede utilizar la expresión ``(a > b) - (a < "
+"b)`` como el equivalente para ``cmp(a, b)``.)"
 
 #: ../Doc/whatsnew/3.0.rst:207
 msgid "Integers"
@@ -319,9 +345,9 @@ msgid ""
 "The :data:`sys.maxint` constant was removed, since there is no longer a "
 "limit to the value of integers.  However, :data:`sys.maxsize` can be used as "
 "an integer larger than any practical list or string index.  It conforms to "
-"the implementation's \"natural\" integer size and is typically the same as :"
-"data:`sys.maxint` in previous releases on the same platform (assuming the "
-"same build options)."
+"the implementation's \"natural\" integer size and is typically the same "
+"as :data:`sys.maxint` in previous releases on the same platform (assuming "
+"the same build options)."
 msgstr ""
 "Se eliminó la constante :data:`sys.maxint`, ya que ya no hay un límite para "
 "el valor de los enteros. Sin embargo, :data:`sys.maxsize` se puede utilizar "
@@ -360,14 +386,14 @@ msgstr "Todo lo que pensabas saber sobre datos binarios y Unicode ha cambiado."
 msgid ""
 "Python 3.0 uses the concepts of *text* and (binary) *data* instead of "
 "Unicode strings and 8-bit strings.  All text is Unicode; however *encoded* "
-"Unicode is represented as binary data.  The type used to hold text is :class:"
-"`str`, the type used to hold data is :class:`bytes`.  The biggest difference "
-"with the 2.x situation is that any attempt to mix text and data in Python "
-"3.0 raises :exc:`TypeError`, whereas if you were to mix Unicode and 8-bit "
-"strings in Python 2.x, it would work if the 8-bit string happened to contain "
-"only 7-bit (ASCII) bytes, but you would get :exc:`UnicodeDecodeError` if it "
-"contained non-ASCII values.  This value-specific behavior has caused "
-"numerous sad faces over the years."
+"Unicode is represented as binary data.  The type used to hold text "
+"is :class:`str`, the type used to hold data is :class:`bytes`.  The biggest "
+"difference with the 2.x situation is that any attempt to mix text and data "
+"in Python 3.0 raises :exc:`TypeError`, whereas if you were to mix Unicode "
+"and 8-bit strings in Python 2.x, it would work if the 8-bit string happened "
+"to contain only 7-bit (ASCII) bytes, but you would "
+"get :exc:`UnicodeDecodeError` if it contained non-ASCII values.  This value-"
+"specific behavior has caused numerous sad faces over the years."
 msgstr ""
 "Python 3.0 utiliza los conceptos de *text* y *datos* (binarios) en lugar de "
 "cadenas de caracteres Unicode y cadenas de caracteres de 8 bits. Todo el "
@@ -377,10 +403,10 @@ msgstr ""
 "con la situación 2.x es que cualquier intento de mezclar texto y datos en "
 "Python 3.0 lanza un :exc:`TypeError`, mientras que si se mezclan cadenas "
 "Unicode y de 8 bits en Python 2.x, funcionaría si la cadena de 8 bits "
-"contuviera sólo bytes de 7 bits (ASCII), pero se obtendría un :exc:"
-"`UnicodeDecodeError` si contenía valores no ASCII. Este comportamiento "
-"específico del valor ha causado numerosas caras tristes a lo largo de los "
-"años."
+"contuviera sólo bytes de 7 bits (ASCII), pero se obtendría "
+"un :exc:`UnicodeDecodeError` si contenía valores no ASCII. Este "
+"comportamiento específico del valor ha causado numerosas caras tristes a lo "
+"largo de los años."
 
 #: ../Doc/whatsnew/3.0.rst:250
 msgid ""
@@ -388,9 +414,9 @@ msgid ""
 "uses Unicode, encodings or binary data most likely has to change.  The "
 "change is for the better, as in the 2.x world there were numerous bugs "
 "having to do with mixing encoded and unencoded text.  To be prepared in "
-"Python 2.x, start using :class:`unicode` for all unencoded text, and :class:"
-"`str` for binary or encoded data only.  Then the ``2to3`` tool will do most "
-"of the work for you."
+"Python 2.x, start using :class:`unicode` for all unencoded text, "
+"and :class:`str` for binary or encoded data only.  Then the ``2to3`` tool "
+"will do most of the work for you."
 msgstr ""
 "Como consecuencia de este cambio en la filosofía, prácticamente todo el "
 "código que utiliza Unicode, codificaciones o datos binarios muy "
@@ -412,10 +438,10 @@ msgstr ""
 #: ../Doc/whatsnew/3.0.rst:261
 msgid ""
 "As the :class:`str` and :class:`bytes` types cannot be mixed, you must "
-"always explicitly convert between them.  Use :meth:`str.encode` to go from :"
-"class:`str` to :class:`bytes`, and :meth:`bytes.decode` to go from :class:"
-"`bytes` to :class:`str`.  You can also use ``bytes(s, encoding=...)`` and "
-"``str(b, encoding=...)``, respectively."
+"always explicitly convert between them.  Use :meth:`str.encode` to go "
+"from :class:`str` to :class:`bytes`, and :meth:`bytes.decode` to go "
+"from :class:`bytes` to :class:`str`.  You can also use ``bytes(s, "
+"encoding=...)`` and ``str(b, encoding=...)``, respectively."
 msgstr ""
 "Como los tipos :class:`str` y :class:`bytes` no se pueden mezclar, siempre "
 "se deben convertir explícitamente entre ellos. Utilizar :meth:`str.encode` "
@@ -431,10 +457,10 @@ msgid ""
 "The mutable API is based on :class:`collections.MutableSequence`."
 msgstr ""
 "Al igual que :class:`str`, el tipo :class:`bytes` es inmutable. Hay un tipo "
-"*mutable* independiente para contener datos binarios almacenados en búfer, :"
-"class:`bytearray`. Casi todas las API que aceptan :class:`bytes` también "
-"aceptan :class:`bytearray`. La API mutable se basa en :class:`collections. "
-"MutableSequence`."
+"*mutable* independiente para contener datos binarios almacenados en "
+"búfer, :class:`bytearray`. Casi todas las API que aceptan :class:`bytes` "
+"también aceptan :class:`bytearray`. La API mutable se basa "
+"en :class:`collections. MutableSequence`."
 
 #: ../Doc/whatsnew/3.0.rst:274
 msgid ""
@@ -455,17 +481,17 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.0.rst:281
 msgid ""
-"The built-in :class:`basestring` abstract type was removed.  Use :class:"
-"`str` instead.  The :class:`str` and :class:`bytes` types don't have "
-"functionality enough in common to warrant a shared base class.  The ``2to3`` "
-"tool (see below) replaces every occurrence of :class:`basestring` with :"
-"class:`str`."
+"The built-in :class:`basestring` abstract type was removed.  "
+"Use :class:`str` instead.  The :class:`str` and :class:`bytes` types don't "
+"have functionality enough in common to warrant a shared base class.  The "
+"``2to3`` tool (see below) replaces every occurrence of :class:`basestring` "
+"with :class:`str`."
 msgstr ""
-"Se eliminó el tipo abstracto :class:`basestring` incorporado. Se utiliza :"
-"class:`str` en su lugar. Los tipos :class:`str` y :class:`bytes` no tienen "
-"suficiente funcionalidad en común para garantizar una clase base compartida. "
-"La herramienta ``2to3`` (ver más abajo) reemplaza cada aparición de :class:"
-"`basestring` por :class:`str`."
+"Se eliminó el tipo abstracto :class:`basestring` incorporado. Se "
+"utiliza :class:`str` en su lugar. Los tipos :class:`str` y :class:`bytes` no "
+"tienen suficiente funcionalidad en común para garantizar una clase base "
+"compartida. La herramienta ``2to3`` (ver más abajo) reemplaza cada aparición "
+"de :class:`basestring` por :class:`str`."
 
 #: ../Doc/whatsnew/3.0.rst:287
 msgid ""
@@ -505,15 +531,15 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.0.rst:304
 msgid ""
-"The initial values of :data:`sys.stdin`, :data:`sys.stdout` and :data:`sys."
-"stderr` are now unicode-only text files (i.e., they are instances of :class:"
-"`io.TextIOBase`).  To read and write bytes data with these streams, you need "
-"to use their :data:`io.TextIOBase.buffer` attribute."
+"The initial values of :data:`sys.stdin`, :data:`sys.stdout` "
+"and :data:`sys.stderr` are now unicode-only text files (i.e., they are "
+"instances of :class:`io.TextIOBase`).  To read and write bytes data with "
+"these streams, you need to use their :data:`io.TextIOBase.buffer` attribute."
 msgstr ""
-"Los valores iniciales de :data:`sys.stdin`, :data:`sys.stdout` y :data:`sys."
-"stderr` ahora son archivos de texto solo unicode (es decir, son instancias "
-"de :class:`io.TextIOBase`). Para leer y escribir datos de bytes con estas "
-"secuencias, se debe usar su atributo :data:`io.TextIOBase.buffer`."
+"Los valores iniciales de :data:`sys.stdin`, :data:`sys.stdout` "
+"y :data:`sys.stderr` ahora son archivos de texto solo unicode (es decir, son "
+"instancias de :class:`io.TextIOBase`). Para leer y escribir datos de bytes "
+"con estas secuencias, se debe usar su atributo :data:`io.TextIOBase.buffer`."
 
 #: ../Doc/whatsnew/3.0.rst:310
 msgid ""
@@ -521,14 +547,14 @@ msgid ""
 "can present platform-specific problems because on some platforms filenames "
 "are arbitrary byte strings.  (On the other hand, on Windows filenames are "
 "natively stored as Unicode.)  As a work-around, most APIs (e.g. :func:`open` "
-"and many functions in the :mod:`os` module) that take filenames accept :"
-"class:`bytes` objects as well as strings, and a few APIs have a way to ask "
-"for a :class:`bytes` return value.  Thus, :func:`os.listdir` returns a list "
-"of :class:`bytes` instances if the argument is a :class:`bytes` instance, "
-"and :func:`os.getcwdb` returns the current working directory as a :class:"
-"`bytes` instance.  Note that when :func:`os.listdir` returns a list of "
-"strings, filenames that cannot be decoded properly are omitted rather than "
-"raising :exc:`UnicodeError`."
+"and many functions in the :mod:`os` module) that take filenames "
+"accept :class:`bytes` objects as well as strings, and a few APIs have a way "
+"to ask for a :class:`bytes` return value.  Thus, :func:`os.listdir` returns "
+"a list of :class:`bytes` instances if the argument is a :class:`bytes` "
+"instance, and :func:`os.getcwdb` returns the current working directory as "
+"a :class:`bytes` instance.  Note that when :func:`os.listdir` returns a list "
+"of strings, filenames that cannot be decoded properly are omitted rather "
+"than raising :exc:`UnicodeError`."
 msgstr ""
 "Los nombres de archivos son pasados y retornados de cadenas desde APIs como "
 "cadenas de caracteres (Unicode). Esto puede presentar problemas específicos "
@@ -539,12 +565,13 @@ msgstr ""
 "muchas otras funciones en el módulo :mod:`os`) que toman nombres de archivos "
 "aceptan tanto objetos :class:`bytes` como cadenas de caracteres, y algunas "
 "APIs tienen una forma de demandar por un valor de retorno :class:`bytes`. "
-"Por lo tanto, :func:`os.listdir` retorna una lista de instancias :class:"
-"`bytes` si el argumento es una instancia :class:`bytes`, y :func:`os."
-"getcwdb` retorna el directorio de trabajo actual como una instancia :class:"
-"`bytes`. Tener en cuenta que cuando :func:`os.listdir` retorna una lista de "
-"cadenas de caracteres, los nombres de archivo que no se pueden decodificar "
-"correctamente se omiten en lugar de lanzar :exc:`UnicodeError`."
+"Por lo tanto, :func:`os.listdir` retorna una lista de "
+"instancias :class:`bytes` si el argumento es una instancia :class:`bytes`, "
+"y :func:`os.getcwdb` retorna el directorio de trabajo actual como una "
+"instancia :class:`bytes`. Tener en cuenta que cuando :func:`os.listdir` "
+"retorna una lista de cadenas de caracteres, los nombres de archivo que no se "
+"pueden decodificar correctamente se omiten en lugar de "
+"lanzar :exc:`UnicodeError`."
 
 #: ../Doc/whatsnew/3.0.rst:325
 msgid ""
@@ -585,14 +612,15 @@ msgstr ""
 "excepción de nombres de colaboradores en comentarios.)"
 
 #: ../Doc/whatsnew/3.0.rst:340
+#, fuzzy
 msgid ""
-"The :mod:`StringIO` and :mod:`cStringIO` modules are gone.  Instead, import "
-"the :mod:`io` module and use :class:`io.StringIO` or :class:`io.BytesIO` for "
-"text and data respectively."
+"The :mod:`!StringIO` and :mod:`!cStringIO` modules are gone.  Instead, "
+"import the :mod:`io` module and use :class:`io.StringIO` "
+"or :class:`io.BytesIO` for text and data respectively."
 msgstr ""
 "Los módulos :mod:`StringIO` and :mod:`cStringIO` ya no están. En su lugar, "
-"se importa el módulo the :mod:`io` y se usa :class:`io.StringIO` o :class:"
-"`io.BytesIO` para texto y datos respectivamente."
+"se importa el módulo the :mod:`io` y se usa :class:`io.StringIO` "
+"o :class:`io.BytesIO` para texto y datos respectivamente."
 
 #: ../Doc/whatsnew/3.0.rst:344
 msgid "See also the :ref:`unicode-howto`, which was updated for Python 3.0."
@@ -660,8 +688,8 @@ msgstr ""
 #: ../Doc/whatsnew/3.0.rst:374
 msgid ""
 ":pep:`3104`: :keyword:`nonlocal` statement.  Using ``nonlocal x`` you can "
-"now assign directly to a variable in an outer (but non-global) scope.  :"
-"keyword:`!nonlocal` is a new reserved word."
+"now assign directly to a variable in an outer (but non-global) "
+"scope.  :keyword:`!nonlocal` is a new reserved word."
 msgstr ""
 ":pep:`3104`: Declaración :keyword:`nonlocal`. Utilizando ``nonlocal x`` "
 "ahora se puede asignar directamente a una variable en un entorno externo "
@@ -678,6 +706,10 @@ msgstr ""
 "como ``a, b, *rest = some_sequence``. E incluso ``*rest, a = cosas``. El "
 "objeto ``rest`` es siempre una lista (posiblemente vacía); el lado derecho "
 "puede ser cualquier iterable. Ejemplo::"
+
+#: ../Doc/whatsnew/3.0.rst:383
+msgid "(a, *rest, b) = range(5)"
+msgstr ""
 
 #: ../Doc/whatsnew/3.0.rst:385
 msgid "This sets *a* to ``0``, *b* to ``4``, and *rest* to ``[1, 2, 3]``."
@@ -734,11 +766,12 @@ msgstr "Sintaxis modificada"
 
 #: ../Doc/whatsnew/3.0.rst:408
 msgid ""
-":pep:`3109` and :pep:`3134`: new :keyword:`raise` statement syntax: :samp:"
-"`raise [{expr} [from {expr}]]`.  See below."
+":pep:`3109` and :pep:`3134`: new :keyword:`raise` statement "
+"syntax: :samp:`raise [{expr} [from {expr}]]`.  See below."
 msgstr ""
-":pep:`3109` y :pep:`3134`: Nueva sintaxis de la instrucción :keyword:"
-"`raise`: :samp:`raise [{expr} [from {expr}]]`. Ver a continuación."
+":pep:`3109` y :pep:`3134`: Nueva sintaxis de la "
+"instrucción :keyword:`raise`: :samp:`raise [{expr} [from {expr}]]`. Ver a "
+"continuación."
 
 #: ../Doc/whatsnew/3.0.rst:411
 msgid ""
@@ -758,19 +791,32 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.0.rst:417
 msgid ""
-"Change from :keyword:`except` *exc*, *var* to :keyword:`!except` *exc* :"
-"keyword:`!as` *var*.  See :pep:`3110`."
+"Change from :keyword:`except` *exc*, *var* to :keyword:`!except` "
+"*exc* :keyword:`!as` *var*.  See :pep:`3110`."
 msgstr ""
-"Cambio de :keyword:`except` *exc*, *var* a :keyword:`!except` *exc* :keyword:"
-"`!as` *var*.Ver :pep:`3110`."
+"Cambio de :keyword:`except` *exc*, *var* a :keyword:`!except` "
+"*exc* :keyword:`!as` *var*.Ver :pep:`3110`."
 
 #: ../Doc/whatsnew/3.0.rst:420
 msgid ":pep:`3115`: New Metaclass Syntax.  Instead of::"
 msgstr ":pep:`3115`: Nueva sintaxis de metaclase. En lugar de::"
 
+#: ../Doc/whatsnew/3.0.rst:422
+msgid ""
+"class C:\n"
+"    __metaclass__ = M\n"
+"    ..."
+msgstr ""
+
 #: ../Doc/whatsnew/3.0.rst:426
 msgid "you must now use::"
 msgstr "ahora se debe usar:"
+
+#: ../Doc/whatsnew/3.0.rst:428
+msgid ""
+"class C(metaclass=M):\n"
+"    ..."
+msgstr ""
 
 #: ../Doc/whatsnew/3.0.rst:431
 msgid ""
@@ -795,9 +841,9 @@ msgstr ""
 "{var} in {item1}, {item2}, ...]`. Utilizar :samp:`[... for{var} in ({item1}, "
 "{item2}, ...)]` en su lugar. También tener en cuenta que las listas por "
 "comprensión tienen semántica diferente: están más cerca del azúcar "
-"sintáctico para una expresión de generador dentro de un constructor :func:"
-"`list` y, en particular, las variables de control de bucle ya no se filtran "
-"en el ámbito circundante."
+"sintáctico para una expresión de generador dentro de un "
+"constructor :func:`list` y, en particular, las variables de control de bucle "
+"ya no se filtran en el ámbito circundante."
 
 #: ../Doc/whatsnew/3.0.rst:444
 msgid ""
@@ -842,8 +888,8 @@ msgstr ""
 "Palabra clave eliminada: :func:`exec` ya no es una palabra clave; continúa "
 "siendo una función. (Afortunadamente la sintaxis de la función también era "
 "aceptada en 2.x.) Asimismo, nótese que la :func:`exec` ya no toma un "
-"argumento de flujo; en lugar de ``exec(f)`` se puede utilizar ``exec(f."
-"read())``."
+"argumento de flujo; en lugar de ``exec(f)`` se puede utilizar "
+"``exec(f.read())``."
 
 #: ../Doc/whatsnew/3.0.rst:465
 msgid "Integer literals no longer support a trailing ``l`` or ``L``."
@@ -924,9 +970,10 @@ msgstr ":ref:`pep-0371`."
 msgid ""
 ":ref:`pep-3101`.  Note: the 2.6 description mentions the :meth:`format` "
 "method for both 8-bit and Unicode strings.  In 3.0, only the :class:`str` "
-"type (text strings with Unicode support) supports this method; the :class:"
-"`bytes` type does not.  The plan is to eventually make this the only API for "
-"string formatting, and to start deprecating the ``%`` operator in Python 3.1."
+"type (text strings with Unicode support) supports this method; "
+"the :class:`bytes` type does not.  The plan is to eventually make this the "
+"only API for string formatting, and to start deprecating the ``%`` operator "
+"in Python 3.1."
 msgstr ""
 ":ref:`pep-3101`. Nota: la descripción 2.6 menciona el método :meth:`format` "
 "tanto para cadenas de caracteres 8 bits como de Unicode. En 3.0, solo el "
@@ -968,21 +1015,21 @@ msgid ""
 ":ref:`pep-3116`.  The :mod:`io` module is now the standard way of doing file "
 "I/O.  The built-in :func:`open` function is now an alias for :func:`io.open` "
 "and has additional keyword arguments *encoding*, *errors*, *newline* and "
-"*closefd*.  Also note that an invalid *mode* argument now raises :exc:"
-"`ValueError`, not :exc:`IOError`.  The binary file object underlying a text "
-"file object can be accessed as :attr:`f.buffer` (but beware that the text "
-"object maintains a buffer of itself in order to speed up the encoding and "
-"decoding operations)."
+"*closefd*.  Also note that an invalid *mode* argument now "
+"raises :exc:`ValueError`, not :exc:`IOError`.  The binary file object "
+"underlying a text file object can be accessed as :attr:`f.buffer` (but "
+"beware that the text object maintains a buffer of itself in order to speed "
+"up the encoding and decoding operations)."
 msgstr ""
 ":ref:`pep-3116`. El módulo :mod:`io` ahora es la forma estándar de hacer E/S "
-"de archivos. La función incorporada :func:`open` ahora es un alias para :"
-"func:`io.open` y tiene argumentos de palabra clave adicionales *encoding*, "
-"*errors*, *newline* y *closefd*. Tener en cuenta también que un argumento "
-"*mode* inválido ahora lanza :exc:`ValueError`, no :exc:`IOError`. Se puede "
-"acceder al objeto de archivo binario subyacente a un objeto de archivo de "
-"texto como :attr:`f.buffer` (pero tener en cuenta que el objeto de texto "
-"mantiene un búfer de sí mismo para acelerar las operaciones de codificación "
-"y descodificación)."
+"de archivos. La función incorporada :func:`open` ahora es un alias "
+"para :func:`io.open` y tiene argumentos de palabra clave adicionales "
+"*encoding*, *errors*, *newline* y *closefd*. Tener en cuenta también que un "
+"argumento *mode* inválido ahora lanza :exc:`ValueError`, no :exc:`IOError`. "
+"Se puede acceder al objeto de archivo binario subyacente a un objeto de "
+"archivo de texto como :attr:`f.buffer` (pero tener en cuenta que el objeto "
+"de texto mantiene un búfer de sí mismo para acelerar las operaciones de "
+"codificación y descodificación)."
 
 #: ../Doc/whatsnew/3.0.rst:529
 msgid ""
@@ -995,17 +1042,17 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.0.rst:533
 msgid ""
-":ref:`pep-3119`.  The :mod:`abc` module and the ABCs defined in the :mod:"
-"`collections` module plays a somewhat more prominent role in the language "
-"now, and built-in collection types like :class:`dict` and :class:`list` "
-"conform to the :class:`collections.MutableMapping` and :class:`collections."
-"MutableSequence` ABCs, respectively."
+":ref:`pep-3119`.  The :mod:`abc` module and the ABCs defined in "
+"the :mod:`collections` module plays a somewhat more prominent role in the "
+"language now, and built-in collection types like :class:`dict` "
+"and :class:`list` conform to the :class:`collections.MutableMapping` "
+"and :class:`collections.MutableSequence` ABCs, respectively."
 msgstr ""
-":ref:`pep-3119`. El módulo :mod:`abc` y los ABC definidos en el módulo :mod:"
-"`collections` desempeñan un papel algo más destacado en el lenguaje ahora, y "
-"los tipos de colección incorporados como :class:`dict` y :class:`list` se "
-"ajustan a los ABCs de :class:`collections.MutableMapping` y :class:"
-"`collections.MutableSequence`, respectivamente."
+":ref:`pep-3119`. El módulo :mod:`abc` y los ABC definidos en el "
+"módulo :mod:`collections` desempeñan un papel algo más destacado en el "
+"lenguaje ahora, y los tipos de colección incorporados como :class:`dict` "
+"y :class:`list` se ajustan a los ABCs de :class:`collections.MutableMapping` "
+"y :class:`collections.MutableSequence`, respectivamente."
 
 #: ../Doc/whatsnew/3.0.rst:539
 msgid ""
@@ -1045,29 +1092,31 @@ msgstr ""
 "revisión de cápsula:"
 
 #: ../Doc/whatsnew/3.0.rst:558
+#, fuzzy
 msgid ""
-"Many old modules were removed.  Some, like :mod:`gopherlib` (no longer used) "
-"and :mod:`md5` (replaced by :mod:`hashlib`), were already deprecated by :pep:"
-"`4`.  Others were removed as a result of the removal of support for various "
-"platforms such as Irix, BeOS and Mac OS 9 (see :pep:`11`).  Some modules "
-"were also selected for removal in Python 3.0 due to lack of use or because a "
-"better replacement exists.  See :pep:`3108` for an exhaustive list."
+"Many old modules were removed.  Some, like :mod:`!gopherlib` (no longer "
+"used) and :mod:`!md5` (replaced by :mod:`hashlib`), were already deprecated "
+"by :pep:`4`.  Others were removed as a result of the removal of support for "
+"various platforms such as Irix, BeOS and Mac OS 9 (see :pep:`11`).  Some "
+"modules were also selected for removal in Python 3.0 due to lack of use or "
+"because a better replacement exists.  See :pep:`3108` for an exhaustive list."
 msgstr ""
 "Se eliminaron muchos módulos antiguos. Algunos, como :mod:`gopherlib` (ya no "
 "se usa) y :mod:`md5` (reemplazado por :mod:`hashlib`), ya estaban en desuso "
 "por :pep:`4`. Otros fueron eliminados como resultado de la eliminación de "
 "soporte para varias plataformas como Irix, BeOS y Mac OS 9 (ver :pep:`11`). "
 "Algunos módulos también fueron seleccionados para su eliminación en Python "
-"3.0 debido a la falta de uso o porque existe un mejor reemplazo. Consultar :"
-"pep:`3108` para obtener una lista exhaustiva."
+"3.0 debido a la falta de uso o porque existe un mejor reemplazo. "
+"Consultar :pep:`3108` para obtener una lista exhaustiva."
 
 #: ../Doc/whatsnew/3.0.rst:566
+#, fuzzy
 msgid ""
-"The :mod:`bsddb3` package was removed because its presence in the core "
+"The :mod:`!bsddb3` package was removed because its presence in the core "
 "standard library has proved over time to be a particular burden for the core "
 "developers due to testing instability and Berkeley DB's release schedule.  "
-"However, the package is alive and well, externally maintained at https://www."
-"jcea.es/programacion/pybsddb.htm."
+"However, the package is alive and well, externally maintained at https://"
+"www.jcea.es/programacion/pybsddb.htm."
 msgstr ""
 "El paquete :mod:`bsddb3` fue eliminado porque su presencia en la biblioteca "
 "estándar principal ha demostrado con el tiempo ser una particular carga para "
@@ -1081,8 +1130,8 @@ msgid ""
 "Some modules were renamed because their old name disobeyed :pep:`8`, or for "
 "various other reasons.  Here's the list:"
 msgstr ""
-"Algunos módulos fueron renombrados porque su antiguo nombre desobedeció :pep:"
-"`8`, o por varias otras razones. Aquí está la lista:"
+"Algunos módulos fueron renombrados porque su antiguo nombre "
+"desobedeció :pep:`8`, o por varias otras razones. Aquí está la lista:"
 
 #: ../Doc/whatsnew/3.0.rst:576
 msgid "Old Name"
@@ -1157,17 +1206,18 @@ msgid "test.support"
 msgstr "test.support"
 
 #: ../Doc/whatsnew/3.0.rst:588
+#, fuzzy
 msgid ""
 "A common pattern in Python 2.x is to have one version of a module "
 "implemented in pure Python, with an optional accelerated version implemented "
-"as a C extension; for example, :mod:`pickle` and :mod:`cPickle`.  This "
+"as a C extension; for example, :mod:`pickle` and :mod:`!cPickle`.  This "
 "places the burden of importing the accelerated version and falling back on "
 "the pure Python version on each user of these modules.  In Python 3.0, the "
 "accelerated versions are considered implementation details of the pure "
 "Python versions. Users should always import the standard version, which "
 "attempts to import the accelerated version and falls back to the pure Python "
-"version.  The :mod:`pickle` / :mod:`cPickle` pair received this treatment.  "
-"The :mod:`profile` module is on the list for 3.1.  The :mod:`StringIO` "
+"version.  The :mod:`pickle` / :mod:`!cPickle` pair received this treatment.  "
+"The :mod:`profile` module is on the list for 3.1.  The :mod:`!StringIO` "
 "module has been turned into a class in the :mod:`io` module."
 msgstr ""
 "Un patrón común en Python 2.x es tener una versión de un módulo implementado "
@@ -1178,9 +1228,9 @@ msgstr ""
 "aceleradas se consideran detalles de implementación de las versiones puras "
 "de Python. Los usuarios siempre deberían importar la versión estándar, que "
 "intenta importar la versión acelerada y vuelve a la versión de Python pura. "
-"El par :mod:`pickle` / :mod:`cPickle` recibió este tratamiento. El módulo :"
-"mod:`profile` está en la lista para 3.1. El módulo :mod:`StringIO` se ha "
-"convertido en una clase en el módulo :mod:`io`."
+"El par :mod:`pickle` / :mod:`cPickle` recibió este tratamiento. El "
+"módulo :mod:`profile` está en la lista para 3.1. El módulo :mod:`StringIO` "
+"se ha convertido en una clase en el módulo :mod:`io`."
 
 #: ../Doc/whatsnew/3.0.rst:602
 msgid ""
@@ -1192,52 +1242,57 @@ msgstr ""
 "resultantes son:"
 
 #: ../Doc/whatsnew/3.0.rst:606
+#, fuzzy
 msgid ""
-":mod:`dbm` (:mod:`anydbm`, :mod:`dbhash`, :mod:`dbm`, :mod:`dumbdbm`, :mod:"
-"`gdbm`, :mod:`whichdb`)."
+":mod:`dbm` (:mod:`!anydbm`, :mod:`!dbhash`, :mod:`!dbm`, :mod:`!"
+"dumbdbm`, :mod:`!gdbm`, :mod:`!whichdb`)."
 msgstr ""
-":mod:`dbm` (:mod:`anydbm`, :mod:`dbhash`, :mod:`dbm`, :mod:`dumbdbm`, :mod:"
-"`gdbm`, :mod:`whichdb`)."
+":mod:`dbm` "
+"(:mod:`anydbm`, :mod:`dbhash`, :mod:`dbm`, :mod:`dumbdbm`, :mod:`gdbm`, :mod:`whichdb`)."
 
 #: ../Doc/whatsnew/3.0.rst:609
-msgid ":mod:`html` (:mod:`HTMLParser`, :mod:`htmlentitydefs`)."
+#, fuzzy
+msgid ":mod:`html` (:mod:`!HTMLParser`, :mod:`!htmlentitydefs`)."
 msgstr ":mod:`html` (:mod:`HTMLParser`, :mod:`htmlentitydefs`)."
 
 #: ../Doc/whatsnew/3.0.rst:611
+#, fuzzy
 msgid ""
-":mod:`http` (:mod:`httplib`, :mod:`BaseHTTPServer`, :mod:`CGIHTTPServer`, :"
-"mod:`SimpleHTTPServer`, :mod:`Cookie`, :mod:`cookielib`)."
+":mod:`http` (:mod:`!httplib`, :mod:`!BaseHTTPServer`, :mod:`!"
+"CGIHTTPServer`, :mod:`!SimpleHTTPServer`, :mod:`!Cookie`, :mod:`!cookielib`)."
 msgstr ""
-":mod:`http` (:mod:`httplib`, :mod:`BaseHTTPServer`, :mod:`CGIHTTPServer`, :"
-"mod:`SimpleHTTPServer`, :mod:`Cookie`, :mod:`cookielib`)."
+":mod:`http` "
+"(:mod:`httplib`, :mod:`BaseHTTPServer`, :mod:`CGIHTTPServer`, :mod:`SimpleHTTPServer`, :mod:`Cookie`, :mod:`cookielib`)."
 
 #: ../Doc/whatsnew/3.0.rst:615
 msgid ""
 ":mod:`tkinter` (all :mod:`Tkinter`-related modules except :mod:`turtle`).  "
-"The target audience of :mod:`turtle` doesn't really care about :mod:"
-"`tkinter`.  Also note that as of Python 2.6, the functionality of :mod:"
-"`turtle` has been greatly enhanced."
+"The target audience of :mod:`turtle` doesn't really care "
+"about :mod:`tkinter`.  Also note that as of Python 2.6, the functionality "
+"of :mod:`turtle` has been greatly enhanced."
 msgstr ""
-":mod:`tkinter` (todos los módulos relacionados con :mod:`Tkinter` excepto :"
-"mod:`turtle`). Al público objetivo de :mod:`turtle` no le interesa "
+":mod:`tkinter` (todos los módulos relacionados con :mod:`Tkinter` "
+"excepto :mod:`turtle`). Al público objetivo de :mod:`turtle` no le interesa "
 "realmente :mod:`tkinter`. También tener en cuenta que a partir de Python "
 "2.6, la funcionalidad de :mod:`turtle` se ha mejorado considerablemente."
 
 #: ../Doc/whatsnew/3.0.rst:620
+#, fuzzy
 msgid ""
-":mod:`urllib` (:mod:`urllib`, :mod:`urllib2`, :mod:`urlparse`, :mod:"
-"`robotparse`)."
+":mod:`urllib` (:mod:`!urllib`, :mod:`!urllib2`, :mod:`!urlparse`, :mod:`!"
+"robotparse`)."
 msgstr ""
-":mod:`urllib` (:mod:`urllib`, :mod:`urllib2`, :mod:`urlparse`, :mod:"
-"`robotparse`)."
+":mod:`urllib` "
+"(:mod:`urllib`, :mod:`urllib2`, :mod:`urlparse`, :mod:`robotparse`)."
 
 #: ../Doc/whatsnew/3.0.rst:623
+#, fuzzy
 msgid ""
-":mod:`xmlrpc` (:mod:`xmlrpclib`, :mod:`DocXMLRPCServer`, :mod:"
-"`SimpleXMLRPCServer`)."
+":mod:`xmlrpc` (:mod:`!xmlrpclib`, :mod:`!DocXMLRPCServer`, :mod:`!"
+"SimpleXMLRPCServer`)."
 msgstr ""
-":mod:`xmlrpc` (:mod:`xmlrpclib`, :mod:`DocXMLRPCServer`, :mod:"
-"`SimpleXMLRPCServer`)."
+":mod:`xmlrpc` "
+"(:mod:`xmlrpclib`, :mod:`DocXMLRPCServer`, :mod:`SimpleXMLRPCServer`)."
 
 #: ../Doc/whatsnew/3.0.rst:626
 msgid ""
@@ -1247,18 +1302,19 @@ msgstr ""
 "por :pep:`3108`:"
 
 #: ../Doc/whatsnew/3.0.rst:629
-msgid "Killed :mod:`sets`.  Use the built-in :func:`set` class."
+#, fuzzy
+msgid "Killed :mod:`!sets`.  Use the built-in :func:`set` class."
 msgstr "Quitado :mod:`sets`. Usar la clase incorporada :func:`set`."
 
 #: ../Doc/whatsnew/3.0.rst:631
 msgid ""
-"Cleanup of the :mod:`sys` module: removed :func:`sys.exitfunc`, :func:`sys."
-"exc_clear`, :data:`sys.exc_type`, :data:`sys.exc_value`, :data:`sys."
-"exc_traceback`.  (Note that :data:`sys.last_type` etc. remain.)"
+"Cleanup of the :mod:`sys` module: "
+"removed :func:`sys.exitfunc`, :func:`sys.exc_clear`, :data:`sys.exc_type`, :data:`sys.exc_value`, :data:`sys.exc_traceback`.  "
+"(Note that :data:`sys.last_type` etc. remain.)"
 msgstr ""
-"Limpiado el módulo :mod:`sys`: quitado :func:`sys.exitfunc`, :func:`sys."
-"exc_clear`, :data:`sys.exc_type`, :data:`sys.exc_value`, :data:`sys."
-"exc_traceback`. (Notar que :data:`sys.last_type` etc. permanece.)"
+"Limpiado el módulo :mod:`sys`: "
+"quitado :func:`sys.exitfunc`, :func:`sys.exc_clear`, :data:`sys.exc_type`, :data:`sys.exc_value`, :data:`sys.exc_traceback`. "
+"(Notar que :data:`sys.last_type` etc. permanece.)"
 
 #: ../Doc/whatsnew/3.0.rst:636
 msgid ""
@@ -1267,34 +1323,37 @@ msgid ""
 "the ``'c'`` typecode for array is gone -- use either ``'b'`` for bytes or "
 "``'u'`` for Unicode characters."
 msgstr ""
-"Limpiado del tipo :class:`array.array`: los métodos :meth:`read` y :meth:"
-"`write` ya no están; usar :meth:`fromfile` y :meth:`tofile` en su lugar. "
-"Asimismo, the el código de tipo ``'c'`` para arreglo ya no está-- utilizar o "
-"bien ``'b'`` para bytes o ``'u'`` para caracteres Unicode."
+"Limpiado del tipo :class:`array.array`: los métodos :meth:`read` "
+"y :meth:`write` ya no están; usar :meth:`fromfile` y :meth:`tofile` en su "
+"lugar. Asimismo, the el código de tipo ``'c'`` para arreglo ya no está-- "
+"utilizar o bien ``'b'`` para bytes o ``'u'`` para caracteres Unicode."
 
 #: ../Doc/whatsnew/3.0.rst:642
 msgid ""
-"Cleanup of the :mod:`operator` module: removed :func:`sequenceIncludes` and :"
-"func:`isCallable`."
+"Cleanup of the :mod:`operator` module: removed :func:`sequenceIncludes` "
+"and :func:`isCallable`."
 msgstr ""
-"Limpieza del módulo :mod:`operator`: quitados :func:`sequenceIncludes` y :"
-"func:`isCallable`."
+"Limpieza del módulo :mod:`operator`: quitados :func:`sequenceIncludes` "
+"y :func:`isCallable`."
 
 #: ../Doc/whatsnew/3.0.rst:645
+#, fuzzy
 msgid ""
-"Cleanup of the :mod:`thread` module: :func:`acquire_lock` and :func:"
-"`release_lock` are gone; use :func:`acquire` and :func:`release` instead."
+"Cleanup of the :mod:`!thread` module: :func:`!acquire_lock` and :func:`!"
+"release_lock` are gone; use :meth:`~threading.Lock.acquire` "
+"and :meth:`~threading.Lock.release` instead."
 msgstr ""
-"Limpieza del módulo :mod:`thread`: :func:`acquire_lock` y :func:"
-"`release_lock` ya no están; utilizar :func:`acquire` y :func:`release` en su "
-"lugar."
+"Limpieza del módulo :mod:`thread`: :func:`acquire_lock` "
+"y :func:`release_lock` ya no están; utilizar :func:`acquire` "
+"y :func:`release` en su lugar."
 
 #: ../Doc/whatsnew/3.0.rst:649
 msgid "Cleanup of the :mod:`random` module: removed the :func:`jumpahead` API."
 msgstr "Limpieza del módulo :mod:`random`: quitada la API :func:`jumpahead`."
 
 #: ../Doc/whatsnew/3.0.rst:651
-msgid "The :mod:`new` module is gone."
+#, fuzzy
+msgid "The :mod:`!new` module is gone."
 msgstr "El módulo :mod:`new` ya no está."
 
 #: ../Doc/whatsnew/3.0.rst:653
@@ -1316,31 +1375,31 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.0.rst:661
 msgid ""
-":data:`string.letters` and its friends (:data:`string.lowercase` and :data:"
-"`string.uppercase`) are gone.  Use :data:`string.ascii_letters` etc. "
-"instead.  (The reason for the removal is that :data:`string.letters` and "
-"friends had locale-specific behavior, which is a bad idea for such "
+":data:`string.letters` and its friends (:data:`string.lowercase` "
+"and :data:`string.uppercase`) are gone.  Use :data:`string.ascii_letters` "
+"etc. instead.  (The reason for the removal is that :data:`string.letters` "
+"and friends had locale-specific behavior, which is a bad idea for such "
 "attractively named global \"constants\".)"
 msgstr ""
-":data:`string.letters` y sus amigos (:data:`string.lowercase` y :data:"
-"`string.uppercase`) se han ido. Utilice :data:`string.ascii_letters`, etc. "
-"en su lugar. (El motivo de la eliminación es que :data:`string.letters` y "
-"sus amigos tenían un comportamiento específico de la configuración regional, "
-"lo cual es una mala idea para \"constantes\" globales con nombres tan "
-"atractivos)."
+":data:`string.letters` y sus amigos (:data:`string.lowercase` "
+"y :data:`string.uppercase`) se han ido. "
+"Utilice :data:`string.ascii_letters`, etc. en su lugar. (El motivo de la "
+"eliminación es que :data:`string.letters` y sus amigos tenían un "
+"comportamiento específico de la configuración regional, lo cual es una mala "
+"idea para \"constantes\" globales con nombres tan atractivos)."
 
 #: ../Doc/whatsnew/3.0.rst:668
 msgid ""
 "Renamed module :mod:`__builtin__` to :mod:`builtins` (removing the "
 "underscores, adding an 's').  The :data:`__builtins__` variable found in "
-"most global namespaces is unchanged.  To modify a builtin, you should use :"
-"mod:`builtins`, not :data:`__builtins__`!"
+"most global namespaces is unchanged.  To modify a builtin, you should "
+"use :mod:`builtins`, not :data:`__builtins__`!"
 msgstr ""
 "Renombrado el módulo :mod:`__builtin__` a :mod:`builtins` (quitando los "
 "guiones bajos, agregando una 's'). La variable :data:`__builtins__` "
 "encontrada en la mayoría de los espacios de nombres globales no tiene "
-"cambios. Para modificar un *builtin*, Se debería usar :mod:`builtins`, no :"
-"data:`__builtins__`!"
+"cambios. Para modificar un *builtin*, Se debería usar :mod:`builtins`, "
+"no :data:`__builtins__`!"
 
 #: ../Doc/whatsnew/3.0.rst:675
 msgid ":pep:`3101`: A New Approach To String Formatting"
@@ -1356,8 +1415,8 @@ msgstr ""
 "Un nuevo sistema para operaciones de formateo de cadenas de caracteres "
 "incorporadas reemplaza el operador de formato de cadena de caracteres ``%``. "
 "(De todas maneras, el operador ``%`` sigue siento soportado; será obsoleto "
-"en Python 3.1 y quitado del lenguaje en algún momento más adelante.) Leer :"
-"pep:`3101` para la primicia completa."
+"en Python 3.1 y quitado del lenguaje en algún momento más adelante.) "
+"Leer :pep:`3101` para la primicia completa."
 
 #: ../Doc/whatsnew/3.0.rst:685
 msgid "Changes To Exceptions"
@@ -1373,35 +1432,36 @@ msgstr ""
 
 #: ../Doc/whatsnew/3.0.rst:690
 msgid ""
-":pep:`352`: All exceptions must be derived (directly or indirectly) from :"
-"exc:`BaseException`.  This is the root of the exception hierarchy.  This is "
-"not new as a recommendation, but the *requirement* to inherit from :exc:"
-"`BaseException` is new.  (Python 2.6 still allowed classic classes to be "
-"raised, and placed no restriction on what you can catch.)  As a consequence, "
-"string exceptions are finally truly and utterly dead."
+":pep:`352`: All exceptions must be derived (directly or indirectly) "
+"from :exc:`BaseException`.  This is the root of the exception hierarchy.  "
+"This is not new as a recommendation, but the *requirement* to inherit "
+"from :exc:`BaseException` is new.  (Python 2.6 still allowed classic classes "
+"to be raised, and placed no restriction on what you can catch.)  As a "
+"consequence, string exceptions are finally truly and utterly dead."
 msgstr ""
 ":pep:`352`: Todas las excepciones deben derivarse (directa o indirectamente) "
 "de :exc:`BaseException`. Esta es la raíz de la jerarquía de excepciones. "
-"Esto no es nuevo como recomendación, pero el *requisito* de heredar de :exc:"
-"`BaseException` es nuevo. (Python 2.6 aún permitía que las clases clásicas "
-"se lanzaran, y no ponía ninguna restricción en lo que se podía capturar.) "
-"Como consecuencia, las excepciones de cadena de caracteres finalmente están "
-"verdaderamente y completamente muertas."
+"Esto no es nuevo como recomendación, pero el *requisito* de heredar "
+"de :exc:`BaseException` es nuevo. (Python 2.6 aún permitía que las clases "
+"clásicas se lanzaran, y no ponía ninguna restricción en lo que se podía "
+"capturar.) Como consecuencia, las excepciones de cadena de caracteres "
+"finalmente están verdaderamente y completamente muertas."
 
 #: ../Doc/whatsnew/3.0.rst:698
 msgid ""
-"Almost all exceptions should actually derive from :exc:`Exception`; :exc:"
-"`BaseException` should only be used as a base class for exceptions that "
-"should only be handled at the top level, such as :exc:`SystemExit` or :exc:"
-"`KeyboardInterrupt`.  The recommended idiom for handling all exceptions "
-"except for this latter category is to use :keyword:`except` :exc:`Exception`."
+"Almost all exceptions should actually derive "
+"from :exc:`Exception`; :exc:`BaseException` should only be used as a base "
+"class for exceptions that should only be handled at the top level, such "
+"as :exc:`SystemExit` or :exc:`KeyboardInterrupt`.  The recommended idiom for "
+"handling all exceptions except for this latter category is to "
+"use :keyword:`except` :exc:`Exception`."
 msgstr ""
-"Casi todas las excepciones deberían de hecho derivarse de :exc:`Exception`; :"
-"exc:`BaseException` sólo debe utilizarse como clase base para las "
-"excepciones que solo deben controlarse en el nivel superior, como :exc:"
-"`SystemExit` o :exc:`KeyboardInterrupt`. El modismo recomendado para "
-"controlar todas las excepciones excepto esta última categoría es usar :"
-"keyword:`except` :exc:`Exception`."
+"Casi todas las excepciones deberían de hecho derivarse "
+"de :exc:`Exception`; :exc:`BaseException` sólo debe utilizarse como clase "
+"base para las excepciones que solo deben controlarse en el nivel superior, "
+"como :exc:`SystemExit` o :exc:`KeyboardInterrupt`. El modismo recomendado "
+"para controlar todas las excepciones excepto esta última categoría es "
+"usar :keyword:`except` :exc:`Exception`."
 
 #: ../Doc/whatsnew/3.0.rst:705
 msgid ":exc:`StandardError` was removed."
@@ -1412,16 +1472,17 @@ msgid ""
 "Exceptions no longer behave as sequences.  Use the :attr:`args` attribute "
 "instead."
 msgstr ""
-"Las excepciones ya no se comportan como secuencias. Utilizar el atributo :"
-"attr:`args` en su lugar."
+"Las excepciones ya no se comportan como secuencias. Utilizar el "
+"atributo :attr:`args` en su lugar."
 
 #: ../Doc/whatsnew/3.0.rst:710
+#, fuzzy
 msgid ""
 ":pep:`3109`: Raising exceptions.  You must now use :samp:`raise {Exception}"
 "({args})` instead of :samp:`raise {Exception}, {args}`. Additionally, you "
 "can no longer explicitly specify a traceback; instead, if you *have* to do "
-"this, you can assign directly to the :attr:`__traceback__` attribute (see "
-"below)."
+"this, you can assign directly to the :attr:`~BaseException.__traceback__` "
+"attribute (see below)."
 msgstr ""
 ":pep:`3109`: Lanzando excepciones. Ahora se debe usar :samp:`raise "
 "{Exception}({args})` en lugar de :samp:`raise {Exception}, {args}`. "
@@ -1433,8 +1494,8 @@ msgstr ""
 msgid ""
 ":pep:`3110`: Catching exceptions.  You must now use :samp:`except "
 "{SomeException} as {variable}` instead of :samp:`except {SomeException}, "
-"{variable}`.  Moreover, the *variable* is explicitly deleted when the :"
-"keyword:`except` block is left."
+"{variable}`.  Moreover, the *variable* is explicitly deleted when "
+"the :keyword:`except` block is left."
 msgstr ""
 ":pep:`3110`: Atrapando excepciones. Ahora se debe usar :samp:`except "
 "{AlgunaExcepcion} como {variable}` en lugar de :samp:`except "
@@ -1442,57 +1503,66 @@ msgstr ""
 "eliminada cuando el bloque :keyword:`except` se deja."
 
 #: ../Doc/whatsnew/3.0.rst:722
+#, fuzzy
 msgid ""
 ":pep:`3134`: Exception chaining.  There are two cases: implicit chaining and "
 "explicit chaining.  Implicit chaining happens when an exception is raised in "
 "an :keyword:`except` or :keyword:`finally` handler block.  This usually "
 "happens due to a bug in the handler block; we call this a *secondary* "
 "exception.  In this case, the original exception (that was being handled) is "
-"saved as the :attr:`__context__` attribute of the secondary exception. "
-"Explicit chaining is invoked with this syntax::"
+"saved as the :attr:`~BaseException.__context__` attribute of the secondary "
+"exception. Explicit chaining is invoked with this syntax::"
 msgstr ""
 ":pep:`3134`: Encadenamiento de excepciones. Hay dos casos: encadenamiento "
 "implícito y encadenamiento explícito. El encadenamiento implícito se produce "
 "cuando se lanza una excepción en un bloque de controlador :keyword:`except` "
 "o :keyword:`finally`. Esto suele ocurrir debido a un error en el bloque de "
 "controlador; llamamos a esto una excepción *secundaria*. En este caso, la "
-"excepción original (que se estaba controlando) se guarda como el atributo :"
-"attr:`__context__` de la excepción secundaria. El encadenamiento explícito "
-"se invoca con esta sintaxis:"
+"excepción original (que se estaba controlando) se guarda como el "
+"atributo :attr:`__context__` de la excepción secundaria. El encadenamiento "
+"explícito se invoca con esta sintaxis:"
+
+#: ../Doc/whatsnew/3.0.rst:731
+msgid "raise SecondaryException() from primary_exception"
+msgstr ""
 
 #: ../Doc/whatsnew/3.0.rst:733
+#, fuzzy
 msgid ""
 "(where *primary_exception* is any expression that produces an exception "
 "object, probably an exception that was previously caught). In this case, the "
-"primary exception is stored on the :attr:`__cause__` attribute of the "
-"secondary exception.  The traceback printed when an unhandled exception "
-"occurs walks the chain of :attr:`__cause__` and :attr:`__context__` "
-"attributes and prints a separate traceback for each component of the chain, "
-"with the primary exception at the top.  (Java users may recognize this "
-"behavior.)"
+"primary exception is stored on the :attr:`~BaseException.__cause__` "
+"attribute of the secondary exception.  The traceback printed when an "
+"unhandled exception occurs walks the chain of :attr:`!__cause__` "
+"and :attr:`~BaseException.__context__` attributes and prints a separate "
+"traceback for each component of the chain, with the primary exception at the "
+"top.  (Java users may recognize this behavior.)"
 msgstr ""
 "(donde *primary_exception* es cualquier expresión que produce un objeto de "
 "excepción, probablemente una excepción que se detectó anteriormente). En "
-"este caso, la excepción principal se almacena en el atributo :attr:"
-"`__cause__` de la excepción secundaria. El traceback impreso recorre la "
-"cadena de atributos :attr:`__cause__` y :attr:`__context__` cuando se "
-"produce una excepción no controlada e imprime un traceback independiente "
-"para cada componente de la cadena, con la excepción principal en la parte "
-"superior. (Los usuarios de Java pueden reconocer este comportamiento.)"
+"este caso, la excepción principal se almacena en el "
+"atributo :attr:`__cause__` de la excepción secundaria. El traceback impreso "
+"recorre la cadena de atributos :attr:`__cause__` y :attr:`__context__` "
+"cuando se produce una excepción no controlada e imprime un traceback "
+"independiente para cada componente de la cadena, con la excepción principal "
+"en la parte superior. (Los usuarios de Java pueden reconocer este "
+"comportamiento.)"
 
-#: ../Doc/whatsnew/3.0.rst:742
+#: ../Doc/whatsnew/3.0.rst:743
+#, fuzzy
 msgid ""
-":pep:`3134`: Exception objects now store their traceback as the :attr:"
-"`__traceback__` attribute.  This means that an exception object now contains "
-"all the information pertaining to an exception, and there are fewer reasons "
-"to use :func:`sys.exc_info` (though the latter is not removed)."
+":pep:`3134`: Exception objects now store their traceback as "
+"the :attr:`~BaseException.__traceback__` attribute.  This means that an "
+"exception object now contains all the information pertaining to an "
+"exception, and there are fewer reasons to use :func:`sys.exc_info` (though "
+"the latter is not removed)."
 msgstr ""
 ":pep:`3134`: Los objetos de excepción ahora almacenan su traceback como el "
 "atributo :attr:`__traceback__`. Esto significa que un objeto de excepción "
 "ahora contiene toda la información relativa a una excepción y hay menos "
 "razones para usar :func:`sys.exc_info` (aunque este último no se quita)."
 
-#: ../Doc/whatsnew/3.0.rst:748
+#: ../Doc/whatsnew/3.0.rst:749
 msgid ""
 "A few exception messages are improved when Windows fails to load an "
 "extension module.  For example, ``error code 193`` is now ``%1 is not a "
@@ -1503,23 +1573,23 @@ msgstr ""
 "valid Win32 application``. Las cadenas de caracteres ahora tratan con "
 "configuraciones regionales no inglesas."
 
-#: ../Doc/whatsnew/3.0.rst:755
+#: ../Doc/whatsnew/3.0.rst:756
 msgid "Miscellaneous Other Changes"
 msgstr "Otros cambios diversos"
 
-#: ../Doc/whatsnew/3.0.rst:758
+#: ../Doc/whatsnew/3.0.rst:759
 msgid "Operators And Special Methods"
 msgstr "Operadores y métodos especiales"
 
-#: ../Doc/whatsnew/3.0.rst:760
+#: ../Doc/whatsnew/3.0.rst:761
 msgid ""
-"``!=`` now returns the opposite of ``==``, unless ``==`` returns :data:"
-"`NotImplemented`."
+"``!=`` now returns the opposite of ``==``, unless ``==`` "
+"returns :data:`NotImplemented`."
 msgstr ""
-"``!=`` ahora retorna lo opuesto de ``==``, salvo que ``==`` retorne :data:"
-"`NotImplemented`."
+"``!=`` ahora retorna lo opuesto de ``==``, salvo que ``==`` "
+"retorne :data:`NotImplemented`."
 
-#: ../Doc/whatsnew/3.0.rst:763
+#: ../Doc/whatsnew/3.0.rst:764
 msgid ""
 "The concept of \"unbound methods\" has been removed from the language. When "
 "referencing a method as a class attribute, you now get a plain function "
@@ -1529,7 +1599,7 @@ msgstr ""
 "se refiere a un método como atributo de clase, ahora se obtiene un objeto de "
 "función simple."
 
-#: ../Doc/whatsnew/3.0.rst:767
+#: ../Doc/whatsnew/3.0.rst:768
 msgid ""
 ":meth:`__getslice__`, :meth:`__setslice__` and :meth:`__delslice__` were "
 "killed.  The syntax ``a[i:j]`` now translates to ``a.__getitem__(slice(i, "
@@ -1541,57 +1611,59 @@ msgstr ""
 "j))`` (o :meth:`__setitem__` o :meth:`__delitem__`, cuando se utiliza como "
 "destino de asignación o eliminación, respectivamente)."
 
-#: ../Doc/whatsnew/3.0.rst:773
+#: ../Doc/whatsnew/3.0.rst:774
 msgid ""
-":pep:`3114`: the standard :meth:`next` method has been renamed to :meth:"
-"`~iterator.__next__`."
+":pep:`3114`: the standard :meth:`next` method has been renamed "
+"to :meth:`~iterator.__next__`."
 msgstr ""
-":pep:`3114`: El método estándar :meth:`next` se ha renombrado como :meth:"
-"`~iterator.__next__`."
+":pep:`3114`: El método estándar :meth:`next` se ha renombrado "
+"como :meth:`~iterator.__next__`."
 
-#: ../Doc/whatsnew/3.0.rst:776
+#: ../Doc/whatsnew/3.0.rst:777
 msgid ""
-"The :meth:`__oct__` and :meth:`__hex__` special methods are removed -- :func:"
-"`oct` and :func:`hex` use :meth:`__index__` now to convert the argument to "
-"an integer."
+"The :meth:`__oct__` and :meth:`__hex__` special methods are removed "
+"-- :func:`oct` and :func:`hex` use :meth:`__index__` now to convert the "
+"argument to an integer."
 msgstr ""
-"Los métodos especiales :meth:`__oct__` y :meth:`__hex__` se quitaron -- :"
-"func:`oct` y :func:`hex` utilizan :meth:`__index__` ahora para convertir el "
-"argumento a un entero."
+"Los métodos especiales :meth:`__oct__` y :meth:`__hex__` se quitaron "
+"-- :func:`oct` y :func:`hex` utilizan :meth:`__index__` ahora para convertir "
+"el argumento a un entero."
 
-#: ../Doc/whatsnew/3.0.rst:780
+#: ../Doc/whatsnew/3.0.rst:781
 msgid "Removed support for :attr:`__members__` and :attr:`__methods__`."
 msgstr "Soporte eliminado para :attr:`__members__` y :attr:`__methods__`."
 
-#: ../Doc/whatsnew/3.0.rst:782
+#: ../Doc/whatsnew/3.0.rst:783
+#, fuzzy
 msgid ""
-"The function attributes named :attr:`func_X` have been renamed to use the :"
-"data:`__X__` form, freeing up these names in the function attribute "
-"namespace for user-defined attributes.  To wit, :attr:`func_closure`, :attr:"
-"`func_code`, :attr:`func_defaults`, :attr:`func_dict`, :attr:`func_doc`, :"
-"attr:`func_globals`, :attr:`func_name` were renamed to :attr:`__closure__`, :"
-"attr:`__code__`, :attr:`__defaults__`, :attr:`~object.__dict__`, :attr:"
-"`__doc__`, :attr:`__globals__`, :attr:`~definition.__name__`, respectively."
+"The function attributes named :attr:`!func_X` have been renamed to use "
+"the :attr:`!__X__` form, freeing up these names in the function attribute "
+"namespace for user-defined attributes.  To wit, :attr:`!"
+"func_closure`, :attr:`!func_code`, :attr:`!func_defaults`, :attr:`!"
+"func_dict`, :attr:`!func_doc`, :attr:`!func_globals`, :attr:`!func_name` "
+"were renamed "
+"to :attr:`~function.__closure__`, :attr:`~function.__code__`, :attr:`~function.__defaults__`, :attr:`~function.__dict__`, :attr:`~function.__doc__`, :attr:`~function.__globals__`, :attr:`~function.__name__`, "
+"respectively."
 msgstr ""
-"Se ha cambiado el nombre de los atributos de función denominados :attr:"
-"`func_X` para utilizar el formulario :data:`__X__`, liberando estos nombres "
-"en el espacio de nombres de atributo de función para los atributos definidos "
-"por el usuario.  Es decir, :attr:`func_closure`, :attr:`func_code`, :attr:"
-"`func_defaults`, :attr:`func_dict`, :attr:`func_doc`, :attr:`func_globals`, :"
-"attr:`func_name` se renombraron a :attr:`__closure__`, :attr:`__code__`, :"
-"attr:`__defaults__`, :attr:`~object.__dict__`, :attr:`__doc__`, :attr:"
-"`__globals__`, :attr:`~definition.__name__`, respectivamente."
+"Se ha cambiado el nombre de los atributos de función "
+"denominados :attr:`func_X` para utilizar el formulario :data:`__X__`, "
+"liberando estos nombres en el espacio de nombres de atributo de función para "
+"los atributos definidos por el usuario.  Es "
+"decir, :attr:`func_closure`, :attr:`func_code`, :attr:`func_defaults`, :attr:`func_dict`, :attr:`func_doc`, :attr:`func_globals`, :attr:`func_name` "
+"se renombraron "
+"a :attr:`__closure__`, :attr:`__code__`, :attr:`__defaults__`, :attr:`~object.__dict__`, :attr:`__doc__`, :attr:`__globals__`, :attr:`~definition.__name__`, "
+"respectivamente."
 
-#: ../Doc/whatsnew/3.0.rst:792
+#: ../Doc/whatsnew/3.0.rst:794
 #, fuzzy
 msgid ":meth:`!__nonzero__` is now :meth:`~object.__bool__`."
 msgstr ":meth:`__nonzero__` ahora es :meth:`__bool__`."
 
-#: ../Doc/whatsnew/3.0.rst:795
+#: ../Doc/whatsnew/3.0.rst:797
 msgid "Builtins"
 msgstr "Incorporados"
 
-#: ../Doc/whatsnew/3.0.rst:797
+#: ../Doc/whatsnew/3.0.rst:799
 msgid ""
 ":pep:`3135`: New :func:`super`.  You can now invoke :func:`super` without "
 "arguments and (assuming this is in a regular instance method defined inside "
@@ -1605,7 +1677,7 @@ msgstr ""
 "automáticamente la clase y la instancia correctas. Con argumentos, el "
 "comportamiento de :func:`super` no cambia."
 
-#: ../Doc/whatsnew/3.0.rst:803
+#: ../Doc/whatsnew/3.0.rst:805
 msgid ""
 ":pep:`3111`: :func:`raw_input` was renamed to :func:`input`.  That is, the "
 "new :func:`input` function reads a line from :data:`sys.stdin` and returns "
@@ -1619,15 +1691,15 @@ msgstr ""
 "prematuramente. Para obtener el comportamiento anterior de :func:`input`, "
 "utilice ``eval(input())``."
 
-#: ../Doc/whatsnew/3.0.rst:809
+#: ../Doc/whatsnew/3.0.rst:811
 msgid ""
-"A new built-in function :func:`next` was added to call the :meth:`~iterator."
-"__next__` method on an object."
+"A new built-in function :func:`next` was added to call "
+"the :meth:`~iterator.__next__` method on an object."
 msgstr ""
-"Se añadió una nueva función incorporada :func:`next` para llamar al método :"
-"meth:`~iterator.__next__` sobre un objeto."
+"Se añadió una nueva función incorporada :func:`next` para llamar al "
+"método :meth:`~iterator.__next__` sobre un objeto."
 
-#: ../Doc/whatsnew/3.0.rst:812
+#: ../Doc/whatsnew/3.0.rst:814
 msgid ""
 "The :func:`round` function rounding strategy and return type have changed.  "
 "Exact halfway cases are now rounded to the nearest even result instead of "
@@ -1645,28 +1717,28 @@ msgstr ""
 "Por lo general, retorna un entero cuando se llama con un único argumento y "
 "un valor del mismo tipo que ``x`` cuando se llama con dos argumentos."
 
-#: ../Doc/whatsnew/3.0.rst:821
+#: ../Doc/whatsnew/3.0.rst:823
 msgid "Moved :func:`intern` to :func:`sys.intern`."
 msgstr "Se movió :func:`intern` a :func:`sys.intern`."
 
-#: ../Doc/whatsnew/3.0.rst:823
+#: ../Doc/whatsnew/3.0.rst:825
 msgid ""
 "Removed: :func:`apply`.  Instead of ``apply(f, args)`` use ``f(*args)``."
 msgstr ""
 "Se eliminó: :func:`apply`. En lugar de ``apply(f, args)`` se utiliza "
 "``f(*args)``."
 
-#: ../Doc/whatsnew/3.0.rst:826
+#: ../Doc/whatsnew/3.0.rst:828
 msgid ""
 "Removed :func:`callable`.  Instead of ``callable(f)`` you can use "
 "``isinstance(f, collections.Callable)``.  The :func:`operator.isCallable` "
 "function is also gone."
 msgstr ""
 "Se eliminó :func:`callable`. En lugar de ``callable(f)`` se puede utilizar "
-"``isinstance(f, collections.Callable)``. La función :func:`operator."
-"isCallable` también se quitó."
+"``isinstance(f, collections.Callable)``. La "
+"función :func:`operator.isCallable` también se quitó."
 
-#: ../Doc/whatsnew/3.0.rst:830
+#: ../Doc/whatsnew/3.0.rst:832
 msgid ""
 "Removed :func:`coerce`.  This function no longer serves a purpose now that "
 "classic classes are gone."
@@ -1674,50 +1746,50 @@ msgstr ""
 "Se eliminó :func:`coerce`. Esta función ya no sirve para nada ahora que las "
 "clases clásicas se han quitado."
 
-#: ../Doc/whatsnew/3.0.rst:833
+#: ../Doc/whatsnew/3.0.rst:835
 msgid ""
-"Removed :func:`execfile`.  Instead of ``execfile(fn)`` use ``exec(open(fn)."
-"read())``."
+"Removed :func:`execfile`.  Instead of ``execfile(fn)`` use "
+"``exec(open(fn).read())``."
 msgstr ""
 "Se eliminó :func:`execfile`. En lugar de ``execfile(fn)`` utilizar "
 "``exec(open(fn).read())``."
 
-#: ../Doc/whatsnew/3.0.rst:836
+#: ../Doc/whatsnew/3.0.rst:838
 msgid ""
 "Removed the :class:`file` type.  Use :func:`open`.  There are now several "
 "different kinds of streams that open can return in the :mod:`io` module."
 msgstr ""
 "Se eliminó el tipo :class:`file`. Se utiliza :func:`open`. Ahora hay varios "
-"tipos diferentes de secuencias que se abren y pueden retornar en el módulo :"
-"mod:`io`."
+"tipos diferentes de secuencias que se abren y pueden retornar en el "
+"módulo :mod:`io`."
 
-#: ../Doc/whatsnew/3.0.rst:839
+#: ../Doc/whatsnew/3.0.rst:841
 msgid ""
 "Removed :func:`reduce`.  Use :func:`functools.reduce` if you really need it; "
 "however, 99 percent of the time an explicit :keyword:`for` loop is more "
 "readable."
 msgstr ""
 "Se eliminó :func:`reduce`. Se puede utilizar :func:`functools.reduce` si es "
-"realmente necesario; de todas maneras, 99 por ciento del tiempo un bucle :"
-"keyword:`for` explícito es más legible."
+"realmente necesario; de todas maneras, 99 por ciento del tiempo un "
+"bucle :keyword:`for` explícito es más legible."
 
-#: ../Doc/whatsnew/3.0.rst:843
+#: ../Doc/whatsnew/3.0.rst:845
 #, fuzzy
 msgid "Removed :func:`reload`.  Use :func:`!imp.reload`."
 msgstr "Se eliminó :func:`reload`. Se utiliza :func:`imp.reload`."
 
-#: ../Doc/whatsnew/3.0.rst:845
+#: ../Doc/whatsnew/3.0.rst:847
 msgid ""
 "Removed. :meth:`dict.has_key` -- use the :keyword:`in` operator instead."
 msgstr ""
 "Se eliminó :meth:`dict.has_key` -- se utiliza el operador :keyword:`in` en "
 "su lugar."
 
-#: ../Doc/whatsnew/3.0.rst:852
+#: ../Doc/whatsnew/3.0.rst:854
 msgid "Build and C API Changes"
 msgstr "Construcción y cambios a la API de C"
 
-#: ../Doc/whatsnew/3.0.rst:854
+#: ../Doc/whatsnew/3.0.rst:856
 msgid ""
 "Due to time constraints, here is a *very* incomplete list of changes to the "
 "C API."
@@ -1725,7 +1797,7 @@ msgstr ""
 "Debido a restricciones de tiempo, aquí hay una *muy* incompleta lista de "
 "cambios a la API de C."
 
-#: ../Doc/whatsnew/3.0.rst:857
+#: ../Doc/whatsnew/3.0.rst:859
 msgid ""
 "Support for several platforms was dropped, including but not limited to Mac "
 "OS 9, BeOS, RISCOS, Irix, and Tru64."
@@ -1733,42 +1805,43 @@ msgstr ""
 "Se ha eliminado el soporte para varias plataformas, incluyendo pero no "
 "limitado a Mac OS 9, BeOS, RISCOS, Irix y Tru64."
 
-#: ../Doc/whatsnew/3.0.rst:860
+#: ../Doc/whatsnew/3.0.rst:862
 msgid ":pep:`3118`: New Buffer API."
 msgstr ":pep:`3118`: Nueva API de búfer."
 
-#: ../Doc/whatsnew/3.0.rst:862
+#: ../Doc/whatsnew/3.0.rst:864
 msgid ":pep:`3121`: Extension Module Initialization & Finalization."
 msgstr ":pep:`3121`: Inicialización y finalización de módulos de extensión."
 
-#: ../Doc/whatsnew/3.0.rst:864
+#: ../Doc/whatsnew/3.0.rst:866
 msgid ":pep:`3123`: Making :c:macro:`PyObject_HEAD` conform to standard C."
 msgstr ":pep:`3123`: Haciendo :c:macro:`PyObject_HEAD` conforme al estándar C."
 
-#: ../Doc/whatsnew/3.0.rst:866
+#: ../Doc/whatsnew/3.0.rst:868
 msgid "No more C API support for restricted execution."
 msgstr "No más compatibilidad con API C para ejecución restringida."
 
-#: ../Doc/whatsnew/3.0.rst:868
+#: ../Doc/whatsnew/3.0.rst:870
 #, fuzzy
 msgid ""
 ":c:func:`!PyNumber_Coerce`, :c:func:`!PyNumber_CoerceEx`, :c:func:`!"
 "PyMember_Get`, and :c:func:`!PyMember_Set` C APIs are removed."
 msgstr ""
-"Las API C :c:func:`PyNumber_Coerce`, :c:func:`PyNumber_CoerceEx`, :c:func:"
-"`PyMember_Get`, y :c:func:`PyMember_Set` se eliminan."
+"Las API "
+"C :c:func:`PyNumber_Coerce`, :c:func:`PyNumber_CoerceEx`, :c:func:`PyMember_Get`, "
+"y :c:func:`PyMember_Set` se eliminan."
 
-#: ../Doc/whatsnew/3.0.rst:871
+#: ../Doc/whatsnew/3.0.rst:873
 msgid ""
-"New C API :c:func:`PyImport_ImportModuleNoBlock`, works like :c:func:"
-"`PyImport_ImportModule` but won't block on the import lock (returning an "
-"error instead)."
+"New C API :c:func:`PyImport_ImportModuleNoBlock`, works "
+"like :c:func:`PyImport_ImportModule` but won't block on the import lock "
+"(returning an error instead)."
 msgstr ""
-"La nueva API C :c:func:`PyImport_ImportModuleNoBlock`, trabaja como :c:func:"
-"`PyImport_ImportModule` pero no bloqueará en el bloqueo de importación (en "
-"su lugar, retornará un error)."
+"La nueva API C :c:func:`PyImport_ImportModuleNoBlock`, trabaja "
+"como :c:func:`PyImport_ImportModule` pero no bloqueará en el bloqueo de "
+"importación (en su lugar, retornará un error)."
 
-#: ../Doc/whatsnew/3.0.rst:875
+#: ../Doc/whatsnew/3.0.rst:877
 msgid ""
 "Renamed the boolean conversion C-level slot and method: ``nb_nonzero`` is "
 "now ``nb_bool``."
@@ -1776,7 +1849,7 @@ msgstr ""
 "Se renombró la conversión booleana de ranura de nivel C y el método: "
 "``nb_nonzero`` ahora es ``nb_bool``."
 
-#: ../Doc/whatsnew/3.0.rst:878
+#: ../Doc/whatsnew/3.0.rst:880
 #, fuzzy
 msgid ""
 "Removed :c:macro:`!METH_OLDARGS` and :c:macro:`!WITH_CYCLE_GC` from the C "
@@ -1784,11 +1857,11 @@ msgid ""
 msgstr ""
 "Se eliminó :c:macro:`METH_OLDARGS` y :c:macro:`WITH_CYCLE_GC` de la API C."
 
-#: ../Doc/whatsnew/3.0.rst:884
+#: ../Doc/whatsnew/3.0.rst:886
 msgid "Performance"
 msgstr "Rendimiento"
 
-#: ../Doc/whatsnew/3.0.rst:886
+#: ../Doc/whatsnew/3.0.rst:888
 #, python-format
 msgid ""
 "The net result of the 3.0 generalizations is that Python 3.0 runs the "
@@ -1802,11 +1875,11 @@ msgstr ""
 "minúsculas especiales para enteros pequeños. Hay margen de mejora, ¡pero "
 "sucederá después de que se publique 3.0!"
 
-#: ../Doc/whatsnew/3.0.rst:896
+#: ../Doc/whatsnew/3.0.rst:898
 msgid "Porting To Python 3.0"
 msgstr "Migración a Python 3.0"
 
-#: ../Doc/whatsnew/3.0.rst:898
+#: ../Doc/whatsnew/3.0.rst:900
 msgid ""
 "For porting existing Python 2.5 or 2.6 source code to Python 3.0, the best "
 "strategy is the following:"
@@ -1814,11 +1887,11 @@ msgstr ""
 "Para migrar código Python 2.5 o 2.6 existente a Python 3.0, la mejor "
 "estrategia es la siguiente:"
 
-#: ../Doc/whatsnew/3.0.rst:901
+#: ../Doc/whatsnew/3.0.rst:903
 msgid "(Prerequisite:) Start with excellent test coverage."
 msgstr "(Prerrequisito:) Comenzar con excelente cobertura de test."
 
-#: ../Doc/whatsnew/3.0.rst:903
+#: ../Doc/whatsnew/3.0.rst:905
 msgid ""
 "Port to Python 2.6.  This should be no more work than the average port from "
 "Python 2.x to Python 2.(x+1).  Make sure all your tests pass."
@@ -1827,25 +1900,25 @@ msgstr ""
 "migración promedio de Python 2.x a Python 2.(x+1). Asegurarse que todos los "
 "test pasen."
 
-#: ../Doc/whatsnew/3.0.rst:907
+#: ../Doc/whatsnew/3.0.rst:909
 msgid ""
 "(Still using 2.6:) Turn on the :option:`!-3` command line switch. This "
 "enables warnings about features that will be removed (or change) in 3.0.  "
 "Run your test suite again, and fix code that you get warnings about until "
 "there are no warnings left, and all your tests still pass."
 msgstr ""
-"(Todavía utilizando 2.6:) Activar el modificador de línea de comandos :"
-"option:`!-3`. Esto habilita las advertencias sobre las características que "
-"se eliminarán (o cambiarán) en 3.0. Ejecutar el conjunto de pruebas de nuevo "
-"y corregir el código sobre el que se recibe advertencias hasta que no queden "
-"advertencias y todas las pruebas sigan pasando."
+"(Todavía utilizando 2.6:) Activar el modificador de línea de "
+"comandos :option:`!-3`. Esto habilita las advertencias sobre las "
+"características que se eliminarán (o cambiarán) en 3.0. Ejecutar el conjunto "
+"de pruebas de nuevo y corregir el código sobre el que se recibe advertencias "
+"hasta que no queden advertencias y todas las pruebas sigan pasando."
 
-#: ../Doc/whatsnew/3.0.rst:913
+#: ../Doc/whatsnew/3.0.rst:915
+#, fuzzy
 msgid ""
 "Run the ``2to3`` source-to-source translator over your source code tree.  "
-"(See :ref:`2to3-reference` for more on this tool.)  Run the result of the "
-"translation under Python 3.0.  Manually fix up any remaining issues, fixing "
-"problems until all tests pass again."
+"Run the result of the translation under Python 3.0.  Manually fix up any "
+"remaining issues, fixing problems until all tests pass again."
 msgstr ""
 "Ejecutar el traductor de origen a origen ``2to3`` sobre el árbol de código "
 "fuente. (Consultar :ref:`2to3-reference` para obtener más información sobre "
@@ -1853,11 +1926,11 @@ msgstr ""
 "Corregir manualmente los problemas restantes, solucionando problemas hasta "
 "que todos las pruebas vuelvan a pasar."
 
-#: ../Doc/whatsnew/3.0.rst:918
+#: ../Doc/whatsnew/3.0.rst:920
 msgid ""
 "It is not recommended to try to write source code that runs unchanged under "
-"both Python 2.6 and 3.0; you'd have to use a very contorted coding style, e."
-"g. avoiding ``print`` statements, metaclasses, and much more.  If you are "
+"both Python 2.6 and 3.0; you'd have to use a very contorted coding style, "
+"e.g. avoiding ``print`` statements, metaclasses, and much more.  If you are "
 "maintaining a library that needs to support both Python 2.6 and Python 3.0, "
 "the best approach is to modify step 3 above by editing the 2.6 version of "
 "the source code and running the ``2to3`` translator again, rather than "
@@ -1871,7 +1944,7 @@ msgstr ""
 "versión 2.6 del código fuente y ejecutando el traductor ``2to3`` de nuevo, "
 "en lugar de editar la versión 3.0 del código fuente."
 
-#: ../Doc/whatsnew/3.0.rst:927
+#: ../Doc/whatsnew/3.0.rst:929
 msgid ""
 "For porting C extensions to Python 3.0, please see :ref:`cporting-howto`."
 msgstr ""

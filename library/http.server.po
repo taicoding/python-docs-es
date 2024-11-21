@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-04-06 22:41+1000\n"
 "Last-Translator: Cristián Maureira-Fredes <cmaureirafredes@gmail.com>\n"
 "Language: es\n"
@@ -19,10 +19,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/http.server.rst:2
-msgid ":mod:`http.server` --- HTTP servers"
+#, fuzzy
+msgid ":mod:`!http.server` --- HTTP servers"
 msgstr ":mod:`http.server` --- Servidores HTTP"
 
 #: ../Doc/library/http.server.rst:7
@@ -35,22 +36,22 @@ msgstr "Este módulo define clases para implementar servidores HTTP."
 
 #: ../Doc/library/http.server.rst:22
 msgid ""
-":mod:`http.server` is not recommended for production. It only implements :"
-"ref:`basic security checks <http.server-security>`."
+":mod:`http.server` is not recommended for production. It only "
+"implements :ref:`basic security checks <http.server-security>`."
 msgstr ""
-":mod:`http.server` no se recomienda para producción. Sólo implementa :ref:"
-"`controles de seguridad básicos <http.server-security>`."
+":mod:`http.server` no se recomienda para producción. Sólo "
+"implementa :ref:`controles de seguridad básicos <http.server-security>`."
 
 #: ../Doc/includes/wasm-notavail.rst:3
 #, fuzzy
-msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
+msgid ":ref:`Availability <availability>`: not WASI."
 msgstr ":ref:`Disponibilidad <availability>`: ni Emscripten, ni WASI."
 
 #: ../Doc/includes/wasm-notavail.rst:5
+#, fuzzy
 msgid ""
-"This module does not work or is not available on WebAssembly platforms "
-"``wasm32-emscripten`` and ``wasm32-wasi``. See :ref:`wasm-availability` for "
-"more information."
+"This module does not work or is not available on WebAssembly. See :ref:`wasm-"
+"availability` for more information."
 msgstr ""
 "Este módulo no funciona o no está disponible en las plataformas WebAssembly "
 "``wasm32-emscripten`` y ``wasm32-wasi``. Consulte :ref:`wasm-availability` "
@@ -62,22 +63,31 @@ msgid ""
 "subclass. It creates and listens at the HTTP socket, dispatching the "
 "requests to a handler.  Code to create and run the server looks like this::"
 msgstr ""
-"Una clase, :class:`HTTPServer`, es una subclase :class:`socketserver."
-"TCPServer`. Crea y escucha en el socket HTTP, enviando las peticiones a un "
-"handler.  El código para crear y ejecutar el servidor se ve así::"
+"Una clase, :class:`HTTPServer`, es una "
+"subclase :class:`socketserver.TCPServer`. Crea y escucha en el socket HTTP, "
+"enviando las peticiones a un handler.  El código para crear y ejecutar el "
+"servidor se ve así::"
+
+#: ../Doc/library/http.server.rst:31
+msgid ""
+"def run(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):\n"
+"    server_address = ('', 8000)\n"
+"    httpd = server_class(server_address, handler_class)\n"
+"    httpd.serve_forever()"
+msgstr ""
 
 #: ../Doc/library/http.server.rst:39
 msgid ""
 "This class builds on the :class:`~socketserver.TCPServer` class by storing "
-"the server address as instance variables named :attr:`server_name` and :attr:"
-"`server_port`. The server is accessible by the handler, typically through "
-"the handler's :attr:`server` instance variable."
+"the server address as instance variables named :attr:`server_name` "
+"and :attr:`server_port`. The server is accessible by the handler, typically "
+"through the handler's :attr:`server` instance variable."
 msgstr ""
 "Esta clase se basa en la clase :class:`~socketserver.TCPServer` almacenando "
-"la dirección del servidor como variables de instancia llamadas :attr:"
-"`nombre_del_servidor` y :attr:`puerto_del_servidor`. El servidor es "
-"accesible por el handler, típicamente a través de la variable de instancia :"
-"attr:`servidor` del handler."
+"la dirección del servidor como variables de instancia "
+"llamadas :attr:`nombre_del_servidor` y :attr:`puerto_del_servidor`. El "
+"servidor es accesible por el handler, típicamente a través de la variable de "
+"instancia :attr:`servidor` del handler."
 
 #: ../Doc/library/http.server.rst:46
 msgid ""
@@ -105,9 +115,9 @@ msgstr ""
 msgid ""
 "This class is used to handle the HTTP requests that arrive at the server.  "
 "By itself, it cannot respond to any actual HTTP requests; it must be "
-"subclassed to handle each request method (e.g. GET or POST). :class:"
-"`BaseHTTPRequestHandler` provides a number of class and instance variables, "
-"and methods for use by subclasses."
+"subclassed to handle each request method (e.g. GET or "
+"POST). :class:`BaseHTTPRequestHandler` provides a number of class and "
+"instance variables, and methods for use by subclasses."
 msgstr ""
 "Esta clase se utiliza para controlar las solicitudes HTTP que llegan al "
 "servidor.  Por sí mismo, no puede responder a ninguna solicitud HTTP real; "
@@ -116,13 +126,14 @@ msgstr ""
 "clase e instancia, y métodos para su uso por subclases."
 
 #: ../Doc/library/http.server.rst:66
+#, fuzzy
 msgid ""
 "The handler will parse the request and the headers, then call a method "
 "specific to the request type. The method name is constructed from the "
-"request. For example, for the request method ``SPAM``, the :meth:`do_SPAM` "
+"request. For example, for the request method ``SPAM``, the :meth:`!do_SPAM` "
 "method will be called with no arguments. All of the relevant information is "
 "stored in instance variables of the handler.  Subclasses should not need to "
-"override or extend the :meth:`__init__` method."
+"override or extend the :meth:`!__init__` method."
 msgstr ""
 "El controlador analizará la solicitud y los encabezados y, a continuación, "
 "llamará a un método específico del tipo de solicitud. El nombre del método "
@@ -161,14 +172,14 @@ msgstr ""
 #: ../Doc/library/http.server.rst:92
 msgid ""
 "Contains the string representation of the HTTP request line. The terminating "
-"CRLF is stripped. This attribute should be set by :meth:"
-"`handle_one_request`. If no valid request line was processed, it should be "
-"set to the empty string."
+"CRLF is stripped. This attribute should be set "
+"by :meth:`handle_one_request`. If no valid request line was processed, it "
+"should be set to the empty string."
 msgstr ""
 "Contiene la representación de cadena de la línea de solicitud HTTP. Se "
-"elimina el CRLF de terminación. Este atributo debe establecerse mediante :"
-"meth:`handle_one_request`. Si no se ha procesado ninguna línea de solicitud "
-"válida, debe establecerse en la cadena vacía."
+"elimina el CRLF de terminación. Este atributo debe establecerse "
+"mediante :meth:`handle_one_request`. Si no se ha procesado ninguna línea de "
+"solicitud válida, debe establecerse en la cadena vacía."
 
 #: ../Doc/library/http.server.rst:99
 msgid "Contains the command (request type). For example, ``'GET'``."
@@ -199,11 +210,11 @@ msgid ""
 "used to parse the headers and it requires that the HTTP request provide a "
 "valid :rfc:`2822` style header."
 msgstr ""
-"Contiene una instancia de la clase especificada por la variable de clase :"
-"attr:`MessageClass`. Esta instancia analiza y gestiona las cabeceras de la "
-"petición HTTP. La función :func:`~http.client.parse_headers` de :mod:`http."
-"client` se usa para parsear las cabeceras y requiere que la petición HTTP "
-"proporcione una cabecera válida de estilo :rfc:`2822`."
+"Contiene una instancia de la clase especificada por la variable de "
+"clase :attr:`MessageClass`. Esta instancia analiza y gestiona las cabeceras "
+"de la petición HTTP. La función :func:`~http.client.parse_headers` "
+"de :mod:`http.client` se usa para parsear las cabeceras y requiere que la "
+"petición HTTP proporcione una cabecera válida de estilo :rfc:`2822`."
 
 #: ../Doc/library/http.server.rst:121
 msgid ""
@@ -239,14 +250,14 @@ msgid ""
 msgstr ""
 "Especifica la versión del software del servidor. Es posible que desee anular "
 "esto. El formato es de múltiples cadenas separadas por espacio en blanco, "
-"donde cada cadena es de la forma nombre[/versión]. Por ejemplo, "
-"``BaseHTTP/0.2'``."
+"donde cada cadena es de la forma nombre[/versión]. Por ejemplo, ``BaseHTTP/"
+"0.2'``."
 
 #: ../Doc/library/http.server.rst:144
 msgid ""
-"Contains the Python system version, in a form usable by the :attr:"
-"`version_string` method and the :attr:`server_version` class variable. For "
-"example, ``'Python/1.4'``."
+"Contains the Python system version, in a form usable by "
+"the :attr:`version_string` method and the :attr:`server_version` class "
+"variable. For example, ``'Python/1.4'``."
 msgstr ""
 "Contiene la versión del sistema Python, en una forma utilizable por el "
 "método :attr:`version_string` y la variable de clase :attr:`server_version`. "
@@ -259,10 +270,10 @@ msgid ""
 "default with variables from :attr:`responses` based on the status code that "
 "passed to :meth:`send_error`."
 msgstr ""
-"Especifica una cadena de formato que debe ser usada por el método :meth:"
-"`send_error` para construir una respuesta de error al cliente. La cadena se "
-"rellena por defecto con variables de :attr:`responses` basadas en el código "
-"de estado que pasó a :meth:`send_error`."
+"Especifica una cadena de formato que debe ser usada por el "
+"método :meth:`send_error` para construir una respuesta de error al cliente. "
+"La cadena se rellena por defecto con variables de :attr:`responses` basadas "
+"en el código de estado que pasó a :meth:`send_error`."
 
 #: ../Doc/library/http.server.rst:157
 msgid ""
@@ -288,18 +299,18 @@ msgstr ""
 "``'HTTP/1.1'``, el servidor permitirá conexiones persistentes HTTP; sin "
 "embargo, el servidor *debe* incluir un encabezado exacto ``Content-Length`` "
 "(usando :meth:`send_header`) en todas sus respuestas a los clientes. Para la "
-"compatibilidad con versiones anteriores, el valor predeterminado es "
-"``'HTTP/1.0'``."
+"compatibilidad con versiones anteriores, el valor predeterminado es ``'HTTP/"
+"1.0'``."
 
 #: ../Doc/library/http.server.rst:172
 msgid ""
 "Specifies an :class:`email.message.Message`\\ -like class to parse HTTP "
-"headers.  Typically, this is not overridden, and it defaults to :class:`http."
-"client.HTTPMessage`."
+"headers.  Typically, this is not overridden, and it defaults "
+"to :class:`http.client.HTTPMessage`."
 msgstr ""
 "Especifica una :class:`email.message.Message`\\ -como clase para analizar "
-"los encabezados HTTP.  Típicamente, esto no es anulado, y por defecto es :"
-"class:`http.client.HTTPMessage`."
+"los encabezados HTTP.  Típicamente, esto no es anulado, y por defecto "
+"es :class:`http.client.HTTPMessage`."
 
 #: ../Doc/library/http.server.rst:178
 msgid ""
@@ -313,8 +324,8 @@ msgstr ""
 "de dos elementos que contienen un mensaje corto y largo. Por ejemplo, "
 "``{code (shortmessage, longmessage)}``. El *shortmessage* se utiliza "
 "normalmente como la clave *message* en una respuesta de error, y "
-"*longmessage* como la clave *explain*.  Es utilizado por :meth:"
-"`send_response_only` y :meth:`send_error` métodos."
+"*longmessage* como la clave *explain*.  Es utilizado "
+"por :meth:`send_response_only` y :meth:`send_error` métodos."
 
 #: ../Doc/library/http.server.rst:184
 msgid "A :class:`BaseHTTPRequestHandler` instance has the following methods:"
@@ -322,10 +333,11 @@ msgstr ""
 "Una instancia :class:`BaseHTTPRequestHandler` tiene los siguientes métodos:"
 
 #: ../Doc/library/http.server.rst:188
+#, fuzzy
 msgid ""
 "Calls :meth:`handle_one_request` once (or, if persistent connections are "
 "enabled, multiple times) to handle incoming HTTP requests. You should never "
-"need to override it; instead, implement appropriate :meth:`do_\\*` methods."
+"need to override it; instead, implement appropriate :meth:`!do_\\*` methods."
 msgstr ""
 "Llama :meth:`handle_one_request` una vez (o, si las conexiones persistentes "
 "están habilitadas, varias veces) para manejar las peticiones HTTP entrantes. "
@@ -333,12 +345,13 @@ msgstr ""
 "apropiados de :meth:`do_\\*`."
 
 #: ../Doc/library/http.server.rst:195
+#, fuzzy
 msgid ""
-"This method will parse and dispatch the request to the appropriate :meth:"
-"`do_\\*` method.  You should never need to override it."
+"This method will parse and dispatch the request to the appropriate :meth:`!"
+"do_\\*` method.  You should never need to override it."
 msgstr ""
-"Este método analizará y enviará la solicitud al método apropiado  :meth:"
-"`do_\\*`.  Nunca deberías necesitar anularlo."
+"Este método analizará y enviará la solicitud al método "
+"apropiado  :meth:`do_\\*`.  Nunca deberías necesitar anularlo."
 
 #: ../Doc/library/http.server.rst:200
 msgid ""
@@ -374,14 +387,15 @@ msgstr ""
 "numérico especifica el código de error HTTP, con *message* como una "
 "descripción opcional, corta y legible por el ser humano del error.  El "
 "argumento *explain* puede ser usado para proporcionar información más "
-"detallada sobre el error; será formateado usando el atributo :attr:"
-"`error_message_format` y emitido, después de un conjunto completo de "
-"encabezados, como el cuerpo de la respuesta.  El atributo :attr:`responses` "
-"contiene los valores por defecto para *message* y *explain* que se usarán si "
-"no se proporciona ningún valor; para los códigos desconocidos el valor por "
-"defecto para ambos es la cadena ``???``. El cuerpo estará vacío si el método "
-"es HEAD o el código de respuesta es uno de los siguientes: ``1xx``, ``204 No "
-"Content``, ``205 Reset Content``, ``304 Not Modified``."
+"detallada sobre el error; será formateado usando el "
+"atributo :attr:`error_message_format` y emitido, después de un conjunto "
+"completo de encabezados, como el cuerpo de la respuesta.  El "
+"atributo :attr:`responses` contiene los valores por defecto para *message* y "
+"*explain* que se usarán si no se proporciona ningún valor; para los códigos "
+"desconocidos el valor por defecto para ambos es la cadena ``???``. El cuerpo "
+"estará vacío si el método es HEAD o el código de respuesta es uno de los "
+"siguientes: ``1xx``, ``204 No Content``, ``205 Reset Content``, ``304 Not "
+"Modified``."
 
 #: ../Doc/library/http.server.rst:223
 msgid ""
@@ -404,11 +418,11 @@ msgstr ""
 "Agrega un encabezado de respuesta al búfer de encabezados y registra la "
 "solicitud aceptada. La línea de respuesta HTTP se escribe en el búfer "
 "interno, seguido de los encabezados *Server* y *Date*. Los valores de estos "
-"dos encabezados se recogen de los métodos :meth:`version_string` y :meth:"
-"`date_time_string`, respectivamente. Si el servidor no tiene la intención de "
-"enviar ningún otro encabezado utilizando el método :meth:`send_header`, "
-"entonces :meth:`send_response` debe ir seguido de una llamada :meth:"
-"`end_headers`."
+"dos encabezados se recogen de los métodos :meth:`version_string` "
+"y :meth:`date_time_string`, respectivamente. Si el servidor no tiene la "
+"intención de enviar ningún otro encabezado utilizando el "
+"método :meth:`send_header`, entonces :meth:`send_response` debe ir seguido "
+"de una llamada :meth:`end_headers`."
 
 #: ../Doc/library/http.server.rst:238
 msgid ""
@@ -423,15 +437,15 @@ msgid ""
 "Adds the HTTP header to an internal buffer which will be written to the "
 "output stream when either :meth:`end_headers` or :meth:`flush_headers` is "
 "invoked. *keyword* should specify the header keyword, with *value* "
-"specifying its value. Note that, after the send_header calls are done, :meth:"
-"`end_headers` MUST BE called in order to complete the operation."
+"specifying its value. Note that, after the send_header calls are "
+"done, :meth:`end_headers` MUST BE called in order to complete the operation."
 msgstr ""
 "Agrega el encabezado HTTP a un búfer interno que se escribirá en la "
-"secuencia de salida cuando se invoca :meth:`end_headers` o :meth:"
-"`flush_headers`. *keyword* debe especificar la palabra clave *header*, con "
-"*value* especificando su valor. Tenga en cuenta que, después de que se "
-"realizan las llamadas *send_header*, :meth:`end_headers` DEBE llamarse para "
-"completar la operación."
+"secuencia de salida cuando se invoca :meth:`end_headers` "
+"o :meth:`flush_headers`. *keyword* debe especificar la palabra clave "
+"*header*, con *value* especificando su valor. Tenga en cuenta que, después "
+"de que se realizan las llamadas *send_header*, :meth:`end_headers` DEBE "
+"llamarse para completar la operación."
 
 #: ../Doc/library/http.server.rst:250
 msgid "Headers are stored in an internal buffer."
@@ -451,9 +465,10 @@ msgstr ""
 "correspondiente al *code* de respuesta."
 
 #: ../Doc/library/http.server.rst:264
+#, fuzzy
 msgid ""
 "Adds a blank line (indicating the end of the HTTP headers in the response) "
-"to the headers buffer and calls :meth:`flush_headers()`."
+"to the headers buffer and calls :meth:`flush_headers`."
 msgstr ""
 "Añade una línea en blanco (indicando el final de las cabeceras HTTP en la "
 "respuesta) al buffer de cabeceras y llama a :meth:`flush_headers()`."
@@ -494,9 +509,9 @@ msgstr ""
 msgid ""
 "Logs an arbitrary message to ``sys.stderr``. This is typically overridden to "
 "create custom error logging mechanisms. The *format* argument is a standard "
-"printf-style format string, where the additional arguments to :meth:"
-"`log_message` are applied as inputs to the formatting. The client ip address "
-"and current date and time are prefixed to every message logged."
+"printf-style format string, where the additional arguments "
+"to :meth:`log_message` are applied as inputs to the formatting. The client "
+"ip address and current date and time are prefixed to every message logged."
 msgstr ""
 "Registra un mensaje arbitrario en ``sys.stderr``. Normalmente se anula para "
 "crear mecanismos personalizados de registro de errores. El argumento "
@@ -507,8 +522,8 @@ msgstr ""
 
 #: ../Doc/library/http.server.rst:301
 msgid ""
-"Returns the server software's version string. This is a combination of the :"
-"attr:`server_version` and :attr:`sys_version` attributes."
+"Returns the server software's version string. This is a combination of "
+"the :attr:`server_version` and :attr:`sys_version` attributes."
 msgstr ""
 "Retorna la cadena de versiones del software del servidor. Esta es una "
 "combinación de los atributos :attr:`server_version` y :attr:`sys_version`."
@@ -554,7 +569,8 @@ msgstr ""
 "estructura del directorio a las solicitudes HTTP."
 
 #: ../Doc/library/http.server.rst:331
-msgid "The *directory* parameter."
+#, fuzzy
+msgid "Added the *directory* parameter."
 msgstr "El parámetro *directory*."
 
 #: ../Doc/library/http.server.rst:334
@@ -563,21 +579,21 @@ msgstr "El parámetro *directory* acepta un :term:`path-like object`."
 
 #: ../Doc/library/http.server.rst:337
 msgid ""
-"A lot of the work, such as parsing the request, is done by the base class :"
-"class:`BaseHTTPRequestHandler`.  This class implements the :func:`do_GET` "
-"and :func:`do_HEAD` functions."
+"A lot of the work, such as parsing the request, is done by the base "
+"class :class:`BaseHTTPRequestHandler`.  This class implements "
+"the :func:`do_GET` and :func:`do_HEAD` functions."
 msgstr ""
 "La carga de trabajo, como el análisis de la solicitud, lo hace la clase "
-"base :class:`BaseHTTPRequestHandler`.  Esta clase implementa las funciones :"
-"func:`do_GET` y :func:`do_HEAD`."
+"base :class:`BaseHTTPRequestHandler`.  Esta clase implementa las "
+"funciones :func:`do_GET` y :func:`do_HEAD`."
 
 #: ../Doc/library/http.server.rst:341
 msgid ""
-"The following are defined as class-level attributes of :class:"
-"`SimpleHTTPRequestHandler`:"
+"The following are defined as class-level attributes "
+"of :class:`SimpleHTTPRequestHandler`:"
 msgstr ""
-"Los siguientes se definen como atributos de clase de :class:"
-"`SimpleHTTPRequestHandler`:"
+"Los siguientes se definen como atributos de clase "
+"de :class:`SimpleHTTPRequestHandler`:"
 
 #: ../Doc/library/http.server.rst:346
 msgid ""
@@ -619,8 +635,9 @@ msgid ""
 "for a more complete explanation of the possible headers."
 msgstr ""
 "Este método sirve para el tipo de petición: ``'HEAD'`` envía los encabezados "
-"que enviaría para la petición equivalente ``GET``. Ver el método :meth:"
-"`do_GET` para una explicación más completa de los posibles encabezados."
+"que enviaría para la petición equivalente ``GET``. Ver el "
+"método :meth:`do_GET` para una explicación más completa de los posibles "
+"encabezados."
 
 #: ../Doc/library/http.server.rst:369
 msgid ""
@@ -635,9 +652,9 @@ msgid ""
 "If the request was mapped to a directory, the directory is checked for a "
 "file named ``index.html`` or ``index.htm`` (in that order). If found, the "
 "file's contents are returned; otherwise a directory listing is generated by "
-"calling the :meth:`list_directory` method. This method uses :func:`os."
-"listdir` to scan the directory, and returns a ``404`` error response if the :"
-"func:`~os.listdir` fails."
+"calling the :meth:`list_directory` method. This method "
+"uses :func:`os.listdir` to scan the directory, and returns a ``404`` error "
+"response if the :func:`~os.listdir` fails."
 msgstr ""
 "Si la solicitud fue mapeada a un directorio, el directorio se comprueba para "
 "un archivo llamado ``index.html`` or ``index.htm`` (en ese orden). Si se "
@@ -647,22 +664,24 @@ msgstr ""
 "respuesta de error ``404`` si falla el :func:`~os.listdir`."
 
 #: ../Doc/library/http.server.rst:379
+#, fuzzy
 msgid ""
 "If the request was mapped to a file, it is opened. Any :exc:`OSError` "
 "exception in opening the requested file is mapped to a ``404``, ``'File not "
-"found'`` error. If there was a ``'If-Modified-Since'`` header in the "
+"found'`` error. If there was an ``'If-Modified-Since'`` header in the "
 "request, and the file was not modified after this time, a ``304``, ``'Not "
 "Modified'`` response is sent. Otherwise, the content type is guessed by "
 "calling the :meth:`guess_type` method, which in turn uses the "
 "*extensions_map* variable, and the file contents are returned."
 msgstr ""
-"Si la solicitud fue asignada a un archivo, se abre. Cualquier excepción :exc:"
-"`OSError` al abrir el archivo solicitado se asigna a un error ``404``, "
-"``'File not found'``. Si había un encabezado ``'If-Modified-Since'`` en la "
-"solicitud, y el archivo no fue modificado después de este tiempo, se envía "
-"una respuesta ``304``, ``'Not Modified'``. De lo contrario, el tipo de "
-"contenido se adivina llamando al método :meth:`guess_type`, que a su vez "
-"utiliza la variable *extensions_map*, y se retorna el contenido del archivo."
+"Si la solicitud fue asignada a un archivo, se abre. Cualquier "
+"excepción :exc:`OSError` al abrir el archivo solicitado se asigna a un error "
+"``404``, ``'File not found'``. Si había un encabezado ``'If-Modified-"
+"Since'`` en la solicitud, y el archivo no fue modificado después de este "
+"tiempo, se envía una respuesta ``304``, ``'Not Modified'``. De lo contrario, "
+"el tipo de contenido se adivina llamando al método :meth:`guess_type`, que a "
+"su vez utiliza la variable *extensions_map*, y se retorna el contenido del "
+"archivo."
 
 #: ../Doc/library/http.server.rst:387
 msgid ""
@@ -688,8 +707,8 @@ msgstr ""
 
 #: ../Doc/library/http.server.rst:395
 msgid ""
-"For example usage, see the implementation of the ``test`` function in :"
-"source:`Lib/http/server.py`."
+"For example usage, see the implementation of the ``test`` function "
+"in :source:`Lib/http/server.py`."
 msgstr ""
 "Por ejemplo, ver la implementación de la función ``test`` en :source:`Lib/"
 "http/server.py`."
@@ -708,6 +727,20 @@ msgstr ""
 "manera para crear un servidor web muy básico que sirva archivos relativos al "
 "directorio actual::"
 
+#: ../Doc/library/http.server.rst:405
+msgid ""
+"import http.server\n"
+"import socketserver\n"
+"\n"
+"PORT = 8000\n"
+"\n"
+"Handler = http.server.SimpleHTTPRequestHandler\n"
+"\n"
+"with socketserver.TCPServer((\"\", PORT), Handler) as httpd:\n"
+"    print(\"serving at port\", PORT)\n"
+"    httpd.serve_forever()"
+msgstr ""
+
 #: ../Doc/library/http.server.rst:417
 msgid ""
 ":class:`SimpleHTTPRequestHandler` can also be subclassed to enhance "
@@ -721,9 +754,13 @@ msgid ""
 "switch of the interpreter.  Similar to the previous example, this serves "
 "files relative to the current directory::"
 msgstr ""
-":mod:`http.server` también puede ser invocado directamente usando la opción :"
-"option:`-m` del intérprete. Como en el ejemplo anterior, esto sirve a los "
-"archivos relativos al directorio actual::"
+":mod:`http.server` también puede ser invocado directamente usando la "
+"opción :option:`-m` del intérprete. Como en el ejemplo anterior, esto sirve "
+"a los archivos relativos al directorio actual::"
+
+#: ../Doc/library/http.server.rst:427
+msgid "python -m http.server"
+msgstr ""
 
 #: ../Doc/library/http.server.rst:429
 msgid ""
@@ -732,6 +769,10 @@ msgid ""
 msgstr ""
 "Por defecto, el servidor escucha en el puerto 8000. El valor predeterminado "
 "se puede anular pasando el número de puerto deseado como argumento::"
+
+#: ../Doc/library/http.server.rst:432
+msgid "python -m http.server 9000"
+msgstr ""
 
 #: ../Doc/library/http.server.rst:434
 msgid ""
@@ -745,13 +786,17 @@ msgstr ""
 "las direcciones IPv4 como las IPv6 están soportadas. Por ejemplo, el "
 "siguiente comando hace que el servidor se vincule sólo al localhost::"
 
+#: ../Doc/library/http.server.rst:439
+msgid "python -m http.server --bind 127.0.0.1"
+msgstr ""
+
 #: ../Doc/library/http.server.rst:441
-msgid "``--bind`` argument was introduced."
-msgstr "Se introdujo el argumento ``--bind`` ."
+msgid "Added the ``--bind`` option."
+msgstr ""
 
 #: ../Doc/library/http.server.rst:444
-msgid "``--bind`` argument enhanced to support IPv6"
-msgstr "El argumento ``--bind`` se ha mejorado para soportar IPv6"
+msgid "Support IPv6 in the ``--bind`` option."
+msgstr ""
 
 #: ../Doc/library/http.server.rst:447
 msgid ""
@@ -763,9 +808,13 @@ msgstr ""
 "directory`` especifica un directorio al que debe servir los archivos. Por "
 "ejemplo, el siguiente comando utiliza un directorio específico::"
 
+#: ../Doc/library/http.server.rst:451
+msgid "python -m http.server --directory /tmp/"
+msgstr ""
+
 #: ../Doc/library/http.server.rst:453
-msgid "``--directory`` argument was introduced."
-msgstr "Se introdujo el argumento ``—directory`` ."
+msgid "Added the ``--directory`` option."
+msgstr ""
 
 #: ../Doc/library/http.server.rst:456
 msgid ""
@@ -777,9 +826,13 @@ msgstr ""
 "protocol`` especifica la versión HTTP con la que cumple el servidor. Por "
 "ejemplo, el siguiente comando ejecuta un servidor conforme con HTTP/1.1::"
 
+#: ../Doc/library/http.server.rst:460
+msgid "python -m http.server --protocol HTTP/1.1"
+msgstr ""
+
 #: ../Doc/library/http.server.rst:462
-msgid "``--protocol`` argument was introduced."
-msgstr "Se introdujo el argumento ``—protocol`` ."
+msgid "Added the ``--protocol`` option."
+msgstr ""
 
 #: ../Doc/library/http.server.rst:467
 msgid ""
@@ -861,7 +914,16 @@ msgstr ""
 "*nobody*, por razones de seguridad.  Los problemas con el script CGI serán "
 "traducidos al error 403."
 
-#: ../Doc/library/http.server.rst:505
+#: ../Doc/library/http.server.rst:507
+msgid ""
+":class:`CGIHTTPRequestHandler` is being removed in 3.15.  CGI has not been "
+"considered a good way to do things for well over a decade. This code has "
+"been unmaintained for a while now and sees very little practical use. "
+"Retaining it could lead to further :ref:`security considerations "
+"<http.server-security>`."
+msgstr ""
+
+#: ../Doc/library/http.server.rst:513
 msgid ""
 ":class:`CGIHTTPRequestHandler` can be enabled in the command line by passing "
 "the ``--cgi`` option::"
@@ -869,11 +931,28 @@ msgstr ""
 ":class:`CGIHTTPRequestHandler` puede ser activado en la línea de comandos "
 "pasando la opción ``--cgi``::"
 
-#: ../Doc/library/http.server.rst:513
+#: ../Doc/library/http.server.rst:516
+msgid "python -m http.server --cgi"
+msgstr ""
+
+#: ../Doc/library/http.server.rst:520
+msgid ""
+":mod:`http.server` command line ``--cgi`` support is being removed "
+"because :class:`CGIHTTPRequestHandler` is being removed."
+msgstr ""
+
+#: ../Doc/library/http.server.rst:525
+msgid ""
+":class:`CGIHTTPRequestHandler` and the ``--cgi`` command line option are not "
+"intended for use by untrusted clients and may be vulnerable to exploitation. "
+"Always use within a secure environment."
+msgstr ""
+
+#: ../Doc/library/http.server.rst:532
 msgid "Security Considerations"
 msgstr "Consideraciones de seguridad"
 
-#: ../Doc/library/http.server.rst:517
+#: ../Doc/library/http.server.rst:536
 msgid ""
 ":class:`SimpleHTTPRequestHandler` will follow symbolic links when handling "
 "requests, this makes it possible for files outside of the specified "
@@ -883,16 +962,16 @@ msgstr ""
 "gestione peticiones, esto hace posible que se sirvan ficheros fuera del "
 "directorio especificado."
 
-#: ../Doc/library/http.server.rst:521
+#: ../Doc/library/http.server.rst:540
 msgid ""
 "Earlier versions of Python did not scrub control characters from the log "
-"messages emitted to stderr from ``python -m http.server`` or the default :"
-"class:`BaseHTTPRequestHandler` ``.log_message`` implementation. This could "
-"allow remote clients connecting to your server to send nefarious control "
-"codes to your terminal."
+"messages emitted to stderr from ``python -m http.server`` or the "
+"default :class:`BaseHTTPRequestHandler` ``.log_message`` implementation. "
+"This could allow remote clients connecting to your server to send nefarious "
+"control codes to your terminal."
 msgstr ""
 
-#: ../Doc/library/http.server.rst:527
+#: ../Doc/library/http.server.rst:546
 msgid "Control characters are scrubbed in stderr logs."
 msgstr ""
 
@@ -920,10 +999,10 @@ msgstr ""
 msgid "httpd"
 msgstr ""
 
-#: ../Doc/library/http.server.rst:515
+#: ../Doc/library/http.server.rst:534
 msgid "http.server"
 msgstr ""
 
-#: ../Doc/library/http.server.rst:515
+#: ../Doc/library/http.server.rst:534
 msgid "security"
 msgstr ""

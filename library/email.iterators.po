@@ -1,26 +1,29 @@
 # Copyright (C) 2001-2020, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # Maintained by the python-doc-es workteam.
-# docs-es@python.org / https://mail.python.org/mailman3/lists/docs-es.python.org/
-# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get the list of volunteers
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get
+# the list of volunteers
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 11:59-0400\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2020-10-07 15:08+0200\n"
-"Language-Team: python-doc-es\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Last-Translator: Javier Artiga Garijo <jartigag@protonmail.com>\n"
 "Language: es_ES\n"
-"X-Generator: Poedit 2.2.1\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/email.iterators.rst:2
-msgid ":mod:`email.iterators`: Iterators"
+#, fuzzy
+msgid ":mod:`!email.iterators`: Iterators"
 msgstr ":mod:`email.iterators`: Iteradores"
 
 #: ../Doc/library/email.iterators.rst:7
@@ -29,15 +32,15 @@ msgstr "**Código fuente:** :source:`Lib/email/iterators.py`"
 
 #: ../Doc/library/email.iterators.rst:11
 msgid ""
-"Iterating over a message object tree is fairly easy with the :meth:`Message."
-"walk <email.message.Message.walk>` method.  The :mod:`email.iterators` "
-"module provides some useful higher level iterations over message object "
-"trees."
+"Iterating over a message object tree is fairly easy with "
+"the :meth:`Message.walk <email.message.Message.walk>` method.  "
+"The :mod:`email.iterators` module provides some useful higher level "
+"iterations over message object trees."
 msgstr ""
-"Iterar sobre un árbol de objetos mensaje es bastante fácil con el método :"
-"meth:`Message.walk <email.message.Message.walk>`. El módulo :mod:`email."
-"iterators` proporciona algunos iteradores útiles de más alto nivel sobre "
-"árboles de objetos mensaje."
+"Iterar sobre un árbol de objetos mensaje es bastante fácil con el "
+"método :meth:`Message.walk <email.message.Message.walk>`. El "
+"módulo :mod:`email.iterators` proporciona algunos iteradores útiles de más "
+"alto nivel sobre árboles de objetos mensaje."
 
 #: ../Doc/library/email.iterators.rst:19
 msgid ""
@@ -58,11 +61,11 @@ msgstr ""
 
 #: ../Doc/library/email.iterators.rst:26
 msgid ""
-"Optional *decode* is passed through to :meth:`Message.get_payload <email."
-"message.Message.get_payload>`."
+"Optional *decode* is passed through to :meth:`Message.get_payload "
+"<email.message.Message.get_payload>`."
 msgstr ""
-"El argumento opcional *decode* se pasa a través de :meth:`Message."
-"get_payload <email.message.Message.get_payload>`."
+"El argumento opcional *decode* se pasa a través "
+"de :meth:`Message.get_payload <email.message.Message.get_payload>`."
 
 #: ../Doc/library/email.iterators.rst:32
 msgid ""
@@ -107,6 +110,27 @@ msgstr ""
 "Imprime una representación con sangrías de los tipos del contenido de la "
 "estructura de objetos mensaje. Por ejemplo:"
 
+#: ../Doc/library/email.iterators.rst:57
+msgid ""
+">>> msg = email.message_from_file(somefile)\n"
+">>> _structure(msg)\n"
+"multipart/mixed\n"
+"    text/plain\n"
+"    text/plain\n"
+"    multipart/digest\n"
+"        message/rfc822\n"
+"            text/plain\n"
+"        message/rfc822\n"
+"            text/plain\n"
+"        message/rfc822\n"
+"            text/plain\n"
+"        message/rfc822\n"
+"            text/plain\n"
+"        message/rfc822\n"
+"            text/plain\n"
+"    text/plain"
+msgstr ""
+
 #: ../Doc/library/email.iterators.rst:81
 msgid ""
 "Optional *fp* is a file-like object to print the output to.  It must be "
@@ -114,6 +138,6 @@ msgid ""
 "*include_default*, if true, prints the default type as well."
 msgstr ""
 "El argumento opcional *fp* es un objeto similar a un fichero en el que "
-"imprimir la salida. Debe ser adecuado para la función de Python :func:"
-"`print`. Se usa *level* internamente. *include_default*, si tiene su valor a "
-"verdadero, imprime el tipo por defecto también."
+"imprimir la salida. Debe ser adecuado para la función de "
+"Python :func:`print`. Se usa *level* internamente. *include_default*, si "
+"tiene su valor a verdadero, imprime el tipo por defecto también."

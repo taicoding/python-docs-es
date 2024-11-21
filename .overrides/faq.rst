@@ -19,7 +19,7 @@ Tenemos un `grupo de Telegram`_ en el que hay mucha gente que te puede ayudar.
 Uno de los chequeos que realiza nuestro servidor de github cada vez que hacemos
 un pull de request es un test de corrección ortográfico usando la herramienta
 pospell. Pospell puede ser instalada en tu entorno de Python empleando pip
-(https://pypi.org/project/pospell/)::
+(:pypi:`pospell`)::
 
     pip install pospell
 

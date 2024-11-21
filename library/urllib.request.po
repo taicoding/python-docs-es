@@ -10,20 +10,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2024-02-15 21:36+0100\n"
 "Last-Translator: Carlos Mena Pérez <@carlosm00>\n"
-"Language-Team: python-doc-es\n"
 "Language: es\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.4.2\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/urllib.request.rst:2
-msgid ":mod:`urllib.request` --- Extensible library for opening URLs"
+#, fuzzy
+msgid ":mod:`!urllib.request` --- Extensible library for opening URLs"
 msgstr ":mod:`urllib.request` --- Biblioteca extensible para abrir URLs"
 
 #: ../Doc/library/urllib.request.rst:11
@@ -48,25 +48,34 @@ msgstr ""
 "Se recomienda el `paquete Requests <https://requests.readthedocs.io/en/"
 "master/>`_ para una interfaz de cliente HTTP de mayor nivel."
 
+#: ../Doc/library/urllib.request.rst:26
+msgid ""
+"On macOS it is unsafe to use this module in programs using :func:`os.fork` "
+"because the :func:`getproxies` implementation for macOS uses a higher-level "
+"system API. Set the environment variable ``no_proxy`` to ``*`` to avoid this "
+"problem (e.g. ``os.environ[\"no_proxy\"] = \"*\"``)."
+msgstr ""
+
 #: ../Doc/includes/wasm-notavail.rst:3
-msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
+#, fuzzy
+msgid ":ref:`Availability <availability>`: not WASI."
 msgstr ":ref:`Disponibilidad <availability>`: no Emscripten, no WASI."
 
 #: ../Doc/includes/wasm-notavail.rst:5
+#, fuzzy
 msgid ""
-"This module does not work or is not available on WebAssembly platforms "
-"``wasm32-emscripten`` and ``wasm32-wasi``. See :ref:`wasm-availability` for "
-"more information."
+"This module does not work or is not available on WebAssembly. See :ref:`wasm-"
+"availability` for more information."
 msgstr ""
 "Este módulo no funciona o no está disponible en las plataformas WebAssembly "
 "``wasm32-emscripten`` y ``wasm32-wasi``. Consulte :ref:`wasm-availability` "
 "para obtener más información."
 
-#: ../Doc/library/urllib.request.rst:26
+#: ../Doc/library/urllib.request.rst:34
 msgid "The :mod:`urllib.request` module defines the following functions:"
 msgstr "El módulo :mod:`urllib.request` define las siguientes funciones:"
 
-#: ../Doc/library/urllib.request.rst:31
+#: ../Doc/library/urllib.request.rst:39
 msgid ""
 "Open *url*, which can be either a string containing a valid, properly "
 "encoded URL, or a :class:`Request` object."
@@ -74,7 +83,7 @@ msgstr ""
 "Abre la *url*, la cual puede ser una cadena de texto que contenga una URL "
 "válida y correctamente codificada, o un objeto :class:`Request`."
 
-#: ../Doc/library/urllib.request.rst:34
+#: ../Doc/library/urllib.request.rst:42
 msgid ""
 "*data* must be an object specifying additional data to be sent to the "
 "server, or ``None`` if no such data is needed.  See :class:`Request` for "
@@ -84,15 +93,15 @@ msgstr ""
 "al servidor o ``None`` si no se necesitan tales datos. Vea :class:`Request` "
 "para más detalles."
 
-#: ../Doc/library/urllib.request.rst:38
+#: ../Doc/library/urllib.request.rst:46
 msgid ""
 "urllib.request module uses HTTP/1.1 and includes ``Connection:close`` header "
 "in its HTTP requests."
 msgstr ""
-"El módulo urllib.request usa HTTP/1.1 e incluye el encabezado ``Connection:"
-"close`` en sus peticiones HTTP."
+"El módulo urllib.request usa HTTP/1.1 e incluye el encabezado "
+"``Connection:close`` en sus peticiones HTTP."
 
-#: ../Doc/library/urllib.request.rst:41
+#: ../Doc/library/urllib.request.rst:49
 msgid ""
 "The optional *timeout* parameter specifies a timeout in seconds for blocking "
 "operations like the connection attempt (if not specified, the global default "
@@ -104,73 +113,55 @@ msgstr ""
 "especifica, será usado el tiempo de expiración global predeterminado). Esto "
 "actualmente sólo funciona para conexiones HTTP, HTTPS y FTP."
 
-#: ../Doc/library/urllib.request.rst:46
+#: ../Doc/library/urllib.request.rst:54
 msgid ""
 "If *context* is specified, it must be a :class:`ssl.SSLContext` instance "
-"describing the various SSL options. See :class:`~http.client."
-"HTTPSConnection` for more details."
+"describing the various SSL options. "
+"See :class:`~http.client.HTTPSConnection` for more details."
 msgstr ""
 "Si se especifica *context*, debe ser una instancia :class:`ssl.SSLContext` "
-"describiendo las diferentes opciones SSL. Vea :class:`~http.client."
-"HTTPSConnection` para más detalles."
-
-#: ../Doc/library/urllib.request.rst:50
-msgid ""
-"The optional *cafile* and *capath* parameters specify a set of trusted CA "
-"certificates for HTTPS requests.  *cafile* should point to a single file "
-"containing a bundle of CA certificates, whereas *capath* should point to a "
-"directory of hashed certificate files.  More information can be found in :"
-"meth:`ssl.SSLContext.load_verify_locations`."
-msgstr ""
-"Los parámetros opcionales *cafile* y *capath* especifican un conjunto de "
-"certificados CA de confianza para peticiones HTTPS. *cafile* debe apuntar a "
-"un único archivo que contenga un paquete de certificados CA, mientras "
-"*capath* debe apuntar a un directorio de archivos de certificado hash. Se "
-"puede encontrar más información en :meth:`ssl.SSLContext."
-"load_verify_locations`."
-
-#: ../Doc/library/urllib.request.rst:56
-msgid "The *cadefault* parameter is ignored."
-msgstr "Se ignora el parámetro *cadefault*."
+"describiendo las diferentes opciones SSL. "
+"Vea :class:`~http.client.HTTPSConnection` para más detalles."
 
 #: ../Doc/library/urllib.request.rst:58
 msgid ""
 "This function always returns an object which can work as a :term:`context "
-"manager` and has the properties *url*, *headers*, and *status*. See :class:"
-"`urllib.response.addinfourl` for more detail on these properties."
+"manager` and has the properties *url*, *headers*, and *status*. "
+"See :class:`urllib.response.addinfourl` for more detail on these properties."
 msgstr ""
-"Esta función siempre retorna un objeto que puede actuar como un :term:"
-"`gestor de contexto <context manager>`, y tiene las propiedades *url*, "
-"*headers* y *status*. Véase :class:`urllib.response.addinfourl` para más "
-"detalles sobre estas propiedades."
+"Esta función siempre retorna un objeto que puede actuar como "
+"un :term:`gestor de contexto <context manager>`, y tiene las propiedades "
+"*url*, *headers* y *status*. Véase :class:`urllib.response.addinfourl` para "
+"más detalles sobre estas propiedades."
 
 #: ../Doc/library/urllib.request.rst:62
 msgid ""
-"For HTTP and HTTPS URLs, this function returns a :class:`http.client."
-"HTTPResponse` object slightly modified. In addition to the three new methods "
-"above, the msg attribute contains the same information as the :attr:`~http."
-"client.HTTPResponse.reason` attribute --- the reason phrase returned by "
-"server --- instead of the response headers as it is specified in the "
-"documentation for :class:`~http.client.HTTPResponse`."
+"For HTTP and HTTPS URLs, this function returns "
+"a :class:`http.client.HTTPResponse` object slightly modified. In addition to "
+"the three new methods above, the msg attribute contains the same information "
+"as the :attr:`~http.client.HTTPResponse.reason` attribute --- the reason "
+"phrase returned by server --- instead of the response headers as it is "
+"specified in the documentation for :class:`~http.client.HTTPResponse`."
 msgstr ""
-"Para URLs HTTP y HTTPS, esta función retorna un objeto :class:`http.client."
-"HTTPResponse` ligeramente modificado. Adicionalmente a los tres nuevos "
-"métodos anteriores, el atributo msg contiene la misma información que el "
+"Para URLs HTTP y HTTPS, esta función retorna un "
+"objeto :class:`http.client.HTTPResponse` ligeramente modificado. "
+"Adicionalmente a los tres nuevos métodos anteriores, el atributo msg "
+"contiene la misma información que el "
 "atributo :attr:`~http.client.HTTPResponse.reason` --- la frase de motivo "
 "devuelta por el servidor --- en lugar de los encabezados de la respuesta "
-"como se especifica en la documentación para :class:`~http.client."
-"HTTPResponse`."
+"como se especifica en la documentación "
+"para :class:`~http.client.HTTPResponse`."
 
 #: ../Doc/library/urllib.request.rst:70
 msgid ""
-"For FTP, file, and data URLs and requests explicitly handled by legacy :"
-"class:`URLopener` and :class:`FancyURLopener` classes, this function returns "
-"a :class:`urllib.response.addinfourl` object."
+"For FTP, file, and data URLs and requests explicitly handled by "
+"legacy :class:`URLopener` and :class:`FancyURLopener` classes, this function "
+"returns a :class:`urllib.response.addinfourl` object."
 msgstr ""
 "Para URLs FTP, de archivo y de datos y para peticiones manejadas "
-"explícitamente por las clases heredadas :class:`URLopener` y :class:"
-"`FancyURLopener`, esta función retorna un objeto :class:`urllib.response."
-"addinfourl`."
+"explícitamente por las clases heredadas :class:`URLopener` "
+"y :class:`FancyURLopener`, esta función retorna un "
+"objeto :class:`urllib.response.addinfourl`."
 
 #: ../Doc/library/urllib.request.rst:74
 msgid "Raises :exc:`~urllib.error.URLError` on protocol errors."
@@ -179,8 +170,8 @@ msgstr "Genera :exc:`~urllib.error.URLError` en errores de protocolo."
 #: ../Doc/library/urllib.request.rst:76
 msgid ""
 "Note that ``None`` may be returned if no handler handles the request (though "
-"the default installed global :class:`OpenerDirector` uses :class:"
-"`UnknownHandler` to ensure this never happens)."
+"the default installed global :class:`OpenerDirector` "
+"uses :class:`UnknownHandler` to ensure this never happens)."
 msgstr ""
 "Tenga en cuenta que ``None`` puede ser retornado si ningún manejador "
 "gestiona la petición (aunque el :class:`OpenerDirector` global instalado de "
@@ -188,24 +179,26 @@ msgstr ""
 "nunca suceda)."
 
 #: ../Doc/library/urllib.request.rst:80
+#, fuzzy
 msgid ""
 "In addition, if proxy settings are detected (for example, when a ``*_proxy`` "
-"environment variable like :envvar:`http_proxy` is set), :class:"
-"`ProxyHandler` is default installed and makes sure the requests are handled "
-"through the proxy."
+"environment variable like :envvar:`!http_proxy` is "
+"set), :class:`ProxyHandler` is default installed and makes sure the requests "
+"are handled through the proxy."
 msgstr ""
 "Adicionalmente, si se detectan configuraciones de proxy (por ejemplo, cuando "
-"se establece una variable de entorno ``*_proxy`` como :envvar:"
-"`http_proxy`), :class:`ProxyHandler` está instalada de forma predeterminada "
-"y se asegura que las peticiones son gestionadas a través del proxy."
+"se establece una variable de entorno ``*_proxy`` "
+"como :envvar:`http_proxy`), :class:`ProxyHandler` está instalada de forma "
+"predeterminada y se asegura que las peticiones son gestionadas a través del "
+"proxy."
 
 #: ../Doc/library/urllib.request.rst:85
 msgid ""
 "The legacy ``urllib.urlopen`` function from Python 2.6 and earlier has been "
 "discontinued; :func:`urllib.request.urlopen` corresponds to the old "
 "``urllib2.urlopen``.  Proxy handling, which was done by passing a dictionary "
-"parameter to ``urllib.urlopen``, can be obtained by using :class:"
-"`ProxyHandler` objects."
+"parameter to ``urllib.urlopen``, can be obtained by "
+"using :class:`ProxyHandler` objects."
 msgstr ""
 "La función heredada de Python 2.6 y anteriores ``urllib.urlopen`` ha sido "
 "descontinuada, :func:`urllib.request.urlopen` corresponde a la antigua "
@@ -213,19 +206,11 @@ msgstr ""
 "parámetro diccionario a ``urllib.urlopen``, puede ser obtenida usando "
 "objetos :class:`ProxyHandler`."
 
-#: ../Doc/library/urllib.request.rst:100
+#: ../Doc/library/urllib.request.rst:91 ../Doc/library/urllib.request.rst:93
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``urllib.Request`` with arguments "
-"``fullurl``, ``data``, ``headers``, ``method``."
-msgstr ""
-"Genera un :ref:`evento de auditoría <auditing>` ``urllib.Request`` con los "
-"argumentos ``fullurl``, ``data``, ``headers``, ``method``."
-
-#: ../Doc/library/urllib.request.rst:93
-msgid ""
-"The default opener raises an :ref:`auditing event <auditing>` ``urllib."
-"Request`` with arguments ``fullurl``, ``data``, ``headers``, ``method`` "
-"taken from the request object."
+"The default opener raises an :ref:`auditing event <auditing>` "
+"``urllib.Request`` with arguments ``fullurl``, ``data``, ``headers``, "
+"``method`` taken from the request object."
 msgstr ""
 "El abridor predeterminado genera un :ref:`evento de auditoría <auditing>` "
 "``urllib.Request`` con los argumentos ``fullurl``, ``data``, ``headers``, "
@@ -237,62 +222,59 @@ msgstr "*cafile* y *capath* fueron añadidos."
 
 #: ../Doc/library/urllib.request.rst:100
 msgid ""
-"HTTPS virtual hosts are now supported if possible (that is, if :const:`ssl."
-"HAS_SNI` is true)."
+"HTTPS virtual hosts are now supported if possible (that is, "
+"if :const:`ssl.HAS_SNI` is true)."
 msgstr ""
-"Los hosts virtuales HTTPS ahora están soportados si es posible (esto es, si :"
-"const:`ssl.HAS_SNI` es verdadero)."
+"Los hosts virtuales HTTPS ahora están soportados si es posible (esto es, "
+"si :const:`ssl.HAS_SNI` es verdadero)."
 
-#: ../Doc/library/urllib.request.rst:104
+#: ../Doc/library/urllib.request.rst:103
 msgid "*data* can be an iterable object."
 msgstr "*data* puede ser un objeto iterable."
 
-#: ../Doc/library/urllib.request.rst:107
+#: ../Doc/library/urllib.request.rst:105
 msgid "*cadefault* was added."
 msgstr "*cadefault* fue añadido."
 
-#: ../Doc/library/urllib.request.rst:110
+#: ../Doc/library/urllib.request.rst:108
 msgid "*context* was added."
 msgstr "*context* fue añadido."
 
-#: ../Doc/library/urllib.request.rst:113
+#: ../Doc/library/urllib.request.rst:111
+#, fuzzy
 msgid ""
-"HTTPS connection now send an ALPN extension with protocol indicator "
-"``http/1.1`` when no *context* is given. Custom *context* should set ALPN "
-"protocols with :meth:`~ssl.SSLContext.set_alpn_protocol`."
+"HTTPS connection now send an ALPN extension with protocol indicator ``http/"
+"1.1`` when no *context* is given. Custom *context* should set ALPN protocols "
+"with :meth:`~ssl.SSLContext.set_alpn_protocols`."
 msgstr ""
 "La conexión HTTPS ahora envía una extensión ALPN con indicador de protocolo "
 "``http/1.1`` cuando no se proporciona *context*. El *context* personalizado "
-"debe establecer protocolos ALPN con :meth:`~ssl.SSLContext."
-"set_alpn_protocol`."
+"debe establecer protocolos ALPN "
+"con :meth:`~ssl.SSLContext.set_alpn_protocol`."
 
-#: ../Doc/library/urllib.request.rst:120
+#: ../Doc/library/urllib.request.rst:116
 msgid ""
-"*cafile*, *capath* and *cadefault* are deprecated in favor of *context*. "
-"Please use :meth:`ssl.SSLContext.load_cert_chain` instead, or let :func:`ssl."
-"create_default_context` select the system's trusted CA certificates for you."
+"Remove *cafile*, *capath* and *cadefault* parameters: use the *context* "
+"parameter instead."
 msgstr ""
-"*cafile*, *capath* y *cadefault* están obsoletos en favor de *context*. Por "
-"favor, use :meth:`ssl.SSLContext.load_cert_chain` en su lugar o deja a :func:"
-"`ssl.create_default_context` seleccionar el certificado de confianza CA del "
-"sistema por ti."
 
-#: ../Doc/library/urllib.request.rst:128
+#: ../Doc/library/urllib.request.rst:123
 msgid ""
 "Install an :class:`OpenerDirector` instance as the default global opener. "
 "Installing an opener is only necessary if you want urlopen to use that "
-"opener; otherwise, simply call :meth:`OpenerDirector.open` instead of :func:"
-"`~urllib.request.urlopen`.  The code does not check for a real :class:"
-"`OpenerDirector`, and any class with the appropriate interface will work."
+"opener; otherwise, simply call :meth:`OpenerDirector.open` instead "
+"of :func:`~urllib.request.urlopen`.  The code does not check for a "
+"real :class:`OpenerDirector`, and any class with the appropriate interface "
+"will work."
 msgstr ""
 "Instala una instancia :class:`OpenerDirector` como el abridor global "
 "predeterminado. Instalar un abridor sólo es necesario si quieres que urlopen "
 "use ese abridor; si no, simplemente invoca :meth:`OpenerDirector.open` en "
-"lugar de :func:`~urllib.request.urlopen`. El código no comprueba por un :"
-"class:`OpenerDirector` real y cualquier clase con la interfaz apropiada "
+"lugar de :func:`~urllib.request.urlopen`. El código no comprueba por "
+"un :class:`OpenerDirector` real y cualquier clase con la interfaz apropiada "
 "funcionará."
 
-#: ../Doc/library/urllib.request.rst:138
+#: ../Doc/library/urllib.request.rst:133
 msgid ""
 "Return an :class:`OpenerDirector` instance, which chains the handlers in the "
 "order given. *handler*\\s can be either instances of :class:`BaseHandler`, "
@@ -300,23 +282,19 @@ msgid ""
 "call the constructor without any parameters).  Instances of the following "
 "classes will be in front of the *handler*\\s, unless the *handler*\\s "
 "contain them, instances of them or subclasses of them: :class:`ProxyHandler` "
-"(if proxy settings are detected), :class:`UnknownHandler`, :class:"
-"`HTTPHandler`, :class:`HTTPDefaultErrorHandler`, :class:"
-"`HTTPRedirectHandler`, :class:`FTPHandler`, :class:`FileHandler`, :class:"
-"`HTTPErrorProcessor`."
+"(if proxy settings are "
+"detected), :class:`UnknownHandler`, :class:`HTTPHandler`, :class:`HTTPDefaultErrorHandler`, :class:`HTTPRedirectHandler`, :class:`FTPHandler`, :class:`FileHandler`, :class:`HTTPErrorProcessor`."
 msgstr ""
 "Retorna una instancia :class:`OpenerDirector`, la cual encadena los "
-"manejadores en el orden dado. *handler*\\s pueden ser tanto instancias de :"
-"class:`BaseHandler` o subclases de :class:`BaseHandler` (en cuyo caso debe "
-"ser posible invocar el constructor sin ningún parámetro). Instancias de las "
-"siguientes clases estarán delante del *handler*\\s, a no ser que el "
-"*handler*\\s las contenga, instancias o subclases de ellas: :class:"
-"`ProxyHandler` (si son detectadas configuraciones de proxy), :class:"
-"`UnknownHandler`, :class:`HTTPHandler`, :class:`HTTPDefaultErrorHandler`, :"
-"class:`HTTPRedirectHandler`, :class:`FTPHandler`, :class:`FileHandler`, :"
-"class:`HTTPErrorProcessor`."
+"manejadores en el orden dado. *handler*\\s pueden ser tanto instancias "
+"de :class:`BaseHandler` o subclases de :class:`BaseHandler` (en cuyo caso "
+"debe ser posible invocar el constructor sin ningún parámetro). Instancias de "
+"las siguientes clases estarán delante del *handler*\\s, a no ser que el "
+"*handler*\\s las contenga, instancias o subclases de "
+"ellas: :class:`ProxyHandler` (si son detectadas configuraciones de "
+"proxy), :class:`UnknownHandler`, :class:`HTTPHandler`, :class:`HTTPDefaultErrorHandler`, :class:`HTTPRedirectHandler`, :class:`FTPHandler`, :class:`FileHandler`, :class:`HTTPErrorProcessor`."
 
-#: ../Doc/library/urllib.request.rst:148
+#: ../Doc/library/urllib.request.rst:143
 msgid ""
 "If the Python installation has SSL support (i.e., if the :mod:`ssl` module "
 "can be imported), :class:`HTTPSHandler` will also be added."
@@ -324,27 +302,28 @@ msgstr ""
 "Si la instalación de Python tiene soporte SSL (ej. si se puede importar el "
 "módulo :mod:`ssl`), también será añadida :class:`HTTPSHandler`."
 
-#: ../Doc/library/urllib.request.rst:151
+#: ../Doc/library/urllib.request.rst:146
 msgid ""
 "A :class:`BaseHandler` subclass may also change its :attr:`handler_order` "
 "attribute to modify its position in the handlers list."
 msgstr ""
-"Una subclase de :class:`BaseHandler` puede cambiar también su atributo :attr:"
-"`handler_order` para modificar su posición en la lista de manejadores."
+"Una subclase de :class:`BaseHandler` puede cambiar también su "
+"atributo :attr:`handler_order` para modificar su posición en la lista de "
+"manejadores."
 
-#: ../Doc/library/urllib.request.rst:157
+#: ../Doc/library/urllib.request.rst:152
 msgid ""
 "Convert the pathname *path* from the local syntax for a path to the form "
 "used in the path component of a URL.  This does not produce a complete URL.  "
-"The return value will already be quoted using the :func:`~urllib.parse."
-"quote` function."
+"The return value will already be quoted using "
+"the :func:`~urllib.parse.quote` function."
 msgstr ""
 "Convierte el nombre de ruta *path* desde la sintaxis local para una ruta a "
 "la forma usada en el componente ruta de una URL. Esto no produce una URL "
-"completa. El valor retornado ya estará entrecomillado usando la función :"
-"func:`~urllib.parse.quote`."
+"completa. El valor retornado ya estará entrecomillado usando la "
+"función :func:`~urllib.parse.quote`."
 
-#: ../Doc/library/urllib.request.rst:164
+#: ../Doc/library/urllib.request.rst:159
 msgid ""
 "Convert the path component *path* from a percent-encoded URL to the local "
 "syntax for a path.  This does not accept a complete URL.  This function "
@@ -354,7 +333,7 @@ msgstr ""
 "a la sintaxis local para una ruta. No acepta una URL completa. Esta función "
 "usa :func:`~urllib.parse.unquote` para decodificar *path*."
 
-#: ../Doc/library/urllib.request.rst:170
+#: ../Doc/library/urllib.request.rst:165
 msgid ""
 "This helper function returns a dictionary of scheme to proxy server URL "
 "mappings. It scans the environment for variables named ``<scheme>_proxy``, "
@@ -372,7 +351,7 @@ msgstr ""
 "Windows. Si existen variables de entorno tanto en mayúsculas como en "
 "minúsculas (y no concuerdan), las minúsculas son preferidas."
 
-#: ../Doc/library/urllib.request.rst:180
+#: ../Doc/library/urllib.request.rst:175
 msgid ""
 "If the environment variable ``REQUEST_METHOD`` is set, which usually "
 "indicates your script is running in a CGI environment, the environment "
@@ -390,21 +369,21 @@ msgstr ""
 "CGI, usa ``ProxyHandler`` explícitamente o asegúrate de que el nombre de la "
 "variable está en minúsculas (o al menos el sufijo ``_proxy``)."
 
-#: ../Doc/library/urllib.request.rst:189
+#: ../Doc/library/urllib.request.rst:184
 msgid "The following classes are provided:"
 msgstr "Se proveen las siguientes clases:"
 
-#: ../Doc/library/urllib.request.rst:193
+#: ../Doc/library/urllib.request.rst:188
 msgid "This class is an abstraction of a URL request."
 msgstr "Esta clase es un abstracción de una petición URL."
 
-#: ../Doc/library/urllib.request.rst:195
+#: ../Doc/library/urllib.request.rst:190
 msgid "*url* should be a string containing a valid, properly encoded URL."
 msgstr ""
 "*url* debe ser una cadena de texto que contenga una URL válida y "
 "correctamente codificada."
 
-#: ../Doc/library/urllib.request.rst:197
+#: ../Doc/library/urllib.request.rst:192
 msgid ""
 "*data* must be an object specifying additional data to send to the server, "
 "or ``None`` if no such data is needed.  Currently HTTP requests are the only "
@@ -423,29 +402,31 @@ msgstr ""
 "bytes. Si no se ha provisto el campo de encabezado ``Content-Length`` ni "
 "``Transfer-Encoding``, :class:`HTTPHandler` establecerá estos encabezados de "
 "acuerdo al tipo de *data*. ``Content-Length`` será usado para enviar objetos "
-"de bytes, mientras ``Transfer-Encoding: chunked`` como se especifica en :rfc:"
-"`7230`, Sección 3.3.1 será usado para enviar archivos y otros iterables."
+"de bytes, mientras ``Transfer-Encoding: chunked`` como se especifica "
+"en :rfc:`7230`, Sección 3.3.1 será usado para enviar archivos y otros "
+"iterables."
 
-#: ../Doc/library/urllib.request.rst:207
+#: ../Doc/library/urllib.request.rst:202
 msgid ""
-"For an HTTP POST request method, *data* should be a buffer in the standard :"
-"mimetype:`application/x-www-form-urlencoded` format.  The :func:`urllib."
-"parse.urlencode` function takes a mapping or sequence of 2-tuples and "
-"returns an ASCII string in this format. It should be encoded to bytes before "
-"being used as the *data* parameter."
+"For an HTTP POST request method, *data* should be a buffer in the "
+"standard :mimetype:`application/x-www-form-urlencoded` format.  "
+"The :func:`urllib.parse.urlencode` function takes a mapping or sequence of 2-"
+"tuples and returns an ASCII string in this format. It should be encoded to "
+"bytes before being used as the *data* parameter."
 msgstr ""
 "Para un método de una petición HTTP POST, *data* debe ser un buffer en el "
-"formato estándar :mimetype:`application/x-www-form-urlencoded`. La función :"
-"func:`urllib.parse.urlencode` toma un mapeo o una secuencia de tuplas de dos "
-"valores y retorna una cadena de caracteres ASCII en este formato. Debe ser "
-"codificada a bytes antes de ser usada como el parámetro *data*."
+"formato estándar :mimetype:`application/x-www-form-urlencoded`. La "
+"función :func:`urllib.parse.urlencode` toma un mapeo o una secuencia de "
+"tuplas de dos valores y retorna una cadena de caracteres ASCII en este "
+"formato. Debe ser codificada a bytes antes de ser usada como el parámetro "
+"*data*."
 
-#: ../Doc/library/urllib.request.rst:213
+#: ../Doc/library/urllib.request.rst:208
 msgid ""
-"*headers* should be a dictionary, and will be treated as if :meth:"
-"`add_header` was called with each key and value as arguments. This is often "
-"used to \"spoof\" the ``User-Agent`` header value, which is used by a "
-"browser to identify itself -- some HTTP servers only allow requests coming "
+"*headers* should be a dictionary, and will be treated as "
+"if :meth:`add_header` was called with each key and value as arguments. This "
+"is often used to \"spoof\" the ``User-Agent`` header value, which is used by "
+"a browser to identify itself -- some HTTP servers only allow requests coming "
 "from common browsers as opposed to scripts. For example, Mozilla Firefox may "
 "identify itself as ``\"Mozilla/5.0 (X11; U; Linux i686) Gecko/20071127 "
 "Firefox/2.0.0.11\"``, while :mod:`urllib`'s default user agent string is "
@@ -458,24 +439,25 @@ msgstr ""
 "cual es usado por un navegador para identificarse a sí mismo -- algunos "
 "servidores HTTP sólo permiten peticiones que vienen de navegadores comunes a "
 "diferencia de los scripts. Por ejemplo, Mozilla Firefox puede identificarse "
-"a sí mismo como ``\"Mozilla/5.0 (X11; U; Linux i686) Gecko/20071127 "
-"Firefox/2.0.0.11\"``, mientras el agente de usuario predeterminado de :mod:"
-"`urllib` es ``\"Python-urllib/2.6\"`` (en Python 2.6). Todas las claves de "
-"los encabezados se envían en camel case."
+"a sí mismo como ``\"Mozilla/5.0 (X11; U; Linux i686) Gecko/20071127 Firefox/"
+"2.0.0.11\"``, mientras el agente de usuario predeterminado de :mod:`urllib` "
+"es ``\"Python-urllib/2.6\"`` (en Python 2.6). Todas las claves de los "
+"encabezados se envían en camel case."
 
-#: ../Doc/library/urllib.request.rst:224
+#: ../Doc/library/urllib.request.rst:219
+#, fuzzy
 msgid ""
 "An appropriate ``Content-Type`` header should be included if the *data* "
 "argument is present.  If this header has not been provided and *data* is not "
-"None, ``Content-Type: application/x-www-form-urlencoded`` will be added as a "
-"default."
+"``None``, ``Content-Type: application/x-www-form-urlencoded`` will be added "
+"as a default."
 msgstr ""
 "Un encabezado apropiado ``Content-Type`` debe ser incluido si el argumento "
 "*data* está presente. Si este encabezado no ha sido provisto y *data* no es "
 "None, será añadido ``Content-Type: application/x-www-form-urlencoded`` de "
 "forma predeterminada."
 
-#: ../Doc/library/urllib.request.rst:229
+#: ../Doc/library/urllib.request.rst:224
 msgid ""
 "The next two arguments are only of interest for correct handling of third-"
 "party HTTP cookies:"
@@ -483,23 +465,23 @@ msgstr ""
 "Los siguientes dos argumentos sólo tienen interés para la gestión correcta "
 "de cookies HTTP de terceros:"
 
-#: ../Doc/library/urllib.request.rst:232
+#: ../Doc/library/urllib.request.rst:227
 msgid ""
 "*origin_req_host* should be the request-host of the origin transaction, as "
-"defined by :rfc:`2965`.  It defaults to ``http.cookiejar."
-"request_host(self)``.  This is the host name or IP address of the original "
-"request that was initiated by the user. For example, if the request is for "
-"an image in an HTML document, this should be the request-host of the request "
-"for the page containing the image."
+"defined by :rfc:`2965`.  It defaults to "
+"``http.cookiejar.request_host(self)``.  This is the host name or IP address "
+"of the original request that was initiated by the user. For example, if the "
+"request is for an image in an HTML document, this should be the request-host "
+"of the request for the page containing the image."
 msgstr ""
 "*origin_req_host* debe ser el host de la petición de la transacción origen, "
-"como define :rfc:`2965`. Por defecto es ``http.cookiejar."
-"request_host(self)``. Este es el nombre de host o la dirección IP de la "
-"petición original que fue iniciada por el usuario. Por ejemplo, si la "
-"petición es para una imagen en un documento HTML, debe ser el host de la "
-"petición para la página que contiene la imagen."
+"como define :rfc:`2965`. Por defecto es "
+"``http.cookiejar.request_host(self)``. Este es el nombre de host o la "
+"dirección IP de la petición original que fue iniciada por el usuario. Por "
+"ejemplo, si la petición es para una imagen en un documento HTML, debe ser el "
+"host de la petición para la página que contiene la imagen."
 
-#: ../Doc/library/urllib.request.rst:240
+#: ../Doc/library/urllib.request.rst:235
 msgid ""
 "*unverifiable* should indicate whether the request is unverifiable, as "
 "defined by :rfc:`2965`.  It defaults to ``False``.  An unverifiable request "
@@ -507,20 +489,21 @@ msgid ""
 "if the request is for an image in an HTML document, and the user had no "
 "option to approve the automatic fetching of the image, this should be true."
 msgstr ""
-"*unverifiable* debe indicar si la petición no es verificable, como define :"
-"rfc:`2965`. Por defecto es ``False``. Una petición no verificable es una "
-"cuya URL el usuario no tuvo opción de aprobar. Por ejemplo, si la petición "
-"es por una imagen en un documento HTML y el usuario no tuvo opción de "
-"aprobar la obtención automática de la imagen, este debe ser verdadero."
+"*unverifiable* debe indicar si la petición no es verificable, como "
+"define :rfc:`2965`. Por defecto es ``False``. Una petición no verificable es "
+"una cuya URL el usuario no tuvo opción de aprobar. Por ejemplo, si la "
+"petición es por una imagen en un documento HTML y el usuario no tuvo opción "
+"de aprobar la obtención automática de la imagen, este debe ser verdadero."
 
-#: ../Doc/library/urllib.request.rst:247
+#: ../Doc/library/urllib.request.rst:242
+#, fuzzy
 msgid ""
 "*method* should be a string that indicates the HTTP request method that will "
-"be used (e.g. ``'HEAD'``).  If provided, its value is stored in the :attr:"
-"`~Request.method` attribute and is used by :meth:`get_method()`. The default "
-"is ``'GET'`` if *data* is ``None`` or ``'POST'`` otherwise. Subclasses may "
-"indicate a different default method by setting the :attr:`~Request.method` "
-"attribute in the class itself."
+"be used (e.g. ``'HEAD'``).  If provided, its value is stored in "
+"the :attr:`~Request.method` attribute and is used by :meth:`get_method`. The "
+"default is ``'GET'`` if *data* is ``None`` or ``'POST'`` otherwise. "
+"Subclasses may indicate a different default method by setting "
+"the :attr:`~Request.method` attribute in the class itself."
 msgstr ""
 "*method* debe ser una cadena que indica el método de la petición HTTP que "
 "será usado (ej. ``'HEAD'``). Si se provee, su valor es almacenado en el "
@@ -529,7 +512,7 @@ msgstr ""
 "subclases pueden indicar un método predeterminado diferente estableciendo el "
 "atributo :attr:`~Request.method` es la clase misma."
 
-#: ../Doc/library/urllib.request.rst:255
+#: ../Doc/library/urllib.request.rst:250
 msgid ""
 "The request will not work as expected if the data object is unable to "
 "deliver its content more than once (e.g. a file or an iterable that can "
@@ -545,17 +528,17 @@ msgstr ""
 "directamente después de los encabezados. No hay soporte para una expectativa "
 "de funcionamiento 100% continuo en la biblioteca."
 
-#: ../Doc/library/urllib.request.rst:262
+#: ../Doc/library/urllib.request.rst:257
 msgid ":attr:`Request.method` argument is added to the Request class."
 msgstr "El argumento :attr:`Request.method` es añadido a la clase Request."
 
-#: ../Doc/library/urllib.request.rst:265
+#: ../Doc/library/urllib.request.rst:260
 msgid "Default :attr:`Request.method` may be indicated at the class level."
 msgstr ""
 "El atributo predeterminado :attr:`Request.method` puede ser indicado a nivel "
 "de clase."
 
-#: ../Doc/library/urllib.request.rst:268
+#: ../Doc/library/urllib.request.rst:263
 msgid ""
 "Do not raise an error if the ``Content-Length`` has not been provided and "
 "*data* is neither ``None`` nor a bytes object. Fall back to use chunked "
@@ -565,7 +548,7 @@ msgstr ""
 "no es ``None`` ni un objeto de bytes. En su lugar recurre a la codificación "
 "de transferencia fragmentada."
 
-#: ../Doc/library/urllib.request.rst:275
+#: ../Doc/library/urllib.request.rst:270
 msgid ""
 "The :class:`OpenerDirector` class opens URLs via :class:`BaseHandler`\\ s "
 "chained together. It manages the chaining of handlers, and recovery from "
@@ -575,7 +558,7 @@ msgstr ""
 "de :class:`BaseHandler`. Este maneja el encadenamiento de manejadores y la "
 "recuperación de errores."
 
-#: ../Doc/library/urllib.request.rst:281
+#: ../Doc/library/urllib.request.rst:276
 msgid ""
 "This is the base class for all registered handlers --- and handles only the "
 "simple mechanics of registration."
@@ -583,24 +566,24 @@ msgstr ""
 "Esta es la clase base para todos los manejadores registrados --- y manejan "
 "sólo las mecánicas simples del registro."
 
-#: ../Doc/library/urllib.request.rst:287
+#: ../Doc/library/urllib.request.rst:282
 msgid ""
 "A class which defines a default handler for HTTP error responses; all "
 "responses are turned into :exc:`~urllib.error.HTTPError` exceptions."
 msgstr ""
 "Una clase la cual define un manejador predeterminado para los errores de "
-"respuesta HTTP; todas las respuestas son convertidas en excepciones :exc:"
-"`~urllib.error.HTTPError`."
+"respuesta HTTP; todas las respuestas son convertidas en "
+"excepciones :exc:`~urllib.error.HTTPError`."
 
-#: ../Doc/library/urllib.request.rst:293
+#: ../Doc/library/urllib.request.rst:288
 msgid "A class to handle redirections."
 msgstr "Una clase para manejar redirecciones."
 
-#: ../Doc/library/urllib.request.rst:298
+#: ../Doc/library/urllib.request.rst:293
 msgid "A class to handle HTTP Cookies."
 msgstr "Una clase para manejar Cookies HTTP."
 
-#: ../Doc/library/urllib.request.rst:303
+#: ../Doc/library/urllib.request.rst:298
 msgid ""
 "Cause requests to go through a proxy. If *proxies* is given, it must be a "
 "dictionary mapping protocol names to URLs of proxies. The default is to read "
@@ -619,12 +602,12 @@ msgstr ""
 "macOS se obtiene la información de proxy desde el Framework de Configuración "
 "del Sistema."
 
-#: ../Doc/library/urllib.request.rst:311
+#: ../Doc/library/urllib.request.rst:306
 msgid "To disable autodetected proxy pass an empty dictionary."
 msgstr ""
 "Para deshabilitar la detección automática de proxy pasa un diccionario vacío."
 
-#: ../Doc/library/urllib.request.rst:313
+#: ../Doc/library/urllib.request.rst:308
 msgid ""
 "The :envvar:`no_proxy` environment variable can be used to specify hosts "
 "which shouldn't be reached via proxy; if set, it should be a comma-separated "
@@ -633,25 +616,25 @@ msgid ""
 msgstr ""
 "La variable de entorno :envvar:`no_proxy` puede ser usada para especificar "
 "hosts los cuales no deben ser alcanzados mediante proxy; si se establece, "
-"debe ser una lista separada por comas de sufijos de nombres de host, con ``:"
-"port`` añadidos opcionalmente, por ejemplo ``cern.ch,ncsa.uiuc.edu,some."
-"host:8080``."
+"debe ser una lista separada por comas de sufijos de nombres de host, con "
+"``:port`` añadidos opcionalmente, por ejemplo "
+"``cern.ch,ncsa.uiuc.edu,some.host:8080``."
 
-#: ../Doc/library/urllib.request.rst:320
+#: ../Doc/library/urllib.request.rst:315
 msgid ""
 "``HTTP_PROXY`` will be ignored if a variable ``REQUEST_METHOD`` is set; see "
 "the documentation on :func:`~urllib.request.getproxies`."
 msgstr ""
 "``HTTP_PROXY`` será ignorado si se establece una variable "
-"``REQUEST_METHOD``; vea la documentación de :func:`~urllib.request."
-"getproxies`."
+"``REQUEST_METHOD``; vea la documentación "
+"de :func:`~urllib.request.getproxies`."
 
-#: ../Doc/library/urllib.request.rst:326
+#: ../Doc/library/urllib.request.rst:321
 msgid "Keep a database of  ``(realm, uri) -> (user, password)`` mappings."
 msgstr ""
 "Mantiene una base de datos de mapeos ``(realm, uri) -> (user, password)``."
 
-#: ../Doc/library/urllib.request.rst:331
+#: ../Doc/library/urllib.request.rst:326
 msgid ""
 "Keep a database of  ``(realm, uri) -> (user, password)`` mappings. A realm "
 "of ``None`` is considered a catch-all realm, which is searched if no other "
@@ -661,7 +644,7 @@ msgstr ""
 "Un reino de ``None`` se considera un reino caza todo, el cual es buscado si "
 "ningún otro reino encaja."
 
-#: ../Doc/library/urllib.request.rst:338
+#: ../Doc/library/urllib.request.rst:333
 msgid ""
 "A variant of :class:`HTTPPasswordMgrWithDefaultRealm` that also has a "
 "database of ``uri -> is_authenticated`` mappings.  Can be used by a "
@@ -674,13 +657,13 @@ msgstr ""
 "autenticación inmediatamente en lugar de esperar primero a una respuesta "
 "``401``."
 
-#: ../Doc/library/urllib.request.rst:348
+#: ../Doc/library/urllib.request.rst:343
 msgid ""
 "This is a mixin class that helps with HTTP authentication, both to the "
 "remote host and to a proxy. *password_mgr*, if given, should be something "
-"that is compatible with :class:`HTTPPasswordMgr`; refer to section :ref:"
-"`http-password-mgr` for information on the interface that must be "
-"supported.  If *passwd_mgr* also provides ``is_authenticated`` and "
+"that is compatible with :class:`HTTPPasswordMgr`; refer to "
+"section :ref:`http-password-mgr` for information on the interface that must "
+"be supported.  If *passwd_mgr* also provides ``is_authenticated`` and "
 "``update_authenticated`` methods (see :ref:`http-password-mgr-with-prior-"
 "auth`), then the handler will use the ``is_authenticated`` result for a "
 "given URI to determine whether or not to send authentication credentials "
@@ -704,11 +687,11 @@ msgstr ""
 "peticiones subsecuentes a la URI o cualquiera de las super URIs incluirán "
 "automáticamente los credenciales de autenticación."
 
-#: ../Doc/library/urllib.request.rst:365
+#: ../Doc/library/urllib.request.rst:360
 msgid "Added ``is_authenticated`` support."
 msgstr "Añadido soporte ``is_authenticated``."
 
-#: ../Doc/library/urllib.request.rst:371
+#: ../Doc/library/urllib.request.rst:366
 msgid ""
 "Handle authentication with the remote host. *password_mgr*, if given, should "
 "be something that is compatible with :class:`HTTPPasswordMgr`; refer to "
@@ -722,7 +705,7 @@ msgstr ""
 "debe ser soportada. HTTPBasicAuthHandler lanzará un :exc:`ValueError` cuando "
 "se presente con un esquema de Autenticación incorrecto."
 
-#: ../Doc/library/urllib.request.rst:380 ../Doc/library/urllib.request.rst:414
+#: ../Doc/library/urllib.request.rst:375 ../Doc/library/urllib.request.rst:409
 msgid ""
 "Handle authentication with the proxy. *password_mgr*, if given, should be "
 "something that is compatible with :class:`HTTPPasswordMgr`; refer to "
@@ -733,19 +716,20 @@ msgstr ""
 "ser compatible con :class:`HTTPPasswordMgr`; refiera a la sección :ref:`http-"
 "password-mgr` para información sobre la interfaz que debe ser soportada."
 
-#: ../Doc/library/urllib.request.rst:388
+#: ../Doc/library/urllib.request.rst:383
 msgid ""
 "This is a mixin class that helps with HTTP authentication, both to the "
 "remote host and to a proxy. *password_mgr*, if given, should be something "
-"that is compatible with :class:`HTTPPasswordMgr`; refer to section :ref:"
-"`http-password-mgr` for information on the interface that must be supported."
+"that is compatible with :class:`HTTPPasswordMgr`; refer to "
+"section :ref:`http-password-mgr` for information on the interface that must "
+"be supported."
 msgstr ""
 "Esto es una clase mixin que ayuda con la autenticación HTTP, tanto al host "
 "remoto como a un proxy. Si se proporciona *password_mgr* debe ser compatible "
 "con :class:`HTTPPasswordMgr`; refiera a la sección :ref:`http-password-mgr` "
 "para información sobre la interfaz que debe ser soportada."
 
-#: ../Doc/library/urllib.request.rst:397
+#: ../Doc/library/urllib.request.rst:392
 msgid ""
 "Handle authentication with the remote host. *password_mgr*, if given, should "
 "be something that is compatible with :class:`HTTPPasswordMgr`; refer to "
@@ -758,9 +742,9 @@ msgid ""
 "Digest or Basic."
 msgstr ""
 "Maneja autenticación con el host remoto. Si se proporciona *password_mgr* "
-"debe ser compatible con :class:`HTTPPasswordMgr`; refiera a la sección :ref:"
-"`http-password-mgr` para información sobre la interfaz que debe ser "
-"soportada. Cuando se añaden tanto el Manejador de Autenticación Digest "
+"debe ser compatible con :class:`HTTPPasswordMgr`; refiera a la "
+"sección :ref:`http-password-mgr` para información sobre la interfaz que debe "
+"ser soportada. Cuando se añaden tanto el Manejador de Autenticación Digest "
 "(*Digest Authentication Handler*) como el Manejador de Autenticación Básico "
 "(*Basic Authentication Handler*) la Autenticación Digest siempre se intenta "
 "primero. Si la Autenticación Digest retorna una respuesta 40x de nuevo, se "
@@ -768,59 +752,59 @@ msgstr ""
 "Handler lanzará un :exc:`ValueError` cuando sea presentado con un esquema de "
 "autenticación diferente a Digest o Básico."
 
-#: ../Doc/library/urllib.request.rst:407
+#: ../Doc/library/urllib.request.rst:402
 msgid "Raise :exc:`ValueError` on unsupported Authentication Scheme."
 msgstr "Genera :exc:`ValueError` en Esquema de Autenticación no soportado."
 
-#: ../Doc/library/urllib.request.rst:422
+#: ../Doc/library/urllib.request.rst:417
 msgid "A class to handle opening of HTTP URLs."
 msgstr "Una clase para gestionar apertura de URLs HTTP."
 
-#: ../Doc/library/urllib.request.rst:427
+#: ../Doc/library/urllib.request.rst:422
 msgid ""
 "A class to handle opening of HTTPS URLs.  *context* and *check_hostname* "
 "have the same meaning as in :class:`http.client.HTTPSConnection`."
 msgstr ""
 "Una clase para gestionar apertura de URLs HTTPS. *context* y "
-"*check_hostname* tienen el mismo significado que en :class:`http.client."
-"HTTPSConnection`."
+"*check_hostname* tienen el mismo significado que "
+"en :class:`http.client.HTTPSConnection`."
 
-#: ../Doc/library/urllib.request.rst:430
+#: ../Doc/library/urllib.request.rst:425
 msgid "*context* and *check_hostname* were added."
 msgstr "*context* y *check_hostname* fueron añadidos."
 
-#: ../Doc/library/urllib.request.rst:436
+#: ../Doc/library/urllib.request.rst:431
 msgid "Open local files."
 msgstr "Abre archivos locales."
 
-#: ../Doc/library/urllib.request.rst:440
+#: ../Doc/library/urllib.request.rst:435
 msgid "Open data URLs."
 msgstr "Abre URLs de datos."
 
-#: ../Doc/library/urllib.request.rst:446
+#: ../Doc/library/urllib.request.rst:441
 msgid "Open FTP URLs."
 msgstr "Abre URLs FTP."
 
-#: ../Doc/library/urllib.request.rst:451
+#: ../Doc/library/urllib.request.rst:446
 msgid ""
 "Open FTP URLs, keeping a cache of open FTP connections to minimize delays."
 msgstr ""
 "Abre URLs FTP, manteniendo una caché de conexiones FTP abiertas para "
 "minimizar retrasos."
 
-#: ../Doc/library/urllib.request.rst:456
+#: ../Doc/library/urllib.request.rst:451
 msgid "A catch-all class to handle unknown URLs."
 msgstr "Una clase caza todo para gestionar URLs desconocidas."
 
-#: ../Doc/library/urllib.request.rst:461 ../Doc/library/urllib.request.rst:1167
+#: ../Doc/library/urllib.request.rst:456 ../Doc/library/urllib.request.rst:1162
 msgid "Process HTTP error responses."
 msgstr "Procesa errores de respuestas HTTP."
 
-#: ../Doc/library/urllib.request.rst:467
+#: ../Doc/library/urllib.request.rst:462
 msgid "Request Objects"
 msgstr "Objetos Request"
 
-#: ../Doc/library/urllib.request.rst:469
+#: ../Doc/library/urllib.request.rst:464
 msgid ""
 "The following methods describe :class:`Request`'s public interface, and so "
 "all may be overridden in subclasses.  It also defines several public "
@@ -831,25 +815,25 @@ msgstr ""
 "públicos que pueden ser usado por clientes para inspeccionar la respuesta "
 "analizada."
 
-#: ../Doc/library/urllib.request.rst:476
+#: ../Doc/library/urllib.request.rst:471
 msgid "The original URL passed to the constructor."
 msgstr "La URL original pasada al constructor."
 
-#: ../Doc/library/urllib.request.rst:480
+#: ../Doc/library/urllib.request.rst:475
 msgid ""
-"Request.full_url is a property with setter, getter and a deleter. Getting :"
-"attr:`~Request.full_url` returns the original request URL with the fragment, "
-"if it was present."
+"Request.full_url is a property with setter, getter and a deleter. "
+"Getting :attr:`~Request.full_url` returns the original request URL with the "
+"fragment, if it was present."
 msgstr ""
-"Request.full_url es una propiedad con setter, getter y deleter. Obtener :"
-"attr:`~Request.full_url` retorna la petición URL original con el fragmento, "
-"si este estaba presente."
+"Request.full_url es una propiedad con setter, getter y deleter. "
+"Obtener :attr:`~Request.full_url` retorna la petición URL original con el "
+"fragmento, si este estaba presente."
 
-#: ../Doc/library/urllib.request.rst:486
+#: ../Doc/library/urllib.request.rst:481
 msgid "The URI scheme."
 msgstr "El esquema de URI."
 
-#: ../Doc/library/urllib.request.rst:490
+#: ../Doc/library/urllib.request.rst:485
 msgid ""
 "The URI authority, typically a host, but may also contain a port separated "
 "by a colon."
@@ -857,11 +841,11 @@ msgstr ""
 "La autoridad de URI, típicamente un host, pero también puede contener un "
 "puerto separado por un caracter de doble punto."
 
-#: ../Doc/library/urllib.request.rst:495
+#: ../Doc/library/urllib.request.rst:490
 msgid "The original host for the request, without port."
 msgstr "El host original de la petición, sin puerto."
 
-#: ../Doc/library/urllib.request.rst:499
+#: ../Doc/library/urllib.request.rst:494
 msgid ""
 "The URI path.  If the :class:`Request` uses a proxy, then selector will be "
 "the full URL that is passed to the proxy."
@@ -869,12 +853,12 @@ msgstr ""
 "La ruta de URI. Si :class:`Request` usa un proxy, entonces selector será la "
 "URL completa que se pasa al proxy."
 
-#: ../Doc/library/urllib.request.rst:504
+#: ../Doc/library/urllib.request.rst:499
 msgid "The entity body for the request, or ``None`` if not specified."
 msgstr ""
 "El cuerpo de la entidad para la solicitud o ``None`` si no es especificado."
 
-#: ../Doc/library/urllib.request.rst:506
+#: ../Doc/library/urllib.request.rst:501
 msgid ""
 "Changing value of :attr:`Request.data` now deletes \"Content-Length\" header "
 "if it was previously set or calculated."
@@ -882,15 +866,15 @@ msgstr ""
 "Cambiar el valor de :attr:`Request.data` elimina ahora el encabezado "
 "\"Content-Length\" si fue establecido o calculado previamente."
 
-#: ../Doc/library/urllib.request.rst:512
+#: ../Doc/library/urllib.request.rst:507
 msgid ""
-"boolean, indicates whether the request is unverifiable as defined by :rfc:"
-"`2965`."
+"boolean, indicates whether the request is unverifiable as defined "
+"by :rfc:`2965`."
 msgstr ""
-"booleano, indica si la petición no es verificable como se define por :rfc:"
-"`2965`."
+"booleano, indica si la petición no es verificable como se define "
+"por :rfc:`2965`."
 
-#: ../Doc/library/urllib.request.rst:517
+#: ../Doc/library/urllib.request.rst:512
 msgid ""
 "The HTTP request method to use.  By default its value is :const:`None`, "
 "which means that :meth:`~Request.get_method` will do its normal computation "
@@ -904,11 +888,11 @@ msgstr ""
 "que significa que :meth:`~Request.get_method` realizará su cálculo normal "
 "del método a usar. Su valor puede ser definido (sobrescribiendo así el "
 "cálculo predeterminado en :meth:`~Request.get_method`) tanto proporcionando "
-"un valor por defecto estableciéndolo a nivel de clase en una subclase de :"
-"class:`Request` o pasando un valor al constructor de :class:`Request` por "
-"medio del argumento *method*."
+"un valor por defecto estableciéndolo a nivel de clase en una subclase "
+"de :class:`Request` o pasando un valor al constructor de :class:`Request` "
+"por medio del argumento *method*."
 
-#: ../Doc/library/urllib.request.rst:527
+#: ../Doc/library/urllib.request.rst:522
 msgid ""
 "A default value can now be set in subclasses; previously it could only be "
 "set via the constructor argument."
@@ -916,23 +900,23 @@ msgstr ""
 "Un valor predeterminado puede ser establecido ahora en subclases; "
 "previamente sólo podía ser definido mediante el argumento del constructor."
 
-#: ../Doc/library/urllib.request.rst:534
+#: ../Doc/library/urllib.request.rst:529
 msgid ""
-"Return a string indicating the HTTP request method.  If :attr:`Request."
-"method` is not ``None``, return its value, otherwise return ``'GET'`` if :"
-"attr:`Request.data` is ``None``, or ``'POST'`` if it's not. This is only "
-"meaningful for HTTP requests."
+"Return a string indicating the HTTP request method.  "
+"If :attr:`Request.method` is not ``None``, return its value, otherwise "
+"return ``'GET'`` if :attr:`Request.data` is ``None``, or ``'POST'`` if it's "
+"not. This is only meaningful for HTTP requests."
 msgstr ""
-"Retorna una cadena indicando el método de petición HTTP. Si :attr:`Request."
-"method` no es ``None``, retorna su valor, de otra forma retorna ``'GET'`` "
-"si :attr:`Request.data` es ``None`` o ``'POST'`` si no lo es. Esto sólo es "
-"significativo para peticiones HTTP."
+"Retorna una cadena indicando el método de petición HTTP. "
+"Si :attr:`Request.method` no es ``None``, retorna su valor, de otra forma "
+"retorna ``'GET'`` si :attr:`Request.data` es ``None`` o ``'POST'`` si no lo "
+"es. Esto sólo es significativo para peticiones HTTP."
 
-#: ../Doc/library/urllib.request.rst:539
+#: ../Doc/library/urllib.request.rst:534
 msgid "get_method now looks at the value of :attr:`Request.method`."
 msgstr "get_method ahora mira el valor de :attr:`Request.method`."
 
-#: ../Doc/library/urllib.request.rst:545
+#: ../Doc/library/urllib.request.rst:540
 msgid ""
 "Add another header to the request.  Headers are currently ignored by all "
 "handlers except HTTP handlers, where they are added to the list of headers "
@@ -954,11 +938,11 @@ msgstr ""
 "usando sólo un encabezado. Tenga en cuenta que los encabezados agregados con "
 "este método también se agregan a las solicitudes redirigidas."
 
-#: ../Doc/library/urllib.request.rst:557
+#: ../Doc/library/urllib.request.rst:552
 msgid "Add a header that will not be added to a redirected request."
 msgstr "Añade un encabezado que no será añadido a una petición redireccionada."
 
-#: ../Doc/library/urllib.request.rst:562
+#: ../Doc/library/urllib.request.rst:557
 msgid ""
 "Return whether the instance has the named header (checks both regular and "
 "unredirected)."
@@ -966,7 +950,7 @@ msgstr ""
 "Retorna si la instancia tiene el encabezado nombrado (comprueba tanto "
 "regular como no redirigido)."
 
-#: ../Doc/library/urllib.request.rst:568
+#: ../Doc/library/urllib.request.rst:563
 msgid ""
 "Remove named header from the request instance (both from regular and "
 "unredirected headers)."
@@ -974,15 +958,15 @@ msgstr ""
 "Elimina el encabezado nombrado de la instancia de la petición (desde "
 "encabezados regulares y no redireccionados)."
 
-#: ../Doc/library/urllib.request.rst:576
+#: ../Doc/library/urllib.request.rst:571
 msgid "Return the URL given in the constructor."
 msgstr "Retorna la URL dada en el constructor."
 
-#: ../Doc/library/urllib.request.rst:580
+#: ../Doc/library/urllib.request.rst:575
 msgid "Returns :attr:`Request.full_url`"
 msgstr "Retorna :attr:`Request.full_url`"
 
-#: ../Doc/library/urllib.request.rst:585
+#: ../Doc/library/urllib.request.rst:580
 msgid ""
 "Prepare the request by connecting to a proxy server. The *host* and *type* "
 "will replace those of the instance, and the instance's selector will be the "
@@ -992,20 +976,20 @@ msgstr ""
 "reemplazarán aquellos de la instancia y el selector de la instancia será la "
 "URL original dada en el constructor."
 
-#: ../Doc/library/urllib.request.rst:592
+#: ../Doc/library/urllib.request.rst:587
 msgid ""
 "Return the value of the given header. If the header is not present, return "
 "the default value."
 msgstr "Retorna el valor del encabezado dado."
 
-#: ../Doc/library/urllib.request.rst:598
+#: ../Doc/library/urllib.request.rst:593
 msgid ""
 "Return a list of tuples (header_name, header_value) of the Request headers."
 msgstr ""
 "Retorna una lista de tuplas (header_name, header_value) de los encabezados "
 "de la Petición."
 
-#: ../Doc/library/urllib.request.rst:600
+#: ../Doc/library/urllib.request.rst:595
 msgid ""
 "The request methods add_data, has_data, get_data, get_type, get_host, "
 "get_selector, get_origin_req_host and is_unverifiable that were deprecated "
@@ -1015,24 +999,24 @@ msgstr ""
 "get_selector, get_origin_req_host y is_unverifiable que quedaron obsoletos "
 "desde 3.3 han sido eliminados."
 
-#: ../Doc/library/urllib.request.rst:609
+#: ../Doc/library/urllib.request.rst:604
 msgid "OpenerDirector Objects"
 msgstr "Objetos OpenerDirector"
 
-#: ../Doc/library/urllib.request.rst:611
+#: ../Doc/library/urllib.request.rst:606
 msgid ":class:`OpenerDirector` instances have the following methods:"
 msgstr ""
 "Las instancias de :class:`OpenerDirector` tienen los siguientes métodos:"
 
-#: ../Doc/library/urllib.request.rst:616
+#: ../Doc/library/urllib.request.rst:611
 msgid ""
 "*handler* should be an instance of :class:`BaseHandler`.  The following "
 "methods are searched, and added to the possible chains (note that HTTP "
 "errors are a special case).  Note that, in the following, *protocol* should "
-"be replaced with the actual protocol to handle, for example :meth:"
-"`http_response` would be the HTTP protocol response handler.  Also *type* "
-"should be replaced with the actual HTTP code, for example :meth:"
-"`http_error_404` would handle HTTP 404 errors."
+"be replaced with the actual protocol to handle, for "
+"example :meth:`http_response` would be the HTTP protocol response handler.  "
+"Also *type* should be replaced with the actual HTTP code, for "
+"example :meth:`http_error_404` would handle HTTP 404 errors."
 msgstr ""
 "*handler* debe ser una instancia de :class:`BaseHandler`. Los siguientes "
 "métodos son buscados y añadidos a las cadenas posibles (tenga en cuenta que "
@@ -1042,63 +1026,68 @@ msgstr ""
 "manejador de respuesta. También *type* debe ser remplazado con el código "
 "HTTP actual, por ejemplo :meth:`http_error_404` manejaría errores HTTP 404."
 
-#: ../Doc/library/urllib.request.rst:624
+#: ../Doc/library/urllib.request.rst:619
+#, fuzzy
 msgid ""
-":meth:`<protocol>_open` --- signal that the handler knows how to open "
+":meth:`!<protocol>_open` --- signal that the handler knows how to open "
 "*protocol* URLs."
 msgstr ""
 ":meth:`<protocol>_open` --- señala que el manejador sabe como abrir URLs "
 "*protocol*."
 
-#: ../Doc/library/urllib.request.rst:627
+#: ../Doc/library/urllib.request.rst:622
 msgid "See |protocol_open|_ for more information."
 msgstr "Vea |protocol_open|_ para más información."
 
-#: ../Doc/library/urllib.request.rst:629
+#: ../Doc/library/urllib.request.rst:624
+#, fuzzy
 msgid ""
-":meth:`http_error_\\<type\\>` --- signal that the handler knows how to "
+":meth:`!http_error_\\<type\\>` --- signal that the handler knows how to "
 "handle HTTP errors with HTTP error code *type*."
 msgstr ""
 ":meth:`http_error_\\<type\\>` --- señala que el manejador sabe como manejar "
 "errores HTTP con el código de error *type*."
 
-#: ../Doc/library/urllib.request.rst:632
+#: ../Doc/library/urllib.request.rst:627
 msgid "See |http_error_nnn|_ for more information."
 msgstr "Vea |http_error_nnn|_ para más información."
 
-#: ../Doc/library/urllib.request.rst:634
+#: ../Doc/library/urllib.request.rst:629
+#, fuzzy
 msgid ""
-":meth:`<protocol>_error` --- signal that the handler knows how to handle "
+":meth:`!<protocol>_error` --- signal that the handler knows how to handle "
 "errors from (non-\\ ``http``) *protocol*."
 msgstr ""
 ":meth:`<protocol>_error` --- señala que el manejador sabe como manejar "
 "errores de (no ``http``) *protocol*."
 
-#: ../Doc/library/urllib.request.rst:637
+#: ../Doc/library/urllib.request.rst:632
+#, fuzzy
 msgid ""
-":meth:`<protocol>_request` --- signal that the handler knows how to pre-"
+":meth:`!<protocol>_request` --- signal that the handler knows how to pre-"
 "process *protocol* requests."
 msgstr ""
 ":meth:`<protocol>_request` --- señala que el manejador sabe como preprocesar "
 "peticiones *protocol*."
 
-#: ../Doc/library/urllib.request.rst:640
+#: ../Doc/library/urllib.request.rst:635
 msgid "See |protocol_request|_ for more information."
 msgstr "Vea |protocol_request|_ para más información."
 
-#: ../Doc/library/urllib.request.rst:642
+#: ../Doc/library/urllib.request.rst:637
+#, fuzzy
 msgid ""
-":meth:`<protocol>_response` --- signal that the handler knows how to post-"
+":meth:`!<protocol>_response` --- signal that the handler knows how to post-"
 "process *protocol* responses."
 msgstr ""
 ":meth:`<protocol>_response` --- señala que el manejador sabe como "
 "postprocesar respuestas *protocol*."
 
-#: ../Doc/library/urllib.request.rst:645
+#: ../Doc/library/urllib.request.rst:640
 msgid "See |protocol_response|_ for more information."
 msgstr "Vea |protocol_response|_ para más información."
 
-#: ../Doc/library/urllib.request.rst:654
+#: ../Doc/library/urllib.request.rst:649
 msgid ""
 "Open the given *url* (which can be a request object or a string), optionally "
 "passing the given *data*. Arguments, return values and exceptions raised are "
@@ -1119,13 +1108,14 @@ msgstr ""
 "expiración global será usado). La característica de tiempo de expiración "
 "actualmente funciona sólo para conexiones HTTP, HTTPS y FTP."
 
-#: ../Doc/library/urllib.request.rst:666
+#: ../Doc/library/urllib.request.rst:661
+#, fuzzy
 msgid ""
 "Handle an error of the given protocol.  This will call the registered error "
 "handlers for the given protocol with the given arguments (which are protocol "
 "specific).  The HTTP protocol is a special case which uses the HTTP response "
-"code to determine the specific error handler; refer to the :meth:"
-"`http_error_\\<type\\>` methods of the handler classes."
+"code to determine the specific error handler; refer to the :meth:`!"
+"http_error_\\<type\\>` methods of the handler classes."
 msgstr ""
 "Maneja un error del protocolo dado. Esto invocará los manejadores de error "
 "registrados para el protocolo dado con los argumentos dados (los cuales son "
@@ -1134,18 +1124,18 @@ msgstr ""
 "específico; refiera a los métodos :meth:`http_error_\\<type\\>` de las "
 "clases del manejador."
 
-#: ../Doc/library/urllib.request.rst:672
+#: ../Doc/library/urllib.request.rst:667
 msgid ""
 "Return values and exceptions raised are the same as those of :func:`urlopen`."
 msgstr ""
 "Retorna si los valores y excepciones generadas son las mismas que aquellas "
 "de :func:`urlopen`."
 
-#: ../Doc/library/urllib.request.rst:674
+#: ../Doc/library/urllib.request.rst:669
 msgid "OpenerDirector objects open URLs in three stages:"
 msgstr "Los objetos OpenerDirector abren URLs en tres etapas:"
 
-#: ../Doc/library/urllib.request.rst:676
+#: ../Doc/library/urllib.request.rst:671
 msgid ""
 "The order in which these methods are called within each stage is determined "
 "by sorting the handler instances."
@@ -1153,20 +1143,23 @@ msgstr ""
 "El orden en el cual esos métodos son invocados dentro de cada etapa es "
 "determinado ordenando las instancias manejadoras."
 
-#: ../Doc/library/urllib.request.rst:679
+#: ../Doc/library/urllib.request.rst:674
+#, fuzzy
 msgid ""
-"Every handler with a method named like :meth:`<protocol>_request` has that "
+"Every handler with a method named like :meth:`!<protocol>_request` has that "
 "method called to pre-process the request."
 msgstr ""
 "Cada manejador con un método nombrado como :meth:`<protocol>_request` tiene "
 "ese método invocador para preprocesar la petición."
 
-#: ../Doc/library/urllib.request.rst:682
+#: ../Doc/library/urllib.request.rst:677
+#, fuzzy
 msgid ""
-"Handlers with a method named like :meth:`<protocol>_open` are called to "
-"handle the request. This stage ends when a handler either returns a non-\\ :"
-"const:`None` value (ie. a response), or raises an exception (usually :exc:"
-"`~urllib.error.URLError`).  Exceptions are allowed to propagate."
+"Handlers with a method named like :meth:`!<protocol>_open` are called to "
+"handle the request. This stage ends when a handler either returns a non-"
+"\\ :const:`None` value (ie. a response), or raises an exception "
+"(usually :exc:`~urllib.error.URLError`).  Exceptions are allowed to "
+"propagate."
 msgstr ""
 "Los manejadores con un método nombrado como :meth:`<protocol>_open` son "
 "invocados para manejar la petición. Esta etapa termina cuando un manejador "
@@ -1174,43 +1167,47 @@ msgstr ""
 "(generalmente :exc:`~urllib.error.URLError`). Se permite que las excepciones "
 "propaguen."
 
-#: ../Doc/library/urllib.request.rst:687
+#: ../Doc/library/urllib.request.rst:682
+#, fuzzy
 msgid ""
-"In fact, the above algorithm is first tried for methods named :meth:"
-"`default_open`.  If all such methods return :const:`None`, the algorithm is "
-"repeated for methods named like :meth:`<protocol>_open`.  If all such "
-"methods return :const:`None`, the algorithm is repeated for methods named :"
-"meth:`unknown_open`."
+"In fact, the above algorithm is first tried for methods "
+"named :meth:`~BaseHandler.default_open`.  If all such methods "
+"return :const:`None`, the algorithm is repeated for methods named "
+"like :meth:`!<protocol>_open`.  If all such methods return :const:`None`, "
+"the algorithm is repeated for methods "
+"named :meth:`~BaseHandler.unknown_open`."
 msgstr ""
-"De hecho, el algoritmo anterior se intenta primero para métodos nombrados :"
-"meth:`default_open`. Si todos esos métodos retornan :const:`None`, el "
-"algoritmo se repite para métodos nombrados como :meth:`<protocol>_open`. Si "
-"todos esos métodos retornan :const:`None`, el algoritmo se repite para "
-"métodos nombrados como :meth:`unknown_open`."
+"De hecho, el algoritmo anterior se intenta primero para métodos "
+"nombrados :meth:`default_open`. Si todos esos métodos "
+"retornan :const:`None`, el algoritmo se repite para métodos nombrados "
+"como :meth:`<protocol>_open`. Si todos esos métodos retornan :const:`None`, "
+"el algoritmo se repite para métodos nombrados como :meth:`unknown_open`."
 
-#: ../Doc/library/urllib.request.rst:693
+#: ../Doc/library/urllib.request.rst:688
 msgid ""
 "Note that the implementation of these methods may involve calls of the "
-"parent :class:`OpenerDirector` instance's :meth:`~OpenerDirector.open` and :"
-"meth:`~OpenerDirector.error` methods."
+"parent :class:`OpenerDirector` instance's :meth:`~OpenerDirector.open` "
+"and :meth:`~OpenerDirector.error` methods."
 msgstr ""
 "Tenga en cuenta que la implementación de esos métodos puede involucrar "
-"invocaciones de los métodos :meth:`~OpenerDirector.open` y :meth:"
-"`~OpenerDirector.error` de la instancia :class:`OpenerDirector` padre."
+"invocaciones de los métodos :meth:`~OpenerDirector.open` "
+"y :meth:`~OpenerDirector.error` de la instancia :class:`OpenerDirector` "
+"padre."
 
-#: ../Doc/library/urllib.request.rst:697
+#: ../Doc/library/urllib.request.rst:692
+#, fuzzy
 msgid ""
-"Every handler with a method named like :meth:`<protocol>_response` has that "
+"Every handler with a method named like :meth:`!<protocol>_response` has that "
 "method called to post-process the response."
 msgstr ""
 "Cada manejador con un método nombrado como :meth:`<protocol>_response` tiene "
 "ese método invocado para postprocesar la respuesta."
 
-#: ../Doc/library/urllib.request.rst:704
+#: ../Doc/library/urllib.request.rst:699
 msgid "BaseHandler Objects"
 msgstr "Objetos BaseHandler"
 
-#: ../Doc/library/urllib.request.rst:706
+#: ../Doc/library/urllib.request.rst:701
 msgid ""
 ":class:`BaseHandler` objects provide a couple of methods that are directly "
 "useful, and others that are meant to be used by derived classes.  These are "
@@ -1220,15 +1217,15 @@ msgstr ""
 "útiles directamente y otros que están destinados a ser utilizados por clases "
 "derivadas. Estos están pensados para uso directo:"
 
-#: ../Doc/library/urllib.request.rst:713
+#: ../Doc/library/urllib.request.rst:708
 msgid "Add a director as parent."
 msgstr "Añade un director como padre."
 
-#: ../Doc/library/urllib.request.rst:718
+#: ../Doc/library/urllib.request.rst:713
 msgid "Remove any parents."
 msgstr "Elimina cualquier padre."
 
-#: ../Doc/library/urllib.request.rst:720
+#: ../Doc/library/urllib.request.rst:715
 msgid ""
 "The following attribute and methods should only be used by classes derived "
 "from :class:`BaseHandler`."
@@ -1236,17 +1233,19 @@ msgstr ""
 "El siguiente atributo y los siguientes métodos sólo deben ser usados por "
 "clases derivadas de :class:`BaseHandler`."
 
-#: ../Doc/library/urllib.request.rst:725
+#: ../Doc/library/urllib.request.rst:720
+#, fuzzy
 msgid ""
-"The convention has been adopted that subclasses defining :meth:"
-"`<protocol>_request` or :meth:`<protocol>_response` methods are named :class:"
-"`\\*Processor`; all others are named :class:`\\*Handler`."
+"The convention has been adopted that subclasses defining :meth:`!"
+"<protocol>_request` or :meth:`!<protocol>_response` methods are "
+"named :class:`!\\*Processor`; all others are named :class:`!\\*Handler`."
 msgstr ""
-"Se ha adoptado la convención de que las subclases que definen los métodos :"
-"meth:`<protocol>_request` o :meth:`<protocol>_response` son nombradas :class:"
-"`\\*Processor`; todas las otras son nombradas :class:`\\*Handler`."
+"Se ha adoptado la convención de que las subclases que definen los "
+"métodos :meth:`<protocol>_request` o :meth:`<protocol>_response` son "
+"nombradas :class:`\\*Processor`; todas las otras son "
+"nombradas :class:`\\*Handler`."
 
-#: ../Doc/library/urllib.request.rst:732
+#: ../Doc/library/urllib.request.rst:727
 msgid ""
 "A valid :class:`OpenerDirector`, which can be used to open using a different "
 "protocol, or handle errors."
@@ -1254,7 +1253,7 @@ msgstr ""
 "Un :class:`OpenerDirector` válido, el cual puede ser utilizado para abrir "
 "usando un protocolo diferente, o para manejar errores."
 
-#: ../Doc/library/urllib.request.rst:738
+#: ../Doc/library/urllib.request.rst:733
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "define it if they want to catch all URLs."
@@ -1262,29 +1261,32 @@ msgstr ""
 "Este método no es definido en :class:`BaseHandler`, pero las subclases deben "
 "definirlo si quieren cazar todas las URLs."
 
-#: ../Doc/library/urllib.request.rst:741
+#: ../Doc/library/urllib.request.rst:736
+#, fuzzy
 msgid ""
-"This method, if implemented, will be called by the parent :class:"
-"`OpenerDirector`.  It should return a file-like object as described in the "
-"return value of the :meth:`~OpenerDirector.open` method of :class:"
-"`OpenerDirector`, or ``None``. It should raise :exc:`~urllib.error."
-"URLError`, unless a truly exceptional thing happens (for example, :exc:"
-"`MemoryError` should not be mapped to :exc:`URLError`)."
+"This method, if implemented, will be called by the "
+"parent :class:`OpenerDirector`.  It should return a file-like object as "
+"described in the return value of the :meth:`~OpenerDirector.open` method "
+"of :class:`OpenerDirector`, or ``None``. It should "
+"raise :exc:`~urllib.error.URLError`, unless a truly exceptional thing "
+"happens (for example, :exc:`MemoryError` should not be mapped "
+"to :exc:`~urllib.error.URLError`)."
 msgstr ""
 "Este método, si se implementa, será llamado por el :class:`OpenerDirector` "
 "padre. Debería devolver un objeto tipo archivo como se describe en el valor "
-"de retorno del método :meth:`~OpenerDirector.open` de la clase :class:"
-"`OpenerDirector`, o ``None``. Debería levantar :exc:`~urllib.error."
-"URLError`, a menos que suceda algo verdaderamente excepcional (por ejemplo, :"
-"exc:`MemoryError` no debe asignarse a :exc:`URLError`)."
+"de retorno del método :meth:`~OpenerDirector.open` de la "
+"clase :class:`OpenerDirector`, o ``None``. Debería "
+"levantar :exc:`~urllib.error.URLError`, a menos que suceda algo "
+"verdaderamente excepcional (por ejemplo, :exc:`MemoryError` no debe "
+"asignarse a :exc:`URLError`)."
 
-#: ../Doc/library/urllib.request.rst:748
+#: ../Doc/library/urllib.request.rst:743
 msgid "This method will be called before any protocol-specific open method."
 msgstr ""
 "Este método será invocado antes de cualquier método de apertura específico "
 "de protocolo."
 
-#: ../Doc/library/urllib.request.rst:755
+#: ../Doc/library/urllib.request.rst:750
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "define it if they want to handle URLs with the given protocol."
@@ -1292,17 +1294,18 @@ msgstr ""
 "Este método no está definido en :class:`BaseHandler`, pero las subclases "
 "deben definirlo si quieren manejar URLs con el protocolo dado."
 
-#: ../Doc/library/urllib.request.rst:758
+#: ../Doc/library/urllib.request.rst:753
+#, fuzzy
 msgid ""
-"This method, if defined, will be called by the parent :class:"
-"`OpenerDirector`. Return values should be the same as for  :meth:"
-"`default_open`."
+"This method, if defined, will be called by the "
+"parent :class:`OpenerDirector`. Return values should be the same as "
+"for  :meth:`~BaseHandler.default_open`."
 msgstr ""
 "Este método, si está definido, será invocado por el :class:`OpenerDirector` "
-"padre. Los valores retornados deben ser los mismos que para :meth:"
-"`default_open`."
+"padre. Los valores retornados deben ser los mismos que "
+"para :meth:`default_open`."
 
-#: ../Doc/library/urllib.request.rst:764
+#: ../Doc/library/urllib.request.rst:759
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "define it if they want to catch all URLs with no specific registered handler "
@@ -1312,23 +1315,23 @@ msgstr ""
 "deben definirlo si quieren cazar todas las URLs sin manejador registrado "
 "para abrirlo."
 
-#: ../Doc/library/urllib.request.rst:768
+#: ../Doc/library/urllib.request.rst:763
 msgid ""
-"This method, if implemented, will be called by the :attr:`parent` :class:"
-"`OpenerDirector`.  Return values should be the same as for :meth:"
-"`default_open`."
+"This method, if implemented, will be called by "
+"the :attr:`parent` :class:`OpenerDirector`.  Return values should be the "
+"same as for :meth:`default_open`."
 msgstr ""
-"Este método, si está implementado, será invocado por el :attr:`parent` de :"
-"class:`OpenerDirector`. Los valores retornados deben ser los mismos que "
+"Este método, si está implementado, será invocado por el :attr:`parent` "
+"de :class:`OpenerDirector`. Los valores retornados deben ser los mismos que "
 "para :meth:`default_open`."
 
-#: ../Doc/library/urllib.request.rst:775
+#: ../Doc/library/urllib.request.rst:770
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "override it if they intend to provide a catch-all for otherwise unhandled "
-"HTTP errors.  It will be called automatically by the  :class:"
-"`OpenerDirector` getting the error, and should not normally be called in "
-"other circumstances."
+"HTTP errors.  It will be called automatically by "
+"the  :class:`OpenerDirector` getting the error, and should not normally be "
+"called in other circumstances."
 msgstr ""
 "Este método *no* está definido en :class:`BaseHandler`, pero las subclases "
 "deben sobreescribirlo si pretenden proporcionar una solución general para "
@@ -1336,7 +1339,7 @@ msgstr ""
 "automáticamente por el :class:`OpenerDirector` obteniendo el error y no debe "
 "ser invocado normalmente en otras circunstancias."
 
-#: ../Doc/library/urllib.request.rst:780
+#: ../Doc/library/urllib.request.rst:775
 msgid ""
 "*req* will be a :class:`Request` object, *fp* will be a file-like object "
 "with the HTTP error body, *code* will be the three-digit code of the error, "
@@ -1348,15 +1351,15 @@ msgstr ""
 "*msg* será la explicación visible para el usuario del código y *hdrs* será "
 "un objeto de mapeo con los encabezados del error."
 
-#: ../Doc/library/urllib.request.rst:785
+#: ../Doc/library/urllib.request.rst:780
 msgid ""
-"Return values and exceptions raised should be the same as those of :func:"
-"`urlopen`."
+"Return values and exceptions raised should be the same as those "
+"of :func:`urlopen`."
 msgstr ""
 "Los valores de retorno y las excepciones generadas deben ser los mismos que "
 "aquellos de :func:`urlopen`."
 
-#: ../Doc/library/urllib.request.rst:792
+#: ../Doc/library/urllib.request.rst:787
 msgid ""
 "*nnn* should be a three-digit HTTP error code.  This method is also not "
 "defined in :class:`BaseHandler`, but will be called, if it exists, on an "
@@ -1366,21 +1369,22 @@ msgstr ""
 "está definido en :class:`BaseHandler`, pero será invocado, si existe, en una "
 "instancia de una subclase, cuando ocurra un error HTTP con código *nnn*."
 
-#: ../Doc/library/urllib.request.rst:796
+#: ../Doc/library/urllib.request.rst:791
 msgid "Subclasses should override this method to handle specific HTTP errors."
 msgstr ""
 "Las subclases deben sobrescribir este método para manejar errores HTTP "
 "específicos."
 
-#: ../Doc/library/urllib.request.rst:798
+#: ../Doc/library/urllib.request.rst:793
+#, fuzzy
 msgid ""
-"Arguments, return values and exceptions raised should be the same as for :"
-"meth:`http_error_default`."
+"Arguments, return values and exceptions raised should be the same as "
+"for :meth:`~BaseHandler.http_error_default`."
 msgstr ""
 "Los argumentos, valores de retorno y las excepciones generadas deben ser las "
 "mismas que para :meth:`http_error_default`."
 
-#: ../Doc/library/urllib.request.rst:806
+#: ../Doc/library/urllib.request.rst:801
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "define it if they want to pre-process requests of the given protocol."
@@ -1388,17 +1392,17 @@ msgstr ""
 "Este método *no* está definido en :class:`BaseHandler`, pero las subclases "
 "deben definirlo si pretenden preprocesar peticiones del protocolo dado."
 
-#: ../Doc/library/urllib.request.rst:809
+#: ../Doc/library/urllib.request.rst:804
 msgid ""
-"This method, if defined, will be called by the parent :class:"
-"`OpenerDirector`. *req* will be a :class:`Request` object. The return value "
-"should be a :class:`Request` object."
+"This method, if defined, will be called by the "
+"parent :class:`OpenerDirector`. *req* will be a :class:`Request` object. The "
+"return value should be a :class:`Request` object."
 msgstr ""
 "Este método, si está definido, será invocado por el :class:`OpenerDirector` "
 "padre. *req* será un objeto :class:`Request`. El valor retornado debe ser un "
 "objeto :class:`Request`."
 
-#: ../Doc/library/urllib.request.rst:818
+#: ../Doc/library/urllib.request.rst:813
 msgid ""
 "This method is *not* defined in :class:`BaseHandler`, but subclasses should "
 "define it if they want to post-process responses of the given protocol."
@@ -1406,13 +1410,13 @@ msgstr ""
 "Este método *no* está definido en :class:`BaseHandler`, pero las subclases "
 "deben definirlo si quieren postprocesar respuestas del protocolo dado."
 
-#: ../Doc/library/urllib.request.rst:821
+#: ../Doc/library/urllib.request.rst:816
 msgid ""
-"This method, if defined, will be called by the parent :class:"
-"`OpenerDirector`. *req* will be a :class:`Request` object. *response* will "
-"be an object implementing the same interface as the return value of :func:"
-"`urlopen`.  The return value should implement the same interface as the "
-"return value of :func:`urlopen`."
+"This method, if defined, will be called by the "
+"parent :class:`OpenerDirector`. *req* will be a :class:`Request` object. "
+"*response* will be an object implementing the same interface as the return "
+"value of :func:`urlopen`.  The return value should implement the same "
+"interface as the return value of :func:`urlopen`."
 msgstr ""
 "Este método, si está definido, será invocado por el :class:`OpenerDirector` "
 "padre. *req* será un objeto :class:`Request`. *response* será un objeto que "
@@ -1420,66 +1424,69 @@ msgstr ""
 "valor retornado debe implementar la misma interfaz que el valor retornado "
 "de :func:`urlopen`."
 
-#: ../Doc/library/urllib.request.rst:831
+#: ../Doc/library/urllib.request.rst:826
 msgid "HTTPRedirectHandler Objects"
 msgstr "Objetos HTTPRedirectHandler"
 
-#: ../Doc/library/urllib.request.rst:835
+#: ../Doc/library/urllib.request.rst:830
 msgid ""
 "Some HTTP redirections require action from this module's client code.  If "
 "this is the case, :exc:`~urllib.error.HTTPError` is raised.  See :rfc:`2616` "
 "for details of the precise meanings of the various redirection codes."
 msgstr ""
 "Algunas redirecciones HTTP requieren acción desde el código del módulo del "
-"cliente. Si este es el caso, se genera :exc:`~urllib.error.HTTPError`. Vea :"
-"rfc:`2616` para más detalles de los significados precisos de los diferentes "
-"códigos de redirección."
+"cliente. Si este es el caso, se genera :exc:`~urllib.error.HTTPError`. "
+"Vea :rfc:`2616` para más detalles de los significados precisos de los "
+"diferentes códigos de redirección."
 
-#: ../Doc/library/urllib.request.rst:839
+#: ../Doc/library/urllib.request.rst:834
+#, fuzzy
 msgid ""
-"An :class:`HTTPError` exception raised as a security consideration if the "
-"HTTPRedirectHandler is presented with a redirected URL which is not an HTTP, "
-"HTTPS or FTP URL."
+"An :exc:`~urllib.error.HTTPError` exception raised as a security "
+"consideration if the HTTPRedirectHandler is presented with a redirected URL "
+"which is not an HTTP, HTTPS or FTP URL."
 msgstr ""
 "Una excepción :class:`HTTPError` generada como consideración de seguridad si "
 "el HTTPRedirectHandler se presenta con una URL redirigida la cual no es una "
 "URL HTTP, HTTPS o FTP."
 
-#: ../Doc/library/urllib.request.rst:846
+#: ../Doc/library/urllib.request.rst:841
+#, fuzzy
 msgid ""
 "Return a :class:`Request` or ``None`` in response to a redirect. This is "
-"called by the default implementations of the :meth:`http_error_30\\*` "
+"called by the default implementations of the :meth:`!http_error_30\\*` "
 "methods when a redirection is received from the server.  If a redirection "
-"should take place, return a new :class:`Request` to allow :meth:"
-"`http_error_30\\*` to perform the redirect to *newurl*.  Otherwise, raise :"
-"exc:`~urllib.error.HTTPError` if no other handler should try to handle this "
-"URL, or return ``None`` if you can't but another handler might."
+"should take place, return a new :class:`Request` to allow :meth:`!"
+"http_error_30\\*` to perform the redirect to *newurl*.  Otherwise, "
+"raise :exc:`~urllib.error.HTTPError` if no other handler should try to "
+"handle this URL, or return ``None`` if you can't but another handler might."
 msgstr ""
 "Retorna un :class:`Request` o ``None`` en respuesta a una redirección. Esto "
-"es invocado por las implementaciones predeterminadas de los métodos :meth:"
-"`http_error_30\\*` cuando se recibe una redirección del servidor. Si puede "
-"tomar lugar una redirección, retorna un nuevo :class:`Request` para permitir "
-"a :meth:`http_error_30\\*` realizar la redirección a *newurl*. De otra "
-"forma, genera :exc:`~urllib.error.HTTPError` si ningún otro manejador debe "
-"intentar manejar esta URL, o retorna ``None`` si no tú pero otro manejador "
-"puede."
+"es invocado por las implementaciones predeterminadas de los "
+"métodos :meth:`http_error_30\\*` cuando se recibe una redirección del "
+"servidor. Si puede tomar lugar una redirección, retorna un "
+"nuevo :class:`Request` para permitir a :meth:`http_error_30\\*` realizar la "
+"redirección a *newurl*. De otra forma, genera :exc:`~urllib.error.HTTPError` "
+"si ningún otro manejador debe intentar manejar esta URL, o retorna ``None`` "
+"si no tú pero otro manejador puede."
 
-#: ../Doc/library/urllib.request.rst:856
+#: ../Doc/library/urllib.request.rst:851
 msgid ""
-"The default implementation of this method does not strictly follow :rfc:"
-"`2616`, which says that 301 and 302 responses to ``POST`` requests must not "
-"be automatically redirected without confirmation by the user.  In reality, "
-"browsers do allow automatic redirection of these responses, changing the "
-"POST to a ``GET``, and the default implementation reproduces this behavior."
+"The default implementation of this method does not strictly "
+"follow :rfc:`2616`, which says that 301 and 302 responses to ``POST`` "
+"requests must not be automatically redirected without confirmation by the "
+"user.  In reality, browsers do allow automatic redirection of these "
+"responses, changing the POST to a ``GET``, and the default implementation "
+"reproduces this behavior."
 msgstr ""
-"La implementación predeterminada de este método no sigue estrictamente :rfc:"
-"`2616`, la cual dice que las respuestas 301 y 302 a peticiones POST no deben "
-"ser redirigidas automáticamente sin confirmación por el usuario. En "
-"realidad, los navegadores permiten redirección automática de esas "
-"respuestas, cambiando el POST a un ``GET`` y la implementación "
+"La implementación predeterminada de este método no sigue "
+"estrictamente :rfc:`2616`, la cual dice que las respuestas 301 y 302 a "
+"peticiones POST no deben ser redirigidas automáticamente sin confirmación "
+"por el usuario. En realidad, los navegadores permiten redirección automática "
+"de esas respuestas, cambiando el POST a un ``GET`` y la implementación "
 "predeterminada reproduce este comportamiento."
 
-#: ../Doc/library/urllib.request.rst:865
+#: ../Doc/library/urllib.request.rst:860
 msgid ""
 "Redirect to the ``Location:`` or ``URI:`` URL.  This method is called by the "
 "parent :class:`OpenerDirector` when getting an HTTP 'moved permanently' "
@@ -1489,20 +1496,20 @@ msgstr ""
 "el :class:`OpenerDirector` padre al obtener una respuesta HTTP 'moved "
 "permanently'."
 
-#: ../Doc/library/urllib.request.rst:871
+#: ../Doc/library/urllib.request.rst:866
 msgid ""
 "The same as :meth:`http_error_301`, but called for the 'found' response."
 msgstr ""
 "Lo mismo que :meth:`http_error_301`, pero invocado para la respuesta 'found'."
 
-#: ../Doc/library/urllib.request.rst:876
+#: ../Doc/library/urllib.request.rst:871
 msgid ""
 "The same as :meth:`http_error_301`, but called for the 'see other' response."
 msgstr ""
 "Lo mismo que :meth:`http_error_301`, pero invocado para la respuesta 'see "
 "other'."
 
-#: ../Doc/library/urllib.request.rst:881
+#: ../Doc/library/urllib.request.rst:876
 msgid ""
 "The same as :meth:`http_error_301`, but called for the 'temporary redirect' "
 "response. It does not allow changing the request method from ``POST`` to "
@@ -1512,7 +1519,7 @@ msgstr ""
 "'redirección temporal'. No permite cambiar el método de solicitud de "
 "``POST`` a ``GET``."
 
-#: ../Doc/library/urllib.request.rst:888
+#: ../Doc/library/urllib.request.rst:883
 msgid ""
 "The same as :meth:`http_error_301`, but called for the 'permanent redirect' "
 "response. It does not allow changing the request method from ``POST`` to "
@@ -1522,27 +1529,28 @@ msgstr ""
 "'redirección permanente'. No permite cambiar el método de solicitud de "
 "``POST`` a ``GET``."
 
-#: ../Doc/library/urllib.request.rst:898
+#: ../Doc/library/urllib.request.rst:893
 msgid "HTTPCookieProcessor Objects"
 msgstr "Objetos HTTPCookieProcessor"
 
-#: ../Doc/library/urllib.request.rst:900
+#: ../Doc/library/urllib.request.rst:895
 msgid ":class:`HTTPCookieProcessor` instances have one attribute:"
 msgstr "Las instancias :class:`HTTPCookieProcessor` tienen un atributo:"
 
-#: ../Doc/library/urllib.request.rst:904
+#: ../Doc/library/urllib.request.rst:899
 msgid "The :class:`http.cookiejar.CookieJar` in which cookies are stored."
 msgstr ""
 "El :class:`http.cookiejar.CookieJar` en el cual las cookies están "
 "almacenadas."
 
-#: ../Doc/library/urllib.request.rst:910
+#: ../Doc/library/urllib.request.rst:905
 msgid "ProxyHandler Objects"
 msgstr "Objetos ProxyHandler"
 
-#: ../Doc/library/urllib.request.rst:916
+#: ../Doc/library/urllib.request.rst:911
+#, fuzzy
 msgid ""
-"The :class:`ProxyHandler` will have a method :meth:`<protocol>_open` for "
+"The :class:`ProxyHandler` will have a method :meth:`!<protocol>_open` for "
 "every *protocol* which has a proxy in the *proxies* dictionary given in the "
 "constructor.  The method will modify requests to go through the proxy, by "
 "calling ``request.set_proxy()``, and call the next handler in the chain to "
@@ -1554,19 +1562,19 @@ msgstr ""
 "invocando ``request.set_proxy()``, e invoca el siguiente manejador en la "
 "cadena que ejecuta actualmente el protocolo."
 
-#: ../Doc/library/urllib.request.rst:926
+#: ../Doc/library/urllib.request.rst:921
 msgid "HTTPPasswordMgr Objects"
 msgstr "Objetos HTTPPasswordMgr"
 
-#: ../Doc/library/urllib.request.rst:928
+#: ../Doc/library/urllib.request.rst:923
 msgid ""
-"These methods are available on :class:`HTTPPasswordMgr` and :class:"
-"`HTTPPasswordMgrWithDefaultRealm` objects."
+"These methods are available on :class:`HTTPPasswordMgr` "
+"and :class:`HTTPPasswordMgrWithDefaultRealm` objects."
 msgstr ""
-"Estos métodos están disponibles en los objetos :class:`HTTPPasswordMgr` y :"
-"class:`HTTPPasswordMgrWithDefaultRealm`."
+"Estos métodos están disponibles en los objetos :class:`HTTPPasswordMgr` "
+"y :class:`HTTPPasswordMgrWithDefaultRealm`."
 
-#: ../Doc/library/urllib.request.rst:934
+#: ../Doc/library/urllib.request.rst:929
 msgid ""
 "*uri* can be either a single URI, or a sequence of URIs. *realm*, *user* and "
 "*passwd* must be strings. This causes ``(user, passwd)`` to be used as "
@@ -1578,7 +1586,7 @@ msgstr ""
 "como tokens de autenticación cuando la autenticación para *realm* y para una "
 "super URI de ninguna de las URIs dadas es provista."
 
-#: ../Doc/library/urllib.request.rst:942
+#: ../Doc/library/urllib.request.rst:937
 msgid ""
 "Get user/password for given realm and URI, if any.  This method will return "
 "``(None, None)`` if there is no matching user/password."
@@ -1587,7 +1595,7 @@ msgstr ""
 "dado. Este método retornará ``(None, None)`` si no hay usuario/contraseña "
 "concordante."
 
-#: ../Doc/library/urllib.request.rst:945
+#: ../Doc/library/urllib.request.rst:940
 msgid ""
 "For :class:`HTTPPasswordMgrWithDefaultRealm` objects, the realm ``None`` "
 "will be searched if the given *realm* has no matching user/password."
@@ -1595,68 +1603,70 @@ msgstr ""
 "Para objetos :class:`HTTPPasswordMgrWithDefaultRealm`, el reino ``None`` "
 "será buscado si el *realm* dado no tiene usuario/contraseña concordante."
 
-#: ../Doc/library/urllib.request.rst:952
+#: ../Doc/library/urllib.request.rst:947
 msgid "HTTPPasswordMgrWithPriorAuth Objects"
 msgstr "Objetos HTTPPasswordMgrWithPriorAuth"
 
-#: ../Doc/library/urllib.request.rst:954
+#: ../Doc/library/urllib.request.rst:949
 msgid ""
 "This password manager extends :class:`HTTPPasswordMgrWithDefaultRealm` to "
 "support tracking URIs for which authentication credentials should always be "
 "sent."
 msgstr ""
-"Esta manejador de contraseña extiende :class:"
-"`HTTPPasswordMgrWithDefaultRealm` para soportar el seguimiento de URIs para "
-"las cuales deben ser enviadas siempre credenciales de autenticación."
+"Esta manejador de contraseña "
+"extiende :class:`HTTPPasswordMgrWithDefaultRealm` para soportar el "
+"seguimiento de URIs para las cuales deben ser enviadas siempre credenciales "
+"de autenticación."
 
-#: ../Doc/library/urllib.request.rst:961
+#: ../Doc/library/urllib.request.rst:956
 msgid ""
-"*realm*, *uri*, *user*, *passwd* are as for :meth:`HTTPPasswordMgr."
-"add_password`.  *is_authenticated* sets the initial value of the "
-"``is_authenticated`` flag for the given URI or list of URIs. If "
-"*is_authenticated* is specified as ``True``, *realm* is ignored."
+"*realm*, *uri*, *user*, *passwd* are as "
+"for :meth:`HTTPPasswordMgr.add_password`.  *is_authenticated* sets the "
+"initial value of the ``is_authenticated`` flag for the given URI or list of "
+"URIs. If *is_authenticated* is specified as ``True``, *realm* is ignored."
 msgstr ""
-"*realm*, *uri*, *user*, *passwd* son como para :meth:`HTTPPasswordMgr."
-"add_password`. *is_authenticated* establece el valor inicial del indicador "
-"``is_authenticated`` para la URI o lista de URIs dadas. Si se especifica "
-"*is_authenticated* como ``True``, *realm* se ignora."
+"*realm*, *uri*, *user*, *passwd* son como "
+"para :meth:`HTTPPasswordMgr.add_password`. *is_authenticated* establece el "
+"valor inicial del indicador ``is_authenticated`` para la URI o lista de URIs "
+"dadas. Si se especifica *is_authenticated* como ``True``, *realm* se ignora."
 
-#: ../Doc/library/urllib.request.rst:969
+#: ../Doc/library/urllib.request.rst:964
 msgid "Same as for :class:`HTTPPasswordMgrWithDefaultRealm` objects"
 msgstr "Lo mismo que para objetos :class:`HTTPPasswordMgrWithDefaultRealm`"
 
-#: ../Doc/library/urllib.request.rst:975
+#: ../Doc/library/urllib.request.rst:970
 msgid ""
 "Update the ``is_authenticated`` flag for the given *uri* or list of URIs."
 msgstr ""
 "Actualiza el indicador ``is_authenticated`` para la *uri* o lista de URIs "
 "dadas."
 
-#: ../Doc/library/urllib.request.rst:981
+#: ../Doc/library/urllib.request.rst:976
 msgid ""
 "Returns the current state of the ``is_authenticated`` flag for the given URI."
 msgstr ""
 "Retorna el estado actual del indicador ``is_authenticated`` para la URI dada."
 
-#: ../Doc/library/urllib.request.rst:988
+#: ../Doc/library/urllib.request.rst:983
 msgid "AbstractBasicAuthHandler Objects"
 msgstr "Objetos AbstractBasicAuthHandler"
 
-#: ../Doc/library/urllib.request.rst:993
+#: ../Doc/library/urllib.request.rst:988
 msgid ""
 "Handle an authentication request by getting a user/password pair, and re-"
 "trying the request.  *authreq* should be the name of the header where the "
 "information about the realm is included in the request, *host* specifies the "
-"URL and path to authenticate for, *req* should be the (failed) :class:"
-"`Request` object, and *headers* should be the error headers."
+"URL and path to authenticate for, *req* should be the "
+"(failed) :class:`Request` object, and *headers* should be the error headers."
 msgstr ""
 "Maneja una autenticación de petición obteniendo un par usuario/contraseña y "
 "reintentando la petición. *authreq* debe ser el nombre del encabezado donde "
 "la información sobre el reino se incluye en la petición, *host* especifica "
-"la URL y ruta para la cual autenticar, *req* debe ser el objeto :class:"
-"`Request` (fallido) y *headers* deben ser los encabezados de error."
+"la URL y ruta para la cual autenticar, *req* debe ser el "
+"objeto :class:`Request` (fallido) y *headers* deben ser los encabezados de "
+"error."
 
-#: ../Doc/library/urllib.request.rst:999
+#: ../Doc/library/urllib.request.rst:994
 msgid ""
 "*host* is either an authority (e.g. ``\"python.org\"``) or a URL containing "
 "an authority component (e.g. ``\"http://python.org/\"``). In either case, "
@@ -1665,32 +1675,32 @@ msgid ""
 msgstr ""
 "*host* es una autoridad (ej. ``\"python.org\"``) o una URL conteniendo un "
 "componente de autoridad (ej. ``\"http://python.org/\"``). En cualquier caso, "
-"la autoridad no debe contener un componente userinfo (por lo que ``\"python."
-"org\"`` y ``\"python.org:80\"`` están bien, ``\"joe:password@python.org\"`` "
-"no)."
+"la autoridad no debe contener un componente userinfo (por lo que "
+"``\"python.org\"`` y ``\"python.org:80\"`` están bien, "
+"``\"joe:password@python.org\"`` no)."
 
-#: ../Doc/library/urllib.request.rst:1008
+#: ../Doc/library/urllib.request.rst:1003
 msgid "HTTPBasicAuthHandler Objects"
 msgstr "Objetos HTTPBasicAuthHandler"
 
-#: ../Doc/library/urllib.request.rst:1013
-#: ../Doc/library/urllib.request.rst:1024
-#: ../Doc/library/urllib.request.rst:1049
-#: ../Doc/library/urllib.request.rst:1060
+#: ../Doc/library/urllib.request.rst:1008
+#: ../Doc/library/urllib.request.rst:1019
+#: ../Doc/library/urllib.request.rst:1044
+#: ../Doc/library/urllib.request.rst:1055
 msgid "Retry the request with authentication information, if available."
 msgstr ""
 "Reintenta la petición con la información de autenticación, si está "
 "disponible."
 
-#: ../Doc/library/urllib.request.rst:1019
+#: ../Doc/library/urllib.request.rst:1014
 msgid "ProxyBasicAuthHandler Objects"
 msgstr "Objetos ProxyBasicAuthHandler"
 
-#: ../Doc/library/urllib.request.rst:1030
+#: ../Doc/library/urllib.request.rst:1025
 msgid "AbstractDigestAuthHandler Objects"
 msgstr "Objetos AbstractDigestAuthHandler"
 
-#: ../Doc/library/urllib.request.rst:1035
+#: ../Doc/library/urllib.request.rst:1030
 msgid ""
 "*authreq* should be the name of the header where the information about the "
 "realm is included in the request, *host* should be the host to authenticate "
@@ -1702,43 +1712,43 @@ msgstr ""
 "autenticar, *req* debe ser el objeto :class:`Request` (fallido) y *headers* "
 "deben ser los encabezados de error."
 
-#: ../Doc/library/urllib.request.rst:1044
+#: ../Doc/library/urllib.request.rst:1039
 msgid "HTTPDigestAuthHandler Objects"
 msgstr "Objetos HTTPDigestAuthHandler"
 
-#: ../Doc/library/urllib.request.rst:1055
+#: ../Doc/library/urllib.request.rst:1050
 msgid "ProxyDigestAuthHandler Objects"
 msgstr "Objetos ProxyDigestAuthHandler"
 
-#: ../Doc/library/urllib.request.rst:1066
+#: ../Doc/library/urllib.request.rst:1061
 msgid "HTTPHandler Objects"
 msgstr "Objetos HTTPHandler"
 
-#: ../Doc/library/urllib.request.rst:1071
+#: ../Doc/library/urllib.request.rst:1066
 msgid ""
-"Send an HTTP request, which can be either GET or POST, depending on ``req."
-"has_data()``."
+"Send an HTTP request, which can be either GET or POST, depending on "
+"``req.has_data()``."
 msgstr ""
-"Envía una petición HTTP, que puede ser GET o POST, dependiendo de ``req."
-"has_data()``."
+"Envía una petición HTTP, que puede ser GET o POST, dependiendo de "
+"``req.has_data()``."
 
-#: ../Doc/library/urllib.request.rst:1078
+#: ../Doc/library/urllib.request.rst:1073
 msgid "HTTPSHandler Objects"
 msgstr "Objetos HTTPSHandler"
 
-#: ../Doc/library/urllib.request.rst:1083
+#: ../Doc/library/urllib.request.rst:1078
 msgid ""
-"Send an HTTPS request, which can be either GET or POST, depending on ``req."
-"has_data()``."
+"Send an HTTPS request, which can be either GET or POST, depending on "
+"``req.has_data()``."
 msgstr ""
-"Envía una petición HTTPS, que puede ser GET o POST, dependiendo de ``req."
-"has_data()``."
+"Envía una petición HTTPS, que puede ser GET o POST, dependiendo de "
+"``req.has_data()``."
 
-#: ../Doc/library/urllib.request.rst:1090
+#: ../Doc/library/urllib.request.rst:1085
 msgid "FileHandler Objects"
 msgstr "Objetos FileHandler"
 
-#: ../Doc/library/urllib.request.rst:1095
+#: ../Doc/library/urllib.request.rst:1090
 msgid ""
 "Open the file locally, if there is no host name, or the host name is "
 "``'localhost'``."
@@ -1746,27 +1756,29 @@ msgstr ""
 "Abre el archivo localmente, si no hay nombre de host, o el nombre de host es "
 "``'localhost'``."
 
-#: ../Doc/library/urllib.request.rst:1098
+#: ../Doc/library/urllib.request.rst:1093
+#, fuzzy
 msgid ""
 "This method is applicable only for local hostnames.  When a remote hostname "
-"is given, an :exc:`~urllib.error.URLError` is raised."
+"is given, a :exc:`~urllib.error.URLError` is raised."
 msgstr ""
 "Este método es aplicable sólo para nombres de host locales. Cuando un nombre "
-"de host remoto es dado, se genera una excepción :exc:`~urllib.error."
-"URLError`."
+"de host remoto es dado, se genera una "
+"excepción :exc:`~urllib.error.URLError`."
 
-#: ../Doc/library/urllib.request.rst:1106
+#: ../Doc/library/urllib.request.rst:1101
 msgid "DataHandler Objects"
 msgstr "Objetos DataHandler"
 
-#: ../Doc/library/urllib.request.rst:1110
+#: ../Doc/library/urllib.request.rst:1105
+#, fuzzy
 msgid ""
 "Read a data URL. This kind of URL contains the content encoded in the URL "
 "itself. The data URL syntax is specified in :rfc:`2397`. This implementation "
 "ignores white spaces in base64 encoded data URLs so the URL may be wrapped "
 "in whatever source file it comes from. But even though some browsers don't "
 "mind about a missing padding at the end of a base64 encoded data URL, this "
-"implementation will raise an :exc:`ValueError` in that case."
+"implementation will raise a :exc:`ValueError` in that case."
 msgstr ""
 "Lee una URL de datos. Este tipo de URL contiene el contenido codificado en "
 "la URL misma. La sintaxis de la URL de datos se especifica en :rfc:`2397`. "
@@ -1776,11 +1788,11 @@ msgstr ""
 "relleno al final de una URL codificada como base64, esta implementación "
 "lanzará un :exc:`ValueError` en este caso."
 
-#: ../Doc/library/urllib.request.rst:1121
+#: ../Doc/library/urllib.request.rst:1116
 msgid "FTPHandler Objects"
 msgstr "Objetos FTPHandler"
 
-#: ../Doc/library/urllib.request.rst:1126
+#: ../Doc/library/urllib.request.rst:1121
 msgid ""
 "Open the FTP file indicated by *req*. The login is always done with empty "
 "username and password."
@@ -1788,11 +1800,11 @@ msgstr ""
 "Abre el archivo FTP indicado por *req*. El inicio de sesión siempre se "
 "realiza con un usuario y contraseña vacíos."
 
-#: ../Doc/library/urllib.request.rst:1133
+#: ../Doc/library/urllib.request.rst:1128
 msgid "CacheFTPHandler Objects"
 msgstr "Objetos CacheFTPHandler"
 
-#: ../Doc/library/urllib.request.rst:1135
+#: ../Doc/library/urllib.request.rst:1130
 msgid ""
 ":class:`CacheFTPHandler` objects are :class:`FTPHandler` objects with the "
 "following additional methods:"
@@ -1800,66 +1812,67 @@ msgstr ""
 "Los objetos :class:`CacheFTPHandler` son objetos :class:`FTPHandler` con los "
 "siguientes métodos adicionales:"
 
-#: ../Doc/library/urllib.request.rst:1141
+#: ../Doc/library/urllib.request.rst:1136
 msgid "Set timeout of connections to *t* seconds."
 msgstr "Establece el tiempo de expiración de conexiones a *t* segundos."
 
-#: ../Doc/library/urllib.request.rst:1146
+#: ../Doc/library/urllib.request.rst:1141
 msgid "Set maximum number of cached connections to *m*."
 msgstr "Establece el número máximo de conexiones cacheadas a *m*."
 
-#: ../Doc/library/urllib.request.rst:1152
+#: ../Doc/library/urllib.request.rst:1147
 msgid "UnknownHandler Objects"
 msgstr "Objetos UnknownHandler"
 
-#: ../Doc/library/urllib.request.rst:1157
+#: ../Doc/library/urllib.request.rst:1152
 msgid "Raise a :exc:`~urllib.error.URLError` exception."
 msgstr "Genera una excepción :exc:`~urllib.error.URLError`."
 
-#: ../Doc/library/urllib.request.rst:1163
+#: ../Doc/library/urllib.request.rst:1158
 msgid "HTTPErrorProcessor Objects"
 msgstr "Objetos HTTPErrorProcessor"
 
-#: ../Doc/library/urllib.request.rst:1169
+#: ../Doc/library/urllib.request.rst:1164
 msgid "For 200 error codes, the response object is returned immediately."
 msgstr ""
 "Para códigos de error que no están en el rango de los 200, el objeto de "
 "respuesta es retornado inmediatamente."
 
-#: ../Doc/library/urllib.request.rst:1171
+#: ../Doc/library/urllib.request.rst:1166
+#, fuzzy
 msgid ""
-"For non-200 error codes, this simply passes the job on to the :meth:"
-"`http_error_\\<type\\>` handler methods, via :meth:`OpenerDirector.error`. "
-"Eventually, :class:`HTTPDefaultErrorHandler` will raise an :exc:`~urllib."
-"error.HTTPError` if no other handler handles the error."
+"For non-200 error codes, this simply passes the job on to the :meth:`!"
+"http_error_\\<type\\>` handler methods, via :meth:`OpenerDirector.error`. "
+"Eventually, :class:`HTTPDefaultErrorHandler` will raise "
+"an :exc:`~urllib.error.HTTPError` if no other handler handles the error."
 msgstr ""
 "Para códigos de error que no están en el rango de los 200, esto simplemente "
 "pasa el trabajo a los métodos del manejador :meth:`http_error_\\<type\\>`, "
-"mediante :meth:`OpenerDirector.error`. Eventualmente, :class:"
-"`HTTPDefaultErrorHandler` lanzará un :exc:`~urllib.error.HTTPError` si "
-"ningún otro manejador maneja el error."
+"mediante :meth:`OpenerDirector.error`. "
+"Eventualmente, :class:`HTTPDefaultErrorHandler` lanzará "
+"un :exc:`~urllib.error.HTTPError` si ningún otro manejador maneja el error."
 
-#: ../Doc/library/urllib.request.rst:1179
+#: ../Doc/library/urllib.request.rst:1174
 msgid "Process HTTPS error responses."
 msgstr "Procesa los errores HTTPS de las respuestas."
 
-#: ../Doc/library/urllib.request.rst:1181
+#: ../Doc/library/urllib.request.rst:1176
 msgid "The behavior is same as :meth:`http_response`."
 msgstr "Este comportamiento es el mismo que :meth:`http_response`."
 
-#: ../Doc/library/urllib.request.rst:1187
+#: ../Doc/library/urllib.request.rst:1182
 msgid "Examples"
 msgstr "Ejemplos"
 
-#: ../Doc/library/urllib.request.rst:1189
+#: ../Doc/library/urllib.request.rst:1184
 msgid ""
 "In addition to the examples below, more examples are given in :ref:`urllib-"
 "howto`."
 msgstr ""
-"Adicionalmente a los ejemplos siguientes, se dan más ejemplos en :ref:"
-"`urllib-howto`."
+"Adicionalmente a los ejemplos siguientes, se dan más ejemplos "
+"en :ref:`urllib-howto`."
 
-#: ../Doc/library/urllib.request.rst:1192
+#: ../Doc/library/urllib.request.rst:1187
 msgid ""
 "This example gets the python.org main page and displays the first 300 bytes "
 "of it. ::"
@@ -1867,7 +1880,22 @@ msgstr ""
 "Este ejemplo obtiene la página principal python.org y despliega los primeros "
 "300 bytes de ella. ::"
 
-#: ../Doc/library/urllib.request.rst:1205
+#: ../Doc/library/urllib.request.rst:1190
+msgid ""
+">>> import urllib.request\n"
+">>> with urllib.request.urlopen('http://www.python.org/') as f:\n"
+"...     print(f.read(300))\n"
+"...\n"
+"b'<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n"
+"\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\\n\\n\\n<html\n"
+"xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" "
+"lang=\"en\">\\n\\n<head>\\n\n"
+"<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" /"
+">\\n\n"
+"<title>Python Programming '"
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1200
 msgid ""
 "Note that urlopen returns a bytes object.  This is because there is no way "
 "for urlopen to automatically determine the encoding of the byte stream it "
@@ -1881,7 +1909,7 @@ msgstr ""
 "decodificará el objeto de bytes retornado a cadena de caracteres una vez que "
 "determine o adivine la codificación apropiada."
 
-#: ../Doc/library/urllib.request.rst:1211
+#: ../Doc/library/urllib.request.rst:1206
 msgid ""
 "The following W3C document, https://www.w3.org/International/O-charset\\ , "
 "lists the various ways in which an (X)HTML or an XML document could have "
@@ -1891,7 +1919,7 @@ msgstr ""
 "lista las diferentes formas en la cual un documento (X)HTML o XML podría "
 "haber especificado su información de codificación."
 
-#: ../Doc/library/urllib.request.rst:1215
+#: ../Doc/library/urllib.request.rst:1210
 msgid ""
 "As the python.org website uses *utf-8* encoding as specified in its meta "
 "tag, we will use the same for decoding the bytes object. ::"
@@ -1900,15 +1928,33 @@ msgstr ""
 "especifica en su etiqueta meta, usaremos la misma para decodificar el objeto "
 "de bytes. ::"
 
-#: ../Doc/library/urllib.request.rst:1224
+#: ../Doc/library/urllib.request.rst:1213
 msgid ""
-"It is also possible to achieve the same result without using the :term:"
-"`context manager` approach. ::"
+">>> with urllib.request.urlopen('http://www.python.org/') as f:\n"
+"...     print(f.read(100).decode('utf-8'))\n"
+"...\n"
+"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n"
+"\"http://www.w3.org/TR/xhtml1/DTD/xhtm"
 msgstr ""
-"Es posible conseguir el mismo resultado sin usar la aproximación :term:"
-"`context manager`. ::"
 
-#: ../Doc/library/urllib.request.rst:1233
+#: ../Doc/library/urllib.request.rst:1219
+msgid ""
+"It is also possible to achieve the same result without using "
+"the :term:`context manager` approach. ::"
+msgstr ""
+"Es posible conseguir el mismo resultado sin usar la "
+"aproximación :term:`context manager`. ::"
+
+#: ../Doc/library/urllib.request.rst:1222
+msgid ""
+">>> import urllib.request\n"
+">>> f = urllib.request.urlopen('http://www.python.org/')\n"
+">>> print(f.read(100).decode('utf-8'))\n"
+"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n"
+"\"http://www.w3.org/TR/xhtml1/DTD/xhtm"
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1228
 msgid ""
 "In the following example, we are sending a data-stream to the stdin of a CGI "
 "and reading the data it returns to us. Note that this example will only work "
@@ -1918,35 +1964,83 @@ msgstr ""
 "estándar de un CGI y leyendo los datos que nos retorna. Tenga en cuenta que "
 "este ejemplo sólo funcionará cuando la instalación de Python soporte SSL. ::"
 
-#: ../Doc/library/urllib.request.rst:1245
+#: ../Doc/library/urllib.request.rst:1232
+msgid ""
+">>> import urllib.request\n"
+">>> req = urllib.request.Request(url='https://localhost/cgi-bin/test.cgi',\n"
+"...                       data=b'This data is passed to stdin of the CGI')\n"
+">>> with urllib.request.urlopen(req) as f:\n"
+"...     print(f.read().decode('utf-8'))\n"
+"...\n"
+"Got Data: \"This data is passed to stdin of the CGI\""
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1240
 msgid "The code for the sample CGI used in the above example is::"
 msgstr "El código para el CGI de muestra usado en el ejemplo anterior es::"
 
-#: ../Doc/library/urllib.request.rst:1252
+#: ../Doc/library/urllib.request.rst:1242
+#, python-format
+msgid ""
+"#!/usr/bin/env python\n"
+"import sys\n"
+"data = sys.stdin.read()\n"
+"print('Content-type: text/plain\\n\\nGot Data: \"%s\"' % data)"
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1247
 msgid "Here is an example of doing a ``PUT`` request using :class:`Request`::"
 msgstr ""
-"Aquí hay un ejemplo de realizar una petición ``PUT`` usando :class:"
-"`Request`::"
+"Aquí hay un ejemplo de realizar una petición ``PUT`` "
+"usando :class:`Request`::"
 
-#: ../Doc/library/urllib.request.rst:1262
+#: ../Doc/library/urllib.request.rst:1249
+msgid ""
+"import urllib.request\n"
+"DATA = b'some data'\n"
+"req = urllib.request.Request(url='http://localhost:8080', data=DATA, "
+"method='PUT')\n"
+"with urllib.request.urlopen(req) as f:\n"
+"    pass\n"
+"print(f.status)\n"
+"print(f.reason)"
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1257
 msgid "Use of Basic HTTP Authentication::"
 msgstr "Uso de Autenticación HTTP Básica::"
 
-#: ../Doc/library/urllib.request.rst:1276
+#: ../Doc/library/urllib.request.rst:1259
 msgid ""
-":func:`build_opener` provides many handlers by default, including a :class:"
-"`ProxyHandler`.  By default, :class:`ProxyHandler` uses the environment "
-"variables named ``<scheme>_proxy``, where ``<scheme>`` is the URL scheme "
-"involved.  For example, the :envvar:`http_proxy` environment variable is "
-"read to obtain the HTTP proxy's URL."
+"import urllib.request\n"
+"# Create an OpenerDirector with support for Basic HTTP Authentication...\n"
+"auth_handler = urllib.request.HTTPBasicAuthHandler()\n"
+"auth_handler.add_password(realm='PDQ Application',\n"
+"                          uri='https://mahler:8092/site-updates.py',\n"
+"                          user='klem',\n"
+"                          passwd='kadidd!ehopper')\n"
+"opener = urllib.request.build_opener(auth_handler)\n"
+"# ...and install it globally so it can be used with urlopen.\n"
+"urllib.request.install_opener(opener)\n"
+"urllib.request.urlopen('http://www.example.com/login.html')"
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1271
+#, fuzzy
+msgid ""
+":func:`build_opener` provides many handlers by default, including "
+"a :class:`ProxyHandler`.  By default, :class:`ProxyHandler` uses the "
+"environment variables named ``<scheme>_proxy``, where ``<scheme>`` is the "
+"URL scheme involved.  For example, the :envvar:`!http_proxy` environment "
+"variable is read to obtain the HTTP proxy's URL."
 msgstr ""
 ":func:`build_opener` proporciona muchos manejadores por defecto, incluyendo "
 "un :class:`ProxyHandler`. De forma predeterminada, :class:`ProxyHandler` usa "
 "las variables de entorno llamadas ``<scheme>_proxy``, donde ``<scheme>`` es "
-"el esquema URL involucrado. Por ejemplo, se lee la variable de entorno :"
-"envvar:`http_proxy` para obtener la URL del proxy HTTP."
+"el esquema URL involucrado. Por ejemplo, se lee la variable de "
+"entorno :envvar:`http_proxy` para obtener la URL del proxy HTTP."
 
-#: ../Doc/library/urllib.request.rst:1282
+#: ../Doc/library/urllib.request.rst:1277
 msgid ""
 "This example replaces the default :class:`ProxyHandler` with one that uses "
 "programmatically supplied proxy URLs, and adds proxy authorization support "
@@ -1956,34 +2050,66 @@ msgstr ""
 "usa URLs de proxy suministradas mediante programación y añade soporte de "
 "autorización de proxy con :class:`ProxyBasicAuthHandler`. ::"
 
-#: ../Doc/library/urllib.request.rst:1294
+#: ../Doc/library/urllib.request.rst:1281
+msgid ""
+"proxy_handler = urllib.request.ProxyHandler({'http': 'http://"
+"www.example.com:3128/'})\n"
+"proxy_auth_handler = urllib.request.ProxyBasicAuthHandler()\n"
+"proxy_auth_handler.add_password('realm', 'host', 'username', 'password')\n"
+"\n"
+"opener = urllib.request.build_opener(proxy_handler, proxy_auth_handler)\n"
+"# This time, rather than install the OpenerDirector, we use it directly:\n"
+"opener.open('http://www.example.com/login.html')"
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1289
 msgid "Adding HTTP headers:"
 msgstr "Añadiendo encabezados HTTP:"
 
-#: ../Doc/library/urllib.request.rst:1296
+#: ../Doc/library/urllib.request.rst:1291
 msgid "Use the *headers* argument to the :class:`Request` constructor, or::"
 msgstr "Usa el argumento *headers* en el constructor de :class:`Request`, o::"
 
-#: ../Doc/library/urllib.request.rst:1305
+#: ../Doc/library/urllib.request.rst:1293
+msgid ""
+"import urllib.request\n"
+"req = urllib.request.Request('http://www.example.com/')\n"
+"req.add_header('Referer', 'http://www.python.org/')\n"
+"# Customize the default User-Agent header value:\n"
+"req.add_header('User-Agent', 'urllib-example/0.1 (Contact: . . .)')\n"
+"r = urllib.request.urlopen(req)"
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1300
 msgid ""
 ":class:`OpenerDirector` automatically adds a :mailheader:`User-Agent` header "
 "to every :class:`Request`.  To change this::"
 msgstr ""
-":class:`OpenerDirector` añade automáticamente un encabezado :mailheader:"
-"`User-Agent` a cada :class:`Request`. Para cambiar esto::"
+":class:`OpenerDirector` añade automáticamente un "
+"encabezado :mailheader:`User-Agent` a cada :class:`Request`. Para cambiar "
+"esto::"
 
-#: ../Doc/library/urllib.request.rst:1313
+#: ../Doc/library/urllib.request.rst:1303
 msgid ""
-"Also, remember that a few standard headers (:mailheader:`Content-Length`, :"
-"mailheader:`Content-Type` and :mailheader:`Host`) are added when the :class:"
-"`Request` is passed to :func:`urlopen` (or :meth:`OpenerDirector.open`)."
+"import urllib.request\n"
+"opener = urllib.request.build_opener()\n"
+"opener.addheaders = [('User-agent', 'Mozilla/5.0')]\n"
+"opener.open('http://www.example.com/')"
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1308
+msgid ""
+"Also, remember that a few standard headers (:mailheader:`Content-"
+"Length`, :mailheader:`Content-Type` and :mailheader:`Host`) are added when "
+"the :class:`Request` is passed to :func:`urlopen` "
+"(or :meth:`OpenerDirector.open`)."
 msgstr ""
 "También, recuerda que algunos encabezados estándar (:mailheader:`Content-"
 "Length`, :mailheader:`Content-Type` y :mailheader:`Host`) son añadidos "
-"cuando se pasa :class:`Request` a :func:`urlopen` (o :meth:`OpenerDirector."
-"open`)."
+"cuando se pasa :class:`Request` a :func:`urlopen` "
+"(o :meth:`OpenerDirector.open`)."
 
-#: ../Doc/library/urllib.request.rst:1320
+#: ../Doc/library/urllib.request.rst:1315
 msgid ""
 "Here is an example session that uses the ``GET`` method to retrieve a URL "
 "containing parameters::"
@@ -1991,7 +2117,19 @@ msgstr ""
 "Aquí hay un ejemplo de sesión que usa el método ``GET`` para obtener una URL "
 "que contiene los parámetros::"
 
-#: ../Doc/library/urllib.request.rst:1331
+#: ../Doc/library/urllib.request.rst:1318
+#, python-format
+msgid ""
+">>> import urllib.request\n"
+">>> import urllib.parse\n"
+">>> params = urllib.parse.urlencode({'spam': 1, 'eggs': 2, 'bacon': 0})\n"
+">>> url = \"http://www.musi-cal.com/cgi-bin/query?%s\" % params\n"
+">>> with urllib.request.urlopen(url) as f:\n"
+"...     print(f.read().decode('utf-8'))\n"
+"..."
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1326
 msgid ""
 "The following example uses the ``POST`` method instead. Note that params "
 "output from urlencode is encoded to bytes before it is sent to urlopen as "
@@ -2001,7 +2139,19 @@ msgstr ""
 "salida de parámetros desde urlencode es codificada a bytes antes de ser "
 "enviados a urlopen como datos::"
 
-#: ../Doc/library/urllib.request.rst:1342
+#: ../Doc/library/urllib.request.rst:1329
+msgid ""
+">>> import urllib.request\n"
+">>> import urllib.parse\n"
+">>> data = urllib.parse.urlencode({'spam': 1, 'eggs': 2, 'bacon': 0})\n"
+">>> data = data.encode('ascii')\n"
+">>> with urllib.request.urlopen(\"http://requestb.in/xrbl82xr\", data) as "
+"f:\n"
+"...     print(f.read().decode('utf-8'))\n"
+"..."
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1337
 msgid ""
 "The following example uses an explicitly specified HTTP proxy, overriding "
 "environment settings::"
@@ -2009,7 +2159,17 @@ msgstr ""
 "El siguiente ejemplo usa un proxy HTTP especificado, sobrescribiendo las "
 "configuraciones de entorno::"
 
-#: ../Doc/library/urllib.request.rst:1352
+#: ../Doc/library/urllib.request.rst:1340
+msgid ""
+">>> import urllib.request\n"
+">>> proxies = {'http': 'http://proxy.example.com:8080/'}\n"
+">>> opener = urllib.request.FancyURLopener(proxies)\n"
+">>> with opener.open(\"http://www.python.org\") as f:\n"
+"...     f.read().decode('utf-8')\n"
+"..."
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1347
 msgid ""
 "The following example uses no proxies at all, overriding environment "
 "settings::"
@@ -2017,11 +2177,20 @@ msgstr ""
 "El siguiente ejemplo no usa proxies, sobrescribiendo las variables de "
 "entorno::"
 
-#: ../Doc/library/urllib.request.rst:1362
+#: ../Doc/library/urllib.request.rst:1349
+msgid ""
+">>> import urllib.request\n"
+">>> opener = urllib.request.FancyURLopener({})\n"
+">>> with opener.open(\"http://www.python.org/\") as f:\n"
+"...     f.read().decode('utf-8')\n"
+"..."
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1357
 msgid "Legacy interface"
 msgstr "Interfaz heredada"
 
-#: ../Doc/library/urllib.request.rst:1364
+#: ../Doc/library/urllib.request.rst:1359
 msgid ""
 "The following functions and classes are ported from the Python 2 module "
 "``urllib`` (as opposed to ``urllib2``).  They might become deprecated at "
@@ -2031,14 +2200,15 @@ msgstr ""
 "de Python 2 (en oposición a ``urllib2``). Ellas pueden estar obsoletas en "
 "algún punto del futuro."
 
-#: ../Doc/library/urllib.request.rst:1370
+#: ../Doc/library/urllib.request.rst:1365
+#, fuzzy
 msgid ""
 "Copy a network object denoted by a URL to a local file. If the URL points to "
 "a local file, the object will not be copied unless filename is supplied. "
 "Return a tuple ``(filename, headers)`` where *filename* is the local file "
-"name under which the object can be found, and *headers* is whatever the :"
-"meth:`info` method of the object returned by :func:`urlopen` returned (for a "
-"remote object). Exceptions are the same as for :func:`urlopen`."
+"name under which the object can be found, and *headers* is whatever "
+"the :meth:`!info` method of the object returned by :func:`urlopen` returned "
+"(for a remote object). Exceptions are the same as for :func:`urlopen`."
 msgstr ""
 "Copia un objeto de red denotado por una URL a un archivo local. Si la URL "
 "apunta a un archivo local, el objeto no será copiado a no ser que sea "
@@ -2048,7 +2218,7 @@ msgstr ""
 "retornado por :func:`urlopen` (para un objeto remoto). Las excepciones son "
 "las mismas que para :func:`urlopen`."
 
-#: ../Doc/library/urllib.request.rst:1377
+#: ../Doc/library/urllib.request.rst:1372
 msgid ""
 "The second argument, if present, specifies the file location to copy to (if "
 "absent, the location will be a tempfile with a generated name). The third "
@@ -2070,17 +2240,26 @@ msgstr ""
 "antiguos los cuales no retornan un tamaño de archivo en respuesta a una "
 "solicitud de recuperación."
 
-#: ../Doc/library/urllib.request.rst:1386
+#: ../Doc/library/urllib.request.rst:1381
 msgid "The following example illustrates the most common usage scenario::"
 msgstr "El siguiente ejemplo ilustra el escenario de uso más común::"
 
-#: ../Doc/library/urllib.request.rst:1393
+#: ../Doc/library/urllib.request.rst:1383
+msgid ""
+">>> import urllib.request\n"
+">>> local_filename, headers = urllib.request.urlretrieve('http://"
+"python.org/')\n"
+">>> html = open(local_filename)\n"
+">>> html.close()"
+msgstr ""
+
+#: ../Doc/library/urllib.request.rst:1388
 msgid ""
 "If the *url* uses the :file:`http:` scheme identifier, the optional *data* "
 "argument may be given to specify a ``POST`` request (normally the request "
-"type is ``GET``).  The *data* argument must be a bytes object in standard :"
-"mimetype:`application/x-www-form-urlencoded` format; see the :func:`urllib."
-"parse.urlencode` function."
+"type is ``GET``).  The *data* argument must be a bytes object in "
+"standard :mimetype:`application/x-www-form-urlencoded` format; see "
+"the :func:`urllib.parse.urlencode` function."
 msgstr ""
 "Si la *url* usa el esquema de identificador :file:`http:`, el argumento "
 "opcional *data* puede ser dado para especificar una petición ``POST`` "
@@ -2088,19 +2267,20 @@ msgstr ""
 "un objeto de bytes en formato :mimetype:`application/x-www-form-urlencoded`; "
 "vea la función :func:`urllib.parse.urlencode`."
 
-#: ../Doc/library/urllib.request.rst:1399
+#: ../Doc/library/urllib.request.rst:1394
+#, fuzzy
 msgid ""
-":func:`urlretrieve` will raise :exc:`ContentTooShortError` when it detects "
-"that the amount of data available  was less than the expected amount (which "
-"is the size reported by a  *Content-Length* header). This can occur, for "
-"example, when the  download is interrupted."
+":func:`urlretrieve` will raise :exc:`~urllib.error.ContentTooShortError` "
+"when it detects that the amount of data available  was less than the "
+"expected amount (which is the size reported by a  *Content-Length* header). "
+"This can occur, for example, when the  download is interrupted."
 msgstr ""
 ":func:`urlretrieve` lanzará :exc:`ContentTooShortError` cuando detecte que "
 "la cantidad de datos disponibles sea menor que la cantidad esperada (la cual "
 "es el tamaño reportado por un encabezado *Content-Length*). Esto puede "
 "ocurrir, por ejemplo, cuando se interrumpe la descarga."
 
-#: ../Doc/library/urllib.request.rst:1404
+#: ../Doc/library/urllib.request.rst:1399
 msgid ""
 "The *Content-Length* is treated as a lower bound: if there's more data  to "
 "read, urlretrieve reads more data, but if less data is available,  it raises "
@@ -2110,15 +2290,16 @@ msgstr ""
 "a leer, urlretrieve lee más datos, pero si están disponibles menos datos, se "
 "genera la excepción."
 
-#: ../Doc/library/urllib.request.rst:1408
+#: ../Doc/library/urllib.request.rst:1403
+#, fuzzy
 msgid ""
-"You can still retrieve the downloaded data in this case, it is stored  in "
-"the :attr:`content` attribute of the exception instance."
+"You can still retrieve the downloaded data in this case, it is stored in "
+"the :attr:`!content` attribute of the exception instance."
 msgstr ""
 "Puedes seguir obteniendo los datos descargados en este caso, son almacenados "
 "en el atributo :attr:`content` de la instancia de la excepción."
 
-#: ../Doc/library/urllib.request.rst:1411
+#: ../Doc/library/urllib.request.rst:1406
 msgid ""
 "If no *Content-Length* header was supplied, urlretrieve can not check the "
 "size of the data it has downloaded, and just returns it.  In this case you "
@@ -2128,7 +2309,7 @@ msgstr ""
 "comprobar el tamaño de los datos que han sido descargados, y sólo los "
 "retorna. En este caso sólo tienes que asumir que la descarga fue exitosa."
 
-#: ../Doc/library/urllib.request.rst:1417
+#: ../Doc/library/urllib.request.rst:1412
 msgid ""
 "Cleans up temporary files that may have been left behind by previous calls "
 "to :func:`urlretrieve`."
@@ -2136,17 +2317,18 @@ msgstr ""
 "Limpia archivos temporales que pueden haber quedado tras llamadas anteriores "
 "a :func:`urlretrieve`."
 
-#: ../Doc/library/urllib.request.rst:1424
+#: ../Doc/library/urllib.request.rst:1419
 msgid ""
 "Base class for opening and reading URLs.  Unless you need to support opening "
-"objects using schemes other than :file:`http:`, :file:`ftp:`, or :file:`file:"
-"`, you probably want to use :class:`FancyURLopener`."
+"objects using schemes other than :file:`http:`, :file:`ftp:`, "
+"or :file:`file:`, you probably want to use :class:`FancyURLopener`."
 msgstr ""
 "Clase base para apertura y lectura de URLs. A no ser que necesites soporte "
-"de apertura de objetos usando esquemas diferentes a :file:`http:`, :file:"
-"`ftp:` o :file:`file:`, probablemente quieras usar :class:`FancyURLopener`."
+"de apertura de objetos usando esquemas diferentes "
+"a :file:`http:`, :file:`ftp:` o :file:`file:`, probablemente quieras "
+"usar :class:`FancyURLopener`."
 
-#: ../Doc/library/urllib.request.rst:1428
+#: ../Doc/library/urllib.request.rst:1423
 msgid ""
 "By default, the :class:`URLopener` class sends a :mailheader:`User-Agent` "
 "header of ``urllib/VVV``, where *VVV* is the :mod:`urllib` version number. "
@@ -2155,14 +2337,15 @@ msgid ""
 "class attribute :attr:`version` to an appropriate string value in the "
 "subclass definition."
 msgstr ""
-"Por defecto, la clase :class:`URLopener` envía un encabezado :mailheader:"
-"`User-Agent` de ``urllib/VVV``, donde *VVV* es el número de versión :mod:"
-"`urllib`. Las aplicaciones pueden definir su propio encabezado :mailheader:"
-"`User-Agent` heredando de :class:`URLopener` o :class:`FancyURLopener` y "
-"estableciendo el atributo de clase :attr:`version` a un valor de cadena de "
-"caracteres apropiado en la definición de la subclase."
+"Por defecto, la clase :class:`URLopener` envía un "
+"encabezado :mailheader:`User-Agent` de ``urllib/VVV``, donde *VVV* es el "
+"número de versión :mod:`urllib`. Las aplicaciones pueden definir su propio "
+"encabezado :mailheader:`User-Agent` heredando de :class:`URLopener` "
+"o :class:`FancyURLopener` y estableciendo el atributo de "
+"clase :attr:`version` a un valor de cadena de caracteres apropiado en la "
+"definición de la subclase."
 
-#: ../Doc/library/urllib.request.rst:1434
+#: ../Doc/library/urllib.request.rst:1429
 msgid ""
 "The optional *proxies* parameter should be a dictionary mapping scheme names "
 "to proxy URLs, where an empty dictionary turns proxies off completely.  Its "
@@ -2175,7 +2358,7 @@ msgstr ""
 "configuraciones de proxy del entorno serán usadas si están presentes, como "
 "ha sido discutido en la definición de :func:`urlopen`, arriba."
 
-#: ../Doc/library/urllib.request.rst:1439
+#: ../Doc/library/urllib.request.rst:1434
 msgid ""
 "Additional keyword parameters, collected in *x509*, may be used for "
 "authentication of the client when using the :file:`https:` scheme.  The "
@@ -2188,7 +2371,7 @@ msgstr ""
 "una clave y certificado SSL; ambos son necesarias para soportar "
 "autenticación de cliente."
 
-#: ../Doc/library/urllib.request.rst:1444
+#: ../Doc/library/urllib.request.rst:1439
 msgid ""
 ":class:`URLopener` objects will raise an :exc:`OSError` exception if the "
 "server returns an error code."
@@ -2196,13 +2379,13 @@ msgstr ""
 "Los objetos :class:`URLopener` lanzarán una excepción :exc:`OSError` si el "
 "servidor retorna un código de error."
 
-#: ../Doc/library/urllib.request.rst:1449
+#: ../Doc/library/urllib.request.rst:1444
 msgid ""
 "Open *fullurl* using the appropriate protocol.  This method sets up cache "
 "and proxy information, then calls the appropriate open method with its input "
 "arguments.  If the scheme is not recognized, :meth:`open_unknown` is called. "
-"The *data* argument has the same meaning as the *data* argument of :func:"
-"`urlopen`."
+"The *data* argument has the same meaning as the *data* argument "
+"of :func:`urlopen`."
 msgstr ""
 "Abre *fullurl* usando el protocolo apropiado. Este método configura la "
 "información de caché e información de proxy, entonces invoca el método "
@@ -2210,54 +2393,54 @@ msgstr ""
 "se invoca :meth:`open_unknown`. El argumento *data* tiene el mismo "
 "significado que el argumento *data* de :func:`urlopen`."
 
-#: ../Doc/library/urllib.request.rst:1455
+#: ../Doc/library/urllib.request.rst:1450
 msgid "This method always quotes *fullurl* using :func:`~urllib.parse.quote`."
 msgstr ""
-"Este método siempre entrecomilla *fullurl* usando :func:`~urllib.parse."
-"quote`."
+"Este método siempre entrecomilla *fullurl* "
+"usando :func:`~urllib.parse.quote`."
 
-#: ../Doc/library/urllib.request.rst:1459
+#: ../Doc/library/urllib.request.rst:1454
 msgid "Overridable interface to open unknown URL types."
 msgstr "Interfaz sobrescribible para abrir tipos de URL desconocidos."
 
-#: ../Doc/library/urllib.request.rst:1464
+#: ../Doc/library/urllib.request.rst:1459
 msgid ""
 "Retrieves the contents of *url* and places it in *filename*.  The return "
-"value is a tuple consisting of a local filename and either an :class:`email."
-"message.Message` object containing the response headers (for remote URLs) or "
-"``None`` (for local URLs).  The caller must then open and read the contents "
-"of *filename*.  If *filename* is not given and the URL refers to a local "
-"file, the input filename is returned.  If the URL is non-local and "
-"*filename* is not given, the filename is the output of :func:`tempfile."
-"mktemp` with a suffix that matches the suffix of the last path component of "
-"the input URL.  If *reporthook* is given, it must be a function accepting "
-"three numeric parameters: A chunk number, the maximum size chunks are read "
-"in and the total size of the download (-1 if unknown).  It will be called "
-"once at the start and after each chunk of data is read from the network.  "
-"*reporthook* is ignored for local URLs."
+"value is a tuple consisting of a local filename and either "
+"an :class:`email.message.Message` object containing the response headers "
+"(for remote URLs) or ``None`` (for local URLs).  The caller must then open "
+"and read the contents of *filename*.  If *filename* is not given and the URL "
+"refers to a local file, the input filename is returned.  If the URL is non-"
+"local and *filename* is not given, the filename is the output "
+"of :func:`tempfile.mktemp` with a suffix that matches the suffix of the last "
+"path component of the input URL.  If *reporthook* is given, it must be a "
+"function accepting three numeric parameters: A chunk number, the maximum "
+"size chunks are read in and the total size of the download (-1 if unknown).  "
+"It will be called once at the start and after each chunk of data is read "
+"from the network.  *reporthook* is ignored for local URLs."
 msgstr ""
 "Obtiene el contenido de *url* y lo coloca en *filename*. El valor retornado "
-"es una tupla que consiste de un nombre de archivo local y un objeto :class:"
-"`email.message.Message` conteniendo los encabezados de respuesta (para URLs "
-"remotas) o ``None`` (para URLs locales). El invocador debe entonces abrir y "
-"leer los contenidos de *filename*. Si *filename* no está dado y la URL "
-"refiere a un archivo local, se retorna el nombre de archivo de entrada. Si "
-"la URL no es local y no se da *filename*, el nombre de archivo es la salida "
-"de la función :func:`tempfile.mktemp` con un sufijo que concuerda con el "
-"sufijo del último componente de la ruta de la URL de entrada. Si se da "
-"*reporthook*, debe ser una función que acepte tres parámetros numéricos: Un "
-"número de fragmento, se leen los fragmentos de tamaño máximo y el tamaño "
-"total de la descarga (-1 si es desconocida). Será invocada una vez al "
-"comienzo y después de que cada fragmento de datos sea leído de la red. "
-"*reporthook* es ignorado para URLs locales."
+"es una tupla que consiste de un nombre de archivo local y un "
+"objeto :class:`email.message.Message` conteniendo los encabezados de "
+"respuesta (para URLs remotas) o ``None`` (para URLs locales). El invocador "
+"debe entonces abrir y leer los contenidos de *filename*. Si *filename* no "
+"está dado y la URL refiere a un archivo local, se retorna el nombre de "
+"archivo de entrada. Si la URL no es local y no se da *filename*, el nombre "
+"de archivo es la salida de la función :func:`tempfile.mktemp` con un sufijo "
+"que concuerda con el sufijo del último componente de la ruta de la URL de "
+"entrada. Si se da *reporthook*, debe ser una función que acepte tres "
+"parámetros numéricos: Un número de fragmento, se leen los fragmentos de "
+"tamaño máximo y el tamaño total de la descarga (-1 si es desconocida). Será "
+"invocada una vez al comienzo y después de que cada fragmento de datos sea "
+"leído de la red. *reporthook* es ignorado para URLs locales."
 
-#: ../Doc/library/urllib.request.rst:1477
+#: ../Doc/library/urllib.request.rst:1472
 msgid ""
 "If the *url* uses the :file:`http:` scheme identifier, the optional *data* "
 "argument may be given to specify a ``POST`` request (normally the request "
-"type is ``GET``).  The *data* argument must in standard :mimetype:"
-"`application/x-www-form-urlencoded` format; see the :func:`urllib.parse."
-"urlencode` function."
+"type is ``GET``).  The *data* argument must in "
+"standard :mimetype:`application/x-www-form-urlencoded` format; see "
+"the :func:`urllib.parse.urlencode` function."
 msgstr ""
 "Si la *url* usa el identificador de esquema :file:`http:`, el argumento "
 "opcional *data* puede ser dado para especificar una petición ``POST`` "
@@ -2265,19 +2448,19 @@ msgstr ""
 "en formato estándar :mimetype:`application/x-www-form-urlencoded`; vea la "
 "función :func:`urllib.parse.urlencode`."
 
-#: ../Doc/library/urllib.request.rst:1486
+#: ../Doc/library/urllib.request.rst:1481
 msgid ""
-"Variable that specifies the user agent of the opener object.  To get :mod:"
-"`urllib` to tell servers that it is a particular user agent, set this in a "
-"subclass as a class variable or in the constructor before calling the base "
-"constructor."
+"Variable that specifies the user agent of the opener object.  To "
+"get :mod:`urllib` to tell servers that it is a particular user agent, set "
+"this in a subclass as a class variable or in the constructor before calling "
+"the base constructor."
 msgstr ""
 "Variable que especifica el agente de usuario del objeto abridor. Para "
 "obtener :mod:`urllib` para decir a los servidores que es un agente de "
 "usuario particular, establece esto en una subclase como una variable de "
 "clase o en el constructor antes de invocar el constructor base."
 
-#: ../Doc/library/urllib.request.rst:1496
+#: ../Doc/library/urllib.request.rst:1491
 msgid ""
 ":class:`FancyURLopener` subclasses :class:`URLopener` providing default "
 "handling for the following HTTP response codes: 301, 302, 303, 307 and 401.  "
@@ -2295,17 +2478,18 @@ msgstr ""
 "HTTP. Para los códigos de respuesta 30x, la recursión está limitada por el "
 "valor del atributo *maxentries*, el cual por defecto es 10."
 
-#: ../Doc/library/urllib.request.rst:1503
+#: ../Doc/library/urllib.request.rst:1498
+#, fuzzy
 msgid ""
-"For all other response codes, the method :meth:`http_error_default` is "
-"called which you can override in subclasses to handle the error "
-"appropriately."
+"For all other response codes, the "
+"method :meth:`~BaseHandler.http_error_default` is called which you can "
+"override in subclasses to handle the error appropriately."
 msgstr ""
-"Para todos los demás códigos de respuesta, se invoca al método :meth:"
-"`http_error_default`, que puede sobrescribir en subclases para manejar el "
-"error de manera adecuada."
+"Para todos los demás códigos de respuesta, se invoca al "
+"método :meth:`http_error_default`, que puede sobrescribir en subclases para "
+"manejar el error de manera adecuada."
 
-#: ../Doc/library/urllib.request.rst:1508
+#: ../Doc/library/urllib.request.rst:1503
 msgid ""
 "According to the letter of :rfc:`2616`, 301 and 302 responses to POST "
 "requests must not be automatically redirected without confirmation by the "
@@ -2319,15 +2503,15 @@ msgstr ""
 "esas respuestas, cambiando de POST a GET, y :mod:`urllib` reproduce este "
 "comportamiento."
 
-#: ../Doc/library/urllib.request.rst:1513
+#: ../Doc/library/urllib.request.rst:1508
 msgid ""
-"The parameters to the constructor are the same as those for :class:"
-"`URLopener`."
+"The parameters to the constructor are the same as those "
+"for :class:`URLopener`."
 msgstr ""
-"Los parámetros del constructor son el mismo que aquellos para :class:"
-"`URLopener`."
+"Los parámetros del constructor son el mismo que aquellos "
+"para :class:`URLopener`."
 
-#: ../Doc/library/urllib.request.rst:1517
+#: ../Doc/library/urllib.request.rst:1512
 msgid ""
 "When performing basic authentication, a :class:`FancyURLopener` instance "
 "calls its :meth:`prompt_user_passwd` method.  The default implementation "
@@ -2335,13 +2519,14 @@ msgid ""
 "subclass may override this method to support more appropriate behavior if "
 "needed."
 msgstr ""
-"Cuando se realiza autenticación básica, una instancia :class:"
-"`FancyURLopener` invoca a su método :meth:`prompt_user_passwd`. La "
-"implementación predeterminada pregunta a los usuarios la información "
-"requerida en la terminal de control. Una subclase puede sobrescribir este "
-"método para soportar un comportamiento más apropiado si se necesita."
+"Cuando se realiza autenticación básica, una "
+"instancia :class:`FancyURLopener` invoca a su "
+"método :meth:`prompt_user_passwd`. La implementación predeterminada pregunta "
+"a los usuarios la información requerida en la terminal de control. Una "
+"subclase puede sobrescribir este método para soportar un comportamiento más "
+"apropiado si se necesita."
 
-#: ../Doc/library/urllib.request.rst:1522
+#: ../Doc/library/urllib.request.rst:1517
 msgid ""
 "The :class:`FancyURLopener` class offers one additional method that should "
 "be overloaded to provide the appropriate behavior:"
@@ -2349,7 +2534,7 @@ msgstr ""
 "La clase :class:`FancyURLopener` ofrece un método adicional que debe ser "
 "sobrecargado para proveer el comportamiento apropiado:"
 
-#: ../Doc/library/urllib.request.rst:1527
+#: ../Doc/library/urllib.request.rst:1522
 msgid ""
 "Return information needed to authenticate the user at the given host in the "
 "specified security realm.  The return value should be a tuple, ``(user, "
@@ -2359,7 +2544,7 @@ msgstr ""
 "en el reino de seguridad especificado. El valor retornado debe ser una tupla "
 "``(user, password)``, la cual puede ser usada para autenticación básica."
 
-#: ../Doc/library/urllib.request.rst:1531
+#: ../Doc/library/urllib.request.rst:1526
 msgid ""
 "The implementation prompts for this information on the terminal; an "
 "application should override this method to use an appropriate interaction "
@@ -2369,11 +2554,11 @@ msgstr ""
 "debe sobrescribir este método para usar un modelo de interacción apropiado "
 "en el entorno local."
 
-#: ../Doc/library/urllib.request.rst:1537
+#: ../Doc/library/urllib.request.rst:1532
 msgid ":mod:`urllib.request` Restrictions"
 msgstr "Restricciones :mod:`urllib.request`"
 
-#: ../Doc/library/urllib.request.rst:1543
+#: ../Doc/library/urllib.request.rst:1538
 msgid ""
 "Currently, only the following protocols are supported: HTTP (versions 0.9 "
 "and 1.0), FTP, local files, and data URLs."
@@ -2381,11 +2566,11 @@ msgstr ""
 "Actualmente, sólo uno de los siguientes protocolo están soportados: HTTP "
 "(versiones 0.9 y 1.0), FTP, archivos locales y URLs de datos."
 
-#: ../Doc/library/urllib.request.rst:1546
+#: ../Doc/library/urllib.request.rst:1541
 msgid "Added support for data URLs."
 msgstr "Añadido soporte para URLs de datos."
 
-#: ../Doc/library/urllib.request.rst:1548
+#: ../Doc/library/urllib.request.rst:1543
 msgid ""
 "The caching feature of :func:`urlretrieve` has been disabled until someone "
 "finds the time to hack proper processing of Expiration time headers."
@@ -2394,14 +2579,14 @@ msgstr ""
 "hasta que alguien encuentre el tiempo para hackear el procesamiento adecuado "
 "de los encabezados de tiempo de Expiración."
 
-#: ../Doc/library/urllib.request.rst:1551
+#: ../Doc/library/urllib.request.rst:1546
 msgid ""
 "There should be a function to query whether a particular URL is in the cache."
 msgstr ""
 "Debería haber una función para consultar si una URL en particular está en la "
 "caché."
 
-#: ../Doc/library/urllib.request.rst:1553
+#: ../Doc/library/urllib.request.rst:1548
 msgid ""
 "For backward compatibility, if a URL appears to point to a local file but "
 "the file can't be opened, the URL is re-interpreted using the FTP protocol.  "
@@ -2412,7 +2597,7 @@ msgstr ""
 "usando el protocolo FTP. Esto a veces puede causar mensajes de error "
 "confusos."
 
-#: ../Doc/library/urllib.request.rst:1557
+#: ../Doc/library/urllib.request.rst:1552
 msgid ""
 "The :func:`urlopen` and :func:`urlretrieve` functions can cause arbitrarily "
 "long delays while waiting for a network connection to be set up.  This means "
@@ -2424,14 +2609,14 @@ msgstr ""
 "red. Esto significa que es difícil construir un cliente Web interactivo "
 "usando estas funciones sin utilizar hilos."
 
-#: ../Doc/library/urllib.request.rst:1566
+#: ../Doc/library/urllib.request.rst:1561
 msgid ""
 "The data returned by :func:`urlopen` or :func:`urlretrieve` is the raw data "
 "returned by the server.  This may be binary data (such as an image), plain "
 "text or (for example) HTML.  The HTTP protocol provides type information in "
-"the reply header, which can be inspected by looking at the :mailheader:"
-"`Content-Type` header.  If the returned data is HTML, you can use the "
-"module :mod:`html.parser` to parse it."
+"the reply header, which can be inspected by looking at "
+"the :mailheader:`Content-Type` header.  If the returned data is HTML, you "
+"can use the module :mod:`html.parser` to parse it."
 msgstr ""
 "Los datos retornados por :func:`urlopen` o :func:`urlretrieve` son los datos "
 "en crudo retornados por el servidor. Estos pueden ser datos binarios (como "
@@ -2441,7 +2626,7 @@ msgstr ""
 "retornados son HTML, puedes usar el módulo :mod:`html.parser` para "
 "analizarlos."
 
-#: ../Doc/library/urllib.request.rst:1575
+#: ../Doc/library/urllib.request.rst:1570
 msgid ""
 "The code handling the FTP protocol cannot differentiate between a file and a "
 "directory.  This can lead to unexpected behavior when attempting to read a "
@@ -2474,25 +2659,25 @@ msgstr ""
 "heredando :class:`FancyURLopener` o cambiando *_urlopener* para ajustarlo a "
 "tus necesidades."
 
-#: ../Doc/library/urllib.request.rst:1592
+#: ../Doc/library/urllib.request.rst:1587
 msgid ":mod:`urllib.response` --- Response classes used by urllib"
 msgstr ":mod:`urllib.response` --- Clases de respuesta usadas por urllib"
 
-#: ../Doc/library/urllib.request.rst:1597
+#: ../Doc/library/urllib.request.rst:1592
 msgid ""
 "The :mod:`urllib.response` module defines functions and classes which define "
 "a minimal file-like interface, including ``read()`` and ``readline()``. "
-"Functions defined by this module are used internally by the :mod:`urllib."
-"request` module. The typical response object is a :class:`urllib.response."
-"addinfourl` instance:"
+"Functions defined by this module are used internally by "
+"the :mod:`urllib.request` module. The typical response object is "
+"a :class:`urllib.response.addinfourl` instance:"
 msgstr ""
 "El módulo :mod:`urllib.response` define funciones y clases que definen una "
 "interfaz mínima *file-like*, incluyendo ``read()`` y ``readline()``. Las "
-"funciones definidas en este módulo son usadas internamente por el módulo :"
-"mod:`urllib.request`. El objeto de respuesta típico es una instancia de :"
-"class:`urllib.response.addinfourl`:"
+"funciones definidas en este módulo son usadas internamente por el "
+"módulo :mod:`urllib.request`. El objeto de respuesta típico es una instancia "
+"de :class:`urllib.response.addinfourl`:"
 
-#: ../Doc/library/urllib.request.rst:1606
+#: ../Doc/library/urllib.request.rst:1601
 msgid ""
 "URL of the resource retrieved, commonly used to determine if a redirect was "
 "followed."
@@ -2500,46 +2685,46 @@ msgstr ""
 ":URL del recurso obtenido, comúnmente usado para determinar si se ha seguido "
 "una redirección."
 
-#: ../Doc/library/urllib.request.rst:1610
+#: ../Doc/library/urllib.request.rst:1605
 msgid ""
-"Returns the headers of the response in the form of an :class:`~email.message."
-"EmailMessage` instance."
+"Returns the headers of the response in the form of "
+"an :class:`~email.message.EmailMessage` instance."
 msgstr ""
-"Retorna las cabeceras de la respuesta en la forma de una instancia de :class:"
-"`~email.message.EmailMessage`."
+"Retorna las cabeceras de la respuesta en la forma de una instancia "
+"de :class:`~email.message.EmailMessage`."
 
-#: ../Doc/library/urllib.request.rst:1616
+#: ../Doc/library/urllib.request.rst:1611
 msgid "Status code returned by server."
 msgstr "Código de estado  retornado por el servidor."
 
-#: ../Doc/library/urllib.request.rst:1620
+#: ../Doc/library/urllib.request.rst:1615
 msgid "Deprecated in favor of :attr:`~addinfourl.url`."
 msgstr "Obsoleto en favor de :attr:`~addinfourl.url`."
 
-#: ../Doc/library/urllib.request.rst:1625
+#: ../Doc/library/urllib.request.rst:1620
 msgid "Deprecated in favor of :attr:`~addinfourl.headers`."
 msgstr "Obsoleto en favor de :attr:`~addinfourl.headers`."
 
+#: ../Doc/library/urllib.request.rst:1625
 #: ../Doc/library/urllib.request.rst:1630
-#: ../Doc/library/urllib.request.rst:1635
 msgid "Deprecated in favor of :attr:`~addinfourl.status`."
 msgstr "Obsoleto en favor de :attr:`~addinfourl.status`."
 
-#: ../Doc/library/urllib.request.rst:1539
-#: ../Doc/library/urllib.request.rst:1562
+#: ../Doc/library/urllib.request.rst:1534
+#: ../Doc/library/urllib.request.rst:1557
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../Doc/library/urllib.request.rst:1539
-#: ../Doc/library/urllib.request.rst:1562
+#: ../Doc/library/urllib.request.rst:1534
+#: ../Doc/library/urllib.request.rst:1557
 msgid "protocol"
 msgstr "protocol"
 
-#: ../Doc/library/urllib.request.rst:1539
-#: ../Doc/library/urllib.request.rst:1573
+#: ../Doc/library/urllib.request.rst:1534
+#: ../Doc/library/urllib.request.rst:1568
 msgid "FTP"
 msgstr "FTP"
 
-#: ../Doc/library/urllib.request.rst:1562
+#: ../Doc/library/urllib.request.rst:1557
 msgid "HTML"
 msgstr "HTML"

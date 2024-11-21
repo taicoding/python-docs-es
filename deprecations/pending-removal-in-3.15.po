@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2024, Python Software Foundation
+# This file is distributed under the same license as the Python en Español
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python en Español 3.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:2
+msgid "Pending Removal in Python 3.15"
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:4
+msgid ":mod:`ctypes`:"
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:6
+msgid ""
+"The undocumented :func:`!ctypes.SetPointerType` function has been "
+"deprecated since Python 3.13."
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:9
+msgid ":mod:`http.server`:"
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:11
+msgid ""
+"The obsolete and rarely used :class:`~http.server.CGIHTTPRequestHandler` "
+"has been deprecated since Python 3.13. No direct replacement exists. "
+"*Anything* is better than CGI to interface a web server with a request "
+"handler."
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:17
+msgid ""
+"The :option:`!--cgi` flag to the :program:`python -m http.server` "
+"command-line interface has been deprecated since Python 3.13."
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:20
+msgid ""
+":mod:`importlib`: ``__package__`` and ``__cached__`` will cease to be set"
+" or taken into consideration by the import system (:gh:`97879`)."
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:23
+msgid ":class:`locale`:"
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:25
+msgid ""
+"The :func:`~locale.getdefaultlocale` function has been deprecated since "
+"Python 3.11. Its removal was originally planned for Python 3.13 "
+"(:gh:`90817`), but has been postponed to Python 3.15. Use "
+":func:`~locale.getlocale`, :func:`~locale.setlocale`, and "
+":func:`~locale.getencoding` instead. (Contributed by Hugo van Kemenade in"
+" :gh:`111187`.)"
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:33
+msgid ":mod:`pathlib`:"
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:35
+msgid ""
+":meth:`.PurePath.is_reserved` has been deprecated since Python 3.13. Use "
+":func:`os.path.isreserved` to detect reserved paths on Windows."
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:39
+msgid ":mod:`platform`:"
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:41
+msgid ""
+":func:`~platform.java_ver` has been deprecated since Python 3.13. This "
+"function is only useful for Jython support, has a confusing API, and is "
+"largely untested."
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:45
+msgid ":mod:`threading`:"
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:47
+msgid ""
+":func:`~threading.RLock` will take no arguments in Python 3.15. Passing "
+"any arguments has been deprecated since Python 3.14, as the  Python "
+"version does not permit any arguments, but the C version allows any "
+"number of positional or keyword arguments, ignoring every argument."
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:53
+msgid ":mod:`typing`:"
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:55
+msgid ""
+"The undocumented keyword argument syntax for creating "
+":class:`~typing.NamedTuple` classes (e.g. ``Point = NamedTuple(\"Point\","
+" x=int, y=int)``) has been deprecated since Python 3.13. Use the class-"
+"based syntax or the functional syntax instead."
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:61
+msgid ""
+"The :func:`typing.no_type_check_decorator` decorator function has been "
+"deprecated since Python 3.13. After eight years in the :mod:`typing` "
+"module, it has yet to be supported by any major type checker."
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:66
+msgid ":mod:`wave`:"
+msgstr ""
+
+#: ../Doc/deprecations/pending-removal-in-3.15.rst:68
+msgid ""
+"The :meth:`~wave.Wave_read.getmark`, :meth:`!setmark`, and "
+":meth:`~wave.Wave_read.getmarkers` methods of the "
+":class:`~wave.Wave_read` and :class:`~wave.Wave_write` classes have been "
+"deprecated since Python 3.13."
+msgstr ""
+

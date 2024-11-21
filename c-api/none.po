@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2020-05-09 03:15+0200\n"
 "Last-Translator: \n"
 "Language: es\n"
@@ -19,7 +19,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/c-api/none.rst:6
 msgid "The ``None`` Object"
@@ -41,11 +41,11 @@ msgstr ""
 #: ../Doc/c-api/none.rst:18
 msgid ""
 "The Python ``None`` object, denoting lack of value.  This object has no "
-"methods and is `immortal <https://peps.python.org/pep-0683/>`_."
+"methods and is :term:`immortal`."
 msgstr ""
 
 #: ../Doc/c-api/none.rst:21
-msgid ":c:data:`Py_None` is immortal."
+msgid ":c:data:`Py_None` is :term:`immortal`."
 msgstr ""
 
 #: ../Doc/c-api/none.rst:26
@@ -59,19 +59,3 @@ msgstr ""
 #: ../Doc/c-api/none.rst:8
 msgid "None"
 msgstr ""
-
-#~ msgid ""
-#~ "The Python ``None`` object, denoting lack of value.  This object has no "
-#~ "methods. It needs to be treated just like any other object with respect "
-#~ "to reference counts."
-#~ msgstr ""
-#~ "El objeto ``None`` de Python, denota falta de valor. Este objeto no tiene "
-#~ "métodos. Debe tratarse como cualquier otro objeto con respecto a los "
-#~ "recuentos de referencia."
-
-#~ msgid ""
-#~ "Properly handle returning :c:data:`Py_None` from within a C function "
-#~ "(that is, increment the reference count of ``None`` and return it.)"
-#~ msgstr ""
-#~ "Maneje adecuadamente el retorno :c:data:`Py_None` desde una función en C "
-#~ "(es decir, incremente el recuento de referencia de ``None`` y devuélvalo)."

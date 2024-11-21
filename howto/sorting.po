@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-02-02 11:08-0300\n"
 "Last-Translator: Francisco Mora <fr.morac@duocuc.cl>\n"
 "Language: es\n"
@@ -19,11 +19,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/howto/sorting.rst:4
-msgid "Sorting HOW TO"
-msgstr "HOW TO - Ordenar"
+msgid "Sorting Techniques"
+msgstr ""
 
 #: ../Doc/howto/sorting.rst
 msgid "Author"
@@ -33,25 +33,18 @@ msgstr "Autor"
 msgid "Andrew Dalke and Raymond Hettinger"
 msgstr "Andrew Dalke and Raymond Hettinger"
 
-#: ../Doc/howto/sorting.rst
-msgid "Release"
-msgstr "Versión"
-
-#: ../Doc/howto/sorting.rst:7
-msgid "0.1"
-msgstr "0.1"
-
-#: ../Doc/howto/sorting.rst:10
+#: ../Doc/howto/sorting.rst:9
 msgid ""
 "Python lists have a built-in :meth:`list.sort` method that modifies the list "
 "in-place.  There is also a :func:`sorted` built-in function that builds a "
 "new sorted list from an iterable."
 msgstr ""
 "Las listas de Python tienen un método incorporado :meth:`list.sort` que "
-"modifica la lista in situ. También hay una función incorporada :func:"
-"`sorted` que crea una nueva lista ordenada a partir de un iterable."
+"modifica la lista in situ. También hay una función "
+"incorporada :func:`sorted` que crea una nueva lista ordenada a partir de un "
+"iterable."
 
-#: ../Doc/howto/sorting.rst:14
+#: ../Doc/howto/sorting.rst:13
 msgid ""
 "In this document, we explore the various techniques for sorting data using "
 "Python."
@@ -59,11 +52,11 @@ msgstr ""
 "En este documento exploramos las distintas técnicas para ordenar datos "
 "usando Python."
 
-#: ../Doc/howto/sorting.rst:18
+#: ../Doc/howto/sorting.rst:17
 msgid "Sorting Basics"
 msgstr "Conceptos básicos de ordenación"
 
-#: ../Doc/howto/sorting.rst:20
+#: ../Doc/howto/sorting.rst:19
 msgid ""
 "A simple ascending sort is very easy: just call the :func:`sorted` function. "
 "It returns a new sorted list:"
@@ -71,7 +64,13 @@ msgstr ""
 "Una clasificación ascendente simple es muy fácil: simplemente llame a la "
 "función :func:`sorted`. Retorna una nueva lista ordenada:"
 
-#: ../Doc/howto/sorting.rst:28
+#: ../Doc/howto/sorting.rst:22
+msgid ""
+">>> sorted([5, 2, 3, 1, 4])\n"
+"[1, 2, 3, 4, 5]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:27
 msgid ""
 "You can also use the :meth:`list.sort` method. It modifies the list in-place "
 "(and returns ``None`` to avoid confusion). Usually it's less convenient "
@@ -83,7 +82,15 @@ msgstr ""
 "conveniente que :func:`sorted`, pero si no necesita la lista original, es un "
 "poco más eficiente."
 
-#: ../Doc/howto/sorting.rst:40
+#: ../Doc/howto/sorting.rst:32
+msgid ""
+">>> a = [5, 2, 3, 1, 4]\n"
+">>> a.sort()\n"
+">>> a\n"
+"[1, 2, 3, 4, 5]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:39
 msgid ""
 "Another difference is that the :meth:`list.sort` method is only defined for "
 "lists. In contrast, the :func:`sorted` function accepts any iterable."
@@ -91,11 +98,17 @@ msgstr ""
 "Otra diferencia es que el método :meth:`list.sort` solo aplica para las "
 "listas. En contraste, la función :func:`sorted` acepta cualquier iterable."
 
-#: ../Doc/howto/sorting.rst:49
+#: ../Doc/howto/sorting.rst:42
+msgid ""
+">>> sorted({1: 'D', 2: 'B', 3: 'B', 4: 'E', 5: 'A'})\n"
+"[1, 2, 3, 4, 5]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:48
 msgid "Key Functions"
 msgstr "Funciones clave"
 
-#: ../Doc/howto/sorting.rst:51
+#: ../Doc/howto/sorting.rst:50
 msgid ""
 "Both :meth:`list.sort` and :func:`sorted` have a *key* parameter to specify "
 "a function (or other callable) to be called on each list element prior to "
@@ -105,13 +118,19 @@ msgstr ""
 "especificar una función (u otra invocable) que se llamará en cada elemento "
 "de la lista antes de hacer comparaciones."
 
-#: ../Doc/howto/sorting.rst:55
+#: ../Doc/howto/sorting.rst:54
 msgid "For example, here's a case-insensitive string comparison:"
 msgstr ""
 "Por ejemplo, aquí hay una comparación de cadenas que no distingue entre "
 "mayúsculas y minúsculas:"
 
-#: ../Doc/howto/sorting.rst:62
+#: ../Doc/howto/sorting.rst:56
+msgid ""
+">>> sorted(\"This is a test string from Andrew\".split(), key=str.casefold)\n"
+"['a', 'Andrew', 'from', 'is', 'string', 'test', 'This']"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:61
 msgid ""
 "The value of the *key* parameter should be a function (or other callable) "
 "that takes a single argument and returns a key to use for sorting purposes. "
@@ -123,7 +142,7 @@ msgstr ""
 "clasificación. Esta técnica es rápida porque la función de la tecla se llama "
 "exactamente una vez para cada registro de entrada."
 
-#: ../Doc/howto/sorting.rst:67
+#: ../Doc/howto/sorting.rst:66
 msgid ""
 "A common pattern is to sort complex objects using some of the object's "
 "indices as keys. For example:"
@@ -131,37 +150,89 @@ msgstr ""
 "Un uso frecuente es ordenar objetos complejos utilizando algunos de los "
 "índices del objeto como claves. Por ejemplo:"
 
+#: ../Doc/howto/sorting.rst:69
+msgid ""
+">>> student_tuples = [\n"
+"...     ('john', 'A', 15),\n"
+"...     ('jane', 'B', 12),\n"
+"...     ('dave', 'B', 10),\n"
+"... ]\n"
+">>> sorted(student_tuples, key=lambda student: student[2])   # sort by age\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+msgstr ""
+
 # habíamos utilizado "nombrados" en named tuples.
-#: ../Doc/howto/sorting.rst:80
+#: ../Doc/howto/sorting.rst:79
 msgid ""
 "The same technique works for objects with named attributes. For example:"
 msgstr ""
 "La misma técnica funciona para objetos con atributos nombrados. Por ejemplo:"
 
-#: ../Doc/howto/sorting.rst:101
-msgid "Operator Module Functions"
+#: ../Doc/howto/sorting.rst:81
+msgid ""
+">>> class Student:\n"
+"...     def __init__(self, name, grade, age):\n"
+"...         self.name = name\n"
+"...         self.grade = grade\n"
+"...         self.age = age\n"
+"...     def __repr__(self):\n"
+"...         return repr((self.name, self.grade, self.age))\n"
+"\n"
+">>> student_objects = [\n"
+"...     Student('john', 'A', 15),\n"
+"...     Student('jane', 'B', 12),\n"
+"...     Student('dave', 'B', 10),\n"
+"... ]\n"
+">>> sorted(student_objects, key=lambda student: student.age)   # sort by "
+"age\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:99
+msgid ""
+"Objects with named attributes can be made by a regular class as shown above, "
+"or they can be instances of :class:`~dataclasses.dataclass` or "
+"a :term:`named tuple`."
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:104
+#, fuzzy
+msgid "Operator Module Functions and Partial Function Evaluation"
 msgstr "Funciones del módulo *operator*"
 
-#: ../Doc/howto/sorting.rst:103
+#: ../Doc/howto/sorting.rst:106
+#, fuzzy
 msgid ""
-"The key-function patterns shown above are very common, so Python provides "
-"convenience functions to make accessor functions easier and faster. The :mod:"
-"`operator` module has :func:`~operator.itemgetter`, :func:`~operator."
-"attrgetter`, and a :func:`~operator.methodcaller` function."
+"The :term:`key function` patterns shown above are very common, so Python "
+"provides convenience functions to make accessor functions easier and faster. "
+"The :mod:`operator` module "
+"has :func:`~operator.itemgetter`, :func:`~operator.attrgetter`, and "
+"a :func:`~operator.methodcaller` function."
 msgstr ""
 "Las funciones clave utilizadas anteriormente son muy comunes, por lo que "
 "Python proporciona funciones para facilitar y agilizar el uso de las "
-"funciones de acceso. El módulo :mod:`operator` contiene las funciones :func:"
-"`~operator.itemgetter`, :func:`~operator.attrgetter`, y :func:`~operator."
-"methodcaller`."
+"funciones de acceso. El módulo :mod:`operator` contiene las "
+"funciones :func:`~operator.itemgetter`, :func:`~operator.attrgetter`, "
+"y :func:`~operator.methodcaller`."
 
-#: ../Doc/howto/sorting.rst:108
+#: ../Doc/howto/sorting.rst:111
 msgid "Using those functions, the above examples become simpler and faster:"
 msgstr ""
 "Usando esas funciones, los ejemplos anteriores se vuelven más simples y "
 "rápidos:"
 
-#: ../Doc/howto/sorting.rst:120
+#: ../Doc/howto/sorting.rst:113
+msgid ""
+">>> from operator import itemgetter, attrgetter\n"
+"\n"
+">>> sorted(student_tuples, key=itemgetter(2))\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]\n"
+"\n"
+">>> sorted(student_objects, key=attrgetter('age'))\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:123
 msgid ""
 "The operator module functions allow multiple levels of sorting. For example, "
 "to sort by *grade* then by *age*:"
@@ -169,11 +240,42 @@ msgstr ""
 "Las funciones del módulo *operator* permiten múltiples niveles de "
 "clasificación. Por ejemplo, para ordenar por *grade* y luego por *age*:"
 
-#: ../Doc/howto/sorting.rst:132
+#: ../Doc/howto/sorting.rst:126
+msgid ""
+">>> sorted(student_tuples, key=itemgetter(1,2))\n"
+"[('john', 'A', 15), ('dave', 'B', 10), ('jane', 'B', 12)]\n"
+"\n"
+">>> sorted(student_objects, key=attrgetter('grade', 'age'))\n"
+"[('john', 'A', 15), ('dave', 'B', 10), ('jane', 'B', 12)]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:134
+msgid ""
+"The :mod:`functools` module provides another helpful tool for making key-"
+"functions.  The :func:`~functools.partial` function can reduce the `arity "
+"<https://en.wikipedia.org/wiki/Arity>`_ of a multi-argument function making "
+"it suitable for use as a key-function."
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:139
+msgid ""
+">>> from functools import partial\n"
+">>> from unicodedata import normalize\n"
+"\n"
+">>> names = 'Zoë Åbjørn Núñez Élana Zeke Abe Nubia Eloise'.split()\n"
+"\n"
+">>> sorted(names, key=partial(normalize, 'NFD'))\n"
+"['Abe', 'Åbjørn', 'Eloise', 'Élana', 'Nubia', 'Núñez', 'Zeke', 'Zoë']\n"
+"\n"
+">>> sorted(names, key=partial(normalize, 'NFC'))\n"
+"['Abe', 'Eloise', 'Nubia', 'Núñez', 'Zeke', 'Zoë', 'Åbjørn', 'Élana']"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:153
 msgid "Ascending and Descending"
 msgstr "Ascendente y descendente"
 
-#: ../Doc/howto/sorting.rst:134
+#: ../Doc/howto/sorting.rst:155
 msgid ""
 "Both :meth:`list.sort` and :func:`sorted` accept a *reverse* parameter with "
 "a boolean value. This is used to flag descending sorts. For example, to get "
@@ -183,21 +285,38 @@ msgstr ""
 "un valor booleano. Esto se usa para marcar tipos descendentes. Por ejemplo, "
 "para obtener los datos de los estudiantes en orden inverso de *edad*:"
 
-#: ../Doc/howto/sorting.rst:147
+#: ../Doc/howto/sorting.rst:159
+msgid ""
+">>> sorted(student_tuples, key=itemgetter(2), reverse=True)\n"
+"[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]\n"
+"\n"
+">>> sorted(student_objects, key=attrgetter('age'), reverse=True)\n"
+"[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:168
 msgid "Sort Stability and Complex Sorts"
 msgstr "Estabilidad de ordenamiento y ordenamientos complejos"
 
-#: ../Doc/howto/sorting.rst:149
+#: ../Doc/howto/sorting.rst:170
 msgid ""
 "Sorts are guaranteed to be `stable <https://en.wikipedia.org/wiki/"
 "Sorting_algorithm#Stability>`_\\. That means that when multiple records have "
 "the same key, their original order is preserved."
 msgstr ""
-"Se garantiza que las clasificaciones serán `estables <https://es.wikipedia."
-"org/wiki/Algoritmo_de_ordenamiento#Estabilidad>`_\\. Eso significa que "
-"cuando varios registros tienen la misma clave, se conserva su orden original."
+"Se garantiza que las clasificaciones serán `estables <https://"
+"es.wikipedia.org/wiki/Algoritmo_de_ordenamiento#Estabilidad>`_\\. Eso "
+"significa que cuando varios registros tienen la misma clave, se conserva su "
+"orden original."
 
-#: ../Doc/howto/sorting.rst:159
+#: ../Doc/howto/sorting.rst:174
+msgid ""
+">>> data = [('red', 1), ('blue', 1), ('red', 2), ('blue', 2)]\n"
+">>> sorted(data, key=itemgetter(0))\n"
+"[('blue', 1), ('blue', 2), ('red', 1), ('red', 2)]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:180
 msgid ""
 "Notice how the two records for *blue* retain their original order so that "
 "``('blue', 1)`` is guaranteed to precede ``('blue', 2)``."
@@ -205,7 +324,7 @@ msgstr ""
 "Observe cómo los dos registros para *blue* conservan su orden original de "
 "modo que se garantice que ``('blue', 1)`` preceda a ``('blue', 2)``."
 
-#: ../Doc/howto/sorting.rst:162
+#: ../Doc/howto/sorting.rst:183
 msgid ""
 "This wonderful property lets you build complex sorts in a series of sorting "
 "steps. For example, to sort the student data by descending *grade* and then "
@@ -216,7 +335,16 @@ msgstr ""
 "descendente por *grade* y luego ascendente por *age*, ordene primero por "
 "*age* y luego por *grade*:"
 
-#: ../Doc/howto/sorting.rst:172
+#: ../Doc/howto/sorting.rst:187
+msgid ""
+">>> s = sorted(student_objects, key=attrgetter('age'))     # sort on "
+"secondary key\n"
+">>> sorted(s, key=attrgetter('grade'), reverse=True)       # now sort on "
+"primary key, descending\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:193
 msgid ""
 "This can be abstracted out into a wrapper function that can take a list and "
 "tuples of field and order to sort them on multiple passes."
@@ -224,7 +352,18 @@ msgstr ""
 "Esto se puede encapsular en una función que tome una lista y tuplas "
 "(atributo, orden) para ordenarlas por múltiples pases."
 
-#: ../Doc/howto/sorting.rst:185
+#: ../Doc/howto/sorting.rst:196
+msgid ""
+">>> def multisort(xs, specs):\n"
+"...     for key, reverse in reversed(specs):\n"
+"...         xs.sort(key=attrgetter(key), reverse=reverse)\n"
+"...     return xs\n"
+"\n"
+">>> multisort(list(student_objects), (('grade', True), ('age', False)))\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:206
 msgid ""
 "The `Timsort <https://en.wikipedia.org/wiki/Timsort>`_ algorithm used in "
 "Python does multiple sorts efficiently because it can take advantage of any "
@@ -235,17 +374,17 @@ msgstr ""
 "aprovechar cualquier orden ya presente en el conjunto de datos."
 
 # Esto son siglas de un patron de implementación, debiese ir en inglés.
-#: ../Doc/howto/sorting.rst:190
+#: ../Doc/howto/sorting.rst:211
 msgid "Decorate-Sort-Undecorate"
 msgstr "Decorate-Sort-Undecorate"
 
-#: ../Doc/howto/sorting.rst:192
+#: ../Doc/howto/sorting.rst:213
 msgid "This idiom is called Decorate-Sort-Undecorate after its three steps:"
 msgstr ""
 "Este patrón de implementación, llamado DSU (por sus siglas en inglés "
 "*Decorate-Sort-Undecorate*), se realiza en tres pasos:"
 
-#: ../Doc/howto/sorting.rst:194
+#: ../Doc/howto/sorting.rst:215
 msgid ""
 "First, the initial list is decorated with new values that control the sort "
 "order."
@@ -253,11 +392,11 @@ msgstr ""
 "Primero, la lista inicial está \"decorada\" con nuevos valores que "
 "controlarán el orden en que se realizará el pedido."
 
-#: ../Doc/howto/sorting.rst:196
+#: ../Doc/howto/sorting.rst:217
 msgid "Second, the decorated list is sorted."
 msgstr "En segundo lugar, se ordena la lista decorada."
 
-#: ../Doc/howto/sorting.rst:198
+#: ../Doc/howto/sorting.rst:219
 msgid ""
 "Finally, the decorations are removed, creating a list that contains only the "
 "initial values in the new order."
@@ -265,14 +404,23 @@ msgstr ""
 "Finalmente, los valores decorados se eliminan, creando una lista que "
 "contiene solo los valores iniciales en el nuevo orden."
 
-#: ../Doc/howto/sorting.rst:201
+#: ../Doc/howto/sorting.rst:222
 msgid ""
 "For example, to sort the student data by *grade* using the DSU approach:"
 msgstr ""
 "Por ejemplo, para ordenar los datos de los estudiantes por *grade* "
 "utilizando el enfoque DSU:"
 
-#: ../Doc/howto/sorting.rst:208
+#: ../Doc/howto/sorting.rst:224
+msgid ""
+">>> decorated = [(student.grade, i, student) for i, student in "
+"enumerate(student_objects)]\n"
+">>> decorated.sort()\n"
+">>> [student for grade, i, student in decorated]               # undecorate\n"
+"[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:231
 msgid ""
 "This idiom works because tuples are compared lexicographically; the first "
 "items are compared; if they are the same then the second items are compared, "
@@ -282,7 +430,7 @@ msgstr ""
 "se comparan los primeros objetos; si hay objetos idénticos, se compara el "
 "siguiente objeto, y así sucesivamente."
 
-#: ../Doc/howto/sorting.rst:212
+#: ../Doc/howto/sorting.rst:235
 msgid ""
 "It is not strictly necessary in all cases to include the index *i* in the "
 "decorated list, but including it gives two benefits:"
@@ -290,7 +438,7 @@ msgstr ""
 "No es estrictamente necesario en todos los casos incluir el índice *i* en la "
 "lista decorada, pero incluirlo ofrece dos ventajas:"
 
-#: ../Doc/howto/sorting.rst:215
+#: ../Doc/howto/sorting.rst:238
 msgid ""
 "The sort is stable -- if two items have the same key, their order will be "
 "preserved in the sorted list."
@@ -298,7 +446,7 @@ msgstr ""
 "El orden es estable: si dos elementos tienen la misma clave, su orden se "
 "conservará en la lista ordenada."
 
-#: ../Doc/howto/sorting.rst:218
+#: ../Doc/howto/sorting.rst:241
 msgid ""
 "The original items do not have to be comparable because the ordering of the "
 "decorated tuples will be determined by at most the first two items. So for "
@@ -310,17 +458,17 @@ msgstr ""
 "elementos. Entonces, por ejemplo, la lista original podría contener números "
 "complejos que no se pueden ordenar directamente."
 
-#: ../Doc/howto/sorting.rst:223
+#: ../Doc/howto/sorting.rst:246
 msgid ""
-"Another name for this idiom is `Schwartzian transform <https://en.wikipedia."
-"org/wiki/Schwartzian_transform>`_\\, after Randal L. Schwartz, who "
-"popularized it among Perl programmers."
+"Another name for this idiom is `Schwartzian transform <https://"
+"en.wikipedia.org/wiki/Schwartzian_transform>`_\\, after Randal L. Schwartz, "
+"who popularized it among Perl programmers."
 msgstr ""
-"Otro nombre para esta técnica es `Transformación Schwartziana <https://en."
-"wikipedia.org/wiki/Schwartzian_transform>`_\\, después de que Randal L. "
+"Otro nombre para esta técnica es `Transformación Schwartziana <https://"
+"en.wikipedia.org/wiki/Schwartzian_transform>`_\\, después de que Randal L. "
 "Schwartz la popularizara entre los programadores de Perl."
 
-#: ../Doc/howto/sorting.rst:227
+#: ../Doc/howto/sorting.rst:250
 msgid ""
 "Now that Python sorting provides key-functions, this technique is not often "
 "needed."
@@ -328,11 +476,11 @@ msgstr ""
 "Ahora que la clasificación de Python proporciona funciones clave, esta "
 "técnica ya no se usa con frecuencia."
 
-#: ../Doc/howto/sorting.rst:230
+#: ../Doc/howto/sorting.rst:253
 msgid "Comparison Functions"
 msgstr "Funciones de comparación"
 
-#: ../Doc/howto/sorting.rst:232
+#: ../Doc/howto/sorting.rst:255
 msgid ""
 "Unlike key functions that return an absolute value for sorting, a comparison "
 "function computes the relative ordering for two inputs."
@@ -341,7 +489,7 @@ msgstr ""
 "ordenación, una función de comparación calcula la ordenación relativa para "
 "dos entradas."
 
-#: ../Doc/howto/sorting.rst:235
+#: ../Doc/howto/sorting.rst:258
 msgid ""
 "For example, a `balance scale <https://upload.wikimedia.org/wikipedia/"
 "commons/1/17/Balance_à_tabac_1850.JPG>`_ compares two samples giving a "
@@ -355,7 +503,7 @@ msgstr ""
 "comparación como ``cmp(a, b)`` devolverá un valor negativo para menor que, "
 "cero si las entradas son iguales, o un valor positivo para mayor que."
 
-#: ../Doc/howto/sorting.rst:242
+#: ../Doc/howto/sorting.rst:265
 msgid ""
 "It is common to encounter comparison functions when translating algorithms "
 "from other languages.  Also, some libraries provide comparison functions as "
@@ -367,33 +515,38 @@ msgstr ""
 "comparación como parte de su API.  Por ejemplo, :func:`locale.strcoll` es "
 "una función de comparación."
 
-#: ../Doc/howto/sorting.rst:246
+#: ../Doc/howto/sorting.rst:269
 msgid ""
-"To accommodate those situations, Python provides :class:`functools."
-"cmp_to_key` to wrap the comparison function to make it usable as a key "
-"function::"
+"To accommodate those situations, Python "
+"provides :class:`functools.cmp_to_key` to wrap the comparison function to "
+"make it usable as a key function::"
 msgstr ""
-"Para adaptarse a estas situaciones, Python proporciona :class:`functools."
-"cmp_to_key` para envolver la función de comparación y hacerla utilizable "
-"como una función clave::"
+"Para adaptarse a estas situaciones, Python "
+"proporciona :class:`functools.cmp_to_key` para envolver la función de "
+"comparación y hacerla utilizable como una función clave::"
 
-#: ../Doc/howto/sorting.rst:253
+#: ../Doc/howto/sorting.rst:273
+msgid "sorted(words, key=cmp_to_key(strcoll))  # locale-aware sort order"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:276
 msgid "Odds and Ends"
 msgstr "Curiosidades"
 
-#: ../Doc/howto/sorting.rst:255
+#: ../Doc/howto/sorting.rst:278
 msgid ""
-"For locale aware sorting, use :func:`locale.strxfrm` for a key function or :"
-"func:`locale.strcoll` for a comparison function.  This is necessary because "
-"\"alphabetical\" sort orderings can vary across cultures even if the "
+"For locale aware sorting, use :func:`locale.strxfrm` for a key function "
+"or :func:`locale.strcoll` for a comparison function.  This is necessary "
+"because \"alphabetical\" sort orderings can vary across cultures even if the "
 "underlying alphabet is the same."
 msgstr ""
-"Para ordenar teniendo en cuenta la localización, utilice :func:`locale."
-"strxfrm` para una función clave o :func:`locale.strcoll` para una función de "
-"comparación.  Esto es necesario porque la ordenación \"alfabética\" puede "
-"variar entre culturas aunque el alfabeto subyacente sea el mismo."
+"Para ordenar teniendo en cuenta la localización, "
+"utilice :func:`locale.strxfrm` para una función clave "
+"o :func:`locale.strcoll` para una función de comparación.  Esto es necesario "
+"porque la ordenación \"alfabética\" puede variar entre culturas aunque el "
+"alfabeto subyacente sea el mismo."
 
-#: ../Doc/howto/sorting.rst:260
+#: ../Doc/howto/sorting.rst:283
 msgid ""
 "The *reverse* parameter still maintains sort stability (so that records with "
 "equal keys retain the original order). Interestingly, that effect can be "
@@ -405,27 +558,45 @@ msgstr ""
 "ese efecto se puede simular sin el parámetro utilizando la función "
 "incorporada :func:`reversed` dos veces:"
 
-#: ../Doc/howto/sorting.rst:274
+#: ../Doc/howto/sorting.rst:288
+msgid ""
+">>> data = [('red', 1), ('blue', 1), ('red', 2), ('blue', 2)]\n"
+">>> standard_way = sorted(data, key=itemgetter(0), reverse=True)\n"
+">>> double_reversed = list(reversed(sorted(reversed(data), "
+"key=itemgetter(0))))\n"
+">>> assert standard_way == double_reversed\n"
+">>> standard_way\n"
+"[('red', 1), ('red', 2), ('blue', 1), ('blue', 2)]"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:297
 #, fuzzy
 msgid ""
 "The sort routines use ``<`` when making comparisons between two objects. So, "
-"it is easy to add a standard sort order to a class by defining an :meth:"
-"`~object.__lt__` method:"
+"it is easy to add a standard sort order to a class by defining "
+"an :meth:`~object.__lt__` method:"
 msgstr ""
 "Las rutinas de ordenación utilizan ``<`` cuando realizan comparaciones entre "
 "dos objetos. Por lo tanto, es fácil añadir una ordenación estándar a una "
 "clase definiendo un método :meth:`__lt__`:"
 
-#: ../Doc/howto/sorting.rst:284
-#, fuzzy
+#: ../Doc/howto/sorting.rst:301
 msgid ""
-"However, note that ``<`` can fall back to using :meth:`~object.__gt__` if :"
-"meth:`~object.__lt__` is not implemented (see :func:`object.__lt__`)."
+">>> Student.__lt__ = lambda self, other: self.age < other.age\n"
+">>> sorted(student_objects)\n"
+"[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]"
 msgstr ""
-"Sin embargo, tenga en cuenta que ``<`` puede recurrir a usar :meth:`__gt__` "
-"si :meth:`__lt__` no está implementado (ver :func:`object.__lt__`)."
 
-#: ../Doc/howto/sorting.rst:287
+#: ../Doc/howto/sorting.rst:307
+msgid ""
+"However, note that ``<`` can fall back to using :meth:`~object.__gt__` "
+"if :meth:`~object.__lt__` is not implemented (see :func:`object.__lt__` for "
+"details on the mechanics).  To avoid surprises, :pep:`8` recommends that all "
+"six comparison methods be implemented. The :func:`~functools.total_ordering` "
+"decorator is provided to make that task easier."
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:314
 msgid ""
 "Key functions need not depend directly on the objects being sorted. A key "
 "function can also access external resources. For instance, if the student "
@@ -437,3 +608,45 @@ msgstr ""
 "ejemplo, si las calificaciones de los estudiantes se almacenan en un "
 "diccionario, se pueden usar para ordenar una lista separada de nombres de "
 "estudiantes:"
+
+#: ../Doc/howto/sorting.rst:319
+msgid ""
+">>> students = ['dave', 'john', 'jane']\n"
+">>> newgrades = {'john': 'F', 'jane':'A', 'dave': 'C'}\n"
+">>> sorted(students, key=newgrades.__getitem__)\n"
+"['jane', 'dave', 'john']"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:327
+msgid "Partial Sorts"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:329
+msgid ""
+"Some applications require only some of the data to be ordered.  The standard "
+"library provides several tools that do less work than a full sort:"
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:332
+msgid ""
+":func:`min` and :func:`max` return the smallest and largest values, "
+"respectively.  These functions make a single pass over the input data and "
+"require almost no auxiliary memory."
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:336
+msgid ""
+":func:`heapq.nsmallest` and :func:`heapq.nlargest` return the *n* smallest "
+"and largest values, respectively.  These functions make a single pass over "
+"the data keeping only *n* elements in memory at a time.  For values of *n* "
+"that are small relative to the number of inputs, these functions make far "
+"fewer comparisons than a full sort."
+msgstr ""
+
+#: ../Doc/howto/sorting.rst:342
+msgid ""
+":func:`heapq.heappush` and :func:`heapq.heappop` create and maintain a "
+"partially sorted arrangement of data that keeps the smallest element at "
+"position ``0``.  These functions are suitable for implementing priority "
+"queues which are commonly used for task scheduling."
+msgstr ""

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2020-10-19 08:39-0300\n"
 "Last-Translator: \n"
 "Language: es\n"
@@ -19,10 +19,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/curses.ascii.rst:2
-msgid ":mod:`curses.ascii` --- Utilities for ASCII characters"
+#, fuzzy
+msgid ":mod:`!curses.ascii` --- Utilities for ASCII characters"
 msgstr ":mod:`curses.ascii` --- Utilidades para los caracteres ASCII"
 
 #: ../Doc/library/curses.ascii.rst:10
@@ -282,8 +283,8 @@ msgstr "Comprueba una letra mayúscula ASCII."
 
 #: ../Doc/library/curses.ascii.rst:168
 msgid ""
-"Checks for an ASCII hexadecimal digit.  This is equivalent to ``c in string."
-"hexdigits``."
+"Checks for an ASCII hexadecimal digit.  This is equivalent to ``c in "
+"string.hexdigits``."
 msgstr ""
 "Comprueba si hay un dígito hexadecimal ASCII. Esto es equivalente a ``c in "
 "string.hexdigits``."
@@ -300,8 +301,8 @@ msgstr ""
 #: ../Doc/library/curses.ascii.rst:181
 msgid ""
 "These functions accept either integers or single-character strings; when the "
-"argument is a string, it is first converted using the built-in function :"
-"func:`ord`."
+"argument is a string, it is first converted using the built-in "
+"function :func:`ord`."
 msgstr ""
 "Estas funciones aceptan enteros o cadenas de un solo carácter; cuando el "
 "argumento es una cadena de caracteres, primero se convierte utilizando la "
@@ -393,111 +394,3 @@ msgstr ""
 #: ../Doc/library/curses.ascii.rst:212
 msgid "! (exclamation)"
 msgstr ""
-
-#~ msgid ":const:`NUL`"
-#~ msgstr " :const:`NUL`"
-
-#~ msgid ":const:`SOH`"
-#~ msgstr ":const:`SOH`"
-
-#~ msgid ":const:`STX`"
-#~ msgstr ":const:`STX`"
-
-#~ msgid ":const:`ETX`"
-#~ msgstr ":const:`ETX`"
-
-#~ msgid ":const:`EOT`"
-#~ msgstr ":const:`EOT`"
-
-#~ msgid ":const:`ENQ`"
-#~ msgstr ":const:`ENQ`"
-
-#~ msgid ":const:`ACK`"
-#~ msgstr ":const:`ACK`"
-
-#~ msgid ":const:`BEL`"
-#~ msgstr ":const:`BEL`"
-
-#~ msgid ":const:`BS`"
-#~ msgstr ":const:`BS`"
-
-#~ msgid ":const:`TAB`"
-#~ msgstr ":const:`TAB`"
-
-#~ msgid ":const:`HT`"
-#~ msgstr ":const:`HT`"
-
-#~ msgid ":const:`LF`"
-#~ msgstr ":const:`LF`"
-
-#~ msgid ":const:`NL`"
-#~ msgstr ":const:`NL`"
-
-#~ msgid ":const:`VT`"
-#~ msgstr ":const:`VT`"
-
-#~ msgid ":const:`FF`"
-#~ msgstr ":const:`FF`"
-
-#~ msgid ":const:`CR`"
-#~ msgstr ":const:`CR`"
-
-#~ msgid ":const:`SO`"
-#~ msgstr ":const:`SO`"
-
-#~ msgid ":const:`SI`"
-#~ msgstr ":const:`SI`"
-
-#~ msgid ":const:`DLE`"
-#~ msgstr ":const:`DLE`"
-
-#~ msgid ":const:`DC1`"
-#~ msgstr ":const:`DC1`"
-
-#~ msgid ":const:`DC2`"
-#~ msgstr ":const:`DC2`"
-
-#~ msgid ":const:`DC3`"
-#~ msgstr ":const:`DC3`"
-
-#~ msgid ":const:`DC4`"
-#~ msgstr ":const:`DC4`"
-
-#~ msgid ":const:`NAK`"
-#~ msgstr ":const:`NAK`"
-
-#~ msgid ":const:`SYN`"
-#~ msgstr ":const:`SYN`"
-
-#~ msgid ":const:`ETB`"
-#~ msgstr ":const:`ETB`"
-
-#~ msgid ":const:`CAN`"
-#~ msgstr ":const:`CAN`"
-
-#~ msgid ":const:`EM`"
-#~ msgstr ":const:`EM`"
-
-#~ msgid ":const:`SUB`"
-#~ msgstr ":const:`SUB`"
-
-#~ msgid ":const:`ESC`"
-#~ msgstr ":const:`ESC`"
-
-#~ msgid ":const:`FS`"
-#~ msgstr ":const:`FS`"
-
-#~ msgid ":const:`GS`"
-#~ msgstr ":const:`GS`"
-
-#~ msgid ":const:`RS`"
-#~ msgstr ":const:`RS`"
-
-#~ msgid ":const:`US`"
-#~ msgstr ":const:`US`"
-
-#~ msgid ":const:`SP`"
-#~ msgstr ":const:`SP`"
-
-#~ msgid ":const:`DEL`"
-#~ msgstr ":const:`DEL`"

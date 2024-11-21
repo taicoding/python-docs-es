@@ -1,26 +1,29 @@
 # Copyright (C) 2001-2020, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # Maintained by the python-doc-es workteam.
-# docs-es@python.org / https://mail.python.org/mailman3/lists/docs-es.python.org/
-# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get the list of volunteers
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get
+# the list of volunteers
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 11:59-0400\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2020-11-11 13:07-0500\n"
-"Language-Team: python-doc-es\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Last-Translator: \n"
 "Language: es\n"
-"X-Generator: Poedit 2.2.1\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/rlcompleter.rst:2
-msgid ":mod:`rlcompleter` --- Completion function for GNU readline"
+#, fuzzy
+msgid ":mod:`!rlcompleter` --- Completion function for GNU readline"
 msgstr ":mod:`rlcompleter` --- Función de completado para GNU readline"
 
 #: ../Doc/library/rlcompleter.rst:9
@@ -28,44 +31,62 @@ msgid "**Source code:** :source:`Lib/rlcompleter.py`"
 msgstr "**Código fuente:** :source:`Lib/rlcompleter.py`"
 
 #: ../Doc/library/rlcompleter.rst:13
+#, fuzzy
 msgid ""
-"The :mod:`rlcompleter` module defines a completion function suitable for "
-"the :mod:`readline` module by completing valid Python identifiers and "
-"keywords."
+"The :mod:`!rlcompleter` module defines a completion function suitable to be "
+"passed to :func:`~readline.set_completer` in the :mod:`readline` module."
 msgstr ""
 "El módulo :mod:`rlcompleter` define una función de completado adecuada para "
 "el módulo :mod:`readline` completando los identificadores y las palabras "
 "clave de Python válidas."
 
 #: ../Doc/library/rlcompleter.rst:16
+#, fuzzy
 msgid ""
 "When this module is imported on a Unix platform with the :mod:`readline` "
 "module available, an instance of the :class:`Completer` class is "
-"automatically created and its :meth:`complete` method is set as the :mod:"
-"`readline` completer."
+"automatically created and its :meth:`~Completer.complete` method is set as "
+"the :ref:`readline completer <readline-completion>`. The method provides "
+"completion of valid Python :ref:`identifiers and keywords <identifiers>`."
 msgstr ""
-"Cuando este módulo es importado en una plataforma Unix con el módulo :mod:"
-"`readline` disponible, una instancia de la clase :class:`Completer` es "
-"automáticamente creada y su método :meth:`complete` es fijado como el método "
-"de completado de :mod:`readline`."
+"Cuando este módulo es importado en una plataforma Unix con el "
+"módulo :mod:`readline` disponible, una instancia de la "
+"clase :class:`Completer` es automáticamente creada y su "
+"método :meth:`complete` es fijado como el método de completado "
+"de :mod:`readline`."
 
-#: ../Doc/library/rlcompleter.rst:20
+#: ../Doc/library/rlcompleter.rst:22
 msgid "Example::"
 msgstr "Ejemplo::"
 
-#: ../Doc/library/rlcompleter.rst:31
+#: ../Doc/library/rlcompleter.rst:24
 msgid ""
-"The :mod:`rlcompleter` module is designed for use with Python's :ref:"
-"`interactive mode <tut-interactive>`.  Unless Python is run with the :option:"
-"`-S` option, the module is automatically imported and configured (see :ref:"
-"`rlcompleter-config`)."
+">>> import rlcompleter\n"
+">>> import readline\n"
+">>> readline.parse_and_bind(\"tab: complete\")\n"
+">>> readline. <TAB PRESSED>\n"
+"readline.__doc__          "
+"readline.get_line_buffer(  readline.read_init_file(\n"
+"readline.__file__         "
+"readline.insert_text(      readline.set_completer(\n"
+"readline.__name__         readline.parse_and_bind(\n"
+">>> readline."
+msgstr ""
+
+#: ../Doc/library/rlcompleter.rst:33
+#, fuzzy
+msgid ""
+"The :mod:`!rlcompleter` module is designed for use with "
+"Python's :ref:`interactive mode <tut-interactive>`.  Unless Python is run "
+"with the :option:`-S` option, the module is automatically imported and "
+"configured (see :ref:`rlcompleter-config`)."
 msgstr ""
 "El módulo :mod:`rlcompleter` está diseñado para usarse con el :ref:`modo "
 "interactivo <tut-interactive>` de Python. A menos que Python sea ejecutado "
 "con la opción :option:`-S`, el módulo es automáticamente importado y "
 "configurado (ver :ref:`rlcompleter-config`)."
 
-#: ../Doc/library/rlcompleter.rst:36
+#: ../Doc/library/rlcompleter.rst:38
 msgid ""
 "On platforms without :mod:`readline`, the :class:`Completer` class defined "
 "by this module can still be used for custom purposes."
@@ -73,35 +94,41 @@ msgstr ""
 "En plataformas sin :mod:`readline`, la clase :class:`Completer` definida por "
 "este módulo puede ser usada igualmente para fines personalizados."
 
-#: ../Doc/library/rlcompleter.rst:43
-msgid "Completer Objects"
-msgstr "Objetos de Completado"
-
-#: ../Doc/library/rlcompleter.rst:45
+#: ../Doc/library/rlcompleter.rst:46
 msgid "Completer objects have the following method:"
 msgstr "Los objetos de completado tienen el siguiente método:"
 
 #: ../Doc/library/rlcompleter.rst:50
-msgid "Return the *state*\\ th completion for *text*."
+#, fuzzy
+msgid "Return the next possible completion for *text*."
 msgstr "Retorna el completado nº *state* para *text*."
 
 #: ../Doc/library/rlcompleter.rst:52
 msgid ""
-"If called for *text* that doesn't include a period character (``'.'``), it "
-"will complete from names currently defined in :mod:`__main__`, :mod:"
-"`builtins` and keywords (as defined by the :mod:`keyword` module)."
+"When called by the :mod:`readline` module, this method is called "
+"successively with ``state == 0, 1, 2, ...`` until the method returns "
+"``None``."
 msgstr ""
-"Si es invocado para *text* que no incluye un caracter de punto (``'.'``), "
-"este completará con nombres actualmente definidos en :mod:`__main__`, :mod:"
-"`builtins` y las palabras clave (tal y como están definidas en el módulo :"
-"mod:`keyword`)."
 
 #: ../Doc/library/rlcompleter.rst:56
 msgid ""
+"If called for *text* that doesn't include a period character (``'.'``), it "
+"will complete from names currently defined "
+"in :mod:`__main__`, :mod:`builtins` and keywords (as defined by "
+"the :mod:`keyword` module)."
+msgstr ""
+"Si es invocado para *text* que no incluye un caracter de punto (``'.'``), "
+"este completará con nombres actualmente definidos "
+"en :mod:`__main__`, :mod:`builtins` y las palabras clave (tal y como están "
+"definidas en el módulo :mod:`keyword`)."
+
+#: ../Doc/library/rlcompleter.rst:60
+#, fuzzy
+msgid ""
 "If called for a dotted name, it will try to evaluate anything without "
 "obvious side-effects (functions will not be evaluated, but it can generate "
-"calls to :meth:`__getattr__`) up to the last part, and find matches for the "
-"rest via the :func:`dir` function.  Any exception raised during the "
+"calls to :meth:`~object.__getattr__`) up to the last part, and find matches "
+"for the rest via the :func:`dir` function.  Any exception raised during the "
 "evaluation of the expression is caught, silenced and :const:`None` is "
 "returned."
 msgstr ""

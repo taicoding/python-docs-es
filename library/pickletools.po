@@ -1,26 +1,29 @@
 # Copyright (C) 2001-2020, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # Maintained by the python-doc-es workteam.
-# docs-es@python.org / https://mail.python.org/mailman3/lists/docs-es.python.org/
-# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get the list of volunteers
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get
+# the list of volunteers
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 11:59-0400\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2020-10-10 10:26-0400\n"
-"Language-Team: python-doc-es\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Last-Translator: \n"
 "Language: es_AR\n"
-"X-Generator: Poedit 2.4.1\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/pickletools.rst:2
-msgid ":mod:`pickletools` --- Tools for pickle developers"
+#, fuzzy
+msgid ":mod:`!pickletools` --- Tools for pickle developers"
 msgstr ":mod:`pickletools` --- Herramientas para desarrolladores pickle"
 
 #: ../Doc/library/pickletools.rst:8
@@ -32,22 +35,23 @@ msgid ""
 "This module contains various constants relating to the intimate details of "
 "the :mod:`pickle` module, some lengthy comments about the implementation, "
 "and a few useful functions for analyzing pickled data.  The contents of this "
-"module are useful for Python core developers who are working on the :mod:"
-"`pickle`; ordinary users of the :mod:`pickle` module probably won't find "
-"the :mod:`pickletools` module relevant."
+"module are useful for Python core developers who are working on "
+"the :mod:`pickle`; ordinary users of the :mod:`pickle` module probably won't "
+"find the :mod:`pickletools` module relevant."
 msgstr ""
 "Este módulo contiene varias constantes relacionadas con los detalles íntimos "
 "del módulo :mod:`pickle`, algunos comentarios largos sobre la implementación "
 "y algunas funciones útiles para analizar pickled data.  El contenido de este "
 "módulo es útil para los desarrolladores principales de Python que están "
-"trabajando en el :mod:`pickle`; los usuarios ordinarios del módulo :mod:"
-"`pickle` probablemente no encontrarán relevante el módulo :mod:`pickletools`."
+"trabajando en el :mod:`pickle`; los usuarios ordinarios del "
+"módulo :mod:`pickle` probablemente no encontrarán relevante el "
+"módulo :mod:`pickletools`."
 
-#: ../Doc/library/pickletools.rst:21
+#: ../Doc/library/pickletools.rst:23
 msgid "Command line usage"
 msgstr "Uso de la línea de comandos"
 
-#: ../Doc/library/pickletools.rst:25
+#: ../Doc/library/pickletools.rst:27
 msgid ""
 "When invoked from the command line, ``python -m pickletools`` will "
 "disassemble the contents of one or more pickle files.  Note that if you want "
@@ -64,37 +68,52 @@ msgstr ""
 "proviene de una fuente que no es de confianza, ``-m pickletools`` es una "
 "opción más segura porque no ejecuta el código de bytes de pickle."
 
-#: ../Doc/library/pickletools.rst:33
+#: ../Doc/library/pickletools.rst:35
 msgid "For example, with a tuple ``(1, 2)`` pickled in file ``x.pickle``:"
 msgstr ""
 "Por ejemplo, con una tupla ``(1, 2)`` pickled en el archivo ``x.pickle``:"
 
-#: ../Doc/library/pickletools.rst:50
+#: ../Doc/library/pickletools.rst:37
+msgid ""
+"$ python -m pickle x.pickle\n"
+"(1, 2)\n"
+"\n"
+"$ python -m pickletools x.pickle\n"
+"    0: \\x80 PROTO      3\n"
+"    2: K    BININT1    1\n"
+"    4: K    BININT1    2\n"
+"    6: \\x86 TUPLE2\n"
+"    7: q    BINPUT     0\n"
+"    9: .    STOP\n"
+"highest protocol among opcodes = 2"
+msgstr ""
+
+#: ../Doc/library/pickletools.rst:52
 msgid "Command line options"
 msgstr "Opciones de línea de comandos"
 
-#: ../Doc/library/pickletools.rst:56
+#: ../Doc/library/pickletools.rst:58
 msgid "Annotate each line with a short opcode description."
 msgstr "Anote cada línea con una breve descripción del código de operación."
 
-#: ../Doc/library/pickletools.rst:60
+#: ../Doc/library/pickletools.rst:62
 msgid "Name of a file where the output should be written."
 msgstr "Nombre de un archivo donde se debe escribir la salida."
 
-#: ../Doc/library/pickletools.rst:64
+#: ../Doc/library/pickletools.rst:66
 msgid "The number of blanks by which to indent a new MARK level."
 msgstr ""
 "Número de espacios en blanco por los que se aplica una sangría a un nuevo "
 "nivel de MARK."
 
-#: ../Doc/library/pickletools.rst:68
+#: ../Doc/library/pickletools.rst:70
 msgid ""
 "When multiple objects are disassembled, preserve memo between disassemblies."
 msgstr ""
 "Cuando se desensamblan varios objetos, conserve la nota entre los "
 "ensamblajes."
 
-#: ../Doc/library/pickletools.rst:73
+#: ../Doc/library/pickletools.rst:75
 msgid ""
 "When more than one pickle file are specified, print given preamble before "
 "each disassembly."
@@ -102,11 +121,11 @@ msgstr ""
 "Cuando se especifica más de un archivo pickle, imprima un preámbulo "
 "determinado antes de cada desensamblado."
 
-#: ../Doc/library/pickletools.rst:79
+#: ../Doc/library/pickletools.rst:81
 msgid "Programmatic Interface"
 msgstr "Interfaz programática"
 
-#: ../Doc/library/pickletools.rst:84
+#: ../Doc/library/pickletools.rst:86
 msgid ""
 "Outputs a symbolic disassembly of the pickle to the file-like object *out*, "
 "defaulting to ``sys.stdout``.  *pickle* can be a string or a file-like "
@@ -129,11 +148,12 @@ msgstr ""
 "salida se anota con una breve descripción.  El valor de *anotar* se utiliza "
 "como sugerencia para la columna donde debe comenzar la anotación."
 
-#: ../Doc/library/pickletools.rst:95
-msgid "The *annotate* argument."
+#: ../Doc/library/pickletools.rst:97
+#, fuzzy
+msgid "Added the *annotate* parameter."
 msgstr "El argumento *anotar*."
 
-#: ../Doc/library/pickletools.rst:100
+#: ../Doc/library/pickletools.rst:102
 msgid ""
 "Provides an :term:`iterator` over all of the opcodes in a pickle, returning "
 "a sequence of ``(opcode, arg, pos)`` triples.  *opcode* is an instance of "
@@ -148,7 +168,7 @@ msgstr ""
 "operación; *pos* es la posición en la que se encuentra este código de "
 "operación. *pickle* puede ser una cadena o un objeto similar a un archivo."
 
-#: ../Doc/library/pickletools.rst:108
+#: ../Doc/library/pickletools.rst:110
 msgid ""
 "Returns a new equivalent pickle string after eliminating unused ``PUT`` "
 "opcodes. The optimized pickle is shorter, takes less transmission time, "

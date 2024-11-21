@@ -10,17 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2024-01-31 09:50+0100\n"
 "Last-Translator: Cristián Maureira-Fredes <cmaureirafredes@gmail.com>\n"
-"Language-Team: python-doc-es\n"
 "Language: es\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.4.2\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/glossary.rst:5
 msgid "Glossary"
@@ -31,97 +30,76 @@ msgid "``>>>``"
 msgstr "``>>>``"
 
 #: ../Doc/glossary.rst:12
+#, fuzzy
 msgid ""
-"The default Python prompt of the interactive shell.  Often seen for code "
-"examples which can be executed interactively in the interpreter."
+"The default Python prompt of the :term:`interactive` shell.  Often seen for "
+"code examples which can be executed interactively in the interpreter."
 msgstr ""
 "El prompt en el shell interactivo de Python por omisión. Frecuentemente "
 "vistos en ejemplos de código que pueden ser ejecutados interactivamente en "
 "el intérprete."
 
-#: ../Doc/glossary.rst:14
+#: ../Doc/glossary.rst:15
 msgid "``...``"
 msgstr "``...``"
 
-#: ../Doc/glossary.rst:16
+#: ../Doc/glossary.rst:17
 msgid "Can refer to:"
 msgstr "Puede referirse a:"
 
-#: ../Doc/glossary.rst:18
+#: ../Doc/glossary.rst:19
+#, fuzzy
 msgid ""
-"The default Python prompt of the interactive shell when entering the code "
-"for an indented code block, when within a pair of matching left and right "
-"delimiters (parentheses, square brackets, curly braces or triple quotes), or "
-"after specifying a decorator."
+"The default Python prompt of the :term:`interactive` shell when entering the "
+"code for an indented code block, when within a pair of matching left and "
+"right delimiters (parentheses, square brackets, curly braces or triple "
+"quotes), or after specifying a decorator."
 msgstr ""
 "El prompt en el shell interactivo de Python por omisión cuando se ingresa "
 "código para un bloque indentado de código, y cuando se encuentra entre dos "
 "delimitadores que emparejan (paréntesis, corchetes, llaves o comillas "
 "triples), o después de especificar un decorador."
 
-#: ../Doc/glossary.rst:23
+#: ../Doc/glossary.rst:24
 msgid "The :const:`Ellipsis` built-in constant."
 msgstr "La constante incorporada :const:`Ellipsis`."
 
-#: ../Doc/glossary.rst:24
-msgid "2to3"
-msgstr "2to3"
-
-#: ../Doc/glossary.rst:26
-msgid ""
-"A tool that tries to convert Python 2.x code to Python 3.x code by handling "
-"most of the incompatibilities which can be detected by parsing the source "
-"and traversing the parse tree."
-msgstr ""
-"Una herramienta que intenta convertir código de Python 2.x a Python 3.x "
-"arreglando la mayoría de las incompatibilidades que pueden ser detectadas "
-"analizando el código y recorriendo el árbol de análisis sintáctico."
-
-#: ../Doc/glossary.rst:30
-msgid ""
-"2to3 is available in the standard library as :mod:`lib2to3`; a standalone "
-"entry point is provided as :file:`Tools/scripts/2to3`.  See :ref:`2to3-"
-"reference`."
-msgstr ""
-"2to3 está disponible en la biblioteca estándar como :mod:`lib2to3`; un punto "
-"de entrada independiente es provisto como :file:`Tools/scripts/2to3`.  Vea :"
-"ref:`2to3-reference`."
-
-#: ../Doc/glossary.rst:33
+#: ../Doc/glossary.rst:25
 msgid "abstract base class"
 msgstr "clase base abstracta"
 
-#: ../Doc/glossary.rst:35
+#: ../Doc/glossary.rst:27
 msgid ""
 "Abstract base classes complement :term:`duck-typing` by providing a way to "
 "define interfaces when other techniques like :func:`hasattr` would be clumsy "
 "or subtly wrong (for example with :ref:`magic methods <special-lookup>`).  "
 "ABCs introduce virtual subclasses, which are classes that don't inherit from "
-"a class but are still recognized by :func:`isinstance` and :func:"
-"`issubclass`; see the :mod:`abc` module documentation.  Python comes with "
-"many built-in ABCs for data structures (in the :mod:`collections.abc` "
-"module), numbers (in the :mod:`numbers` module), streams (in the :mod:`io` "
-"module), import finders and loaders (in the :mod:`importlib.abc` module).  "
-"You can create your own ABCs with the :mod:`abc` module."
+"a class but are still recognized by :func:`isinstance` "
+"and :func:`issubclass`; see the :mod:`abc` module documentation.  Python "
+"comes with many built-in ABCs for data structures (in "
+"the :mod:`collections.abc` module), numbers (in the :mod:`numbers` module), "
+"streams (in the :mod:`io` module), import finders and loaders (in "
+"the :mod:`importlib.abc` module).  You can create your own ABCs with "
+"the :mod:`abc` module."
 msgstr ""
 "Las clases base abstractas (ABC, por sus siglas en inglés `Abstract Base "
 "Class`) complementan al :term:`duck-typing` brindando un forma de definir "
 "interfaces con técnicas como :func:`hasattr` que serían confusas o "
 "sutilmente erróneas (por ejemplo con :ref:`magic methods <special-lookup>`). "
 "Las ABC introduce subclases virtuales, las cuales son clases que no heredan "
-"desde una clase pero aún así son reconocidas por :func:`isinstance` y :func:"
-"`issubclass`; vea la documentación del módulo :mod:`abc`. Python viene con "
-"muchas ABC incorporadas para las estructuras de datos( en el módulo :mod:"
-"`collections.abc`), números (en el módulo :mod:`numbers` ) , flujos de datos "
-"(en el módulo :mod:`io` ) , buscadores y cargadores de importaciones (en el "
-"módulo :mod:`importlib.abc` ) . Puede crear sus propios ABCs con el módulo :"
-"mod:`abc`."
+"desde una clase pero aún así son reconocidas por :func:`isinstance` "
+"y :func:`issubclass`; vea la documentación del módulo :mod:`abc`. Python "
+"viene con muchas ABC incorporadas para las estructuras de datos( en el "
+"módulo :mod:`collections.abc`), números (en el módulo :mod:`numbers` ) , "
+"flujos de datos (en el módulo :mod:`io` ) , buscadores y cargadores de "
+"importaciones (en el módulo :mod:`importlib.abc` ) . Puede crear sus propios "
+"ABCs con el módulo :mod:`abc`."
 
-#: ../Doc/glossary.rst:46
+#: ../Doc/glossary.rst:38
 msgid "annotation"
 msgstr "anotación"
 
-#: ../Doc/glossary.rst:48
+#: ../Doc/glossary.rst:40
 msgid ""
 "A label associated with a variable, a class attribute or a function "
 "parameter or return value, used by convention as a :term:`type hint`."
@@ -129,7 +107,7 @@ msgstr ""
 "Una etiqueta asociada a una variable, atributo de clase, parámetro de "
 "función o valor de retorno, usado por convención como un :term:`type hint`."
 
-#: ../Doc/glossary.rst:52
+#: ../Doc/glossary.rst:44
 msgid ""
 "Annotations of local variables cannot be accessed at runtime, but "
 "annotations of global variables, class attributes, and functions are stored "
@@ -141,22 +119,22 @@ msgstr ""
 "son almacenadas en el atributo especial :attr:`__annotations__` de módulos, "
 "clases y funciones, respectivamente."
 
-#: ../Doc/glossary.rst:58
+#: ../Doc/glossary.rst:50
 msgid ""
 "See :term:`variable annotation`, :term:`function annotation`, :pep:`484` "
-"and :pep:`526`, which describe this functionality. Also see :ref:"
-"`annotations-howto` for best practices on working with annotations."
+"and :pep:`526`, which describe this functionality. Also "
+"see :ref:`annotations-howto` for best practices on working with annotations."
 msgstr ""
-"Consulte :term:`variable annotation`, :term:`function annotation`, :pep:"
-"`484` y :pep:`526`, que describen esta funcionalidad. Consulte también :ref:"
-"`annotations-howto` para conocer las mejores prácticas sobre cómo trabajar "
-"con anotaciones."
+"Consulte :term:`variable annotation`, :term:`function "
+"annotation`, :pep:`484` y :pep:`526`, que describen esta funcionalidad. "
+"Consulte también :ref:`annotations-howto` para conocer las mejores prácticas "
+"sobre cómo trabajar con anotaciones."
 
-#: ../Doc/glossary.rst:62
+#: ../Doc/glossary.rst:54
 msgid "argument"
 msgstr "argumento"
 
-#: ../Doc/glossary.rst:64
+#: ../Doc/glossary.rst:56
 msgid ""
 "A value passed to a :term:`function` (or :term:`method`) when calling the "
 "function.  There are two kinds of argument:"
@@ -164,7 +142,7 @@ msgstr ""
 "Un valor pasado a una :term:`function` (o :term:`method`) cuando se llama a "
 "la función. Hay dos clases de argumentos:"
 
-#: ../Doc/glossary.rst:67
+#: ../Doc/glossary.rst:59
 msgid ""
 ":dfn:`keyword argument`: an argument preceded by an identifier (e.g. "
 "``name=``) in a function call or passed as a value in a dictionary preceded "
@@ -176,7 +154,13 @@ msgstr ""
 "en un diccionario precedido por ``**``. Por ejemplo ``3`` y ``5`` son "
 "argumentos nombrados en las llamadas a :func:`complex`::"
 
-#: ../Doc/glossary.rst:75
+#: ../Doc/glossary.rst:64
+msgid ""
+"complex(real=3, imag=5)\n"
+"complex(**{'real': 3, 'imag': 5})"
+msgstr ""
+
+#: ../Doc/glossary.rst:67
 msgid ""
 ":dfn:`positional argument`: an argument that is not a keyword argument. "
 "Positional arguments can appear at the beginning of an argument list and/or "
@@ -189,7 +173,13 @@ msgstr ""
 "``*``. Por ejemplo, ``3`` y ``5`` son argumentos posicionales en las "
 "siguientes llamadas:"
 
-#: ../Doc/glossary.rst:84
+#: ../Doc/glossary.rst:73
+msgid ""
+"complex(3, 5)\n"
+"complex(*(3, 5))"
+msgstr ""
+
+#: ../Doc/glossary.rst:76
 msgid ""
 "Arguments are assigned to the named local variables in a function body. See "
 "the :ref:`calls` section for the rules governing this assignment. "
@@ -201,35 +191,35 @@ msgstr ""
 "asignaciones. Sintácticamente, cualquier expresión puede ser usada para "
 "representar un argumento; el valor evaluado es asignado a la variable local."
 
-#: ../Doc/glossary.rst:89
+#: ../Doc/glossary.rst:81
 msgid ""
 "See also the :term:`parameter` glossary entry, the FAQ question on :ref:`the "
 "difference between arguments and parameters <faq-argument-vs-parameter>`, "
 "and :pep:`362`."
 msgstr ""
-"Vea también el :term:`parameter` en el glosario, la pregunta frecuente :ref:"
-"`la diferencia entre argumentos y parámetros <faq-argument-vs-parameter>`, "
-"y :pep:`362`."
+"Vea también el :term:`parameter` en el glosario, la pregunta "
+"frecuente :ref:`la diferencia entre argumentos y parámetros <faq-argument-vs-"
+"parameter>`, y :pep:`362`."
 
-#: ../Doc/glossary.rst:92
+#: ../Doc/glossary.rst:84
 msgid "asynchronous context manager"
 msgstr "administrador asincrónico de contexto"
 
-#: ../Doc/glossary.rst:94
+#: ../Doc/glossary.rst:86
 msgid ""
 "An object which controls the environment seen in an :keyword:`async with` "
-"statement by defining :meth:`~object.__aenter__` and :meth:`~object."
-"__aexit__` methods.  Introduced by :pep:`492`."
+"statement by defining :meth:`~object.__aenter__` "
+"and :meth:`~object.__aexit__` methods.  Introduced by :pep:`492`."
 msgstr ""
 "Un objeto que controla el entorno visible en un sentencia :keyword:`async "
-"with` al definir los métodos :meth:`~object.__aenter__` y :meth:`~object."
-"__aexit__`.  Introducido por :pep:`492`."
+"with` al definir los métodos :meth:`~object.__aenter__` "
+"y :meth:`~object.__aexit__`.  Introducido por :pep:`492`."
 
-#: ../Doc/glossary.rst:97
+#: ../Doc/glossary.rst:89
 msgid "asynchronous generator"
 msgstr "generador asincrónico"
 
-#: ../Doc/glossary.rst:99
+#: ../Doc/glossary.rst:91
 msgid ""
 "A function which returns an :term:`asynchronous generator iterator`.  It "
 "looks like a coroutine function defined with :keyword:`async def` except "
@@ -241,7 +231,7 @@ msgstr ""
 "que contiene expresiones :keyword:`yield` para producir series de variables "
 "usadas en un ciclo :keyword:`async for`."
 
-#: ../Doc/glossary.rst:104
+#: ../Doc/glossary.rst:96
 msgid ""
 "Usually refers to an asynchronous generator function, but may refer to an "
 "*asynchronous generator iterator* in some contexts.  In cases where the "
@@ -252,35 +242,36 @@ msgstr ""
 "aquellos casos en los que el significado no está claro, usar los términos "
 "completos evita la ambigüedad."
 
-#: ../Doc/glossary.rst:108
+#: ../Doc/glossary.rst:100
 msgid ""
 "An asynchronous generator function may contain :keyword:`await` expressions "
 "as well as :keyword:`async for`, and :keyword:`async with` statements."
 msgstr ""
-"Una función generadora asincrónica puede contener expresiones :keyword:"
-"`await` así como sentencias :keyword:`async for`, y :keyword:`async with`."
+"Una función generadora asincrónica puede contener "
+"expresiones :keyword:`await` así como sentencias :keyword:`async for`, "
+"y :keyword:`async with`."
 
-#: ../Doc/glossary.rst:111
+#: ../Doc/glossary.rst:103
 msgid "asynchronous generator iterator"
 msgstr "iterador generador asincrónico"
 
-#: ../Doc/glossary.rst:113
+#: ../Doc/glossary.rst:105
 msgid "An object created by a :term:`asynchronous generator` function."
 msgstr "Un objeto creado por una función :term:`asynchronous generator`."
 
-#: ../Doc/glossary.rst:115
+#: ../Doc/glossary.rst:107
 msgid ""
-"This is an :term:`asynchronous iterator` which when called using the :meth:"
-"`~object.__anext__` method returns an awaitable object which will execute "
-"the body of the asynchronous generator function until the next :keyword:"
-"`yield` expression."
+"This is an :term:`asynchronous iterator` which when called using "
+"the :meth:`~object.__anext__` method returns an awaitable object which will "
+"execute the body of the asynchronous generator function until the "
+"next :keyword:`yield` expression."
 msgstr ""
 "Este es un :term:`asynchronous iterator` el cual cuando es llamado usa el "
 "método :meth:`~object.__anext__` retornando un objeto a la espera "
 "(*awaitable*) el cual ejecutará el cuerpo de la función generadora "
 "asincrónica hasta la siguiente expresión :keyword:`yield`."
 
-#: ../Doc/glossary.rst:120
+#: ../Doc/glossary.rst:112
 msgid ""
 "Each :keyword:`yield` temporarily suspends processing, remembering the "
 "location execution state (including local variables and pending try-"
@@ -292,46 +283,48 @@ msgstr ""
 "estado local de ejecución (incluyendo a las variables locales y las "
 "sentencias `try` pendientes). Cuando el *iterador del generador asincrónico* "
 "vuelve efectivamente con otro objeto a la espera (*awaitable*) retornado por "
-"el método :meth:`~object.__anext__`, retoma donde lo dejó. Vea :pep:`492` y :"
-"pep:`525`."
+"el método :meth:`~object.__anext__`, retoma donde lo dejó. Vea :pep:`492` "
+"y :pep:`525`."
 
-#: ../Doc/glossary.rst:125
+#: ../Doc/glossary.rst:117
 msgid "asynchronous iterable"
 msgstr "iterable asincrónico"
 
-#: ../Doc/glossary.rst:127
+#: ../Doc/glossary.rst:119
 msgid ""
 "An object, that can be used in an :keyword:`async for` statement. Must "
 "return an :term:`asynchronous iterator` from its :meth:`~object.__aiter__` "
 "method.  Introduced by :pep:`492`."
 msgstr ""
 "Un objeto, que puede ser usado en una sentencia :keyword:`async for`. Debe "
-"retornar un :term:`asynchronous iterator` de su método :meth:`~object."
-"__aiter__`. Introducido por :pep:`492`."
+"retornar un :term:`asynchronous iterator` de su "
+"método :meth:`~object.__aiter__`. Introducido por :pep:`492`."
 
-#: ../Doc/glossary.rst:130
+#: ../Doc/glossary.rst:122
 msgid "asynchronous iterator"
 msgstr "iterador asincrónico"
 
-#: ../Doc/glossary.rst:132
+#: ../Doc/glossary.rst:124
 msgid ""
-"An object that implements the :meth:`~object.__aiter__` and :meth:`~object."
-"__anext__` methods.  :meth:`~object.__anext__` must return an :term:"
-"`awaitable` object. :keyword:`async for` resolves the awaitables returned by "
-"an asynchronous iterator's :meth:`~object.__anext__` method until it raises "
-"a :exc:`StopAsyncIteration` exception.  Introduced by :pep:`492`."
+"An object that implements the :meth:`~object.__aiter__` "
+"and :meth:`~object.__anext__` methods.  :meth:`~object.__anext__` must "
+"return an :term:`awaitable` object. :keyword:`async for` resolves the "
+"awaitables returned by an asynchronous iterator's :meth:`~object.__anext__` "
+"method until it raises a :exc:`StopAsyncIteration` exception.  Introduced "
+"by :pep:`492`."
 msgstr ""
-"Un objeto que implementa los métodos :meth:`~object.__aiter__` y :meth:"
-"`~object.__anext__`. :meth:`~object.__anext__` debe retornar un objeto :term:"
-"`awaitable`. :keyword:`async for` resuelve los esperables retornados por un "
-"método de iterador asincrónico :meth:`~object.__anext__` hasta que lanza una "
-"excepción :exc:`StopAsyncIteration`. Introducido por :pep:`492`."
+"Un objeto que implementa los métodos :meth:`~object.__aiter__` "
+"y :meth:`~object.__anext__`. :meth:`~object.__anext__` debe retornar un "
+"objeto :term:`awaitable`. :keyword:`async for` resuelve los esperables "
+"retornados por un método de iterador asincrónico :meth:`~object.__anext__` "
+"hasta que lanza una excepción :exc:`StopAsyncIteration`. Introducido "
+"por :pep:`492`."
 
-#: ../Doc/glossary.rst:137
+#: ../Doc/glossary.rst:129
 msgid "attribute"
 msgstr "atributo"
 
-#: ../Doc/glossary.rst:139
+#: ../Doc/glossary.rst:131
 msgid ""
 "A value associated with an object which is usually referenced by name using "
 "dotted expressions. For example, if an object *o* has an attribute *a* it "
@@ -341,77 +334,78 @@ msgstr ""
 "utilizando expresiones punteadas. Por ejemplo, si un objeto *o* tiene un "
 "atributo *a* se referenciaría como *o.a*."
 
-#: ../Doc/glossary.rst:144
+#: ../Doc/glossary.rst:136
 msgid ""
 "It is possible to give an object an attribute whose name is not an "
-"identifier as defined by :ref:`identifiers`, for example using :func:"
-"`setattr`, if the object allows it. Such an attribute will not be accessible "
-"using a dotted expression, and would instead need to be retrieved with :func:"
-"`getattr`."
+"identifier as defined by :ref:`identifiers`, for example "
+"using :func:`setattr`, if the object allows it. Such an attribute will not "
+"be accessible using a dotted expression, and would instead need to be "
+"retrieved with :func:`getattr`."
 msgstr ""
 "Es posible dar a un objeto un atributo cuyo nombre no sea un identificador "
 "definido por :ref:`identifiers`, por ejemplo usando :func:`setattr`, si el "
 "objeto lo permite. Dicho atributo no será accesible utilizando una expresión "
 "con puntos, y en su lugar deberá ser recuperado con :func:`getattr`."
 
-#: ../Doc/glossary.rst:149
+#: ../Doc/glossary.rst:141
 msgid "awaitable"
 msgstr "a la espera"
 
-#: ../Doc/glossary.rst:151
+#: ../Doc/glossary.rst:143
 msgid ""
-"An object that can be used in an :keyword:`await` expression.  Can be a :"
-"term:`coroutine` or an object with an :meth:`~object.__await__` method. See "
-"also :pep:`492`."
+"An object that can be used in an :keyword:`await` expression.  Can be "
+"a :term:`coroutine` or an object with an :meth:`~object.__await__` method. "
+"See also :pep:`492`."
 msgstr ""
 "Un objeto que puede utilizarse en una expresión :keyword:`await`.  Puede ser "
-"una :term:`corutina <coroutine>` o un objeto con un método :meth:`~object."
-"__await__`. Véase también :pep:`492`."
+"una :term:`corutina <coroutine>` o un objeto con un "
+"método :meth:`~object.__await__`. Véase también :pep:`492`."
 
-#: ../Doc/glossary.rst:154
+#: ../Doc/glossary.rst:146
 msgid "BDFL"
 msgstr "BDFL"
 
-#: ../Doc/glossary.rst:156
+#: ../Doc/glossary.rst:148
 msgid ""
-"Benevolent Dictator For Life, a.k.a. `Guido van Rossum <https://gvanrossum."
-"github.io/>`_, Python's creator."
+"Benevolent Dictator For Life, a.k.a. `Guido van Rossum <https://"
+"gvanrossum.github.io/>`_, Python's creator."
 msgstr ""
 "Sigla de *Benevolent Dictator For Life*, benevolente dictador vitalicio, es "
 "decir `Guido van Rossum <https://gvanrossum.github.io/>`_, el creador de "
 "Python."
 
-#: ../Doc/glossary.rst:158
+#: ../Doc/glossary.rst:150
 msgid "binary file"
 msgstr "archivo binario"
 
-#: ../Doc/glossary.rst:160
+#: ../Doc/glossary.rst:152
+#, fuzzy
 msgid ""
 "A :term:`file object` able to read and write :term:`bytes-like objects "
 "<bytes-like object>`. Examples of binary files are files opened in binary "
-"mode (``'rb'``, ``'wb'`` or ``'rb+'``), :data:`sys.stdin.buffer`, :data:`sys."
-"stdout.buffer`, and instances of :class:`io.BytesIO` and :class:`gzip."
-"GzipFile`."
+"mode (``'rb'``, ``'wb'`` or ``'rb+'``), :data:`sys.stdin.buffer "
+"<sys.stdin>`, :data:`sys.stdout.buffer <sys.stdout>`, and instances "
+"of :class:`io.BytesIO` and :class:`gzip.GzipFile`."
 msgstr ""
 "Un :term:`file object` capaz de leer y escribir :term:`objetos tipo binarios "
 "<bytes-like object>`. Ejemplos de archivos binarios son los abiertos en modo "
-"binario (``'rb'``, ``'wb'`` o ``'rb+'``), :data:`sys.stdin.buffer`, :data:"
-"`sys.stdout.buffer`, e instancias de :class:`io.BytesIO` y de :class:`gzip."
-"GzipFile`."
+"binario (``'rb'``, ``'wb'`` o "
+"``'rb+'``), :data:`sys.stdin.buffer`, :data:`sys.stdout.buffer`, e "
+"instancias de :class:`io.BytesIO` y de :class:`gzip.GzipFile`."
 
-#: ../Doc/glossary.rst:167
+#: ../Doc/glossary.rst:159
 msgid ""
-"See also :term:`text file` for a file object able to read and write :class:"
-"`str` objects."
+"See also :term:`text file` for a file object able to read and "
+"write :class:`str` objects."
 msgstr ""
 "Vea también :term:`text file` para un objeto archivo capaz de leer y "
 "escribir objetos :class:`str`."
 
-#: ../Doc/glossary.rst:169
+#: ../Doc/glossary.rst:161
 msgid "borrowed reference"
 msgstr "referencia prestada"
 
-#: ../Doc/glossary.rst:171
+#: ../Doc/glossary.rst:163
 msgid ""
 "In Python's C API, a borrowed reference is a reference to an object, where "
 "the code using the object does not own the reference. It becomes a dangling "
@@ -424,63 +418,63 @@ msgstr ""
 "recolección de basura puede eliminar el último :term:`strong reference` del "
 "objeto y así destruirlo."
 
-#: ../Doc/glossary.rst:177
+#: ../Doc/glossary.rst:169
 msgid ""
 "Calling :c:func:`Py_INCREF` on the :term:`borrowed reference` is recommended "
 "to convert it to a :term:`strong reference` in-place, except when the object "
-"cannot be destroyed before the last usage of the borrowed reference. The :c:"
-"func:`Py_NewRef` function can be used to create a new :term:`strong "
+"cannot be destroyed before the last usage of the borrowed reference. "
+"The :c:func:`Py_NewRef` function can be used to create a new :term:`strong "
 "reference`."
 msgstr ""
 "Se recomienda llamar a :c:func:`Py_INCREF` en la :term:`referencia prestada "
 "<borrowed reference>` para convertirla en una :term:`referencia fuerte "
 "<strong reference>` in situ, excepto cuando el objeto no se puede destruir "
-"antes del último uso de la referencia prestada. La función :c:func:"
-"`Py_NewRef` se puede utilizar para crear una nueva :term:`referencia fuerte "
-"<strong reference>`."
+"antes del último uso de la referencia prestada. La "
+"función :c:func:`Py_NewRef` se puede utilizar para crear una "
+"nueva :term:`referencia fuerte <strong reference>`."
 
-#: ../Doc/glossary.rst:182
+#: ../Doc/glossary.rst:174
 msgid "bytes-like object"
 msgstr "objetos tipo binarios"
 
-#: ../Doc/glossary.rst:184
+#: ../Doc/glossary.rst:176
 msgid ""
-"An object that supports the :ref:`bufferobjects` and can export a C-:term:"
-"`contiguous` buffer. This includes all :class:`bytes`, :class:`bytearray`, "
-"and :class:`array.array` objects, as well as many common :class:`memoryview` "
-"objects.  Bytes-like objects can be used for various operations that work "
-"with binary data; these include compression, saving to a binary file, and "
-"sending over a socket."
+"An object that supports the :ref:`bufferobjects` and can export a "
+"C-:term:`contiguous` buffer. This includes "
+"all :class:`bytes`, :class:`bytearray`, and :class:`array.array` objects, as "
+"well as many common :class:`memoryview` objects.  Bytes-like objects can be "
+"used for various operations that work with binary data; these include "
+"compression, saving to a binary file, and sending over a socket."
 msgstr ""
-"Un objeto que soporta :ref:`bufferobjects`  y puede exportar un búfer C-:"
-"term:`contiguous`. Esto incluye todas los objetos :class:`bytes`, :class:"
-"`bytearray`, y :class:`array.array`, así como muchos objetos comunes :class:"
-"`memoryview`. Los objetos tipo binarios pueden ser usados para varias "
-"operaciones que usan datos binarios; éstas incluyen compresión, salvar a "
-"archivos binarios, y enviarlos a través de un socket."
+"Un objeto que soporta :ref:`bufferobjects`  y puede exportar un búfer "
+"C-:term:`contiguous`. Esto incluye todas los "
+"objetos :class:`bytes`, :class:`bytearray`, y :class:`array.array`, así como "
+"muchos objetos comunes :class:`memoryview`. Los objetos tipo binarios pueden "
+"ser usados para varias operaciones que usan datos binarios; éstas incluyen "
+"compresión, salvar a archivos binarios, y enviarlos a través de un socket."
 
-#: ../Doc/glossary.rst:191
+#: ../Doc/glossary.rst:183
 msgid ""
 "Some operations need the binary data to be mutable.  The documentation often "
 "refers to these as \"read-write bytes-like objects\".  Example mutable "
-"buffer objects include :class:`bytearray` and a :class:`memoryview` of a :"
-"class:`bytearray`. Other operations require the binary data to be stored in "
-"immutable objects (\"read-only bytes-like objects\"); examples of these "
+"buffer objects include :class:`bytearray` and a :class:`memoryview` of "
+"a :class:`bytearray`. Other operations require the binary data to be stored "
+"in immutable objects (\"read-only bytes-like objects\"); examples of these "
 "include :class:`bytes` and a :class:`memoryview` of a :class:`bytes` object."
 msgstr ""
 "Algunas operaciones necesitan que los datos binarios sean mutables. La "
 "documentación frecuentemente se refiere a éstos como \"objetos tipo binario "
-"de lectura y escritura\". Ejemplos de objetos de búfer mutables incluyen a :"
-"class:`bytearray` y :class:`memoryview` de la :class:`bytearray`. Otras "
+"de lectura y escritura\". Ejemplos de objetos de búfer mutables incluyen "
+"a :class:`bytearray` y :class:`memoryview` de la :class:`bytearray`. Otras "
 "operaciones que requieren datos binarios almacenados en objetos inmutables "
-"(\"objetos tipo binario de sólo lectura\"); ejemplos de éstos incluyen :"
-"class:`bytes` y :class:`memoryview` del objeto :class:`bytes`."
+"(\"objetos tipo binario de sólo lectura\"); ejemplos de éstos "
+"incluyen :class:`bytes` y :class:`memoryview` del objeto :class:`bytes`."
 
-#: ../Doc/glossary.rst:199
+#: ../Doc/glossary.rst:191
 msgid "bytecode"
 msgstr "bytecode"
 
-#: ../Doc/glossary.rst:201
+#: ../Doc/glossary.rst:193
 msgid ""
 "Python source code is compiled into bytecode, the internal representation of "
 "a Python program in the CPython interpreter.  The bytecode is also cached in "
@@ -501,19 +495,19 @@ msgstr ""
 "*bytecodes* no tienen como requisito trabajar en las diversas máquina "
 "virtuales de Python, ni de ser estable entre versiones Python."
 
-#: ../Doc/glossary.rst:211
+#: ../Doc/glossary.rst:203
 msgid ""
-"A list of bytecode instructions can be found in the documentation for :ref:"
-"`the dis module <bytecodes>`."
+"A list of bytecode instructions can be found in the documentation "
+"for :ref:`the dis module <bytecodes>`."
 msgstr ""
 "Una lista de las instrucciones en *bytecode* está disponible en la "
 "documentación de :ref:`el módulo dis <bytecodes>`."
 
-#: ../Doc/glossary.rst:213
+#: ../Doc/glossary.rst:205
 msgid "callable"
 msgstr "callable"
 
-#: ../Doc/glossary.rst:215
+#: ../Doc/glossary.rst:207
 msgid ""
 "A callable is an object that can be called, possibly with a set of arguments "
 "(see :term:`argument`), with the following syntax::"
@@ -521,7 +515,11 @@ msgstr ""
 "Un callable es un objeto que puede ser llamado, posiblemente con un conjunto "
 "de argumentos (véase :term:`argument`), con la siguiente sintaxis::"
 
-#: ../Doc/glossary.rst:220
+#: ../Doc/glossary.rst:210
+msgid "callable(argument1, argument2, argumentN)"
+msgstr ""
+
+#: ../Doc/glossary.rst:212
 msgid ""
 "A :term:`function`, and by extension a :term:`method`, is a callable. An "
 "instance of a class that implements the :meth:`~object.__call__` method is "
@@ -531,11 +529,11 @@ msgstr ""
 "instancia de una clase que implementa el método :meth:`~object.__call__` "
 "también es un callable."
 
-#: ../Doc/glossary.rst:223
+#: ../Doc/glossary.rst:215
 msgid "callback"
 msgstr "retrollamada"
 
-#: ../Doc/glossary.rst:225
+#: ../Doc/glossary.rst:217
 msgid ""
 "A subroutine function which is passed as an argument to be executed at some "
 "point in the future."
@@ -543,11 +541,11 @@ msgstr ""
 "Una función de subrutina que se pasa como un argumento para ejecutarse en "
 "algún momento en el futuro."
 
-#: ../Doc/glossary.rst:227
+#: ../Doc/glossary.rst:219
 msgid "class"
 msgstr "clase"
 
-#: ../Doc/glossary.rst:229
+#: ../Doc/glossary.rst:221
 msgid ""
 "A template for creating user-defined objects. Class definitions normally "
 "contain method definitions which operate on instances of the class."
@@ -556,11 +554,11 @@ msgstr ""
 "de clase normalmente contienen definiciones de métodos que operan una "
 "instancia de la clase."
 
-#: ../Doc/glossary.rst:232
+#: ../Doc/glossary.rst:224
 msgid "class variable"
 msgstr "variable de clase"
 
-#: ../Doc/glossary.rst:234
+#: ../Doc/glossary.rst:226
 msgid ""
 "A variable defined in a class and intended to be modified only at class "
 "level (i.e., not in an instance of the class)."
@@ -568,11 +566,11 @@ msgstr ""
 "Una variable definida en una clase y prevista para ser modificada sólo a "
 "nivel de clase (es decir, no en una instancia de la clase)."
 
-#: ../Doc/glossary.rst:236
+#: ../Doc/glossary.rst:228
 msgid "complex number"
 msgstr "número complejo"
 
-#: ../Doc/glossary.rst:238
+#: ../Doc/glossary.rst:230
 msgid ""
 "An extension of the familiar real number system in which all numbers are "
 "expressed as a sum of a real part and an imaginary part.  Imaginary numbers "
@@ -595,23 +593,25 @@ msgstr ""
 "use :mod:`cmath`.  El uso de números complejos es matemática bastante "
 "avanzada.  Si no le parecen necesarios, puede ignorarlos sin inconvenientes."
 
-#: ../Doc/glossary.rst:248
+#: ../Doc/glossary.rst:240
 msgid "context manager"
 msgstr "administrador de contextos"
 
-#: ../Doc/glossary.rst:250
+#: ../Doc/glossary.rst:242
+#, fuzzy
 msgid ""
 "An object which controls the environment seen in a :keyword:`with` statement "
-"by defining :meth:`__enter__` and :meth:`__exit__` methods. See :pep:`343`."
+"by defining :meth:`~object.__enter__` and :meth:`~object.__exit__` methods. "
+"See :pep:`343`."
 msgstr ""
 "Un objeto que controla el entorno en la sentencia :keyword:`with` definiendo "
 "los métodos :meth:`__enter__` y :meth:`__exit__`. Vea :pep:`343`."
 
-#: ../Doc/glossary.rst:253
+#: ../Doc/glossary.rst:245
 msgid "context variable"
 msgstr "variable de contexto"
 
-#: ../Doc/glossary.rst:255
+#: ../Doc/glossary.rst:247
 msgid ""
 "A variable which can have different values depending on its context. This is "
 "similar to Thread-Local Storage in which each execution thread may have a "
@@ -628,11 +628,11 @@ msgstr ""
 "contexto es mantener registro de las variables en tareas concurrentes "
 "asíncronas. Vea :mod:`contextvars`."
 
-#: ../Doc/glossary.rst:262
+#: ../Doc/glossary.rst:254
 msgid "contiguous"
 msgstr "contiguo"
 
-#: ../Doc/glossary.rst:266
+#: ../Doc/glossary.rst:258
 msgid ""
 "A buffer is considered contiguous exactly if it is either *C-contiguous* or "
 "*Fortran contiguous*.  Zero-dimensional buffers are C and Fortran "
@@ -650,11 +650,11 @@ msgstr ""
 "orden de las direcciones de memoria. Sin embargo, en arreglos Fortran "
 "contiguos, el primer índice vería más rápidamente."
 
-#: ../Doc/glossary.rst:274
+#: ../Doc/glossary.rst:266
 msgid "coroutine"
 msgstr "corrutina"
 
-#: ../Doc/glossary.rst:276
+#: ../Doc/glossary.rst:268
 msgid ""
 "Coroutines are a more generalized form of subroutines. Subroutines are "
 "entered at one point and exited at another point.  Coroutines can be "
@@ -664,30 +664,30 @@ msgstr ""
 "Las corrutinas son una forma más generalizadas de las subrutinas. A las "
 "subrutinas se ingresa por un punto y se sale por otro punto. Las corrutinas "
 "pueden se iniciadas, finalizadas y reanudadas en muchos puntos diferentes. "
-"Pueden ser implementadas con la sentencia :keyword:`async def`. Vea además :"
-"pep:`492`."
+"Pueden ser implementadas con la sentencia :keyword:`async def`. Vea "
+"además :pep:`492`."
 
-#: ../Doc/glossary.rst:281
+#: ../Doc/glossary.rst:273
 msgid "coroutine function"
 msgstr "función corrutina"
 
-#: ../Doc/glossary.rst:283
+#: ../Doc/glossary.rst:275
 msgid ""
 "A function which returns a :term:`coroutine` object.  A coroutine function "
-"may be defined with the :keyword:`async def` statement, and may contain :"
-"keyword:`await`, :keyword:`async for`, and :keyword:`async with` keywords.  "
-"These were introduced by :pep:`492`."
+"may be defined with the :keyword:`async def` statement, and may "
+"contain :keyword:`await`, :keyword:`async for`, and :keyword:`async with` "
+"keywords.  These were introduced by :pep:`492`."
 msgstr ""
 "Un función que retorna un objeto  :term:`coroutine` . Una función corrutina "
 "puede ser definida con la sentencia :keyword:`async def`, y puede contener "
-"las palabras claves :keyword:`await`, :keyword:`async for`, y :keyword:"
-"`async with`. Las mismas son introducidas en :pep:`492`."
+"las palabras claves :keyword:`await`, :keyword:`async for`, "
+"y :keyword:`async with`. Las mismas son introducidas en :pep:`492`."
 
-#: ../Doc/glossary.rst:288
+#: ../Doc/glossary.rst:280
 msgid "CPython"
 msgstr "CPython"
 
-#: ../Doc/glossary.rst:290
+#: ../Doc/glossary.rst:282
 msgid ""
 "The canonical implementation of the Python programming language, as "
 "distributed on `python.org <https://www.python.org>`_.  The term \"CPython\" "
@@ -699,11 +699,11 @@ msgstr ""
 "es usado cuando es necesario distinguir esta implementación de otras como "
 "*Jython* o *IronPython*."
 
-#: ../Doc/glossary.rst:294
+#: ../Doc/glossary.rst:286
 msgid "decorator"
 msgstr "decorador"
 
-#: ../Doc/glossary.rst:296
+#: ../Doc/glossary.rst:288
 msgid ""
 "A function returning another function, usually applied as a function "
 "transformation using the ``@wrapper`` syntax.  Common examples for "
@@ -713,7 +713,7 @@ msgstr ""
 "de transformación empleando la sintaxis ``@envoltorio``. Ejemplos comunes de "
 "decoradores son  :func:`classmethod` y :func:`staticmethod`."
 
-#: ../Doc/glossary.rst:300
+#: ../Doc/glossary.rst:292
 msgid ""
 "The decorator syntax is merely syntactic sugar, the following two function "
 "definitions are semantically equivalent::"
@@ -721,7 +721,18 @@ msgstr ""
 "La sintaxis del decorador es meramente azúcar sintáctico, las definiciones "
 "de las siguientes dos funciones son semánticamente equivalentes::"
 
-#: ../Doc/glossary.rst:311
+#: ../Doc/glossary.rst:295
+msgid ""
+"def f(arg):\n"
+"    ...\n"
+"f = staticmethod(f)\n"
+"\n"
+"@staticmethod\n"
+"def f(arg):\n"
+"    ..."
+msgstr ""
+
+#: ../Doc/glossary.rst:303
 msgid ""
 "The same concept exists for classes, but is less commonly used there.  See "
 "the documentation for :ref:`function definitions <function>` and :ref:`class "
@@ -731,24 +742,26 @@ msgstr ""
 "documentación de :ref:`function definitions <function>` y :ref:`class "
 "definitions <class>` para mayor detalle sobre decoradores."
 
-#: ../Doc/glossary.rst:314
+#: ../Doc/glossary.rst:306
 msgid "descriptor"
 msgstr "descriptor"
 
-#: ../Doc/glossary.rst:316
+#: ../Doc/glossary.rst:308
+#, fuzzy
 msgid ""
-"Any object which defines the methods :meth:`__get__`, :meth:`__set__`, or :"
-"meth:`__delete__`.  When a class attribute is a descriptor, its special "
-"binding behavior is triggered upon attribute lookup.  Normally, using *a.b* "
-"to get, set or delete an attribute looks up the object named *b* in the "
-"class dictionary for *a*, but if *b* is a descriptor, the respective "
+"Any object which defines the "
+"methods :meth:`~object.__get__`, :meth:`~object.__set__`, "
+"or :meth:`~object.__delete__`. When a class attribute is a descriptor, its "
+"special binding behavior is triggered upon attribute lookup.  Normally, "
+"using *a.b* to get, set or delete an attribute looks up the object named *b* "
+"in the class dictionary for *a*, but if *b* is a descriptor, the respective "
 "descriptor method gets called.  Understanding descriptors is a key to a deep "
 "understanding of Python because they are the basis for many features "
 "including functions, methods, properties, class methods, static methods, and "
 "reference to super classes."
 msgstr ""
-"Cualquier objeto que define los métodos :meth:`__get__`, :meth:`__set__`, o :"
-"meth:`__delete__`.   Cuando un atributo de clase es un descriptor, su "
+"Cualquier objeto que define los métodos :meth:`__get__`, :meth:`__set__`, "
+"o :meth:`__delete__`.   Cuando un atributo de clase es un descriptor, su "
 "conducta enlazada especial es disparada durante la búsqueda del atributo. "
 "Normalmente, usando *a.b* para consultar, establecer o borrar un atributo "
 "busca el objeto llamado *b* en el diccionario de clase de *a*, pero si *b* "
@@ -758,7 +771,7 @@ msgstr ""
 "propiedades, métodos de clase, métodos estáticos, y referencia a súper "
 "clases."
 
-#: ../Doc/glossary.rst:326
+#: ../Doc/glossary.rst:319
 msgid ""
 "For more information about descriptors' methods, see :ref:`descriptors` or "
 "the :ref:`Descriptor How To Guide <descriptorhowto>`."
@@ -767,25 +780,26 @@ msgstr ""
 "consulte :ref:`descriptors` o :ref:`Guía práctica de uso de los "
 "descriptores<descriptorhowto>`."
 
-#: ../Doc/glossary.rst:328
+#: ../Doc/glossary.rst:321
 msgid "dictionary"
 msgstr "diccionario"
 
-#: ../Doc/glossary.rst:330
+#: ../Doc/glossary.rst:323
+#, fuzzy
 msgid ""
 "An associative array, where arbitrary keys are mapped to values.  The keys "
-"can be any object with :meth:`__hash__` and :meth:`__eq__` methods. Called a "
-"hash in Perl."
+"can be any object with :meth:`~object.__hash__` and :meth:`~object.__eq__` "
+"methods. Called a hash in Perl."
 msgstr ""
 "Un arreglo asociativo, con claves arbitrarias que son asociadas a valores. "
-"Las claves pueden ser cualquier objeto con los métodos :meth:`__hash__` y :"
-"meth:`__eq__` . Son llamadas hash en Perl."
+"Las claves pueden ser cualquier objeto con los métodos :meth:`__hash__` "
+"y :meth:`__eq__` . Son llamadas hash en Perl."
 
-#: ../Doc/glossary.rst:333
+#: ../Doc/glossary.rst:327
 msgid "dictionary comprehension"
 msgstr "comprensión de diccionarios"
 
-#: ../Doc/glossary.rst:335
+#: ../Doc/glossary.rst:329
 msgid ""
 "A compact way to process all or part of the elements in an iterable and "
 "return a dictionary with the results. ``results = {n: n ** 2 for n in "
@@ -797,36 +811,38 @@ msgstr ""
 "in range(10)}`` genera un diccionario que contiene la clave ``n`` asignada "
 "al valor ``n ** 2``. Ver :ref:`comprehensions`."
 
-#: ../Doc/glossary.rst:339
+#: ../Doc/glossary.rst:333
 msgid "dictionary view"
 msgstr "vista de diccionario"
 
-#: ../Doc/glossary.rst:341
+#: ../Doc/glossary.rst:335
 msgid ""
-"The objects returned from :meth:`dict.keys`, :meth:`dict.values`, and :meth:"
-"`dict.items` are called dictionary views. They provide a dynamic view on the "
-"dictionary’s entries, which means that when the dictionary changes, the view "
-"reflects these changes. To force the dictionary view to become a full list "
-"use ``list(dictview)``.  See :ref:`dict-views`."
+"The objects returned from :meth:`dict.keys`, :meth:`dict.values`, "
+"and :meth:`dict.items` are called dictionary views. They provide a dynamic "
+"view on the dictionary’s entries, which means that when the dictionary "
+"changes, the view reflects these changes. To force the dictionary view to "
+"become a full list use ``list(dictview)``.  See :ref:`dict-views`."
 msgstr ""
-"Los objetos retornados por los métodos  :meth:`dict.keys`, :meth:`dict."
-"values`, y :meth:`dict.items` son llamados vistas de diccionarios. Proveen "
-"una vista dinámica de las entradas de un diccionario, lo que significa que "
-"cuando el diccionario cambia, la vista refleja éstos cambios. Para forzar a "
-"la vista de diccionario a convertirse en una lista completa, use "
-"``list(dictview)``.  Vea :ref:`dict-views`."
+"Los objetos retornados por los "
+"métodos  :meth:`dict.keys`, :meth:`dict.values`, y :meth:`dict.items` son "
+"llamados vistas de diccionarios. Proveen una vista dinámica de las entradas "
+"de un diccionario, lo que significa que cuando el diccionario cambia, la "
+"vista refleja éstos cambios. Para forzar a la vista de diccionario a "
+"convertirse en una lista completa, use ``list(dictview)``.  Vea :ref:`dict-"
+"views`."
 
-#: ../Doc/glossary.rst:347
+#: ../Doc/glossary.rst:341
 msgid "docstring"
 msgstr "docstring"
 
-#: ../Doc/glossary.rst:349
+#: ../Doc/glossary.rst:343
+#, fuzzy
 msgid ""
 "A string literal which appears as the first expression in a class, function "
 "or module.  While ignored when the suite is executed, it is recognized by "
-"the compiler and put into the :attr:`__doc__` attribute of the enclosing "
-"class, function or module.  Since it is available via introspection, it is "
-"the canonical place for documentation of the object."
+"the compiler and put into the :attr:`~definition.__doc__` attribute of the "
+"enclosing class, function or module.  Since it is available via "
+"introspection, it is the canonical place for documentation of the object."
 msgstr ""
 "Una cadena de caracteres literal que aparece como la primera expresión en "
 "una clase, función o módulo. Aunque es ignorada cuando se ejecuta, es "
@@ -834,21 +850,21 @@ msgstr ""
 "clase, función o módulo comprendida.  Como está disponible mediante "
 "introspección, es el lugar canónico para ubicar la documentación del objeto."
 
-#: ../Doc/glossary.rst:355
+#: ../Doc/glossary.rst:349
 msgid "duck-typing"
 msgstr "tipado de pato"
 
-#: ../Doc/glossary.rst:357
+#: ../Doc/glossary.rst:351
 msgid ""
 "A programming style which does not look at an object's type to determine if "
 "it has the right interface; instead, the method or attribute is simply "
 "called or used (\"If it looks like a duck and quacks like a duck, it must be "
 "a duck.\")  By emphasizing interfaces rather than specific types, well-"
 "designed code improves its flexibility by allowing polymorphic "
-"substitution.  Duck-typing avoids tests using :func:`type` or :func:"
-"`isinstance`.  (Note, however, that duck-typing can be complemented with :"
-"term:`abstract base classes <abstract base class>`.)  Instead, it typically "
-"employs :func:`hasattr` tests or :term:`EAFP` programming."
+"substitution.  Duck-typing avoids tests using :func:`type` "
+"or :func:`isinstance`.  (Note, however, that duck-typing can be complemented "
+"with :term:`abstract base classes <abstract base class>`.)  Instead, it "
+"typically employs :func:`hasattr` tests or :term:`EAFP` programming."
 msgstr ""
 "Un estilo de programación que no revisa el tipo del objeto para determinar "
 "si tiene la interfaz correcta; en vez de ello, el método o atributo es "
@@ -858,14 +874,14 @@ msgstr ""
 "permitiendo la sustitución polimórfica.  El tipado de pato *duck-typing* "
 "evita usar pruebas llamando a :func:`type` o :func:`isinstance`.  (Nota: si "
 "embargo, el tipado de pato puede ser complementado con :term:`abstract base "
-"classes <abstract base class>`. En su lugar, generalmente pregunta con :func:"
-"`hasattr` o :term:`EAFP`."
+"classes <abstract base class>`. En su lugar, generalmente pregunta "
+"con :func:`hasattr` o :term:`EAFP`."
 
-#: ../Doc/glossary.rst:366
+#: ../Doc/glossary.rst:360
 msgid "EAFP"
 msgstr "EAFP"
 
-#: ../Doc/glossary.rst:368
+#: ../Doc/glossary.rst:362
 msgid ""
 "Easier to ask for forgiveness than permission.  This common Python coding "
 "style assumes the existence of valid keys or attributes and catches "
@@ -882,11 +898,11 @@ msgstr ""
 "Esta técnica contrasta con estilo :term:`LBYL` usual en otros lenguajes como "
 "C."
 
-#: ../Doc/glossary.rst:374
+#: ../Doc/glossary.rst:368
 msgid "expression"
 msgstr "expresión"
 
-#: ../Doc/glossary.rst:376
+#: ../Doc/glossary.rst:370
 msgid ""
 "A piece of syntax which can be evaluated to some value.  In other words, an "
 "expression is an accumulation of expression elements like literals, names, "
@@ -900,15 +916,16 @@ msgstr ""
 "otras palabras, una expresión es una acumulación de elementos de expresión "
 "tales como literales, nombres, accesos a atributos, operadores o llamadas a "
 "funciones, todos ellos retornando valor.  A diferencia de otros lenguajes, "
-"no toda la sintaxis del lenguaje son expresiones. También hay :term:"
-"`statement`\\s que no pueden ser usadas como expresiones, como la :keyword:"
-"`while`.  Las asignaciones también son sentencias, no expresiones."
+"no toda la sintaxis del lenguaje son expresiones. También "
+"hay :term:`statement`\\s que no pueden ser usadas como expresiones, como "
+"la :keyword:`while`.  Las asignaciones también son sentencias, no "
+"expresiones."
 
-#: ../Doc/glossary.rst:383
+#: ../Doc/glossary.rst:377
 msgid "extension module"
 msgstr "módulo de extensión"
 
-#: ../Doc/glossary.rst:385
+#: ../Doc/glossary.rst:379
 msgid ""
 "A module written in C or C++, using Python's C API to interact with the core "
 "and with user code."
@@ -916,11 +933,11 @@ msgstr ""
 "Un módulo escrito en C o C++, usando la API para C de Python para "
 "interactuar con el núcleo y el código del usuario."
 
-#: ../Doc/glossary.rst:387
+#: ../Doc/glossary.rst:381
 msgid "f-string"
 msgstr "f-string"
 
-#: ../Doc/glossary.rst:389
+#: ../Doc/glossary.rst:383
 msgid ""
 "String literals prefixed with ``'f'`` or ``'F'`` are commonly called \"f-"
 "strings\" which is short for :ref:`formatted string literals <f-strings>`.  "
@@ -930,28 +947,29 @@ msgstr ""
 "``'F'``, que es una abreviatura para  :ref:`formatted string literals <f-"
 "strings>`.  Vea también :pep:`498`."
 
-#: ../Doc/glossary.rst:392
+#: ../Doc/glossary.rst:386
 msgid "file object"
 msgstr "objeto archivo"
 
-#: ../Doc/glossary.rst:394
+#: ../Doc/glossary.rst:388
+#, fuzzy
 msgid ""
-"An object exposing a file-oriented API (with methods such as :meth:`read()` "
-"or :meth:`write()`) to an underlying resource.  Depending on the way it was "
+"An object exposing a file-oriented API (with methods such as :meth:`!read` "
+"or :meth:`!write`) to an underlying resource.  Depending on the way it was "
 "created, a file object can mediate access to a real on-disk file or to "
 "another type of storage or communication device (for example standard input/"
 "output, in-memory buffers, sockets, pipes, etc.).  File objects are also "
 "called :dfn:`file-like objects` or :dfn:`streams`."
 msgstr ""
-"Un objeto que expone una API orientada a archivos (con métodos como :meth:"
-"`read()` o :meth:`write()`) al objeto subyacente.  Dependiendo de la forma "
-"en la que fue creado, un objeto archivo, puede mediar el acceso a un archivo "
-"real en el disco u otro tipo de dispositivo de almacenamiento o de "
-"comunicación (por ejemplo, entrada/salida estándar, búfer de memoria, "
-"sockets, pipes, etc.).  Los objetos archivo son también denominados :dfn:"
-"`objetos tipo archivo` o :dfn:`flujos`."
+"Un objeto que expone una API orientada a archivos (con métodos "
+"como :meth:`read()` o :meth:`write()`) al objeto subyacente.  Dependiendo de "
+"la forma en la que fue creado, un objeto archivo, puede mediar el acceso a "
+"un archivo real en el disco u otro tipo de dispositivo de almacenamiento o "
+"de comunicación (por ejemplo, entrada/salida estándar, búfer de memoria, "
+"sockets, pipes, etc.).  Los objetos archivo son también "
+"denominados :dfn:`objetos tipo archivo` o :dfn:`flujos`."
 
-#: ../Doc/glossary.rst:402
+#: ../Doc/glossary.rst:396
 msgid ""
 "There are actually three categories of file objects: raw :term:`binary files "
 "<binary file>`, buffered :term:`binary files <binary file>` and :term:`text "
@@ -965,19 +983,19 @@ msgstr ""
 "módulo :mod:`io`.  La forma canónica de crear objetos archivo es usando la "
 "función :func:`open`."
 
-#: ../Doc/glossary.rst:407
+#: ../Doc/glossary.rst:401
 msgid "file-like object"
 msgstr "objetos tipo archivo"
 
-#: ../Doc/glossary.rst:409
+#: ../Doc/glossary.rst:403
 msgid "A synonym for :term:`file object`."
 msgstr "Un sinónimo de :term:`file object`."
 
-#: ../Doc/glossary.rst:410
+#: ../Doc/glossary.rst:404
 msgid "filesystem encoding and error handler"
 msgstr "codificación del sistema de archivos y manejador de errores"
 
-#: ../Doc/glossary.rst:412
+#: ../Doc/glossary.rst:406
 msgid ""
 "Encoding and error handler used by Python to decode bytes from the operating "
 "system and encode Unicode to the operating system."
@@ -985,7 +1003,7 @@ msgstr ""
 "Controlador de errores y codificación utilizado por Python para decodificar "
 "bytes del sistema operativo y codificar Unicode en el sistema operativo."
 
-#: ../Doc/glossary.rst:415
+#: ../Doc/glossary.rst:409
 msgid ""
 "The filesystem encoding must guarantee to successfully decode all bytes "
 "below 128. If the file system encoding fails to provide this guarantee, API "
@@ -996,38 +1014,38 @@ msgstr ""
 "de archivos no proporciona esta garantía, las funciones de API pueden "
 "lanzar :exc:`UnicodeError`."
 
-#: ../Doc/glossary.rst:419
+#: ../Doc/glossary.rst:413
 msgid ""
-"The :func:`sys.getfilesystemencoding` and :func:`sys."
-"getfilesystemencodeerrors` functions can be used to get the filesystem "
-"encoding and error handler."
+"The :func:`sys.getfilesystemencoding` "
+"and :func:`sys.getfilesystemencodeerrors` functions can be used to get the "
+"filesystem encoding and error handler."
 msgstr ""
-"Las funciones :func:`sys.getfilesystemencoding` y :func:`sys."
-"getfilesystemencodeerrors` se pueden utilizar para obtener la codificación "
-"del sistema de archivos y el controlador de errores."
+"Las funciones :func:`sys.getfilesystemencoding` "
+"y :func:`sys.getfilesystemencodeerrors` se pueden utilizar para obtener la "
+"codificación del sistema de archivos y el controlador de errores."
 
-#: ../Doc/glossary.rst:423
+#: ../Doc/glossary.rst:417
 msgid ""
 "The :term:`filesystem encoding and error handler` are configured at Python "
-"startup by the :c:func:`PyConfig_Read` function: see :c:member:`~PyConfig."
-"filesystem_encoding` and :c:member:`~PyConfig.filesystem_errors` members of :"
-"c:type:`PyConfig`."
+"startup by the :c:func:`PyConfig_Read` function: "
+"see :c:member:`~PyConfig.filesystem_encoding` "
+"and :c:member:`~PyConfig.filesystem_errors` members of :c:type:`PyConfig`."
 msgstr ""
 "La :term:`codificación del sistema de archivos y el manejador de errores "
 "<filesystem encoding and error handler>` se configuran al inicio de Python "
-"mediante la función :c:func:`PyConfig_Read`: consulte los miembros :c:member:"
-"`~PyConfig.filesystem_encoding` y :c:member:`~PyConfig.filesystem_errors` "
-"de :c:type:`PyConfig`."
+"mediante la función :c:func:`PyConfig_Read`: consulte los "
+"miembros :c:member:`~PyConfig.filesystem_encoding` "
+"y :c:member:`~PyConfig.filesystem_errors` de :c:type:`PyConfig`."
 
-#: ../Doc/glossary.rst:428
+#: ../Doc/glossary.rst:422
 msgid "See also the :term:`locale encoding`."
 msgstr "Vea también :term:`locale encoding`."
 
-#: ../Doc/glossary.rst:429
+#: ../Doc/glossary.rst:423
 msgid "finder"
 msgstr "buscador"
 
-#: ../Doc/glossary.rst:431
+#: ../Doc/glossary.rst:425
 msgid ""
 "An object that tries to find the :term:`loader` for a module that is being "
 "imported."
@@ -1035,26 +1053,28 @@ msgstr ""
 "Un objeto que trata de encontrar el :term:`loader` para el módulo que está "
 "siendo importado."
 
-#: ../Doc/glossary.rst:434
+#: ../Doc/glossary.rst:428
+#, fuzzy
 msgid ""
-"Since Python 3.3, there are two types of finder: :term:`meta path finders "
-"<meta path finder>` for use with :data:`sys.meta_path`, and :term:`path "
-"entry finders <path entry finder>` for use with :data:`sys.path_hooks`."
+"There are two types of finder: :term:`meta path finders <meta path finder>` "
+"for use with :data:`sys.meta_path`, and :term:`path entry finders <path "
+"entry finder>` for use with :data:`sys.path_hooks`."
 msgstr ""
 "Desde la versión 3.3 de Python, existen dos tipos de buscadores: :term:`meta "
 "buscadores de ruta <meta path finder>` para usar con :data:`sys.meta_path`, "
 "y :term:`buscadores de entradas de rutas <path entry finder>` para usar "
 "con  :data:`sys.path_hooks`."
 
-#: ../Doc/glossary.rst:438
-msgid "See :pep:`302`, :pep:`420` and :pep:`451` for much more detail."
+#: ../Doc/glossary.rst:432
+#, fuzzy
+msgid "See :ref:`importsystem` and :mod:`importlib` for much more detail."
 msgstr "Vea :pep:`302`, :pep:`420` y :pep:`451` para mayores detalles."
 
-#: ../Doc/glossary.rst:439
+#: ../Doc/glossary.rst:433
 msgid "floor division"
 msgstr "división entera a la baja"
 
-#: ../Doc/glossary.rst:441
+#: ../Doc/glossary.rst:435
 msgid ""
 "Mathematical division that rounds down to nearest integer.  The floor "
 "division operator is ``//``.  For example, the expression ``11 // 4`` "
@@ -1068,6 +1088,18 @@ msgstr ""
 "la verdadera división de números flotantes.  Note que ``(-11) // 4`` es "
 "``-3`` porque es ``-2.75`` redondeado *para abajo*. Ver :pep:`238`."
 
+#: ../Doc/glossary.rst:440
+msgid "free threading"
+msgstr ""
+
+#: ../Doc/glossary.rst:442
+msgid ""
+"A threading model where multiple threads can run Python bytecode "
+"simultaneously within the same interpreter.  This is in contrast to "
+"the :term:`global interpreter lock` which allows only one thread to execute "
+"Python bytecode at a time.  See :pep:`703`."
+msgstr ""
+
 #: ../Doc/glossary.rst:446
 msgid "function"
 msgstr "función"
@@ -1076,13 +1108,13 @@ msgstr "función"
 msgid ""
 "A series of statements which returns some value to a caller. It can also be "
 "passed zero or more :term:`arguments <argument>` which may be used in the "
-"execution of the body. See also :term:`parameter`, :term:`method`, and the :"
-"ref:`function` section."
+"execution of the body. See also :term:`parameter`, :term:`method`, and "
+"the :ref:`function` section."
 msgstr ""
 "Una serie de sentencias que retornan un valor al que las llama.  También se "
 "le puede pasar cero o más :term:`argumentos <argument>` los cuales pueden "
-"ser usados en la ejecución de la misma. Vea también :term:`parameter`, :term:"
-"`method`, y la sección :ref:`function`."
+"ser usados en la ejecución de la misma. Vea "
+"también :term:`parameter`, :term:`method`, y la sección :ref:`function`."
 
 #: ../Doc/glossary.rst:452
 msgid "function annotation"
@@ -1099,16 +1131,22 @@ msgid ""
 "for example, this function is expected to take two :class:`int` arguments "
 "and is also expected to have an :class:`int` return value::"
 msgstr ""
-"Las anotaciones de funciones son usadas frecuentemente para :term:"
-"`indicadores de tipo <type hint>`, por ejemplo, se espera que una función "
-"tome dos argumentos de clase :class:`int`  y también se espera que retorne "
-"dos valores :class:`int`::"
+"Las anotaciones de funciones son usadas frecuentemente "
+"para :term:`indicadores de tipo <type hint>`, por ejemplo, se espera que una "
+"función tome dos argumentos de clase :class:`int`  y también se espera que "
+"retorne dos valores :class:`int`::"
+
+#: ../Doc/glossary.rst:461
+msgid ""
+"def sum_two_numbers(a: int, b: int) -> int:\n"
+"   return a + b"
+msgstr ""
 
 #: ../Doc/glossary.rst:464
 msgid "Function annotation syntax is explained in section :ref:`function`."
 msgstr ""
-"La sintaxis de las anotaciones de funciones son explicadas en la sección :"
-"ref:`function`."
+"La sintaxis de las anotaciones de funciones son explicadas en la "
+"sección :ref:`function`."
 
 #: ../Doc/glossary.rst:466
 msgid ""
@@ -1128,8 +1166,8 @@ msgstr "__future__"
 msgid ""
 "A :ref:`future statement <future>`, ``from __future__ import <feature>``, "
 "directs the compiler to compile the current module using syntax or semantics "
-"that will become standard in a future release of Python. The :mod:"
-"`__future__` module documents the possible values of *feature*.  By "
+"that will become standard in a future release of Python. "
+"The :mod:`__future__` module documents the possible values of *feature*.  By "
 "importing this module and evaluating its variables, you can see when a new "
 "feature was first added to the language and when it will (or did) become the "
 "default::"
@@ -1141,6 +1179,13 @@ msgstr ""
 "importar este módulo y evaluar sus variables, puede ver cuándo se agregó por "
 "primera vez una nueva característica al lenguaje y cuándo se convertirá (o "
 "se convirtió) en la predeterminada:"
+
+#: ../Doc/glossary.rst:480
+msgid ""
+">>> import __future__\n"
+">>> __future__.division\n"
+"_Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)"
+msgstr ""
 
 #: ../Doc/glossary.rst:483
 msgid "garbage collection"
@@ -1211,16 +1256,23 @@ msgid "generator expression"
 msgstr "expresión generadora"
 
 #: ../Doc/glossary.rst:514
+#, fuzzy
 msgid ""
-"An expression that returns an iterator.  It looks like a normal expression "
-"followed by a :keyword:`!for` clause defining a loop variable, range, and an "
-"optional :keyword:`!if` clause.  The combined expression generates values "
-"for an enclosing function::"
+"An :term:`expression` that returns an :term:`iterator`.  It looks like a "
+"normal expression followed by a :keyword:`!for` clause defining a loop "
+"variable, range, and an optional :keyword:`!if` clause.  The combined "
+"expression generates values for an enclosing function::"
 msgstr ""
 "Una expresión que retorna un iterador.  Luce como una expresión normal "
 "seguida por la cláusula :keyword:`!for` definiendo así una variable de "
 "bucle, un rango y una cláusula opcional :keyword:`!if`.  La expresión "
 "combinada genera valores para la función contenedora::"
+
+#: ../Doc/glossary.rst:519
+msgid ""
+">>> sum(i*i for i in range(10))         # sum of squares 0, 1, 4, ... 81\n"
+"285"
+msgstr ""
 
 #: ../Doc/glossary.rst:521
 msgid "generic function"
@@ -1238,11 +1290,11 @@ msgstr ""
 
 #: ../Doc/glossary.rst:527
 msgid ""
-"See also the :term:`single dispatch` glossary entry, the :func:`functools."
-"singledispatch` decorator, and :pep:`443`."
+"See also the :term:`single dispatch` glossary entry, "
+"the :func:`functools.singledispatch` decorator, and :pep:`443`."
 msgstr ""
-"Vea también la entrada de glosario :term:`single dispatch`, el decorador :"
-"func:`functools.singledispatch`, y :pep:`443`."
+"Vea también la entrada de glosario :term:`single dispatch`, el "
+"decorador :func:`functools.singledispatch`, y :pep:`443`."
 
 #: ../Doc/glossary.rst:529
 msgid "generic type"
@@ -1251,20 +1303,22 @@ msgstr "tipos genéricos"
 #: ../Doc/glossary.rst:531
 msgid ""
 "A :term:`type` that can be parameterized; typically a :ref:`container "
-"class<sequence-types>` such as :class:`list` or :class:`dict`. Used for :"
-"term:`type hints <type hint>` and :term:`annotations <annotation>`."
+"class<sequence-types>` such as :class:`list` or :class:`dict`. Used "
+"for :term:`type hints <type hint>` and :term:`annotations <annotation>`."
 msgstr ""
 "Un :term:`type` que se puede parametrizar; normalmente un :ref:`container "
-"class<sequence-types>` como :class:`list` o :class:`dict`. Usado para :term:"
-"`type hints <type hint>` y :term:`annotations <annotation>`."
+"class<sequence-types>` como :class:`list` o :class:`dict`. Usado "
+"para :term:`type hints <type hint>` y :term:`annotations <annotation>`."
 
 #: ../Doc/glossary.rst:536
 msgid ""
-"For more details, see :ref:`generic alias types<types-genericalias>`, :pep:"
-"`483`, :pep:`484`, :pep:`585`, and the :mod:`typing` module."
+"For more details, see :ref:`generic alias types<types-"
+"genericalias>`, :pep:`483`, :pep:`484`, :pep:`585`, and the :mod:`typing` "
+"module."
 msgstr ""
-"Para más detalles, véase :ref:`generic alias types<types-genericalias>`, :"
-"pep:`483`, :pep:`484`, :pep:`585`, y el módulo :mod:`typing`."
+"Para más detalles, véase :ref:`generic alias types<types-"
+"genericalias>`, :pep:`483`, :pep:`484`, :pep:`585`, y el "
+"módulo :mod:`typing`."
 
 #: ../Doc/glossary.rst:538
 msgid "GIL"
@@ -1310,17 +1364,13 @@ msgstr ""
 
 #: ../Doc/glossary.rst:557
 msgid ""
-"Past efforts to create a \"free-threaded\" interpreter (one which locks "
-"shared data at a much finer granularity) have not been successful because "
-"performance suffered in the common single-processor case. It is believed "
-"that overcoming this performance issue would make the implementation much "
-"more complicated and therefore costlier to maintain."
+"As of Python 3.13, the GIL can be disabled using the :option:`--disable-gil` "
+"build configuration. After building Python with this option, code must be "
+"run with :option:`-X gil 0 <-X>` or after setting the :envvar:`PYTHON_GIL=0 "
+"<PYTHON_GIL>` environment variable. This feature enables improved "
+"performance for multi-threaded applications and makes it easier to use multi-"
+"core CPUs efficiently. For more details, see :pep:`703`."
 msgstr ""
-"Esfuerzos previos hechos para crear un intérprete \"sin hilos\" (uno que "
-"bloquee los datos compartidos con una granularidad mucho más fina) no han "
-"sido exitosos debido a que el rendimiento sufrió para el caso más común de "
-"un solo procesador. Se cree que superar este problema de rendimiento haría "
-"la implementación mucho más compleja y por tanto, más costosa de mantener."
 
 #: ../Doc/glossary.rst:563
 msgid "hash-based pyc"
@@ -1341,18 +1391,19 @@ msgid "hashable"
 msgstr "hashable"
 
 #: ../Doc/glossary.rst:570
+#, fuzzy
 msgid ""
 "An object is *hashable* if it has a hash value which never changes during "
-"its lifetime (it needs a :meth:`__hash__` method), and can be compared to "
-"other objects (it needs an :meth:`__eq__` method).  Hashable objects which "
-"compare equal must have the same hash value."
+"its lifetime (it needs a :meth:`~object.__hash__` method), and can be "
+"compared to other objects (it needs an :meth:`~object.__eq__` method). "
+"Hashable objects which compare equal must have the same hash value."
 msgstr ""
 "Un objeto es *hashable* si tiene un valor de hash que nunca cambiará durante "
 "su tiempo de vida (necesita un método :meth:`__hash__` ), y puede ser "
 "comparado con otro objeto (necesita el método :meth:`__eq__` ).  Los objetos "
 "hashables que se comparan iguales deben tener el mismo número hash."
 
-#: ../Doc/glossary.rst:575
+#: ../Doc/glossary.rst:576
 msgid ""
 "Hashability makes an object usable as a dictionary key and a set member, "
 "because these data structures use the hash value internally."
@@ -1361,7 +1412,7 @@ msgstr ""
 "miembro de un set, porque éstas estructuras de datos usan los valores de "
 "hash internamente."
 
-#: ../Doc/glossary.rst:578
+#: ../Doc/glossary.rst:579
 msgid ""
 "Most of Python's immutable built-in objects are hashable; mutable containers "
 "(such as lists or dictionaries) are not; immutable containers (such as "
@@ -1378,11 +1429,11 @@ msgstr ""
 "Todos se comparan como desiguales (excepto consigo mismos), y su valor de "
 "hash está derivado de su función :func:`id`."
 
-#: ../Doc/glossary.rst:585
+#: ../Doc/glossary.rst:586
 msgid "IDLE"
 msgstr "IDLE"
 
-#: ../Doc/glossary.rst:587
+#: ../Doc/glossary.rst:588
 msgid ""
 "An Integrated Development and Learning Environment for Python. :ref:`idle` "
 "is a basic editor and interpreter environment which ships with the standard "
@@ -1392,11 +1443,29 @@ msgstr ""
 "un editor básico y un entorno de intérprete que se incluye con la "
 "distribución estándar de Python."
 
-#: ../Doc/glossary.rst:590
+#: ../Doc/glossary.rst:591
+#, fuzzy
+msgid "immortal"
+msgstr "inmutable"
+
+#: ../Doc/glossary.rst:593
+msgid ""
+"*Immortal objects* are a CPython implementation detail introduced "
+"in :pep:`683`."
+msgstr ""
+
+#: ../Doc/glossary.rst:596
+msgid ""
+"If an object is immortal, its :term:`reference count` is never modified, and "
+"therefore it is never deallocated while the interpreter is running. For "
+"example, :const:`True` and :const:`None` are immortal in CPython."
+msgstr ""
+
+#: ../Doc/glossary.rst:599
 msgid "immutable"
 msgstr "inmutable"
 
-#: ../Doc/glossary.rst:592
+#: ../Doc/glossary.rst:601
 msgid ""
 "An object with a fixed value.  Immutable objects include numbers, strings "
 "and tuples.  Such an object cannot be altered.  A new object has to be "
@@ -1410,11 +1479,11 @@ msgstr ""
 "en lugares donde es necesario un valor de hash constante, por ejemplo como "
 "claves de un diccionario."
 
-#: ../Doc/glossary.rst:597
+#: ../Doc/glossary.rst:606
 msgid "import path"
 msgstr "ruta de importación"
 
-#: ../Doc/glossary.rst:599
+#: ../Doc/glossary.rst:608
 msgid ""
 "A list of locations (or :term:`path entries <path entry>`) that are searched "
 "by the :term:`path based finder` for modules to import. During import, this "
@@ -1423,15 +1492,15 @@ msgid ""
 msgstr ""
 "Una lista de las ubicaciones (o :term:`entradas de ruta <path entry>`) que "
 "son revisadas por :term:`path based finder` al importar módulos. Durante la "
-"importación, ésta lista de localizaciones usualmente viene de :data:`sys."
-"path`, pero para los subpaquetes también puede incluir al atributo "
-"``__path__`` del paquete padre."
+"importación, ésta lista de localizaciones usualmente viene "
+"de :data:`sys.path`, pero para los subpaquetes también puede incluir al "
+"atributo ``__path__`` del paquete padre."
 
-#: ../Doc/glossary.rst:604
+#: ../Doc/glossary.rst:613
 msgid "importing"
 msgstr "importar"
 
-#: ../Doc/glossary.rst:606
+#: ../Doc/glossary.rst:615
 msgid ""
 "The process by which Python code in one module is made available to Python "
 "code in another module."
@@ -1439,29 +1508,31 @@ msgstr ""
 "El proceso mediante el cual el código Python dentro de un módulo se hace "
 "alcanzable desde otro código Python en otro módulo."
 
-#: ../Doc/glossary.rst:608
+#: ../Doc/glossary.rst:617
 msgid "importer"
 msgstr "importador"
 
-#: ../Doc/glossary.rst:610
+#: ../Doc/glossary.rst:619
 msgid ""
-"An object that both finds and loads a module; both a :term:`finder` and :"
-"term:`loader` object."
+"An object that both finds and loads a module; both a :term:`finder` "
+"and :term:`loader` object."
 msgstr ""
 "Un objeto que buscan y lee un módulo; un objeto que es tanto :term:`finder` "
 "como :term:`loader`."
 
-#: ../Doc/glossary.rst:612
+#: ../Doc/glossary.rst:621
 msgid "interactive"
 msgstr "interactivo"
 
-#: ../Doc/glossary.rst:614
+#: ../Doc/glossary.rst:623
+#, fuzzy
 msgid ""
 "Python has an interactive interpreter which means you can enter statements "
 "and expressions at the interpreter prompt, immediately execute them and see "
 "their results.  Just launch ``python`` with no arguments (possibly by "
 "selecting it from your computer's main menu). It is a very powerful way to "
-"test out new ideas or inspect modules and packages (remember ``help(x)``)."
+"test out new ideas or inspect modules and packages (remember ``help(x)``). "
+"For more on interactive mode, see :ref:`tut-interac`."
 msgstr ""
 "Python tiene un intérprete interactivo, lo que significa que puede ingresar "
 "sentencias y expresiones en el prompt del intérprete, ejecutarlos de "
@@ -1470,11 +1541,11 @@ msgstr ""
 "forma muy potente de probar nuevas ideas o inspeccionar módulos y paquetes "
 "(recuerde  ``help(x)``)."
 
-#: ../Doc/glossary.rst:620
+#: ../Doc/glossary.rst:630
 msgid "interpreted"
 msgstr "interpretado"
 
-#: ../Doc/glossary.rst:622
+#: ../Doc/glossary.rst:632
 msgid ""
 "Python is an interpreted language, as opposed to a compiled one, though the "
 "distinction can be blurry because of the presence of the bytecode compiler.  "
@@ -1491,20 +1562,20 @@ msgstr ""
 "cortos que los compilados, sin embargo sus programas suelen correr más "
 "lentamente.  Vea también  :term:`interactive`."
 
-#: ../Doc/glossary.rst:629
+#: ../Doc/glossary.rst:639
 msgid "interpreter shutdown"
 msgstr "apagado del intérprete"
 
-#: ../Doc/glossary.rst:631
+#: ../Doc/glossary.rst:641
 msgid ""
 "When asked to shut down, the Python interpreter enters a special phase where "
 "it gradually releases all allocated resources, such as modules and various "
-"critical internal structures.  It also makes several calls to the :term:"
-"`garbage collector <garbage collection>`. This can trigger the execution of "
-"code in user-defined destructors or weakref callbacks. Code executed during "
-"the shutdown phase can encounter various exceptions as the resources it "
-"relies on may not function anymore (common examples are library modules or "
-"the warnings machinery)."
+"critical internal structures.  It also makes several calls to "
+"the :term:`garbage collector <garbage collection>`. This can trigger the "
+"execution of code in user-defined destructors or weakref callbacks. Code "
+"executed during the shutdown phase can encounter various exceptions as the "
+"resources it relies on may not function anymore (common examples are library "
+"modules or the warnings machinery)."
 msgstr ""
 "Cuando se le solicita apagarse, el intérprete Python ingresa a un fase "
 "especial en la cual gradualmente libera todos los recursos reservados, como "
@@ -1516,7 +1587,7 @@ msgstr ""
 "no funcionar más (ejemplos comunes son los módulos de bibliotecas o los "
 "artefactos de advertencias *warnings machinery*)"
 
-#: ../Doc/glossary.rst:640
+#: ../Doc/glossary.rst:650
 msgid ""
 "The main reason for interpreter shutdown is that the ``__main__`` module or "
 "the script being run has finished executing."
@@ -1524,75 +1595,82 @@ msgstr ""
 "La principal razón para el apagado del intérpreter es que el módulo "
 "``__main__`` o el script que estaba corriendo termine su ejecución."
 
-#: ../Doc/glossary.rst:642
+#: ../Doc/glossary.rst:652
 msgid "iterable"
 msgstr "iterable"
 
-#: ../Doc/glossary.rst:644
+#: ../Doc/glossary.rst:654
+#, fuzzy
 msgid ""
 "An object capable of returning its members one at a time. Examples of "
 "iterables include all sequence types (such as :class:`list`, :class:`str`, "
-"and :class:`tuple`) and some non-sequence types like :class:`dict`, :term:"
-"`file objects <file object>`, and objects of any classes you define with an :"
-"meth:`__iter__` method or with a :meth:`__getitem__` method that implements :"
-"term:`sequence` semantics."
+"and :class:`tuple`) and some non-sequence types "
+"like :class:`dict`, :term:`file objects <file object>`, and objects of any "
+"classes you define with an :meth:`~iterator.__iter__` method or with "
+"a :meth:`~object.__getitem__` method that implements :term:`sequence` "
+"semantics."
 msgstr ""
 "Un objeto capaz de retornar sus miembros uno por vez. Ejemplos de iterables "
-"son todos los tipos de secuencias (como :class:`list`, :class:`str`, y :"
-"class:`tuple`) y algunos de tipos no secuenciales, como :class:`dict`, :term:"
-"`objeto archivo <file object>`, y objetos de cualquier clase que defina con "
-"los métodos :meth:`__iter__` o con un método :meth:`__getitem__` que "
-"implementen la semántica de :term:`sequence`."
+"son todos los tipos de secuencias (como :class:`list`, :class:`str`, "
+"y :class:`tuple`) y algunos de tipos no secuenciales, "
+"como :class:`dict`, :term:`objeto archivo <file object>`, y objetos de "
+"cualquier clase que defina con los métodos :meth:`__iter__` o con un "
+"método :meth:`__getitem__` que implementen la semántica de :term:`sequence`."
 
-#: ../Doc/glossary.rst:651
+#: ../Doc/glossary.rst:662
+#, fuzzy
 msgid ""
 "Iterables can be used in a :keyword:`for` loop and in many other places "
 "where a sequence is needed (:func:`zip`, :func:`map`, ...).  When an "
-"iterable object is passed as an argument to the built-in function :func:"
-"`iter`, it returns an iterator for the object.  This iterator is good for "
-"one pass over the set of values.  When using iterables, it is usually not "
-"necessary to call :func:`iter` or deal with iterator objects yourself.  The "
-"``for`` statement does that automatically for you, creating a temporary "
-"unnamed variable to hold the iterator for the duration of the loop.  See "
-"also :term:`iterator`, :term:`sequence`, and :term:`generator`."
+"iterable object is passed as an argument to the built-in "
+"function :func:`iter`, it returns an iterator for the object.  This iterator "
+"is good for one pass over the set of values.  When using iterables, it is "
+"usually not necessary to call :func:`iter` or deal with iterator objects "
+"yourself.  The :keyword:`for` statement does that automatically for you, "
+"creating a temporary unnamed variable to hold the iterator for the duration "
+"of the loop.  See also :term:`iterator`, :term:`sequence`, "
+"and :term:`generator`."
 msgstr ""
 "Los iterables pueden ser usados en el bucle :keyword:`for` y en muchos otros "
 "sitios donde una secuencia es necesaria (:func:`zip`, :func:`map`, ...).  "
-"Cuando un objeto iterable es pasado como argumento a la función incorporada :"
-"func:`iter`, retorna un iterador para el objeto.  Este iterador pasa así el "
-"conjunto de valores.  Cuando se usan iterables, normalmente no es necesario "
-"llamar a la función :func:`iter` o tratar con los objetos iteradores usted "
-"mismo.  La sentencia ``for`` lo hace automáticamente por usted, creando un "
-"variable temporal sin nombre para mantener el iterador mientras dura el "
-"bucle.  Vea también :term:`iterator`, :term:`sequence`, y :term:`generator`."
+"Cuando un objeto iterable es pasado como argumento a la función "
+"incorporada :func:`iter`, retorna un iterador para el objeto.  Este iterador "
+"pasa así el conjunto de valores.  Cuando se usan iterables, normalmente no "
+"es necesario llamar a la función :func:`iter` o tratar con los objetos "
+"iteradores usted mismo.  La sentencia ``for`` lo hace automáticamente por "
+"usted, creando un variable temporal sin nombre para mantener el iterador "
+"mientras dura el bucle.  Vea también :term:`iterator`, :term:`sequence`, "
+"y :term:`generator`."
 
-#: ../Doc/glossary.rst:661
+#: ../Doc/glossary.rst:672
 msgid "iterator"
 msgstr "iterador"
 
-#: ../Doc/glossary.rst:663
+#: ../Doc/glossary.rst:674
+#, fuzzy
 msgid ""
-"An object representing a stream of data.  Repeated calls to the iterator's :"
-"meth:`~iterator.__next__` method (or passing it to the built-in function :"
-"func:`next`) return successive items in the stream.  When no more data are "
-"available a :exc:`StopIteration` exception is raised instead.  At this "
-"point, the iterator object is exhausted and any further calls to its :meth:"
-"`__next__` method just raise :exc:`StopIteration` again.  Iterators are "
-"required to have an :meth:`__iter__` method that returns the iterator object "
-"itself so every iterator is also iterable and may be used in most places "
-"where other iterables are accepted.  One notable exception is code which "
-"attempts multiple iteration passes.  A container object (such as a :class:"
-"`list`) produces a fresh new iterator each time you pass it to the :func:"
-"`iter` function or use it in a :keyword:`for` loop.  Attempting this with an "
-"iterator will just return the same exhausted iterator object used in the "
-"previous iteration pass, making it appear like an empty container."
+"An object representing a stream of data.  Repeated calls to the "
+"iterator's :meth:`~iterator.__next__` method (or passing it to the built-in "
+"function :func:`next`) return successive items in the stream.  When no more "
+"data are available a :exc:`StopIteration` exception is raised instead.  At "
+"this point, the iterator object is exhausted and any further calls to "
+"its :meth:`!__next__` method just raise :exc:`StopIteration` again.  "
+"Iterators are required to have an :meth:`~iterator.__iter__` method that "
+"returns the iterator object itself so every iterator is also iterable and "
+"may be used in most places where other iterables are accepted.  One notable "
+"exception is code which attempts multiple iteration passes.  A container "
+"object (such as a :class:`list`) produces a fresh new iterator each time you "
+"pass it to the :func:`iter` function or use it in a :keyword:`for` loop.  "
+"Attempting this with an iterator will just return the same exhausted "
+"iterator object used in the previous iteration pass, making it appear like "
+"an empty container."
 msgstr ""
-"Un objeto que representa un flujo de datos.  Llamadas repetidas al método  :"
-"meth:`~iterator.__next__` del iterador (o al pasar la función incorporada :"
-"func:`next`) retorna ítems sucesivos del flujo.  Cuando no hay más datos "
-"disponibles, una excepción :exc:`StopIteration` es disparada.  En este "
-"momento, el objeto iterador está exhausto y cualquier llamada posterior al "
-"método :meth:`__next__` sólo dispara otra vez :exc:`StopIteration`.  Los "
+"Un objeto que representa un flujo de datos.  Llamadas repetidas al "
+"método  :meth:`~iterator.__next__` del iterador (o al pasar la función "
+"incorporada :func:`next`) retorna ítems sucesivos del flujo.  Cuando no hay "
+"más datos disponibles, una excepción :exc:`StopIteration` es disparada.  En "
+"este momento, el objeto iterador está exhausto y cualquier llamada posterior "
+"al método :meth:`__next__` sólo dispara otra vez :exc:`StopIteration`.  Los "
 "iteradores necesitan tener un método :meth:`__iter__` que retorna el objeto "
 "iterador mismo así cada iterador es también un iterable y puede ser usado en "
 "casi todos los lugares donde los iterables son aceptados.  Una excepción "
@@ -1603,77 +1681,83 @@ msgstr ""
 "iterador exhausto usado en previas iteraciones, haciéndolo aparecer como un "
 "contenedor vacío."
 
-#: ../Doc/glossary.rst:678
+#: ../Doc/glossary.rst:689
 msgid "More information can be found in :ref:`typeiter`."
 msgstr "Puede encontrar más información en :ref:`typeiter`."
 
-#: ../Doc/glossary.rst:682
+#: ../Doc/glossary.rst:693
+#, fuzzy
 msgid ""
-"CPython does not consistently apply the requirement that an iterator define :"
-"meth:`__iter__`."
+"CPython does not consistently apply the requirement that an iterator "
+"define :meth:`~iterator.__iter__`. And also please note that the free-"
+"threading CPython does not guarantee the thread-safety of iterator "
+"operations."
 msgstr ""
-"CPython no aplica consistentemente el requisito de que un iterador defina :"
-"meth:`__iter__`."
+"CPython no aplica consistentemente el requisito de que un iterador "
+"defina :meth:`__iter__`."
 
-#: ../Doc/glossary.rst:684
+#: ../Doc/glossary.rst:698
 msgid "key function"
 msgstr "función clave"
 
-#: ../Doc/glossary.rst:686
+#: ../Doc/glossary.rst:700
 msgid ""
 "A key function or collation function is a callable that returns a value used "
 "for sorting or ordering.  For example, :func:`locale.strxfrm` is used to "
 "produce a sort key that is aware of locale specific sort conventions."
 msgstr ""
 "Una función clave o una función de colación es un invocable que retorna un "
-"valor usado para el ordenamiento o clasificación.  Por ejemplo, :func:"
-"`locale.strxfrm` es usada para producir claves de ordenamiento que se "
-"adaptan a las convenciones específicas de ordenamiento de un *locale*."
+"valor usado para el ordenamiento o clasificación.  Por "
+"ejemplo, :func:`locale.strxfrm` es usada para producir claves de "
+"ordenamiento que se adaptan a las convenciones específicas de ordenamiento "
+"de un *locale*."
 
-#: ../Doc/glossary.rst:691
+#: ../Doc/glossary.rst:705
 msgid ""
 "A number of tools in Python accept key functions to control how elements are "
-"ordered or grouped.  They include :func:`min`, :func:`max`, :func:`sorted`, :"
-"meth:`list.sort`, :func:`heapq.merge`, :func:`heapq.nsmallest`, :func:`heapq."
-"nlargest`, and :func:`itertools.groupby`."
+"ordered or grouped.  They "
+"include :func:`min`, :func:`max`, :func:`sorted`, :meth:`list.sort`, :func:`heapq.merge`, :func:`heapq.nsmallest`, :func:`heapq.nlargest`, "
+"and :func:`itertools.groupby`."
 msgstr ""
 "Cierta cantidad de herramientas de Python aceptan funciones clave para "
-"controlar como los elementos son ordenados o agrupados. Incluyendo a  :func:"
-"`min`, :func:`max`, :func:`sorted`, :meth:`list.sort`, :func:`heapq.merge`, :"
-"func:`heapq.nsmallest`, :func:`heapq.nlargest`, y :func:`itertools.groupby`."
+"controlar como los elementos son ordenados o agrupados. Incluyendo "
+"a  :func:`min`, :func:`max`, :func:`sorted`, :meth:`list.sort`, :func:`heapq.merge`, :func:`heapq.nsmallest`, :func:`heapq.nlargest`, "
+"y :func:`itertools.groupby`."
 
-#: ../Doc/glossary.rst:697
+#: ../Doc/glossary.rst:711
 msgid ""
-"There are several ways to create a key function.  For example. the :meth:"
-"`str.lower` method can serve as a key function for case insensitive sorts.  "
-"Alternatively, a key function can be built from a :keyword:`lambda` "
-"expression such as ``lambda r: (r[0], r[2])``.  Also, :func:`operator."
-"attrgetter`, :func:`operator.itemgetter`, and :func:`operator.methodcaller` "
-"are three key function constructors.  See the :ref:`Sorting HOW TO "
-"<sortinghowto>` for examples of how to create and use key functions."
+"There are several ways to create a key function.  For example. "
+"the :meth:`str.lower` method can serve as a key function for case "
+"insensitive sorts.  Alternatively, a key function can be built from "
+"a :keyword:`lambda` expression such as ``lambda r: (r[0], r[2])``.  "
+"Also, :func:`operator.attrgetter`, :func:`operator.itemgetter`, "
+"and :func:`operator.methodcaller` are three key function constructors.  See "
+"the :ref:`Sorting HOW TO <sortinghowto>` for examples of how to create and "
+"use key functions."
 msgstr ""
-"Hay varias formas de crear una función clave.  Por ejemplo, el método :meth:"
-"`str.lower` puede servir como función clave para ordenamientos que no "
-"distingan mayúsculas de minúsculas.  Como alternativa, una función clave "
-"puede ser realizada con una expresión :keyword:`lambda` como ``lambda r: "
-"(r[0], r[2])``.  Además, :func:`operator.attrgetter`, :func:`operator."
-"itemgetter` y :func:`operator.methodcaller` son tres constructores de "
-"funciones clave.  Consulte :ref:`Sorting HOW TO <sortinghowto>` para ver "
-"ejemplos de cómo crear y utilizar funciones clave."
+"Hay varias formas de crear una función clave.  Por ejemplo, el "
+"método :meth:`str.lower` puede servir como función clave para ordenamientos "
+"que no distingan mayúsculas de minúsculas.  Como alternativa, una función "
+"clave puede ser realizada con una expresión :keyword:`lambda` como ``lambda "
+"r: (r[0], r[2])``.  "
+"Además, :func:`operator.attrgetter`, :func:`operator.itemgetter` "
+"y :func:`operator.methodcaller` son tres constructores de funciones clave.  "
+"Consulte :ref:`Sorting HOW TO <sortinghowto>` para ver ejemplos de cómo "
+"crear y utilizar funciones clave."
 
-#: ../Doc/glossary.rst:704
+#: ../Doc/glossary.rst:718
 msgid "keyword argument"
 msgstr "argumento nombrado"
 
-#: ../Doc/glossary.rst:706 ../Doc/glossary.rst:995
+#: ../Doc/glossary.rst:720 ../Doc/glossary.rst:1019
 msgid "See :term:`argument`."
 msgstr "Vea :term:`argument`."
 
-#: ../Doc/glossary.rst:707
+#: ../Doc/glossary.rst:721
 msgid "lambda"
 msgstr "lambda"
 
-#: ../Doc/glossary.rst:709
+#: ../Doc/glossary.rst:723
 msgid ""
 "An anonymous inline function consisting of a single :term:`expression` which "
 "is evaluated when the function is called.  The syntax to create a lambda "
@@ -1683,11 +1767,11 @@ msgstr ""
 "que es evaluada cuando la función es llamada.  La sintaxis para crear una "
 "función lambda es ``lambda [parameters]: expression``"
 
-#: ../Doc/glossary.rst:712
+#: ../Doc/glossary.rst:726
 msgid "LBYL"
 msgstr "LBYL"
 
-#: ../Doc/glossary.rst:714
+#: ../Doc/glossary.rst:728
 msgid ""
 "Look before you leap.  This coding style explicitly tests for pre-conditions "
 "before making calls or lookups.  This style contrasts with the :term:`EAFP` "
@@ -1696,11 +1780,11 @@ msgid ""
 msgstr ""
 "Del inglés *Look before you leap*, \"mira antes de saltar\".  Es un estilo "
 "de codificación que prueba explícitamente las condiciones previas antes de "
-"hacer llamadas o búsquedas.  Este estilo contrasta con la manera :term:"
-"`EAFP` y está caracterizado por la presencia de muchas sentencias :keyword:"
-"`if`."
+"hacer llamadas o búsquedas.  Este estilo contrasta con la "
+"manera :term:`EAFP` y está caracterizado por la presencia de muchas "
+"sentencias :keyword:`if`."
 
-#: ../Doc/glossary.rst:719
+#: ../Doc/glossary.rst:733
 msgid ""
 "In a multi-threaded environment, the LBYL approach can risk introducing a "
 "race condition between \"the looking\" and \"the leaping\".  For example, "
@@ -1715,60 +1799,26 @@ msgstr ""
 "del test, pero antes de retornar el valor.  Este problema puede ser resuelto "
 "usando bloqueos o empleando el método EAFP."
 
-#: ../Doc/glossary.rst:724
-msgid "locale encoding"
-msgstr "codificación de la configuración regional"
-
-#: ../Doc/glossary.rst:726
-msgid ""
-"On Unix, it is the encoding of the LC_CTYPE locale. It can be set with :func:"
-"`locale.setlocale(locale.LC_CTYPE, new_locale) <locale.setlocale>`."
-msgstr ""
-"En Unix, es la codificación de la configuración regional LC_CTYPE. Se puede "
-"configurar con :func:`locale.setlocale(locale.LC_CTYPE, new_locale) <locale."
-"setlocale>`."
-
-#: ../Doc/glossary.rst:729
-msgid "On Windows, it is the ANSI code page (ex: ``\"cp1252\"``)."
-msgstr ""
-"En Windows, es la página de códigos ANSI (por ejemplo, ``\"cp1252\"``)."
-
-#: ../Doc/glossary.rst:731
-msgid ""
-"On Android and VxWorks, Python uses ``\"utf-8\"`` as the locale encoding."
-msgstr ""
-"En Android y VxWorks, Python utiliza ``\"utf-8\"`` como codificación "
-"regional."
-
-#: ../Doc/glossary.rst:733
-msgid "``locale.getencoding()`` can be used to get the locale encoding."
-msgstr ""
-"``locale.getencoding()`` se puede utilizar para obtener la codificación de "
-"la configuración regional."
-
-#: ../Doc/glossary.rst:735
-msgid "See also the :term:`filesystem encoding and error handler`."
-msgstr "Vea también :term:`filesystem encoding and error handler`."
-
-#: ../Doc/glossary.rst:736
+#: ../Doc/glossary.rst:738
 msgid "list"
 msgstr "lista"
 
-#: ../Doc/glossary.rst:738
+#: ../Doc/glossary.rst:740
+#, fuzzy
 msgid ""
 "A built-in Python :term:`sequence`.  Despite its name it is more akin to an "
 "array in other languages than to a linked list since access to elements is "
-"O(1)."
+"*O*\\ (1)."
 msgstr ""
 "Es una :term:`sequence` Python incorporada.  A pesar de su nombre es más "
 "similar a un arreglo en otros lenguajes que a una lista enlazada porque el "
 "acceso a los elementos es O(1)."
 
-#: ../Doc/glossary.rst:741
+#: ../Doc/glossary.rst:743
 msgid "list comprehension"
 msgstr "comprensión de listas"
 
-#: ../Doc/glossary.rst:743
+#: ../Doc/glossary.rst:745
 msgid ""
 "A compact way to process all or part of the elements in a sequence and "
 "return a list with the results.  ``result = ['{:#04x}'.format(x) for x in "
@@ -1777,61 +1827,98 @@ msgid ""
 "optional.  If omitted, all elements in ``range(256)`` are processed."
 msgstr ""
 "Una forma compacta de procesar todos o parte de los elementos en una "
-"secuencia y retornar una lista como resultado.  ``result = ['{:#04x}'."
-"format(x) for x in range(256) if x % 2 == 0]`` genera una lista de cadenas "
-"conteniendo números hexadecimales (0x..) entre 0 y 255. La cláusula :keyword:"
-"`if` es opcional.  Si es omitida, todos los elementos en ``range(256)`` son "
-"procesados."
+"secuencia y retornar una lista como resultado.  ``result = "
+"['{:#04x}'.format(x) for x in range(256) if x % 2 == 0]`` genera una lista "
+"de cadenas conteniendo números hexadecimales (0x..) entre 0 y 255. La "
+"cláusula :keyword:`if` es opcional.  Si es omitida, todos los elementos en "
+"``range(256)`` son procesados."
 
-#: ../Doc/glossary.rst:749
+#: ../Doc/glossary.rst:751
 msgid "loader"
 msgstr "cargador"
 
-#: ../Doc/glossary.rst:751
+#: ../Doc/glossary.rst:753
 msgid ""
-"An object that loads a module. It must define a method named :meth:"
-"`load_module`. A loader is typically returned by a :term:`finder`. See :pep:"
-"`302` for details and :class:`importlib.abc.Loader` for an :term:`abstract "
-"base class`."
+"An object that loads a module. It must define a method "
+"named :meth:`load_module`. A loader is typically returned by "
+"a :term:`finder`. See :pep:`302` for details "
+"and :class:`importlib.abc.Loader` for an :term:`abstract base class`."
 msgstr ""
-"Un objeto que carga un módulo. Debe definir el método llamado :meth:"
-"`load_module`.  Un cargador es normalmente retornados por un  :term:"
-"`finder`. Vea :pep:`302` para detalles y :class:`importlib.abc.Loader` para "
-"una :term:`abstract base class`."
+"Un objeto que carga un módulo. Debe definir el método "
+"llamado :meth:`load_module`.  Un cargador es normalmente retornados por "
+"un  :term:`finder`. Vea :pep:`302` para detalles "
+"y :class:`importlib.abc.Loader` para una :term:`abstract base class`."
 
-#: ../Doc/glossary.rst:755
+#: ../Doc/glossary.rst:757
+msgid "locale encoding"
+msgstr "codificación de la configuración regional"
+
+#: ../Doc/glossary.rst:759
+msgid ""
+"On Unix, it is the encoding of the LC_CTYPE locale. It can be set "
+"with :func:`locale.setlocale(locale.LC_CTYPE, new_locale) "
+"<locale.setlocale>`."
+msgstr ""
+"En Unix, es la codificación de la configuración regional LC_CTYPE. Se puede "
+"configurar con :func:`locale.setlocale(locale.LC_CTYPE, new_locale) "
+"<locale.setlocale>`."
+
+#: ../Doc/glossary.rst:762
+msgid "On Windows, it is the ANSI code page (ex: ``\"cp1252\"``)."
+msgstr ""
+"En Windows, es la página de códigos ANSI (por ejemplo, ``\"cp1252\"``)."
+
+#: ../Doc/glossary.rst:764
+msgid ""
+"On Android and VxWorks, Python uses ``\"utf-8\"`` as the locale encoding."
+msgstr ""
+"En Android y VxWorks, Python utiliza ``\"utf-8\"`` como codificación "
+"regional."
+
+#: ../Doc/glossary.rst:766
+#, fuzzy
+msgid ":func:`locale.getencoding` can be used to get the locale encoding."
+msgstr ""
+"``locale.getencoding()`` se puede utilizar para obtener la codificación de "
+"la configuración regional."
+
+#: ../Doc/glossary.rst:768
+msgid "See also the :term:`filesystem encoding and error handler`."
+msgstr "Vea también :term:`filesystem encoding and error handler`."
+
+#: ../Doc/glossary.rst:769
 msgid "magic method"
 msgstr "método mágico"
 
-#: ../Doc/glossary.rst:759
+#: ../Doc/glossary.rst:773
 msgid "An informal synonym for :term:`special method`."
 msgstr "Una manera informal de llamar a un :term:`special method`."
 
-#: ../Doc/glossary.rst:760
+#: ../Doc/glossary.rst:774
 msgid "mapping"
 msgstr "mapeado"
 
-#: ../Doc/glossary.rst:762
+#: ../Doc/glossary.rst:776
 msgid ""
 "A container object that supports arbitrary key lookups and implements the "
-"methods specified in the :class:`collections.abc.Mapping` or :class:"
-"`collections.abc.MutableMapping` :ref:`abstract base classes <collections-"
-"abstract-base-classes>`.  Examples include :class:`dict`, :class:"
-"`collections.defaultdict`, :class:`collections.OrderedDict` and :class:"
-"`collections.Counter`."
+"methods specified in the :class:`collections.abc.Mapping` "
+"or :class:`collections.abc.MutableMapping` :ref:`abstract base classes "
+"<collections-abstract-base-classes>`.  Examples "
+"include :class:`dict`, :class:`collections.defaultdict`, :class:`collections.OrderedDict` "
+"and :class:`collections.Counter`."
 msgstr ""
 "Un objeto contenedor que permite recupero de claves arbitrarias y que "
 "implementa los métodos especificados en la :class:`collections.abc.Mapping` "
 "o :class:`collections.abc.MutableMapping` :ref:`abstract base classes "
-"<collections-abstract-base-classes>`.  Por ejemplo, :class:`dict`, :class:"
-"`collections.defaultdict`, :class:`collections.OrderedDict` y :class:"
-"`collections.Counter`."
+"<collections-abstract-base-classes>`.  Por "
+"ejemplo, :class:`dict`, :class:`collections.defaultdict`, :class:`collections.OrderedDict` "
+"y :class:`collections.Counter`."
 
-#: ../Doc/glossary.rst:768
+#: ../Doc/glossary.rst:782
 msgid "meta path finder"
 msgstr "meta buscadores de ruta"
 
-#: ../Doc/glossary.rst:770
+#: ../Doc/glossary.rst:784
 msgid ""
 "A :term:`finder` returned by a search of :data:`sys.meta_path`.  Meta path "
 "finders are related to, but different from :term:`path entry finders <path "
@@ -1841,7 +1928,7 @@ msgstr ""
 "meta buscadores de ruta están relacionados a :term:`buscadores de entradas "
 "de rutas <path entry finder>`, pero son algo diferente."
 
-#: ../Doc/glossary.rst:774
+#: ../Doc/glossary.rst:788
 msgid ""
 "See :class:`importlib.abc.MetaPathFinder` for the methods that meta path "
 "finders implement."
@@ -1849,11 +1936,11 @@ msgstr ""
 "Vea en :class:`importlib.abc.MetaPathFinder` los métodos que los meta "
 "buscadores de ruta implementan."
 
-#: ../Doc/glossary.rst:776
+#: ../Doc/glossary.rst:790
 msgid "metaclass"
 msgstr "metaclase"
 
-#: ../Doc/glossary.rst:778
+#: ../Doc/glossary.rst:792
 msgid ""
 "The class of a class.  Class definitions create a class name, a class "
 "dictionary, and a list of base classes.  The metaclass is responsible for "
@@ -1876,47 +1963,47 @@ msgstr ""
 "*loggear* acceso de atributos, agregar seguridad a hilos, rastrear la "
 "creación de objetos, implementar *singletons*, y muchas otras tareas."
 
-#: ../Doc/glossary.rst:788
+#: ../Doc/glossary.rst:802
 msgid "More information can be found in :ref:`metaclasses`."
 msgstr "Más información hallará en :ref:`metaclasses`."
 
-#: ../Doc/glossary.rst:757 ../Doc/glossary.rst:789 ../Doc/glossary.rst:1123
+#: ../Doc/glossary.rst:771 ../Doc/glossary.rst:803 ../Doc/glossary.rst:1164
 msgid "method"
 msgstr "método"
 
-#: ../Doc/glossary.rst:791
+#: ../Doc/glossary.rst:805
 msgid ""
 "A function which is defined inside a class body.  If called as an attribute "
 "of an instance of that class, the method will get the instance object as its "
-"first :term:`argument` (which is usually called ``self``). See :term:"
-"`function` and :term:`nested scope`."
+"first :term:`argument` (which is usually called ``self``). "
+"See :term:`function` and :term:`nested scope`."
 msgstr ""
 "Una función que es definida dentro del cuerpo de una clase.  Si es llamada "
 "como un atributo de una instancia de otra clase, el método tomará el objeto "
 "instanciado como su primer :term:`argument` (el cual es usualmente "
 "denominado `self`). Vea :term:`function` y :term:`nested scope`."
 
-#: ../Doc/glossary.rst:795
+#: ../Doc/glossary.rst:809
 msgid "method resolution order"
 msgstr "orden de resolución de métodos"
 
-#: ../Doc/glossary.rst:797
+#: ../Doc/glossary.rst:811
+#, fuzzy
 msgid ""
 "Method Resolution Order is the order in which base classes are searched for "
-"a member during lookup. See `The Python 2.3 Method Resolution Order <https://"
-"www.python.org/download/releases/2.3/mro/>`_ for details of the algorithm "
-"used by the Python interpreter since the 2.3 release."
+"a member during lookup. See :ref:`python_2.3_mro` for details of the "
+"algorithm used by the Python interpreter since the 2.3 release."
 msgstr ""
 "Orden de resolución de métodos es el orden en el cual una clase base es "
 "buscada por un miembro durante la búsqueda. Mire en `The Python 2.3 Method "
 "Resolution Order <https://www.python.org/download/releases/2.3/mro/>`_ los "
 "detalles del algoritmo usado por el intérprete Python desde la versión 2.3."
 
-#: ../Doc/glossary.rst:801
+#: ../Doc/glossary.rst:814
 msgid "module"
 msgstr "módulo"
 
-#: ../Doc/glossary.rst:803
+#: ../Doc/glossary.rst:816
 msgid ""
 "An object that serves as an organizational unit of Python code.  Modules "
 "have a namespace containing arbitrary Python objects.  Modules are loaded "
@@ -1926,48 +2013,48 @@ msgstr ""
 "módulos tienen espacios de nombres conteniendo objetos Python arbitrarios.  "
 "Los módulos son cargados en Python por el proceso de :term:`importing`."
 
-#: ../Doc/glossary.rst:807
+#: ../Doc/glossary.rst:820
 msgid "See also :term:`package`."
 msgstr "Vea también :term:`package`."
 
-#: ../Doc/glossary.rst:808
+#: ../Doc/glossary.rst:821
 msgid "module spec"
 msgstr "especificador de módulo"
 
-#: ../Doc/glossary.rst:810
+#: ../Doc/glossary.rst:823
 msgid ""
 "A namespace containing the import-related information used to load a module. "
 "An instance of :class:`importlib.machinery.ModuleSpec`."
 msgstr ""
 "Un espacio de nombres que contiene la información relacionada a la "
-"importación usada al leer un módulo.  Una instancia de  :class:`importlib."
-"machinery.ModuleSpec`."
+"importación usada al leer un módulo.  Una instancia "
+"de  :class:`importlib.machinery.ModuleSpec`."
 
-#: ../Doc/glossary.rst:812
+#: ../Doc/glossary.rst:825
 msgid "MRO"
 msgstr "MRO"
 
-#: ../Doc/glossary.rst:814
+#: ../Doc/glossary.rst:827
 msgid "See :term:`method resolution order`."
 msgstr "Vea :term:`method resolution order`."
 
-#: ../Doc/glossary.rst:815
+#: ../Doc/glossary.rst:828
 msgid "mutable"
 msgstr "mutable"
 
-#: ../Doc/glossary.rst:817
+#: ../Doc/glossary.rst:830
 msgid ""
-"Mutable objects can change their value but keep their :func:`id`.  See also :"
-"term:`immutable`."
+"Mutable objects can change their value but keep their :func:`id`.  See "
+"also :term:`immutable`."
 msgstr ""
 "Los objetos mutables pueden cambiar su valor pero mantener su :func:`id`.  "
 "Vea también :term:`immutable`."
 
-#: ../Doc/glossary.rst:819
+#: ../Doc/glossary.rst:832
 msgid "named tuple"
 msgstr "tupla nombrada"
 
-#: ../Doc/glossary.rst:821
+#: ../Doc/glossary.rst:834
 msgid ""
 "The term \"named tuple\" applies to any type or class that inherits from "
 "tuple and whose indexable elements are also accessible using named "
@@ -1978,24 +2065,37 @@ msgstr ""
 "usando atributos nombrados. Este tipo o clase puede tener además otras "
 "capacidades."
 
-#: ../Doc/glossary.rst:825
+#: ../Doc/glossary.rst:838
 msgid ""
-"Several built-in types are named tuples, including the values returned by :"
-"func:`time.localtime` and :func:`os.stat`.  Another example is :data:`sys."
-"float_info`::"
+"Several built-in types are named tuples, including the values returned "
+"by :func:`time.localtime` and :func:`os.stat`.  Another example "
+"is :data:`sys.float_info`::"
 msgstr ""
 "Varios tipos incorporados son tuplas nombradas, incluyendo los valores "
-"retornados por :func:`time.localtime` y :func:`os.stat`.  Otro ejemplo es :"
-"data:`sys.float_info`::"
+"retornados por :func:`time.localtime` y :func:`os.stat`.  Otro ejemplo "
+"es :data:`sys.float_info`::"
 
-#: ../Doc/glossary.rst:836
+#: ../Doc/glossary.rst:842
+msgid ""
+">>> sys.float_info[1]                   # indexed access\n"
+"1024\n"
+">>> sys.float_info.max_exp              # named field access\n"
+"1024\n"
+">>> isinstance(sys.float_info, tuple)   # kind of tuple\n"
+"True"
+msgstr ""
+
+#: ../Doc/glossary.rst:849
+#, fuzzy
 msgid ""
 "Some named tuples are built-in types (such as the above examples). "
 "Alternatively, a named tuple can be created from a regular class definition "
 "that inherits from :class:`tuple` and that defines named fields.  Such a "
-"class can be written by hand or it can be created with the factory function :"
-"func:`collections.namedtuple`.  The latter technique also adds some extra "
-"methods that may not be found in hand-written or built-in named tuples."
+"class can be written by hand, or it can be created by "
+"inheriting :class:`typing.NamedTuple`, or with the factory "
+"function :func:`collections.namedtuple`.  The latter techniques also add "
+"some extra methods that may not be found in hand-written or built-in named "
+"tuples."
 msgstr ""
 "Algunas tuplas nombradas con tipos incorporados (como en los ejemplo "
 "precedentes). También puede ser creada con una definición regular de clase "
@@ -2005,39 +2105,40 @@ msgstr ""
 "automáticamente brinda métodos adicionales que pueden no estar presentes en "
 "las tuplas nombradas personalizadas o incorporadas."
 
-#: ../Doc/glossary.rst:843
+#: ../Doc/glossary.rst:857
 msgid "namespace"
 msgstr "espacio de nombres"
 
-#: ../Doc/glossary.rst:845
+#: ../Doc/glossary.rst:859
 msgid ""
 "The place where a variable is stored.  Namespaces are implemented as "
 "dictionaries.  There are the local, global and built-in namespaces as well "
 "as nested namespaces in objects (in methods).  Namespaces support modularity "
-"by preventing naming conflicts.  For instance, the functions :func:`builtins."
-"open <.open>` and :func:`os.open` are distinguished by their namespaces.  "
-"Namespaces also aid readability and maintainability by making it clear which "
-"module implements a function.  For instance, writing :func:`random.seed` or :"
-"func:`itertools.islice` makes it clear that those functions are implemented "
-"by the :mod:`random` and :mod:`itertools` modules, respectively."
+"by preventing naming conflicts.  For instance, the "
+"functions :func:`builtins.open <.open>` and :func:`os.open` are "
+"distinguished by their namespaces.  Namespaces also aid readability and "
+"maintainability by making it clear which module implements a function.  For "
+"instance, writing :func:`random.seed` or :func:`itertools.islice` makes it "
+"clear that those functions are implemented by the :mod:`random` "
+"and :mod:`itertools` modules, respectively."
 msgstr ""
 "El lugar donde la variable es almacenada.  Los espacios de nombres son "
 "implementados como diccionarios.  Hay espacio de nombre local, global, e "
 "incorporado así como espacios de nombres anidados en objetos (en métodos).  "
 "Los espacios de nombres soportan modularidad previniendo conflictos de "
-"nombramiento.  Por ejemplo, las funciones :func:`builtins.open <.open>` y :"
-"func:`os.open` se distinguen por su espacio de nombres.  Los espacios de "
+"nombramiento.  Por ejemplo, las funciones :func:`builtins.open <.open>` "
+"y :func:`os.open` se distinguen por su espacio de nombres.  Los espacios de "
 "nombres también ayuda a la legibilidad y mantenibilidad dejando claro qué "
 "módulo implementa una función.  Por ejemplo, escribiendo :func:`random.seed` "
 "o :func:`itertools.islice` queda claro que éstas funciones están "
 "implementadas en los módulos :mod:`random` y :mod:`itertools`, "
 "respectivamente."
 
-#: ../Doc/glossary.rst:855
+#: ../Doc/glossary.rst:869
 msgid "namespace package"
 msgstr "paquete de espacios de nombres"
 
-#: ../Doc/glossary.rst:857
+#: ../Doc/glossary.rst:871
 msgid ""
 "A :pep:`420` :term:`package` which serves only as a container for "
 "subpackages.  Namespace packages may have no physical representation, and "
@@ -2049,15 +2150,15 @@ msgstr ""
 "específicamente se diferencian de los :term:`regular package` porque no "
 "tienen un archivo ``__init__.py``."
 
-#: ../Doc/glossary.rst:862
+#: ../Doc/glossary.rst:876
 msgid "See also :term:`module`."
 msgstr "Vea también :term:`module`."
 
-#: ../Doc/glossary.rst:863
+#: ../Doc/glossary.rst:877
 msgid "nested scope"
 msgstr "alcances anidados"
 
-#: ../Doc/glossary.rst:865
+#: ../Doc/glossary.rst:879
 msgid ""
 "The ability to refer to a variable in an enclosing definition.  For "
 "instance, a function defined inside another function can refer to variables "
@@ -2075,28 +2176,30 @@ msgstr ""
 "nombres global.  Con :keyword:`nonlocal` se puede escribir en alcances "
 "exteriores."
 
-#: ../Doc/glossary.rst:872
+#: ../Doc/glossary.rst:886
 msgid "new-style class"
 msgstr "clase de nuevo estilo"
 
-#: ../Doc/glossary.rst:874
+#: ../Doc/glossary.rst:888
+#, fuzzy
 msgid ""
 "Old name for the flavor of classes now used for all class objects.  In "
 "earlier Python versions, only new-style classes could use Python's newer, "
-"versatile features like :attr:`~object.__slots__`, descriptors, properties, :"
-"meth:`__getattribute__`, class methods, and static methods."
+"versatile features like :attr:`~object.__slots__`, descriptors, "
+"properties, :meth:`~object.__getattribute__`, class methods, and static "
+"methods."
 msgstr ""
 "Vieja denominación usada para el estilo de clases ahora empleado en todos "
 "los objetos de clase.  En versiones más tempranas de Python, sólo las nuevas "
-"clases podían usar capacidades nuevas y versátiles de Python como :attr:"
-"`~object.__slots__`, descriptores, propiedades, :meth:`__getattribute__`, "
-"métodos de clase y métodos estáticos."
+"clases podían usar capacidades nuevas y versátiles de Python "
+"como :attr:`~object.__slots__`, descriptores, "
+"propiedades, :meth:`__getattribute__`, métodos de clase y métodos estáticos."
 
-#: ../Doc/glossary.rst:878
+#: ../Doc/glossary.rst:893
 msgid "object"
 msgstr "objeto"
 
-#: ../Doc/glossary.rst:880
+#: ../Doc/glossary.rst:895
 msgid ""
 "Any data with state (attributes or value) and defined behavior (methods).  "
 "Also the ultimate base class of any :term:`new-style class`."
@@ -2105,11 +2208,27 @@ msgstr ""
 "(métodos).  También es la más básica clase base para cualquier :term:`new-"
 "style class`."
 
-#: ../Doc/glossary.rst:883
+#: ../Doc/glossary.rst:898
+#, fuzzy
+msgid "optimized scope"
+msgstr "alcances anidados"
+
+#: ../Doc/glossary.rst:900
+msgid ""
+"A scope where target local variable names are reliably known to the compiler "
+"when the code is compiled, allowing optimization of read and write access to "
+"these names. The local namespaces for functions, generators, coroutines, "
+"comprehensions, and generator expressions are optimized in this fashion. "
+"Note: most interpreter optimizations are applied to all scopes, only those "
+"relying on a known set of local and nonlocal variable names are restricted "
+"to optimized scopes."
+msgstr ""
+
+#: ../Doc/glossary.rst:907
 msgid "package"
 msgstr "paquete"
 
-#: ../Doc/glossary.rst:885
+#: ../Doc/glossary.rst:909
 msgid ""
 "A Python :term:`module` which can contain submodules or recursively, "
 "subpackages.  Technically, a package is a Python module with a ``__path__`` "
@@ -2119,15 +2238,15 @@ msgstr ""
 "subpaquetes.  Técnicamente, un paquete es un módulo Python con un atributo "
 "``__path__``."
 
-#: ../Doc/glossary.rst:889
+#: ../Doc/glossary.rst:913
 msgid "See also :term:`regular package` and :term:`namespace package`."
 msgstr "Vea también :term:`regular package` y :term:`namespace package`."
 
-#: ../Doc/glossary.rst:890
+#: ../Doc/glossary.rst:914
 msgid "parameter"
 msgstr "parámetro"
 
-#: ../Doc/glossary.rst:892
+#: ../Doc/glossary.rst:916
 msgid ""
 "A named entity in a :term:`function` (or method) definition that specifies "
 "an :term:`argument` (or in some cases, arguments) that the function can "
@@ -2137,7 +2256,7 @@ msgstr ""
 "que especifica un :term:`argument` (o en algunos casos, varios argumentos) "
 "que la función puede aceptar.  Existen cinco tipos de argumentos:"
 
-#: ../Doc/glossary.rst:896
+#: ../Doc/glossary.rst:920
 msgid ""
 ":dfn:`positional-or-keyword`: specifies an argument that can be passed "
 "either :term:`positionally <argument>` or as a :term:`keyword argument "
@@ -2149,7 +2268,11 @@ msgstr ""
 "<argument>`.  Este es el tipo por defecto de parámetro, como *foo* y *bar* "
 "en el siguiente ejemplo::"
 
-#: ../Doc/glossary.rst:905
+#: ../Doc/glossary.rst:925
+msgid "def func(foo, bar=None): ..."
+msgstr ""
+
+#: ../Doc/glossary.rst:929
 msgid ""
 ":dfn:`positional-only`: specifies an argument that can be supplied only by "
 "position. Positional-only parameters can be defined by including a ``/`` "
@@ -2161,7 +2284,11 @@ msgstr ""
 "incluyendo un carácter ``/`` en la lista de parámetros de la función después "
 "de ellos, como *posonly1* y *posonly2* en el ejemplo que sigue::"
 
-#: ../Doc/glossary.rst:914
+#: ../Doc/glossary.rst:934
+msgid "def func(posonly1, posonly2, /, positional_or_keyword): ..."
+msgstr ""
+
+#: ../Doc/glossary.rst:938
 msgid ""
 ":dfn:`keyword-only`: specifies an argument that can be supplied only by "
 "keyword.  Keyword-only parameters can be defined by including a single var-"
@@ -2175,7 +2302,11 @@ msgstr ""
 "en la lista de parámetros en la definición de la función, como *kw_only1* y "
 "*kw_only2* en el ejemplo siguiente::"
 
-#: ../Doc/glossary.rst:922
+#: ../Doc/glossary.rst:944
+msgid "def func(arg, *, kw_only1, kw_only2): ..."
+msgstr ""
+
+#: ../Doc/glossary.rst:946
 msgid ""
 ":dfn:`var-positional`: specifies that an arbitrary sequence of positional "
 "arguments can be provided (in addition to any positional arguments already "
@@ -2189,7 +2320,11 @@ msgstr ""
 "ser definido anteponiendo al nombre del parámetro ``*``, como a *args* en el "
 "siguiente ejemplo::"
 
-#: ../Doc/glossary.rst:930
+#: ../Doc/glossary.rst:952
+msgid "def func(*args, **kwargs): ..."
+msgstr ""
+
+#: ../Doc/glossary.rst:954
 msgid ""
 ":dfn:`var-keyword`: specifies that arbitrarily many keyword arguments can be "
 "provided (in addition to any keyword arguments already accepted by other "
@@ -2202,7 +2337,7 @@ msgstr ""
 "anteponiendo al nombre del parámetro con ``**``, como *kwargs* en el ejemplo "
 "precedente."
 
-#: ../Doc/glossary.rst:936
+#: ../Doc/glossary.rst:960
 msgid ""
 "Parameters can specify both optional and required arguments, as well as "
 "default values for some optional arguments."
@@ -2210,23 +2345,23 @@ msgstr ""
 "Los parámetros puede especificar tanto argumentos opcionales como "
 "requeridos, así como valores por defecto para algunos argumentos opcionales."
 
-#: ../Doc/glossary.rst:939
+#: ../Doc/glossary.rst:963
 msgid ""
 "See also the :term:`argument` glossary entry, the FAQ question on :ref:`the "
 "difference between arguments and parameters <faq-argument-vs-parameter>`, "
-"the :class:`inspect.Parameter` class, the :ref:`function` section, and :pep:"
-"`362`."
+"the :class:`inspect.Parameter` class, the :ref:`function` section, "
+"and :pep:`362`."
 msgstr ""
-"Vea también el glosario de :term:`argument`, la pregunta respondida en :ref:"
-"`la diferencia entre argumentos y parámetros <faq-argument-vs-parameter>`, "
-"la clase :class:`inspect.Parameter`, la sección :ref:`function` , y :pep:"
-"`362`."
+"Vea también el glosario de :term:`argument`, la pregunta respondida "
+"en :ref:`la diferencia entre argumentos y parámetros <faq-argument-vs-"
+"parameter>`, la clase :class:`inspect.Parameter`, la "
+"sección :ref:`function` , y :pep:`362`."
 
-#: ../Doc/glossary.rst:943
+#: ../Doc/glossary.rst:967
 msgid "path entry"
 msgstr "entrada de ruta"
 
-#: ../Doc/glossary.rst:945
+#: ../Doc/glossary.rst:969
 msgid ""
 "A single location on the :term:`import path` which the :term:`path based "
 "finder` consults to find modules for importing."
@@ -2234,21 +2369,21 @@ msgstr ""
 "Una ubicación única en el :term:`import path` que el :term:`path based "
 "finder` consulta para encontrar los módulos a importar."
 
-#: ../Doc/glossary.rst:947
+#: ../Doc/glossary.rst:971
 msgid "path entry finder"
 msgstr "buscador de entradas de ruta"
 
-#: ../Doc/glossary.rst:949
+#: ../Doc/glossary.rst:973
 msgid ""
-"A :term:`finder` returned by a callable on :data:`sys.path_hooks` (i.e. a :"
-"term:`path entry hook`) which knows how to locate modules given a :term:"
-"`path entry`."
+"A :term:`finder` returned by a callable on :data:`sys.path_hooks` (i.e. "
+"a :term:`path entry hook`) which knows how to locate modules given "
+"a :term:`path entry`."
 msgstr ""
 "Un :term:`finder` retornado por un invocable en :data:`sys.path_hooks` (esto "
-"es, un :term:`path entry hook`) que sabe cómo localizar módulos dada una :"
-"term:`path entry`."
+"es, un :term:`path entry hook`) que sabe cómo localizar módulos dada "
+"una :term:`path entry`."
 
-#: ../Doc/glossary.rst:953
+#: ../Doc/glossary.rst:977
 msgid ""
 "See :class:`importlib.abc.PathEntryFinder` for the methods that path entry "
 "finders implement."
@@ -2256,13 +2391,14 @@ msgstr ""
 "Vea en :class:`importlib.abc.PathEntryFinder` los métodos que los buscadores "
 "de entradas de ruta implementan."
 
-#: ../Doc/glossary.rst:955
+#: ../Doc/glossary.rst:979
 msgid "path entry hook"
 msgstr "gancho a entrada de ruta"
 
-#: ../Doc/glossary.rst:957
+#: ../Doc/glossary.rst:981
+#, fuzzy
 msgid ""
-"A callable on the :data:`sys.path_hook` list which returns a :term:`path "
+"A callable on the :data:`sys.path_hooks` list which returns a :term:`path "
 "entry finder` if it knows how to find modules on a specific :term:`path "
 "entry`."
 msgstr ""
@@ -2270,11 +2406,11 @@ msgstr ""
 "entry finder` si éste sabe cómo encontrar módulos en un :term:`path entry` "
 "específico."
 
-#: ../Doc/glossary.rst:960
+#: ../Doc/glossary.rst:984
 msgid "path based finder"
 msgstr "buscador basado en ruta"
 
-#: ../Doc/glossary.rst:962
+#: ../Doc/glossary.rst:986
 msgid ""
 "One of the default :term:`meta path finders <meta path finder>` which "
 "searches an :term:`import path` for modules."
@@ -2282,20 +2418,20 @@ msgstr ""
 "Uno de los :term:`meta buscadores de ruta <meta path finder>` por defecto "
 "que busca un :term:`import path` para los módulos."
 
-#: ../Doc/glossary.rst:964
+#: ../Doc/glossary.rst:988
 msgid "path-like object"
 msgstr "objeto tipo ruta"
 
-#: ../Doc/glossary.rst:966
+#: ../Doc/glossary.rst:990
 msgid ""
-"An object representing a file system path. A path-like object is either a :"
-"class:`str` or :class:`bytes` object representing a path, or an object "
-"implementing the :class:`os.PathLike` protocol. An object that supports the :"
-"class:`os.PathLike` protocol can be converted to a :class:`str` or :class:"
-"`bytes` file system path by calling the :func:`os.fspath` function; :func:"
-"`os.fsdecode` and :func:`os.fsencode` can be used to guarantee a :class:"
-"`str` or :class:`bytes` result instead, respectively. Introduced by :pep:"
-"`519`."
+"An object representing a file system path. A path-like object is either "
+"a :class:`str` or :class:`bytes` object representing a path, or an object "
+"implementing the :class:`os.PathLike` protocol. An object that supports "
+"the :class:`os.PathLike` protocol can be converted to a :class:`str` "
+"or :class:`bytes` file system path by calling the :func:`os.fspath` "
+"function; :func:`os.fsdecode` and :func:`os.fsencode` can be used to "
+"guarantee a :class:`str` or :class:`bytes` result instead, respectively. "
+"Introduced by :pep:`519`."
 msgstr ""
 "Un objeto que representa una ruta del sistema de archivos. Un objeto tipo "
 "ruta puede ser tanto una :class:`str` como un :class:`bytes` representando "
@@ -2303,14 +2439,14 @@ msgstr ""
 "objeto que soporta el protocolo  :class:`os.PathLike` puede ser convertido a "
 "ruta del sistema de archivo de clase :class:`str` o :class:`bytes` usando la "
 "función :func:`os.fspath`; :func:`os.fsdecode` :func:`os.fsencode` pueden "
-"emplearse para garantizar que retorne respectivamente :class:`str` o :class:"
-"`bytes`. Introducido por :pep:`519`."
+"emplearse para garantizar que retorne respectivamente :class:`str` "
+"o :class:`bytes`. Introducido por :pep:`519`."
 
-#: ../Doc/glossary.rst:974
+#: ../Doc/glossary.rst:998
 msgid "PEP"
 msgstr "PEP"
 
-#: ../Doc/glossary.rst:976
+#: ../Doc/glossary.rst:1000
 msgid ""
 "Python Enhancement Proposal. A PEP is a design document providing "
 "information to the Python community, or describing a new feature for Python "
@@ -2323,7 +2459,7 @@ msgstr ""
 "deberían dar una especificación técnica concisa y una fundamentación para "
 "las capacidades propuestas."
 
-#: ../Doc/glossary.rst:982
+#: ../Doc/glossary.rst:1006
 msgid ""
 "PEPs are intended to be the primary mechanisms for proposing major new "
 "features, for collecting community input on an issue, and for documenting "
@@ -2337,15 +2473,15 @@ msgstr ""
 "El autor del PEP es el responsable de lograr consenso con la comunidad y "
 "documentar las opiniones disidentes."
 
-#: ../Doc/glossary.rst:988
+#: ../Doc/glossary.rst:1012
 msgid "See :pep:`1`."
 msgstr "Vea :pep:`1`."
 
-#: ../Doc/glossary.rst:989
+#: ../Doc/glossary.rst:1013
 msgid "portion"
 msgstr "porción"
 
-#: ../Doc/glossary.rst:991
+#: ../Doc/glossary.rst:1015
 msgid ""
 "A set of files in a single directory (possibly stored in a zip file) that "
 "contribute to a namespace package, as defined in :pep:`420`."
@@ -2354,15 +2490,15 @@ msgstr ""
 "archivo comprimido *zip*) que contribuye a un espacio de nombres de paquete, "
 "como está definido en :pep:`420`."
 
-#: ../Doc/glossary.rst:993
+#: ../Doc/glossary.rst:1017
 msgid "positional argument"
 msgstr "argumento posicional"
 
-#: ../Doc/glossary.rst:996
+#: ../Doc/glossary.rst:1020
 msgid "provisional API"
 msgstr "API provisional"
 
-#: ../Doc/glossary.rst:998
+#: ../Doc/glossary.rst:1022
 msgid ""
 "A provisional API is one which has been deliberately excluded from the "
 "standard library's backwards compatibility guarantees.  While major changes "
@@ -2381,7 +2517,7 @@ msgstr ""
 "ocurrirán si fallas fundamentales y serias son descubiertas que no fueron "
 "vistas antes de la inclusión de la API."
 
-#: ../Doc/glossary.rst:1007
+#: ../Doc/glossary.rst:1031
 msgid ""
 "Even for provisional APIs, backwards incompatible changes are seen as a "
 "\"solution of last resort\" - every attempt will still be made to find a "
@@ -2392,7 +2528,7 @@ msgstr ""
 "encontrar una solución compatible hacia atrás para los problemas "
 "identificados."
 
-#: ../Doc/glossary.rst:1011
+#: ../Doc/glossary.rst:1035
 msgid ""
 "This process allows the standard library to continue to evolve over time, "
 "without locking in problematic design errors for extended periods of time.  "
@@ -2402,19 +2538,19 @@ msgstr ""
 "el tiempo, sin bloquearse por errores de diseño problemáticos por períodos "
 "extensos de tiempo. Vea :pep:`411` para más detalles."
 
-#: ../Doc/glossary.rst:1014
+#: ../Doc/glossary.rst:1038
 msgid "provisional package"
 msgstr "paquete provisorio"
 
-#: ../Doc/glossary.rst:1016
+#: ../Doc/glossary.rst:1040
 msgid "See :term:`provisional API`."
 msgstr "Vea :term:`provisional API`."
 
-#: ../Doc/glossary.rst:1017
+#: ../Doc/glossary.rst:1041
 msgid "Python 3000"
 msgstr "Python 3000"
 
-#: ../Doc/glossary.rst:1019
+#: ../Doc/glossary.rst:1043
 msgid ""
 "Nickname for the Python 3.x release line (coined long ago when the release "
 "of version 3 was something in the distant future.)  This is also abbreviated "
@@ -2424,11 +2560,11 @@ msgstr ""
 "cuando llegar a la versión 3 era algo distante en el futuro.)  También se lo "
 "abrevió como *Py3k*."
 
-#: ../Doc/glossary.rst:1022
+#: ../Doc/glossary.rst:1046
 msgid "Pythonic"
 msgstr "Pythónico"
 
-#: ../Doc/glossary.rst:1024
+#: ../Doc/glossary.rst:1048
 msgid ""
 "An idea or piece of code which closely follows the most common idioms of the "
 "Python language, rather than implementing code using concepts common to "
@@ -2445,15 +2581,27 @@ msgstr ""
 "construcción, así que los que no están familiarizados con Python podrían "
 "usar contadores numéricos::"
 
-#: ../Doc/glossary.rst:1034
+#: ../Doc/glossary.rst:1055
+msgid ""
+"for i in range(len(food)):\n"
+"    print(food[i])"
+msgstr ""
+
+#: ../Doc/glossary.rst:1058
 msgid "As opposed to the cleaner, Pythonic method::"
 msgstr "En contraste, un método Pythónico más limpio::"
 
-#: ../Doc/glossary.rst:1038
+#: ../Doc/glossary.rst:1060
+msgid ""
+"for piece in food:\n"
+"    print(piece)"
+msgstr ""
+
+#: ../Doc/glossary.rst:1062
 msgid "qualified name"
 msgstr "nombre calificado"
 
-#: ../Doc/glossary.rst:1040
+#: ../Doc/glossary.rst:1064
 msgid ""
 "A dotted name showing the \"path\" from a module's global scope to a class, "
 "function or method defined in that module, as defined in :pep:`3155`.  For "
@@ -2461,31 +2609,54 @@ msgid ""
 "object's name::"
 msgstr ""
 "Un nombre con puntos mostrando la ruta desde el alcance global del módulo a "
-"la clase, función o método definido en dicho módulo, como se define en :pep:"
-"`3155`.  Para las funciones o clases de más alto nivel, el nombre calificado "
-"es el igual al nombre del objeto::"
+"la clase, función o método definido en dicho módulo, como se define "
+"en :pep:`3155`.  Para las funciones o clases de más alto nivel, el nombre "
+"calificado es el igual al nombre del objeto::"
 
-#: ../Doc/glossary.rst:1057
+#: ../Doc/glossary.rst:1069
+msgid ""
+">>> class C:\n"
+"...     class D:\n"
+"...         def meth(self):\n"
+"...             pass\n"
+"...\n"
+">>> C.__qualname__\n"
+"'C'\n"
+">>> C.D.__qualname__\n"
+"'C.D'\n"
+">>> C.D.meth.__qualname__\n"
+"'C.D.meth'"
+msgstr ""
+
+#: ../Doc/glossary.rst:1081
 msgid ""
 "When used to refer to modules, the *fully qualified name* means the entire "
-"dotted path to the module, including any parent packages, e.g. ``email.mime."
-"text``::"
+"dotted path to the module, including any parent packages, e.g. "
+"``email.mime.text``::"
 msgstr ""
 "Cuando es usado para referirse a los módulos, *nombre completamente "
 "calificado* significa la ruta con puntos completo al módulo, incluyendo "
 "cualquier paquete padre, por ejemplo, ``email.mime.text``::"
 
-#: ../Doc/glossary.rst:1064
+#: ../Doc/glossary.rst:1085
+msgid ""
+">>> import email.mime.text\n"
+">>> email.mime.text.__name__\n"
+"'email.mime.text'"
+msgstr ""
+
+#: ../Doc/glossary.rst:1088
 msgid "reference count"
 msgstr "contador de referencias"
 
-#: ../Doc/glossary.rst:1066
+#: ../Doc/glossary.rst:1090
+#, fuzzy
 msgid ""
 "The number of references to an object.  When the reference count of an "
-"object drops to zero, it is deallocated.  Some objects are \"immortal\" and "
-"have reference counts that are never modified, and therefore the objects are "
-"never deallocated.  Reference counting is generally not visible to Python "
-"code, but it is a key element of the :term:`CPython` implementation.  "
+"object drops to zero, it is deallocated.  Some objects are :term:`immortal` "
+"and have reference counts that are never modified, and therefore the objects "
+"are never deallocated.  Reference counting is generally not visible to "
+"Python code, but it is a key element of the :term:`CPython` implementation.  "
 "Programmers can call the :func:`sys.getrefcount` function to return the "
 "reference count for a particular object."
 msgstr ""
@@ -2498,27 +2669,37 @@ msgstr ""
 "la función :func:`sys.getrefcount` para obtener el número de referencias de "
 "un objeto concreto."
 
-#: ../Doc/glossary.rst:1074
+#: ../Doc/glossary.rst:1098
 msgid "regular package"
 msgstr "paquete regular"
 
-#: ../Doc/glossary.rst:1076
+#: ../Doc/glossary.rst:1100
 msgid ""
-"A traditional :term:`package`, such as a directory containing an ``__init__."
-"py`` file."
+"A traditional :term:`package`, such as a directory containing an "
+"``__init__.py`` file."
 msgstr ""
 "Un  :term:`package` tradicional, como aquellos con un directorio conteniendo "
 "el archivo ``__init__.py``."
 
-#: ../Doc/glossary.rst:1079
+#: ../Doc/glossary.rst:1103
 msgid "See also :term:`namespace package`."
 msgstr "Vea también :term:`namespace package`."
 
-#: ../Doc/glossary.rst:1080
+#: ../Doc/glossary.rst:1104
+msgid "REPL"
+msgstr ""
+
+#: ../Doc/glossary.rst:1106
+msgid ""
+"An acronym for the \"read–eval–print loop\", another name for "
+"the :term:`interactive` interpreter shell."
+msgstr ""
+
+#: ../Doc/glossary.rst:1108
 msgid "__slots__"
 msgstr "__slots__"
 
-#: ../Doc/glossary.rst:1082
+#: ../Doc/glossary.rst:1110
 msgid ""
 "A declaration inside a class that saves memory by pre-declaring space for "
 "instance attributes and eliminating instance dictionaries.  Though popular, "
@@ -2532,64 +2713,70 @@ msgstr ""
 "correctamente y es mejor reservarla para los casos raros en los que existen "
 "grandes cantidades de instancias en aplicaciones con uso crítico de memoria."
 
-#: ../Doc/glossary.rst:1087
+#: ../Doc/glossary.rst:1115
 msgid "sequence"
 msgstr "secuencia"
 
-#: ../Doc/glossary.rst:1089
+#: ../Doc/glossary.rst:1117
+#, fuzzy
 msgid ""
 "An :term:`iterable` which supports efficient element access using integer "
-"indices via the :meth:`__getitem__` special method and defines a :meth:"
-"`__len__` method that returns the length of the sequence. Some built-in "
-"sequence types are :class:`list`, :class:`str`, :class:`tuple`, and :class:"
-"`bytes`. Note that :class:`dict` also supports :meth:`__getitem__` and :meth:"
-"`__len__`, but is considered a mapping rather than a sequence because the "
-"lookups use arbitrary :term:`immutable` keys rather than integers."
+"indices via the :meth:`~object.__getitem__` special method and defines "
+"a :meth:`~object.__len__` method that returns the length of the sequence. "
+"Some built-in sequence types "
+"are :class:`list`, :class:`str`, :class:`tuple`, and :class:`bytes`. Note "
+"that :class:`dict` also supports :meth:`~object.__getitem__` and :meth:`!"
+"__len__`, but is considered a mapping rather than a sequence because the "
+"lookups use arbitrary :term:`hashable` keys rather than integers."
 msgstr ""
 "Un :term:`iterable` que logra un acceso eficiente a los elementos usando "
 "índices enteros a través del método especial :meth:`__getitem__` y que "
 "define un método :meth:`__len__` que retorna la longitud de la secuencia. "
-"Algunas de las secuencias incorporadas son :class:`list`, :class:`str`, :"
-"class:`tuple`, y :class:`bytes`. Observe que :class:`dict` también soporta :"
-"meth:`__getitem__` y :meth:`__len__`, pero es considerada un mapeo más que "
-"una secuencia porque las búsquedas son por claves arbitraria :term:"
-"`immutable` y no por enteros."
+"Algunas de las secuencias incorporadas "
+"son :class:`list`, :class:`str`, :class:`tuple`, y :class:`bytes`. Observe "
+"que :class:`dict` también soporta :meth:`__getitem__` y :meth:`__len__`, "
+"pero es considerada un mapeo más que una secuencia porque las búsquedas son "
+"por claves arbitraria :term:`immutable` y no por enteros."
 
-#: ../Doc/glossary.rst:1098
+#: ../Doc/glossary.rst:1126
+#, fuzzy
 msgid ""
 "The :class:`collections.abc.Sequence` abstract base class defines a much "
-"richer interface that goes beyond just :meth:`__getitem__` and :meth:"
-"`__len__`, adding :meth:`count`, :meth:`index`, :meth:`__contains__`, and :"
-"meth:`__reversed__`. Types that implement this expanded interface can be "
-"registered explicitly using :func:`~abc.ABCMeta.register`."
+"richer interface that goes beyond just :meth:`~object.__getitem__` "
+"and :meth:`~object.__len__`, adding :meth:`!count`, :meth:`!"
+"index`, :meth:`~object.__contains__`, and :meth:`~object.__reversed__`. "
+"Types that implement this expanded interface can be registered explicitly "
+"using :func:`~abc.ABCMeta.register`. For more documentation on sequence "
+"methods generally, see :ref:`Common Sequence Operations <typesseq-common>`."
 msgstr ""
 "La clase abstracta base :class:`collections.abc.Sequence` define una "
-"interfaz mucho más rica que va más allá de sólo :meth:`__getitem__` y :meth:"
-"`__len__`, agregando :meth:`count`, :meth:`index`, :meth:`__contains__`, y :"
-"meth:`__reversed__`. Los tipos que implementan esta interfaz expandida "
+"interfaz mucho más rica que va más allá de sólo :meth:`__getitem__` "
+"y :meth:`__len__`, "
+"agregando :meth:`count`, :meth:`index`, :meth:`__contains__`, "
+"y :meth:`__reversed__`. Los tipos que implementan esta interfaz expandida "
 "pueden ser registrados explícitamente usando :func:`~abc.register`."
 
-#: ../Doc/glossary.rst:1105
+#: ../Doc/glossary.rst:1135
 msgid "set comprehension"
 msgstr "comprensión de conjuntos"
 
-#: ../Doc/glossary.rst:1107
+#: ../Doc/glossary.rst:1137
 msgid ""
 "A compact way to process all or part of the elements in an iterable and "
 "return a set with the results. ``results = {c for c in 'abracadabra' if c "
-"not in 'abc'}`` generates the set of strings ``{'r', 'd'}``.  See :ref:"
-"`comprehensions`."
+"not in 'abc'}`` generates the set of strings ``{'r', 'd'}``.  "
+"See :ref:`comprehensions`."
 msgstr ""
 "Una forma compacta de procesar todos o parte de los elementos en un iterable "
 "y retornar un conjunto con los resultados. ``results = {c for c in "
 "'abracadabra' if c not in 'abc'}`` genera el conjunto de cadenas ``{'r', 'd'}"
 "``. Ver :ref:`comprehensions`."
 
-#: ../Doc/glossary.rst:1111
+#: ../Doc/glossary.rst:1141
 msgid "single dispatch"
 msgstr "despacho único"
 
-#: ../Doc/glossary.rst:1113
+#: ../Doc/glossary.rst:1143
 msgid ""
 "A form of :term:`generic function` dispatch where the implementation is "
 "chosen based on the type of a single argument."
@@ -2597,11 +2784,11 @@ msgstr ""
 "Una forma de despacho de una :term:`generic function` donde la "
 "implementación es elegida a partir del tipo de un sólo argumento."
 
-#: ../Doc/glossary.rst:1115
+#: ../Doc/glossary.rst:1145
 msgid "slice"
 msgstr "rebanada"
 
-#: ../Doc/glossary.rst:1117
+#: ../Doc/glossary.rst:1147
 msgid ""
 "An object usually containing a portion of a :term:`sequence`.  A slice is "
 "created using the subscript notation, ``[]`` with colons between numbers "
@@ -2613,47 +2800,82 @@ msgstr ""
 "números cuando se ponen varios, como en ``nombre_variable[1:3:5]``.  La "
 "notación con corchete (suscrito) usa internamente objetos :class:`slice`."
 
-#: ../Doc/glossary.rst:1121
+#: ../Doc/glossary.rst:1151
+#, fuzzy
+msgid "soft deprecated"
+msgstr "interpretado"
+
+#: ../Doc/glossary.rst:1153
+msgid ""
+"A soft deprecated API should not be used in new code, but it is safe for "
+"already existing code to use it. The API remains documented and tested, but "
+"will not be enhanced further."
+msgstr ""
+
+#: ../Doc/glossary.rst:1157
+msgid ""
+"Soft deprecation, unlike normal deprecation, does not plan on removing the "
+"API and will not emit warnings."
+msgstr ""
+
+#: ../Doc/glossary.rst:1160
+msgid ""
+"See `PEP 387: Soft Deprecation <https://peps.python.org/pep-0387/#soft-"
+"deprecation>`_."
+msgstr ""
+
+#: ../Doc/glossary.rst:1162
 msgid "special method"
 msgstr "método especial"
 
-#: ../Doc/glossary.rst:1125
+#: ../Doc/glossary.rst:1166
 msgid ""
 "A method that is called implicitly by Python to execute a certain operation "
 "on a type, such as addition.  Such methods have names starting and ending "
-"with double underscores.  Special methods are documented in :ref:"
-"`specialnames`."
+"with double underscores.  Special methods are documented "
+"in :ref:`specialnames`."
 msgstr ""
 "Un método que es llamado implícitamente por Python cuando ejecuta ciertas "
 "operaciones en un tipo, como la adición.  Estos métodos tienen nombres que "
 "comienzan y terminan con doble barra baja.  Los métodos especiales están "
 "documentados en :ref:`specialnames`."
 
-#: ../Doc/glossary.rst:1129
+#: ../Doc/glossary.rst:1170
 msgid "statement"
 msgstr "sentencia"
 
-#: ../Doc/glossary.rst:1131
+#: ../Doc/glossary.rst:1172
 msgid ""
 "A statement is part of a suite (a \"block\" of code).  A statement is either "
-"an :term:`expression` or one of several constructs with a keyword, such as :"
-"keyword:`if`, :keyword:`while` or :keyword:`for`."
+"an :term:`expression` or one of several constructs with a keyword, such "
+"as :keyword:`if`, :keyword:`while` or :keyword:`for`."
 msgstr ""
 "Una sentencia es parte de un conjunto (un \"bloque\" de código).  Una "
 "sentencia tanto es una :term:`expression`  como alguna de las varias "
-"sintaxis usando una palabra clave, como :keyword:`if`, :keyword:`while` o :"
-"keyword:`for`."
+"sintaxis usando una palabra clave, como :keyword:`if`, :keyword:`while` "
+"o :keyword:`for`."
 
-#: ../Doc/glossary.rst:1134
+#: ../Doc/glossary.rst:1175
+msgid "static type checker"
+msgstr ""
+
+#: ../Doc/glossary.rst:1177
+msgid ""
+"An external tool that reads Python code and analyzes it, looking for issues "
+"such as incorrect types. See also :term:`type hints <type hint>` and "
+"the :mod:`typing` module."
+msgstr ""
+
+#: ../Doc/glossary.rst:1180
 msgid "strong reference"
 msgstr "referencia fuerte"
 
-#: ../Doc/glossary.rst:1136
+#: ../Doc/glossary.rst:1182
 msgid ""
 "In Python's C API, a strong reference is a reference to an object which is "
 "owned by the code holding the reference.  The strong reference is taken by "
-"calling :c:func:`Py_INCREF` when the reference is created and released with :"
-"c:func:`Py_DECREF` when the reference is deleted."
+"calling :c:func:`Py_INCREF` when the reference is created and released "
+"with :c:func:`Py_DECREF` when the reference is deleted."
 msgstr ""
 "En la API de C de Python, una referencia fuerte es una referencia a un "
 "objeto que es propiedad del código que mantiene la referencia.  La "
@@ -2661,7 +2883,7 @@ msgstr ""
 "referencia y se libera con :c:func:`Py_DECREF` cuando se elimina la "
 "referencia."
 
-#: ../Doc/glossary.rst:1142
+#: ../Doc/glossary.rst:1188
 msgid ""
 "The :c:func:`Py_NewRef` function can be used to create a strong reference to "
 "an object. Usually, the :c:func:`Py_DECREF` function must be called on the "
@@ -2669,19 +2891,19 @@ msgid ""
 "leaking one reference."
 msgstr ""
 "La función :c:func:`Py_NewRef` se puede utilizar para crear una referencia "
-"fuerte a un objeto. Por lo general, se debe llamar a la función :c:func:"
-"`Py_DECREF` en la referencia fuerte antes de salir del alcance de la "
-"referencia fuerte, para evitar filtrar una referencia."
+"fuerte a un objeto. Por lo general, se debe llamar a la "
+"función :c:func:`Py_DECREF` en la referencia fuerte antes de salir del "
+"alcance de la referencia fuerte, para evitar filtrar una referencia."
 
-#: ../Doc/glossary.rst:1147
+#: ../Doc/glossary.rst:1193
 msgid "See also :term:`borrowed reference`."
 msgstr "Consulte también :term:`borrowed reference`."
 
-#: ../Doc/glossary.rst:1148
+#: ../Doc/glossary.rst:1194
 msgid "text encoding"
 msgstr "codificación de texto"
 
-#: ../Doc/glossary.rst:1150
+#: ../Doc/glossary.rst:1196
 msgid ""
 "A string in Python is a sequence of Unicode code points (in range "
 "``U+0000``--``U+10FFFF``). To store or transfer a string, it needs to be "
@@ -2692,7 +2914,7 @@ msgstr ""
 "una cadena de caracteres, es necesario serializarla como una secuencia de "
 "bytes."
 
-#: ../Doc/glossary.rst:1154
+#: ../Doc/glossary.rst:1200
 msgid ""
 "Serializing a string into a sequence of bytes is known as \"encoding\", and "
 "recreating the string from the sequence of bytes is known as \"decoding\"."
@@ -2701,7 +2923,7 @@ msgstr ""
 "conoce como \"codificación\", y la recreación de la cadena de caracteres a "
 "partir de la secuencia de bytes se conoce como \"decodificación\"."
 
-#: ../Doc/glossary.rst:1157
+#: ../Doc/glossary.rst:1203
 msgid ""
 "There are a variety of different text serialization :ref:`codecs <standard-"
 "encodings>`, which are collectively referred to as \"text encodings\"."
@@ -2709,37 +2931,39 @@ msgstr ""
 "Existe una gran variedad de serializaciones de texto :ref:`codecs <standard-"
 "encodings>`, que se denominan colectivamente \"codificaciones de texto\"."
 
-#: ../Doc/glossary.rst:1160
+#: ../Doc/glossary.rst:1206
 msgid "text file"
 msgstr "archivo de texto"
 
-#: ../Doc/glossary.rst:1162
+#: ../Doc/glossary.rst:1208
 msgid ""
 "A :term:`file object` able to read and write :class:`str` objects. Often, a "
-"text file actually accesses a byte-oriented datastream and handles the :term:"
-"`text encoding` automatically. Examples of text files are files opened in "
-"text mode (``'r'`` or ``'w'``), :data:`sys.stdin`, :data:`sys.stdout`, and "
-"instances of :class:`io.StringIO`."
+"text file actually accesses a byte-oriented datastream and handles "
+"the :term:`text encoding` automatically. Examples of text files are files "
+"opened in text mode (``'r'`` or "
+"``'w'``), :data:`sys.stdin`, :data:`sys.stdout`, and instances "
+"of :class:`io.StringIO`."
 msgstr ""
 "Un :term:`file object` capaz de leer y escribir objetos :class:`str`. "
 "Frecuentemente, un archivo de texto también accede a un flujo de datos "
 "binario y maneja automáticamente el :term:`text encoding`. Ejemplos de "
-"archivos de texto que son abiertos en modo texto (``'r'`` o ``'w'``), :data:"
-"`sys.stdin`, :data:`sys.stdout`, y las instancias de :class:`io.StringIO`."
+"archivos de texto que son abiertos en modo texto (``'r'`` o "
+"``'w'``), :data:`sys.stdin`, :data:`sys.stdout`, y las instancias "
+"de :class:`io.StringIO`."
 
-#: ../Doc/glossary.rst:1169
+#: ../Doc/glossary.rst:1215
 msgid ""
-"See also :term:`binary file` for a file object able to read and write :term:"
-"`bytes-like objects <bytes-like object>`."
+"See also :term:`binary file` for a file object able to read and "
+"write :term:`bytes-like objects <bytes-like object>`."
 msgstr ""
 "Vea también :term:`binary file` por objeto de archivos capaces de leer y "
 "escribir :term:`objeto tipo binario <bytes-like object>`."
 
-#: ../Doc/glossary.rst:1171
+#: ../Doc/glossary.rst:1217
 msgid "triple-quoted string"
 msgstr "cadena con triple comilla"
 
-#: ../Doc/glossary.rst:1173
+#: ../Doc/glossary.rst:1219
 msgid ""
 "A string which is bound by three instances of either a quotation mark (\") "
 "or an apostrophe (').  While they don't provide any functionality not "
@@ -2756,30 +2980,33 @@ msgstr ""
 "las cadenas y pueden abarcar múltiples líneas sin el uso de caracteres de "
 "continuación, haciéndolas particularmente útiles para escribir docstrings."
 
-#: ../Doc/glossary.rst:1180
+#: ../Doc/glossary.rst:1226
 msgid "type"
 msgstr "tipo"
 
-#: ../Doc/glossary.rst:1182
+#: ../Doc/glossary.rst:1228
+#, fuzzy
 msgid ""
 "The type of a Python object determines what kind of object it is; every "
-"object has a type.  An object's type is accessible as its :attr:`~instance."
-"__class__` attribute or can be retrieved with ``type(obj)``."
+"object has a type.  An object's type is accessible as "
+"its :attr:`~object.__class__` attribute or can be retrieved with "
+"``type(obj)``."
 msgstr ""
 "El tipo de un objeto Python determina qué tipo de objeto es; cada objeto "
-"tiene un tipo.  El tipo de un objeto puede ser accedido por su atributo :"
-"attr:`~instance.__class__` o puede ser conseguido usando ``type(obj)``."
+"tiene un tipo.  El tipo de un objeto puede ser accedido por su "
+"atributo :attr:`~instance.__class__` o puede ser conseguido usando "
+"``type(obj)``."
 
-#: ../Doc/glossary.rst:1186
+#: ../Doc/glossary.rst:1232
 msgid "type alias"
 msgstr "alias de tipos"
 
-#: ../Doc/glossary.rst:1188
+#: ../Doc/glossary.rst:1234
 msgid "A synonym for a type, created by assigning the type to an identifier."
 msgstr ""
 "Un sinónimo para un tipo, creado al asignar un tipo a un identificador."
 
-#: ../Doc/glossary.rst:1190
+#: ../Doc/glossary.rst:1236
 msgid ""
 "Type aliases are useful for simplifying :term:`type hints <type hint>`. For "
 "example::"
@@ -2787,19 +3014,34 @@ msgstr ""
 "Los alias de tipos son útiles para simplificar los :term:`indicadores de "
 "tipo <type hint>`. Por ejemplo::"
 
-#: ../Doc/glossary.rst:1197
+#: ../Doc/glossary.rst:1239
+msgid ""
+"def remove_gray_shades(\n"
+"        colors: list[tuple[int, int, int]]) -> list[tuple[int, int, int]]:\n"
+"    pass"
+msgstr ""
+
+#: ../Doc/glossary.rst:1243
 msgid "could be made more readable like this::"
 msgstr "podría ser más legible así::"
 
-#: ../Doc/glossary.rst:1204 ../Doc/glossary.rst:1218
+#: ../Doc/glossary.rst:1245
+msgid ""
+"Color = tuple[int, int, int]\n"
+"\n"
+"def remove_gray_shades(colors: list[Color]) -> list[Color]:\n"
+"    pass"
+msgstr ""
+
+#: ../Doc/glossary.rst:1250 ../Doc/glossary.rst:1264
 msgid "See :mod:`typing` and :pep:`484`, which describe this functionality."
 msgstr "Vea :mod:`typing` y :pep:`484`, que describen esta funcionalidad."
 
-#: ../Doc/glossary.rst:1205
+#: ../Doc/glossary.rst:1251
 msgid "type hint"
 msgstr "indicador de tipo"
 
-#: ../Doc/glossary.rst:1207
+#: ../Doc/glossary.rst:1253
 msgid ""
 "An :term:`annotation` that specifies the expected type for a variable, a "
 "class attribute, or a function parameter or return value."
@@ -2807,59 +3049,66 @@ msgstr ""
 "Una  :term:`annotation` que especifica el tipo esperado para una variable, "
 "un atributo de clase, un parámetro para una función o un valor de retorno."
 
-#: ../Doc/glossary.rst:1210
+#: ../Doc/glossary.rst:1256
+#, fuzzy
 msgid ""
 "Type hints are optional and are not enforced by Python but they are useful "
-"to static type analysis tools, and aid IDEs with code completion and "
-"refactoring."
+"to :term:`static type checkers <static type checker>`. They can also aid "
+"IDEs with code completion and refactoring."
 msgstr ""
 "Los indicadores de tipo son opcionales y no son obligados por Python pero "
 "son útiles para las herramientas de análisis de tipos estático, y ayuda a "
 "las IDE en el completado del código y la refactorización."
 
-#: ../Doc/glossary.rst:1214
+#: ../Doc/glossary.rst:1260
 msgid ""
 "Type hints of global variables, class attributes, and functions, but not "
 "local variables, can be accessed using :func:`typing.get_type_hints`."
 msgstr ""
 "Los indicadores de tipo de las variables globales, atributos de clase, y "
-"funciones, no de variables locales, pueden ser accedidos usando :func:"
-"`typing.get_type_hints`."
+"funciones, no de variables locales, pueden ser accedidos "
+"usando :func:`typing.get_type_hints`."
 
-#: ../Doc/glossary.rst:1219
+#: ../Doc/glossary.rst:1265
 msgid "universal newlines"
 msgstr "saltos de líneas universales"
 
-#: ../Doc/glossary.rst:1221
+#: ../Doc/glossary.rst:1267
 msgid ""
 "A manner of interpreting text streams in which all of the following are "
 "recognized as ending a line: the Unix end-of-line convention ``'\\n'``, the "
 "Windows convention ``'\\r\\n'``, and the old Macintosh convention "
-"``'\\r'``.  See :pep:`278` and :pep:`3116`, as well as :func:`bytes."
-"splitlines` for an additional use."
+"``'\\r'``.  See :pep:`278` and :pep:`3116`, as well "
+"as :func:`bytes.splitlines` for an additional use."
 msgstr ""
 "Una manera de interpretar flujos de texto en la cual son reconocidos como "
 "finales de línea todas siguientes formas: la convención de Unix para fin de "
 "línea ``'\\n'``, la convención de Windows ``'\\r\\n'``, y la vieja "
-"convención de Macintosh ``'\\r'``.  Vea :pep:`278` y :pep:`3116`, además de :"
-"func:`bytes.splitlines` para usos adicionales."
+"convención de Macintosh ``'\\r'``.  Vea :pep:`278` y :pep:`3116`, además "
+"de :func:`bytes.splitlines` para usos adicionales."
 
-#: ../Doc/glossary.rst:1226
+#: ../Doc/glossary.rst:1272
 msgid "variable annotation"
 msgstr "anotación de variable"
 
-#: ../Doc/glossary.rst:1228
+#: ../Doc/glossary.rst:1274
 msgid "An :term:`annotation` of a variable or a class attribute."
 msgstr "Una :term:`annotation` de una variable o un atributo de clase."
 
-#: ../Doc/glossary.rst:1230
+#: ../Doc/glossary.rst:1276
 msgid ""
 "When annotating a variable or a class attribute, assignment is optional::"
 msgstr ""
 "Cuando se anota una variable o un atributo de clase, la asignación es "
 "opcional::"
 
-#: ../Doc/glossary.rst:1235
+#: ../Doc/glossary.rst:1278
+msgid ""
+"class C:\n"
+"    field: 'annotation'"
+msgstr ""
+
+#: ../Doc/glossary.rst:1281
 msgid ""
 "Variable annotations are usually used for :term:`type hints <type hint>`: "
 "for example this variable is expected to take :class:`int` values::"
@@ -2868,13 +3117,17 @@ msgstr ""
 "hints <type hint>`: por ejemplo, se espera que esta variable tenga valores "
 "de clase :class:`int`::"
 
-#: ../Doc/glossary.rst:1241
+#: ../Doc/glossary.rst:1285
+msgid "count: int = 0"
+msgstr ""
+
+#: ../Doc/glossary.rst:1287
 msgid "Variable annotation syntax is explained in section :ref:`annassign`."
 msgstr ""
-"La sintaxis de la anotación de variables está explicada en la sección :ref:"
-"`annassign`."
+"La sintaxis de la anotación de variables está explicada en la "
+"sección :ref:`annassign`."
 
-#: ../Doc/glossary.rst:1243
+#: ../Doc/glossary.rst:1289
 msgid ""
 "See :term:`function annotation`, :pep:`484` and :pep:`526`, which describe "
 "this functionality. Also see :ref:`annotations-howto` for best practices on "
@@ -2884,11 +3137,11 @@ msgstr ""
 "esta funcionalidad. Consulte también :ref:`annotations-howto` para conocer "
 "las mejores prácticas sobre cómo trabajar con anotaciones."
 
-#: ../Doc/glossary.rst:1247
+#: ../Doc/glossary.rst:1293
 msgid "virtual environment"
 msgstr "entorno virtual"
 
-#: ../Doc/glossary.rst:1249
+#: ../Doc/glossary.rst:1295
 msgid ""
 "A cooperatively isolated runtime environment that allows Python users and "
 "applications to install and upgrade Python distribution packages without "
@@ -2900,15 +3153,15 @@ msgstr ""
 "distribución de Python sin interferir con el comportamiento de otras "
 "aplicaciones de Python en el mismo sistema."
 
-#: ../Doc/glossary.rst:1254
+#: ../Doc/glossary.rst:1300
 msgid "See also :mod:`venv`."
 msgstr "Vea también :mod:`venv`."
 
-#: ../Doc/glossary.rst:1255
+#: ../Doc/glossary.rst:1301
 msgid "virtual machine"
 msgstr "máquina virtual"
 
-#: ../Doc/glossary.rst:1257
+#: ../Doc/glossary.rst:1303
 msgid ""
 "A computer defined entirely in software.  Python's virtual machine executes "
 "the :term:`bytecode` emitted by the bytecode compiler."
@@ -2916,11 +3169,11 @@ msgstr ""
 "Una computadora definida enteramente por software.  La máquina virtual de "
 "Python ejecuta el :term:`bytecode` generado por el compilador de *bytecode*."
 
-#: ../Doc/glossary.rst:1259
+#: ../Doc/glossary.rst:1305
 msgid "Zen of Python"
 msgstr "Zen de Python"
 
-#: ../Doc/glossary.rst:1261
+#: ../Doc/glossary.rst:1307
 msgid ""
 "Listing of Python design principles and philosophies that are helpful in "
 "understanding and using the language.  The listing can be found by typing "
@@ -2930,18 +3183,18 @@ msgstr ""
 "útiles para entender y usar el lenguaje.  El listado puede encontrarse "
 "ingresando  \"``import this``\" en la consola interactiva."
 
-#: ../Doc/glossary.rst:264
+#: ../Doc/glossary.rst:256
 msgid "C-contiguous"
 msgstr "C-contiguous"
 
-#: ../Doc/glossary.rst:264
+#: ../Doc/glossary.rst:256
 msgid "Fortran contiguous"
 msgstr "Fortran contiguous"
 
-#: ../Doc/glossary.rst:757
+#: ../Doc/glossary.rst:771
 msgid "magic"
 msgstr "magic"
 
-#: ../Doc/glossary.rst:1123
+#: ../Doc/glossary.rst:1164
 msgid "special"
 msgstr "special"

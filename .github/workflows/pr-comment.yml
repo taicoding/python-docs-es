@@ -18,10 +18,10 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
-      - name: Preparar Python v3.11
+      - name: Preparar Python v3.13
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.13"
           cache: "pip"
       # checkout these files from the base branch to guarantee they haven't been
       # modified by the PR

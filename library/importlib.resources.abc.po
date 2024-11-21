@@ -9,17 +9,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python en Español 3.11\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/importlib.resources.abc.rst:2
-msgid ":mod:`importlib.resources.abc` -- Abstract base classes for resources"
+#, fuzzy
+msgid ":mod:`!importlib.resources.abc` -- Abstract base classes for resources"
 msgstr ":mod:`importlib.resources.abc` -- Clases base abstractas para recursos"
 
 #: ../Doc/library/importlib.resources.abc.rst:7
@@ -38,12 +39,13 @@ msgstr ""
 "*resources*."
 
 #: ../Doc/library/importlib.resources.abc.rst:20
+#, fuzzy
 msgid ""
 "From the perspective of this ABC, a *resource* is a binary artifact that is "
 "shipped within a package. Typically this is something like a data file that "
 "lives next to the ``__init__.py`` file of the package. The purpose of this "
 "class is to help abstract out the accessing of such data files so that it "
-"does not matter if the package and its data file(s) are stored in a e.g. zip "
+"does not matter if the package and its data file(s) are stored e.g. in a zip "
 "file versus on the file system."
 msgstr ""
 "Desde la perspectiva de este ABC, un *resource* es un artefacto binario que "
@@ -56,9 +58,9 @@ msgstr ""
 
 #: ../Doc/library/importlib.resources.abc.rst:28
 msgid ""
-"For any of methods of this class, a *resource* argument is expected to be a :"
-"term:`path-like object` which represents conceptually just a file name. This "
-"means that no subdirectory paths should be included in the *resource* "
+"For any of methods of this class, a *resource* argument is expected to be "
+"a :term:`path-like object` which represents conceptually just a file name. "
+"This means that no subdirectory paths should be included in the *resource* "
 "argument. This is because the location of the package the reader is for, "
 "acts as the \"directory\". Hence the metaphor for directories and file names "
 "is packages and resources, respectively. This is also why instances of this "
@@ -87,11 +89,11 @@ msgstr ""
 "Se espera que los cargadores que deseen admitir la lectura de recursos "
 "proporcionen un método llamado ``get_resource_reader(fullname)`` que retorna "
 "un objeto que implementa la interfaz de este ABC. Si el módulo especificado "
-"por nombre completo no es un paquete, este método debería retornar :const:"
-"`None`. Un objeto compatible con este ABC solo debe retornarse cuando el "
-"módulo especificado es un paquete."
+"por nombre completo no es un paquete, este método debería "
+"retornar :const:`None`. Un objeto compatible con este ABC solo debe "
+"retornarse cuando el módulo especificado es un paquete."
 
-#: ../Doc/library/importlib.resources.abc.rst:48
+#: ../Doc/library/importlib.resources.abc.rst:46
 #, fuzzy
 msgid "Use :class:`importlib.resources.abc.TraversableResources` instead."
 msgstr ""
@@ -117,31 +119,31 @@ msgstr "Retorna la ruta del sistema de archivos al *resource*."
 
 #: ../Doc/library/importlib.resources.abc.rst:61
 msgid ""
-"If the resource does not concretely exist on the file system, raise :exc:"
-"`FileNotFoundError`."
+"If the resource does not concretely exist on the file system, "
+"raise :exc:`FileNotFoundError`."
 msgstr ""
-"Si el recurso no existe concretamente en el sistema de archivos, lanza :exc:"
-"`FileNotFoundError`."
+"Si el recurso no existe concretamente en el sistema de archivos, "
+"lanza :exc:`FileNotFoundError`."
 
 #: ../Doc/library/importlib.resources.abc.rst:66
 msgid ""
-"Returns ``True`` if the named *name* is considered a resource. :exc:"
-"`FileNotFoundError` is raised if *name* does not exist."
+"Returns ``True`` if the named *name* is considered a "
+"resource. :exc:`FileNotFoundError` is raised if *name* does not exist."
 msgstr ""
-"Retorna ``True`` si el *name* con nombre se considera un recurso. :exc:"
-"`FileNotFoundError` se genera si *name* no existe."
+"Retorna ``True`` si el *name* con nombre se considera un "
+"recurso. :exc:`FileNotFoundError` se genera si *name* no existe."
 
 #: ../Doc/library/importlib.resources.abc.rst:71
 msgid ""
 "Returns an :term:`iterable` of strings over the contents of the package. Do "
 "note that it is not required that all names returned by the iterator be "
-"actual resources, e.g. it is acceptable to return names for which :meth:"
-"`is_resource` would be false."
+"actual resources, e.g. it is acceptable to return names for "
+"which :meth:`is_resource` would be false."
 msgstr ""
 "Retorna un :term:`iterable` de cadenas sobre el contenido del paquete. Tenga "
 "en cuenta que no se requiere que todos los nombres devueltos por el iterador "
-"sean recursos reales, p. es aceptable devolver nombres para los que :meth:"
-"`is_resource` sería falso."
+"sean recursos reales, p. es aceptable devolver nombres para los "
+"que :meth:`is_resource` sería falso."
 
 #: ../Doc/library/importlib.resources.abc.rst:77
 msgid ""
@@ -173,8 +175,8 @@ msgstr ""
 
 #: ../Doc/library/importlib.resources.abc.rst:93
 msgid ""
-"For a representation of the object on the file-system, use :meth:`importlib."
-"resources.as_file`."
+"For a representation of the object on the file-system, "
+"use :meth:`importlib.resources.as_file`."
 msgstr ""
 
 #: ../Doc/library/importlib.resources.abc.rst:98
@@ -187,19 +189,59 @@ msgid "Yield Traversable objects in self."
 msgstr "Produce generador iterador de objetos Traversable en self."
 
 #: ../Doc/library/importlib.resources.abc.rst:106
-msgid "Return True if self is a directory."
+#, fuzzy
+msgid "Return ``True`` if self is a directory."
 msgstr "Retorna True si self es un directorio."
 
 #: ../Doc/library/importlib.resources.abc.rst:110
-msgid "Return True if self is a file."
+#, fuzzy
+msgid "Return ``True`` if self is a file."
 msgstr "Retorna True si self es un archivo."
 
 #: ../Doc/library/importlib.resources.abc.rst:114
-#: ../Doc/library/importlib.resources.abc.rst:118
-msgid "Return Traversable child in self."
+msgid ""
+"Traverse directories according to *pathsegments* and return the result "
+"as :class:`!Traversable`."
+msgstr ""
+
+#: ../Doc/library/importlib.resources.abc.rst:117
+msgid ""
+"Each *pathsegments* argument may contain multiple names separated by forward "
+"slashes (``/``, ``posixpath.sep`` ). For example, the following are "
+"equivalent::"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.abc.rst:121
+msgid ""
+"files.joinpath('subdir', 'subsuddir', 'file.txt')\n"
+"files.joinpath('subdir/subsuddir/file.txt')"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.abc.rst:124
+msgid ""
+"Note that some :class:`!Traversable` implementations might not be updated to "
+"the latest version of the protocol. For compatibility with such "
+"implementations, provide a single argument without path separators to each "
+"call to ``joinpath``. For example::"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.abc.rst:129
+msgid "files.joinpath('subdir').joinpath('subsubdir').joinpath('file.txt')"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.abc.rst:133
+msgid ""
+"``joinpath`` accepts multiple *pathsegments*, and these segments may contain "
+"forward slashes as path separators. Previously, only a single *child* "
+"argument was accepted."
+msgstr ""
+
+#: ../Doc/library/importlib.resources.abc.rst:139
+#, fuzzy
+msgid "Return Traversable child in self. Equivalent to ``joinpath(child)``."
 msgstr "Regresar Traversable child en self."
 
-#: ../Doc/library/importlib.resources.abc.rst:122
+#: ../Doc/library/importlib.resources.abc.rst:144
 msgid ""
 "*mode* may be 'r' or 'rb' to open as text or binary. Return a handle "
 "suitable for reading (same as :attr:`pathlib.Path.open`)."
@@ -207,40 +249,42 @@ msgstr ""
 "*mode* puede ser 'r' o 'rb' para abrir como texto o binario. Retorna un "
 "identificador adecuado para la lectura (igual que :attr:`pathlib.Path.open`)."
 
-#: ../Doc/library/importlib.resources.abc.rst:125
+#: ../Doc/library/importlib.resources.abc.rst:147
 #, fuzzy
 msgid ""
-"When opening as text, accepts encoding parameters such as those accepted by :"
-"class:`io.TextIOWrapper`."
+"When opening as text, accepts encoding parameters such as those accepted "
+"by :class:`io.TextIOWrapper`."
 msgstr ""
 "Al abrirse como texto, acepta parámetros de codificación como los aceptados "
 "por :attr:`io.TextIOWrapper`."
 
-#: ../Doc/library/importlib.resources.abc.rst:130
+#: ../Doc/library/importlib.resources.abc.rst:152
 msgid "Read contents of self as bytes."
 msgstr "Lee el contenido de self como bytes."
 
-#: ../Doc/library/importlib.resources.abc.rst:134
+#: ../Doc/library/importlib.resources.abc.rst:156
 msgid "Read contents of self as text."
 msgstr "Lee el contenido de self como texto."
 
-#: ../Doc/library/importlib.resources.abc.rst:139
+#: ../Doc/library/importlib.resources.abc.rst:161
 #, fuzzy
 msgid ""
-"An abstract base class for resource readers capable of serving the :meth:"
-"`importlib.resources.files` interface. Subclasses :class:`ResourceReader` "
-"and provides concrete implementations of the :class:`!ResourceReader`'s "
-"abstract methods. Therefore, any loader supplying :class:`!"
-"TraversableResources` also supplies :class:`!ResourceReader`."
+"An abstract base class for resource readers capable of serving "
+"the :meth:`importlib.resources.files` interface. "
+"Subclasses :class:`ResourceReader` and provides concrete implementations of "
+"the :class:`!ResourceReader`'s abstract methods. Therefore, any loader "
+"supplying :class:`!TraversableResources` also supplies :class:`!"
+"ResourceReader`."
 msgstr ""
 "Una clase base abstracta para lectores de recursos capaz de servir la "
-"interfaz :meth:`importlib.resources.files`. Subclase :class:`importlib."
-"resources.abc.ResourceReader` y proporciona implementaciones concretas de "
-"los métodos abstractos de :class:`importlib.resources.abc.ResourceReader`. "
-"Por lo tanto, cualquier cargador que suministre :class:`importlib.abc."
-"TraversableReader` también suministre ResourceReader."
+"interfaz :meth:`importlib.resources.files`. "
+"Subclase :class:`importlib.resources.abc.ResourceReader` y proporciona "
+"implementaciones concretas de los métodos abstractos "
+"de :class:`importlib.resources.abc.ResourceReader`. Por lo tanto, cualquier "
+"cargador que suministre :class:`importlib.abc.TraversableReader` también "
+"suministre ResourceReader."
 
-#: ../Doc/library/importlib.resources.abc.rst:146
+#: ../Doc/library/importlib.resources.abc.rst:168
 msgid ""
 "Loaders that wish to support resource reading are expected to implement this "
 "interface."
@@ -248,7 +292,7 @@ msgstr ""
 "Se espera que los cargadores que deseen admitir la lectura de recursos "
 "implementen esta interfaz."
 
-#: ../Doc/library/importlib.resources.abc.rst:151
+#: ../Doc/library/importlib.resources.abc.rst:173
 msgid ""
 "Returns a :class:`importlib.resources.abc.Traversable` object for the loaded "
 "package."

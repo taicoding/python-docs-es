@@ -9,19 +9,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python en Español 3.11\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/importlib.resources.rst:2
 #, fuzzy
 msgid ""
-":mod:`importlib.resources` -- Package resource reading, opening and access"
+":mod:`!importlib.resources` -- Package resource reading, opening and access"
 msgstr ":mod:`importlib.resources` -- Recursos"
 
 #: ../Doc/library/importlib.resources.rst:7
@@ -75,10 +75,10 @@ msgid ""
 msgstr ""
 "Este módulo proporciona una funcionalidad similar a `pkg_resources <https://"
 "setuptools.readthedocs.io/en/latest/pkg_resources.html>`_ `Acceso a los "
-"recursos básicos <https://setuptools.readthedocs.io/en/latest/pkg_resources."
-"html#basic-resource-access>`_ sin la sobrecarga de rendimiento de ese "
-"paquete. Esto facilita la lectura de los recursos incluidos en los paquetes, "
-"con una semántica más estable y consistente."
+"recursos básicos <https://setuptools.readthedocs.io/en/latest/"
+"pkg_resources.html#basic-resource-access>`_ sin la sobrecarga de rendimiento "
+"de ese paquete. Esto facilita la lectura de los recursos incluidos en los "
+"paquetes, con una semántica más estable y consistente."
 
 #: ../Doc/library/importlib.resources.rst:43
 msgid ""
@@ -104,8 +104,8 @@ msgstr ""
 
 #: ../Doc/library/importlib.resources.rst:55
 msgid ""
-"Represents an anchor for resources, either a :class:`module object <types."
-"ModuleType>` or a module name as a string. Defined as ``Union[str, "
+"Represents an anchor for resources, either a :class:`module object "
+"<types.ModuleType>` or a module name as a string. Defined as ``Union[str, "
 "ModuleType]``."
 msgstr ""
 
@@ -123,7 +123,7 @@ msgstr ""
 
 #: ../Doc/library/importlib.resources.rst:66
 msgid ""
-"*anchor* is an optional :data:`Anchor`. If the anchor is a package, "
+"*anchor* is an optional :class:`Anchor`. If the anchor is a package, "
 "resources are resolved from that package. If a module, resources are "
 "resolved adjacent to that module (in the same package or the package root). "
 "If the anchor is omitted, the caller's module is used."
@@ -131,11 +131,12 @@ msgstr ""
 
 #: ../Doc/library/importlib.resources.rst:74
 msgid ""
-"\"package\" parameter was renamed to \"anchor\". \"anchor\" can now be a non-"
-"package module and if omitted will default to the caller's module. "
-"\"package\" is still accepted for compatibility but will raise a "
-"DeprecationWarning. Consider passing the anchor positionally or using "
-"``importlib_resources >= 5.10`` for a compatible interface on older Pythons."
+"*package* parameter was renamed to *anchor*. *anchor* can now be a non-"
+"package module and if omitted will default to the caller's module. *package* "
+"is still accepted for compatibility but will raise "
+"a :exc:`DeprecationWarning`. Consider passing the anchor positionally or "
+"using ``importlib_resources >= 5.10`` for a compatible interface on older "
+"Pythons."
 msgstr ""
 
 #: ../Doc/library/importlib.resources.rst:84
@@ -170,159 +171,182 @@ msgstr ""
 "sean insuficientes y se requiera un archivo real en el sistema de archivos."
 
 #: ../Doc/library/importlib.resources.rst:98
-msgid "Added support for ``traversable`` representing a directory."
+msgid "Added support for *traversable* representing a directory."
 msgstr ""
-
-#: ../Doc/library/importlib.resources.rst:103
-msgid "Deprecated functions"
-msgstr "Funciones en desuso"
 
 #: ../Doc/library/importlib.resources.rst:105
-msgid ""
-"An older, deprecated set of functions is still available, but is scheduled "
-"for removal in a future version of Python. The main drawback of these "
-"functions is that they do not support directories: they assume all resources "
-"are located directly within a *package*."
+msgid "Functional API"
 msgstr ""
-"Todavía está disponible un conjunto de funciones más antiguo y en desuso, "
-"pero está programado para eliminarse en una versión futura de Python. El "
-"principal inconveniente de estas funciones es que no admiten directorios: "
-"asumen que todos los recursos están ubicados directamente dentro de un "
-"*paquete*."
+
+#: ../Doc/library/importlib.resources.rst:107
+msgid ""
+"A set of simplified, backwards-compatible helpers is available. These allow "
+"common operations in a single function call."
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:110
+msgid "For all the following functions:"
+msgstr ""
 
 #: ../Doc/library/importlib.resources.rst:112
 msgid ""
-"Whenever a function accepts a ``Package`` argument, you can pass in either "
-"a :class:`module object <types.ModuleType>` or a module name as a string.  "
-"You can only pass module objects whose ``__spec__."
-"submodule_search_locations`` is not ``None``."
+"*anchor* is an :class:`~importlib.resources.Anchor`, as "
+"in :func:`~importlib.resources.files`. Unlike in ``files``, it may not be "
+"omitted."
 msgstr ""
-"Cada vez que una función acepta un argumento ``Package``, puede pasar un :"
-"class:`module object <types.ModuleType>` o un nombre de módulo como una "
-"cadena. Solo puede pasar objetos de módulo cuyo ``__spec__."
-"submodule_search_locations`` no sea ``None``."
 
-#: ../Doc/library/importlib.resources.rst:117
-msgid "The ``Package`` type is defined as ``Union[str, ModuleType]``."
-msgstr "El tipo ``Package`` se define como ``Union[str, ModuleType]``."
-
-#: ../Doc/library/importlib.resources.rst:124
+#: ../Doc/library/importlib.resources.rst:116
 msgid ""
-"For *resource* arguments of the functions below, you can pass in the name of "
-"a resource as a string or a :class:`path-like object <os.PathLike>`."
+"*path_names* are components of a resource's path name, relative to the "
+"anchor. For example, to get the text of resource named ``info.txt``, use::"
 msgstr ""
-"Para los argumentos *recurso* de las siguientes funciones, puede pasar el "
-"nombre de un recurso como una cadena o :class:`path-like object <os."
-"PathLike>`."
 
-#: ../Doc/library/importlib.resources.rst:128
-msgid "The ``Resource`` type is defined as ``Union[str, os.PathLike]``."
-msgstr "El tipo ``Resource`` se define como ``Union[str, os.PathLike]``."
-
-#: ../Doc/library/importlib.resources.rst:133
-msgid "Open for binary reading the *resource* within *package*."
-msgstr "Abierto para lectura binaria de *recurso* dentro de *paquete*."
-
-#: ../Doc/library/importlib.resources.rst:135
-msgid ""
-"*package* is either a name or a module object which conforms to the "
-"``Package`` requirements.  *resource* is the name of the resource to open "
-"within *package*; it may not contain path separators and it may not have sub-"
-"resources (i.e. it cannot be a directory).  This function returns a ``typing."
-"BinaryIO`` instance, a binary I/O stream open for reading."
+#: ../Doc/library/importlib.resources.rst:120
+msgid "importlib.resources.read_text(my_module, \"info.txt\")"
 msgstr ""
-"*package* es un nombre o un objeto de módulo que cumple con los requisitos "
-"de ``Package``. *resource* es el nombre del recurso para abrir dentro de "
-"*package*; puede que no contenga separadores de ruta y que no tenga "
-"subrecursos (es decir, no puede ser un directorio). Esta función retorna una "
-"instancia ``typing.BinaryIO``, un flujo de E/S binario abierto para lectura."
 
-#: ../Doc/library/importlib.resources.rst:143
-#: ../Doc/library/importlib.resources.rst:164
-#: ../Doc/library/importlib.resources.rst:182
-#: ../Doc/library/importlib.resources.rst:201
-#: ../Doc/library/importlib.resources.rst:237
-#: ../Doc/library/importlib.resources.rst:253
-msgid "Calls to this function can be replaced by::"
-msgstr "Las llamadas a esta función se pueden reemplazar por:"
-
-#: ../Doc/library/importlib.resources.rst:150
+#: ../Doc/library/importlib.resources.rst:122
 msgid ""
-"Open for text reading the *resource* within *package*.  By default, the "
-"resource is opened for reading as UTF-8."
+"Like :meth:`Traversable.joinpath <importlib.resources.abc.Traversable>`, The "
+"individual components should use forward slashes (``/``) as path separators. "
+"For example, the following are equivalent::"
 msgstr ""
-"Abierto para texto que lea *resource* dentro de *package*. De forma "
-"predeterminada, el recurso se abre para lectura como UTF-8."
 
-#: ../Doc/library/importlib.resources.rst:153
+#: ../Doc/library/importlib.resources.rst:127
 msgid ""
-"*package* is either a name or a module object which conforms to the "
-"``Package`` requirements.  *resource* is the name of the resource to open "
-"within *package*; it may not contain path separators and it may not have sub-"
-"resources (i.e. it cannot be a directory).  *encoding* and *errors* have the "
-"same meaning as with built-in :func:`open`."
+"importlib.resources.read_binary(my_module, \"pics/painting.png\")\n"
+"importlib.resources.read_binary(my_module, \"pics\", \"painting.png\")"
 msgstr ""
-"*package* es un nombre o un objeto de módulo que cumple con los requisitos "
-"de ``Package``. *resource* es el nombre del recurso para abrir dentro de "
-"*package*; puede que no contenga separadores de ruta y que no tenga "
-"subrecursos (es decir, no puede ser un directorio). *encoding* y *errors* "
-"tienen el mismo significado que con :func:`open` incorporado."
 
-#: ../Doc/library/importlib.resources.rst:159
+#: ../Doc/library/importlib.resources.rst:130
 msgid ""
-"This function returns a ``typing.TextIO`` instance, a text I/O stream open "
-"for reading."
+"For backward compatibility reasons, functions that read text require an "
+"explicit *encoding* argument if multiple *path_names* are given. For "
+"example, to get the text of ``info/chapter1.txt``, use::"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:134
+msgid ""
+"importlib.resources.read_text(my_module, \"info\", \"chapter1.txt\",\n"
+"                              encoding='utf-8')"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:139
+msgid "Open the named resource for binary reading."
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:141
+#: ../Doc/library/importlib.resources.rst:184
+#: ../Doc/library/importlib.resources.rst:232
+#: ../Doc/library/importlib.resources.rst:249
+#: ../Doc/library/importlib.resources.rst:267
+msgid ""
+"See :ref:`the introduction <importlib_resources_functional>` for details on "
+"*anchor* and *path_names*."
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:144
+#, fuzzy
+msgid ""
+"This function returns a :class:`~typing.BinaryIO` object, that is, a binary "
+"stream open for reading."
 msgstr ""
 "Esta función retorna una instancia ``typing.TextIO``, un flujo de E/S de "
 "texto abierto para lectura."
 
+#: ../Doc/library/importlib.resources.rst:147
 #: ../Doc/library/importlib.resources.rst:171
+#: ../Doc/library/importlib.resources.rst:187
+#: ../Doc/library/importlib.resources.rst:208
+#: ../Doc/library/importlib.resources.rst:235
+#: ../Doc/library/importlib.resources.rst:252
+#: ../Doc/library/importlib.resources.rst:270
+msgid "This function is roughly equivalent to::"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:149
+msgid "files(anchor).joinpath(*path_names).open('rb')"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:151
+#: ../Doc/library/importlib.resources.rst:191
+#: ../Doc/library/importlib.resources.rst:256
+msgid "Multiple *path_names* are accepted."
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:157
+#, fuzzy
 msgid ""
-"Read and return the contents of the *resource* within *package* as ``bytes``."
+"Open the named resource for text reading. By default, the contents are read "
+"as strict UTF-8."
+msgstr ""
+"Lee y retorna el contenido de *resource* dentro de *package* como ``str``. "
+"De forma predeterminada, los contenidos se leen como UTF-8 estricto."
+
+#: ../Doc/library/importlib.resources.rst:160
+#: ../Doc/library/importlib.resources.rst:200
+msgid ""
+"See :ref:`the introduction <importlib_resources_functional>` for details on "
+"*anchor* and *path_names*. *encoding* and *errors* have the same meaning as "
+"in built-in :func:`open`."
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:164
+#: ../Doc/library/importlib.resources.rst:204
+msgid ""
+"For backward compatibility reasons, the *encoding* argument must be given "
+"explicitly if there are multiple *path_names*. This limitation is scheduled "
+"to be removed in Python 3.15."
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:168
+#, fuzzy
+msgid ""
+"This function returns a :class:`~typing.TextIO` object, that is, a text "
+"stream open for reading."
+msgstr ""
+"Esta función retorna una instancia ``typing.TextIO``, un flujo de E/S de "
+"texto abierto para lectura."
+
+#: ../Doc/library/importlib.resources.rst:173
+msgid "files(anchor).joinpath(*path_names).open('r', encoding=encoding)"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:175
+#: ../Doc/library/importlib.resources.rst:212
+#: ../Doc/library/importlib.resources.rst:239
+msgid ""
+"Multiple *path_names* are accepted. *encoding* and *errors* must be given as "
+"keyword arguments."
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:182
+#, fuzzy
+msgid "Read and return the contents of the named resource as :class:`bytes`."
 msgstr ""
 "Lee y retorna el contenido de *resource* dentro de *package* como ``bytes``."
 
-#: ../Doc/library/importlib.resources.rst:174
-msgid ""
-"*package* is either a name or a module object which conforms to the "
-"``Package`` requirements.  *resource* is the name of the resource to open "
-"within *package*; it may not contain path separators and it may not have sub-"
-"resources (i.e. it cannot be a directory).  This function returns the "
-"contents of the resource as :class:`bytes`."
-msgstr ""
-"*package* es un nombre o un objeto de módulo que cumple con los requisitos "
-"de ``Package``. *resource* es el nombre del recurso para abrir dentro de "
-"*package*; puede que no contenga separadores de ruta y que no tenga "
-"subrecursos (es decir, no puede ser un directorio). Esta función retorna el "
-"contenido del recurso como :class:`bytes`."
-
 #: ../Doc/library/importlib.resources.rst:189
+msgid "files(anchor).joinpath(*path_names).read_bytes()"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:197
+#, fuzzy
 msgid ""
-"Read and return the contents of *resource* within *package* as a ``str``. By "
+"Read and return the contents of the named resource as :class:`str`. By "
 "default, the contents are read as strict UTF-8."
 msgstr ""
 "Lee y retorna el contenido de *resource* dentro de *package* como ``str``. "
 "De forma predeterminada, los contenidos se leen como UTF-8 estricto."
 
-#: ../Doc/library/importlib.resources.rst:192
-msgid ""
-"*package* is either a name or a module object which conforms to the "
-"``Package`` requirements.  *resource* is the name of the resource to open "
-"within *package*; it may not contain path separators and it may not have sub-"
-"resources (i.e. it cannot be a directory).  *encoding* and *errors* have the "
-"same meaning as with built-in :func:`open`.  This function returns the "
-"contents of the resource as :class:`str`."
+#: ../Doc/library/importlib.resources.rst:210
+msgid "files(anchor).joinpath(*path_names).read_text(encoding=encoding)"
 msgstr ""
-"*package* es un nombre o un objeto de módulo que cumple con los requisitos "
-"de ``Package``. *resource* es el nombre del recurso para abrir dentro de "
-"*package*; puede que no contenga separadores de ruta y que no tenga "
-"subrecursos (es decir, no puede ser un directorio). *encoding* y *errors* "
-"tienen el mismo significado que con :func:`open` integrado. Esta función "
-"retorna el contenido del recurso como :class:`str`."
 
-#: ../Doc/library/importlib.resources.rst:208
+#: ../Doc/library/importlib.resources.rst:219
+#, fuzzy
 msgid ""
-"Return the path to the *resource* as an actual file system path.  This "
+"Provides the path to the *resource* as an actual file system path.  This "
 "function returns a context manager for use in a :keyword:`with` statement. "
 "The context manager provides a :class:`pathlib.Path` object."
 msgstr ""
@@ -331,75 +355,66 @@ msgstr ""
 "declaración :keyword:`with`. El administrador de contexto proporciona un "
 "objeto :class:`pathlib.Path`."
 
-#: ../Doc/library/importlib.resources.rst:212
+#: ../Doc/library/importlib.resources.rst:223
+#, fuzzy
 msgid ""
-"Exiting the context manager cleans up any temporary file created when the "
-"resource needs to be extracted from e.g. a zip file."
+"Exiting the context manager cleans up any temporary files created, e.g. when "
+"the resource needs to be extracted from a zip file."
 msgstr ""
 "Al salir del administrador de contexto, se limpia cualquier archivo temporal "
 "creado cuando se necesita extraer el recurso, p. ej: un archivo comprimido."
 
-#: ../Doc/library/importlib.resources.rst:215
+#: ../Doc/library/importlib.resources.rst:226
 msgid ""
-"*package* is either a name or a module object which conforms to the "
-"``Package`` requirements.  *resource* is the name of the resource to open "
-"within *package*; it may not contain path separators and it may not have sub-"
-"resources (i.e. it cannot be a directory)."
+"For example, the :meth:`~pathlib.Path.stat` method requires an actual file "
+"system path; it can be used like this::"
 msgstr ""
-"*package* es un nombre o un objeto de módulo que cumple con los requisitos "
-"de ``Package``. *resource* es el nombre del recurso para abrir dentro de "
-"*package*; puede que no contenga separadores de ruta y que no tenga "
-"subrecursos (es decir, no puede ser un directorio)."
-
-#: ../Doc/library/importlib.resources.rst:222
-msgid "Calls to this function can be replaced using :func:`as_file`::"
-msgstr ""
-"Las llamadas a esta función se pueden reemplazar usando :func:`as_file`::"
 
 #: ../Doc/library/importlib.resources.rst:229
 msgid ""
-"Return ``True`` if there is a resource named *name* in the package, "
-"otherwise ``False``. This function does not consider directories to be "
-"resources. *package* is either a name or a module object which conforms to "
-"the ``Package`` requirements."
+"with importlib.resources.path(anchor, \"resource.txt\") as fspath:\n"
+"    result = fspath.stat()"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:237
+msgid "as_file(files(anchor).joinpath(*path_names))"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:246
+#, fuzzy
+msgid ""
+"Return ``True`` if the named resource exists, otherwise ``False``. This "
+"function does not consider directories to be resources."
 msgstr ""
 "Retorna ``True`` si hay un recurso llamado *name* en el paquete, de lo "
 "contrario, ``False``. Esta función no considera los directorios como "
 "recursos. *package* es un nombre o un objeto de módulo que cumple con los "
 "requisitos de ``Package``."
 
-#: ../Doc/library/importlib.resources.rst:244
+#: ../Doc/library/importlib.resources.rst:254
+msgid "files(anchor).joinpath(*path_names).is_file()"
+msgstr ""
+
+#: ../Doc/library/importlib.resources.rst:262
+#, fuzzy
 msgid ""
-"Return an iterable over the named items within the package.  The iterable "
-"returns :class:`str` resources (e.g. files) and non-resources (e.g. "
-"directories).  The iterable does not recurse into subdirectories."
+"Return an iterable over the named items within the package or path. The "
+"iterable returns names of resources (e.g. files) and non-resources (e.g. "
+"directories) as :class:`str`. The iterable does not recurse into "
+"subdirectories."
 msgstr ""
 "Retorna un iterable sobre los elementos nombrados dentro del paquete. El "
 "iterable retorna recursos :class:`str` (por ejemplo, archivos) y no recursos "
 "(por ejemplo, directorios). El iterable no recurre a subdirectorios."
 
-#: ../Doc/library/importlib.resources.rst:248
+#: ../Doc/library/importlib.resources.rst:272
 msgid ""
-"*package* is either a name or a module object which conforms to the "
-"``Package`` requirements."
+"for resource in files(anchor).joinpath(*path_names).iterdir():\n"
+"    yield resource.name"
 msgstr ""
-"*package* es un nombre o un objeto de módulo que cumple con los requisitos "
-"de ``Package``."
 
-#~ msgid ""
-#~ "This module leverages Python's import system to provide access to "
-#~ "*resources* within *packages*.  If you can import a package, you can "
-#~ "access resources within that package.  Resources can be opened or read, "
-#~ "in either binary or text mode."
-#~ msgstr ""
-#~ "Este módulo aprovecha el sistema de importación de Python para brindar "
-#~ "acceso a *recursos* dentro de *paquetes*. Si puede importar un paquete, "
-#~ "puede acceder a los recursos dentro de ese paquete. Los recursos se "
-#~ "pueden abrir o leer, ya sea en modo binario o de texto."
-
-#~ msgid ""
-#~ "*package* is either a name or a module object which conforms to the :data:"
-#~ "`Package` requirements."
-#~ msgstr ""
-#~ "*paquete* es un nombre o un objeto de módulo que cumple con los "
-#~ "requisitos de :data:`Package`."
+#: ../Doc/library/importlib.resources.rst:275
+msgid ""
+"Prefer ``iterdir()`` as above, which offers more control over the results "
+"and richer functionality."
+msgstr ""

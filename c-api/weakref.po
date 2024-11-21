@@ -10,17 +10,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2021-10-18 19:38+0200\n"
 "Last-Translator: Diego Cristóbal Herreros <diecristher@gmail.com>\n"
 "Language: es\n"
-"Language-Team: python-doc-es (https://mail.python.org/mailman3/lists/docs-es."
-"python.org)\n"
+"Language-Team: python-doc-es (https://mail.python.org/mailman3/lists/docs-"
+"es.python.org)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/c-api/weakref.rst:6
 msgid "Weak Reference Objects"
@@ -39,22 +39,27 @@ msgstr ""
 "como un proxy del objeto original tanto como pueda."
 
 #: ../Doc/c-api/weakref.rst:16
+#, fuzzy
 msgid ""
-"Return true if *ob* is either a reference or proxy object.  This function "
-"always succeeds."
+"Return non-zero if *ob* is either a reference or proxy object.  This "
+"function always succeeds."
 msgstr ""
 "Retorna verdadero (true) si *ob* es una referencia o un objeto proxy. Esta "
 "función siempre finaliza con éxito."
 
 #: ../Doc/c-api/weakref.rst:22
+#, fuzzy
 msgid ""
-"Return true if *ob* is a reference object.  This function always succeeds."
+"Return non-zero if *ob* is a reference object.  This function always "
+"succeeds."
 msgstr ""
 "Retorna verdadero (true) si *ob* es un objeto de referencia. Esta función "
 "siempre finaliza con éxito."
 
 #: ../Doc/c-api/weakref.rst:27
-msgid "Return true if *ob* is a proxy object.  This function always succeeds."
+#, fuzzy
+msgid ""
+"Return non-zero if *ob* is a proxy object.  This function always succeeds."
 msgstr ""
 "Retorna verdadero (true) si *ob* es un objeto proxy. Esta función siempre "
 "finaliza con éxito."
@@ -68,7 +73,7 @@ msgid ""
 "a callable object that receives notification when *ob* is garbage collected; "
 "it should accept a single parameter, which will be the weak reference object "
 "itself. *callback* may also be ``None`` or ``NULL``.  If *ob* is not a "
-"weakly referencable object, or if *callback* is not callable, ``None``, or "
+"weakly referenceable object, or if *callback* is not callable, ``None``, or "
 "``NULL``, this will return ``NULL`` and raise :exc:`TypeError`."
 msgstr ""
 "Retorna un objeto de referencia débil para el objeto *ob*. Esto siempre "
@@ -90,7 +95,7 @@ msgid ""
 "can be a callable object that receives notification when *ob* is garbage "
 "collected; it should accept a single parameter, which will be the weak "
 "reference object itself. *callback* may also be ``None`` or ``NULL``.  If "
-"*ob* is not a weakly referencable object, or if *callback* is not callable, "
+"*ob* is not a weakly referenceable object, or if *callback* is not callable, "
 "``None``, or ``NULL``, this will return ``NULL`` and raise :exc:`TypeError`."
 msgstr ""
 "Retorna un objeto proxy de referencia débil para el objeto *ob*. Esto "
@@ -104,15 +109,35 @@ msgstr ""
 "``None``, o ``NULL``, esto retornará ``NULL``  y causará un :exc:`TypeError`."
 
 #: ../Doc/c-api/weakref.rst:56
+msgid ""
+"Get a :term:`strong reference` to the referenced object from a weak "
+"reference, *ref*, into *\\*pobj*."
+msgstr ""
+
+#: ../Doc/c-api/weakref.rst:59
+msgid ""
+"On success, set *\\*pobj* to a new :term:`strong reference` to the "
+"referenced object and return 1."
+msgstr ""
+
+#: ../Doc/c-api/weakref.rst:61
+msgid "If the reference is dead, set *\\*pobj* to ``NULL`` and return 0."
+msgstr ""
+
+#: ../Doc/c-api/weakref.rst:62
+msgid "On error, raise an exception and return -1."
+msgstr ""
+
+#: ../Doc/c-api/weakref.rst:69
 #, fuzzy
 msgid ""
-"Return the referenced object from a weak reference, *ref*.  If the referent "
-"is no longer live, returns ``Py_None``."
+"Return a :term:`borrowed reference` to the referenced object from a weak "
+"reference, *ref*.  If the referent is no longer live, returns ``Py_None``."
 msgstr ""
 "Retorna el objeto referenciado desde una referencia débil, *ref*. Si el "
 "referente no está vivo, retornará :const:`Py_None`."
 
-#: ../Doc/c-api/weakref.rst:61
+#: ../Doc/c-api/weakref.rst:74
 msgid ""
 "This function returns a :term:`borrowed reference` to the referenced object. "
 "This means that you should always call :c:func:`Py_INCREF` on the object "
@@ -124,22 +149,46 @@ msgstr ""
 "sobre el objeto, excepto cuando no pueda ser destruido antes del último uso "
 "de la referencia prestada."
 
-#: ../Doc/c-api/weakref.rst:69
+#: ../Doc/c-api/weakref.rst:79 ../Doc/c-api/weakref.rst:87
+msgid "Use :c:func:`PyWeakref_GetRef` instead."
+msgstr ""
+
+#: ../Doc/c-api/weakref.rst:85
 #, fuzzy
 msgid "Similar to :c:func:`PyWeakref_GetObject`, but does no error checking."
 msgstr ""
 "Similar a :c:func:`PyWeakref_GetObject`, pero implementado como un macro que "
 "no verifica errores."
 
-#: ../Doc/c-api/weakref.rst:74
+#: ../Doc/c-api/weakref.rst:93
 msgid ""
 "This function is called by the :c:member:`~PyTypeObject.tp_dealloc` handler "
 "to clear weak references."
 msgstr ""
 
-#: ../Doc/c-api/weakref.rst:77
+#: ../Doc/c-api/weakref.rst:96
 msgid ""
 "This iterates through the weak references for *object* and calls callbacks "
 "for those references which have one. It returns when all callbacks have been "
 "attempted."
+msgstr ""
+
+#: ../Doc/c-api/weakref.rst:103
+msgid "Clears the weakrefs for *object* without calling the callbacks."
+msgstr ""
+
+#: ../Doc/c-api/weakref.rst:105
+msgid ""
+"This function is called by the :c:member:`~PyTypeObject.tp_dealloc` handler "
+"for types with finalizers (i.e., :meth:`~object.__del__`).  The handler for "
+"those objects first calls :c:func:`PyObject_ClearWeakRefs` to clear weakrefs "
+"and call their callbacks, then the finalizer, and finally this function to "
+"clear any weakrefs that may have been created by the finalizer."
+msgstr ""
+
+#: ../Doc/c-api/weakref.rst:111
+msgid ""
+"In most circumstances, it's more appropriate to "
+"use :c:func:`PyObject_ClearWeakRefs` to clear weakrefs instead of this "
+"function."
 msgstr ""

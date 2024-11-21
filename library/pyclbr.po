@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-16 21:42+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2021-11-05 10:46-0300\n"
 "Last-Translator: \n"
 "Language: es\n"
@@ -19,11 +19,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
-"X-Generator: Poedit 3.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/pyclbr.rst:2
-msgid ":mod:`pyclbr` --- Python module browser support"
+#, fuzzy
+msgid ":mod:`!pyclbr` --- Python module browser support"
 msgstr ":mod:`pyclbr` --- Soporte para navegador de módulos Python"
 
 #: ../Doc/library/pyclbr.rst:9
@@ -116,96 +116,114 @@ msgstr ""
 msgid "Function Objects"
 msgstr "Objetos Function"
 
-#: ../Doc/library/pyclbr.rst:61
+#: ../Doc/library/pyclbr.rst:64
+#, fuzzy
 msgid ""
-"Class :class:`Function` instances describe functions defined by def "
+"Class :class:`!Function` instances describe functions defined by def "
 "statements.  They have the following attributes:"
 msgstr ""
 "Las instancias de la clase :class:`Function` describen funciones definidas "
 "por instrucciones def. Tienen los siguientes atributos:"
 
-#: ../Doc/library/pyclbr.rst:67
+#: ../Doc/library/pyclbr.rst:70
 msgid "Name of the file in which the function is defined."
 msgstr "Nombre del archivo en el cual la función está definida."
 
-#: ../Doc/library/pyclbr.rst:72
+#: ../Doc/library/pyclbr.rst:75
 msgid "The name of the module defining the function described."
 msgstr "El nombre del módulo que define la función descrita."
 
-#: ../Doc/library/pyclbr.rst:77
+#: ../Doc/library/pyclbr.rst:80
 msgid "The name of the function."
 msgstr "El nombre de la función."
 
-#: ../Doc/library/pyclbr.rst:82 ../Doc/library/pyclbr.rst:132
+#: ../Doc/library/pyclbr.rst:85 ../Doc/library/pyclbr.rst:140
 msgid "The line number in the file where the definition starts."
 msgstr "El número de línea el en archivo donde inicia la definición."
 
-#: ../Doc/library/pyclbr.rst:87
-msgid "For top-level functions, None.  For nested functions, the parent."
+#: ../Doc/library/pyclbr.rst:90
+#, fuzzy
+msgid "For top-level functions, ``None``.  For nested functions, the parent."
 msgstr ""
 "Para funciones en el nivel más alto, None. Para funciones anidadas, el padre."
 
-#: ../Doc/library/pyclbr.rst:94 ../Doc/library/pyclbr.rst:144
+#: ../Doc/library/pyclbr.rst:97
+#, fuzzy
+msgid ""
+"A :class:`dictionary <dict>` mapping names to descriptors for nested "
+"functions and classes."
+msgstr ""
+"Un diccionario asignando nombres con descriptores para las clases y "
+"funciones anidadas."
+
+#: ../Doc/library/pyclbr.rst:105
+#, fuzzy
+msgid ""
+"``True`` for functions that are defined with the :keyword:`async <async "
+"def>` prefix, ``False`` otherwise."
+msgstr ""
+"``True`` para funciones que están definidas con el prefijo ``async``, de "
+"otra manera ``False``."
+
+#: ../Doc/library/pyclbr.rst:114
+msgid "Class Objects"
+msgstr "Objetos Class"
+
+#: ../Doc/library/pyclbr.rst:118
+#, fuzzy
+msgid ""
+"Class :class:`!Class` instances describe classes defined by class "
+"statements.  They have the same attributes as :class:`Functions <Function>` "
+"and two more."
+msgstr ""
+"Las instancias de las clase :class:`Class` describen clases definidas por "
+"instrucciones class. Tienen los mismos atributos que Functions y dos más."
+
+#: ../Doc/library/pyclbr.rst:125
+msgid "Name of the file in which the class is defined."
+msgstr "Nombre del archivo en el que la clase está definida."
+
+#: ../Doc/library/pyclbr.rst:130
+msgid "The name of the module defining the class described."
+msgstr "Nombre del módulo que define la clase descrita."
+
+#: ../Doc/library/pyclbr.rst:135
+msgid "The name of the class."
+msgstr "El nombre de la clase."
+
+#: ../Doc/library/pyclbr.rst:145
+#, fuzzy
+msgid "For top-level classes, ``None``.  For nested classes, the parent."
+msgstr ""
+"Para clases en el nivel más alto, None. Para clases anidadas, el padre."
+
+#: ../Doc/library/pyclbr.rst:152
 msgid ""
 "A dictionary mapping names to descriptors for nested functions and classes."
 msgstr ""
 "Un diccionario asignando nombres con descriptores para las clases y "
 "funciones anidadas."
 
-#: ../Doc/library/pyclbr.rst:102
+#: ../Doc/library/pyclbr.rst:160
+#, fuzzy
 msgid ""
-"``True`` for functions that are defined with the ``async`` prefix, ``False`` "
-"otherwise."
-msgstr ""
-"``True`` para funciones que están definidas con el prefijo ``async``, de "
-"otra manera ``False``."
-
-#: ../Doc/library/pyclbr.rst:110
-msgid "Class Objects"
-msgstr "Objetos Class"
-
-#: ../Doc/library/pyclbr.rst:111
-msgid ""
-"Class :class:`Class` instances describe classes defined by class "
-"statements.  They have the same attributes as Functions and two more."
-msgstr ""
-"Las instancias de las clase :class:`Class` describen clases definidas por "
-"instrucciones class. Tienen los mismos atributos que Functions y dos más."
-
-#: ../Doc/library/pyclbr.rst:117
-msgid "Name of the file in which the class is defined."
-msgstr "Nombre del archivo en el que la clase está definida."
-
-#: ../Doc/library/pyclbr.rst:122
-msgid "The name of the module defining the class described."
-msgstr "Nombre del módulo que define la clase descrita."
-
-#: ../Doc/library/pyclbr.rst:127
-msgid "The name of the class."
-msgstr "El nombre de la clase."
-
-#: ../Doc/library/pyclbr.rst:137
-msgid "For top-level classes, None.  For nested classes, the parent."
-msgstr ""
-"Para clases en el nivel más alto, None. Para clases anidadas, el padre."
-
-#: ../Doc/library/pyclbr.rst:152
-msgid ""
-"A list of :class:`Class` objects which describe the immediate base classes "
+"A list of :class:`!Class` objects which describe the immediate base classes "
 "of the class being described.  Classes which are named as superclasses but "
 "which are not discoverable by :func:`readmodule_ex` are listed as a string "
-"with the class name instead of as :class:`Class` objects."
+"with the class name instead of as :class:`!Class` objects."
 msgstr ""
 "Una lista de objetos :class:`Class` que describen las clases base inmediatas "
 "de la clase que se está describiendo. Las clases que se denominan "
 "superclases pero que no son detectables por :func:`readmodule_ex` se "
-"enumeran como una cadena con el nombre de clase en lugar de objetos :class:"
-"`Class`."
+"enumeran como una cadena con el nombre de clase en lugar de "
+"objetos :class:`Class`."
 
-#: ../Doc/library/pyclbr.rst:161
+#: ../Doc/library/pyclbr.rst:169
+#, fuzzy
 msgid ""
-"A dictionary mapping method names to line numbers.  This can be derived from "
-"the newer children dictionary, but remains for back-compatibility."
+"A :class:`dictionary <dict>` mapping method names to line numbers. This can "
+"be derived from the newer :attr:`children` dictionary, but remains for back-"
+"compatibility."
 msgstr ""
 "Un diccionario asignando los nombres de los métodos a sus números de línea. "
 "Esto se puede derivar del reciente diccionario children, pero permanece por "

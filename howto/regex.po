@@ -10,17 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-10-16 13:17-0500\n"
 "Last-Translator: Cristián Maureira-Fredes <cmaureirafredes@gmail.com>\n"
-"Language-Team: python-doc-es\n"
 "Language: es\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.4\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/howto/regex.rst:5
 msgid "Regular Expression HOWTO"
@@ -34,6 +33,7 @@ msgstr "Autor"
 msgid "A.M. Kuchling <amk@amk.ca>"
 msgstr "*A.M. Kuchling <amk@amk.ca>*"
 
+#: ../Doc/howto/regex.rst:-1
 msgid "Abstract"
 msgstr "Resumen"
 
@@ -66,10 +66,10 @@ msgid ""
 msgstr ""
 "Las expresiones regulares (llamadas RE, o regex, o patrones de regex) son "
 "esencialmente en un lenguaje de programación diminuto y altamente "
-"especializado incrustado dentro de Python y disponible a través del módulo :"
-"mod:`re`. Usando este pequeño lenguaje, especificas las reglas para el "
-"conjunto de cadenas de caracteres posibles que deseas hacer coincidir; este "
-"conjunto puede contener frases en inglés, o direcciones de correo "
+"especializado incrustado dentro de Python y disponible a través del "
+"módulo :mod:`re`. Usando este pequeño lenguaje, especificas las reglas para "
+"el conjunto de cadenas de caracteres posibles que deseas hacer coincidir; "
+"este conjunto puede contener frases en inglés, o direcciones de correo "
 "electrónico, o comandos TeX, o cualquier cosa que desee. A continuación, "
 "puede hacer preguntas como \"¿Coincide esta cadena con el patrón?\" o \"¿Hay "
 "alguna coincidencia con el patrón en alguna parte de esta cadena?\". También "
@@ -158,18 +158,18 @@ msgstr ""
 
 #: ../Doc/howto/regex.rst:70
 msgid ""
-"There are exceptions to this rule; some characters are special :dfn:"
-"`metacharacters`, and don't match themselves.  Instead, they signal that "
-"some out-of-the-ordinary thing should be matched, or they affect other "
-"portions of the RE by repeating them or changing their meaning.  Much of "
-"this document is devoted to discussing various metacharacters and what they "
-"do."
+"There are exceptions to this rule; some characters are "
+"special :dfn:`metacharacters`, and don't match themselves.  Instead, they "
+"signal that some out-of-the-ordinary thing should be matched, or they affect "
+"other portions of the RE by repeating them or changing their meaning.  Much "
+"of this document is devoted to discussing various metacharacters and what "
+"they do."
 msgstr ""
-"Hay excepciones a esta regla; algunos caracteres son especiales :dfn:"
-"`metacharacters`, y no coinciden. En cambio, señalan que debe coincidir con "
-"algo fuera de lo común, o afectan otras partes de la RE repitiéndolos o "
-"cambiando su significado. Gran parte de este documento está dedicado a "
-"discutir varios metacaracteres y lo que hacen."
+"Hay excepciones a esta regla; algunos caracteres son "
+"especiales :dfn:`metacharacters`, y no coinciden. En cambio, señalan que "
+"debe coincidir con algo fuera de lo común, o afectan otras partes de la RE "
+"repitiéndolos o cambiando su significado. Gran parte de este documento está "
+"dedicado a discutir varios metacaracteres y lo que hacen."
 
 #: ../Doc/howto/regex.rst:76
 msgid ""
@@ -178,6 +178,10 @@ msgid ""
 msgstr ""
 "Aquí hay una lista completa de los metacaracteres; sus significados se "
 "discutirán en el resto de este COMO (*HOWTO*)."
+
+#: ../Doc/howto/regex.rst:79
+msgid ". ^ $ * + ? { } [ ] \\ | ( )"
+msgstr ""
 
 #: ../Doc/howto/regex.rst:83
 msgid ""
@@ -213,12 +217,12 @@ msgstr ""
 
 #: ../Doc/howto/regex.rst:97
 msgid ""
-"You can match the characters not listed within the class by :dfn:"
-"`complementing` the set.  This is indicated by including a ``'^'`` as the "
-"first character of the class. For example, ``[^5]`` will match any character "
-"except ``'5'``.  If the caret appears elsewhere in a character class, it "
-"does not have special meaning. For example: ``[5^]`` will match either a "
-"``'5'`` or a ``'^'``."
+"You can match the characters not listed within the class "
+"by :dfn:`complementing` the set.  This is indicated by including a ``'^'`` "
+"as the first character of the class. For example, ``[^5]`` will match any "
+"character except ``'5'``.  If the caret appears elsewhere in a character "
+"class, it does not have special meaning. For example: ``[5^]`` will match "
+"either a ``'5'`` or a ``'^'``."
 msgstr ""
 "Puede hacer coincidir los caracteres que no figuran en la clase mediante el "
 "conjunto :dfn:`complementing`. Esto se indica mediante la inclusión de un "
@@ -260,19 +264,19 @@ msgid ""
 "Let's take an example: ``\\w`` matches any alphanumeric character.  If the "
 "regex pattern is expressed in bytes, this is equivalent to the class ``[a-zA-"
 "Z0-9_]``.  If the regex pattern is a string, ``\\w`` will match all the "
-"characters marked as letters in the Unicode database provided by the :mod:"
-"`unicodedata` module.  You can use the more restricted definition of ``\\w`` "
-"in a string pattern by supplying the :const:`re.ASCII` flag when compiling "
-"the regular expression."
+"characters marked as letters in the Unicode database provided by "
+"the :mod:`unicodedata` module.  You can use the more restricted definition "
+"of ``\\w`` in a string pattern by supplying the :const:`re.ASCII` flag when "
+"compiling the regular expression."
 msgstr ""
 "Tomemos un ejemplo: ``\\w`` coincide con cualquier carácter alfanumérico. Si "
 "el patrón de expresiones regulares se expresa en bytes, esto es equivalente "
 "a la clase ``[a-zA-Z0-9_]``. Si el patrón de expresiones regulares es una "
 "cadena de caracteres, ``\\w`` coincidirá con todos los caracteres marcados "
-"como letras en la base de datos Unicode proporcionada por el módulo :mod:"
-"`unicodedata`. Puede usar la definición más restringida de ``\\w`` en un "
-"patrón de cadena proporcionando el indicador :const:`re.ASCII` al compilar "
-"la expresión regular."
+"como letras en la base de datos Unicode proporcionada por el "
+"módulo :mod:`unicodedata`. Puede usar la definición más restringida de "
+"``\\w`` en un patrón de cadena proporcionando el indicador :const:`re.ASCII` "
+"al compilar la expresión regular."
 
 #: ../Doc/howto/regex.rst:123
 msgid ""
@@ -371,14 +375,14 @@ msgstr ""
 #: ../Doc/howto/regex.rst:156
 msgid ""
 "The final metacharacter in this section is ``.``.  It matches anything "
-"except a newline character, and there's an alternate mode (:const:`re."
-"DOTALL`) where it will match even a newline.  ``.`` is often used where you "
-"want to match \"any character\"."
+"except a newline character, and there's an alternate mode "
+"(:const:`re.DOTALL`) where it will match even a newline.  ``.`` is often "
+"used where you want to match \"any character\"."
 msgstr ""
 "El metacarácter final en esta sección es ``.``. Coincide con cualquier cosa "
-"excepto un carácter de nueva línea, y hay un modo alternativo (:const:`re."
-"DOTALL`) donde coincidirá incluso con una nueva línea. ``.`` se usa a menudo "
-"cuando se desea hacer coincidir \"cualquier carácter\"."
+"excepto un carácter de nueva línea, y hay un modo alternativo "
+"(:const:`re.DOTALL`) donde coincidirá incluso con una nueva línea. ``.`` se "
+"usa a menudo cuando se desea hacer coincidir \"cualquier carácter\"."
 
 #: ../Doc/howto/regex.rst:163
 msgid "Repeating Things"
@@ -618,6 +622,12 @@ msgstr ""
 
 #: ../Doc/howto/regex.rst:248
 msgid ""
+"The simplest case ``{m}`` matches the preceding item exactly *m* times. For "
+"example, ``a/{2}b`` will only match ``'a//b'``."
+msgstr ""
+
+#: ../Doc/howto/regex.rst:251
+msgid ""
 "Readers of a reductionist bent may notice that the three other quantifiers "
 "can all be expressed using this notation.  ``{0,}`` is the same as ``*``, "
 "``{1,}`` is equivalent to ``+``, and ``{0,1}`` is the same as ``?``.  It's "
@@ -630,11 +640,11 @@ msgstr ""
 "es lo mismo que ``?``.  Es mejor usar ``*``, ``+``, o ``?`` cuando sea "
 "posible, simplemente porque son más cortos y más fáciles de leer."
 
-#: ../Doc/howto/regex.rst:256
+#: ../Doc/howto/regex.rst:259
 msgid "Using Regular Expressions"
 msgstr "Usando expresiones regulares"
 
-#: ../Doc/howto/regex.rst:258
+#: ../Doc/howto/regex.rst:261
 msgid ""
 "Now that we've looked at some simple regular expressions, how do we actually "
 "use them in Python?  The :mod:`re` module provides an interface to the "
@@ -646,11 +656,11 @@ msgstr ""
 "para el motor de expresiones regulares, lo que le permite compilar RE en "
 "objetos y luego realizar coincidencias con ellos."
 
-#: ../Doc/howto/regex.rst:265
+#: ../Doc/howto/regex.rst:268
 msgid "Compiling Regular Expressions"
 msgstr "Compilando expresiones regulares"
 
-#: ../Doc/howto/regex.rst:267
+#: ../Doc/howto/regex.rst:270
 msgid ""
 "Regular expressions are compiled into pattern objects, which have methods "
 "for various operations such as searching for pattern matches or performing "
@@ -660,7 +670,15 @@ msgstr ""
 "métodos para diversas operaciones, como buscar coincidencias de patrones o "
 "realizar sustituciones de cadenas de caracteres. ::"
 
-#: ../Doc/howto/regex.rst:276
+#: ../Doc/howto/regex.rst:274
+msgid ""
+">>> import re\n"
+">>> p = re.compile('ab*')\n"
+">>> p\n"
+"re.compile('ab*')"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:279
 msgid ""
 ":func:`re.compile` also accepts an optional *flags* argument, used to enable "
 "various special features and syntax variations.  We'll go over the available "
@@ -671,15 +689,19 @@ msgstr ""
 "Repasaremos las configuraciones disponibles más adelante, pero por ahora un "
 "solo ejemplo servirá:"
 
-#: ../Doc/howto/regex.rst:282
+#: ../Doc/howto/regex.rst:283
+msgid ">>> p = re.compile('ab*', re.IGNORECASE)"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:285
 msgid ""
 "The RE is passed to :func:`re.compile` as a string.  REs are handled as "
 "strings because regular expressions aren't part of the core Python language, "
 "and no special syntax was created for expressing them.  (There are "
 "applications that don't need REs at all, so there's no need to bloat the "
 "language specification by including them.) Instead, the :mod:`re` module is "
-"simply a C extension module included with Python, just like the :mod:"
-"`socket` or :mod:`zlib` modules."
+"simply a C extension module included with Python, just like "
+"the :mod:`socket` or :mod:`zlib` modules."
 msgstr ""
 "La RE se pasa a :func:`re.compile` como una cadena de caracteres. Las RE se "
 "manejan como cadenas de caracteres porque las expresiones regulares no son "
@@ -689,7 +711,7 @@ msgstr ""
 "En cambio, el módulo :mod:`re` es simplemente un módulo de extensión C "
 "incluido en Python, al igual que los módulos :mod:`socket` o :mod:`zlib`."
 
-#: ../Doc/howto/regex.rst:289
+#: ../Doc/howto/regex.rst:292
 msgid ""
 "Putting REs in strings keeps the Python language simpler, but has one "
 "disadvantage which is the topic of the next section."
@@ -697,11 +719,11 @@ msgstr ""
 "Poner RE en cadenas de caracteres mantiene el lenguaje Python más simple, "
 "pero tiene una desventaja que es el tema de la siguiente sección."
 
-#: ../Doc/howto/regex.rst:296
+#: ../Doc/howto/regex.rst:299
 msgid "The Backslash Plague"
 msgstr "La plaga de la barra invertida (*The Backslash Plague*)"
 
-#: ../Doc/howto/regex.rst:298
+#: ../Doc/howto/regex.rst:301
 msgid ""
 "As stated earlier, regular expressions use the backslash character "
 "(``'\\'``) to indicate special forms or to allow special characters to be "
@@ -714,7 +736,7 @@ msgstr ""
 "entra en conflicto con el uso de Python del mismo carácter para el mismo "
 "propósito en cadenas literales."
 
-#: ../Doc/howto/regex.rst:303
+#: ../Doc/howto/regex.rst:306
 msgid ""
 "Let's say you want to write a RE that matches the string ``\\section``, "
 "which might be found in a LaTeX file.  To figure out what to write in the "
@@ -735,39 +757,39 @@ msgstr ""
 "para expresar esto como una cadena literal de Python, ambas barras "
 "invertidas deben escaparse *nuevamente*."
 
-#: ../Doc/howto/regex.rst:312
+#: ../Doc/howto/regex.rst:315
 msgid "Characters"
 msgstr "Caracteres"
 
-#: ../Doc/howto/regex.rst:312
+#: ../Doc/howto/regex.rst:315
 msgid "Stage"
 msgstr "Explicación"
 
-#: ../Doc/howto/regex.rst:314
+#: ../Doc/howto/regex.rst:317
 msgid "``\\section``"
 msgstr "``\\section``"
 
-#: ../Doc/howto/regex.rst:314
+#: ../Doc/howto/regex.rst:317
 msgid "Text string to be matched"
 msgstr "Cadena de texto que debe coincidir"
 
-#: ../Doc/howto/regex.rst:316
+#: ../Doc/howto/regex.rst:319
 msgid "``\\\\section``"
 msgstr "``\\\\section``"
 
-#: ../Doc/howto/regex.rst:316
+#: ../Doc/howto/regex.rst:319
 msgid "Escaped backslash for :func:`re.compile`"
 msgstr "Barra invertida de escape para :func:`re.compile`"
 
-#: ../Doc/howto/regex.rst:318 ../Doc/howto/regex.rst:345
+#: ../Doc/howto/regex.rst:321 ../Doc/howto/regex.rst:348
 msgid "``\"\\\\\\\\section\"``"
 msgstr "``\"\\\\\\\\section\"``"
 
-#: ../Doc/howto/regex.rst:318
+#: ../Doc/howto/regex.rst:321
 msgid "Escaped backslashes for a string literal"
 msgstr "Barra invertida de escape para un literal de cadena de caracteres"
 
-#: ../Doc/howto/regex.rst:321
+#: ../Doc/howto/regex.rst:324
 msgid ""
 "In short, to match a literal backslash, one has to write ``'\\\\\\\\'`` as "
 "the RE string, because the regular expression must be ``\\\\``, and each "
@@ -782,7 +804,7 @@ msgstr ""
 "invertidas repetidamente, esto genera muchas barras invertidas repetidas y "
 "dificulta la comprensión de las cadenas resultantes."
 
-#: ../Doc/howto/regex.rst:327
+#: ../Doc/howto/regex.rst:330
 msgid ""
 "The solution is to use Python's raw string notation for regular expressions; "
 "backslashes are not handled in any special way in a string literal prefixed "
@@ -799,54 +821,54 @@ msgstr ""
 "una nueva línea. Las expresiones regulares a menudo se escribirán en código "
 "Python utilizando esta notación de cadena sin formato."
 
-#: ../Doc/howto/regex.rst:333
+#: ../Doc/howto/regex.rst:336
 msgid ""
 "In addition, special escape sequences that are valid in regular expressions, "
-"but not valid as Python string literals, now result in a :exc:"
-"`DeprecationWarning` and will eventually become a :exc:`SyntaxError`, which "
-"means the sequences will be invalid if raw string notation or escaping the "
-"backslashes isn't used."
+"but not valid as Python string literals, now result in "
+"a :exc:`DeprecationWarning` and will eventually become a :exc:`SyntaxError`, "
+"which means the sequences will be invalid if raw string notation or escaping "
+"the backslashes isn't used."
 msgstr ""
 "Además, las secuencias de escape especiales que son válidas en expresiones "
 "regulares, pero no válidas como literales de cadena de Python, ahora dan "
-"como resultado :exc:`DeprecationWarning` y eventualmente se convertirán en :"
-"exc:`SyntaxError`, lo que significa que las secuencias no serán válidas. si "
-"no se utiliza la notación de cadena sin formato o el escape de las barras "
+"como resultado :exc:`DeprecationWarning` y eventualmente se convertirán "
+"en :exc:`SyntaxError`, lo que significa que las secuencias no serán válidas. "
+"si no se utiliza la notación de cadena sin formato o el escape de las barras "
 "invertidas."
 
-#: ../Doc/howto/regex.rst:341
+#: ../Doc/howto/regex.rst:344
 msgid "Regular String"
 msgstr "Cadena de caracteres regulares"
 
-#: ../Doc/howto/regex.rst:341
+#: ../Doc/howto/regex.rst:344
 msgid "Raw string"
 msgstr "Cadena de caracteres crudas (*Raw string*)"
 
-#: ../Doc/howto/regex.rst:343
+#: ../Doc/howto/regex.rst:346
 msgid "``\"ab*\"``"
 msgstr "``\"ab*\"``"
 
-#: ../Doc/howto/regex.rst:343
+#: ../Doc/howto/regex.rst:346
 msgid "``r\"ab*\"``"
 msgstr "``r\"ab*\"``"
 
-#: ../Doc/howto/regex.rst:345
+#: ../Doc/howto/regex.rst:348
 msgid "``r\"\\\\section\"``"
 msgstr "``r\"\\\\section\"``"
 
-#: ../Doc/howto/regex.rst:347
+#: ../Doc/howto/regex.rst:350
 msgid "``\"\\\\w+\\\\s+\\\\1\"``"
 msgstr "``\"\\\\w+\\\\s+\\\\1\"``"
 
-#: ../Doc/howto/regex.rst:347
+#: ../Doc/howto/regex.rst:350
 msgid "``r\"\\w+\\s+\\1\"``"
 msgstr "``r\"\\w+\\s+\\1\"``"
 
-#: ../Doc/howto/regex.rst:352
+#: ../Doc/howto/regex.rst:355
 msgid "Performing Matches"
 msgstr "Realizando coincidencias"
 
-#: ../Doc/howto/regex.rst:354
+#: ../Doc/howto/regex.rst:357
 msgid ""
 "Once you have an object representing a compiled regular expression, what do "
 "you do with it?  Pattern objects have several methods and attributes. Only "
@@ -858,57 +880,57 @@ msgstr ""
 "Aquí solo se cubrirán los más importantes; consulte los documentos :mod:`re` "
 "para obtener una lista completa."
 
-#: ../Doc/howto/regex.rst:360 ../Doc/howto/regex.rst:414
-#: ../Doc/howto/regex.rst:1062
+#: ../Doc/howto/regex.rst:363 ../Doc/howto/regex.rst:417
+#: ../Doc/howto/regex.rst:1065
 msgid "Method/Attribute"
 msgstr "Método/atributo"
 
-#: ../Doc/howto/regex.rst:360 ../Doc/howto/regex.rst:414
-#: ../Doc/howto/regex.rst:1062
+#: ../Doc/howto/regex.rst:363 ../Doc/howto/regex.rst:417
+#: ../Doc/howto/regex.rst:1065
 msgid "Purpose"
 msgstr "Objetivo"
 
-#: ../Doc/howto/regex.rst:362
+#: ../Doc/howto/regex.rst:365
 msgid "``match()``"
 msgstr "``match()``"
 
-#: ../Doc/howto/regex.rst:362
+#: ../Doc/howto/regex.rst:365
 msgid "Determine if the RE matches at the beginning of the string."
 msgstr ""
 "Determina si la RE coincide con el comienzo de la cadena de caracteres."
 
-#: ../Doc/howto/regex.rst:365
+#: ../Doc/howto/regex.rst:368
 msgid "``search()``"
 msgstr "``search()``"
 
-#: ../Doc/howto/regex.rst:365
+#: ../Doc/howto/regex.rst:368
 msgid "Scan through a string, looking for any location where this RE matches."
 msgstr ""
 "Escanea una cadena, buscando cualquier ubicación donde coincida este RE."
 
-#: ../Doc/howto/regex.rst:368
+#: ../Doc/howto/regex.rst:371
 msgid "``findall()``"
 msgstr "``findall()``"
 
-#: ../Doc/howto/regex.rst:368
+#: ../Doc/howto/regex.rst:371
 msgid "Find all substrings where the RE matches, and returns them as a list."
 msgstr ""
 "Encuentra todas las subcadenas de caracteres donde coincide la RE y las "
 "retorna como una lista."
 
-#: ../Doc/howto/regex.rst:371
+#: ../Doc/howto/regex.rst:374
 msgid "``finditer()``"
 msgstr "``finditer()``"
 
-#: ../Doc/howto/regex.rst:371
+#: ../Doc/howto/regex.rst:374
 msgid ""
-"Find all substrings where the RE matches, and returns them as an :term:"
-"`iterator`."
+"Find all substrings where the RE matches, and returns them as "
+"an :term:`iterator`."
 msgstr ""
 "Encuentra todas las subcadenas donde la RE coincide y las retorna como un "
 "término iterado :term:`iterator`."
 
-#: ../Doc/howto/regex.rst:375
+#: ../Doc/howto/regex.rst:378
 msgid ""
 ":meth:`~re.Pattern.match` and :meth:`~re.Pattern.search` return ``None`` if "
 "no match can be found.  If they're successful, a :ref:`match object <match-"
@@ -921,7 +943,7 @@ msgstr ""
 "sobre la coincidencia: dónde comienza y termina, la subcadena de caracteres "
 "con la que coincidió, y más."
 
-#: ../Doc/howto/regex.rst:380
+#: ../Doc/howto/regex.rst:383
 msgid ""
 "You can learn about this by interactively experimenting with the :mod:`re` "
 "module."
@@ -929,16 +951,24 @@ msgstr ""
 "Puedes aprender sobre esto experimentando de forma interactiva con el "
 "módulo :mod:`re`."
 
-#: ../Doc/howto/regex.rst:383
+#: ../Doc/howto/regex.rst:386
 msgid ""
 "This HOWTO uses the standard Python interpreter for its examples. First, run "
 "the Python interpreter, import the :mod:`re` module, and compile a RE::"
 msgstr ""
 "Este CÓMO (*HOWTO*) utiliza el intérprete estándar de Python para sus "
-"ejemplos. Primero, ejecute el intérprete de Python, importe el módulo :mod:"
-"`re` y compile en RE::"
+"ejemplos. Primero, ejecute el intérprete de Python, importe el "
+"módulo :mod:`re` y compile en RE::"
 
-#: ../Doc/howto/regex.rst:391
+#: ../Doc/howto/regex.rst:389
+msgid ""
+">>> import re\n"
+">>> p = re.compile('[a-z]+')\n"
+">>> p\n"
+"re.compile('[a-z]+')"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:394
 msgid ""
 "Now, you can try matching various strings against the RE ``[a-z]+``.  An "
 "empty string shouldn't match at all, since ``+`` means 'one or more "
@@ -950,10 +980,17 @@ msgstr ""
 "Una cadena de caracteres vacía no debería coincidir en absoluto, ya que "
 "``+`` significa que 'una o más repeticiones'. :meth:`~re.Pattern.match` "
 "debería retornar ``None`` en este caso, lo que hará que el intérprete no "
-"imprima ningún resultado. Puede imprimir explícitamente el resultado de :"
-"meth:`!match` para aclarar esto. ::"
+"imprima ningún resultado. Puede imprimir explícitamente el resultado "
+"de :meth:`!match` para aclarar esto. ::"
 
-#: ../Doc/howto/regex.rst:401
+#: ../Doc/howto/regex.rst:400
+msgid ""
+">>> p.match(\"\")\n"
+">>> print(p.match(\"\"))\n"
+"None"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:404
 msgid ""
 "Now, let's try it on a string that it should match, such as ``tempo``.  In "
 "this case, :meth:`~re.Pattern.match` will return a :ref:`match object <match-"
@@ -964,7 +1001,14 @@ msgstr ""
 "object <match-objects>`, por lo que debe almacenar el resultado en una "
 "variable para su posterior uso. ::"
 
-#: ../Doc/howto/regex.rst:409
+#: ../Doc/howto/regex.rst:408
+msgid ""
+">>> m = p.match('tempo')\n"
+">>> m\n"
+"<re.Match object; span=(0, 5), match='tempo'>"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:412
 msgid ""
 "Now you can query the :ref:`match object <match-objects>` for information "
 "about the matching string.  Match object instances also have several methods "
@@ -975,50 +1019,60 @@ msgstr ""
 "coincidentes también tienen varios métodos y atributos; los más importantes "
 "son:"
 
-#: ../Doc/howto/regex.rst:416
+#: ../Doc/howto/regex.rst:419
 msgid "``group()``"
 msgstr "``group()``"
 
-#: ../Doc/howto/regex.rst:416
+#: ../Doc/howto/regex.rst:419
 msgid "Return the string matched by the RE"
 msgstr "Retorna la cadena de caracteres que coincide con la RE"
 
-#: ../Doc/howto/regex.rst:418
+#: ../Doc/howto/regex.rst:421
 msgid "``start()``"
 msgstr "``start()``"
 
-#: ../Doc/howto/regex.rst:418
+#: ../Doc/howto/regex.rst:421
 msgid "Return the starting position of the match"
 msgstr "Retorna la posición de inicio de la coincidencia"
 
-#: ../Doc/howto/regex.rst:420
+#: ../Doc/howto/regex.rst:423
 msgid "``end()``"
 msgstr "``end()``"
 
-#: ../Doc/howto/regex.rst:420
+#: ../Doc/howto/regex.rst:423
 msgid "Return the ending position of the match"
 msgstr "Retorna la posición final de la coincidencia"
 
-#: ../Doc/howto/regex.rst:422
+#: ../Doc/howto/regex.rst:425
 msgid "``span()``"
 msgstr "``span()``"
 
-#: ../Doc/howto/regex.rst:422
+#: ../Doc/howto/regex.rst:425
 msgid "Return a tuple containing the (start, end) positions  of the match"
 msgstr ""
 "Retorna una tupla que contiene (inicio, final) las posiciones de coincidencia"
 
-#: ../Doc/howto/regex.rst:426
+#: ../Doc/howto/regex.rst:429
 msgid "Trying these methods will soon clarify their meaning::"
 msgstr "Probando estos métodos pronto aclarará sus significados::"
 
-#: ../Doc/howto/regex.rst:435
+#: ../Doc/howto/regex.rst:431
 msgid ""
-":meth:`~re.Match.group` returns the substring that was matched by the RE.  :"
-"meth:`~re.Match.start` and :meth:`~re.Match.end` return the starting and "
-"ending index of the match. :meth:`~re.Match.span` returns both start and end "
-"indexes in a single tuple.  Since the :meth:`~re.Pattern.match` method only "
-"checks if the RE matches at the start of a string, :meth:`!start` will "
+">>> m.group()\n"
+"'tempo'\n"
+">>> m.start(), m.end()\n"
+"(0, 5)\n"
+">>> m.span()\n"
+"(0, 5)"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:438
+msgid ""
+":meth:`~re.Match.group` returns the substring that was matched by the "
+"RE.  :meth:`~re.Match.start` and :meth:`~re.Match.end` return the starting "
+"and ending index of the match. :meth:`~re.Match.span` returns both start and "
+"end indexes in a single tuple.  Since the :meth:`~re.Pattern.match` method "
+"only checks if the RE matches at the start of a string, :meth:`!start` will "
 "always be zero.  However, the :meth:`~re.Pattern.search` method of patterns "
 "scans through the string, so  the match may not start at zero in that "
 "case. ::"
@@ -1026,14 +1080,26 @@ msgstr ""
 ":meth:`~re.Match.group` retorna la subcadena de caracteres que coincide con "
 "la RE. :meth:`~re.Match.start` y :meth:`~re.Match.end` retornan el índice "
 "inicial y final de la coincidencia. :meth:`~re.Match.span` retorna el índice "
-"inicial y final en una única tupla. Dado que el método :meth:`~re.Pattern."
-"match` solo verifica si la RE coincide al comienzo de una cadena de "
-"caracteres, :meth:`!start` siempre será cero. Sin embargo, el método de "
-"patrones :meth:`~re.Pattern.search` escanea a través de la cadena de "
-"caracteres, por lo que es posible que la coincidencia no comience en cero en "
-"ese caso. ::"
+"inicial y final en una única tupla. Dado que el "
+"método :meth:`~re.Pattern.match` solo verifica si la RE coincide al comienzo "
+"de una cadena de caracteres, :meth:`!start` siempre será cero. Sin embargo, "
+"el método de patrones :meth:`~re.Pattern.search` escanea a través de la "
+"cadena de caracteres, por lo que es posible que la coincidencia no comience "
+"en cero en ese caso. ::"
 
-#: ../Doc/howto/regex.rst:452
+#: ../Doc/howto/regex.rst:446
+msgid ""
+">>> print(p.match('::: message'))\n"
+"None\n"
+">>> m = p.search('::: message'); print(m)\n"
+"<re.Match object; span=(4, 11), match='message'>\n"
+">>> m.group()\n"
+"'message'\n"
+">>> m.span()\n"
+"(4, 11)"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:455
 msgid ""
 "In actual programs, the most common style is to store the :ref:`match object "
 "<match-objects>` in a variable, and then check if it was ``None``.  This "
@@ -1043,64 +1109,102 @@ msgstr ""
 "<match-objects>` en una variable, y luego verificar si era ``None``. Esto "
 "generalmente se ve así::"
 
-#: ../Doc/howto/regex.rst:463
+#: ../Doc/howto/regex.rst:459
 msgid ""
-"Two pattern methods return all of the matches for a pattern. :meth:`~re."
-"Pattern.findall` returns a list of matching strings::"
+"p = re.compile( ... )\n"
+"m = p.match( 'string goes here' )\n"
+"if m:\n"
+"    print('Match found: ', m.group())\n"
+"else:\n"
+"    print('No match')"
 msgstr ""
-"Dos métodos de patrón retornan todas las coincidencias de un patrón. :meth:"
-"`~re.Pattern.findall` retorna una lista de cadenas de caracteres "
-"coincidentes::"
 
-#: ../Doc/howto/regex.rst:470
+#: ../Doc/howto/regex.rst:466
+msgid ""
+"Two pattern methods return all of the matches for a "
+"pattern. :meth:`~re.Pattern.findall` returns a list of matching strings::"
+msgstr ""
+"Dos métodos de patrón retornan todas las coincidencias de un "
+"patrón. :meth:`~re.Pattern.findall` retorna una lista de cadenas de "
+"caracteres coincidentes::"
+
+#: ../Doc/howto/regex.rst:469
+msgid ""
+">>> p = re.compile(r'\\d+')\n"
+">>> p.findall('12 drummers drumming, 11 pipers piping, 10 lords a-leaping')\n"
+"['12', '11', '10']"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:473
 msgid ""
 "The ``r`` prefix, making the literal a raw string literal, is needed in this "
 "example because escape sequences in a normal \"cooked\" string literal that "
 "are not recognized by Python, as opposed to regular expressions, now result "
-"in a :exc:`DeprecationWarning` and will eventually become a :exc:"
-"`SyntaxError`.  See :ref:`the-backslash-plague`."
+"in a :exc:`DeprecationWarning` and will eventually become "
+"a :exc:`SyntaxError`.  See :ref:`the-backslash-plague`."
 msgstr ""
 "El prefijo ``r``, que convierte al literal en una cadena de caracteres "
 "literal sin formato, es necesario en este ejemplo porque las secuencias de "
 "escape en un cadena de caracteres literal \"cocinado\" normal que no son "
 "reconocidas por Python, a diferencia de las expresiones regulares, ahora dan "
-"como resultado :exc:`DeprecationWarning` y eventualmente se convertirá en :"
-"exc:`SyntaxError`. Ver :ref:`the-backslash-plague`."
+"como resultado :exc:`DeprecationWarning` y eventualmente se convertirá "
+"en :exc:`SyntaxError`. Ver :ref:`the-backslash-plague`."
 
-#: ../Doc/howto/regex.rst:476
+#: ../Doc/howto/regex.rst:479
 msgid ""
 ":meth:`~re.Pattern.findall` has to create the entire list before it can be "
 "returned as the result.  The :meth:`~re.Pattern.finditer` method returns a "
-"sequence of :ref:`match object <match-objects>` instances as an :term:"
-"`iterator`::"
+"sequence of :ref:`match object <match-objects>` instances as "
+"an :term:`iterator`::"
 msgstr ""
 ":meth:`~re.Pattern.findall` tiene que crear la lista completa antes de que "
 "pueda retornarse como resultado. El método :meth:`~re.Pattern.finditer` "
 "retorna una secuencia de :ref:`match object <match-objects>` instancias como "
 "iterados :term:`iterator`::"
 
-#: ../Doc/howto/regex.rst:492
+#: ../Doc/howto/regex.rst:483
+msgid ""
+">>> iterator = p.finditer('12 drummers drumming, 11 ... 10 ...')\n"
+">>> iterator  \n"
+"<callable_iterator object at 0x...>\n"
+">>> for match in iterator:\n"
+"...     print(match.span())\n"
+"...\n"
+"(0, 2)\n"
+"(22, 24)\n"
+"(29, 31)"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:495
 msgid "Module-Level Functions"
 msgstr "Funciones a nivel de módulo"
 
-#: ../Doc/howto/regex.rst:494
+#: ../Doc/howto/regex.rst:497
 msgid ""
-"You don't have to create a pattern object and call its methods; the :mod:"
-"`re` module also provides top-level functions called :func:`~re.match`, :"
-"func:`~re.search`, :func:`~re.findall`, :func:`~re.sub`, and so forth.  "
-"These functions take the same arguments as the corresponding pattern method "
-"with the RE string added as the first argument, and still return either "
-"``None`` or a :ref:`match object <match-objects>` instance. ::"
+"You don't have to create a pattern object and call its methods; "
+"the :mod:`re` module also provides top-level functions "
+"called :func:`~re.match`, :func:`~re.search`, :func:`~re.findall`, :func:`~re.sub`, "
+"and so forth.  These functions take the same arguments as the corresponding "
+"pattern method with the RE string added as the first argument, and still "
+"return either ``None`` or a :ref:`match object <match-objects>` instance. ::"
 msgstr ""
-"No es necesario crear un objeto patrón y llamar a sus métodos; el módulo :"
-"mod:`re` también proporciona funciones de nivel superior llamadas :func:`~re."
-"match` , :func:`~re.search` , :func:`~re.findall` , :func:`~re.sub`, y así "
-"sucesivamente. Estas funciones toman los mismos argumentos que el método de "
-"patrón correspondiente con la cadena de RE agregada como primer argumento, y "
-"aún así retornan una instancia de ``None`` o :ref:`match object <match-"
-"objects>`. ::"
+"No es necesario crear un objeto patrón y llamar a sus métodos; el "
+"módulo :mod:`re` también proporciona funciones de nivel superior "
+"llamadas :func:`~re.match` , :func:`~re.search` , :func:`~re.findall` , :func:`~re.sub`, "
+"y así sucesivamente. Estas funciones toman los mismos argumentos que el "
+"método de patrón correspondiente con la cadena de RE agregada como primer "
+"argumento, y aún así retornan una instancia de ``None`` o :ref:`match object "
+"<match-objects>`. ::"
 
-#: ../Doc/howto/regex.rst:506
+#: ../Doc/howto/regex.rst:504
+msgid ""
+">>> print(re.match(r'From\\s+', 'Fromage amk'))\n"
+"None\n"
+">>> re.match(r'From\\s+', 'From amk Thu May 14 19:12:10 1998')  \n"
+"<re.Match object; span=(0, 5), match='From '>"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:509
 msgid ""
 "Under the hood, these functions simply create a pattern object for you and "
 "call the appropriate method on it.  They also store the compiled object in a "
@@ -1112,7 +1216,7 @@ msgstr ""
 "compilado en un caché, por lo que las futuras llamadas que usen el mismo RE "
 "no necesitarán analizar el patrón una y otra vez."
 
-#: ../Doc/howto/regex.rst:511
+#: ../Doc/howto/regex.rst:514
 msgid ""
 "Should you use these module-level functions, or should you get the pattern "
 "and call its methods yourself?  If you're accessing a regex within a loop, "
@@ -1125,31 +1229,32 @@ msgstr ""
 "llamadas a funciones. Fuera de los bucles, no hay mucha diferencia gracias "
 "al caché interno."
 
-#: ../Doc/howto/regex.rst:519
+#: ../Doc/howto/regex.rst:522
 msgid "Compilation Flags"
 msgstr "Los flags de compilación"
 
-#: ../Doc/howto/regex.rst:523
+#: ../Doc/howto/regex.rst:526
 msgid ""
 "Compilation flags let you modify some aspects of how regular expressions "
 "work. Flags are available in the :mod:`re` module under two names, a long "
-"name such as :const:`IGNORECASE` and a short, one-letter form such as :const:"
-"`I`.  (If you're familiar with Perl's pattern modifiers, the one-letter "
-"forms use the same letters; the short form of :const:`re.VERBOSE` is :const:"
-"`re.X`, for example.) Multiple flags can be specified by bitwise OR-ing "
-"them; ``re.I | re.M`` sets both the :const:`I` and :const:`M` flags, for "
-"example."
+"name such as :const:`IGNORECASE` and a short, one-letter form such "
+"as :const:`I`.  (If you're familiar with Perl's pattern modifiers, the one-"
+"letter forms use the same letters; the short form of :const:`re.VERBOSE` "
+"is :const:`re.X`, for example.) Multiple flags can be specified by bitwise "
+"OR-ing them; ``re.I | re.M`` sets both the :const:`I` and :const:`M` flags, "
+"for example."
 msgstr ""
 "Las flags de compilación le permiten modificar algunos aspectos de cómo "
 "funcionan las expresiones regulares. Las flags están disponibles en el "
 "módulo :mod:`re` con dos nombres, un nombre largo como :const:`IGNORECASE` y "
 "una forma corta de una letra como :const:`I`. (Si está familiarizado con los "
 "modificadores de patrones de Perl, las formas de una letra usan las mismas "
-"letras; la forma corta de :const:`re.VERBOSE` es :const:`re.X`, por ejemplo)."
-"Se pueden especificar varios indicadores uniéndolos con *OR* bit a bit; ``re."
-"I | re.M`` establece los flags :const:`I` and :const:`M`, por ejemplo."
+"letras; la forma corta de :const:`re.VERBOSE` es :const:`re.X`, por "
+"ejemplo).Se pueden especificar varios indicadores uniéndolos con *OR* bit a "
+"bit; ``re.I | re.M`` establece los flags :const:`I` and :const:`M`, por "
+"ejemplo."
 
-#: ../Doc/howto/regex.rst:531
+#: ../Doc/howto/regex.rst:534
 msgid ""
 "Here's a table of the available flags, followed by a more detailed "
 "explanation of each one."
@@ -1157,19 +1262,19 @@ msgstr ""
 "Aquí hay una tabla de las flags disponibles, seguida de una explicación más "
 "detallada de cada una."
 
-#: ../Doc/howto/regex.rst:535
+#: ../Doc/howto/regex.rst:538
 msgid "Flag"
 msgstr "Flag"
 
-#: ../Doc/howto/regex.rst:535
+#: ../Doc/howto/regex.rst:538
 msgid "Meaning"
 msgstr "Significado"
 
-#: ../Doc/howto/regex.rst:537
+#: ../Doc/howto/regex.rst:540
 msgid ":const:`ASCII`, :const:`A`"
 msgstr ":const:`ASCII`, :const:`A`"
 
-#: ../Doc/howto/regex.rst:537
+#: ../Doc/howto/regex.rst:540
 msgid ""
 "Makes several escapes like ``\\w``, ``\\b``, ``\\s`` and ``\\d`` match only "
 "on ASCII characters with the respective property."
@@ -1177,64 +1282,64 @@ msgstr ""
 "Hace que varios escapes como ``\\w``, ``\\b``, ``\\s`` y ``\\d`` coincidan "
 "solo en caracteres ASCII con la propiedad respectiva."
 
-#: ../Doc/howto/regex.rst:541
+#: ../Doc/howto/regex.rst:544
 msgid ":const:`DOTALL`, :const:`S`"
 msgstr ":const:`DOTALL`, :const:`S`"
 
-#: ../Doc/howto/regex.rst:541
+#: ../Doc/howto/regex.rst:544
 msgid "Make ``.`` match any character, including newlines."
 msgstr ""
 "Hace que ``.`` coincida con cualquier caracter, incluidas las nuevas líneas."
 
-#: ../Doc/howto/regex.rst:544
+#: ../Doc/howto/regex.rst:547
 msgid ":const:`IGNORECASE`, :const:`I`"
 msgstr ":const:`IGNORECASE`, :const:`I`"
 
-#: ../Doc/howto/regex.rst:544
+#: ../Doc/howto/regex.rst:547
 msgid "Do case-insensitive matches."
 msgstr "Hace coincidencias que no distingan entre mayúsculas y minúsculas."
 
-#: ../Doc/howto/regex.rst:546
+#: ../Doc/howto/regex.rst:549
 msgid ":const:`LOCALE`, :const:`L`"
 msgstr ":const:`LOCALE`, :const:`L`"
 
-#: ../Doc/howto/regex.rst:546
+#: ../Doc/howto/regex.rst:549
 msgid "Do a locale-aware match."
 msgstr "Hace una coincidencia con reconocimiento de configuración regional."
 
-#: ../Doc/howto/regex.rst:548
+#: ../Doc/howto/regex.rst:551
 msgid ":const:`MULTILINE`, :const:`M`"
 msgstr ":const:`MULTILINE`, :const:`M`"
 
-#: ../Doc/howto/regex.rst:548
+#: ../Doc/howto/regex.rst:551
 msgid "Multi-line matching, affecting ``^`` and ``$``."
 msgstr "Coincidencia de varias líneas, que afecta a ``^`` y ``$``."
 
-#: ../Doc/howto/regex.rst:551
+#: ../Doc/howto/regex.rst:554
 msgid ":const:`VERBOSE`, :const:`X` (for 'extended')"
 msgstr ":const:`VERBOSE`, :const:`X` (for 'extended')"
 
-#: ../Doc/howto/regex.rst:551
+#: ../Doc/howto/regex.rst:554
 msgid ""
 "Enable verbose REs, which can be organized more cleanly and understandably."
 msgstr ""
 "Habilite RE detallados, que se pueden organizar de manera más limpia y "
 "comprensible."
 
-#: ../Doc/howto/regex.rst:560
+#: ../Doc/howto/regex.rst:563
 msgid ""
 "Perform case-insensitive matching; character class and literal strings will "
 "match letters by ignoring case.  For example, ``[A-Z]`` will match lowercase "
 "letters, too. Full Unicode matching also works unless the :const:`ASCII` "
 "flag is used to disable non-ASCII matches.  When the Unicode patterns ``[a-"
 "z]`` or ``[A-Z]`` are used in combination with the :const:`IGNORECASE` flag, "
-"they will match the 52 ASCII letters and 4 additional non-ASCII letters: "
-"'İ' (U+0130, Latin capital letter I with dot above), 'ı' (U+0131, Latin "
-"small letter dotless i), 'ſ' (U+017F, Latin small letter long s) and "
-"'K' (U+212A, Kelvin sign).  ``Spam`` will match ``'Spam'``, ``'spam'``, "
-"``'spAM'``, or ``'ſpam'`` (the latter is matched only in Unicode mode). This "
-"lowercasing doesn't take the current locale into account; it will if you "
-"also set the :const:`LOCALE` flag."
+"they will match the 52 ASCII letters and 4 additional non-ASCII letters: 'İ' "
+"(U+0130, Latin capital letter I with dot above), 'ı' (U+0131, Latin small "
+"letter dotless i), 'ſ' (U+017F, Latin small letter long s) and 'K' (U+212A, "
+"Kelvin sign).  ``Spam`` will match ``'Spam'``, ``'spam'``, ``'spAM'``, or "
+"``'ſpam'`` (the latter is matched only in Unicode mode). This lowercasing "
+"doesn't take the current locale into account; it will if you also set "
+"the :const:`LOCALE` flag."
 msgstr ""
 "Realiza una coincidencia que no distinga entre mayúsculas y minúsculas; la "
 "clase de caracteres y las cadenas de caracteres literales coincidirán con "
@@ -1242,17 +1347,17 @@ msgstr ""
 "coincidirá con letras minúsculas. La coincidencia completa de Unicode "
 "también funciona a menos que se utilice la flag :const:`ASCII` para "
 "deshabilitar las coincidencias que no sean ASCII. Cuando los patrones "
-"Unicode ``[a-z]`` o ``[A-Z]`` se utilizan en combinación con el indicador :"
-"const:`IGNORECASE` , coincidirán con las 52 letras ASCII y 4 letras "
-"adicionales no ASCII 'İ' (U+0130, letra mayúscula latina I con un punto "
-"arriba), 'ı' (U+0131, letra minúscula latina sin punto i),'ſ' (U+017F, letra "
-"minúscula latina larga s) y 'K' (U+212A, signo de Kelvin). ``Spam`` "
+"Unicode ``[a-z]`` o ``[A-Z]`` se utilizan en combinación con el "
+"indicador :const:`IGNORECASE` , coincidirán con las 52 letras ASCII y 4 "
+"letras adicionales no ASCII 'İ' (U+0130, letra mayúscula latina I con un "
+"punto arriba), 'ı' (U+0131, letra minúscula latina sin punto i),'ſ' (U+017F, "
+"letra minúscula latina larga s) y 'K' (U+212A, signo de Kelvin). ``Spam`` "
 "coincidirá ``'Spam'``, ``'spam'``, ``'spAM'``, o ``'ſpam'`` (este último "
 "solo coincide en modo Unicode). Estas minúsculas no tiene en cuenta la "
-"configuración regional actual; lo hará si también establece la flag :const:"
-"`LOCALE` ."
+"configuración regional actual; lo hará si también establece la "
+"flag :const:`LOCALE` ."
 
-#: ../Doc/howto/regex.rst:578
+#: ../Doc/howto/regex.rst:581
 msgid ""
 "Make ``\\w``, ``\\W``, ``\\b``, ``\\B`` and case-insensitive matching "
 "dependent on the current locale instead of the Unicode database."
@@ -1261,7 +1366,7 @@ msgstr ""
 "distinga entre mayúsculas y minúsculas dependan de la configuración regional "
 "actual en lugar de la base de datos Unicode."
 
-#: ../Doc/howto/regex.rst:581
+#: ../Doc/howto/regex.rst:584
 msgid ""
 "Locales are a feature of the C library intended to help in writing programs "
 "that take account of language differences.  For example, if you're "
@@ -1298,15 +1403,15 @@ msgstr ""
 "predeterminada en Python 3 para patrones Unicode (str), y puede manejar "
 "diferentes configuraciones regionales/idiomas."
 
-#: ../Doc/howto/regex.rst:603
+#: ../Doc/howto/regex.rst:606
 msgid ""
 "(``^`` and ``$`` haven't been explained yet;  they'll be introduced in "
 "section :ref:`more-metacharacters`.)"
 msgstr ""
-"(``^`` y ``$`` aún no se han explicado; se presentarán en la sección :ref:"
-"`more-metacharacters`.)"
+"(``^`` y ``$`` aún no se han explicado; se presentarán en la "
+"sección :ref:`more-metacharacters`.)"
 
-#: ../Doc/howto/regex.rst:606
+#: ../Doc/howto/regex.rst:609
 msgid ""
 "Usually ``^`` matches only at the beginning of the string, and ``$`` matches "
 "only at the end of the string and immediately before the newline (if any) at "
@@ -1325,7 +1430,7 @@ msgstr ""
 "coincide al final de la cadena de caracteres y al final de cada línea "
 "(inmediatamente antes de cada nueva línea)."
 
-#: ../Doc/howto/regex.rst:619
+#: ../Doc/howto/regex.rst:622
 msgid ""
 "Makes the ``'.'`` special character match any character at all, including a "
 "newline; without this flag, ``'.'`` will match anything *except* a newline."
@@ -1334,7 +1439,7 @@ msgstr ""
 "incluida una nueva línea; sin esta bandera, ``'.'`` coincidirá con cualquier "
 "cosa *except* una nueva línea."
 
-#: ../Doc/howto/regex.rst:627
+#: ../Doc/howto/regex.rst:630
 msgid ""
 "Make ``\\w``, ``\\W``, ``\\b``, ``\\B``, ``\\s`` and ``\\S`` perform ASCII-"
 "only matching instead of full Unicode matching. This is only meaningful for "
@@ -1345,7 +1450,7 @@ msgstr ""
 "Esto solo es significativo para los patrones Unicode y se ignora para los "
 "patrones de bytes."
 
-#: ../Doc/howto/regex.rst:636
+#: ../Doc/howto/regex.rst:639
 msgid ""
 "This flag allows you to write regular expressions that are more readable by "
 "granting you more flexibility in how you can format them.  When this flag "
@@ -1367,7 +1472,7 @@ msgstr ""
 "en una clase de carácter ni está precedido por una barra invertida sin "
 "escape."
 
-#: ../Doc/howto/regex.rst:645
+#: ../Doc/howto/regex.rst:648
 msgid ""
 "For example, here's a RE that uses :const:`re.VERBOSE`; see how much easier "
 "it is to read? ::"
@@ -1375,11 +1480,31 @@ msgstr ""
 "Por ejemplo, aquí hay una RE que usa :const:`re.VERBOSE`; ¿Ves lo fácil que "
 "es leer? ::"
 
-#: ../Doc/howto/regex.rst:658
+#: ../Doc/howto/regex.rst:651
+msgid ""
+"charref = re.compile(r\"\"\"\n"
+" &[#]                # Start of a numeric entity reference\n"
+" (\n"
+"     0[0-7]+         # Octal form\n"
+"   | [0-9]+          # Decimal form\n"
+"   | x[0-9a-fA-F]+   # Hexadecimal form\n"
+" )\n"
+" ;                   # Trailing semicolon\n"
+"\"\"\", re.VERBOSE)"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:661
 msgid "Without the verbose setting, the RE would look like this::"
 msgstr "Sin la configuración detallada, la RE se vería así::"
 
-#: ../Doc/howto/regex.rst:664
+#: ../Doc/howto/regex.rst:663
+msgid ""
+"charref = re.compile(\"&#(0[0-7]+\"\n"
+"                     \"|[0-9]+\"\n"
+"                     \"|x[0-9a-fA-F]+);\")"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:667
 msgid ""
 "In the above example, Python's automatic concatenation of string literals "
 "has been used to break up the RE into smaller pieces, but it's still more "
@@ -1387,14 +1512,14 @@ msgid ""
 msgstr ""
 "En el ejemplo anterior, la concatenación automática de cadenas de caracteres "
 "literales de Python se ha utilizado para dividir la RE en partes más "
-"pequeñas, pero aún es más difícil de entender que la versión que usa :const:"
-"`re.VERBOSE`."
+"pequeñas, pero aún es más difícil de entender que la versión que "
+"usa :const:`re.VERBOSE`."
 
-#: ../Doc/howto/regex.rst:670
+#: ../Doc/howto/regex.rst:673
 msgid "More Pattern Power"
 msgstr "Más poder de patrones"
 
-#: ../Doc/howto/regex.rst:672
+#: ../Doc/howto/regex.rst:675
 msgid ""
 "So far we've only covered a part of the features of regular expressions.  In "
 "this section, we'll cover some new metacharacters, and how to use groups to "
@@ -1404,11 +1529,11 @@ msgstr ""
 "expresiones regulares. En esta sección, cubriremos algunos metacaracteres "
 "nuevos y cómo usar grupos para recuperar partes del texto que coincidió."
 
-#: ../Doc/howto/regex.rst:680
+#: ../Doc/howto/regex.rst:683
 msgid "More Metacharacters"
 msgstr "Más metacaracteres"
 
-#: ../Doc/howto/regex.rst:682
+#: ../Doc/howto/regex.rst:685
 msgid ""
 "There are some metacharacters that we haven't covered yet.  Most of them "
 "will be covered in this section."
@@ -1416,7 +1541,7 @@ msgstr ""
 "Hay algunos metacaracteres que aún no hemos cubierto. La mayoría de ellos se "
 "tratarán en esta sección."
 
-#: ../Doc/howto/regex.rst:685
+#: ../Doc/howto/regex.rst:688
 msgid ""
 "Some of the remaining metacharacters to be discussed are :dfn:`zero-width "
 "assertions`.  They don't cause the engine to advance through the string; "
@@ -1436,11 +1561,11 @@ msgstr ""
 "nunca deben repetirse, porque si coinciden una vez en una ubicación "
 "determinada, obviamente pueden coincidir un número infinito de veces."
 
-#: ../Doc/howto/regex.rst:701
+#: ../Doc/howto/regex.rst:704
 msgid "``|``"
 msgstr "``|``"
 
-#: ../Doc/howto/regex.rst:694
+#: ../Doc/howto/regex.rst:697
 msgid ""
 "Alternation, or the \"or\" operator.   If *A* and *B* are regular "
 "expressions, ``A|B`` will match any string that matches either *A* or *B*. "
@@ -1456,7 +1581,7 @@ msgstr ""
 "coincidirá con ``'Crow'`` o ``'Servo'``, no ``'Cro'``, un ``'w'`` o un "
 "``'S'``, y ``'ervo'``."
 
-#: ../Doc/howto/regex.rst:700
+#: ../Doc/howto/regex.rst:703
 msgid ""
 "To match a literal ``'|'``, use ``\\|``, or enclose it inside a character "
 "class, as in ``[|]``."
@@ -1464,23 +1589,23 @@ msgstr ""
 "Para hacer coincidir un literal ``'|'``, use ``\\|``, o enciérrelo dentro de "
 "una clase de carácter, como en ``[|]``."
 
-#: ../Doc/howto/regex.rst:716
+#: ../Doc/howto/regex.rst:719
 msgid "``^``"
 msgstr "``^``"
 
-#: ../Doc/howto/regex.rst:704
+#: ../Doc/howto/regex.rst:707
 msgid ""
 "Matches at the beginning of lines.  Unless the :const:`MULTILINE` flag has "
-"been set, this will only match at the beginning of the string.  In :const:"
-"`MULTILINE` mode, this also matches immediately after each newline within "
-"the string."
+"been set, this will only match at the beginning of the string.  "
+"In :const:`MULTILINE` mode, this also matches immediately after each newline "
+"within the string."
 msgstr ""
 "Coincide con el comienzo de las líneas. A menos que se haya establecido la "
 "flag :const:`MULTILINE` , esto solo coincidirá al principio de la cadena de "
 "caracteres. En modo :const:`MULTILINE` , esto también coincide "
 "inmediatamente después de cada nueva línea dentro de la cadena."
 
-#: ../Doc/howto/regex.rst:708
+#: ../Doc/howto/regex.rst:711
 msgid ""
 "For example, if you wish to match the word ``From`` only at the beginning of "
 "a line, the RE to use is ``^From``. ::"
@@ -1488,15 +1613,23 @@ msgstr ""
 "Por ejemplo, si desea hacer coincidir la palabra ``From`` solo al principio "
 "de una línea, la RE que debe usar es ``^From``. ::"
 
-#: ../Doc/howto/regex.rst:716
+#: ../Doc/howto/regex.rst:714
+msgid ""
+">>> print(re.search('^From', 'From Here to Eternity'))  \n"
+"<re.Match object; span=(0, 4), match='From'>\n"
+">>> print(re.search('^From', 'Reciting From Memory'))\n"
+"None"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:719
 msgid "To match a literal ``'^'``, use ``\\^``."
 msgstr "Para una coincidencia literal ``'^'``, usar ``\\^``."
 
-#: ../Doc/howto/regex.rst:730
+#: ../Doc/howto/regex.rst:733
 msgid "``$``"
 msgstr "``$``"
 
-#: ../Doc/howto/regex.rst:719
+#: ../Doc/howto/regex.rst:722
 msgid ""
 "Matches at the end of a line, which is defined as either the end of the "
 "string, or any location followed by a newline character.     ::"
@@ -1504,7 +1637,17 @@ msgstr ""
 "Coincide con el final de una línea, que se define como el final de la cadena "
 "o cualquier ubicación seguida de un carácter de nueva línea. ::"
 
-#: ../Doc/howto/regex.rst:729
+#: ../Doc/howto/regex.rst:725
+msgid ""
+">>> print(re.search('}$', '{block}'))  \n"
+"<re.Match object; span=(6, 7), match='}'>\n"
+">>> print(re.search('}$', '{block} '))\n"
+"None\n"
+">>> print(re.search('}$', '{block}\\n'))  \n"
+"<re.Match object; span=(6, 7), match='}'>"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:732
 msgid ""
 "To match a literal ``'$'``, use ``\\$`` or enclose it inside a character "
 "class, as in  ``[$]``."
@@ -1512,11 +1655,11 @@ msgstr ""
 "Para hacer coincidir un literal ``'$'``, usar ``\\$`` o enciérrelo dentro de "
 "una clase de carácter, como en ``[$]``."
 
-#: ../Doc/howto/regex.rst:736
+#: ../Doc/howto/regex.rst:739
 msgid "``\\A``"
 msgstr "``\\A``"
 
-#: ../Doc/howto/regex.rst:733
+#: ../Doc/howto/regex.rst:736
 msgid ""
 "Matches only at the start of the string.  When not in :const:`MULTILINE` "
 "mode, ``\\A`` and ``^`` are effectively the same.  In :const:`MULTILINE` "
@@ -1530,19 +1673,19 @@ msgstr ""
 "principio de la cadena, pero ``^`` puede coincidir en cualquier ubicación "
 "dentro de la cadena de caracteres que sigue a un carácter de nueva línea."
 
-#: ../Doc/howto/regex.rst:739
+#: ../Doc/howto/regex.rst:742
 msgid "``\\Z``"
 msgstr "``\\Z``"
 
-#: ../Doc/howto/regex.rst:739
+#: ../Doc/howto/regex.rst:742
 msgid "Matches only at the end of the string."
 msgstr "Coincidencias solo al final de la cadena de caracteres."
 
-#: ../Doc/howto/regex.rst:774
+#: ../Doc/howto/regex.rst:777
 msgid "``\\b``"
 msgstr "``\\b``"
 
-#: ../Doc/howto/regex.rst:742
+#: ../Doc/howto/regex.rst:745
 msgid ""
 "Word boundary.  This is a zero-width assertion that matches only at the "
 "beginning or end of a word.  A word is defined as a sequence of alphanumeric "
@@ -1554,7 +1697,7 @@ msgstr ""
 "secuencia de caracteres alfanuméricos, por lo que el final de una palabra se "
 "indica mediante un espacio en blanco o un carácter no alfanumérico."
 
-#: ../Doc/howto/regex.rst:747
+#: ../Doc/howto/regex.rst:750
 msgid ""
 "The following example matches ``class`` only when it's a complete word; it "
 "won't match when it's contained inside another word. ::"
@@ -1562,7 +1705,18 @@ msgstr ""
 "El siguiente ejemplo coincide con ``class`` solo cuando es una palabra "
 "completa; no coincidirá cuando esté contenido dentro de otra palabra. ::"
 
-#: ../Doc/howto/regex.rst:758
+#: ../Doc/howto/regex.rst:753
+msgid ""
+">>> p = re.compile(r'\\bclass\\b')\n"
+">>> print(p.search('no class at all'))\n"
+"<re.Match object; span=(3, 8), match='class'>\n"
+">>> print(p.search('the declassified algorithm'))\n"
+"None\n"
+">>> print(p.search('one subclass is'))\n"
+"None"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:761
 msgid ""
 "There are two subtleties you should remember when using this special "
 "sequence. First, this is the worst collision between Python's string "
@@ -1582,7 +1736,16 @@ msgstr ""
 "aspecto que nuestra RE anterior, pero omite la ``'r'`` delante de la cadena "
 "de caracteres de RE. ::"
 
-#: ../Doc/howto/regex.rst:772
+#: ../Doc/howto/regex.rst:769
+msgid ""
+">>> p = re.compile('\\bclass\\b')\n"
+">>> print(p.search('no class at all'))\n"
+"None\n"
+">>> print(p.search('\\b' + 'class' + '\\b'))\n"
+"<re.Match object; span=(0, 7), match='\\x08class\\x08'>"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:775
 msgid ""
 "Second, inside a character class, where there's no use for this assertion, "
 "``\\b`` represents the backspace character, for compatibility with Python's "
@@ -1592,11 +1755,11 @@ msgstr ""
 "esta aserción, ``\\b`` representa el carácter de retroceso, por "
 "compatibilidad con las cadenas de caracteres literales de Python."
 
-#: ../Doc/howto/regex.rst:779
+#: ../Doc/howto/regex.rst:782
 msgid "``\\B``"
 msgstr "``\\B``"
 
-#: ../Doc/howto/regex.rst:777
+#: ../Doc/howto/regex.rst:780
 msgid ""
 "Another zero-width assertion, this is the opposite of ``\\b``, only matching "
 "when the current position is not at a word boundary."
@@ -1604,11 +1767,11 @@ msgstr ""
 "Otra flag de ancho cero, esto es lo opuesto a ``\\b``, solo coincide cuando "
 "la posición actual no está en el límite de una palabra."
 
-#: ../Doc/howto/regex.rst:782
+#: ../Doc/howto/regex.rst:785
 msgid "Grouping"
 msgstr "Agrupando"
 
-#: ../Doc/howto/regex.rst:784
+#: ../Doc/howto/regex.rst:787
 msgid ""
 "Frequently you need to obtain more information than just whether the RE "
 "matched or not.  Regular expressions are often used to dissect strings by "
@@ -1623,7 +1786,15 @@ msgstr ""
 "encabezado RFC-822 se divide en un nombre de encabezado y un valor, "
 "separados por un ``':'``, así:"
 
-#: ../Doc/howto/regex.rst:797
+#: ../Doc/howto/regex.rst:793
+msgid ""
+"From: author@example.com\n"
+"User-Agent: Thunderbird 1.5.0.9 (X11/20061227)\n"
+"MIME-Version: 1.0\n"
+"To: editor@example.com"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:800
 msgid ""
 "This can be handled by writing a regular expression which matches an entire "
 "header line, and has one group which matches the header name, and another "
@@ -1633,7 +1804,7 @@ msgstr ""
 "línea de encabezado completa y que tenga un grupo que coincida con el nombre "
 "del encabezado y otro grupo que coincida con el valor del encabezado."
 
-#: ../Doc/howto/regex.rst:801
+#: ../Doc/howto/regex.rst:804
 msgid ""
 "Groups are marked by the ``'('``, ``')'`` metacharacters. ``'('`` and "
 "``')'`` have much the same meaning as they do in mathematical expressions; "
@@ -1649,27 +1820,45 @@ msgstr ""
 "``, o ``{m,n}``.  Por ejemplo, ``(ab)*`` coincidirá con cero o más "
 "repeticiones de ``ab``. ::"
 
-#: ../Doc/howto/regex.rst:812
+#: ../Doc/howto/regex.rst:811
+msgid ""
+">>> p = re.compile('(ab)*')\n"
+">>> print(p.match('ababababab').span())\n"
+"(0, 10)"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:815
 msgid ""
 "Groups indicated with ``'('``, ``')'`` also capture the starting and ending "
 "index of the text that they match; this can be retrieved by passing an "
-"argument to :meth:`~re.Match.group`, :meth:`~re.Match.start`, :meth:`~re."
-"Match.end`, and :meth:`~re.Match.span`.  Groups are numbered starting with "
-"0.  Group 0 is always present; it's the whole RE, so :ref:`match object "
-"<match-objects>` methods all have group 0 as their default argument.  Later "
-"we'll see how to express groups that don't capture the span of text that "
-"they match. ::"
+"argument "
+"to :meth:`~re.Match.group`, :meth:`~re.Match.start`, :meth:`~re.Match.end`, "
+"and :meth:`~re.Match.span`.  Groups are numbered starting with 0.  Group 0 "
+"is always present; it's the whole RE, so :ref:`match object <match-objects>` "
+"methods all have group 0 as their default argument.  Later we'll see how to "
+"express groups that don't capture the span of text that they match. ::"
 msgstr ""
 "Los grupos indicados con ``'('``, ``')'`` también capturan el índice inicial "
 "y final del texto que coinciden; esto se puede recuperar pasando un "
-"argumento a :meth:`~re.Match.group`, :meth:`~re.Match.start`, :meth:`~re."
-"Match.end`, y :meth:`~re.Match.span`. Los grupos se numeran empezando por 0. "
-"El grupo 0 siempre está presente; es todo las RE, entonces todos los "
+"argumento "
+"a :meth:`~re.Match.group`, :meth:`~re.Match.start`, :meth:`~re.Match.end`, "
+"y :meth:`~re.Match.span`. Los grupos se numeran empezando por 0. El grupo 0 "
+"siempre está presente; es todo las RE, entonces todos los "
 "métodos :ref:`match object <match-objects>` tienen el grupo 0 como argumento "
 "predeterminado. Más adelante veremos cómo expresar grupos que no capturan el "
 "espacio de texto que coinciden. ::"
 
-#: ../Doc/howto/regex.rst:828
+#: ../Doc/howto/regex.rst:824
+msgid ""
+">>> p = re.compile('(a)b')\n"
+">>> m = p.match('ab')\n"
+">>> m.group()\n"
+"'ab'\n"
+">>> m.group(0)\n"
+"'ab'"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:831
 msgid ""
 "Subgroups are numbered from left to right, from 1 upward.  Groups can be "
 "nested; to determine the number, just count the opening parenthesis "
@@ -1679,7 +1868,19 @@ msgstr ""
 "grupos se pueden anidar; para determinar el número, simplemente cuente los "
 "caracteres del paréntesis de apertura, de izquierda a derecha. ::"
 
-#: ../Doc/howto/regex.rst:841
+#: ../Doc/howto/regex.rst:835
+msgid ""
+">>> p = re.compile('(a(b)c)d')\n"
+">>> m = p.match('abcd')\n"
+">>> m.group(0)\n"
+"'abcd'\n"
+">>> m.group(1)\n"
+"'abc'\n"
+">>> m.group(2)\n"
+"'b'"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:844
 msgid ""
 ":meth:`~re.Match.group` can be passed multiple group numbers at a time, in "
 "which case it will return a tuple containing the corresponding values for "
@@ -1691,6 +1892,12 @@ msgstr ""
 
 #: ../Doc/howto/regex.rst:847
 msgid ""
+">>> m.group(2,1,2)\n"
+"('b', 'abc', 'b')"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:850
+msgid ""
 "The :meth:`~re.Match.groups` method returns a tuple containing the strings "
 "for all the subgroups, from 1 up to however many there are. ::"
 msgstr ""
@@ -1699,6 +1906,12 @@ msgstr ""
 "haya. ::"
 
 #: ../Doc/howto/regex.rst:853
+msgid ""
+">>> m.groups()\n"
+"('abc', 'b')"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:856
 msgid ""
 "Backreferences in a pattern allow you to specify that the contents of an "
 "earlier capturing group must also be found at the current location in the "
@@ -1718,12 +1931,19 @@ msgstr ""
 "asegúrese de usar una cadena de caracteres sin procesar al incorporar "
 "referencias inversas en una RE."
 
-#: ../Doc/howto/regex.rst:861
+#: ../Doc/howto/regex.rst:864
 msgid "For example, the following RE detects doubled words in a string. ::"
 msgstr ""
 "Por ejemplo, la siguiente RE detecta palabras duplicadas en una cadena. ::"
 
-#: ../Doc/howto/regex.rst:867
+#: ../Doc/howto/regex.rst:866
+msgid ""
+">>> p = re.compile(r'\\b(\\w+)\\s+\\1\\b')\n"
+">>> p.search('Paris in the the spring').group()\n"
+"'the the'"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:870
 msgid ""
 "Backreferences like this aren't often useful for just searching through a "
 "string --- there are few text formats which repeat data in this way --- but "
@@ -1735,11 +1955,11 @@ msgstr ""
 "manera --- pero pronto descubrirá que son *muy* útiles al realizar "
 "sustituciones de cadenas de caracteres."
 
-#: ../Doc/howto/regex.rst:873
+#: ../Doc/howto/regex.rst:876
 msgid "Non-capturing and Named Groups"
 msgstr "Grupos con nombre y sin captura"
 
-#: ../Doc/howto/regex.rst:875
+#: ../Doc/howto/regex.rst:878
 msgid ""
 "Elaborate REs may use many groups, both to capture substrings of interest, "
 "and to group and structure the RE itself.  In complex REs, it becomes "
@@ -1754,7 +1974,7 @@ msgstr ""
 "Ambos usan una sintaxis común para las extensiones de expresiones regulares, "
 "así que veremos eso primero."
 
-#: ../Doc/howto/regex.rst:881
+#: ../Doc/howto/regex.rst:884
 msgid ""
 "Perl 5 is well known for its powerful additions to standard regular "
 "expressions. For these new features the Perl developers couldn't choose new "
@@ -1773,7 +1993,7 @@ msgstr ""
 "expresiones antiguas supondrían que ``&`` era un carácter regular y no se "
 "habría escapado escribiendo ``\\&`` o ``[&]``."
 
-#: ../Doc/howto/regex.rst:888
+#: ../Doc/howto/regex.rst:891
 msgid ""
 "The solution chosen by the Perl developers was to use ``(?...)`` as the "
 "extension syntax.  ``?`` immediately after a parenthesis was a syntax error "
@@ -1792,7 +2012,7 @@ msgstr ""
 "``(?:foo)`` es otra cosa (un grupo de no captura que contiene la "
 "subexpresión ``foo``)."
 
-#: ../Doc/howto/regex.rst:896
+#: ../Doc/howto/regex.rst:899
 msgid ""
 "Python supports several of Perl's extensions and adds an extension syntax to "
 "Perl's extension syntax.  If the first character after the question mark is "
@@ -1803,7 +2023,7 @@ msgstr ""
 "del signo de interrogación es una ``P``, sabrá que es una extensión "
 "específica de Python."
 
-#: ../Doc/howto/regex.rst:901
+#: ../Doc/howto/regex.rst:904
 msgid ""
 "Now that we've looked at the general extension syntax, we can return to the "
 "features that simplify working with groups in complex REs."
@@ -1811,7 +2031,7 @@ msgstr ""
 "Ahora que hemos visto la sintaxis de la extensión general, podemos volver a "
 "las características que simplifican el trabajo con grupos en RE complejos."
 
-#: ../Doc/howto/regex.rst:904
+#: ../Doc/howto/regex.rst:907
 msgid ""
 "Sometimes you'll want to use a group to denote a part of a regular "
 "expression, but aren't interested in retrieving the group's contents. You "
@@ -1824,7 +2044,17 @@ msgstr ""
 "``(?:...)``, donde puede reemplazar el ``...`` con cualquier otra expresión "
 "regular. ::"
 
-#: ../Doc/howto/regex.rst:916
+#: ../Doc/howto/regex.rst:912
+msgid ""
+">>> m = re.match(\"([abc])+\", \"abc\")\n"
+">>> m.groups()\n"
+"('c',)\n"
+">>> m = re.match(\"(?:[abc])+\", \"abc\")\n"
+">>> m.groups()\n"
+"()"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:919
 msgid ""
 "Except for the fact that you can't retrieve the contents of what the group "
 "matched, a non-capturing group behaves exactly the same as a capturing "
@@ -1846,7 +2076,7 @@ msgstr ""
 "hay diferencia de rendimiento en la búsqueda entre grupos de captura y no "
 "captura; ninguna forma es más rápida que la otra."
 
-#: ../Doc/howto/regex.rst:925
+#: ../Doc/howto/regex.rst:928
 msgid ""
 "A more significant feature is named groups: instead of referring to them by "
 "numbers, groups can be referenced by a name."
@@ -1855,7 +2085,7 @@ msgstr ""
 "referirse a ellos por números, los grupos pueden ser referenciados por un "
 "nombre."
 
-#: ../Doc/howto/regex.rst:928
+#: ../Doc/howto/regex.rst:931
 msgid ""
 "The syntax for a named group is one of the Python-specific extensions: ``(?"
 "P<name>...)``.  *name* is, obviously, the name of the group.  Named groups "
@@ -1875,25 +2105,52 @@ msgstr ""
 "del grupo deseado. Los grupos con nombre todavía reciben números, por lo que "
 "puede recuperar información sobre un grupo de dos maneras:"
 
-#: ../Doc/howto/regex.rst:943
+#: ../Doc/howto/regex.rst:939
 msgid ""
-"Additionally, you can retrieve named groups as a dictionary with :meth:`~re."
-"Match.groupdict`::"
+">>> p = re.compile(r'(?P<word>\\b\\w+\\b)')\n"
+">>> m = p.search( '(((( Lots of punctuation )))' )\n"
+">>> m.group('word')\n"
+"'Lots'\n"
+">>> m.group(1)\n"
+"'Lots'"
 msgstr ""
-"Además, puede recuperar grupos nombrados como un diccionario con :meth:`~re."
-"Match.groupdict`::"
 
-#: ../Doc/howto/regex.rst:950
+#: ../Doc/howto/regex.rst:946
+msgid ""
+"Additionally, you can retrieve named groups as a dictionary "
+"with :meth:`~re.Match.groupdict`::"
+msgstr ""
+"Además, puede recuperar grupos nombrados como un diccionario "
+"con :meth:`~re.Match.groupdict`::"
+
+#: ../Doc/howto/regex.rst:949
+msgid ""
+">>> m = re.match(r'(?P<first>\\w+) (?P<last>\\w+)', 'Jane Doe')\n"
+">>> m.groupdict()\n"
+"{'first': 'Jane', 'last': 'Doe'}"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:953
 msgid ""
 "Named groups are handy because they let you use easily remembered names, "
-"instead of having to remember numbers.  Here's an example RE from the :mod:"
-"`imaplib` module::"
+"instead of having to remember numbers.  Here's an example RE from "
+"the :mod:`imaplib` module::"
 msgstr ""
 "Los grupos nombrados son útiles porque le permiten usar nombres fáciles de "
 "recordar en lugar de tener que recordar números.  Aquí hay un ejemplo de una "
 "RE del módulo :mod:`imaplib`::"
 
-#: ../Doc/howto/regex.rst:961
+#: ../Doc/howto/regex.rst:957
+msgid ""
+"InternalDate = re.compile(r'INTERNALDATE \"'\n"
+"        r'(?P<day>[ 123][0-9])-(?P<mon>[A-Z][a-z][a-z])-'\n"
+"        r'(?P<year>[0-9][0-9][0-9][0-9])'\n"
+"        r' (?P<hour>[0-9][0-9]):(?P<min>[0-9][0-9]):(?P<sec>[0-9][0-9])'\n"
+"        r' (?P<zonen>[-+])(?P<zoneh>[0-9][0-9])(?P<zonem>[0-9][0-9])'\n"
+"        r'\"')"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:964
 msgid ""
 "It's obviously much easier to retrieve ``m.group('zonem')``, instead of "
 "having to remember to retrieve group 9."
@@ -1901,15 +2158,15 @@ msgstr ""
 "Obviamente, es mucho más fácil recuperar ``m.group('zonem')``, en lugar de "
 "tener que recordar recuperar el grupo 9."
 
-#: ../Doc/howto/regex.rst:964
+#: ../Doc/howto/regex.rst:967
 msgid ""
 "The syntax for backreferences in an expression such as ``(...)\\1`` refers "
 "to the number of the group.  There's naturally a variant that uses the group "
 "name instead of the number. This is another Python extension: ``(?P=name)`` "
 "indicates that the contents of the group called *name* should again be "
 "matched at the current point.  The regular expression for finding doubled "
-"words, ``\\b(\\w+)\\s+\\1\\b`` can also be written as ``\\b(?"
-"P<word>\\w+)\\s+(?P=word)\\b``::"
+"words, ``\\b(\\w+)\\s+\\1\\b`` can also be written as ``\\b(?P<word>\\w+)\\s+"
+"(?P=word)\\b``::"
 msgstr ""
 "La sintaxis de las referencias inversas en una expresión como ``(...)\\1`` "
 "se refiere al número del grupo. Naturalmente, existe una variante que usa el "
@@ -1919,11 +2176,18 @@ msgstr ""
 "duplicadas, ``\\b(\\w+)\\s+\\1\\b`` también se puede escribir como ``\\b(?"
 "P<word>\\w+)\\s+(?P=word)\\b``::"
 
-#: ../Doc/howto/regex.rst:977
+#: ../Doc/howto/regex.rst:974
+msgid ""
+">>> p = re.compile(r'\\b(?P<word>\\w+)\\s+(?P=word)\\b')\n"
+">>> p.search('Paris in the the spring').group()\n"
+"'the the'"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:980
 msgid "Lookahead Assertions"
 msgstr "Aserciones anticipadas"
 
-#: ../Doc/howto/regex.rst:979
+#: ../Doc/howto/regex.rst:982
 msgid ""
 "Another zero-width assertion is the lookahead assertion.  Lookahead "
 "assertions are available in both positive and negative form, and  look like "
@@ -1933,11 +2197,11 @@ msgstr ""
 "anticipadas están disponibles tanto en forma positiva como negativa, y "
 "tienen este aspecto:"
 
-#: ../Doc/howto/regex.rst:987
+#: ../Doc/howto/regex.rst:990
 msgid "``(?=...)``"
 msgstr "``(?=...)``"
 
-#: ../Doc/howto/regex.rst:983
+#: ../Doc/howto/regex.rst:986
 msgid ""
 "Positive lookahead assertion.  This succeeds if the contained regular "
 "expression, represented here by ``...``, successfully matches at the current "
@@ -1951,11 +2215,11 @@ msgstr ""
 "expresión contenida, el motor de comparación no avanza en absoluto; el resto "
 "del patrón se intenta justo donde comenzó la aserción."
 
-#: ../Doc/howto/regex.rst:992
+#: ../Doc/howto/regex.rst:995
 msgid "``(?!...)``"
 msgstr "``(?!...)``"
 
-#: ../Doc/howto/regex.rst:990
+#: ../Doc/howto/regex.rst:993
 msgid ""
 "Negative lookahead assertion.  This is the opposite of the positive "
 "assertion; it succeeds if the contained expression *doesn't* match at the "
@@ -1965,7 +2229,7 @@ msgstr ""
 "tiene éxito si la expresión contenida *no* coincide con la posición actual "
 "en la cadena."
 
-#: ../Doc/howto/regex.rst:994
+#: ../Doc/howto/regex.rst:997
 msgid ""
 "To make this concrete, let's look at a case where a lookahead is useful. "
 "Consider a simple pattern to match a filename and split it apart into a base "
@@ -1974,19 +2238,19 @@ msgid ""
 msgstr ""
 "Para que esto sea concreto, veamos un caso en el que una búsqueda anticipada "
 "es útil. Considere un patrón simple para hacer coincidir un nombre de "
-"archivo y dividirlo en un nombre base y una extensión, separados por un ``."
-"``. Por ejemplo, en ``news.rc``, ``news`` es el nombre base y ``rc`` es la "
-"extensión del nombre del archivo."
+"archivo y dividirlo en un nombre base y una extensión, separados por un "
+"``.``. Por ejemplo, en ``news.rc``, ``news`` es el nombre base y ``rc`` es "
+"la extensión del nombre del archivo."
 
-#: ../Doc/howto/regex.rst:999
+#: ../Doc/howto/regex.rst:1002
 msgid "The pattern to match this is quite simple:"
 msgstr "El patrón para que coincida con esto es bastante simple:"
 
-#: ../Doc/howto/regex.rst:1001
+#: ../Doc/howto/regex.rst:1004
 msgid "``.*[.].*$``"
 msgstr "``.*[.].*$``"
 
-#: ../Doc/howto/regex.rst:1003
+#: ../Doc/howto/regex.rst:1006
 msgid ""
 "Notice that the ``.`` needs to be treated specially because it's a "
 "metacharacter, so it's inside a character class to only match that specific "
@@ -1999,10 +2263,10 @@ msgstr ""
 "metacarácter, por lo que está dentro de una clase de carácter para coincidir "
 "solo con ese carácter específico. También observe el final ``$``; esto se "
 "agrega para garantizar que todo el resto de la cadena deba incluirse en la "
-"extensión. Esta expresión regular coincide con ``foo.bar`` y ``autoexec."
-"bat`` y ``sendmail.cf`` y ``printers.conf``."
+"extensión. Esta expresión regular coincide con ``foo.bar`` y "
+"``autoexec.bat`` y ``sendmail.cf`` y ``printers.conf``."
 
-#: ../Doc/howto/regex.rst:1010
+#: ../Doc/howto/regex.rst:1013
 msgid ""
 "Now, consider complicating the problem a bit; what if you want to match "
 "filenames where the extension is not ``bat``? Some incorrect attempts:"
@@ -2011,7 +2275,7 @@ msgstr ""
 "coincidir los nombres de archivo donde la extensión no es ``bat``? Algunos "
 "intentos incorrectos:"
 
-#: ../Doc/howto/regex.rst:1013
+#: ../Doc/howto/regex.rst:1016
 msgid ""
 "``.*[.][^b].*$``  The first attempt above tries to exclude ``bat`` by "
 "requiring that the first character of the extension is not a ``b``.  This is "
@@ -2021,33 +2285,33 @@ msgstr ""
 "requiriendo que el primer carácter de la extensión no sea una ``b``. Esto "
 "está mal, porque el patrón tampoco coincide ``foo.bar``."
 
-#: ../Doc/howto/regex.rst:1017
+#: ../Doc/howto/regex.rst:1020
 msgid "``.*[.]([^b]..|.[^a].|..[^t])$``"
 msgstr "``.*[.]([^b]..|.[^a].|..[^t])$``"
 
-#: ../Doc/howto/regex.rst:1019
+#: ../Doc/howto/regex.rst:1022
 msgid ""
 "The expression gets messier when you try to patch up the first solution by "
 "requiring one of the following cases to match: the first character of the "
 "extension isn't ``b``; the second character isn't ``a``; or the third "
-"character isn't ``t``.  This accepts ``foo.bar`` and rejects ``autoexec."
-"bat``, but it requires a three-letter extension and won't accept a filename "
-"with a two-letter extension such as ``sendmail.cf``.  We'll complicate the "
-"pattern again in an effort to fix it."
+"character isn't ``t``.  This accepts ``foo.bar`` and rejects "
+"``autoexec.bat``, but it requires a three-letter extension and won't accept "
+"a filename with a two-letter extension such as ``sendmail.cf``.  We'll "
+"complicate the pattern again in an effort to fix it."
 msgstr ""
 "La expresión se vuelve más desordenada cuando intenta parchear la primera "
 "solución requiriendo que coincida uno de los siguientes casos: el primer "
 "carácter de la extensión no es ``b``; el segundo carácter no es ``a``; o el "
-"tercer carácter no es ``t``. Esto acepta ``foo.bar`` y rechaza ``autoexec."
-"bat``, pero requiere una extensión de tres letras y no acepta un nombre de "
-"archivo con una extensión de dos letras como ``sendmail.cf``. Complicaremos "
-"el patrón nuevamente en un esfuerzo por arreglarlo."
+"tercer carácter no es ``t``. Esto acepta ``foo.bar`` y rechaza "
+"``autoexec.bat``, pero requiere una extensión de tres letras y no acepta un "
+"nombre de archivo con una extensión de dos letras como ``sendmail.cf``. "
+"Complicaremos el patrón nuevamente en un esfuerzo por arreglarlo."
 
-#: ../Doc/howto/regex.rst:1027
+#: ../Doc/howto/regex.rst:1030
 msgid "``.*[.]([^b].?.?|.[^a]?.?|..?[^t]?)$``"
 msgstr "``.*[.]([^b].?.?|.[^a]?.?|..?[^t]?)$``"
 
-#: ../Doc/howto/regex.rst:1029
+#: ../Doc/howto/regex.rst:1032
 msgid ""
 "In the third attempt, the second and third letters are all made optional in "
 "order to allow matching extensions shorter than three characters, such as "
@@ -2057,7 +2321,7 @@ msgstr ""
 "permitir extensiones coincidentes de menos de tres caracteres, como "
 "``sendmail.cf``."
 
-#: ../Doc/howto/regex.rst:1033
+#: ../Doc/howto/regex.rst:1036
 msgid ""
 "The pattern's getting really complicated now, which makes it hard to read "
 "and understand.  Worse, if the problem changes and you want to exclude both "
@@ -2069,11 +2333,11 @@ msgstr ""
 "``bat`` y ``exe`` como extensiones, el patrón se volvería aún más complicado "
 "y confuso."
 
-#: ../Doc/howto/regex.rst:1038
+#: ../Doc/howto/regex.rst:1041
 msgid "A negative lookahead cuts through all this confusion:"
 msgstr "Una mirada anticipada negativa atraviesa toda esta confusión:"
 
-#: ../Doc/howto/regex.rst:1040
+#: ../Doc/howto/regex.rst:1043
 msgid ""
 "``.*[.](?!bat$)[^.]*$``  The negative lookahead means: if the expression "
 "``bat`` doesn't match at this point, try the rest of the pattern; if "
@@ -2089,7 +2353,7 @@ msgstr ""
 "solo comienza con ``bat``. El ``[^.]*`` asegura que el patrón funcione "
 "cuando hay varios puntos en el nombre del archivo."
 
-#: ../Doc/howto/regex.rst:1047
+#: ../Doc/howto/regex.rst:1050
 msgid ""
 "Excluding another filename extension is now easy; simply add it as an "
 "alternative inside the assertion.  The following pattern excludes filenames "
@@ -2099,15 +2363,15 @@ msgstr ""
 "agréguelo como una alternativa dentro de la aserción. El siguiente patrón "
 "excluye los nombres de archivo que terminan en ``bat`` o ``exe``:"
 
-#: ../Doc/howto/regex.rst:1051
+#: ../Doc/howto/regex.rst:1054
 msgid "``.*[.](?!bat$|exe$)[^.]*$``"
 msgstr "``.*[.](?!bat$|exe$)[^.]*$``"
 
-#: ../Doc/howto/regex.rst:1055
+#: ../Doc/howto/regex.rst:1058
 msgid "Modifying Strings"
 msgstr "Modificando cadenas de caracteres"
 
-#: ../Doc/howto/regex.rst:1057
+#: ../Doc/howto/regex.rst:1060
 msgid ""
 "Up to this point, we've simply performed searches against a static string. "
 "Regular expressions are also commonly used to modify strings in various "
@@ -2118,21 +2382,21 @@ msgstr ""
 "comúnmente para modificar cadenas de varias formas, utilizando los "
 "siguientes métodos de patrón:"
 
-#: ../Doc/howto/regex.rst:1064
+#: ../Doc/howto/regex.rst:1067
 msgid "``split()``"
 msgstr "``split()``"
 
-#: ../Doc/howto/regex.rst:1064
+#: ../Doc/howto/regex.rst:1067
 msgid "Split the string into a list, splitting it wherever the RE matches"
 msgstr ""
 "Divida la cadena de caracteres en una lista, dividiéndola donde coincida la "
 "RE"
 
-#: ../Doc/howto/regex.rst:1067
+#: ../Doc/howto/regex.rst:1070
 msgid "``sub()``"
 msgstr "``sub()``"
 
-#: ../Doc/howto/regex.rst:1067
+#: ../Doc/howto/regex.rst:1070
 msgid ""
 "Find all substrings where the RE matches, and replace them with a different "
 "string"
@@ -2140,11 +2404,11 @@ msgstr ""
 "Encuentra todas las subcadenas de caracteres donde coincida la RE y las "
 "reemplaza con una cadena de caracteres diferente"
 
-#: ../Doc/howto/regex.rst:1070
+#: ../Doc/howto/regex.rst:1073
 msgid "``subn()``"
 msgstr "``subn()``"
 
-#: ../Doc/howto/regex.rst:1070
+#: ../Doc/howto/regex.rst:1073
 msgid ""
 "Does the same thing as :meth:`!sub`,  but returns the new string and the "
 "number of replacements"
@@ -2152,11 +2416,11 @@ msgstr ""
 "Hace lo mismo que :meth:`!sub`, pero retorna la nueva cadena de caracteres y "
 "el número de reemplazos"
 
-#: ../Doc/howto/regex.rst:1077
+#: ../Doc/howto/regex.rst:1080
 msgid "Splitting Strings"
 msgstr "Separando cadenas de caracteres"
 
-#: ../Doc/howto/regex.rst:1079
+#: ../Doc/howto/regex.rst:1082
 msgid ""
 "The :meth:`~re.Pattern.split` method of a pattern splits a string apart "
 "wherever the RE matches, returning a list of the pieces. It's similar to "
@@ -2173,7 +2437,7 @@ msgstr ""
 "espacios en blanco o por una cadena fija. Como era de esperar, también hay "
 "una función a nivel de módulo :func:`re.split`."
 
-#: ../Doc/howto/regex.rst:1090
+#: ../Doc/howto/regex.rst:1093
 msgid ""
 "Split *string* by the matches of the regular expression.  If capturing "
 "parentheses are used in the RE, then their contents will also be returned as "
@@ -2185,7 +2449,7 @@ msgstr ""
 "como parte de la lista resultante. Si *maxsplit* es distinto de cero, se "
 "realizan como máximo divisiones *maxsplit* ."
 
-#: ../Doc/howto/regex.rst:1095
+#: ../Doc/howto/regex.rst:1098
 msgid ""
 "You can limit the number of splits made, by passing a value for *maxsplit*. "
 "When *maxsplit* is nonzero, at most *maxsplit* splits will be made, and the "
@@ -2199,7 +2463,16 @@ msgstr ""
 "el elemento final de la lista. En el siguiente ejemplo, el delimitador es "
 "cualquier secuencia de caracteres no alfanuméricos. ::"
 
-#: ../Doc/howto/regex.rst:1107
+#: ../Doc/howto/regex.rst:1104
+msgid ""
+">>> p = re.compile(r'\\W+')\n"
+">>> p.split('This is a test, short and sweet, of split().')\n"
+"['This', 'is', 'a', 'test', 'short', 'and', 'sweet', 'of', 'split', '']\n"
+">>> p.split('This is a test, short and sweet, of split().', 3)\n"
+"['This', 'is', 'a', 'test, short and sweet, of split().']"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1110
 msgid ""
 "Sometimes you're not only interested in what the text between delimiters is, "
 "but also need to know what the delimiter was.  If capturing parentheses are "
@@ -2211,7 +2484,17 @@ msgstr ""
 "captura en la RE, sus valores también se retornan como parte de la lista. "
 "Compare las siguientes llamadas:"
 
-#: ../Doc/howto/regex.rst:1119
+#: ../Doc/howto/regex.rst:1115
+msgid ""
+">>> p = re.compile(r'\\W+')\n"
+">>> p2 = re.compile(r'(\\W+)')\n"
+">>> p.split('This... is a test.')\n"
+"['This', 'is', 'a', 'test', '']\n"
+">>> p2.split('This... is a test.')\n"
+"['This', '... ', 'is', ' ', 'a', ' ', 'test', '.', '']"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1122
 msgid ""
 "The module-level function :func:`re.split` adds the RE to be used as the "
 "first argument, but is otherwise the same.   ::"
@@ -2219,11 +2502,21 @@ msgstr ""
 "La función de nivel de módulo :func:`re.split` agrega la RE que se usará "
 "como primer argumento, pero por lo demás es el mismo. ::"
 
-#: ../Doc/howto/regex.rst:1131
+#: ../Doc/howto/regex.rst:1125
+msgid ""
+">>> re.split(r'[\\W]+', 'Words, words, words.')\n"
+"['Words', 'words', 'words', '']\n"
+">>> re.split(r'([\\W]+)', 'Words, words, words.')\n"
+"['Words', ', ', 'words', ', ', 'words', '.', '']\n"
+">>> re.split(r'[\\W]+', 'Words, words, words.', 1)\n"
+"['Words', 'words, words.']"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1134
 msgid "Search and Replace"
 msgstr "Búsqueda y reemplazo"
 
-#: ../Doc/howto/regex.rst:1133
+#: ../Doc/howto/regex.rst:1136
 msgid ""
 "Another common task is to find all the matches for a pattern, and replace "
 "them with a different string.  The :meth:`~re.Pattern.sub` method takes a "
@@ -2231,11 +2524,11 @@ msgid ""
 "string to be processed."
 msgstr ""
 "Otra tarea común es encontrar todas las coincidencias para un patrón y "
-"reemplazarlas con una cadena de caracteres diferente. El método :meth:`~re."
-"Pattern.sub` toma un valor de reemplazo, que puede ser una cadena de "
-"caracteres o una función, y la cadena de caracteres a procesar."
+"reemplazarlas con una cadena de caracteres diferente. El "
+"método :meth:`~re.Pattern.sub` toma un valor de reemplazo, que puede ser una "
+"cadena de caracteres o una función, y la cadena de caracteres a procesar."
 
-#: ../Doc/howto/regex.rst:1140
+#: ../Doc/howto/regex.rst:1143
 msgid ""
 "Returns the string obtained by replacing the leftmost non-overlapping "
 "occurrences of the RE in *string* by the replacement *replacement*.  If the "
@@ -2246,7 +2539,7 @@ msgstr ""
 "*replacement*. Si no se encuentra el patrón, el *string* se retorna sin "
 "cambios."
 
-#: ../Doc/howto/regex.rst:1144
+#: ../Doc/howto/regex.rst:1147
 msgid ""
 "The optional argument *count* is the maximum number of pattern occurrences "
 "to be replaced; *count* must be a non-negative integer.  The default value "
@@ -2256,7 +2549,7 @@ msgstr ""
 "que se reemplazarán; *count* debe ser un número entero no negativo. El valor "
 "predeterminado de 0 significa reemplazar todas las ocurrencias."
 
-#: ../Doc/howto/regex.rst:1148
+#: ../Doc/howto/regex.rst:1151
 msgid ""
 "Here's a simple example of using the :meth:`~re.Pattern.sub` method.  It "
 "replaces colour names with the word ``colour``::"
@@ -2264,7 +2557,16 @@ msgstr ""
 "Aquí hay un ejemplo simple del uso del método :meth:`~re.Pattern.sub`. "
 "Reemplaza los nombres de los colores con la palabra ``colour``::"
 
-#: ../Doc/howto/regex.rst:1157
+#: ../Doc/howto/regex.rst:1154
+msgid ""
+">>> p = re.compile('(blue|white|red)')\n"
+">>> p.sub('colour', 'blue socks and red shoes')\n"
+"'colour socks and colour shoes'\n"
+">>> p.sub('colour', 'blue socks and red shoes', count=1)\n"
+"'colour socks and red shoes'"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1160
 msgid ""
 "The :meth:`~re.Pattern.subn` method does the same work, but returns a 2-"
 "tuple containing the new string value and the number of replacements  that "
@@ -2274,7 +2576,16 @@ msgstr ""
 "tupla de 2 que contiene el nuevo valor de cadena de caracteres y el número "
 "de reemplazos que se realizaron::"
 
-#: ../Doc/howto/regex.rst:1166
+#: ../Doc/howto/regex.rst:1163
+msgid ""
+">>> p = re.compile('(blue|white|red)')\n"
+">>> p.subn('colour', 'blue socks and red shoes')\n"
+"('colour socks and colour shoes', 2)\n"
+">>> p.subn('colour', 'no colours at all')\n"
+"('no colours at all', 0)"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1169
 msgid ""
 "Empty matches are replaced only when they're not adjacent to a previous "
 "empty match. ::"
@@ -2282,7 +2593,14 @@ msgstr ""
 "Las coincidencias vacías se reemplazan solo cuando no son adyacentes a una "
 "coincidencia vacía anterior. ::"
 
-#: ../Doc/howto/regex.rst:1173
+#: ../Doc/howto/regex.rst:1172
+msgid ""
+">>> p = re.compile('x*')\n"
+">>> p.sub('-', 'abxd')\n"
+"'-a-b--d-'"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1176
 msgid ""
 "If *replacement* is a string, any backslash escapes in it are processed.  "
 "That is, ``\\n`` is converted to a single newline character, ``\\r`` is "
@@ -2300,7 +2618,7 @@ msgstr ""
 "coincide con el grupo correspondiente a la RE. Esto le permite incorporar "
 "partes del texto original en la cadena de reemplazo resultante."
 
-#: ../Doc/howto/regex.rst:1180
+#: ../Doc/howto/regex.rst:1183
 msgid ""
 "This example matches the word ``section`` followed by a string enclosed in "
 "``{``, ``}``, and changes ``section`` to ``subsection``::"
@@ -2308,7 +2626,14 @@ msgstr ""
 "Este ejemplo hace coincidir la palabra ``section`` seguida de una cadena "
 "encerrada entre ``{``, ``}``, y cambia ``section`` a ``subsection``::"
 
-#: ../Doc/howto/regex.rst:1187
+#: ../Doc/howto/regex.rst:1186
+msgid ""
+">>> p = re.compile('section{ ( [^}]* ) }', re.VERBOSE)\n"
+">>> p.sub(r'subsection{\\1}','section{First} section{second}')\n"
+"'subsection{First} subsection{second}'"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1190
 msgid ""
 "There's also a syntax for referring to named groups as defined by the ``(?"
 "P<name>...)`` syntax.  ``\\g<name>`` will use the substring matched by the "
@@ -2329,7 +2654,18 @@ msgstr ""
 "son todas equivalentes, pero use las tres variaciones de la cadena de "
 "reemplazo. ::"
 
-#: ../Doc/howto/regex.rst:1204
+#: ../Doc/howto/regex.rst:1199
+msgid ""
+">>> p = re.compile('section{ (?P<name> [^}]* ) }', re.VERBOSE)\n"
+">>> p.sub(r'subsection{\\1}','section{First}')\n"
+"'subsection{First}'\n"
+">>> p.sub(r'subsection{\\g<1>}','section{First}')\n"
+"'subsection{First}'\n"
+">>> p.sub(r'subsection{\\g<name>}','section{First}')\n"
+"'subsection{First}'"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1207
 msgid ""
 "*replacement* can also be a function, which gives you even more control.  If "
 "*replacement* is a function, the function is called for every non-"
@@ -2344,7 +2680,7 @@ msgstr ""
 "puede usar esta información para calcular la cadena de reemplazo deseada y "
 "retornarla."
 
-#: ../Doc/howto/regex.rst:1210
+#: ../Doc/howto/regex.rst:1213
 msgid ""
 "In the following example, the replacement function translates decimals into "
 "hexadecimal::"
@@ -2352,7 +2688,19 @@ msgstr ""
 "En el siguiente ejemplo, la función de reemplazo traduce decimales a "
 "hexadecimales::"
 
-#: ../Doc/howto/regex.rst:1222
+#: ../Doc/howto/regex.rst:1216
+msgid ""
+">>> def hexrepl(match):\n"
+"...     \"Return the hex string for a decimal number\"\n"
+"...     value = int(match.group())\n"
+"...     return hex(value)\n"
+"...\n"
+">>> p = re.compile(r'\\d+')\n"
+">>> p.sub(hexrepl, 'Call 65490 for printing, 49152 for user code.')\n"
+"'Call 0xffd2 for printing, 0xc000 for user code.'"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1225
 msgid ""
 "When using the module-level :func:`re.sub` function, the pattern is passed "
 "as the first argument.  The pattern may be provided as an object or as a "
@@ -2368,11 +2716,11 @@ msgstr ""
 "en la cadena de patrón, por ejemplo ``sub(\"(?i)b+\", \"x\", \"bbbb "
 "BBBB\")`` retorna ``'x x'``."
 
-#: ../Doc/howto/regex.rst:1230
+#: ../Doc/howto/regex.rst:1233
 msgid "Common Problems"
 msgstr "Problemas comunes"
 
-#: ../Doc/howto/regex.rst:1232
+#: ../Doc/howto/regex.rst:1235
 msgid ""
 "Regular expressions are a powerful tool for some applications, but in some "
 "ways their behaviour isn't intuitive and at times they don't behave the way "
@@ -2384,32 +2732,32 @@ msgstr ""
 "veces, no se comportan de la forma esperada. Esta sección señalará algunos "
 "de los errores más comunes."
 
-#: ../Doc/howto/regex.rst:1238
+#: ../Doc/howto/regex.rst:1241
 msgid "Use String Methods"
 msgstr "Uso de métodos de cadenas de caracteres"
 
-#: ../Doc/howto/regex.rst:1240
+#: ../Doc/howto/regex.rst:1243
 msgid ""
 "Sometimes using the :mod:`re` module is a mistake.  If you're matching a "
-"fixed string, or a single character class, and you're not using any :mod:"
-"`re` features such as the :const:`~re.IGNORECASE` flag, then the full power "
-"of regular expressions may not be required. Strings have several methods for "
-"performing operations with fixed strings and they're usually much faster, "
-"because the implementation is a single small C loop that's been optimized "
-"for the purpose, instead of the large, more generalized regular expression "
-"engine."
+"fixed string, or a single character class, and you're not using "
+"any :mod:`re` features such as the :const:`~re.IGNORECASE` flag, then the "
+"full power of regular expressions may not be required. Strings have several "
+"methods for performing operations with fixed strings and they're usually "
+"much faster, because the implementation is a single small C loop that's been "
+"optimized for the purpose, instead of the large, more generalized regular "
+"expression engine."
 msgstr ""
 "A veces, usar el módulo :mod:`re` es un error. Si está haciendo coincidir "
 "una cadena de caracteres fija, o una clase de un solo caracter, y no está "
-"usando ninguna característica :mod:`re` como la marca :const:`~re."
-"IGNORECASE`, entonces todo el poder de las expresiones regulares puede que "
-"no sea necesario. Las cadenas tienen varios métodos para realizar "
-"operaciones con cadenas fijas y, por lo general, son mucho más rápidas, "
-"porque la implementación es un único bucle C pequeño que se ha optimizado "
-"para este propósito, en lugar del motor de expresión regular más grande y "
-"generalizado."
+"usando ninguna característica :mod:`re` como la "
+"marca :const:`~re.IGNORECASE`, entonces todo el poder de las expresiones "
+"regulares puede que no sea necesario. Las cadenas tienen varios métodos para "
+"realizar operaciones con cadenas fijas y, por lo general, son mucho más "
+"rápidas, porque la implementación es un único bucle C pequeño que se ha "
+"optimizado para este propósito, en lugar del motor de expresión regular más "
+"grande y generalizado."
 
-#: ../Doc/howto/regex.rst:1248
+#: ../Doc/howto/regex.rst:1251
 msgid ""
 "One example might be replacing a single fixed string with another one; for "
 "example, you might replace ``word`` with ``deed``.  :func:`re.sub` seems "
@@ -2418,8 +2766,8 @@ msgid ""
 "turning ``swordfish`` into ``sdeedfish``, but the  naive RE ``word`` would "
 "have done that, too.  (To avoid performing the substitution on parts of "
 "words, the pattern would have to be ``\\bword\\b``, in order to require that "
-"``word`` have a word boundary on either side.  This takes the job beyond  :"
-"meth:`!replace`'s abilities.)"
+"``word`` have a word boundary on either side.  This takes the job "
+"beyond  :meth:`!replace`'s abilities.)"
 msgstr ""
 "Un ejemplo podría ser reemplazar una sola cadena fija por otra; por ejemplo, "
 "puede reemplazar ``word`` por ``deed``. :func:`re.sub` parece la función a "
@@ -2431,7 +2779,7 @@ msgstr ""
 "que ``word`` tenga un límite de palabra en cada lado. Esto lleva el trabajo "
 "más allá de las habilidades de :meth:`!replace`.)"
 
-#: ../Doc/howto/regex.rst:1257
+#: ../Doc/howto/regex.rst:1260
 msgid ""
 "Another common task is deleting every occurrence of a single character from "
 "a string or replacing it with another single character.  You might do this "
@@ -2445,7 +2793,7 @@ msgstr ""
 "ambas tareas y será más rápido que cualquier expresión regular la operación "
 "puede ser."
 
-#: ../Doc/howto/regex.rst:1263
+#: ../Doc/howto/regex.rst:1266
 msgid ""
 "In short, before turning to the :mod:`re` module, consider whether your "
 "problem can be solved with a faster and simpler string method."
@@ -2453,11 +2801,11 @@ msgstr ""
 "En resumen, antes de pasar al módulo :mod:`re`, considere si su problema "
 "puede resolverse con un método de cadena de caracteres más rápido y simple."
 
-#: ../Doc/howto/regex.rst:1268
+#: ../Doc/howto/regex.rst:1271
 msgid "match() versus search()"
 msgstr "*match() versus search()*"
 
-#: ../Doc/howto/regex.rst:1270
+#: ../Doc/howto/regex.rst:1273
 msgid ""
 "The :func:`~re.match` function only checks if the RE matches at the "
 "beginning of the string while :func:`~re.search` will scan forward through "
@@ -2473,7 +2821,15 @@ msgstr ""
 "que comenzará en 0; si la coincidencia no comienza en cero, :func:`!match` "
 "*no* lo informará. ::"
 
-#: ../Doc/howto/regex.rst:1281
+#: ../Doc/howto/regex.rst:1279
+msgid ""
+">>> print(re.match('super', 'superstition').span())\n"
+"(0, 5)\n"
+">>> print(re.match('super', 'insuperable'))\n"
+"None"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1284
 msgid ""
 "On the other hand, :func:`~re.search` will scan forward through the string, "
 "reporting the first match it finds. ::"
@@ -2481,28 +2837,37 @@ msgstr ""
 "Por otro lado, :func:`~re.search` escaneará hacia adelante a través de la "
 "cadena de caracteres, informando la primera coincidencia que encuentre. ::"
 
-#: ../Doc/howto/regex.rst:1289
+#: ../Doc/howto/regex.rst:1287
 msgid ""
-"Sometimes you'll be tempted to keep using :func:`re.match`, and just add ``."
-"*`` to the front of your RE.  Resist this temptation and use :func:`re."
-"search` instead.  The regular expression compiler does some analysis of REs "
-"in order to speed up the process of looking for a match.  One such analysis "
-"figures out what the first character of a match must be; for example, a "
-"pattern starting with ``Crow`` must match starting with a ``'C'``.  The "
-"analysis lets the engine quickly scan through the string looking for the "
-"starting character, only trying the full match if a ``'C'`` is found."
+">>> print(re.search('super', 'superstition').span())\n"
+"(0, 5)\n"
+">>> print(re.search('super', 'insuperable').span())\n"
+"(2, 7)"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1292
+msgid ""
+"Sometimes you'll be tempted to keep using :func:`re.match`, and just add "
+"``.*`` to the front of your RE.  Resist this temptation and "
+"use :func:`re.search` instead.  The regular expression compiler does some "
+"analysis of REs in order to speed up the process of looking for a match.  "
+"One such analysis figures out what the first character of a match must be; "
+"for example, a pattern starting with ``Crow`` must match starting with a "
+"``'C'``.  The analysis lets the engine quickly scan through the string "
+"looking for the starting character, only trying the full match if a ``'C'`` "
+"is found."
 msgstr ""
 "A veces, tendrá la tentación de seguir usando :func:`re.match`, y "
-"simplemente agregar ``.*`` al frente de su RE. Resista esta tentación y use :"
-"func:`re.search` en su lugar. El compilador de expresiones regulares realiza "
-"un análisis de las RE para acelerar el proceso de búsqueda de coincidencias. "
-"Uno de esos análisis determina cuál debe ser el primer carácter de una "
-"coincidencia; por ejemplo, un patrón que comienza con ``Crow`` debe "
-"coincidir con una ``'C'``.El análisis permite que el motor escanee "
-"rápidamente a través de la cadena en busca del carácter inicial, solo "
-"probando la coincidencia completa si se encuentra una ``'C'``."
+"simplemente agregar ``.*`` al frente de su RE. Resista esta tentación y "
+"use :func:`re.search` en su lugar. El compilador de expresiones regulares "
+"realiza un análisis de las RE para acelerar el proceso de búsqueda de "
+"coincidencias. Uno de esos análisis determina cuál debe ser el primer "
+"carácter de una coincidencia; por ejemplo, un patrón que comienza con "
+"``Crow`` debe coincidir con una ``'C'``.El análisis permite que el motor "
+"escanee rápidamente a través de la cadena en busca del carácter inicial, "
+"solo probando la coincidencia completa si se encuentra una ``'C'``."
 
-#: ../Doc/howto/regex.rst:1298
+#: ../Doc/howto/regex.rst:1301
 msgid ""
 "Adding ``.*`` defeats this optimization, requiring scanning to the end of "
 "the string and then backtracking to find a match for the rest of the RE.  "
@@ -2512,11 +2877,11 @@ msgstr ""
 "final de la cadena y luego retroceder para encontrar una coincidencia para "
 "el resto de la RE. Utilice :func:`re.search` en su lugar."
 
-#: ../Doc/howto/regex.rst:1304
+#: ../Doc/howto/regex.rst:1307
 msgid "Greedy versus Non-Greedy"
 msgstr "Codiciosa versus no codiciosa (*Greedy versus Non-Greedy*)"
 
-#: ../Doc/howto/regex.rst:1306
+#: ../Doc/howto/regex.rst:1309
 msgid ""
 "When repeating a regular expression, as in ``a*``, the resulting action is "
 "to consume as much of the pattern as possible.  This fact often bites you "
@@ -2531,7 +2896,18 @@ msgstr ""
 "hacer coincidir una sola etiqueta HTML no funciona debido a la naturaleza "
 "codiciosa de ``.*``. ::"
 
-#: ../Doc/howto/regex.rst:1320
+#: ../Doc/howto/regex.rst:1315
+msgid ""
+">>> s = '<html><head><title>Title</title>'\n"
+">>> len(s)\n"
+"32\n"
+">>> print(re.match('<.*>', s).span())\n"
+"(0, 32)\n"
+">>> print(re.match('<.*>', s).group())\n"
+"<html><head><title>Title</title>"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1323
 msgid ""
 "The RE matches the ``'<'`` in ``'<html>'``, and the ``.*`` consumes the rest "
 "of the string.  There's still more left in the RE, though, and the ``>`` "
@@ -2548,7 +2924,7 @@ msgstr ""
 "desde el ``'<'`` en ``'<html>'`` al ``'>'`` en ``'</title>'``, que no es lo "
 "que queremos."
 
-#: ../Doc/howto/regex.rst:1327
+#: ../Doc/howto/regex.rst:1330
 msgid ""
 "In this case, the solution is to use the non-greedy quantifiers ``*?``, ``+?"
 "``, ``??``, or ``{m,n}?``, which match as *little* text as possible.  In the "
@@ -2565,6 +2941,12 @@ msgstr ""
 
 #: ../Doc/howto/regex.rst:1336
 msgid ""
+">>> print(re.match('<.*?>', s).group())\n"
+"<html>"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1339
+msgid ""
 "(Note that parsing HTML or XML with regular expressions is painful. Quick-"
 "and-dirty patterns will handle common cases, but HTML and XML have special "
 "cases that will break the obvious regular expression; by the time you've "
@@ -2579,11 +2961,11 @@ msgstr ""
 "posibles, los patrones serán *muy* complicados. Utilice un módulo analizador "
 "HTML o XML para tales tareas.)"
 
-#: ../Doc/howto/regex.rst:1344
+#: ../Doc/howto/regex.rst:1347
 msgid "Using re.VERBOSE"
 msgstr "Usando re.VERBOSE"
 
-#: ../Doc/howto/regex.rst:1346
+#: ../Doc/howto/regex.rst:1349
 msgid ""
 "By now you've probably noticed that regular expressions are a very compact "
 "notation, but they're not terribly readable.  REs of moderate complexity can "
@@ -2595,7 +2977,7 @@ msgstr ""
 "pueden convertirse en largas colecciones de barras invertidas, paréntesis y "
 "metacarácteres, lo que dificulta su lectura y comprensión."
 
-#: ../Doc/howto/regex.rst:1351
+#: ../Doc/howto/regex.rst:1354
 msgid ""
 "For such REs, specifying the :const:`re.VERBOSE` flag when compiling the "
 "regular expression can be helpful, because it allows you to format the "
@@ -2605,7 +2987,7 @@ msgstr ""
 "expresión regular puede ser útil, porque le permite formatear la expresión "
 "regular con mayor claridad."
 
-#: ../Doc/howto/regex.rst:1355
+#: ../Doc/howto/regex.rst:1358
 msgid ""
 "The ``re.VERBOSE`` flag has several effects.  Whitespace in the regular "
 "expression that *isn't* inside a character class is ignored.  This means "
@@ -2625,15 +3007,31 @@ msgstr ""
 "comillas triples, esto permite que las REs sean formateados de manera más "
 "ordenada:"
 
-#: ../Doc/howto/regex.rst:1372
+#: ../Doc/howto/regex.rst:1366
+msgid ""
+"pat = re.compile(r\"\"\"\n"
+" \\s*                 # Skip leading whitespace\n"
+" (?P<header>[^:]+)   # Header name\n"
+" \\s* :               # Whitespace, and a colon\n"
+" (?P<value>.*?)      # The header's value -- *? used to\n"
+"                     # lose the following trailing whitespace\n"
+" \\s*$                # Trailing whitespace to end-of-line\n"
+"\"\"\", re.VERBOSE)"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1375
 msgid "This is far more readable than::"
 msgstr "Esto es mas legible que::"
 
-#: ../Doc/howto/regex.rst:1378
+#: ../Doc/howto/regex.rst:1377
+msgid "pat = re.compile(r\"\\s*(?P<header>[^:]+)\\s*:(?P<value>.*?)\\s*$\")"
+msgstr ""
+
+#: ../Doc/howto/regex.rst:1381
 msgid "Feedback"
 msgstr "Feedback"
 
-#: ../Doc/howto/regex.rst:1380
+#: ../Doc/howto/regex.rst:1383
 msgid ""
 "Regular expressions are a complicated topic.  Did this document help you "
 "understand them?  Were there parts that were unclear, or Problems you "
@@ -2644,7 +3042,7 @@ msgstr ""
 "comprenderlas? ¿Hubo partes que no estaban claras o problemas que encontró "
 "que no se trataron aquí? Si es así, envíe sugerencias de mejora al autor."
 
-#: ../Doc/howto/regex.rst:1385
+#: ../Doc/howto/regex.rst:1388
 msgid ""
 "The most complete book on regular expressions is almost certainly Jeffrey "
 "Friedl's Mastering Regular Expressions, published by O'Reilly.  "
@@ -2661,18 +3059,3 @@ msgstr ""
 "que no será útil como referencia para la programación en Python. (La primera "
 "edición cubría el módulo :mod:`!regex` de Python, ahora eliminado, que no le "
 "ayudará mucho.) Considere sacarlo de su biblioteca."
-
-#~ msgid ""
-#~ "You can learn about this by interactively experimenting with the :mod:"
-#~ "`re` module.  If you have :mod:`tkinter` available, you may also want to "
-#~ "look at :source:`Tools/demo/redemo.py`, a demonstration program included "
-#~ "with the Python distribution.  It allows you to enter REs and strings, "
-#~ "and displays whether the RE matches or fails. :file:`redemo.py` can be "
-#~ "quite useful when trying to debug a complicated RE."
-#~ msgstr ""
-#~ "Puede aprender sobre esto experimentando interactivamente con el módulo :"
-#~ "mod:`re`. Si tiene :mod:`tkinter` disponible, también puede consultar :"
-#~ "source:`Tools/demo/redemo.py`, un programa de demostración incluido con "
-#~ "la distribución de Python. Le permite ingresar RE y cadenas de "
-#~ "caracteres, y muestra si la RE coincide o falla. :file:`redemo.py` puede "
-#~ "ser bastante útil cuando se intenta depurar una RE complicado."

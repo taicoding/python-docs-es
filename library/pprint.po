@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-05-07 18:59-0400\n"
 "Last-Translator: Pedro Aarón <p.luis.aaron@gmail.com>\n"
 "Language: es\n"
@@ -19,10 +19,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/pprint.rst:2
-msgid ":mod:`pprint` --- Data pretty printer"
+#, fuzzy
+msgid ":mod:`!pprint` --- Data pretty printer"
 msgstr ":mod:`pprint` --- Impresión bonita de datos"
 
 #: ../Doc/library/pprint.rst:10
@@ -47,79 +48,95 @@ msgstr ""
 "otros objetos que no se pueden representar como literales de Python."
 
 #: ../Doc/library/pprint.rst:21
+#, fuzzy
 msgid ""
 "The formatted representation keeps objects on a single line if it can, and "
-"breaks them onto multiple lines if they don't fit within the allowed width. "
-"Construct :class:`PrettyPrinter` objects explicitly if you need to adjust "
-"the width constraint."
+"breaks them onto multiple lines if they don't fit within the allowed width, "
+"adjustable by the *width* parameter defaulting to 80 characters."
 msgstr ""
 "La representación formateada mantiene los objetos en una sola línea siempre "
 "que sea posible y los divide en varias líneas si no encajan dentro del ancho "
 "permitido. Se deben crear objetos :class:`PrettyPrinter` de forma explícita "
 "si se necesita ajustar la restricción de ancho."
 
-#: ../Doc/library/pprint.rst:26
+#: ../Doc/library/pprint.rst:25
 msgid "Dictionaries are sorted by key before the display is computed."
 msgstr ""
 "Los diccionarios se ordenan por clave antes de que se calcule la "
 "representación en pantalla."
 
-#: ../Doc/library/pprint.rst:28
+#: ../Doc/library/pprint.rst:27
 msgid "Added support for pretty-printing :class:`types.SimpleNamespace`."
 msgstr ""
 "Soporte añadido para imprimir de forma bonita :class:`types.SimpleNamespace`."
 
-#: ../Doc/library/pprint.rst:31
+#: ../Doc/library/pprint.rst:30
 msgid "Added support for pretty-printing :class:`dataclasses.dataclass`."
 msgstr ""
 "Soporte añadido para imprimir de forma bonita :class:`dataclasses.dataclass`."
 
-#: ../Doc/library/pprint.rst:34
-msgid "The :mod:`pprint` module defines one class:"
-msgstr "El módulo :mod:`pprint` solo define una clase:"
-
-#: ../Doc/library/pprint.rst:44
-msgid ""
-"Construct a :class:`PrettyPrinter` instance.  This constructor understands "
-"several keyword parameters."
+#: ../Doc/library/pprint.rst:36
+msgid "Functions"
 msgstr ""
-"Constructor de la instancia :class:`PrettyPrinter`.  Este constructor "
-"interpreta varios parámetros."
 
-#: ../Doc/library/pprint.rst:47
+#: ../Doc/library/pprint.rst:41
 #, fuzzy
 msgid ""
-"*stream* (default ``sys.stdout``) is a :term:`file-like object` to which the "
-"output will be written by calling its :meth:`!write` method. If both "
-"*stream* and ``sys.stdout`` are ``None``, then :meth:`~PrettyPrinter.pprint` "
-"silently returns."
+"Prints the formatted representation of *object*, followed by a newline. This "
+"function may be used in the interactive interpreter instead of "
+"the :func:`print` function for inspecting values. Tip: you can reassign "
+"``print = pprint.pp`` for use within a scope."
+msgstr ""
+"Imprime la representación formateada de *object* en *stream*, seguido de un "
+"salto de línea. Si *stream* es ``None``, se utiliza ``sys.stdout``. Esto "
+"puede ser utilizado en el intérprete interactivo en lugar de la "
+"función :func:`print` para inspeccionar valores (incluso puedes reasignar "
+"``print = pprint.pprint`` para usarlo dentro de un alcance)."
+
+#: ../Doc/library/pprint.rst
+msgid "Parameters"
+msgstr ""
+
+#: ../Doc/library/pprint.rst:46
+msgid "The object to be printed."
+msgstr ""
+
+#: ../Doc/library/pprint.rst:49
+#, fuzzy
+msgid ""
+"A file-like object to which the output will be written by calling "
+"its :meth:`!write` method. If ``None`` (the default), :data:`sys.stdout` is "
+"used."
 msgstr ""
 "*stream* (por defecto ``sys.stdout``) es un :term:`file-like object` el cual "
 "la salida va a ser escrita usando el :meth:`write`. Si tanto *stream* como "
 "``sys.stdout`` son ``None``, entonces :meth:`~PrettyPrinter.pprint` retorna "
 "el resultado sin mostrar nada."
 
-#: ../Doc/library/pprint.rst:52
-msgid ""
-"Other values configure the manner in which nesting of complex data "
-"structures is displayed."
-msgstr ""
-"Otros valores configuran la manera en que el anidamiento de estructuras "
-"datos complejos son visualizados."
-
 #: ../Doc/library/pprint.rst:55
-msgid ""
-"*indent* (default 1) specifies the amount of indentation added for each "
-"nesting level."
+#, fuzzy
+msgid "The amount of indentation added for each nesting level."
 msgstr ""
 "*indent* (por defecto 1) especifica la cantidad de sangría agregada para "
 "cada nivel de anidamiento."
 
 #: ../Doc/library/pprint.rst:58
+#, fuzzy
 msgid ""
-"*depth* controls the number of nesting levels which may be printed; if the "
-"data structure being printed is too deep, the next contained level is "
-"replaced by ``...``.  By default, there is no constraint on the depth of the "
+"The desired maximum number of characters per line in the output. If a "
+"structure cannot be formatted within the width constraint, a best effort "
+"will be made."
+msgstr ""
+"*width* (por defecto 80) especifica el número máximo deseado de caracteres "
+"por línea en la salida. Si no se puede formatear una estructura dentro de la "
+"restricción de ancho, se hará el mejor esfuerzo."
+
+#: ../Doc/library/pprint.rst:63
+#, fuzzy
+msgid ""
+"The number of nesting levels which may be printed. If the data structure "
+"being printed is too deep, the next contained level is replaced by ``...``. "
+"If ``None`` (the default), there is no constraint on the depth of the "
 "objects being formatted."
 msgstr ""
 "*depth* controla el número de niveles de anidamientos que podría ser "
@@ -127,22 +144,13 @@ msgstr ""
 "nivel es reemplazado por ``...``.  Por defecto, no hay ninguna restricción "
 "en la profundidad de los objetos que se formatean."
 
-#: ../Doc/library/pprint.rst:63
+#: ../Doc/library/pprint.rst:71
+#, fuzzy
 msgid ""
-"*width* (default 80) specifies the desired maximum number of characters per "
-"line in the output. If a structure cannot be formatted within the width "
-"constraint, a best effort will be made."
-msgstr ""
-"*width* (por defecto 80) especifica el número máximo deseado de caracteres "
-"por línea en la salida. Si no se puede formatear una estructura dentro de la "
-"restricción de ancho, se hará el mejor esfuerzo."
-
-#: ../Doc/library/pprint.rst:67
-msgid ""
-"*compact* impacts the way that long sequences (lists, tuples, sets, etc) are "
-"formatted. If *compact* is false (the default) then each item of a sequence "
-"will be formatted on a separate line.  If *compact* is true, as many items "
-"as will fit within the *width* will be formatted on each output line."
+"Control the way long :term:`sequences <sequence>` are formatted. If "
+"``False`` (the default), each item of a sequence will be formatted on a "
+"separate line, otherwise as many items as will fit within the *width* will "
+"be formatted on each output line."
 msgstr ""
 "*compact* impacta la forma en que secuencias largas (listas, tuplas, "
 "conjuntos, etc) son formateadas. Si *compact* es falso (el valor "
@@ -150,48 +158,40 @@ msgstr ""
 "una línea separada. Si *compact* es verdadero, todos los elementos que "
 "encajen en el *width* de cada línea de salida, lo harán."
 
-#: ../Doc/library/pprint.rst:73
+#: ../Doc/library/pprint.rst:78
+#, fuzzy
 msgid ""
-"If *sort_dicts* is true (the default), dictionaries will be formatted with "
-"their keys sorted, otherwise they will display in insertion order."
+"If ``True``, dictionaries will be formatted with their keys sorted, "
+"otherwise they will be displayed in insertion order (the default)."
 msgstr ""
 "Si *sort_dicts* es verdadero (el valor predeterminado), los diccionarios se "
 "formatearán con sus claves ordenadas; de lo contrario, se mostrarán en orden "
 "de inserción."
 
-#: ../Doc/library/pprint.rst:76
+#: ../Doc/library/pprint.rst:83
+#, fuzzy
 msgid ""
-"If *underscore_numbers* is true, integers will be formatted with the ``_`` "
-"character for a thousands separator, otherwise underscores are not displayed "
-"(the default)."
+"If ``True``, integers will be formatted with the ``_`` character for a "
+"thousands separator, otherwise underscores are not displayed (the default)."
 msgstr ""
 "Si *underscore_numbers* es verdadero, los enteros se formatearán con el "
 "carácter ``_`` para un separador de miles; de lo contrario, no se mostrarán "
 "los guiones bajos (el valor predeterminado)."
 
-#: ../Doc/library/pprint.rst:80
-msgid "Added the *compact* parameter."
-msgstr "Añadido el argumento *compact*."
+#: ../Doc/library/pprint.rst:105
+msgid ""
+"Alias for :func:`~pprint.pp` with *sort_dicts* set to ``True`` by default, "
+"which would automatically sort the dictionaries' keys, you might want to "
+"use :func:`~pprint.pp` instead where it is ``False`` by default."
+msgstr ""
 
-#: ../Doc/library/pprint.rst:83
-msgid "Added the *sort_dicts* parameter."
-msgstr "Añadido el argumento *sort_dicts*."
-
-#: ../Doc/library/pprint.rst:86
-msgid "Added the *underscore_numbers* parameter."
-msgstr "Se agregó el parámetro *underscore_numbers*."
-
-#: ../Doc/library/pprint.rst:89
+#: ../Doc/library/pprint.rst:113
 #, fuzzy
-msgid "No longer attempts to write to ``sys.stdout`` if it is ``None``."
-msgstr "Ya no intenta escribir en ``sys.stdout`` si es ``None``."
-
-#: ../Doc/library/pprint.rst:118
 msgid ""
 "Return the formatted representation of *object* as a string.  *indent*, "
 "*width*, *depth*, *compact*, *sort_dicts* and *underscore_numbers* are "
 "passed to the :class:`PrettyPrinter` constructor as formatting parameters "
-"and their meanings are as described in its documentation above."
+"and their meanings are as described in the documentation above."
 msgstr ""
 "Retorna la representación formateada de *object* como una cadena de "
 "caracteres. *indent*, *width*, *depth*, *compact*, *sort_dicts* y "
@@ -199,49 +199,7 @@ msgstr ""
 "parámetros de formato y su significado es el descrito en su documentación "
 "anterior."
 
-#: ../Doc/library/pprint.rst:126
-msgid ""
-"Prints the formatted representation of *object* followed by a newline. If "
-"*sort_dicts* is false (the default), dictionaries will be displayed with "
-"their keys in insertion order, otherwise the dict keys will be sorted. "
-"*args* and *kwargs* will be passed to :func:`pprint` as formatting "
-"parameters."
-msgstr ""
-"Imprime la representación formateada de *object* seguida de una nueva línea. "
-"Si *sort_dicts* es *False* (el valor por defecto), los diccionarios se "
-"mostrarán con sus claves según orden de inserción, de lo contrario, las "
-"claves del diccionario serán ordenadas. *args* y *kwargs* se pasarán a :func:"
-"`pprint` como parámetros de formato."
-
-#: ../Doc/library/pprint.rst:138
-#, fuzzy
-msgid ""
-"Prints the formatted representation of *object* on *stream*, followed by a "
-"newline.  If *stream* is ``None``, ``sys.stdout`` is used. This may be used "
-"in the interactive interpreter instead of the :func:`print` function for "
-"inspecting values (you can even reassign ``print = pprint.pprint`` for use "
-"within a scope)."
-msgstr ""
-"Imprime la representación formateada de *object* en *stream*, seguido de un "
-"salto de línea. Si *stream* es ``None``, se utiliza ``sys.stdout``. Esto "
-"puede ser utilizado en el intérprete interactivo en lugar de la función :"
-"func:`print` para inspeccionar valores (incluso puedes reasignar ``print = "
-"pprint.pprint`` para usarlo dentro de un alcance)."
-
-#: ../Doc/library/pprint.rst:144
-#, fuzzy
-msgid ""
-"The configuration parameters *stream*, *indent*, *width*, *depth*, "
-"*compact*, *sort_dicts* and *underscore_numbers* are passed to the :class:"
-"`PrettyPrinter` constructor and their meanings are as described in its "
-"documentation above."
-msgstr ""
-"Los parámetros de configuración *stream*, *indent*, *width*, *depth*, "
-"*compact*, *sort_dicts* y *underscore_numbers* se pasan al constructor de "
-"la :class:`PrettyPrinter` y su significado se describe en la documentación "
-"mencionada anteriormente."
-
-#: ../Doc/library/pprint.rst:164
+#: ../Doc/library/pprint.rst:123
 msgid ""
 "Determine if the formatted representation of *object* is \"readable\", or "
 "can be used to reconstruct the value using :func:`eval`.  This always "
@@ -251,26 +209,23 @@ msgstr ""
 "puede usarse para reconstruir el objeto usando :func:`eval`.  Siempre "
 "retorna ``False`` para objetos recursivos."
 
-#: ../Doc/library/pprint.rst:174
+#: ../Doc/library/pprint.rst:133
 msgid ""
 "Determine if *object* requires a recursive representation.  This function is "
 "subject to the same limitations as noted in :func:`saferepr` below and may "
 "raise an :exc:`RecursionError` if it fails to detect a recursive object."
 msgstr ""
 
-#: ../Doc/library/pprint.rst:179
-msgid "One more support function is also defined:"
-msgstr "Una función extra de soporte es también definida:"
-
-#: ../Doc/library/pprint.rst:183
+#: ../Doc/library/pprint.rst:140
 #, fuzzy
 msgid ""
 "Return a string representation of *object*, protected against recursion in "
-"some common data structures, namely instances of :class:`dict`, :class:"
-"`list` and :class:`tuple` or subclasses whose ``__repr__`` has not been "
-"overridden.  If the representation of object exposes a recursive entry, the "
-"recursive reference will be represented as ``<Recursion on typename with "
-"id=number>``.  The representation is not otherwise formatted."
+"some common data structures, namely instances "
+"of :class:`dict`, :class:`list` and :class:`tuple` or subclasses whose "
+"``__repr__`` has not been overridden.  If the representation of object "
+"exposes a recursive entry, the recursive reference will be represented as "
+"``<Recursion on typename with id=number>``.  The representation is not "
+"otherwise formatted."
 msgstr ""
 "Retorna una representación en forma de cadena de caracteres de *object*, que "
 "está protegida contra estructuras de datos recursivas. Si la representación "
@@ -278,16 +233,46 @@ msgstr ""
 "representará como ``<Recursion on typename with id=number>``. Además, la "
 "representación no tendrá otro formato."
 
-#: ../Doc/library/pprint.rst:197
+#: ../Doc/library/pprint.rst:153
 msgid "PrettyPrinter Objects"
 msgstr "Objetos *PrettyPrinter*"
 
-#: ../Doc/library/pprint.rst:199
+#: ../Doc/library/pprint.rst:160
+#, fuzzy
+msgid "Construct a :class:`PrettyPrinter` instance."
+msgstr ""
+"Constructor de la instancia :class:`PrettyPrinter`.  Este constructor "
+"interpreta varios parámetros."
+
+#: ../Doc/library/pprint.rst:162
+msgid ""
+"Arguments have the same meaning as for :func:`~pprint.pp`. Note that they "
+"are in a different order, and that *sort_dicts* defaults to ``True``."
+msgstr ""
+
+#: ../Doc/library/pprint.rst:189
+msgid "Added the *compact* parameter."
+msgstr "Añadido el argumento *compact*."
+
+#: ../Doc/library/pprint.rst:192
+msgid "Added the *sort_dicts* parameter."
+msgstr "Añadido el argumento *sort_dicts*."
+
+#: ../Doc/library/pprint.rst:195
+msgid "Added the *underscore_numbers* parameter."
+msgstr "Se agregó el parámetro *underscore_numbers*."
+
+#: ../Doc/library/pprint.rst:198
+#, fuzzy
+msgid "No longer attempts to write to :data:`!sys.stdout` if it is ``None``."
+msgstr "Ya no intenta escribir en ``sys.stdout`` si es ``None``."
+
+#: ../Doc/library/pprint.rst:202
 msgid ":class:`PrettyPrinter` instances have the following methods:"
 msgstr ""
 "Las instancias de :class:`PrettyPrinter` tienen los siguientes métodos:"
 
-#: ../Doc/library/pprint.rst:204
+#: ../Doc/library/pprint.rst:207
 msgid ""
 "Return the formatted representation of *object*.  This takes into account "
 "the options passed to the :class:`PrettyPrinter` constructor."
@@ -295,7 +280,7 @@ msgstr ""
 "Retorna la representación formateada de *object*.  Tiene en cuenta las "
 "opciones pasadas al constructor de la clase :class:`PrettyPrinter`."
 
-#: ../Doc/library/pprint.rst:210
+#: ../Doc/library/pprint.rst:213
 msgid ""
 "Print the formatted representation of *object* on the configured stream, "
 "followed by a newline."
@@ -303,7 +288,7 @@ msgstr ""
 "Imprime la representación formateada de *object* en la secuencia "
 "configurada, seguida de una nueva línea."
 
-#: ../Doc/library/pprint.rst:213
+#: ../Doc/library/pprint.rst:216
 msgid ""
 "The following methods provide the implementations for the corresponding "
 "functions of the same names.  Using these methods on an instance is slightly "
@@ -312,16 +297,16 @@ msgid ""
 msgstr ""
 "Los siguientes métodos proporcionan las implementaciones para las funciones "
 "correspondientes con los mismos nombres. Usar estos métodos en una instancia "
-"es algo más eficiente, ya que no es necesario crear nuevos objetos :class:"
-"`PrettyPrinter`."
+"es algo más eficiente, ya que no es necesario crear nuevos "
+"objetos :class:`PrettyPrinter`."
 
-#: ../Doc/library/pprint.rst:223
+#: ../Doc/library/pprint.rst:226
 msgid ""
 "Determine if the formatted representation of the object is \"readable,\" or "
 "can be used to reconstruct the value using :func:`eval`.  Note that this "
-"returns ``False`` for recursive objects.  If the *depth* parameter of the :"
-"class:`PrettyPrinter` is set and the object is deeper than allowed, this "
-"returns ``False``."
+"returns ``False`` for recursive objects.  If the *depth* parameter of "
+"the :class:`PrettyPrinter` is set and the object is deeper than allowed, "
+"this returns ``False``."
 msgstr ""
 "Determina si la representación formateada de *object* es \"legible\" o si se "
 "puede usar para reconstruir su valor usando :func:`eval`. Se debe tener en "
@@ -329,11 +314,11 @@ msgstr ""
 "*depth* de :class:`PrettyPrinter` es proporcionado y el objeto es más "
 "profundo de lo permitido, también se retorna ``False``."
 
-#: ../Doc/library/pprint.rst:232
+#: ../Doc/library/pprint.rst:235
 msgid "Determine if the object requires a recursive representation."
 msgstr "Determina si *object* requiere una representación recursiva."
 
-#: ../Doc/library/pprint.rst:234
+#: ../Doc/library/pprint.rst:237
 msgid ""
 "This method is provided as a hook to allow subclasses to modify the way "
 "objects are converted to strings.  The default implementation uses the "
@@ -342,10 +327,10 @@ msgstr ""
 "Este método se proporciona como un punto de entrada o método de enlace "
 "automático (*hook* en inglés) para permitir que las subclases modifiquen la "
 "forma en que los objetos se convierten en cadenas de caracteres. La "
-"implementación por defecto utiliza la implementación interna de :func:"
-"`saferepr`."
+"implementación por defecto utiliza la implementación interna "
+"de :func:`saferepr`."
 
-#: ../Doc/library/pprint.rst:241
+#: ../Doc/library/pprint.rst:244
 msgid ""
 "Returns three values: the formatted version of *object* as a string, a flag "
 "indicating whether the result is readable, and a flag indicating whether "
@@ -378,25 +363,96 @@ msgstr ""
 "llamadas recursivas sucesivas deben pasar un valor menor que el de la "
 "llamada actual."
 
-#: ../Doc/library/pprint.rst:259
+#: ../Doc/library/pprint.rst:262
 msgid "Example"
 msgstr "Ejemplo"
 
-#: ../Doc/library/pprint.rst:261
+#: ../Doc/library/pprint.rst:264
+#, fuzzy
 msgid ""
-"To demonstrate several uses of the :func:`pprint` function and its "
-"parameters, let's fetch information about a project from `PyPI <https://pypi."
-"org>`_::"
+"To demonstrate several uses of the :func:`~pprint.pp` function and its "
+"parameters, let's fetch information about a project from `PyPI <https://"
+"pypi.org>`_::"
 msgstr ""
 "Para demostrar varios usos de la función :func:`pprint` y sus parámetros, "
 "busquemos información sobre un proyecto en `PyPI <https://pypi.org>`_::"
 
-#: ../Doc/library/pprint.rst:270
-msgid "In its basic form, :func:`pprint` shows the whole object::"
+#: ../Doc/library/pprint.rst:267
+msgid ""
+">>> import json\n"
+">>> import pprint\n"
+">>> from urllib.request import urlopen\n"
+">>> with urlopen('https://pypi.org/pypi/sampleproject/json') as resp:\n"
+"...     project_info = json.load(resp)['info']"
+msgstr ""
+
+#: ../Doc/library/pprint.rst:273
+#, fuzzy
+msgid "In its basic form, :func:`~pprint.pp` shows the whole object::"
 msgstr ""
 "En su forma básica, la función :func:`pprint` muestra el objeto completo::"
 
-#: ../Doc/library/pprint.rst:326
+#: ../Doc/library/pprint.rst:275
+msgid ""
+">>> pprint.pp(project_info)\n"
+"{'author': 'The Python Packaging Authority',\n"
+" 'author_email': 'pypa-dev@googlegroups.com',\n"
+" 'bugtrack_url': None,\n"
+" 'classifiers': ['Development Status :: 3 - Alpha',\n"
+"                 'Intended Audience :: Developers',\n"
+"                 'License :: OSI Approved :: MIT License',\n"
+"                 'Programming Language :: Python :: 2',\n"
+"                 'Programming Language :: Python :: 2.6',\n"
+"                 'Programming Language :: Python :: 2.7',\n"
+"                 'Programming Language :: Python :: 3',\n"
+"                 'Programming Language :: Python :: 3.2',\n"
+"                 'Programming Language :: Python :: 3.3',\n"
+"                 'Programming Language :: Python :: 3.4',\n"
+"                 'Topic :: Software Development :: Build Tools'],\n"
+" 'description': 'A sample Python project\\n'\n"
+"                '=======================\\n'\n"
+"                '\\n'\n"
+"                'This is the description file for the project.\\n'\n"
+"                '\\n'\n"
+"                'The file should use UTF-8 encoding and be written using '\n"
+"                'ReStructured Text. It\\n'\n"
+"                'will be used to generate the project webpage on PyPI, and "
+"'\n"
+"                'should be written for\\n'\n"
+"                'that purpose.\\n'\n"
+"                '\\n'\n"
+"                'Typical contents for this file would include an overview of "
+"'\n"
+"                'the project, basic\\n'\n"
+"                'usage examples, etc. Generally, including the project '\n"
+"                'changelog in here is not\\n'\n"
+"                'a good idea, although a simple \"What\\'s New\" section for "
+"the '\n"
+"                'most recent version\\n'\n"
+"                'may be appropriate.',\n"
+" 'description_content_type': None,\n"
+" 'docs_url': None,\n"
+" 'download_url': 'UNKNOWN',\n"
+" 'downloads': {'last_day': -1, 'last_month': -1, 'last_week': -1},\n"
+" 'home_page': 'https://github.com/pypa/sampleproject',\n"
+" 'keywords': 'sample setuptools development',\n"
+" 'license': 'MIT',\n"
+" 'maintainer': None,\n"
+" 'maintainer_email': None,\n"
+" 'name': 'sampleproject',\n"
+" 'package_url': 'https://pypi.org/project/sampleproject/',\n"
+" 'platform': 'UNKNOWN',\n"
+" 'project_url': 'https://pypi.org/project/sampleproject/',\n"
+" 'project_urls': {'Download': 'UNKNOWN',\n"
+"                  'Homepage': 'https://github.com/pypa/sampleproject'},\n"
+" 'release_url': 'https://pypi.org/project/sampleproject/1.2.0/',\n"
+" 'requires_dist': None,\n"
+" 'requires_python': None,\n"
+" 'summary': 'A sample Python project',\n"
+" 'version': '1.2.0'}"
+msgstr ""
+
+#: ../Doc/library/pprint.rst:329
 msgid ""
 "The result can be limited to a certain *depth* (ellipsis is used for deeper "
 "contents)::"
@@ -404,7 +460,56 @@ msgstr ""
 "El resultado puede limitarse a una cierta profundidad asignando un valor al "
 "argumento *depth* (``...`` se utiliza para contenidos más \"profundos\"):"
 
-#: ../Doc/library/pprint.rst:372
+#: ../Doc/library/pprint.rst:332
+msgid ""
+">>> pprint.pp(project_info, depth=1)\n"
+"{'author': 'The Python Packaging Authority',\n"
+" 'author_email': 'pypa-dev@googlegroups.com',\n"
+" 'bugtrack_url': None,\n"
+" 'classifiers': [...],\n"
+" 'description': 'A sample Python project\\n'\n"
+"                '=======================\\n'\n"
+"                '\\n'\n"
+"                'This is the description file for the project.\\n'\n"
+"                '\\n'\n"
+"                'The file should use UTF-8 encoding and be written using '\n"
+"                'ReStructured Text. It\\n'\n"
+"                'will be used to generate the project webpage on PyPI, and "
+"'\n"
+"                'should be written for\\n'\n"
+"                'that purpose.\\n'\n"
+"                '\\n'\n"
+"                'Typical contents for this file would include an overview of "
+"'\n"
+"                'the project, basic\\n'\n"
+"                'usage examples, etc. Generally, including the project '\n"
+"                'changelog in here is not\\n'\n"
+"                'a good idea, although a simple \"What\\'s New\" section for "
+"the '\n"
+"                'most recent version\\n'\n"
+"                'may be appropriate.',\n"
+" 'description_content_type': None,\n"
+" 'docs_url': None,\n"
+" 'download_url': 'UNKNOWN',\n"
+" 'downloads': {...},\n"
+" 'home_page': 'https://github.com/pypa/sampleproject',\n"
+" 'keywords': 'sample setuptools development',\n"
+" 'license': 'MIT',\n"
+" 'maintainer': None,\n"
+" 'maintainer_email': None,\n"
+" 'name': 'sampleproject',\n"
+" 'package_url': 'https://pypi.org/project/sampleproject/',\n"
+" 'platform': 'UNKNOWN',\n"
+" 'project_url': 'https://pypi.org/project/sampleproject/',\n"
+" 'project_urls': {...},\n"
+" 'release_url': 'https://pypi.org/project/sampleproject/1.2.0/',\n"
+" 'requires_dist': None,\n"
+" 'requires_python': None,\n"
+" 'summary': 'A sample Python project',\n"
+" 'version': '1.2.0'}"
+msgstr ""
+
+#: ../Doc/library/pprint.rst:375
 msgid ""
 "Additionally, maximum character *width* can be suggested. If a long object "
 "cannot be split, the specified width will be exceeded::"
@@ -413,21 +518,67 @@ msgstr ""
 "asignando un valor al parámetro *width*. Si un objeto largo no se puede "
 "dividir, el valor dado al ancho se anulará y será excedido::"
 
-#: ../Doc/library/pprint.rst:39
-msgid "..."
+#: ../Doc/library/pprint.rst:378
+msgid ""
+">>> pprint.pp(project_info, depth=1, width=60)\n"
+"{'author': 'The Python Packaging Authority',\n"
+" 'author_email': 'pypa-dev@googlegroups.com',\n"
+" 'bugtrack_url': None,\n"
+" 'classifiers': [...],\n"
+" 'description': 'A sample Python project\\n'\n"
+"                '=======================\\n'\n"
+"                '\\n'\n"
+"                'This is the description file for the '\n"
+"                'project.\\n'\n"
+"                '\\n'\n"
+"                'The file should use UTF-8 encoding and be '\n"
+"                'written using ReStructured Text. It\\n'\n"
+"                'will be used to generate the project '\n"
+"                'webpage on PyPI, and should be written '\n"
+"                'for\\n'\n"
+"                'that purpose.\\n'\n"
+"                '\\n'\n"
+"                'Typical contents for this file would '\n"
+"                'include an overview of the project, '\n"
+"                'basic\\n'\n"
+"                'usage examples, etc. Generally, including '\n"
+"                'the project changelog in here is not\\n'\n"
+"                'a good idea, although a simple \"What\\'s '\n"
+"                'New\" section for the most recent version\\n'\n"
+"                'may be appropriate.',\n"
+" 'description_content_type': None,\n"
+" 'docs_url': None,\n"
+" 'download_url': 'UNKNOWN',\n"
+" 'downloads': {...},\n"
+" 'home_page': 'https://github.com/pypa/sampleproject',\n"
+" 'keywords': 'sample setuptools development',\n"
+" 'license': 'MIT',\n"
+" 'maintainer': None,\n"
+" 'maintainer_email': None,\n"
+" 'name': 'sampleproject',\n"
+" 'package_url': 'https://pypi.org/project/sampleproject/',\n"
+" 'platform': 'UNKNOWN',\n"
+" 'project_url': 'https://pypi.org/project/sampleproject/',\n"
+" 'project_urls': {...},\n"
+" 'release_url': 'https://pypi.org/project/sampleproject/1.2.0/',\n"
+" 'requires_dist': None,\n"
+" 'requires_python': None,\n"
+" 'summary': 'A sample Python project',\n"
+" 'version': '1.2.0'}"
 msgstr ""
 
-#: ../Doc/library/pprint.rst:39
-msgid "placeholder"
-msgstr ""
-
-#: ../Doc/library/pprint.rst:162 ../Doc/library/pprint.rst:221
+#: ../Doc/library/pprint.rst:121 ../Doc/library/pprint.rst:224
 msgid "built-in function"
 msgstr ""
 
-#: ../Doc/library/pprint.rst:162 ../Doc/library/pprint.rst:221
+#: ../Doc/library/pprint.rst:121 ../Doc/library/pprint.rst:224
 msgid "eval"
 msgstr ""
 
-#~ msgid "Determine if *object* requires a recursive representation."
-#~ msgstr "Determina si *object* requiere una representación recursiva."
+#: ../Doc/library/pprint.rst:155
+msgid "..."
+msgstr ""
+
+#: ../Doc/library/pprint.rst:155
+msgid "placeholder"
+msgstr ""

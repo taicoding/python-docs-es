@@ -10,17 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-10-15 20:19-0300\n"
 "Last-Translator: Carlos A. Crespo <lvccrespo@gmail.com>\n"
-"Language-Team: python-doc-es\n"
 "Language: es\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.0.1\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/tutorial/introduction.rst:5
 msgid "An Informal Introduction to Python"
@@ -78,6 +77,14 @@ msgstr ""
 msgid "Some examples::"
 msgstr "Algunos ejemplos::"
 
+#: ../Doc/tutorial/introduction.rst:33
+msgid ""
+"# this is the first comment\n"
+"spam = 1  # and this is the second comment\n"
+"          # ... and now a third!\n"
+"text = \"# This is not a comment because it's inside quotes.\""
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:42
 msgid "Using Python as a Calculator"
 msgstr "Usando Python como una calculadora"
@@ -107,11 +114,24 @@ msgstr ""
 "operaciones aritméticas; los paréntesis (``()``) pueden ser usados para "
 "agrupar. Por ejemplo::"
 
+#: ../Doc/tutorial/introduction.rst:59
+msgid ""
+">>> 2 + 2\n"
+"4\n"
+">>> 50 - 5*6\n"
+"20\n"
+">>> (50 - 5*6) / 4\n"
+"5.0\n"
+">>> 8 / 5  # division always returns a floating-point number\n"
+"1.6"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:68
 msgid ""
 "The integer numbers (e.g. ``2``, ``4``, ``20``) have type :class:`int`, the "
-"ones with a fractional part (e.g. ``5.0``, ``1.6``) have type :class:"
-"`float`.  We will see more about numeric types later in the tutorial."
+"ones with a fractional part (e.g. ``5.0``, ``1.6``) have "
+"type :class:`float`.  We will see more about numeric types later in the "
+"tutorial."
 msgstr ""
 "Los números enteros (ej. ``2``, ``4``, ``20``) tienen tipo :class:`int`, los "
 "que tienen una parte fraccionaria (por ejemplo ``5.0``, ``1.6``) tiene el "
@@ -128,12 +148,34 @@ msgstr ""
 "Para hacer :term:`floor division` y obtener un número entero como resultado  "
 "puede usarse el operador ``//``; para calcular el resto puedes usar ``%``::"
 
+#: ../Doc/tutorial/introduction.rst:76
+#, python-format
+msgid ""
+">>> 17 / 3  # classic division returns a float\n"
+"5.666666666666667\n"
+">>>\n"
+">>> 17 // 3  # floor division discards the fractional part\n"
+"5\n"
+">>> 17 % 3  # the % operator returns the remainder of the division\n"
+"2\n"
+">>> 5 * 3 + 2  # floored quotient * divisor + remainder\n"
+"17"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:86
 msgid ""
 "With Python, it is possible to use the ``**`` operator to calculate powers "
 "[#]_::"
 msgstr ""
 "Con Python, es posible usar el operador ``**`` para calcular potencias [#]_::"
+
+#: ../Doc/tutorial/introduction.rst:88
+msgid ""
+">>> 5 ** 2  # 5 squared\n"
+"25\n"
+">>> 2 ** 7  # 2 to the power of 7\n"
+"128"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:93
 msgid ""
@@ -143,6 +185,14 @@ msgstr ""
 "El signo igual (``=``) se usa para asignar un valor a una variable. Después, "
 "no se muestra ningún resultado antes del siguiente prompt interactivo::"
 
+#: ../Doc/tutorial/introduction.rst:96
+msgid ""
+">>> width = 20\n"
+">>> height = 5 * 9\n"
+">>> width * height\n"
+"900"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:101
 msgid ""
 "If a variable is not \"defined\" (assigned a value), trying to use it will "
@@ -151,6 +201,14 @@ msgstr ""
 "Si una variable no está \"definida\" (no se le ha asignado un valor), al "
 "intentar usarla dará un error::"
 
+#: ../Doc/tutorial/introduction.rst:104
+msgid ""
+">>> n  # try to access an undefined variable\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"NameError: name 'n' is not defined"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:109
 msgid ""
 "There is full support for floating point; operators with mixed type operands "
@@ -158,6 +216,12 @@ msgid ""
 msgstr ""
 "Hay soporte completo de punto flotante; operadores con operando mezclados "
 "convertirán los enteros a punto flotante::"
+
+#: ../Doc/tutorial/introduction.rst:112
+msgid ""
+">>> 4 * 3.75 - 1\n"
+"14.0"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:115
 msgid ""
@@ -168,6 +232,18 @@ msgstr ""
 "En el modo interactivo, la última expresión impresa se asigna a la variable "
 "``_``.  Esto significa que cuando se está utilizando Python como "
 "calculadora, es más fácil seguir calculando, por ejemplo::"
+
+#: ../Doc/tutorial/introduction.rst:119
+msgid ""
+">>> tax = 12.5 / 100\n"
+">>> price = 100.50\n"
+">>> price * tax\n"
+"12.5625\n"
+">>> price + _\n"
+"113.0625\n"
+">>> round(_, 2)\n"
+"113.06"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:128
 msgid ""
@@ -182,10 +258,10 @@ msgstr ""
 #: ../Doc/tutorial/introduction.rst:132
 msgid ""
 "In addition to :class:`int` and :class:`float`, Python supports other types "
-"of numbers, such as :class:`~decimal.Decimal` and :class:`~fractions."
-"Fraction`. Python also has built-in support for :ref:`complex numbers "
-"<typesnumeric>`, and uses the ``j`` or ``J`` suffix to indicate the "
-"imaginary part (e.g. ``3+5j``)."
+"of numbers, such as :class:`~decimal.Decimal` "
+"and :class:`~fractions.Fraction`. Python also has built-in support "
+"for :ref:`complex numbers <typesnumeric>`, and uses the ``j`` or ``J`` "
+"suffix to indicate the imaginary part (e.g. ``3+5j``)."
 msgstr ""
 "Además de :class:`int` y :class:`float`, Python admite otros tipos de "
 "números, como :class:`~decimal.Decimal` y :class:`~fractions.Fraction`. "
@@ -220,6 +296,20 @@ msgstr ""
 "Para citar una cita, debemos \"escapar\" la cita precediéndola con ``\\``. "
 "Alternativamente, podemos usar el otro tipo de comillas::"
 
+#: ../Doc/tutorial/introduction.rst:160
+msgid ""
+">>> 'doesn\\'t'  # use \\' to escape the single quote...\n"
+"\"doesn't\"\n"
+">>> \"doesn't\"  # ...or use double quotes instead\n"
+"\"doesn't\"\n"
+">>> '\"Yes,\" they said.'\n"
+"'\"Yes,\" they said.'\n"
+">>> \"\\\"Yes,\\\" they said.\"\n"
+"'\"Yes,\" they said.'\n"
+">>> '\"Isn\\'t,\" they said.'\n"
+"'\"Isn\\'t,\" they said.'"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:171
 msgid ""
 "In the Python shell, the string definition and output string can look "
@@ -232,6 +322,17 @@ msgstr ""
 "legible, omitiendo las comillas de encuadre e imprimiendo caracteres "
 "escapados y especiales::"
 
+#: ../Doc/tutorial/introduction.rst:175
+msgid ""
+">>> s = 'First line.\\nSecond line.'  # \\n means newline\n"
+">>> s  # without print(), special characters are included in the string\n"
+"'First line.\\nSecond line.'\n"
+">>> print(s)  # with print(), special characters are interpreted, so \\n "
+"produces new line\n"
+"First line.\n"
+"Second line."
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:182
 msgid ""
 "If you don't want characters prefaced by ``\\`` to be interpreted as special "
@@ -241,6 +342,15 @@ msgstr ""
 "Si no quieres que los caracteres precedidos por ``\\`` se interpreten como "
 "caracteres especiales, puedes usar *cadenas sin formato* agregando una ``r`` "
 "antes de la primera comilla::"
+
+#: ../Doc/tutorial/introduction.rst:186
+msgid ""
+">>> print('C:\\some\\name')  # here \\n means newline!\n"
+"C:\\some\n"
+"ame\n"
+">>> print(r'C:\\some\\name')  # note the r before the quote\n"
+"C:\\some\\name"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:192
 msgid ""
@@ -265,6 +375,15 @@ msgstr ""
 "línea son incluidos automáticamente, pero es posible prevenir esto agregando "
 "una ``\\`` al final de la línea. Por ejemplo:"
 
+#: ../Doc/tutorial/introduction.rst:202
+msgid ""
+"print(\"\"\"\\\n"
+"Usage: thingy [OPTIONS]\n"
+"     -h                        Display this usage message\n"
+"     -H hostname               Hostname to connect to\n"
+"\"\"\")"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:208
 msgid ""
 "produces the following output (note that the initial newline is not "
@@ -272,6 +391,13 @@ msgid ""
 msgstr ""
 "produce la siguiente salida (tener en cuenta que la línea inicial no está "
 "incluida):"
+
+#: ../Doc/tutorial/introduction.rst:210
+msgid ""
+"Usage: thingy [OPTIONS]\n"
+"     -h                        Display this usage message\n"
+"     -H hostname               Hostname to connect to"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:216
 msgid ""
@@ -281,6 +407,13 @@ msgstr ""
 "Las cadenas se pueden concatenar (pegar juntas) con el operador ``+`` y se "
 "pueden repetir con ``*``::"
 
+#: ../Doc/tutorial/introduction.rst:219
+msgid ""
+">>> # 3 times 'un', followed by 'ium'\n"
+">>> 3 * 'un' + 'ium'\n"
+"'unununium'"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:223
 msgid ""
 "Two or more *string literals* (i.e. the ones enclosed between quotes) next "
@@ -289,6 +422,12 @@ msgstr ""
 "Dos o más *cadenas literales* (es decir, las encerradas entre comillas) una "
 "al lado de la otra se concatenan automáticamente. ::"
 
+#: ../Doc/tutorial/introduction.rst:226
+msgid ""
+">>> 'Py' 'thon'\n"
+"'Python'"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:229
 msgid ""
 "This feature is particularly useful when you want to break long strings::"
@@ -296,17 +435,46 @@ msgstr ""
 "Esta característica es particularmente útil cuando quieres dividir cadenas "
 "largas::"
 
+#: ../Doc/tutorial/introduction.rst:231
+msgid ""
+">>> text = ('Put several strings within parentheses '\n"
+"...         'to have them joined together.')\n"
+">>> text\n"
+"'Put several strings within parentheses to have them joined together.'"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:236
 msgid ""
 "This only works with two literals though, not with variables or expressions::"
 msgstr ""
 "Esto solo funciona con dos literales, no con variables ni expresiones::"
 
+#: ../Doc/tutorial/introduction.rst:238
+msgid ""
+">>> prefix = 'Py'\n"
+">>> prefix 'thon'  # can't concatenate a variable and a string literal\n"
+"  File \"<stdin>\", line 1\n"
+"    prefix 'thon'\n"
+"           ^^^^^^\n"
+"SyntaxError: invalid syntax\n"
+">>> ('un' * 3) 'ium'\n"
+"  File \"<stdin>\", line 1\n"
+"    ('un' * 3) 'ium'\n"
+"               ^^^^^\n"
+"SyntaxError: invalid syntax"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:250
 msgid ""
 "If you want to concatenate variables or a variable and a literal, use ``+``::"
 msgstr ""
 "Si quieres concatenar variables o una variable y un literal, usa ``+``::"
+
+#: ../Doc/tutorial/introduction.rst:252
+msgid ""
+">>> prefix + 'thon'\n"
+"'Python'"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:255
 msgid ""
@@ -318,12 +486,31 @@ msgstr ""
 "la cadena tiene el índice 0. No hay un tipo de dato diferente para los "
 "caracteres; un carácter es simplemente una cadena de longitud uno::"
 
+#: ../Doc/tutorial/introduction.rst:259
+msgid ""
+">>> word = 'Python'\n"
+">>> word[0]  # character in position 0\n"
+"'P'\n"
+">>> word[5]  # character in position 5\n"
+"'n'"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:265
 msgid ""
 "Indices may also be negative numbers, to start counting from the right::"
 msgstr ""
 "Los índices también pueden ser números negativos, para empezar a contar "
 "desde la derecha::"
+
+#: ../Doc/tutorial/introduction.rst:267
+msgid ""
+">>> word[-1]  # last character\n"
+"'n'\n"
+">>> word[-2]  # second-last character\n"
+"'o'\n"
+">>> word[-6]\n"
+"'P'"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:274
 msgid "Note that since -0 is the same as 0, negative indices start from -1."
@@ -340,6 +527,14 @@ msgstr ""
 "Mientras que la indexación se utiliza para obtener caracteres individuales, "
 "*rebanar* te permite obtener una subcadena::"
 
+#: ../Doc/tutorial/introduction.rst:279
+msgid ""
+">>> word[0:2]  # characters from position 0 (included) to 2 (excluded)\n"
+"'Py'\n"
+">>> word[2:5]  # characters from position 2 (included) to 5 (excluded)\n"
+"'tho'"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:284
 msgid ""
 "Slice indices have useful defaults; an omitted first index defaults to zero, "
@@ -349,6 +544,16 @@ msgstr ""
 "defecto para el primer índice es cero, el valor por defecto para el segundo "
 "índice es la longitud de la cadena a rebanar. ::"
 
+#: ../Doc/tutorial/introduction.rst:287
+msgid ""
+">>> word[:2]   # character from the beginning to position 2 (excluded)\n"
+"'Py'\n"
+">>> word[4:]   # characters from position 4 (included) to the end\n"
+"'on'\n"
+">>> word[-2:]  # characters from the second-last (included) to the end\n"
+"'on'"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:294
 msgid ""
 "Note how the start is always included, and the end always excluded.  This "
@@ -356,6 +561,14 @@ msgid ""
 msgstr ""
 "Nótese cómo el inicio siempre se incluye y el final siempre se excluye. Esto "
 "asegura que ``s[:i] + s[i:]`` siempre sea igual a ``s``::"
+
+#: ../Doc/tutorial/introduction.rst:297
+msgid ""
+">>> word[:2] + word[2:]\n"
+"'Python'\n"
+">>> word[:4] + word[4:]\n"
+"'Python'"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:302
 msgid ""
@@ -368,6 +581,15 @@ msgstr ""
 "apuntan *entre* caracteres, con el borde izquierdo del primer carácter "
 "numerado 0. Luego, el punto derecho del último carácter de una cadena de *n* "
 "caracteres tiene un índice *n*, por ejemplo ::"
+
+#: ../Doc/tutorial/introduction.rst:307
+msgid ""
+" +---+---+---+---+---+---+\n"
+" | P | y | t | h | o | n |\n"
+" +---+---+---+---+---+---+\n"
+" 0   1   2   3   4   5   6\n"
+"-6  -5  -4  -3  -2  -1"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:313
 msgid ""
@@ -395,6 +617,14 @@ msgstr ""
 msgid "Attempting to use an index that is too large will result in an error::"
 msgstr "Intentar usar un índice que es muy grande resultará en un error::"
 
+#: ../Doc/tutorial/introduction.rst:324
+msgid ""
+">>> word[42]  # the word only has 6 characters\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"IndexError: string index out of range"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:329
 msgid ""
 "However, out of range slice indexes are handled gracefully when used for "
@@ -402,6 +632,14 @@ msgid ""
 msgstr ""
 "Sin embargo, los índices de rebanadas fuera de rango se manejan "
 "satisfactoriamente cuando se usan para rebanar::"
+
+#: ../Doc/tutorial/introduction.rst:332
+msgid ""
+">>> word[4:42]\n"
+"'on'\n"
+">>> word[42:]\n"
+"''"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:337
 msgid ""
@@ -411,13 +649,40 @@ msgstr ""
 "Las cadenas de Python no se pueden modificar, son :term:`immutable`. Por "
 "eso, asignar a una posición indexada de la cadena resulta en un error:"
 
+#: ../Doc/tutorial/introduction.rst:340
+msgid ""
+">>> word[0] = 'J'\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: 'str' object does not support item assignment\n"
+">>> word[2:] = 'py'\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: 'str' object does not support item assignment"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:349
 msgid "If you need a different string, you should create a new one::"
 msgstr "Si necesitas una cadena diferente, deberías crear una nueva::"
 
+#: ../Doc/tutorial/introduction.rst:351
+msgid ""
+">>> 'J' + word[1:]\n"
+"'Jython'\n"
+">>> word[:2] + 'py'\n"
+"'Pypy'"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:356
 msgid "The built-in function :func:`len` returns the length of a string::"
 msgstr "La función incorporada :func:`len` retorna la longitud de una cadena::"
+
+#: ../Doc/tutorial/introduction.rst:358
+msgid ""
+">>> s = 'supercalifragilisticexpialidocious'\n"
+">>> len(s)\n"
+"34"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:367
 msgid ":ref:`textseq`"
@@ -458,8 +723,8 @@ msgstr ":ref:`formatstrings`"
 #: ../Doc/tutorial/introduction.rst:377
 msgid "Information about string formatting with :meth:`str.format`."
 msgstr ""
-"Aquí se da información sobre formateo de cadenas de texto con :meth:`str."
-"format`."
+"Aquí se da información sobre formateo de cadenas de texto "
+"con :meth:`str.format`."
 
 #: ../Doc/tutorial/introduction.rst:380
 msgid ":ref:`old-string-formatting`"
@@ -490,29 +755,42 @@ msgstr ""
 "pueden contener ítems de diferentes tipos, pero usualmente los ítems son del "
 "mismo tipo. ::"
 
+#: ../Doc/tutorial/introduction.rst:394
+msgid ""
+">>> squares = [1, 4, 9, 16, 25]\n"
+">>> squares\n"
+"[1, 4, 9, 16, 25]"
+msgstr ""
+
 #: ../Doc/tutorial/introduction.rst:398
 msgid ""
 "Like strings (and all other built-in :term:`sequence` types), lists can be "
 "indexed and sliced::"
 msgstr ""
-"Al igual que las cadenas (y todas las demás tipos integrados :term:"
-"`sequence`), las listas se pueden indexar y segmentar:"
+"Al igual que las cadenas (y todas las demás tipos "
+"integrados :term:`sequence`), las listas se pueden indexar y segmentar:"
+
+#: ../Doc/tutorial/introduction.rst:401
+msgid ""
+">>> squares[0]  # indexing returns the item\n"
+"1\n"
+">>> squares[-1]\n"
+"25\n"
+">>> squares[-3:]  # slicing returns a new list\n"
+"[9, 16, 25]"
+msgstr ""
 
 #: ../Doc/tutorial/introduction.rst:408
-msgid ""
-"All slice operations return a new list containing the requested elements.  "
-"This means that the following slice returns a :ref:`shallow copy "
-"<shallow_vs_deep_copy>` of the list::"
-msgstr ""
-"Todas las operaciones de rebanado retornan una nueva lista que contiene los "
-"elementos pedidos. Esto significa que la siguiente rebanada retorna una :ref:"
-"`shallow copy <shallow_vs_deep_copy>` de la lista::"
-
-#: ../Doc/tutorial/introduction.rst:415
 msgid "Lists also support operations like concatenation::"
 msgstr "Las listas también admiten operaciones como concatenación::"
 
-#: ../Doc/tutorial/introduction.rst:420
+#: ../Doc/tutorial/introduction.rst:410
+msgid ""
+">>> squares + [36, 49, 64, 81, 100]\n"
+"[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:413
 msgid ""
 "Unlike strings, which are :term:`immutable`, lists are a :term:`mutable` "
 "type, i.e. it is possible to change their content::"
@@ -520,15 +798,73 @@ msgstr ""
 "A diferencia de las cadenas, que son :term:`immutable`, las listas son de "
 "tipo :term:`mutable`, es decir, es posible cambiar su contenido::"
 
-#: ../Doc/tutorial/introduction.rst:430
+#: ../Doc/tutorial/introduction.rst:416
 msgid ""
-"You can also add new items at the end of the list, by using the :meth:`~list."
-"append` *method* (we will see more about methods later)::"
+">>> cubes = [1, 8, 27, 65, 125]  # something's wrong here\n"
+">>> 4 ** 3  # the cube of 4 is 64, not 65!\n"
+"64\n"
+">>> cubes[3] = 64  # replace the wrong value\n"
+">>> cubes\n"
+"[1, 8, 27, 64, 125]"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:423
+#, fuzzy
+msgid ""
+"You can also add new items at the end of the list, by using the :meth:`!"
+"list.append` *method* (we will see more about methods later)::"
 msgstr ""
 "También puede agregar nuevos elementos al final de la lista, utilizando el "
 "*método* :meth:`~list.append` (vamos a ver más sobre los métodos luego)::"
 
-#: ../Doc/tutorial/introduction.rst:438
+#: ../Doc/tutorial/introduction.rst:426
+msgid ""
+">>> cubes.append(216)  # add the cube of 6\n"
+">>> cubes.append(7 ** 3)  # and the cube of 7\n"
+">>> cubes\n"
+"[1, 8, 27, 64, 125, 216, 343]"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:431
+msgid ""
+"Simple assignment in Python never copies data. When you assign a list to a "
+"variable, the variable refers to the *existing list*. Any changes you make "
+"to the list through one variable will be seen through all other variables "
+"that refer to it.::"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:436
+msgid ""
+">>> rgb = [\"Red\", \"Green\", \"Blue\"]\n"
+">>> rgba = rgb\n"
+">>> id(rgb) == id(rgba)  # they reference the same object\n"
+"True\n"
+">>> rgba.append(\"Alph\")\n"
+">>> rgb\n"
+"[\"Red\", \"Green\", \"Blue\", \"Alph\"]"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:444
+msgid ""
+"All slice operations return a new list containing the requested elements.  "
+"This means that the following slice returns a :ref:`shallow copy "
+"<shallow_vs_deep_copy>` of the list::"
+msgstr ""
+"Todas las operaciones de rebanado retornan una nueva lista que contiene los "
+"elementos pedidos. Esto significa que la siguiente rebanada retorna "
+"una :ref:`shallow copy <shallow_vs_deep_copy>` de la lista::"
+
+#: ../Doc/tutorial/introduction.rst:448
+msgid ""
+">>> correct_rgba = rgba[:]\n"
+">>> correct_rgba[-1] = \"Alpha\"\n"
+">>> correct_rgba\n"
+"[\"Red\", \"Green\", \"Blue\", \"Alpha\"]\n"
+">>> rgba\n"
+"[\"Red\", \"Green\", \"Blue\", \"Alph\"]"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:455
 msgid ""
 "Assignment to slices is also possible, and this can even change the size of "
 "the list or clear it entirely::"
@@ -536,11 +872,37 @@ msgstr ""
 "También es posible asignar a una rebanada, y esto incluso puede cambiar la "
 "longitud de la lista o vaciarla totalmente::"
 
-#: ../Doc/tutorial/introduction.rst:457
+#: ../Doc/tutorial/introduction.rst:458
+msgid ""
+">>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']\n"
+">>> letters\n"
+"['a', 'b', 'c', 'd', 'e', 'f', 'g']\n"
+">>> # replace some values\n"
+">>> letters[2:5] = ['C', 'D', 'E']\n"
+">>> letters\n"
+"['a', 'b', 'C', 'D', 'E', 'f', 'g']\n"
+">>> # now remove them\n"
+">>> letters[2:5] = []\n"
+">>> letters\n"
+"['a', 'b', 'f', 'g']\n"
+">>> # clear the list by replacing all the elements with an empty list\n"
+">>> letters[:] = []\n"
+">>> letters\n"
+"[]"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:474
 msgid "The built-in function :func:`len` also applies to lists::"
 msgstr "La función predefinida :func:`len` también sirve para las listas ::"
 
-#: ../Doc/tutorial/introduction.rst:463
+#: ../Doc/tutorial/introduction.rst:476
+msgid ""
+">>> letters = ['a', 'b', 'c', 'd']\n"
+">>> len(letters)\n"
+"4"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:480
 msgid ""
 "It is possible to nest lists (create lists containing other lists), for "
 "example::"
@@ -548,26 +910,58 @@ msgstr ""
 "Es posible anidar listas (crear listas que contengan otras listas), por "
 "ejemplo::"
 
-#: ../Doc/tutorial/introduction.rst:479
+#: ../Doc/tutorial/introduction.rst:483
+msgid ""
+">>> a = ['a', 'b', 'c']\n"
+">>> n = [1, 2, 3]\n"
+">>> x = [a, n]\n"
+">>> x\n"
+"[['a', 'b', 'c'], [1, 2, 3]]\n"
+">>> x[0]\n"
+"['a', 'b', 'c']\n"
+">>> x[0][1]\n"
+"'b'"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:496
 msgid "First Steps Towards Programming"
 msgstr "Primeros pasos hacia la programación"
 
-#: ../Doc/tutorial/introduction.rst:481
+#: ../Doc/tutorial/introduction.rst:498
+#, fuzzy
 msgid ""
 "Of course, we can use Python for more complicated tasks than adding two and "
 "two together.  For instance, we can write an initial sub-sequence of the "
-"`Fibonacci series <https://en.wikipedia.org/wiki/Fibonacci_number>`_ as "
+"`Fibonacci series <https://en.wikipedia.org/wiki/Fibonacci_sequence>`_ as "
 "follows::"
 msgstr ""
 "Por supuesto, podemos usar Python para tareas más complicadas que sumar dos "
 "más dos. Por ejemplo, podemos escribir una parte inicial de la `serie de "
 "Fibonacci <https://es.wikipedia.org/wiki/Sucesión_de_Fibonacci>`_ así::"
 
-#: ../Doc/tutorial/introduction.rst:501
+#: ../Doc/tutorial/introduction.rst:503
+msgid ""
+">>> # Fibonacci series:\n"
+">>> # the sum of two elements defines the next\n"
+">>> a, b = 0, 1\n"
+">>> while a < 10:\n"
+"...     print(a)\n"
+"...     a, b = b, a+b\n"
+"...\n"
+"0\n"
+"1\n"
+"1\n"
+"2\n"
+"3\n"
+"5\n"
+"8"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:518
 msgid "This example introduces several new features."
 msgstr "Este ejemplo introduce varias características nuevas."
 
-#: ../Doc/tutorial/introduction.rst:503
+#: ../Doc/tutorial/introduction.rst:520
 msgid ""
 "The first line contains a *multiple assignment*: the variables ``a`` and "
 "``b`` simultaneously get the new values 0 and 1.  On the last line this is "
@@ -581,7 +975,7 @@ msgstr ""
 "evaluadas primero antes de que se realice cualquiera de las asignaciones. "
 "Las expresiones del lado derecho se evalúan de izquierda a derecha."
 
-#: ../Doc/tutorial/introduction.rst:509
+#: ../Doc/tutorial/introduction.rst:526
 msgid ""
 "The :keyword:`while` loop executes as long as the condition (here: ``a < "
 "10``) remains true.  In Python, like in C, any non-zero integer value is "
@@ -602,7 +996,7 @@ msgstr ""
 "(mayor que), ``==`` (igual a), ``<=`` (menor que o igual a), ``>=`` (mayor "
 "que o igual a) y ``!=`` (distinto a)."
 
-#: ../Doc/tutorial/introduction.rst:518
+#: ../Doc/tutorial/introduction.rst:535
 msgid ""
 "The *body* of the loop is *indented*: indentation is Python's way of "
 "grouping statements.  At the interactive prompt, you have to type a tab or "
@@ -624,12 +1018,13 @@ msgstr ""
 "la última línea). Nota que cada línea de un bloque básico debe estar "
 "sangrada de la misma forma."
 
-#: ../Doc/tutorial/introduction.rst:527
+#: ../Doc/tutorial/introduction.rst:544
+#, fuzzy
 msgid ""
 "The :func:`print` function writes the value of the argument(s) it is given. "
 "It differs from just writing the expression you want to write (as we did "
 "earlier in the calculator examples) in the way it handles multiple "
-"arguments, floating point quantities, and strings.  Strings are printed "
+"arguments, floating-point quantities, and strings.  Strings are printed "
 "without quotes, and a space is inserted between items, so you can format "
 "things nicely, like this::"
 msgstr ""
@@ -640,7 +1035,14 @@ msgstr ""
 "de texto son impresas sin comillas y un espacio en blanco se inserta entre "
 "los elementos, así puedes formatear cosas de una forma agradable::"
 
-#: ../Doc/tutorial/introduction.rst:538
+#: ../Doc/tutorial/introduction.rst:551
+msgid ""
+">>> i = 256*256\n"
+">>> print('The value of i is', i)\n"
+"The value of i is 65536"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:555
 msgid ""
 "The keyword argument *end* can be used to avoid the newline after the "
 "output, or end the output with a different string::"
@@ -648,11 +1050,21 @@ msgstr ""
 "El parámetro nombrado *end* puede usarse para evitar el salto de linea al "
 "final de la salida, o terminar la salida con una cadena diferente:"
 
-#: ../Doc/tutorial/introduction.rst:550
+#: ../Doc/tutorial/introduction.rst:558
+msgid ""
+">>> a, b = 0, 1\n"
+">>> while a < 1000:\n"
+"...     print(a, end=',')\n"
+"...     a, b = b, a+b\n"
+"...\n"
+"0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,"
+msgstr ""
+
+#: ../Doc/tutorial/introduction.rst:567
 msgid "Footnotes"
 msgstr "Notas al pie"
 
-#: ../Doc/tutorial/introduction.rst:551
+#: ../Doc/tutorial/introduction.rst:568
 msgid ""
 "Since ``**`` has higher precedence than ``-``, ``-3**2`` will be interpreted "
 "as ``-(3**2)`` and thus result in ``-9``.  To avoid this and get ``9``, you "
@@ -662,7 +1074,7 @@ msgstr ""
 "interpretará como ``-(3**2)``, por lo tanto dará como resultado ``-9``. Para "
 "evitar esto y obtener ``9``, puedes usar ``(-3)**2``."
 
-#: ../Doc/tutorial/introduction.rst:555
+#: ../Doc/tutorial/introduction.rst:572
 msgid ""
 "Unlike other languages, special characters such as ``\\n`` have the same "
 "meaning with both single (``'...'``) and double (``\"...\"``) quotes. The "

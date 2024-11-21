@@ -10,17 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2024-01-21 18:26+0100\n"
 "Last-Translator: Claudia Millan <clmilneb@gmail.com>\n"
-"Language-Team: python-doc-es\n"
 "Language: es\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.0.1\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/whatsnew/2.2.rst:3
 msgid "What's New in Python 2.2"
@@ -75,8 +74,8 @@ msgstr ""
 "nuevas características, pero en su lugar proporciona una descripción general "
 "conveniente. Para más detalles, deberías consultar la documentación de "
 "Python 2.2, como `Python Library Reference <https://docs.python.org/2.2/lib/"
-"lib.html>`_ y `Python Reference Manual <https://docs.python.org/2.2/ref/ref."
-"html>`_. Si quieres comprender la justificación completa de la "
+"lib.html>`_ y `Python Reference Manual <https://docs.python.org/2.2/ref/"
+"ref.html>`_. Si quieres comprender la justificación completa de la "
 "implementación y el diseño de un cambio, consultar la PEP para conocer una "
 "característica nueva en particular."
 
@@ -102,15 +101,16 @@ msgstr ""
 "algunos comentarios."
 
 #: ../Doc/whatsnew/2.2.rst:52
+#, fuzzy
 msgid ""
 "A long time ago I wrote a web page listing flaws in Python's design.  One of "
 "the most significant flaws was that it's impossible to subclass Python types "
 "implemented in C.  In particular, it's not possible to subclass built-in "
 "types, so you can't just subclass, say, lists in order to add a single "
-"useful method to them. The :mod:`UserList` module provides a class that "
+"useful method to them. The :mod:`!UserList` module provides a class that "
 "supports all of the methods of lists and that can be subclassed further, but "
 "there's lots of C code that expects a regular Python list and won't accept "
-"a :class:`UserList` instance."
+"a :class:`~collections.UserList` instance."
 msgstr ""
 "Hace mucho tiempo escribí una página web que enumeraba los defectos en el "
 "diseño de Python. Una de las fallas más importantes fue que es imposible "
@@ -119,8 +119,8 @@ msgstr ""
 "subclasificar, digamos, listas para agregar un solo método útil para ellos. "
 "El módulo :mod:`UserList` proporciona una clase que admite todos los métodos "
 "de listas y que puede subclasificarse aún más, pero hay mucho código C que "
-"espera una lista normal de Python y no aceptará una instancia :class:"
-"`UserList`."
+"espera una lista normal de Python y no aceptará una "
+"instancia :class:`UserList`."
 
 #: ../Doc/whatsnew/2.2.rst:61
 msgid ""
@@ -148,19 +148,20 @@ msgstr ""
 "de instancia disponibles en versiones anteriores de Python."
 
 #: ../Doc/whatsnew/2.2.rst:70
+#, fuzzy
 msgid ""
 "It's also possible to automatically call methods on accessing or setting an "
 "instance attribute by using a new mechanism called :dfn:`properties`.  Many "
-"uses of :meth:`__getattr__` can be rewritten to use properties instead, "
-"making the resulting code simpler and faster.  As a small side benefit, "
-"attributes can now have docstrings, too."
+"uses of :meth:`~object.__getattr__` can be rewritten to use properties "
+"instead, making the resulting code simpler and faster.  As a small side "
+"benefit, attributes can now have docstrings, too."
 msgstr ""
 "También es posible llamar automáticamente métodos al acceder o configurar un "
-"atributo de instancia mediante el uso de un nuevo mecanismo llamado :dfn:"
-"`properties`. Muchos usos de :meth:`__getattr__` se pueden reescribir para "
-"usar propiedades en su lugar, haciendo que el código resultante sea más "
-"simple y rápido. Como un pequeño beneficio secundario, ahora también los "
-"atributos pueden tener docstrings."
+"atributo de instancia mediante el uso de un nuevo mecanismo "
+"llamado :dfn:`properties`. Muchos usos de :meth:`__getattr__` se pueden "
+"reescribir para usar propiedades en su lugar, haciendo que el código "
+"resultante sea más simple y rápido. Como un pequeño beneficio secundario, "
+"ahora también los atributos pueden tener docstrings."
 
 #: ../Doc/whatsnew/2.2.rst:76
 msgid ""
@@ -254,74 +255,103 @@ msgstr ""
 "Entonces, ¿cómo defines una clase de estilo nuevo? Lo haces subclasificando "
 "una clases de estilo nuevo existente. La mayoría de los tipos integrados de "
 "Python, como enteros, listas, diccionarios e incluso archivos, ahora son "
-"clases de estilo nuevo. También se agregó una clase de estilo nuevo llamada :"
-"class:`object`, la clase base para todos los tipos integrados, por lo que si "
-"ningún tipo integrado es apropiado, puedes solo subclasificar :class:"
-"`object`::"
+"clases de estilo nuevo. También se agregó una clase de estilo nuevo "
+"llamada :class:`object`, la clase base para todos los tipos integrados, por "
+"lo que si ningún tipo integrado es apropiado, puedes solo "
+"subclasificar :class:`object`::"
+
+#: ../Doc/whatsnew/2.2.rst:116
+msgid ""
+"class C(object):\n"
+"    def __init__ (self):\n"
+"        ...\n"
+"    ..."
+msgstr ""
 
 #: ../Doc/whatsnew/2.2.rst:121
+#, fuzzy
 msgid ""
 "This means that :keyword:`class` statements that don't have any base classes "
 "are always classic classes in Python 2.2.  (Actually you can also change "
-"this by setting a module-level variable named :attr:`__metaclass__` --- see :"
-"pep:`253` for the details --- but it's easier to just subclass :class:"
-"`object`.)"
+"this by setting a module-level variable named :attr:`!__metaclass__` --- "
+"see :pep:`253` for the details --- but it's easier to just "
+"subclass :class:`object`.)"
 msgstr ""
 "Esto significa que las declaraciones :keyword:`class` que no tienen ninguna "
 "clase base siempre son clases clásicas en Python 2.2. (Realmente también "
-"puedes cambiar esto configurando una variable de nivel de módulo llamada :"
-"attr:`__metaclass__` --- consultar :pep:`253` para más detalles --- pero es "
-"más fácil solo subclasificar :class:`object`.)"
+"puedes cambiar esto configurando una variable de nivel de módulo "
+"llamada :attr:`__metaclass__` --- consultar :pep:`253` para más detalles --- "
+"pero es más fácil solo subclasificar :class:`object`.)"
 
 #: ../Doc/whatsnew/2.2.rst:126
 msgid ""
 "The type objects for the built-in types are available as built-ins, named "
-"using a clever trick.  Python has always had built-in functions named :func:"
-"`int`, :func:`float`, and :func:`str`.  In 2.2, they aren't functions any "
-"more, but type objects that behave as factories when called. ::"
+"using a clever trick.  Python has always had built-in functions "
+"named :func:`int`, :func:`float`, and :func:`str`.  In 2.2, they aren't "
+"functions any more, but type objects that behave as factories when called. ::"
 msgstr ""
 "Los objetos de tipo para los tipos integrados están disponibles como "
 "incorporados, nombrados mediante un truco inteligente. Python siempre ha "
-"tenido funciones incorporadas llamadas :func:`int`, :func:`float` y :func:"
-"`str`. En la versión 2.2, ya no son funciones, sino objetos de tipo que se "
-"comportan como fábricas cuando se les llaman. ::"
+"tenido funciones incorporadas llamadas :func:`int`, :func:`float` "
+"y :func:`str`. En la versión 2.2, ya no son funciones, sino objetos de tipo "
+"que se comportan como fábricas cuando se les llaman. ::"
+
+#: ../Doc/whatsnew/2.2.rst:131
+msgid ""
+">>> int\n"
+"<type 'int'>\n"
+">>> int('123')\n"
+"123"
+msgstr ""
 
 #: ../Doc/whatsnew/2.2.rst:136
+#, fuzzy
 msgid ""
 "To make the set of types complete, new type objects such as :func:`dict` "
-"and :func:`file` have been added.  Here's a more interesting example, adding "
-"a :meth:`lock` method to file objects::"
+"and :func:`!file` have been added.  Here's a more interesting example, "
+"adding a :meth:`!lock` method to file objects::"
 msgstr ""
 "Para completar el conjunto de tipos, se agregaron nuevos objetos de tipo "
 "como :func:`dict` y :func:`file`. Aquí hay un ejemplo más interesante, "
 "agregando un método :meth:`lock` a los objetos de archivo::"
 
-#: ../Doc/whatsnew/2.2.rst:146
+#: ../Doc/whatsnew/2.2.rst:140
 msgid ""
-"The now-obsolete :mod:`posixfile` module contained a class that emulated all "
-"of a file object's methods and also added a :meth:`lock` method, but this "
-"class couldn't be passed to internal functions that expected a built-in "
-"file, something which is possible with our new :class:`LockableFile`."
+"class LockableFile(file):\n"
+"    def lock (self, operation, length=0, start=0, whence=0):\n"
+"        import fcntl\n"
+"        return fcntl.lockf(self.fileno(), operation,\n"
+"                           length, start, whence)"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:146
+#, fuzzy
+msgid ""
+"The now-obsolete :mod:`!posixfile` module contained a class that emulated "
+"all of a file object's methods and also added a :meth:`!lock` method, but "
+"this class couldn't be passed to internal functions that expected a built-in "
+"file, something which is possible with our new :class:`!LockableFile`."
 msgstr ""
 "El módulo ahora obsoleto :mod:`posixfile` contenía una clase que emulaba "
-"todos los métodos de un objeto de archivo y también agregaba un método :meth:"
-"`lock`, pero esta clase no podía pasarse a funciones internas que esperaban "
-"un archivo incorporado, algo que es posible con nuestra nueva clase :class:"
-"`LockableFile`."
+"todos los métodos de un objeto de archivo y también agregaba un "
+"método :meth:`lock`, pero esta clase no podía pasarse a funciones internas "
+"que esperaban un archivo incorporado, algo que es posible con nuestra nueva "
+"clase :class:`LockableFile`."
 
 #: ../Doc/whatsnew/2.2.rst:153
 msgid "Descriptors"
 msgstr "Descriptores"
 
 #: ../Doc/whatsnew/2.2.rst:155
+#, fuzzy
 msgid ""
 "In previous versions of Python, there was no consistent way to discover what "
 "attributes and methods were supported by an object. There were some informal "
-"conventions, such as defining :attr:`__members__` and :attr:`__methods__` "
+"conventions, such as defining :attr:`!__members__` and :attr:`!__methods__` "
 "attributes that were lists of names, but often the author of an extension "
 "type or a class wouldn't bother to define them.  You could fall back on "
 "inspecting the :attr:`~object.__dict__` of an object, but when class "
-"inheritance or an arbitrary :meth:`__getattr__` hook were in use this could "
+"inheritance or an arbitrary :meth:`!__getattr__` hook were in use this could "
 "still be inaccurate."
 msgstr ""
 "En versiones anteriores de Python, no había una forma consistente de "
@@ -342,11 +372,11 @@ msgid ""
 "methods become possible, as well as more exotic constructs."
 msgstr ""
 "La única gran idea que subyace al nuevo modelo de clases es que se ha "
-"formalizado una API para describir los atributos de un objeto usando :dfn:"
-"`descriptors`. Los descriptores especifican el valor de un atributo, "
-"indicando si es un método o un campo. Con la API de un descriptor, los "
-"métodos estáticos y de clase se vuelven posibles, así como constructos más "
-"exóticos."
+"formalizado una API para describir los atributos de un objeto "
+"usando :dfn:`descriptors`. Los descriptores especifican el valor de un "
+"atributo, indicando si es un método o un campo. Con la API de un descriptor, "
+"los métodos estáticos y de clase se vuelven posibles, así como constructos "
+"más exóticos."
 
 #: ../Doc/whatsnew/2.2.rst:169
 msgid ""
@@ -361,7 +391,8 @@ msgid ":attr:`~definition.__name__` is the attribute's name."
 msgstr ":attr:`~definition.__name__` es el nombre del atributo."
 
 #: ../Doc/whatsnew/2.2.rst:174
-msgid ":attr:`__doc__` is the attribute's docstring."
+#, fuzzy
+msgid ":attr:`~definition.__doc__` is the attribute's docstring."
 msgstr ":attr:`__doc__` es el docstring del atributo."
 
 #: ../Doc/whatsnew/2.2.rst:176
@@ -390,16 +421,23 @@ msgstr ""
 "Por ejemplo, cuando escribes ``obj.x``, los pasos que realmente Python "
 "realiza son::"
 
-#: ../Doc/whatsnew/2.2.rst:189
+#: ../Doc/whatsnew/2.2.rst:186
 msgid ""
-"For methods, :meth:`descriptor.__get__` returns a temporary object that's "
-"callable, and wraps up the instance and the method to be called on it. This "
-"is also why static methods and class methods are now possible; they have "
-"descriptors that wrap up just the method, or the method and the class.  As a "
-"brief explanation of these new kinds of methods, static methods aren't "
-"passed the instance, and therefore resemble regular functions.  Class "
-"methods are passed the class of the object, but not the object itself.  "
-"Static and class methods are defined like this::"
+"descriptor = obj.__class__.x\n"
+"descriptor.__get__(obj)"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:189
+#, fuzzy
+msgid ""
+"For methods, :meth:`descriptor.__get__ <object.__get__>` returns a temporary "
+"object that's callable, and wraps up the instance and the method to be "
+"called on it. This is also why static methods and class methods are now "
+"possible; they have descriptors that wrap up just the method, or the method "
+"and the class.  As a brief explanation of these new kinds of methods, static "
+"methods aren't passed the instance, and therefore resemble regular "
+"functions.  Class methods are passed the class of the object, but not the "
+"object itself.  Static and class methods are defined like this::"
 msgstr ""
 "Para los métodos, :meth:`descriptor.__get__` retorna un objeto temporal que "
 "se puede llamar y contiene la instancia y el método que se llamará en él. "
@@ -410,9 +448,22 @@ msgstr ""
 "funciones regulares. Los métodos de clase se pasan a la clase del objeto, "
 "pero no al objeto en sí. Los métodos estáticos y de clase se definen así::"
 
-#: ../Doc/whatsnew/2.2.rst:207
+#: ../Doc/whatsnew/2.2.rst:199
 msgid ""
-"The :func:`staticmethod` function takes the function :func:`f`, and returns "
+"class C(object):\n"
+"    def f(arg1, arg2):\n"
+"        ...\n"
+"    f = staticmethod(f)\n"
+"\n"
+"    def g(cls, arg1, arg2):\n"
+"        ...\n"
+"    g = classmethod(g)"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:208
+#, fuzzy
+msgid ""
+"The :func:`staticmethod` function takes the function :func:`!f`, and returns "
 "it wrapped up in a descriptor so it can be stored in the class object.  You "
 "might expect there to be special syntax for creating such methods (``def "
 "static f``, ``defstatic f()``, or something like that) but no such syntax "
@@ -424,7 +475,7 @@ msgstr ""
 "``defstatic f()`` o algo así) pero aún no se ha definido dicha sintaxis; que "
 "se ha dejado para versiones futuras de Python."
 
-#: ../Doc/whatsnew/2.2.rst:213
+#: ../Doc/whatsnew/2.2.rst:214
 msgid ""
 "More new features, such as slots and properties, are also implemented as new "
 "kinds of descriptors, and it's not difficult to write a descriptor class "
@@ -440,28 +491,47 @@ msgstr ""
 "estilo Eiffel y posteriores para un método. Una clase que usó esta "
 "característica podría definirse así::"
 
-#: ../Doc/whatsnew/2.2.rst:235
+#: ../Doc/whatsnew/2.2.rst:221
 msgid ""
-"Note that a person using the new :func:`eiffelmethod` doesn't have to "
+"from eiffel import eiffelmethod\n"
+"\n"
+"class C(object):\n"
+"    def f(self, arg1, arg2):\n"
+"        # The actual function\n"
+"        ...\n"
+"    def pre_f(self):\n"
+"        # Check preconditions\n"
+"        ...\n"
+"    def post_f(self):\n"
+"        # Check postconditions\n"
+"        ...\n"
+"\n"
+"    f = eiffelmethod(f, pre_f, post_f)"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:236
+#, fuzzy
+msgid ""
+"Note that a person using the new :func:`!eiffelmethod` doesn't have to "
 "understand anything about descriptors.  This is why I think the new features "
 "don't increase the basic complexity of the language. There will be a few "
-"wizards who need to know about it in order to write :func:`eiffelmethod` or "
+"wizards who need to know about it in order to write :func:`!eiffelmethod` or "
 "the ZODB or whatever, but most users will just write code on top of the "
 "resulting libraries and ignore the implementation details."
 msgstr ""
 "Toma en cuenta que una persona que usa la nueva función :func:`eiffelmethod` "
 "no tiene que entender nada sobre descriptores. Esta es la razón por la que "
 "creo que las nuevas características no incrementan la complejidad básica del "
-"lenguaje. Habrá algunos asistentes que necesitarán conocerlo para escribir :"
-"func:`eiffelmethod` o la ZODB o lo que sea, pero la mayoría de los usuarios "
-"solo escribirán código sobre las bibliotecas resultantes e ignorarán los "
-"detalles de implementación."
+"lenguaje. Habrá algunos asistentes que necesitarán conocerlo para "
+"escribir :func:`eiffelmethod` o la ZODB o lo que sea, pero la mayoría de los "
+"usuarios solo escribirán código sobre las bibliotecas resultantes e "
+"ignorarán los detalles de implementación."
 
-#: ../Doc/whatsnew/2.2.rst:244
+#: ../Doc/whatsnew/2.2.rst:245
 msgid "Multiple Inheritance: The Diamond Rule"
 msgstr "Herencia múltiple: la regla del diamante"
 
-#: ../Doc/whatsnew/2.2.rst:246
+#: ../Doc/whatsnew/2.2.rst:247
 msgid ""
 "Multiple inheritance has also been made more useful through changing the "
 "rules under which names are resolved.  Consider this set of classes (diagram "
@@ -471,26 +541,44 @@ msgstr ""
 "las cuales se resuelven los nombres. Considera este conjunto de clases "
 "(diagrama tomado de :pep:`253` de Guido van Rossum)::"
 
-#: ../Doc/whatsnew/2.2.rst:264
+#: ../Doc/whatsnew/2.2.rst:251
+msgid ""
+"      class A:\n"
+"        ^ ^  def save(self): ...\n"
+"       /   \\\n"
+"      /     \\\n"
+"     /       \\\n"
+"    /         \\\n"
+"class B     class C:\n"
+"    ^         ^  def save(self): ...\n"
+"     \\       /\n"
+"      \\     /\n"
+"       \\   /\n"
+"        \\ /\n"
+"      class D"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:265
+#, fuzzy
 msgid ""
 "The lookup rule for classic classes is simple but not very smart; the base "
-"classes are searched depth-first, going from left to right.  A reference to :"
-"meth:`D.save` will search the classes :class:`D`, :class:`B`, and then :"
-"class:`A`, where :meth:`save` would be found and returned.  :meth:`C.save` "
-"would never be found at all.  This is bad, because if :class:`C`'s :meth:"
-"`save` method is saving some internal state specific to :class:`C`, not "
-"calling it will result in that state never getting saved."
+"classes are searched depth-first, going from left to right.  A reference "
+"to :meth:`!D.save` will search the classes :class:`!D`, :class:`!B`, and "
+"then :class:`!A`, where :meth:`!save` would be found and returned.  :meth:`!"
+"C.save` would never be found at all.  This is bad, because if :class:`!"
+"C`'s :meth:`!save` method is saving some internal state specific to :class:`!"
+"C`, not calling it will result in that state never getting saved."
 msgstr ""
 "La regla de búsqueda para clases clásicas es simple pero no muy inteligente; "
 "se buscan las clases base primero en profundidad, yendo de izquierda a "
-"derecha. Una referencia a :meth:`D.save` buscará las clases :class:`D`, :"
-"class:`B` y luego :class:`A`, donde :meth:`save` se encontraría y "
-"retornaría. :meth:`C.save` nunca se encontraría en absoluto. Esto es malo, "
-"porque si el método :meth:`save` de :class:`C` está guardando algún estado "
-"interno específico de :class:`C`, no llamarlo resultará en que este estado "
-"nunca se guardará."
+"derecha. Una referencia a :meth:`D.save` buscará las "
+"clases :class:`D`, :class:`B` y luego :class:`A`, donde :meth:`save` se "
+"encontraría y retornaría. :meth:`C.save` nunca se encontraría en absoluto. "
+"Esto es malo, porque si el método :meth:`save` de :class:`C` está guardando "
+"algún estado interno específico de :class:`C`, no llamarlo resultará en que "
+"este estado nunca se guardará."
 
-#: ../Doc/whatsnew/2.2.rst:272
+#: ../Doc/whatsnew/2.2.rst:273
 msgid ""
 "New-style classes follow a different algorithm that's a bit more complicated "
 "to explain, but does the right thing in this situation. (Note that Python "
@@ -504,52 +592,66 @@ msgstr ""
 "resultados en la mayoría de los casos, pero produce resultados más útiles "
 "para gráficos de herencia realmente complicados.)"
 
-#: ../Doc/whatsnew/2.2.rst:277
+#: ../Doc/whatsnew/2.2.rst:278
+#, fuzzy
 msgid ""
 "List all the base classes, following the classic lookup rule and include a "
 "class multiple times if it's visited repeatedly.  In the above example, the "
-"list of visited classes is [:class:`D`, :class:`B`, :class:`A`, :class:`C`, :"
-"class:`A`]."
+"list of visited classes is [:class:`!D`, :class:`!B`, :class:`!A`, :class:`!"
+"C`, :class:`!A`]."
 msgstr ""
 "Enumera todas las clases base, siguiendo la regla de búsqueda clásica e "
 "incluye una clase varias veces si se visita repetidamente. En el ejemplo "
-"anterior, la lista de clases visitadas es [:class:`D`, :class:`B`, :class:"
-"`A`, :class:`C`, :class:`A`]."
+"anterior, la lista de clases visitadas es "
+"[:class:`D`, :class:`B`, :class:`A`, :class:`C`, :class:`A`]."
 
-#: ../Doc/whatsnew/2.2.rst:282
+#: ../Doc/whatsnew/2.2.rst:283
+#, fuzzy
 msgid ""
 "Scan the list for duplicated classes.  If any are found, remove all but one "
 "occurrence, leaving the *last* one in the list.  In the above example, the "
-"list becomes [:class:`D`, :class:`B`, :class:`C`, :class:`A`] after dropping "
-"duplicates."
+"list becomes [:class:`!D`, :class:`!B`, :class:`!C`, :class:`!A`] after "
+"dropping duplicates."
 msgstr ""
 "Escanea la lista en busca de clases duplicadas. Si encuentra alguna, elimina "
 "todas menos una, dejando la *última* en la lista. En el ejemplo anterior, la "
 "lista se convierte en [:class:`D`, :class:`B`, :class:`C`, :class:`A`] "
 "después de eliminar las duplicadas."
 
-#: ../Doc/whatsnew/2.2.rst:287
+#: ../Doc/whatsnew/2.2.rst:288
+#, fuzzy
 msgid ""
-"Following this rule, referring to :meth:`D.save` will return :meth:`C.save`, "
-"which is the behaviour we're after.  This lookup rule is the same as the one "
-"followed by Common Lisp.  A new built-in function, :func:`super`, provides a "
-"way to get at a class's superclasses without having to reimplement Python's "
-"algorithm. The most commonly used form will be  ``super(class, obj)``, which "
-"returns  a bound superclass object (not the actual class object).  This form "
-"will be used in methods to call a method in the superclass; for example, :"
-"class:`D`'s :meth:`save` method would look like this::"
+"Following this rule, referring to :meth:`!D.save` will return :meth:`!"
+"C.save`, which is the behaviour we're after.  This lookup rule is the same "
+"as the one followed by Common Lisp.  A new built-in function, :func:`super`, "
+"provides a way to get at a class's superclasses without having to "
+"reimplement Python's algorithm. The most commonly used form will be  "
+"``super(class, obj)``, which returns  a bound superclass object (not the "
+"actual class object).  This form will be used in methods to call a method in "
+"the superclass; for example, :class:`!D`'s :meth:`!save` method would look "
+"like this::"
 msgstr ""
-"Siguiendo esta regla, refiriéndose a :meth:`D.save` retornará :meth:`C."
-"save`, el cual es el comportamiento que buscamos. Esta regla de búsqueda es "
-"la misma que sigue Common Lisp. Una nueva función incorporada, :func:"
-"`super`, proporciona una forma de acceder a las superclases de una clase sin "
-"tener que volver a implementar el algoritmo de Python. La forma más "
-"utilizada será ``super(class, obj)``, la cual retorna un objeto de "
-"superclase vinculado. Esta forma se usará en métodos para llamar a un método "
-"en la superclase; por ejemplo, el método :meth:`save` de :class:`D` se vería "
-"así::"
+"Siguiendo esta regla, refiriéndose a :meth:`D.save` "
+"retornará :meth:`C.save`, el cual es el comportamiento que buscamos. Esta "
+"regla de búsqueda es la misma que sigue Common Lisp. Una nueva función "
+"incorporada, :func:`super`, proporciona una forma de acceder a las "
+"superclases de una clase sin tener que volver a implementar el algoritmo de "
+"Python. La forma más utilizada será ``super(class, obj)``, la cual retorna "
+"un objeto de superclase vinculado. Esta forma se usará en métodos para "
+"llamar a un método en la superclase; por ejemplo, el método :meth:`save` "
+"de :class:`D` se vería así::"
 
-#: ../Doc/whatsnew/2.2.rst:303
+#: ../Doc/whatsnew/2.2.rst:297
+msgid ""
+"class D (B,C):\n"
+"    def save (self):\n"
+"        # Call superclass .save()\n"
+"        super(D, self).save()\n"
+"        # Save D's private information here\n"
+"        ..."
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:304
 msgid ""
 ":func:`super` can also return unbound superclass objects when called as "
 "``super(class)`` or ``super(class1, class2)``, but this probably won't often "
@@ -559,17 +661,19 @@ msgstr ""
 "cuando se llama como ``super(class)`` o ``super(class1, class2)``, pero "
 "probablemente esto no sea útil a menudo."
 
-#: ../Doc/whatsnew/2.2.rst:309
+#: ../Doc/whatsnew/2.2.rst:310
 msgid "Attribute Access"
 msgstr "Acceso a atributos"
 
-#: ../Doc/whatsnew/2.2.rst:311
+#: ../Doc/whatsnew/2.2.rst:312
+#, fuzzy
 msgid ""
 "A fair number of sophisticated Python classes define hooks for attribute "
-"access using :meth:`__getattr__`; most commonly this is done for "
+"access using :meth:`~object.__getattr__`; most commonly this is done for "
 "convenience, to make code more readable by automatically mapping an "
-"attribute access such as ``obj.parent`` into a method call such as ``obj."
-"get_parent``.  Python 2.2 adds some new ways of controlling attribute access."
+"attribute access such as ``obj.parent`` into a method call such as "
+"``obj.get_parent``.  Python 2.2 adds some new ways of controlling attribute "
+"access."
 msgstr ""
 "Un buen número de clases sofisticadas de Python definen ganchos para el "
 "acceso de atributos usando :meth:`__getattr__`; más comúnmente, esto se hace "
@@ -578,7 +682,7 @@ msgstr ""
 "método como ``obj.get_parent``. Python 2.2 agrega algunas formas nuevas de "
 "controlar el acceso de atributos."
 
-#: ../Doc/whatsnew/2.2.rst:317
+#: ../Doc/whatsnew/2.2.rst:318
 msgid ""
 "First, ``__getattr__(attr_name)`` is still supported by new-style classes, "
 "and nothing about it has changed.  As before, it will be called when an "
@@ -590,48 +694,51 @@ msgstr ""
 "se intente acceder a ``obj.foo`` y no se encuentre ningún atributo llamado "
 "``foo`` en el diccionario de la instancia."
 
-#: ../Doc/whatsnew/2.2.rst:322
+#: ../Doc/whatsnew/2.2.rst:323
+#, fuzzy
 msgid ""
 "New-style classes also support a new method, "
 "``__getattribute__(attr_name)``.  The difference between the two methods is "
-"that :meth:`__getattribute__` is *always* called whenever any attribute is "
-"accessed, while the old :meth:`__getattr__` is only called if ``foo`` isn't "
-"found in the instance's dictionary."
+"that :meth:`~object.__getattribute__` is *always* called whenever any "
+"attribute is accessed, while the old :meth:`~object.__getattr__` is only "
+"called if ``foo`` isn't found in the instance's dictionary."
 msgstr ""
 "Las clases de nuevo estilo también admiten un nuevo método, "
-"``__getattribute__(attr_name)``. La diferencia entre los dos métodos es que :"
-"meth:`__getattribute__` *siempre* se llama cada vez que se accede a "
+"``__getattribute__(attr_name)``. La diferencia entre los dos métodos es "
+"que :meth:`__getattribute__` *siempre* se llama cada vez que se accede a "
 "cualquier atributo, mientras que el antiguo :meth:`__getattr__` se llama "
 "solo si no se encuentra ``foo`` en el diccionario de la instancia."
 
-#: ../Doc/whatsnew/2.2.rst:328
+#: ../Doc/whatsnew/2.2.rst:329
+#, fuzzy
 msgid ""
 "However, Python 2.2's support for :dfn:`properties` will often be a simpler "
-"way to trap attribute references.  Writing a :meth:`__getattr__` method is "
+"way to trap attribute references.  Writing a :meth:`!__getattr__` method is "
 "complicated because to avoid recursion you can't use regular attribute "
-"accesses inside them, and instead have to mess around with the contents of :"
-"attr:`~object.__dict__`. :meth:`__getattr__` methods also end up being "
-"called by Python when it checks for other methods such as :meth:`__repr__` "
-"or :meth:`__coerce__`, and so have to be written with this in mind. Finally, "
-"calling a function on every attribute access results in a sizable "
-"performance loss."
+"accesses inside them, and instead have to mess around with the contents "
+"of :attr:`~object.__dict__`. :meth:`~object.__getattr__` methods also end up "
+"being called by Python when it checks for other methods such "
+"as :meth:`~object.__repr__` or :meth:`!__coerce__`, and so have to be "
+"written with this in mind. Finally, calling a function on every attribute "
+"access results in a sizable performance loss."
 msgstr ""
 "Sin embargo, el soporte de Python 2.2 para :dfn:`properties` será a menudo "
 "una forma más simple de atrapar referencias de atributos. Escribir un "
 "método :meth:`__getattr__` es complicado porque para evitar la recursividad "
 "no puedes usar accesos regulares a atributos dentro de ellos, y en su lugar "
-"tienes que jugar con el contenido de :attr:`~object.__dict__`. Los métodos :"
-"meth:`__getattr__` también terminan siendo llamados por Python cuando busca "
-"otros métodos como :meth:`__repr__` o :meth:`__coerce__`, por lo que se "
-"tienen que escribirse teniendo esto en cuenta. Finalmente, llamar una "
-"función en cada acceso de atributo resulta en una pérdida de rendimiento "
+"tienes que jugar con el contenido de :attr:`~object.__dict__`. Los "
+"métodos :meth:`__getattr__` también terminan siendo llamados por Python "
+"cuando busca otros métodos como :meth:`__repr__` o :meth:`__coerce__`, por "
+"lo que se tienen que escribirse teniendo esto en cuenta. Finalmente, llamar "
+"una función en cada acceso de atributo resulta en una pérdida de rendimiento "
 "considerable."
 
-#: ../Doc/whatsnew/2.2.rst:337
+#: ../Doc/whatsnew/2.2.rst:338
+#, fuzzy
 msgid ""
 ":class:`property` is a new built-in type that packages up three functions "
 "that get, set, or delete an attribute, and a docstring.  For example, if you "
-"want to define a :attr:`size` attribute that's computed, but also settable, "
+"want to define a :attr:`!size` attribute that's computed, but also settable, "
 "you could write::"
 msgstr ""
 ":class:`property` es un nuevo tipo integrado que empaqueta tres funciones "
@@ -639,42 +746,79 @@ msgstr ""
 "quieres definir un atributo :attr:`size` que se calcula, pero que también se "
 "puede configurar, puedes escribir::"
 
-#: ../Doc/whatsnew/2.2.rst:357
+#: ../Doc/whatsnew/2.2.rst:343
 msgid ""
-"That is certainly clearer and easier to write than a pair of :meth:"
-"`__getattr__`/:meth:`__setattr__` methods that check for the :attr:`size` "
+"class C(object):\n"
+"    def get_size (self):\n"
+"        result = ... computation ...\n"
+"        return result\n"
+"    def set_size (self, size):\n"
+"        ... compute something based on the size\n"
+"        and set internal state appropriately ...\n"
+"\n"
+"    # Define a property.  The 'delete this attribute'\n"
+"    # method is defined as None, so the attribute\n"
+"    # can't be deleted.\n"
+"    size = property(get_size, set_size,\n"
+"                    None,\n"
+"                    \"Storage size of this instance\")"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:358
+#, fuzzy
+msgid ""
+"That is certainly clearer and easier to write than a pair of :meth:`!"
+"__getattr__`/:meth:`!__setattr__` methods that check for the :attr:`!size` "
 "attribute and handle it specially while retrieving all other attributes from "
-"the instance's :attr:`~object.__dict__`.  Accesses to :attr:`size` are also "
+"the instance's :attr:`~object.__dict__`.  Accesses to :attr:`!size` are also "
 "the only ones which have to perform the work of calling a function, so "
 "references to other attributes run at their usual speed."
 msgstr ""
-"Eso es ciertamente más claro y fácil de escribir que un par de métodos :meth:"
-"`__getattr__`/:meth:`__setattr__` que verifican el atributo :attr:`size` y "
-"lo manejan especialmente mientras recuperan todos los demás atributos :attr:"
-"`~object.__dict__` de la instancia. Los accesos a :attr:`size` también son "
-"los únicos que tienen que realizar el trabajo de llamar a una función, por "
-"lo que las referencias a otros atributos se ejecutan a su velocidad habitual."
+"Eso es ciertamente más claro y fácil de escribir que un par de "
+"métodos :meth:`__getattr__`/:meth:`__setattr__` que verifican el "
+"atributo :attr:`size` y lo manejan especialmente mientras recuperan todos "
+"los demás atributos :attr:`~object.__dict__` de la instancia. Los accesos "
+"a :attr:`size` también son los únicos que tienen que realizar el trabajo de "
+"llamar a una función, por lo que las referencias a otros atributos se "
+"ejecutan a su velocidad habitual."
 
-#: ../Doc/whatsnew/2.2.rst:364
+#: ../Doc/whatsnew/2.2.rst:365
 msgid ""
 "Finally, it's possible to constrain the list of attributes that can be "
 "referenced on an object using the new :attr:`~object.__slots__` class "
 "attribute. Python objects are usually very dynamic; at any time it's "
-"possible to define a new attribute on an instance by just doing ``obj."
-"new_attr=1``.   A new-style class can define a class attribute named :attr:"
-"`~object.__slots__` to limit the legal attributes  to a particular set of "
-"names.  An example will make this clear::"
+"possible to define a new attribute on an instance by just doing "
+"``obj.new_attr=1``.   A new-style class can define a class attribute "
+"named :attr:`~object.__slots__` to limit the legal attributes  to a "
+"particular set of names.  An example will make this clear::"
 msgstr ""
 "Finalmente, es posible restringir la lista de atributos que se pueden "
-"referenciar en un objeto usando el nuevo atributo de clase :attr:`~object."
-"__slots__`. Los objetos de Python por lo general son muy dinámicos; en "
-"cualquier momento es posible definir un nuevo atributo en una instancia "
-"haciendo simplemente ``obj.new_attr=1``. Una clase de estilo nuevo puede "
-"definir un atributo de clase llamado :attr:`~object.__slots__` para limitar "
-"los atributos legales a un conjunto particular de nombres. Un ejemplo hará "
-"esto claro::"
+"referenciar en un objeto usando el nuevo atributo de "
+"clase :attr:`~object.__slots__`. Los objetos de Python por lo general son "
+"muy dinámicos; en cualquier momento es posible definir un nuevo atributo en "
+"una instancia haciendo simplemente ``obj.new_attr=1``. Una clase de estilo "
+"nuevo puede definir un atributo de clase llamado :attr:`~object.__slots__` "
+"para limitar los atributos legales a un conjunto particular de nombres. Un "
+"ejemplo hará esto claro::"
 
-#: ../Doc/whatsnew/2.2.rst:385
+#: ../Doc/whatsnew/2.2.rst:372
+msgid ""
+">>> class C(object):\n"
+"...     __slots__ = ('template', 'name')\n"
+"...\n"
+">>> obj = C()\n"
+">>> print obj.template\n"
+"None\n"
+">>> obj.template = 'Test'\n"
+">>> print obj.template\n"
+"Test\n"
+">>> obj.newattr = None\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in ?\n"
+"AttributeError: 'C' object has no attribute 'newattr'"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:386
 msgid ""
 "Note how you get an :exc:`AttributeError` on the attempt to assign to an "
 "attribute not listed in :attr:`~object.__slots__`."
@@ -682,11 +826,11 @@ msgstr ""
 "Toma en cuenta cómo obtienes un :exc:`AttributeError` en el intento de "
 "asignar a un atributo que no aparece en :attr:`~object.__slots__`."
 
-#: ../Doc/whatsnew/2.2.rst:392
+#: ../Doc/whatsnew/2.2.rst:393
 msgid "Related Links"
 msgstr "Enlaces relacionados"
 
-#: ../Doc/whatsnew/2.2.rst:394
+#: ../Doc/whatsnew/2.2.rst:395
 msgid ""
 "This section has just been a quick overview of the new features, giving "
 "enough of an explanation to start you programming, but many details have "
@@ -698,7 +842,7 @@ msgstr ""
 "programar, pero muchos detalles se han simplificado o ignorado. ¿Dónde "
 "deberías ir para obtener una imagen más completa?"
 
-#: ../Doc/whatsnew/2.2.rst:398
+#: ../Doc/whatsnew/2.2.rst:399
 #, fuzzy
 msgid ""
 "The :ref:`descriptorhowto` is a lengthy tutorial introduction to the "
@@ -712,16 +856,16 @@ msgstr ""
 "continuación, porque entra en mucho más detalle sobre las nuevas "
 "características sin dejar de ser bastante fácil de leer."
 
-#: ../Doc/whatsnew/2.2.rst:403
+#: ../Doc/whatsnew/2.2.rst:404
 msgid ""
 "Next, there are two relevant PEPs, :pep:`252` and :pep:`253`.  :pep:`252` is "
 "titled \"Making Types Look More Like Classes\", and covers the descriptor "
 "API. :pep:`253` is titled \"Subtyping Built-in Types\", and describes the "
-"changes to type objects that make it possible to subtype built-in objects.  :"
-"pep:`253` is the more complicated PEP of the two, and at a few points the "
-"necessary explanations of types and meta-types may cause your head to "
-"explode.  Both PEPs were written and implemented by Guido van Rossum, with "
-"substantial assistance from the rest of the Zope Corp. team."
+"changes to type objects that make it possible to subtype built-in "
+"objects.  :pep:`253` is the more complicated PEP of the two, and at a few "
+"points the necessary explanations of types and meta-types may cause your "
+"head to explode.  Both PEPs were written and implemented by Guido van "
+"Rossum, with substantial assistance from the rest of the Zope Corp. team."
 msgstr ""
 "A continuación, hay dos PEPs relevantes, :pep:`252` y :pep:`253`. :pep:`252` "
 "se titula \"Hacer que los tipos se parezcan más a las clases\", y cubre la "
@@ -733,7 +877,7 @@ msgstr ""
 "escribieron e implementaron por Guido van Rossum con la asistencia "
 "sustancial del resto del equipo de Zope Corp."
 
-#: ../Doc/whatsnew/2.2.rst:412
+#: ../Doc/whatsnew/2.2.rst:413
 msgid ""
 "Finally, there's the ultimate authority: the source code.  Most of the "
 "machinery for the type handling is in :file:`Objects/typeobject.c`, but you "
@@ -746,11 +890,11 @@ msgstr ""
 "demás vías, incluida la publicación de una pregunta en python-list o python-"
 "dev."
 
-#: ../Doc/whatsnew/2.2.rst:421
+#: ../Doc/whatsnew/2.2.rst:422
 msgid "PEP 234: Iterators"
 msgstr "PEP 234: Iteradores"
 
-#: ../Doc/whatsnew/2.2.rst:423
+#: ../Doc/whatsnew/2.2.rst:424
 msgid ""
 "Another significant addition to 2.2 is an iteration interface at both the C "
 "and Python levels.  Objects can define how they can be looped over by "
@@ -760,26 +904,36 @@ msgstr ""
 "tanto a nivel de C como de Python.  Los objetos pueden definir cómo pueden "
 "ser iterados por quienes los llaman."
 
-#: ../Doc/whatsnew/2.2.rst:426
+#: ../Doc/whatsnew/2.2.rst:427
+#, fuzzy
 msgid ""
 "In Python versions up to 2.1, the usual way to make ``for item in obj`` work "
-"is to define a :meth:`__getitem__` method that looks something like this::"
+"is to define a :meth:`~object.__getitem__` method that looks something like "
+"this::"
 msgstr ""
 "En las versiones de Python hasta la 2.1, la forma habitual de hacer que "
 "funcione ``for item in obj`` es definir un método :meth:`__getitem__` que se "
 "parezca a esto::"
 
-#: ../Doc/whatsnew/2.2.rst:432
+#: ../Doc/whatsnew/2.2.rst:430
 msgid ""
-":meth:`__getitem__` is more properly used to define an indexing operation on "
-"an object so that you can write ``obj[5]`` to retrieve the sixth element.  "
-"It's a bit misleading when you're using this only to support :keyword:`for` "
-"loops. Consider some file-like object that wants to be looped over; the "
-"*index* parameter is essentially meaningless, as the class probably assumes "
-"that a series of :meth:`__getitem__` calls will be made with *index* "
-"incrementing by one each time.  In other words, the presence of the :meth:"
-"`__getitem__` method doesn't mean that using ``file[5]``  to randomly access "
-"the sixth element will work, though it really should."
+"def __getitem__(self, index):\n"
+"    return <next item>"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:433
+#, fuzzy
+msgid ""
+":meth:`~object.__getitem__` is more properly used to define an indexing "
+"operation on an object so that you can write ``obj[5]`` to retrieve the "
+"sixth element.  It's a bit misleading when you're using this only to "
+"support :keyword:`for` loops. Consider some file-like object that wants to "
+"be looped over; the *index* parameter is essentially meaningless, as the "
+"class probably assumes that a series of :meth:`~object.__getitem__` calls "
+"will be made with *index* incrementing by one each time.  In other words, "
+"the presence of the :meth:`~object.__getitem__` method doesn't mean that "
+"using ``file[5]``  to randomly access the sixth element will work, though it "
+"really should."
 msgstr ""
 ":meth:`__getitem__` se utiliza más adecuadamente para definir una operación "
 "de indexación en un objeto, de modo que se puede escribir ``obj[5]`` para "
@@ -792,45 +946,48 @@ msgstr ""
 "que el uso de ``file[5]`` para acceder al azar al sexto elemento vaya a "
 "funcionar, aunque realmente debería hacerlo."
 
-#: ../Doc/whatsnew/2.2.rst:442
+#: ../Doc/whatsnew/2.2.rst:443
+#, fuzzy
 msgid ""
-"In Python 2.2, iteration can be implemented separately, and :meth:"
-"`__getitem__` methods can be limited to classes that really do support "
-"random access.  The basic idea of iterators is  simple.  A new built-in "
-"function, ``iter(obj)`` or ``iter(C, sentinel)``, is used to get an "
-"iterator. ``iter(obj)`` returns an iterator for the object *obj*, while "
-"``iter(C, sentinel)`` returns an iterator that will invoke the callable "
-"object *C* until it returns *sentinel* to signal that the iterator is done."
+"In Python 2.2, iteration can be implemented separately, "
+"and :meth:`~object.__getitem__` methods can be limited to classes that "
+"really do support random access.  The basic idea of iterators is  simple.  A "
+"new built-in function, ``iter(obj)`` or ``iter(C, sentinel)``, is used to "
+"get an iterator. ``iter(obj)`` returns an iterator for the object *obj*, "
+"while ``iter(C, sentinel)`` returns an iterator that will invoke the "
+"callable object *C* until it returns *sentinel* to signal that the iterator "
+"is done."
 msgstr ""
-"En Python 2.2, la iteración puede implementarse por separado, y los métodos :"
-"meth:`__getitem__` pueden limitarse a las clases que realmente soportan el "
-"acceso aleatorio.  La idea básica de los iteradores es simple.  Una nueva "
-"función incorporada, ``iter(obj)`` o ``iter(C, sentinel)``, se utiliza para "
-"obtener un iterador. ``iter(obj)`` retorna un iterador para el objeto *obj*, "
-"mientras que ``iter(C, sentinel)`` retorna un iterador que invocará al "
-"objeto invocable *C* hasta que retorne *sentinel* para señalar que el "
-"iterador ha terminado."
+"En Python 2.2, la iteración puede implementarse por separado, y los "
+"métodos :meth:`__getitem__` pueden limitarse a las clases que realmente "
+"soportan el acceso aleatorio.  La idea básica de los iteradores es simple.  "
+"Una nueva función incorporada, ``iter(obj)`` o ``iter(C, sentinel)``, se "
+"utiliza para obtener un iterador. ``iter(obj)`` retorna un iterador para el "
+"objeto *obj*, mientras que ``iter(C, sentinel)`` retorna un iterador que "
+"invocará al objeto invocable *C* hasta que retorne *sentinel* para señalar "
+"que el iterador ha terminado."
 
-#: ../Doc/whatsnew/2.2.rst:450
+#: ../Doc/whatsnew/2.2.rst:451
+#, fuzzy
 msgid ""
-"Python classes can define an :meth:`__iter__` method, which should create "
+"Python classes can define an :meth:`!__iter__` method, which should create "
 "and return a new iterator for the object; if the object is its own iterator, "
 "this method can just return ``self``.  In particular, iterators will usually "
-"be their own iterators.  Extension types implemented in C can implement a :c:"
-"member:`~PyTypeObject.tp_iter` function in order to return an iterator, and "
-"extension types that want to behave as iterators can define a :c:member:"
-"`~PyTypeObject.tp_iternext` function."
+"be their own iterators.  Extension types implemented in C can implement "
+"a :c:member:`~PyTypeObject.tp_iter` function in order to return an iterator, "
+"and extension types that want to behave as iterators can define "
+"a :c:member:`~PyTypeObject.tp_iternext` function."
 msgstr ""
 "Las clases de Python pueden definir un método :meth:`__iter__`, que debe "
 "crear y retornar un nuevo iterador para el objeto; si el objeto es su propio "
 "iterador, este método puede simplemente retornar ``self``.  En particular, "
 "los iteradores suelen ser sus propios iteradores.  Los tipos de extensión "
-"implementados en C pueden implementar una función :c:member:`~PyTypeObject."
-"tp_iter` para retornar un iterador, y los tipos de extensión que quieran "
-"comportarse como iteradores pueden definir una función :c:member:"
-"`~PyTypeObject.tp_iternext`."
+"implementados en C pueden implementar una "
+"función :c:member:`~PyTypeObject.tp_iter` para retornar un iterador, y los "
+"tipos de extensión que quieran comportarse como iteradores pueden definir "
+"una función :c:member:`~PyTypeObject.tp_iternext`."
 
-#: ../Doc/whatsnew/2.2.rst:457
+#: ../Doc/whatsnew/2.2.rst:458
 msgid ""
 "So, after all this, what do iterators actually do?  They have one required "
 "method, :meth:`next`, which takes no arguments and returns the next value.  "
@@ -839,16 +996,36 @@ msgid ""
 msgstr ""
 "Entonces, después de todo esto, ¿qué hacen realmente los iteradores?  Tienen "
 "un método obligatorio, :meth:`next`, que no toma argumentos y retorna el "
-"siguiente valor.  Cuando no hay más valores que retornar, la llamada a :meth:"
-"`next` debería lanzar la excepción :exc:`StopIteration`. ::"
+"siguiente valor.  Cuando no hay más valores que retornar, la llamada "
+"a :meth:`next` debería lanzar la excepción :exc:`StopIteration`. ::"
 
-#: ../Doc/whatsnew/2.2.rst:478
+#: ../Doc/whatsnew/2.2.rst:463
+msgid ""
+">>> L = [1,2,3]\n"
+">>> i = iter(L)\n"
+">>> print i\n"
+"<iterator object at 0x8116870>\n"
+">>> i.next()\n"
+"1\n"
+">>> i.next()\n"
+"2\n"
+">>> i.next()\n"
+"3\n"
+">>> i.next()\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in ?\n"
+"StopIteration\n"
+">>>"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:479
+#, fuzzy
 msgid ""
 "In 2.2, Python's :keyword:`for` statement no longer expects a sequence; it "
 "expects something for which :func:`iter` will return an iterator. For "
 "backward compatibility and convenience, an iterator is automatically "
-"constructed for sequences that don't implement :meth:`__iter__` or a :c:"
-"member:`~PyTypeObject.tp_iter` slot, so ``for i in [1,2,3]`` will still "
+"constructed for sequences that don't implement :meth:`!__iter__` or "
+"a :c:member:`~PyTypeObject.tp_iter` slot, so ``for i in [1,2,3]`` will still "
 "work.  Wherever the Python interpreter loops over a sequence, it's been "
 "changed to use the iterator protocol.  This means you can do things like "
 "this::"
@@ -856,48 +1033,87 @@ msgstr ""
 "En 2.2, la sentencia :keyword:`for` de Python ya no espera una secuencia; "
 "espera algo para lo que :func:`iter` retornará un iterador. Por "
 "compatibilidad y comodidad, se construye automáticamente un iterador para "
-"las secuencias que no implementan :meth:`__iter__` o una ranura :c:member:"
-"`~PyTypeObject.tp_iter`, por lo que ``for i in [1,2,3]`` seguirá "
-"funcionando.  Dondequiera que el intérprete de Python haga un bucle sobre "
-"una secuencia, se ha cambiado para utilizar el protocolo de los iteradores.  "
-"Esto significa que puedes hacer cosas como esta::"
+"las secuencias que no implementan :meth:`__iter__` o una "
+"ranura :c:member:`~PyTypeObject.tp_iter`, por lo que ``for i in [1,2,3]`` "
+"seguirá funcionando.  Dondequiera que el intérprete de Python haga un bucle "
+"sobre una secuencia, se ha cambiado para utilizar el protocolo de los "
+"iteradores.  Esto significa que puedes hacer cosas como esta::"
 
-#: ../Doc/whatsnew/2.2.rst:492
+#: ../Doc/whatsnew/2.2.rst:487
 msgid ""
-"Iterator support has been added to some of Python's basic types.   Calling :"
-"func:`iter` on a dictionary will return an iterator which loops over its "
-"keys::"
+">>> L = [1,2,3]\n"
+">>> i = iter(L)\n"
+">>> a,b,c = i\n"
+">>> a,b,c\n"
+"(1, 2, 3)"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:493
+msgid ""
+"Iterator support has been added to some of Python's basic types.   "
+"Calling :func:`iter` on a dictionary will return an iterator which loops "
+"over its keys::"
 msgstr ""
 "Se ha añadido soporte de iteradores a algunos de los tipos básicos de "
 "Python.   Llamar a :func:`iter` sobre un diccionario retornará un iterador "
 "que hace un bucle sobre sus claves::"
 
-#: ../Doc/whatsnew/2.2.rst:512
+#: ../Doc/whatsnew/2.2.rst:496
+msgid ""
+">>> m = {'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6,\n"
+"...      'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12}\n"
+">>> for key in m: print key, m[key]\n"
+"...\n"
+"Mar 3\n"
+"Feb 2\n"
+"Aug 8\n"
+"Sep 9\n"
+"May 5\n"
+"Jun 6\n"
+"Jul 7\n"
+"Jan 1\n"
+"Apr 4\n"
+"Nov 11\n"
+"Dec 12\n"
+"Oct 10"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:513
+#, fuzzy
 msgid ""
 "That's just the default behaviour.  If you want to iterate over keys, "
-"values, or key/value pairs, you can explicitly call the :meth:`iterkeys`, :"
-"meth:`itervalues`, or :meth:`iteritems` methods to get an appropriate "
-"iterator. In a minor related change, the :keyword:`in` operator now works on "
-"dictionaries, so ``key in dict`` is now equivalent to ``dict.has_key(key)``."
+"values, or key/value pairs, you can explicitly call the :meth:`!"
+"iterkeys`, :meth:`!itervalues`, or :meth:`!iteritems` methods to get an "
+"appropriate iterator. In a minor related change, the :keyword:`in` operator "
+"now works on dictionaries, so ``key in dict`` is now equivalent to "
+"``dict.has_key(key)``."
 msgstr ""
 "Este es el comportamiento por defecto.  Si quieres iterar sobre claves, "
-"valores o pares clave/valor, puedes llamar explícitamente a los métodos :"
-"meth:`iterkeys`, :meth:`itervalues` o :meth:`iteritems` para obtener un "
-"iterador apropiado. En un cambio menor relacionado, el operador :keyword:"
-"`in` ahora funciona en los diccionarios, por lo que ``key in dict`` es ahora "
-"equivalente a ``dict.has_key(key)``."
+"valores o pares clave/valor, puedes llamar explícitamente a los "
+"métodos :meth:`iterkeys`, :meth:`itervalues` o :meth:`iteritems` para "
+"obtener un iterador apropiado. En un cambio menor relacionado, el "
+"operador :keyword:`in` ahora funciona en los diccionarios, por lo que ``key "
+"in dict`` es ahora equivalente a ``dict.has_key(key)``."
 
-#: ../Doc/whatsnew/2.2.rst:518
+#: ../Doc/whatsnew/2.2.rst:519
 msgid ""
 "Files also provide an iterator, which calls the :meth:`readline` method "
 "until there are no more lines in the file.  This means you can now read each "
 "line of a file using code like this::"
 msgstr ""
-"Los archivos también proporcionan un iterador, que llama al método :meth:"
-"`readline` hasta que no hay más líneas en el archivo.  Esto significa que "
-"ahora puede leer cada línea de un archivo utilizando un código como este::"
+"Los archivos también proporcionan un iterador, que llama al "
+"método :meth:`readline` hasta que no hay más líneas en el archivo.  Esto "
+"significa que ahora puede leer cada línea de un archivo utilizando un código "
+"como este::"
 
-#: ../Doc/whatsnew/2.2.rst:526
+#: ../Doc/whatsnew/2.2.rst:523
+msgid ""
+"for line in file:\n"
+"    # do something for each line\n"
+"    ..."
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:527
 msgid ""
 "Note that you can only go forward in an iterator; there's no way to get the "
 "previous element, reset the iterator, or make a copy of it. An iterator "
@@ -909,11 +1125,11 @@ msgstr ""
 "mismo. Un objeto iterador podría proporcionar estas capacidades adicionales, "
 "pero el protocolo iterador sólo requiere un método :meth:`next`."
 
-#: ../Doc/whatsnew/2.2.rst:535
+#: ../Doc/whatsnew/2.2.rst:536
 msgid ":pep:`234` - Iterators"
 msgstr ":pep:`234` - Iteradores"
 
-#: ../Doc/whatsnew/2.2.rst:535
+#: ../Doc/whatsnew/2.2.rst:536
 msgid ""
 "Written by Ka-Ping Yee and GvR; implemented  by the Python Labs crew, mostly "
 "by GvR and Tim Peters."
@@ -921,11 +1137,11 @@ msgstr ""
 "Escrito por Ka-Ping Yee y GvR; implementado por el equipo de Python Labs, "
 "principalmente por GvR y Tim Peters."
 
-#: ../Doc/whatsnew/2.2.rst:542
+#: ../Doc/whatsnew/2.2.rst:543
 msgid "PEP 255: Simple Generators"
 msgstr "PEP 255: Generadores simples"
 
-#: ../Doc/whatsnew/2.2.rst:544
+#: ../Doc/whatsnew/2.2.rst:545
 msgid ""
 "Generators are another new feature, one that interacts with the introduction "
 "of iterators."
@@ -933,7 +1149,7 @@ msgstr ""
 "Los generadores son otra novedad que interactúa con la introducción de los "
 "iteradores."
 
-#: ../Doc/whatsnew/2.2.rst:547
+#: ../Doc/whatsnew/2.2.rst:548
 msgid ""
 "You're doubtless familiar with how function calls work in Python or C.  When "
 "you call a function, it gets a private namespace where its local variables "
@@ -956,11 +1172,18 @@ msgstr ""
 "proporcionan los generadores; se puede pensar en ellos como funciones "
 "reanudables."
 
-#: ../Doc/whatsnew/2.2.rst:556
+#: ../Doc/whatsnew/2.2.rst:557
 msgid "Here's the simplest example of a generator function::"
 msgstr "Este es el ejemplo más sencillo de una función generadora::"
 
-#: ../Doc/whatsnew/2.2.rst:562
+#: ../Doc/whatsnew/2.2.rst:559
+msgid ""
+"def generate_ints(N):\n"
+"    for i in range(N):\n"
+"        yield i"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:563
 msgid ""
 "A new keyword, :keyword:`yield`, was introduced for generators.  Any "
 "function containing a :keyword:`!yield` statement is a generator function; "
@@ -980,7 +1203,7 @@ msgstr ""
 "del código fuente del módulo.  En Python 2.3 esta declaración será "
 "innecesaria."
 
-#: ../Doc/whatsnew/2.2.rst:570
+#: ../Doc/whatsnew/2.2.rst:571
 msgid ""
 "When you call a generator function, it doesn't return a single value; "
 "instead it returns a generator object that supports the iterator protocol.  "
@@ -989,11 +1212,12 @@ msgid ""
 "between :keyword:`!yield` and a :keyword:`!return` statement is that on "
 "reaching a :keyword:`!yield` the generator's state of execution is suspended "
 "and local variables are preserved.  On the next call to the generator's "
-"``next()`` method, the function will resume executing immediately after the :"
-"keyword:`!yield` statement.  (For complicated reasons, the :keyword:`!yield` "
-"statement isn't allowed inside the :keyword:`!try` block of a :keyword:"
-"`try`...\\ :keyword:`finally` statement; read :pep:`255` for a full "
-"explanation of the interaction between :keyword:`!yield` and exceptions.)"
+"``next()`` method, the function will resume executing immediately after "
+"the :keyword:`!yield` statement.  (For complicated reasons, the :keyword:`!"
+"yield` statement isn't allowed inside the :keyword:`!try` block of "
+"a :keyword:`try`...\\ :keyword:`finally` statement; read :pep:`255` for a "
+"full explanation of the interaction between :keyword:`!yield` and "
+"exceptions.)"
 msgstr ""
 "Cuando se llama a una función generadora, ésta no retorna un único valor, "
 "sino que retorna un objeto generador que soporta el protocolo de los "
@@ -1005,15 +1229,35 @@ msgstr ""
 "siguiente llamada al método ``next()`` del generador, la función se "
 "reanudará la ejecución inmediatamente después de la sentencia :keyword:`!"
 "yield`.  (Por razones complicadas, la sentencia :keyword:`!yield` no está "
-"permitida dentro del bloque :keyword:`!try` de una sentencia :keyword:"
-"`try`...`\\ :keyword:`finally`; lea :pep:`255` para una explicación completa "
-"de la interacción entre :keyword:`!yield` y las excepciones)"
+"permitida dentro del bloque :keyword:`!try` de una "
+"sentencia :keyword:`try`...`\\ :keyword:`finally`; lea :pep:`255` para una "
+"explicación completa de la interacción entre :keyword:`!yield` y las "
+"excepciones)"
 
-#: ../Doc/whatsnew/2.2.rst:583
-msgid "Here's a sample usage of the :func:`generate_ints` generator::"
+#: ../Doc/whatsnew/2.2.rst:584
+#, fuzzy
+msgid "Here's a sample usage of the :func:`!generate_ints` generator::"
 msgstr "Este es un ejemplo de uso del generador :func:`generate_ints`::"
 
-#: ../Doc/whatsnew/2.2.rst:600
+#: ../Doc/whatsnew/2.2.rst:586
+msgid ""
+">>> gen = generate_ints(3)\n"
+">>> gen\n"
+"<generator object at 0x8117f90>\n"
+">>> gen.next()\n"
+"0\n"
+">>> gen.next()\n"
+"1\n"
+">>> gen.next()\n"
+"2\n"
+">>> gen.next()\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in ?\n"
+"  File \"<stdin>\", line 2, in generate_ints\n"
+"StopIteration"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:601
 msgid ""
 "You could equally write ``for i in generate_ints(5)``, or ``a,b,c = "
 "generate_ints(3)``."
@@ -1021,7 +1265,7 @@ msgstr ""
 "También podrías escribir ``for i in generate_ints(5)``, o ``a,b,c = "
 "generate_ints(3)``."
 
-#: ../Doc/whatsnew/2.2.rst:603
+#: ../Doc/whatsnew/2.2.rst:604
 msgid ""
 "Inside a generator function, the :keyword:`return` statement can only be "
 "used without a value, and signals the end of the procession of values; "
@@ -1039,7 +1283,7 @@ msgstr ""
 "indicarse levantando manualmente :exc:`StopIteration`, o simplemente dejando "
 "que el flujo de ejecución caiga en el fondo de la función."
 
-#: ../Doc/whatsnew/2.2.rst:611
+#: ../Doc/whatsnew/2.2.rst:612
 msgid ""
 "You could achieve the effect of generators manually by writing your own "
 "class and storing all the local variables of the generator as instance "
@@ -1054,14 +1298,26 @@ msgstr ""
 "Puedes conseguir el efecto de los generadores manualmente escribiendo tu "
 "propia clase y almacenando todas las variables locales del generador como "
 "variables de instancia.  Por ejemplo, la lución de una lista de enteros "
-"podría hacerse estableciendo ``self.count`` a 0, y haciendo que el método :"
-"meth:`next` incremente ``self.count`` y lo retorne. Sin embargo, para un "
-"generador medianamente complicado, escribir la clase correspondiente sería "
-"mucho más complicado. :file:`Lib/test/test_generators.py` contiene varios "
-"ejemplos más interesantes.  El más sencillo implementa un recorrido en orden "
-"de un árbol utilizando generadores de forma recursiva ::"
+"podría hacerse estableciendo ``self.count`` a 0, y haciendo que el "
+"método :meth:`next` incremente ``self.count`` y lo retorne. Sin embargo, "
+"para un generador medianamente complicado, escribir la clase correspondiente "
+"sería mucho más complicado. :file:`Lib/test/test_generators.py` contiene "
+"varios ejemplos más interesantes.  El más sencillo implementa un recorrido "
+"en orden de un árbol utilizando generadores de forma recursiva ::"
 
-#: ../Doc/whatsnew/2.2.rst:629
+#: ../Doc/whatsnew/2.2.rst:621
+msgid ""
+"# A recursive generator that generates Tree leaves in in-order.\n"
+"def inorder(t):\n"
+"    if t:\n"
+"        for x in inorder(t.left):\n"
+"            yield x\n"
+"        yield t.label\n"
+"        for x in inorder(t.right):\n"
+"            yield x"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:630
 msgid ""
 "Two other examples in :file:`Lib/test/test_generators.py` produce solutions "
 "for the N-Queens problem (placing $N$ queens on an $NxN$ chess board so that "
@@ -1075,7 +1331,7 @@ msgstr ""
 "recorrido del caballero (una ruta que lleva a un caballo a cada casilla de "
 "un tablero de ajedrez $NxN$ sin visitar ninguna casilla dos veces)."
 
-#: ../Doc/whatsnew/2.2.rst:634
+#: ../Doc/whatsnew/2.2.rst:635
 #, fuzzy
 msgid ""
 "The idea of generators comes from other programming languages, especially "
@@ -1089,16 +1345,24 @@ msgstr ""
 "especialmente de Icon (https://www.cs.arizona.edu/icon/), donde la idea de "
 "los generadores es fundamental.  En Icon, cada expresión y llamada a una "
 "función se comporta como un generador.  Un ejemplo de \"*An Overview of the "
-"Icon Programming Language*\" en https://www.cs.arizona.edu/icon/docs/ipd266."
-"htm da una idea de cómo es esto::"
+"Icon Programming Language*\" en https://www.cs.arizona.edu/icon/docs/"
+"ipd266.htm da una idea de cómo es esto::"
 
-#: ../Doc/whatsnew/2.2.rst:644
+#: ../Doc/whatsnew/2.2.rst:642
 msgid ""
-"In Icon the :func:`find` function returns the indexes at which the substring "
-"\"or\" is found: 3, 23, 33.  In the :keyword:`if` statement, ``i`` is first "
-"assigned a value of 3, but 3 is less than 5, so the comparison fails, and "
-"Icon retries it with the second value of 23.  23 is greater than 5, so the "
-"comparison now succeeds, and the code prints the value 23 to the screen."
+"sentence := \"Store it in the neighboring harbor\"\n"
+"if (i := find(\"or\", sentence)) > 5 then write(i)"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:645
+#, fuzzy
+msgid ""
+"In Icon the :func:`!find` function returns the indexes at which the "
+"substring \"or\" is found: 3, 23, 33.  In the :keyword:`if` statement, ``i`` "
+"is first assigned a value of 3, but 3 is less than 5, so the comparison "
+"fails, and Icon retries it with the second value of 23.  23 is greater than "
+"5, so the comparison now succeeds, and the code prints the value 23 to the "
+"screen."
 msgstr ""
 "En Icon la función :func:`find` retorna los índices en los que se encuentra "
 "la subcadena \"o\": 3, 23, 33.  En la sentencia :keyword:`if`, a ``i`` se le "
@@ -1107,7 +1371,7 @@ msgstr ""
 "mayor que 5, por lo que la comparación ahora tiene éxito, y el código "
 "imprime el valor 23 en la pantalla."
 
-#: ../Doc/whatsnew/2.2.rst:650
+#: ../Doc/whatsnew/2.2.rst:651
 msgid ""
 "Python doesn't go nearly as far as Icon in adopting generators as a central "
 "concept.  Generators are considered a new part of the core Python language, "
@@ -1126,11 +1390,11 @@ msgstr ""
 "(el iterador) que puede pasarse a otras funciones o almacenarse en una "
 "estructura de datos."
 
-#: ../Doc/whatsnew/2.2.rst:662
+#: ../Doc/whatsnew/2.2.rst:663
 msgid ":pep:`255` - Simple Generators"
 msgstr ":pep:`255` - Generadores simples"
 
-#: ../Doc/whatsnew/2.2.rst:662
+#: ../Doc/whatsnew/2.2.rst:663
 msgid ""
 "Written by Neil Schemenauer, Tim Peters, Magnus Lie Hetland.  Implemented "
 "mostly by Neil Schemenauer and Tim Peters, with other fixes from the Python "
@@ -1140,16 +1404,17 @@ msgstr ""
 "principalmente por Neil Schemenauer y Tim Peters, con otras correcciones del "
 "equipo de Python Labs."
 
-#: ../Doc/whatsnew/2.2.rst:669
+#: ../Doc/whatsnew/2.2.rst:670
 msgid "PEP 237: Unifying Long Integers and Integers"
 msgstr "PEP 237: Unificación de enteros largos y enteros"
 
-#: ../Doc/whatsnew/2.2.rst:671
+#: ../Doc/whatsnew/2.2.rst:672
+#, fuzzy
 msgid ""
 "In recent versions, the distinction between regular integers, which are 32-"
 "bit values on most machines, and long integers, which can be of arbitrary "
 "size, was becoming an annoyance.  For example, on platforms that support "
-"files larger than ``2**32`` bytes, the :meth:`tell` method of file objects "
+"files larger than ``2**32`` bytes, the :meth:`!tell` method of file objects "
 "has to return a long integer. However, there were various bits of Python "
 "that expected plain integers and would raise an error if a long integer was "
 "provided instead.  For example, in Python 1.5, only regular integers could "
@@ -1167,7 +1432,7 @@ msgstr ""
 "enteros normales como índice de corte, y ``'abc'[1L:]`` lanzaba una "
 "excepción :exc:`TypeError` con el mensaje 'slice index must be int'."
 
-#: ../Doc/whatsnew/2.2.rst:681
+#: ../Doc/whatsnew/2.2.rst:682
 msgid ""
 "Python 2.2 will shift values from short to long integers as required. The "
 "'L' suffix is no longer needed to indicate a long integer literal, as now "
@@ -1185,7 +1450,15 @@ msgstr ""
 "Muchas operaciones que solían lanzar un :exc:`OverflowError` ahora "
 "retornarán un entero largo como resultado.  Por ejemplo::"
 
-#: ../Doc/whatsnew/2.2.rst:694
+#: ../Doc/whatsnew/2.2.rst:690
+msgid ""
+">>> 1234567890123\n"
+"1234567890123L\n"
+">>> 2 ** 64\n"
+"18446744073709551616L"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:695
 msgid ""
 "In most cases, integers and long integers will now be treated identically.  "
 "You can still distinguish them with the :func:`type` built-in function, but "
@@ -1195,11 +1468,11 @@ msgstr ""
 "ahora de forma idéntica.  Todavía se pueden distinguir con la función "
 "incorporada :func:`type`, pero rara vez se necesita."
 
-#: ../Doc/whatsnew/2.2.rst:702
+#: ../Doc/whatsnew/2.2.rst:703
 msgid ":pep:`237` - Unifying Long Integers and Integers"
 msgstr ":pep:`237` - Unificación de enteros largos y enteros"
 
-#: ../Doc/whatsnew/2.2.rst:702
+#: ../Doc/whatsnew/2.2.rst:703
 msgid ""
 "Written by Moshe Zadka and Guido van Rossum.  Implemented mostly by Guido "
 "van Rossum."
@@ -1207,11 +1480,11 @@ msgstr ""
 "Escrito por Moshe Zadka y Guido van Rossum.  Implementado principalmente por "
 "Guido van Rossum."
 
-#: ../Doc/whatsnew/2.2.rst:709
+#: ../Doc/whatsnew/2.2.rst:710
 msgid "PEP 238: Changing the Division Operator"
 msgstr "PEP 238: Cambio del operador de división"
 
-#: ../Doc/whatsnew/2.2.rst:711
+#: ../Doc/whatsnew/2.2.rst:712
 msgid ""
 "The most controversial change in Python 2.2 heralds the start of an effort "
 "to fix an old design flaw that's been in Python from the beginning. "
@@ -1234,7 +1507,7 @@ msgstr ""
 "está tipado dinámicamente, puede ser difícil determinar los posibles tipos "
 "de los operandos."
 
-#: ../Doc/whatsnew/2.2.rst:721
+#: ../Doc/whatsnew/2.2.rst:722
 msgid ""
 "(The controversy is over whether this is *really* a design flaw, and whether "
 "it's worth breaking existing code to fix this.  It's caused endless "
@@ -1246,12 +1519,12 @@ msgstr ""
 "(La controversia se centra en si esto es *realmente* un defecto de diseño, y "
 "si vale la pena romper el código existente para arreglarlo.  Ha provocado "
 "interminables discusiones en python-dev, y en julio de 2001 estalló una "
-"tormenta de publicaciones ácidamente sarcásticas en :newsgroup:`comp.lang."
-"python`. No argumentaré aquí a favor de ninguno de los dos bandos y me "
-"limitaré a describir lo que se ha implementado en la 2.2.  Lea :pep:`238` "
-"para un resumen de los argumentos y contra-argumentos)"
+"tormenta de publicaciones ácidamente sarcásticas "
+"en :newsgroup:`comp.lang.python`. No argumentaré aquí a favor de ninguno de "
+"los dos bandos y me limitaré a describir lo que se ha implementado en la "
+"2.2.  Lea :pep:`238` para un resumen de los argumentos y contra-argumentos)"
 
-#: ../Doc/whatsnew/2.2.rst:728
+#: ../Doc/whatsnew/2.2.rst:729
 msgid ""
 "Because this change might break code, it's being introduced very gradually. "
 "Python 2.2 begins the transition, but the switch won't be complete until "
@@ -1261,7 +1534,7 @@ msgstr ""
 "forma muy gradual. Python 2.2 comienza la transición, pero el cambio no será "
 "completo hasta Python 3.0."
 
-#: ../Doc/whatsnew/2.2.rst:732
+#: ../Doc/whatsnew/2.2.rst:733
 msgid ""
 "First, I'll borrow some terminology from :pep:`238`.  \"True division\" is "
 "the division that most non-programmers are familiar with: 3/2 is 1.5, 1/4 is "
@@ -1283,11 +1556,11 @@ msgstr ""
 "operandos son enteros, y retorna el resultado de la división verdadera "
 "cuando uno de los operandos es un número de punto flotante."
 
-#: ../Doc/whatsnew/2.2.rst:740
+#: ../Doc/whatsnew/2.2.rst:741
 msgid "Here are the changes 2.2 introduces:"
 msgstr "Estos son los cambios que introduce la versión 2.2:"
 
-#: ../Doc/whatsnew/2.2.rst:742
+#: ../Doc/whatsnew/2.2.rst:743
 msgid ""
 "A new operator, ``//``, is the floor division operator. (Yes, we know it "
 "looks like C++'s comment symbol.)  ``//`` *always* performs floor division "
@@ -1299,7 +1572,7 @@ msgstr ""
 "realiza la división entera a la baja sin importar los tipos de sus "
 "operandos, así que ``1 // 2`` es 0 y ``1.0 // 2.0`` también es 0.0."
 
-#: ../Doc/whatsnew/2.2.rst:747
+#: ../Doc/whatsnew/2.2.rst:748
 msgid ""
 "``//`` is always available in Python 2.2; you don't need to enable it using "
 "a ``__future__`` statement."
@@ -1307,7 +1580,7 @@ msgstr ""
 "``//`` está siempre disponible en Python 2.2; no es necesario habilitarlo "
 "mediante una sentencia ``__future__``."
 
-#: ../Doc/whatsnew/2.2.rst:750
+#: ../Doc/whatsnew/2.2.rst:751
 msgid ""
 "By including a ``from __future__ import division`` in a module, the ``/`` "
 "operator will be changed to return the result of true division, so ``1/2`` "
@@ -1320,26 +1593,28 @@ msgstr ""
 "`` sigue significando la división clásica. El significado por defecto de ``/"
 "`` no cambiará hasta Python 3.0."
 
-#: ../Doc/whatsnew/2.2.rst:755
+#: ../Doc/whatsnew/2.2.rst:756
+#, fuzzy
 msgid ""
-"Classes can define methods called :meth:`__truediv__` and :meth:"
-"`__floordiv__` to overload the two division operators.  At the C level, "
-"there are also slots in the :c:type:`PyNumberMethods` structure so extension "
-"types can define the two operators."
+"Classes can define methods called :meth:`~object.__truediv__` "
+"and :meth:`~object.__floordiv__` to overload the two division operators.  At "
+"the C level, there are also slots in the :c:type:`PyNumberMethods` structure "
+"so extension types can define the two operators."
 msgstr ""
-"Las clases pueden definir métodos llamados :meth:`__truediv__` y :meth:"
-"`__floordiv__` para sobrecargar los dos operadores de división.  En el nivel "
-"C, también hay ranuras en la estructura :c:type:`PyNumberMethods` para que "
-"los tipos de extensión puedan definir los dos operadores."
+"Las clases pueden definir métodos llamados :meth:`__truediv__` "
+"y :meth:`__floordiv__` para sobrecargar los dos operadores de división.  En "
+"el nivel C, también hay ranuras en la estructura :c:type:`PyNumberMethods` "
+"para que los tipos de extensión puedan definir los dos operadores."
 
-#: ../Doc/whatsnew/2.2.rst:760
+#: ../Doc/whatsnew/2.2.rst:761
 msgid ""
 "Python 2.2 supports some command-line arguments for testing whether code "
-"will work with the changed division semantics.  Running python with :option:"
-"`!-Q warn` will cause a warning to be issued whenever division is applied to "
-"two integers.  You can use this to find code that's affected by the change "
-"and fix it.  By default, Python 2.2 will simply perform classic division "
-"without a warning; the warning will be turned on by default in Python 2.3."
+"will work with the changed division semantics.  Running python "
+"with :option:`!-Q warn` will cause a warning to be issued whenever division "
+"is applied to two integers.  You can use this to find code that's affected "
+"by the change and fix it.  By default, Python 2.2 will simply perform "
+"classic division without a warning; the warning will be turned on by default "
+"in Python 2.3."
 msgstr ""
 "Python 2.2 admite algunos argumentos de línea de comandos para comprobar si "
 "el código funcionará con la semántica de división modificada.  Ejecutar "
@@ -1349,11 +1624,11 @@ msgstr ""
 "2.2 simplemente realizará la división clásica sin una advertencia; la "
 "advertencia se activará por defecto en Python 2.3."
 
-#: ../Doc/whatsnew/2.2.rst:770
+#: ../Doc/whatsnew/2.2.rst:771
 msgid ":pep:`238` - Changing the Division Operator"
 msgstr ":pep:`238` - Cambio del operador de división"
 
-#: ../Doc/whatsnew/2.2.rst:771
+#: ../Doc/whatsnew/2.2.rst:772
 msgid ""
 "Written by Moshe Zadka and  Guido van Rossum.  Implemented by Guido van "
 "Rossum.."
@@ -1361,11 +1636,11 @@ msgstr ""
 "Escrito por Moshe Zadka y Guido van Rossum.  Implementado por Guido van "
 "Rossum.."
 
-#: ../Doc/whatsnew/2.2.rst:777
+#: ../Doc/whatsnew/2.2.rst:778
 msgid "Unicode Changes"
 msgstr "Cambios en Unicode"
 
-#: ../Doc/whatsnew/2.2.rst:779
+#: ../Doc/whatsnew/2.2.rst:780
 msgid ""
 "Python's Unicode support has been enhanced a bit in 2.2.  Unicode strings "
 "are usually stored as UCS-2, as 16-bit unsigned integers. Python 2.2 can "
@@ -1377,38 +1652,40 @@ msgstr ""
 "El soporte de Unicode de Python se ha mejorado un poco en la versión 2.2.  "
 "Las cadenas Unicode se almacenan normalmente como UCS-2, como enteros sin "
 "signo de 16 bits. Python 2.2 también puede ser compilado para usar UCS-4, "
-"enteros sin signo de 32 bits, como su codificación interna suministrando :"
-"option:`!--enable-unicode=ucs4` al script de configuración.   (También es "
-"posible especificar :option:`!--disable-unicode` para desactivar "
+"enteros sin signo de 32 bits, como su codificación interna "
+"suministrando :option:`!--enable-unicode=ucs4` al script de configuración.   "
+"(También es posible especificar :option:`!--disable-unicode` para desactivar "
 "completamente el soporte de Unicode)"
 
-#: ../Doc/whatsnew/2.2.rst:786
+#: ../Doc/whatsnew/2.2.rst:787
+#, fuzzy
 msgid ""
 "When built to use UCS-4 (a \"wide Python\"), the interpreter can natively "
 "handle Unicode characters from U+000000 to U+110000, so the range of legal "
-"values for the :func:`unichr` function is expanded accordingly.  Using an "
+"values for the :func:`!unichr` function is expanded accordingly.  Using an "
 "interpreter compiled to use UCS-2 (a \"narrow Python\"), values greater than "
-"65535 will still cause :func:`unichr` to raise a :exc:`ValueError` "
+"65535 will still cause :func:`!unichr` to raise a :exc:`ValueError` "
 "exception. This is all described in :pep:`261`, \"Support for 'wide' Unicode "
 "characters\"; consult it for further details."
 msgstr ""
 "Cuando se compila para usar UCS-4 (un \"Python amplio\"), el intérprete "
 "puede manejar de forma nativa caracteres Unicode desde U+000000 hasta "
-"U+110000, por lo que el rango de valores legales para la función :func:"
-"`unichr` se expande en consecuencia.  Utilizando un intérprete compilado "
-"para usar UCS-2 (un \"Python estrecho\"), los valores mayores de 65535 "
-"seguirán provocando que :func:`unichr` lance una excepción :exc:"
-"`ValueError`. Todo esto se describe en :pep:`261`, \"Soporte para caracteres "
-"Unicode 'anchos'\"; consúltelo para más detalles."
+"U+110000, por lo que el rango de valores legales para la "
+"función :func:`unichr` se expande en consecuencia.  Utilizando un intérprete "
+"compilado para usar UCS-2 (un \"Python estrecho\"), los valores mayores de "
+"65535 seguirán provocando que :func:`unichr` lance una "
+"excepción :exc:`ValueError`. Todo esto se describe en :pep:`261`, \"Soporte "
+"para caracteres Unicode 'anchos'\"; consúltelo para más detalles."
 
-#: ../Doc/whatsnew/2.2.rst:794
+#: ../Doc/whatsnew/2.2.rst:795
+#, fuzzy
 msgid ""
 "Another change is simpler to explain. Since their introduction, Unicode "
-"strings have supported an :meth:`encode` method to convert the string to a "
+"strings have supported an :meth:`!encode` method to convert the string to a "
 "selected encoding such as UTF-8 or Latin-1.  A symmetric "
 "``decode([*encoding*])`` method has been added to 8-bit strings (though not "
-"to Unicode strings) in 2.2. :meth:`decode` assumes that the string is in the "
-"specified encoding and decodes it, returning whatever is returned by the "
+"to Unicode strings) in 2.2. :meth:`!decode` assumes that the string is in "
+"the specified encoding and decodes it, returning whatever is returned by the "
 "codec."
 msgstr ""
 "Otro cambio es más sencillo de explicar. Desde su introducción, las cadenas "
@@ -1419,7 +1696,7 @@ msgstr ""
 "codificación especificada y la decodifica, retornando lo que sea retornado "
 "por el códec."
 
-#: ../Doc/whatsnew/2.2.rst:801
+#: ../Doc/whatsnew/2.2.rst:802
 msgid ""
 "Using this new feature, codecs have been added for tasks not directly "
 "related to Unicode.  For example, codecs have been added for uu-encoding, "
@@ -1430,37 +1707,60 @@ msgstr ""
 "para la codificación uu, la codificación base64 de MIME y la compresión con "
 "el módulo :mod:`zlib`::"
 
-#: ../Doc/whatsnew/2.2.rst:822
+#: ../Doc/whatsnew/2.2.rst:806
 msgid ""
-"To convert a class instance to Unicode, a :meth:`__unicode__` method can be "
-"defined by a class, analogous to :meth:`__str__`."
+">>> s = \"\"\"Here is a lengthy piece of redundant, overly verbose,\n"
+"... and repetitive text.\n"
+"... \"\"\"\n"
+">>> data = s.encode('zlib')\n"
+">>> data\n"
+"'x\\x9c\\r\\xc9\\xc1\\r\\x80 \\x10\\x04\\xc0?Ul...'\n"
+">>> data.decode('zlib')\n"
+"'Here is a lengthy piece of redundant, overly verbose,\\nand repetitive text."
+"\\n'\n"
+">>> print s.encode('uu')\n"
+"begin 666 <data>\n"
+"M2&5R92!I<R!A(&QE;F=T:'D@<&EE8V4@;V8@<F5D=6YD86YT+\"!O=F5R;'D@\n"
+">=F5R8F]S92P*86YD(')E<&5T:71I=F4@=&5X=\"X*\n"
+"\n"
+"end\n"
+">>> \"sheesh\".encode('rot-13')\n"
+"'furrfu'"
 msgstr ""
-"Para convertir una instancia de clase a Unicode, se puede definir un método :"
-"meth:`__unicode__` por clase, análogo a :meth:`__str__`."
 
-#: ../Doc/whatsnew/2.2.rst:825
+#: ../Doc/whatsnew/2.2.rst:823
+#, fuzzy
 msgid ""
-":meth:`encode`, :meth:`decode`, and :meth:`__unicode__` were implemented by "
-"Marc-André Lemburg.  The changes to support using UCS-4 internally were "
+"To convert a class instance to Unicode, a :meth:`!__unicode__` method can be "
+"defined by a class, analogous to :meth:`!__str__`."
+msgstr ""
+"Para convertir una instancia de clase a Unicode, se puede definir un "
+"método :meth:`__unicode__` por clase, análogo a :meth:`__str__`."
+
+#: ../Doc/whatsnew/2.2.rst:826
+#, fuzzy
+msgid ""
+":meth:`!encode`, :meth:`!decode`, and :meth:`!__unicode__` were implemented "
+"by Marc-André Lemburg.  The changes to support using UCS-4 internally were "
 "implemented by Fredrik Lundh and Martin von Löwis."
 msgstr ""
 ":meth:`encode`, :meth:`decode`, y :meth:`__unicode__` fueron implementados "
 "por Marc-André Lemburg.  Los cambios para soportar el uso de UCS-4 "
 "internamente fueron implementados por Fredrik Lundh y Martin von Löwis."
 
-#: ../Doc/whatsnew/2.2.rst:832
+#: ../Doc/whatsnew/2.2.rst:833
 msgid ":pep:`261` - Support for 'wide' Unicode characters"
 msgstr ":pep:`261` - Soporte para caracteres Unicode 'anchos'"
 
-#: ../Doc/whatsnew/2.2.rst:833
+#: ../Doc/whatsnew/2.2.rst:834
 msgid "Written by Paul Prescod."
 msgstr "Escrito por Paul Prescod."
 
-#: ../Doc/whatsnew/2.2.rst:839
+#: ../Doc/whatsnew/2.2.rst:840
 msgid "PEP 227: Nested Scopes"
 msgstr "PEP 227: Ámbitos anidados"
 
-#: ../Doc/whatsnew/2.2.rst:841
+#: ../Doc/whatsnew/2.2.rst:842
 msgid ""
 "In Python 2.1, statically nested scopes were added as an optional feature, "
 "to be enabled by a ``from __future__ import nested_scopes`` directive.  In "
@@ -1477,7 +1777,7 @@ msgstr ""
 "anidados de mi documento \"What's New in Python 2.1\"; si lo leíste cuando "
 "salió la 2.1, puedes saltarte el resto de esta sección."
 
-#: ../Doc/whatsnew/2.2.rst:848
+#: ../Doc/whatsnew/2.2.rst:849
 msgid ""
 "The largest change introduced in Python 2.1, and made complete in 2.2, is to "
 "Python's scoping rules.  In Python 2.0, at any given time there are at most "
@@ -1493,9 +1793,20 @@ msgstr ""
 "sorprendía a la gente porque no coincidía con sus expectativas intuitivas.  "
 "Por ejemplo, una definición de función recursiva anidada no funciona::"
 
-#: ../Doc/whatsnew/2.2.rst:862
+#: ../Doc/whatsnew/2.2.rst:856
 msgid ""
-"The function :func:`g` will always raise a :exc:`NameError` exception, "
+"def f():\n"
+"    ...\n"
+"    def g(value):\n"
+"        ...\n"
+"        return g(value-1) + 1\n"
+"    ..."
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:863
+#, fuzzy
+msgid ""
+"The function :func:`!g` will always raise a :exc:`NameError` exception, "
 "because the binding of the name ``g`` isn't in either its local namespace or "
 "in the module-level namespace.  This isn't much of a problem in practice "
 "(how often do you recursively define interior functions like this?), but "
@@ -1508,12 +1819,22 @@ msgstr ""
 "el enlace del nombre ``g`` no está ni en su espacio de nombres local ni en "
 "el espacio de nombres a nivel de módulo.  Esto no es un gran problema en la "
 "práctica (¿con qué frecuencia se definen recursivamente funciones interiores "
-"como ésta?), pero esto también hacía más torpe el uso de la expresión :"
-"keyword:`lambda`, y esto era un problema en la práctica. En el código que "
-"utiliza :keyword:`!lambda` a menudo se pueden encontrar variables locales "
-"que se copian al pasarlas como valores por defecto de los argumentos. ::"
+"como ésta?), pero esto también hacía más torpe el uso de la "
+"expresión :keyword:`lambda`, y esto era un problema en la práctica. En el "
+"código que utiliza :keyword:`!lambda` a menudo se pueden encontrar variables "
+"locales que se copian al pasarlas como valores por defecto de los "
+"argumentos. ::"
 
-#: ../Doc/whatsnew/2.2.rst:876
+#: ../Doc/whatsnew/2.2.rst:871
+msgid ""
+"def find(self, name):\n"
+"    \"Return list of any entries equal to 'name'\"\n"
+"    L = filter(lambda x, name=name: x == name,\n"
+"               self.list_attribute)\n"
+"    return L"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:877
 msgid ""
 "The readability of Python code written in a strongly functional style "
 "suffers greatly as a result."
@@ -1521,16 +1842,17 @@ msgstr ""
 "La legibilidad del código Python escrito en un estilo fuertemente funcional "
 "sufre mucho como resultado."
 
-#: ../Doc/whatsnew/2.2.rst:879
+#: ../Doc/whatsnew/2.2.rst:880
 msgid ""
 "The most significant change to Python 2.2 is that static scoping has been "
 "added to the language to fix this problem.  As a first effect, the "
 "``name=name`` default argument is now unnecessary in the above example.  Put "
 "simply, when a given variable name is not assigned a value within a function "
-"(by an assignment, or the :keyword:`def`, :keyword:`class`, or :keyword:"
-"`import` statements), references to the variable will be looked up in the "
-"local namespace of the enclosing scope.  A more detailed explanation of the "
-"rules, and a dissection of the implementation, can be found in the PEP."
+"(by an assignment, or the :keyword:`def`, :keyword:`class`, "
+"or :keyword:`import` statements), references to the variable will be looked "
+"up in the local namespace of the enclosing scope.  A more detailed "
+"explanation of the rules, and a dissection of the implementation, can be "
+"found in the PEP."
 msgstr ""
 "El cambio más significativo de Python 2.2 es que se ha añadido al lenguaje "
 "el ámbito estático para solucionar este problema.  Como primer efecto, el "
@@ -1542,7 +1864,7 @@ msgstr ""
 "ámbito que la rodea.  Puede encontrar una explicación más detallada de las "
 "reglas y una disección de la implementación en el PEP."
 
-#: ../Doc/whatsnew/2.2.rst:888
+#: ../Doc/whatsnew/2.2.rst:889
 msgid ""
 "This change may cause some compatibility problems for code where the same "
 "variable name is used both at the module level and as a local variable "
@@ -1556,7 +1878,7 @@ msgstr ""
 "de función. Sin embargo, esto parece bastante improbable, ya que dicho "
 "código habría sido bastante confuso de leer en primer lugar."
 
-#: ../Doc/whatsnew/2.2.rst:894
+#: ../Doc/whatsnew/2.2.rst:895
 msgid ""
 "One side effect of the change is that the ``from module import *`` and "
 "``exec`` statements have been made illegal inside a function scope under "
@@ -1585,23 +1907,34 @@ msgstr ""
 "definiciones de funciones o expresiones :keyword:`lambda` con variables "
 "libres, el compilador lo señalará lanzando una excepción :exc:`SyntaxError`."
 
-#: ../Doc/whatsnew/2.2.rst:907
+#: ../Doc/whatsnew/2.2.rst:908
 msgid "To make the preceding explanation a bit clearer, here's an example::"
 msgstr ""
 "Para que la explicación anterior quede un poco más clara, he aquí un "
 "ejemplo::"
 
-#: ../Doc/whatsnew/2.2.rst:916
+#: ../Doc/whatsnew/2.2.rst:910
+msgid ""
+"x = 1\n"
+"def f():\n"
+"    # The next line is a syntax error\n"
+"    exec 'x=2'\n"
+"    def g():\n"
+"        return x"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:917
+#, fuzzy
 msgid ""
 "Line 4 containing the ``exec`` statement is a syntax error, since ``exec`` "
 "would define a new local variable named ``x`` whose value should be accessed "
-"by :func:`g`."
+"by :func:`!g`."
 msgstr ""
 "La línea 4 que contiene la sentencia ``exec`` es un error de sintaxis, ya "
 "que ``exec`` definiría una nueva variable local llamada ``x`` cuyo valor "
 "debería ser accedido por :func:`g`."
 
-#: ../Doc/whatsnew/2.2.rst:920
+#: ../Doc/whatsnew/2.2.rst:921
 msgid ""
 "This shouldn't be much of a limitation, since ``exec`` is rarely used in "
 "most Python code (and when it is used, it's often a sign of a poor design "
@@ -1611,25 +1944,27 @@ msgstr ""
 "en la mayoría del código de Python (y cuando se utiliza, a menudo es un "
 "signo de un mal diseño de todos modos)."
 
-#: ../Doc/whatsnew/2.2.rst:927
+#: ../Doc/whatsnew/2.2.rst:928
 msgid ":pep:`227` - Statically Nested Scopes"
 msgstr ":pep:`227` - Ámbitos anidados estáticamente"
 
-#: ../Doc/whatsnew/2.2.rst:928
+#: ../Doc/whatsnew/2.2.rst:929
 msgid "Written and implemented by Jeremy Hylton."
 msgstr "Escrito e implementado por Jeremy Hylton."
 
-#: ../Doc/whatsnew/2.2.rst:934
+#: ../Doc/whatsnew/2.2.rst:935
 msgid "New and Improved Modules"
 msgstr "Módulos nuevos y mejorados"
 
-#: ../Doc/whatsnew/2.2.rst:936
+#: ../Doc/whatsnew/2.2.rst:937
+#, fuzzy
 msgid ""
-"The :mod:`xmlrpclib` module was contributed to the standard library by "
-"Fredrik Lundh, providing support for writing XML-RPC clients.  XML-RPC is a "
-"simple remote procedure call protocol built on top of HTTP and XML. For "
-"example, the following snippet retrieves a list of RSS channels from the "
-"O'Reilly Network, and then  lists the recent headlines for one channel::"
+"The :mod:`xmlrpclib <xmlrpc.client>` module was contributed to the standard "
+"library by Fredrik Lundh, providing support for writing XML-RPC clients.  "
+"XML-RPC is a simple remote procedure call protocol built on top of HTTP and "
+"XML. For example, the following snippet retrieves a list of RSS channels "
+"from the O'Reilly Network, and then  lists the recent headlines for one "
+"channel::"
 msgstr ""
 "El módulo :mod:`xmlrpclib` fue aportado a la biblioteca estándar por Fredrik "
 "Lundh, proporcionando soporte para escribir clientes XML-RPC.  XML-RPC es un "
@@ -1638,57 +1973,82 @@ msgstr ""
 "de la red O'Reilly y, a continuación, muestra los titulares recientes de un "
 "canal::"
 
-#: ../Doc/whatsnew/2.2.rst:959
+#: ../Doc/whatsnew/2.2.rst:943
 msgid ""
-"The :mod:`SimpleXMLRPCServer` module makes it easy to create straightforward "
-"XML-RPC servers.  See http://xmlrpc.scripting.com/ for more information "
-"about XML-RPC."
+"import xmlrpclib\n"
+"s = xmlrpclib.Server(\n"
+"      'http://www.oreillynet.com/meerkat/xml-rpc/server.php')\n"
+"channels = s.meerkat.getChannels()\n"
+"# channels is a list of dictionaries, like this:\n"
+"# [{'id': 4, 'title': 'Freshmeat Daily News'}\n"
+"#  {'id': 190, 'title': '32Bits Online'},\n"
+"#  {'id': 4549, 'title': '3DGamers'}, ... ]\n"
+"\n"
+"# Get the items for one channel\n"
+"items = s.meerkat.getItems( {'channel': 4} )\n"
+"\n"
+"# 'items' is another list of dictionaries, like this:\n"
+"# [{'link': 'http://freshmeat.net/releases/52719/',\n"
+"#   'description': 'A utility which converts HTML to XSL FO.',\n"
+"#   'title': 'html2fo 0.3 (Default)'}, ... ]"
+msgstr ""
+
+#: ../Doc/whatsnew/2.2.rst:960
+#, fuzzy
+msgid ""
+"The :mod:`SimpleXMLRPCServer <xmlrpc.server>` module makes it easy to create "
+"straightforward XML-RPC servers.  See http://xmlrpc.scripting.com/ for more "
+"information about XML-RPC."
 msgstr ""
 "El módulo :mod:`SimpleXMLRPCServer` facilita la creación de servidores XML-"
 "RPC sencillos.  Consulte http://xmlrpc.scripting.com/ para obtener más "
 "información sobre XML-RPC."
 
-#: ../Doc/whatsnew/2.2.rst:962
+#: ../Doc/whatsnew/2.2.rst:963
 msgid ""
-"The new :mod:`hmac` module implements the HMAC algorithm described by :rfc:"
-"`2104`. (Contributed by Gerhard Häring.)"
+"The new :mod:`hmac` module implements the HMAC algorithm described "
+"by :rfc:`2104`. (Contributed by Gerhard Häring.)"
 msgstr ""
-"El nuevo módulo :mod:`hmac` implementa el algoritmo HMAC descrito por :rfc:"
-"`2104`. (Contribución de Gerhard Häring)"
+"El nuevo módulo :mod:`hmac` implementa el algoritmo HMAC descrito "
+"por :rfc:`2104`. (Contribución de Gerhard Häring)"
 
-#: ../Doc/whatsnew/2.2.rst:965
+#: ../Doc/whatsnew/2.2.rst:966
+#, fuzzy
 msgid ""
 "Several functions that originally returned lengthy tuples now return pseudo-"
 "sequences that still behave like tuples but also have mnemonic attributes "
-"such as memberst_mtime or :attr:`tm_year`. The enhanced functions include :"
-"func:`stat`, :func:`fstat`, :func:`statvfs`, and :func:`fstatvfs` in the :"
-"mod:`os` module, and :func:`localtime`, :func:`gmtime`, and :func:`strptime` "
-"in the :mod:`time` module."
+"such as :attr:`!memberst_mtime` or :attr:`~time.struct_time.tm_year`. The "
+"enhanced functions "
+"include :func:`~os.stat`, :func:`~os.fstat`, :func:`~os.statvfs`, "
+"and :func:`~os.fstatvfs` in the :mod:`os` module, "
+"and :func:`~time.localtime`, :func:`~time.gmtime`, "
+"and :func:`~time.strptime` in the :mod:`time` module."
 msgstr ""
 "Varias funciones que originalmente retornaban tuplas largas ahora retornan "
 "pseudo-secuencias que siguen comportándose como tuplas pero que también "
 "tienen atributos mnemónicos como memberst_mtime o :attr:`tm_year`. Las "
-"funciones mejoradas incluyen :func:`stat`, :func:`fstat`, :func:`statvfs` y :"
-"func:`fstatvfs` en el módulo :mod:`os`, y :func:`localtime`, :func:`gmtime` "
-"y :func:`strptime` en el módulo :mod:`time`."
+"funciones mejoradas incluyen :func:`stat`, :func:`fstat`, :func:`statvfs` "
+"y :func:`fstatvfs` en el módulo :mod:`os`, "
+"y :func:`localtime`, :func:`gmtime` y :func:`strptime` en el "
+"módulo :mod:`time`."
 
-#: ../Doc/whatsnew/2.2.rst:972
+#: ../Doc/whatsnew/2.2.rst:973
 msgid ""
 "For example, to obtain a file's size using the old tuples, you'd end up "
 "writing something like ``file_size = os.stat(filename)[stat.ST_SIZE]``, but "
-"now this can be written more clearly as ``file_size = os.stat(filename)."
-"st_size``."
+"now this can be written more clearly as ``file_size = "
+"os.stat(filename).st_size``."
 msgstr ""
 "Por ejemplo, para obtener el tamaño de un archivo utilizando las antiguas "
-"tuplas, se terminaba escribiendo algo como ``tamaño_de_archivo = os."
-"stat(nombre_de_archivo)[stat.ST_SIZE]``, pero ahora se puede escribir más "
+"tuplas, se terminaba escribiendo algo como ``tamaño_de_archivo = "
+"os.stat(nombre_de_archivo)[stat.ST_SIZE]``, pero ahora se puede escribir más "
 "claramente como ``tamaño_de_archivo = os.stat(nombre_de_archivo).st_size``."
 
-#: ../Doc/whatsnew/2.2.rst:976
+#: ../Doc/whatsnew/2.2.rst:977
 msgid "The original patch for this feature was contributed by Nick Mathewson."
 msgstr "El parche original para esta función fue aportado por Nick Mathewson."
 
-#: ../Doc/whatsnew/2.2.rst:978
+#: ../Doc/whatsnew/2.2.rst:979
 msgid ""
 "The Python profiler has been extensively reworked and various errors in its "
 "output have been corrected.  (Contributed by Fred L. Drake, Jr. and Tim "
@@ -1698,17 +2058,17 @@ msgstr ""
 "varios errores en su salida.  (Contribución de Fred L. Drake, Jr. y Tim "
 "Peters)"
 
-#: ../Doc/whatsnew/2.2.rst:981
+#: ../Doc/whatsnew/2.2.rst:982
 msgid ""
-"The :mod:`socket` module can be compiled to support IPv6; specify the :"
-"option:`!--enable-ipv6` option to Python's configure script.  (Contributed "
-"by Jun-ichiro \"itojun\" Hagino.)"
+"The :mod:`socket` module can be compiled to support IPv6; specify "
+"the :option:`!--enable-ipv6` option to Python's configure script.  "
+"(Contributed by Jun-ichiro \"itojun\" Hagino.)"
 msgstr ""
 "El módulo :mod:`socket` puede ser compilado para soportar IPv6; especifica "
 "la opción :option:`!--enable-ipv6` al script configure de Python.  "
 "(Contribución de Jun-ichiro \"itojun\" Hagino)"
 
-#: ../Doc/whatsnew/2.2.rst:985
+#: ../Doc/whatsnew/2.2.rst:986
 msgid ""
 "Two new format characters were added to the :mod:`struct` module for 64-bit "
 "integers on platforms that support the C :c:expr:`long long` type.  ``q`` is "
@@ -1721,43 +2081,45 @@ msgstr ""
 "El valor se retorna en el tipo de entero largo de Python. (Aportado por Tim "
 "Peters.)"
 
-#: ../Doc/whatsnew/2.2.rst:990
+#: ../Doc/whatsnew/2.2.rst:991
 msgid ""
-"In the interpreter's interactive mode, there's a new built-in function :func:"
-"`help` that uses the :mod:`pydoc` module introduced in Python 2.1 to provide "
-"interactive help. ``help(object)`` displays any available help text about "
-"*object*.  :func:`help` with no argument puts you in an online help utility, "
-"where you can enter the names of functions, classes, or modules to read "
-"their help text. (Contributed by Guido van Rossum, using Ka-Ping Yee's :mod:"
-"`pydoc` module.)"
+"In the interpreter's interactive mode, there's a new built-in "
+"function :func:`help` that uses the :mod:`pydoc` module introduced in Python "
+"2.1 to provide interactive help. ``help(object)`` displays any available "
+"help text about *object*.  :func:`help` with no argument puts you in an "
+"online help utility, where you can enter the names of functions, classes, or "
+"modules to read their help text. (Contributed by Guido van Rossum, using Ka-"
+"Ping Yee's :mod:`pydoc` module.)"
 msgstr ""
-"En el modo interactivo del intérprete, hay una nueva función incorporada :"
-"func:`help` que utiliza el módulo :mod:`pydoc` introducido en Python 2.1 "
-"para proporcionar ayuda interactiva. :func:`help` sin ningún argumento te "
-"sitúa en una utilidad de ayuda online, donde puedes introducir los nombres "
-"de las funciones, clases o módulos para leer su texto de ayuda. (Contribuido "
-"por Guido van Rossum, usando el módulo :mod:`pydoc` de Ka-Ping Yee)"
+"En el modo interactivo del intérprete, hay una nueva función "
+"incorporada :func:`help` que utiliza el módulo :mod:`pydoc` introducido en "
+"Python 2.1 para proporcionar ayuda interactiva. :func:`help` sin ningún "
+"argumento te sitúa en una utilidad de ayuda online, donde puedes introducir "
+"los nombres de las funciones, clases o módulos para leer su texto de ayuda. "
+"(Contribuido por Guido van Rossum, usando el módulo :mod:`pydoc` de Ka-Ping "
+"Yee)"
 
-#: ../Doc/whatsnew/2.2.rst:998
+#: ../Doc/whatsnew/2.2.rst:999
+#, fuzzy
 msgid ""
 "Various bugfixes and performance improvements have been made to the SRE "
 "engine underlying the :mod:`re` module.  For example, the :func:`re.sub` "
 "and :func:`re.split` functions have been rewritten in C.  Another "
 "contributed patch speeds up certain Unicode character ranges by a factor of "
-"two, and a new :meth:`finditer`  method that returns an iterator over all "
-"the non-overlapping matches in  a given string.  (SRE is maintained by "
+"two, and a new :meth:`~re.finditer`  method that returns an iterator over "
+"all the non-overlapping matches in  a given string.  (SRE is maintained by "
 "Fredrik Lundh.  The BIGCHARSET patch was contributed by Martin von Löwis.)"
 msgstr ""
 "Se han realizado varias correcciones de errores y mejoras de rendimiento en "
-"el motor SRE subyacente al módulo :mod:`re`.  Por ejemplo, las funciones :"
-"func:`re.sub` y :func:`re.split` han sido reescritas en C. Otro parche "
-"contribuido acelera ciertos rangos de caracteres Unicode por un factor de "
-"dos, y un nuevo método :meth:`finditer` que retorna un iterador sobre todas "
-"las coincidencias no superpuestas en una cadena dada.  (El mantenimiento de "
-"SRE corre a cargo de Fredrik Lundh.  El parche BIGCHARSET fue aportado por "
-"Martin von Löwis)"
+"el motor SRE subyacente al módulo :mod:`re`.  Por ejemplo, las "
+"funciones :func:`re.sub` y :func:`re.split` han sido reescritas en C. Otro "
+"parche contribuido acelera ciertos rangos de caracteres Unicode por un "
+"factor de dos, y un nuevo método :meth:`finditer` que retorna un iterador "
+"sobre todas las coincidencias no superpuestas en una cadena dada.  (El "
+"mantenimiento de SRE corre a cargo de Fredrik Lundh.  El parche BIGCHARSET "
+"fue aportado por Martin von Löwis)"
 
-#: ../Doc/whatsnew/2.2.rst:1006
+#: ../Doc/whatsnew/2.2.rst:1007
 msgid ""
 "The :mod:`smtplib` module now supports :rfc:`2487`, \"Secure SMTP over "
 "TLS\", so it's now possible to encrypt the SMTP traffic between a Python "
@@ -1766,11 +2128,11 @@ msgid ""
 msgstr ""
 "El módulo :mod:`smtplib` soporta ahora :rfc:`2487`, \"Secure SMTP over "
 "TLS\", por lo que ahora es posible cifrar el tráfico SMTP entre un programa "
-"Python y el agente de transporte de correo que recibe un mensaje. :mod:"
-"`smtplib` también soporta la autenticación SMTP.  (Contribución de Gerhard "
-"Häring)"
+"Python y el agente de transporte de correo que recibe un "
+"mensaje. :mod:`smtplib` también soporta la autenticación SMTP.  "
+"(Contribución de Gerhard Häring)"
 
-#: ../Doc/whatsnew/2.2.rst:1011
+#: ../Doc/whatsnew/2.2.rst:1012
 msgid ""
 "The :mod:`imaplib` module, maintained by Piers Lauder, has support for "
 "several new extensions: the NAMESPACE extension defined in :rfc:`2342`, "
@@ -1781,13 +2143,14 @@ msgstr ""
 "varias extensiones nuevas: la extensión NAMESPACE definida en :rfc:`2342`, "
 "SORT, GETACL y SETACL.  (Contribución de Anthony Baxter y Michel Pelletier)"
 
-#: ../Doc/whatsnew/2.2.rst:1015
+#: ../Doc/whatsnew/2.2.rst:1016
+#, fuzzy
 msgid ""
-"The :mod:`rfc822` module's parsing of email addresses is now compliant with :"
-"rfc:`2822`, an update to :rfc:`822`.  (The module's name is *not* going to "
-"be changed to ``rfc2822``.)  A new package, :mod:`email`, has also been "
-"added for parsing and generating e-mail messages.  (Contributed by Barry "
-"Warsaw, and arising out of his work on Mailman.)"
+"The :mod:`!rfc822` module's parsing of email addresses is now compliant "
+"with :rfc:`2822`, an update to :rfc:`822`.  (The module's name is *not* "
+"going to be changed to ``rfc2822``.)  A new package, :mod:`email`, has also "
+"been added for parsing and generating e-mail messages.  (Contributed by "
+"Barry Warsaw, and arising out of his work on Mailman.)"
 msgstr ""
 "El módulo :mod:`rfc822` que analiza las direcciones de correo electrónico "
 "cumple ahora con :rfc:`2822`, una actualización de :rfc:`822`.  (El nombre "
@@ -1796,71 +2159,75 @@ msgstr ""
 "electrónico.  (Contribuido por Barry Warsaw, y surgido de su trabajo en "
 "Mailman)"
 
-#: ../Doc/whatsnew/2.2.rst:1021
+#: ../Doc/whatsnew/2.2.rst:1022
+#, fuzzy
 msgid ""
-"The :mod:`difflib` module now contains a new :class:`Differ` class for "
+"The :mod:`difflib` module now contains a new :class:`!Differ` class for "
 "producing human-readable lists of changes (a \"delta\") between two "
-"sequences of lines of text.  There are also two generator functions, :func:"
-"`ndiff` and :func:`restore`, which respectively return a delta from two "
+"sequences of lines of text.  There are also two generator functions, :func:`!"
+"ndiff` and :func:`!restore`, which respectively return a delta from two "
 "sequences, or one of the original sequences from a delta. (Grunt work "
 "contributed by David Goodger, from ndiff.py code by Tim Peters who then did "
 "the generatorization.)"
 msgstr ""
 "El módulo :mod:`difflib` contiene ahora una nueva clase :class:`Differ` para "
 "producir listas legibles por humanos de cambios (un \"delta\") entre dos "
-"secuencias de líneas de texto.  También hay dos funciones generadoras, :func:"
-"`ndiff` y :func:`restore`, que retornan respectivamente un delta de dos "
-"secuencias, o una de las secuencias originales de un delta. (Trabajo de "
-"gruñido contribuido por David Goodger, a partir del código ndiff.py de Tim "
-"Peters que luego hizo la generización)"
+"secuencias de líneas de texto.  También hay dos funciones "
+"generadoras, :func:`ndiff` y :func:`restore`, que retornan respectivamente "
+"un delta de dos secuencias, o una de las secuencias originales de un delta. "
+"(Trabajo de gruñido contribuido por David Goodger, a partir del código "
+"ndiff.py de Tim Peters que luego hizo la generización)"
 
-#: ../Doc/whatsnew/2.2.rst:1028
+#: ../Doc/whatsnew/2.2.rst:1029
+#, fuzzy
 msgid ""
-"New constants :const:`ascii_letters`, :const:`ascii_lowercase`, and :const:"
-"`ascii_uppercase` were added to the :mod:`string` module.  There were "
-"several modules in the standard library that used :const:`string.letters` to "
-"mean the ranges A-Za-z, but that assumption is incorrect when locales are in "
-"use, because :const:`string.letters` varies depending on the set of legal "
-"characters defined by the current locale.  The buggy modules have all been "
-"fixed to use :const:`ascii_letters` instead. (Reported by an unknown person; "
-"fixed by Fred L. Drake, Jr.)"
+"New constants :const:`!ascii_letters`, :const:`!ascii_lowercase`, "
+"and :const:`!ascii_uppercase` were added to the :mod:`string` module.  There "
+"were several modules in the standard library that used :const:`!"
+"string.letters` to mean the ranges A-Za-z, but that assumption is incorrect "
+"when locales are in use, because :const:`!string.letters` varies depending "
+"on the set of legal characters defined by the current locale.  The buggy "
+"modules have all been fixed to use :const:`!ascii_letters` instead. "
+"(Reported by an unknown person; fixed by Fred L. Drake, Jr.)"
 msgstr ""
-"Se han añadido las nuevas constantes :const:`ascii_letters`, :const:"
-"`ascii_lowercase` y :const:`ascii_uppercase` al módulo :mod:`string`.  Había "
-"varios módulos en la biblioteca estándar que utilizaban :const:`string."
-"letters` para referirse a los rangos A-Za-z, pero esa suposición es "
-"incorrecta cuando se utilizan locales, porque :const:`string.letters` varía "
-"dependiendo del conjunto de caracteres legales definidos por el local "
-"actual.  Los módulos con errores se han corregido para que utilicen :const:"
-"`ascii_letters` en su lugar. (Informado por una persona desconocida; "
-"corregido por Fred L. Drake, Jr.)"
+"Se han añadido las nuevas "
+"constantes :const:`ascii_letters`, :const:`ascii_lowercase` "
+"y :const:`ascii_uppercase` al módulo :mod:`string`.  Había varios módulos en "
+"la biblioteca estándar que utilizaban :const:`string.letters` para referirse "
+"a los rangos A-Za-z, pero esa suposición es incorrecta cuando se utilizan "
+"locales, porque :const:`string.letters` varía dependiendo del conjunto de "
+"caracteres legales definidos por el local actual.  Los módulos con errores "
+"se han corregido para que utilicen :const:`ascii_letters` en su lugar. "
+"(Informado por una persona desconocida; corregido por Fred L. Drake, Jr.)"
 
-#: ../Doc/whatsnew/2.2.rst:1037
+#: ../Doc/whatsnew/2.2.rst:1038
+#, fuzzy
 msgid ""
 "The :mod:`mimetypes` module now makes it easier to use alternative MIME-type "
-"databases by the addition of a :class:`MimeTypes` class, which takes a list "
-"of filenames to be parsed.  (Contributed by Fred L. Drake, Jr.)"
+"databases by the addition of a :class:`~mimetypes.MimeTypes` class, which "
+"takes a list of filenames to be parsed.  (Contributed by Fred L. Drake, Jr.)"
 msgstr ""
 "El módulo :mod:`mimetypes` facilita ahora el uso de bases de datos de tipos "
 "MIME alternativos mediante la adición de una clase :class:`MimeTypes`, que "
 "toma una lista de nombres de archivo para ser analizados.  (Contribución de "
 "Fred L. Drake, Jr.)"
 
-#: ../Doc/whatsnew/2.2.rst:1041
+#: ../Doc/whatsnew/2.2.rst:1042
+#, fuzzy
 msgid ""
-"A :class:`Timer` class was added to the :mod:`threading` module that allows "
-"scheduling an activity to happen at some future time.  (Contributed by "
-"Itamar Shtull-Trauring.)"
+"A :class:`~threading.Timer` class was added to the :mod:`threading` module "
+"that allows scheduling an activity to happen at some future time.  "
+"(Contributed by Itamar Shtull-Trauring.)"
 msgstr ""
 "Se ha añadido una clase :class:`Timer` al módulo :mod:`threading` que "
 "permite programar una actividad para que ocurra en algún momento futuro.  "
 "(Contribución de Itamar Shtull-Trauring)"
 
-#: ../Doc/whatsnew/2.2.rst:1049
+#: ../Doc/whatsnew/2.2.rst:1050
 msgid "Interpreter Changes and Fixes"
 msgstr "Cambios y correcciones en el intérprete"
 
-#: ../Doc/whatsnew/2.2.rst:1051
+#: ../Doc/whatsnew/2.2.rst:1052
 msgid ""
 "Some of the changes only affect people who deal with the Python interpreter "
 "at the C level because they're writing Python extension modules, embedding "
@@ -1874,7 +2241,7 @@ msgstr ""
 "intérprete. Si sólo escribes código Python, ninguno de los cambios descritos "
 "aquí te afectará mucho."
 
-#: ../Doc/whatsnew/2.2.rst:1056
+#: ../Doc/whatsnew/2.2.rst:1057
 msgid ""
 "Profiling and tracing functions can now be implemented in C, which can "
 "operate at much higher speeds than Python-based functions and should reduce "
@@ -1889,31 +2256,32 @@ msgstr ""
 "puede operar a velocidades mucho mayores que las funciones basadas en Python "
 "y debería reducir la sobrecarga de perfilado y rastreo.  Esto será de "
 "interés para los autores de entornos de desarrollo para Python.  Se han "
-"añadido dos nuevas funciones en C a la API de Python, :c:func:"
-"`PyEval_SetProfile` y :c:func:`PyEval_SetTrace`. Las funciones :func:`sys."
-"setprofile` y :func:`sys.settrace` existentes siguen existiendo, y "
-"simplemente se han cambiado para utilizar la nueva interfaz de nivel C.  "
-"(Contribución de Fred L. Drake, Jr.)"
+"añadido dos nuevas funciones en C a la API de "
+"Python, :c:func:`PyEval_SetProfile` y :c:func:`PyEval_SetTrace`. Las "
+"funciones :func:`sys.setprofile` y :func:`sys.settrace` existentes siguen "
+"existiendo, y simplemente se han cambiado para utilizar la nueva interfaz de "
+"nivel C.  (Contribución de Fred L. Drake, Jr.)"
 
-#: ../Doc/whatsnew/2.2.rst:1065
+#: ../Doc/whatsnew/2.2.rst:1066
+#, fuzzy
 msgid ""
-"Another low-level API, primarily of interest to implementors of Python "
-"debuggers and development tools, was added. :c:func:"
-"`PyInterpreterState_Head` and :c:func:`PyInterpreterState_Next` let a caller "
-"walk through all the existing interpreter objects; :c:func:"
-"`PyInterpreterState_ThreadHead` and :c:func:`PyThreadState_Next` allow "
-"looping over all the thread states for a given interpreter.  (Contributed by "
-"David Beazley.)"
+"Another low-level API, primarily of interest to implementers of Python "
+"debuggers and development tools, was "
+"added. :c:func:`PyInterpreterState_Head` "
+"and :c:func:`PyInterpreterState_Next` let a caller walk through all the "
+"existing interpreter objects; :c:func:`PyInterpreterState_ThreadHead` "
+"and :c:func:`PyThreadState_Next` allow looping over all the thread states "
+"for a given interpreter.  (Contributed by David Beazley.)"
 msgstr ""
 "Se ha añadido otra API de bajo nivel, principalmente de interés para los "
-"implementadores de depuradores y herramientas de desarrollo de Python. :c:"
-"func:`PyInterpreterState_Head` y :c:func:`PyInterpreterState_Next` permiten "
-"al usuario recorrer todos los objetos intérpretes existentes; :c:func:"
-"`PyInterpreterState_ThreadHead` y :c:func:`PyThreadState_Next` permiten "
-"recorrer todos los estados de los hilos de un intérprete dado.  "
-"(Contribución de David Beazley)"
+"implementadores de depuradores y herramientas de desarrollo de "
+"Python. :c:func:`PyInterpreterState_Head` "
+"y :c:func:`PyInterpreterState_Next` permiten al usuario recorrer todos los "
+"objetos intérpretes existentes; :c:func:`PyInterpreterState_ThreadHead` "
+"y :c:func:`PyThreadState_Next` permiten recorrer todos los estados de los "
+"hilos de un intérprete dado.  (Contribución de David Beazley)"
 
-#: ../Doc/whatsnew/2.2.rst:1072
+#: ../Doc/whatsnew/2.2.rst:1073
 msgid ""
 "The C-level interface to the garbage collector has been changed to make it "
 "easier to write extension types that support garbage collection and to debug "
@@ -1931,53 +2299,53 @@ msgstr ""
 "API seguirán compilando pero *no* participarán en la recolección de basura, "
 "por lo que actualizarlas para la 2.2 debería considerarse de alta prioridad."
 
-#: ../Doc/whatsnew/2.2.rst:1079
+#: ../Doc/whatsnew/2.2.rst:1080
 msgid ""
 "To upgrade an extension module to the new API, perform the following steps:"
 msgstr ""
 "Para actualizar un módulo de extensión a la nueva API, realice los "
 "siguientes pasos:"
 
-#: ../Doc/whatsnew/2.2.rst:1081
+#: ../Doc/whatsnew/2.2.rst:1082
 #, fuzzy
 msgid "Rename :c:macro:`!Py_TPFLAGS_GC` to :c:macro:`Py_TPFLAGS_HAVE_GC`."
 msgstr ""
 "Cambia el nombre de :c:func:`Py_TPFLAGS_GC` a :c:func:`PyTPFLAGS_HAVE_GC`."
 
-#: ../Doc/whatsnew/2.2.rst:1084
+#: ../Doc/whatsnew/2.2.rst:1085
 msgid ""
 "Use :c:func:`PyObject_GC_New` or :c:func:`PyObject_GC_NewVar` to allocate"
 msgstr ""
 "Utilice :c:func:`PyObject_GC_New` o :c:func:`PyObject_GC_NewVar` para asignar"
 
-#: ../Doc/whatsnew/2.2.rst:1084
+#: ../Doc/whatsnew/2.2.rst:1085
 msgid "objects, and :c:func:`PyObject_GC_Del` to deallocate them."
 msgstr "objetos, y :c:func:`PyObject_GC_Del` para desocuparlos."
 
-#: ../Doc/whatsnew/2.2.rst:1086
+#: ../Doc/whatsnew/2.2.rst:1087
 #, fuzzy
 msgid ""
-"Rename :c:func:`!PyObject_GC_Init` to :c:func:`PyObject_GC_Track` and :c:"
-"func:`!PyObject_GC_Fini` to :c:func:`PyObject_GC_UnTrack`."
+"Rename :c:func:`!PyObject_GC_Init` to :c:func:`PyObject_GC_Track` "
+"and :c:func:`!PyObject_GC_Fini` to :c:func:`PyObject_GC_UnTrack`."
 msgstr ""
-"Cambiar el nombre de :c:func:`PyObject_GC_Init` a :c:func:"
-"`PyObject_GC_Track` y"
+"Cambiar el nombre de :c:func:`PyObject_GC_Init` "
+"a :c:func:`PyObject_GC_Track` y"
 
-#: ../Doc/whatsnew/2.2.rst:1089
+#: ../Doc/whatsnew/2.2.rst:1090
 #, fuzzy
 msgid "Remove :c:macro:`!PyGC_HEAD_SIZE` from object size calculations."
 msgstr ""
 "Eliminar :c:func:`PyGC_HEAD_SIZE` del cálculo del tamaño de los objetos."
 
-#: ../Doc/whatsnew/2.2.rst:1091
+#: ../Doc/whatsnew/2.2.rst:1092
 #, fuzzy
 msgid ""
 "Remove calls to :c:func:`!PyObject_AS_GC` and :c:func:`!PyObject_FROM_GC`."
 msgstr ""
-"Eliminar las llamadas a :c:func:`PyObject_AS_GC` y :c:func:"
-"`PyObject_FROM_GC`."
+"Eliminar las llamadas a :c:func:`PyObject_AS_GC` "
+"y :c:func:`PyObject_FROM_GC`."
 
-#: ../Doc/whatsnew/2.2.rst:1093
+#: ../Doc/whatsnew/2.2.rst:1094
 msgid ""
 "A new ``et`` format sequence was added to :c:func:`PyArg_ParseTuple`; ``et`` "
 "takes both a parameter and an encoding name, and converts the parameter to "
@@ -1988,9 +2356,9 @@ msgid ""
 "converts them to the specified new encoding. (Contributed by M.-A. Lemburg, "
 "and used for the MBCS support on Windows described in the following section.)"
 msgstr ""
-"Se ha añadido una nueva secuencia de formato ``et`` a :c:func:"
-"`PyArg_ParseTuple`; ``et`` toma tanto un parámetro como un nombre de "
-"codificación, y convierte el parámetro a la codificación dada si el "
+"Se ha añadido una nueva secuencia de formato ``et`` "
+"a :c:func:`PyArg_ParseTuple`; ``et`` toma tanto un parámetro como un nombre "
+"de codificación, y convierte el parámetro a la codificación dada si el "
 "parámetro resulta ser una cadena Unicode, o lo deja solo si es una cadena de "
 "8 bits, asumiendo que ya está en la codificación deseada.  Esto difiere del "
 "carácter de formato ``es``, que asume que las cadenas de 8 bits están en la "
@@ -1998,7 +2366,7 @@ msgstr ""
 "codificación especificada. (Contribuido por M.-A. Lemburg, y utilizado para "
 "el soporte de MBCS en Windows descrito en la siguiente sección)"
 
-#: ../Doc/whatsnew/2.2.rst:1102
+#: ../Doc/whatsnew/2.2.rst:1103
 msgid ""
 "A different argument parsing function, :c:func:`PyArg_UnpackTuple`, has been "
 "added that's simpler and presumably faster.  Instead of specifying a format "
@@ -2006,22 +2374,22 @@ msgid ""
 "expected, and a set of pointers to :c:expr:`PyObject*` variables that will "
 "be filled in with argument values."
 msgstr ""
-"Se ha agregado una función de análisis de argumentos diferente, :c:func:"
-"`PyArg_UnpackTuple`, que es más simple y presumiblemente más rápida. En "
-"lugar de especificar una cadena de formato, la persona que llama simplemente "
-"proporciona el número mínimo y máximo de argumentos esperados y un conjunto "
-"de punteros a las variables :c:expr:`PyObject*` que se completarán con los "
-"valores de los argumentos."
+"Se ha agregado una función de análisis de argumentos "
+"diferente, :c:func:`PyArg_UnpackTuple`, que es más simple y presumiblemente "
+"más rápida. En lugar de especificar una cadena de formato, la persona que "
+"llama simplemente proporciona el número mínimo y máximo de argumentos "
+"esperados y un conjunto de punteros a las variables :c:expr:`PyObject*` que "
+"se completarán con los valores de los argumentos."
 
-#: ../Doc/whatsnew/2.2.rst:1108
+#: ../Doc/whatsnew/2.2.rst:1109
 #, fuzzy
 msgid ""
 "Two new flags :c:macro:`METH_NOARGS` and :c:macro:`METH_O` are available in "
 "method definition tables to simplify implementation of methods with no "
 "arguments or a single untyped argument. Calling such methods is more "
-"efficient than calling a corresponding method that uses :c:macro:"
-"`METH_VARARGS`.  Also, the old :c:macro:`!METH_OLDARGS` style of writing C "
-"methods is  now officially deprecated."
+"efficient than calling a corresponding method that "
+"uses :c:macro:`METH_VARARGS`.  Also, the old :c:macro:`!METH_OLDARGS` style "
+"of writing C methods is  now officially deprecated."
 msgstr ""
 "Dos nuevos indicadores :const:`METH_NOARGS` y :const:`METH_O` están "
 "disponibles en las tablas de definición de métodos para simplificar la "
@@ -2031,24 +2399,26 @@ msgstr ""
 "estilo :const:`METH_OLDARGS` de escribir métodos en C está oficialmente en "
 "desuso."
 
-#: ../Doc/whatsnew/2.2.rst:1114
+#: ../Doc/whatsnew/2.2.rst:1115
+#, fuzzy
 msgid ""
-"Two new wrapper functions, :c:func:`PyOS_snprintf` and :c:func:"
-"`PyOS_vsnprintf` were added to provide  cross-platform implementations for "
-"the relatively new :c:func:`snprintf` and :c:func:`vsnprintf` C lib APIs. In "
-"contrast to the standard :c:func:`sprintf` and :c:func:`vsprintf` functions, "
-"the Python versions check the bounds of the buffer used to protect against "
-"buffer overruns. (Contributed by M.-A. Lemburg.)"
+"Two new wrapper functions, :c:func:`PyOS_snprintf` "
+"and :c:func:`PyOS_vsnprintf` were added to provide  cross-platform "
+"implementations for the relatively new :c:func:`snprintf` "
+"and :c:func:`vsnprintf` C lib APIs. In contrast to the "
+"standard :c:func:`sprintf` and :c:func:`!vsprintf` functions, the Python "
+"versions check the bounds of the buffer used to protect against buffer "
+"overruns. (Contributed by M.-A. Lemburg.)"
 msgstr ""
-"Se han añadido dos nuevas funciones de envoltura, :c:func:`PyOS_snprintf` y :"
-"c:func:`PyOS_vsnprintf` para proporcionar implementaciones multiplataforma "
-"para las relativamente nuevas APIs de la biblioteca C :c:func:`snprintf` y :"
-"c:func:`vsnprintf`. A diferencia de las funciones estándar :c:func:`sprintf` "
-"y :c:func:`vsprintf`, las versiones de Python comprueban los límites del "
-"búfer utilizado para protegerse de los desbordamientos del mismo. "
-"(Contribución de M.-A. Lemburg.)"
+"Se han añadido dos nuevas funciones de envoltura, :c:func:`PyOS_snprintf` "
+"y :c:func:`PyOS_vsnprintf` para proporcionar implementaciones "
+"multiplataforma para las relativamente nuevas APIs de la biblioteca "
+"C :c:func:`snprintf` y :c:func:`vsnprintf`. A diferencia de las funciones "
+"estándar :c:func:`sprintf` y :c:func:`vsprintf`, las versiones de Python "
+"comprueban los límites del búfer utilizado para protegerse de los "
+"desbordamientos del mismo. (Contribución de M.-A. Lemburg.)"
 
-#: ../Doc/whatsnew/2.2.rst:1121
+#: ../Doc/whatsnew/2.2.rst:1122
 msgid ""
 "The :c:func:`_PyTuple_Resize` function has lost an unused parameter, so now "
 "it takes 2 parameters instead of 3.  The third argument was never used, and "
@@ -2060,11 +2430,11 @@ msgstr ""
 "argumento nunca se utilizaba, y puede descartarse simplemente al portar el "
 "código de versiones anteriores a Python 2.2."
 
-#: ../Doc/whatsnew/2.2.rst:1129
+#: ../Doc/whatsnew/2.2.rst:1130
 msgid "Other Changes and Fixes"
 msgstr "Otros cambios y correcciones"
 
-#: ../Doc/whatsnew/2.2.rst:1131
+#: ../Doc/whatsnew/2.2.rst:1132
 msgid ""
 "As usual there were a bunch of other improvements and bugfixes scattered "
 "throughout the source tree.  A search through the CVS change logs finds "
@@ -2079,11 +2449,11 @@ msgstr ""
 "corrigieron 143 errores; en 2.2.2 se aplicaron 106 parches y se corrigieron "
 "82 errores.  Es probable que estas cifras estén subestimadas."
 
-#: ../Doc/whatsnew/2.2.rst:1137
+#: ../Doc/whatsnew/2.2.rst:1138
 msgid "Some of the more notable changes are:"
 msgstr "Algunos de los cambios más notables son:"
 
-#: ../Doc/whatsnew/2.2.rst:1139
+#: ../Doc/whatsnew/2.2.rst:1140
 msgid ""
 "The code for the MacOS port for Python, maintained by Jack Jansen, is now "
 "kept in the main Python CVS tree, and many changes have been made to support "
@@ -2093,7 +2463,7 @@ msgstr ""
 "mantiene ahora en el árbol CVS principal de Python, y se han realizado "
 "muchos cambios para soportar MacOS X."
 
-#: ../Doc/whatsnew/2.2.rst:1142
+#: ../Doc/whatsnew/2.2.rst:1143
 msgid ""
 "The most significant change is the ability to build Python as a framework, "
 "enabled by supplying the :option:`!--enable-framework` option to the "
@@ -2110,15 +2480,15 @@ msgstr ""
 "marco de trabajo, que se activa proporcionando la opción :option:`!--enable-"
 "framework` al script de configuración cuando se compila Python.  Según Jack "
 "Jansen, \"Esto instala una instalación autónoma de Python más el "
-"\"pegamento\" del framework de OS X en :file:`/Library/Frameworks/Python."
-"framework` (o en otra ubicación de su elección). Por ahora hay poco "
+"\"pegamento\" del framework de OS X en :file:`/Library/Frameworks/"
+"Python.framework` (o en otra ubicación de su elección). Por ahora hay poco "
 "beneficio inmediato añadido a esto (en realidad, existe la desventaja de que "
 "tienes que cambiar tu PATH para poder encontrar Python), pero es la base "
 "para crear una aplicación Python completa, portar el IDE de MacPython, "
 "posiblemente usar Python como un lenguaje de scripting estándar de OSA y "
 "mucho más.\""
 
-#: ../Doc/whatsnew/2.2.rst:1153
+#: ../Doc/whatsnew/2.2.rst:1154
 msgid ""
 "Most of the MacPython toolbox modules, which interface to MacOS APIs such as "
 "windowing, QuickTime, scripting, etc. have been ported to OS X, but they've "
@@ -2127,11 +2497,11 @@ msgid ""
 msgstr ""
 "La mayoría de los módulos de la caja de herramientas de MacPython, que "
 "interactúan con las APIs de MacOS como ventanas, QuickTime, scripts, etc. "
-"han sido portados a OS X, pero se han dejado comentados en :file:`setup."
-"py`.  Las personas que quieran experimentar con estos módulos pueden "
-"descomentarlos manualmente."
+"han sido portados a OS X, pero se han dejado comentados "
+"en :file:`setup.py`.  Las personas que quieran experimentar con estos "
+"módulos pueden descomentarlos manualmente."
 
-#: ../Doc/whatsnew/2.2.rst:1176
+#: ../Doc/whatsnew/2.2.rst:1177
 msgid ""
 "Keyword arguments passed to built-in functions that don't take them now "
 "cause a :exc:`TypeError` exception to be raised, with the message "
@@ -2141,12 +2511,12 @@ msgstr ""
 "aceptan ahora provocan una excepción :exc:`TypeError`, con el mensaje "
 "\"*function* no acepta argumentos de palabras clave\"."
 
-#: ../Doc/whatsnew/2.2.rst:1180
+#: ../Doc/whatsnew/2.2.rst:1181
 msgid ""
 "Weak references, added in Python 2.1 as an extension module, are now part of "
 "the core because they're used in the implementation of new-style classes.  "
-"The :exc:`ReferenceError` exception has therefore moved from the :mod:"
-"`weakref` module to become a built-in exception."
+"The :exc:`ReferenceError` exception has therefore moved from "
+"the :mod:`weakref` module to become a built-in exception."
 msgstr ""
 "Las referencias débiles, añadidas en Python 2.1 como un módulo de extensión, "
 "son ahora parte del núcleo porque se utilizan en la implementación de clases "
@@ -2154,7 +2524,7 @@ msgstr ""
 "movido del módulo :mod:`weakref` para convertirse en una excepción "
 "incorporada."
 
-#: ../Doc/whatsnew/2.2.rst:1185
+#: ../Doc/whatsnew/2.2.rst:1186
 msgid ""
 "A new script, :file:`Tools/scripts/cleanfuture.py` by Tim Peters, "
 "automatically removes obsolete ``__future__`` statements from Python source "
@@ -2164,21 +2534,21 @@ msgstr ""
 "automáticamente las sentencias ``__future__`` obsoletas del código fuente de "
 "Python."
 
-#: ../Doc/whatsnew/2.2.rst:1189
+#: ../Doc/whatsnew/2.2.rst:1190
 msgid ""
-"An additional *flags* argument has been added to the built-in function :func:"
-"`compile`, so the behaviour of ``__future__`` statements can now be "
-"correctly observed in simulated shells, such as those presented by IDLE and "
-"other development environments.  This is described in :pep:`264`. "
+"An additional *flags* argument has been added to the built-in "
+"function :func:`compile`, so the behaviour of ``__future__`` statements can "
+"now be correctly observed in simulated shells, such as those presented by "
+"IDLE and other development environments.  This is described in :pep:`264`. "
 "(Contributed by Michael Hudson.)"
 msgstr ""
-"Se ha añadido un argumento adicional *flags* a la función incorporada :func:"
-"`compile`, por lo que el comportamiento de las sentencias ``__future__`` "
-"puede ahora observarse correctamente en shells simulados, como los "
-"presentados por IDLE y otros entornos de desarrollo.  Esto se describe en :"
-"pep:`264`. (Contribución de Michael Hudson)"
+"Se ha añadido un argumento adicional *flags* a la función "
+"incorporada :func:`compile`, por lo que el comportamiento de las sentencias "
+"``__future__`` puede ahora observarse correctamente en shells simulados, "
+"como los presentados por IDLE y otros entornos de desarrollo.  Esto se "
+"describe en :pep:`264`. (Contribución de Michael Hudson)"
 
-#: ../Doc/whatsnew/2.2.rst:1195
+#: ../Doc/whatsnew/2.2.rst:1196
 msgid ""
 "The new license introduced with Python 1.6 wasn't GPL-compatible.  This is "
 "fixed by some minor textual changes to the 2.2 license, so it's now legal to "
@@ -2195,7 +2565,7 @@ msgstr ""
 "licencia BSD, igual que siempre.  Los cambios en la licencia también se "
 "aplicaron a las versiones 2.0.1 y 2.1.1 de Python."
 
-#: ../Doc/whatsnew/2.2.rst:1202
+#: ../Doc/whatsnew/2.2.rst:1203
 msgid ""
 "When presented with a Unicode filename on Windows, Python will now convert "
 "it to an MBCS encoded string, as used by the Microsoft file APIs.  As MBCS "
@@ -2214,32 +2584,33 @@ msgstr ""
 "soporte de Windows fue contribuido por Mark Hammond con la ayuda de Marc-"
 "André Lemburg. El soporte para Unix fue añadido por Martin von Löwis)"
 
-#: ../Doc/whatsnew/2.2.rst:1210
+#: ../Doc/whatsnew/2.2.rst:1211
 msgid ""
 "Large file support is now enabled on Windows.  (Contributed by Tim Peters.)"
 msgstr ""
 "La compatibilidad con archivos de gran tamaño ya está activada en Windows.  "
 "(Contribución de Tim Peters.)"
 
-#: ../Doc/whatsnew/2.2.rst:1212
+#: ../Doc/whatsnew/2.2.rst:1213
 msgid ""
 "The :file:`Tools/scripts/ftpmirror.py` script now parses a :file:`.netrc` "
 "file, if you have one. (Contributed by Mike Romberg.)"
 msgstr ""
-"El script :file:`Tools/scripts/ftpmirror.py` ahora analiza un archivo :file:"
-"`.netrc`, si tiene uno. (Contribución de Mike Romberg)"
+"El script :file:`Tools/scripts/ftpmirror.py` ahora analiza un "
+"archivo :file:`.netrc`, si tiene uno. (Contribución de Mike Romberg)"
 
-#: ../Doc/whatsnew/2.2.rst:1215
+#: ../Doc/whatsnew/2.2.rst:1216
 #, fuzzy
 msgid ""
-"Some features of the object returned by the :func:`xrange` function are now "
+"Some features of the object returned by the :func:`!xrange` function are now "
 "deprecated, and trigger warnings when they're accessed; they'll disappear in "
-"Python 2.3. :class:`xrange` objects tried to pretend they were full sequence "
-"types by supporting slicing, sequence multiplication, and the :keyword:`in` "
-"operator, but these features were rarely used and therefore buggy.  The :"
-"meth:`tolist` method and the :attr:`start`, :attr:`stop`, and :attr:`step` "
-"attributes are also being deprecated.  At the C level, the fourth argument "
-"to the :c:func:`!PyRange_New` function, ``repeat``, has also been deprecated."
+"Python 2.3. :class:`!xrange` objects tried to pretend they were full "
+"sequence types by supporting slicing, sequence multiplication, and "
+"the :keyword:`in` operator, but these features were rarely used and "
+"therefore buggy.  The :meth:`!tolist` method and the :attr:`!start`, :attr:`!"
+"stop`, and :attr:`!step` attributes are also being deprecated.  At the C "
+"level, the fourth argument to the :c:func:`!PyRange_New` function, "
+"``repeat``, has also been deprecated."
 msgstr ""
 "Algunas características del objeto retornado por la función :func:`xrange` "
 "están ahora obsoletas, y provocan advertencias cuando se accede a ellas; "
@@ -2247,11 +2618,12 @@ msgstr ""
 "que eran tipos de secuencia completos soportando el troceado, la "
 "multiplicación de secuencias y el operador :keyword:`in`, pero estas "
 "características se utilizaban raramente y, por lo tanto, tenían errores.  El "
-"método :meth:`tolist` y los atributos :attr:`start`, :attr:`stop` y :attr:"
-"`step` también han quedado obsoletos.  A nivel de C, el cuarto argumento de "
-"la función :c:func:`PyRange_New`, ``repeat``, también ha quedado obsoleto."
+"método :meth:`tolist` y los atributos :attr:`start`, :attr:`stop` "
+"y :attr:`step` también han quedado obsoletos.  A nivel de C, el cuarto "
+"argumento de la función :c:func:`PyRange_New`, ``repeat``, también ha "
+"quedado obsoleto."
 
-#: ../Doc/whatsnew/2.2.rst:1224
+#: ../Doc/whatsnew/2.2.rst:1225
 msgid ""
 "There were a bunch of patches to the dictionary implementation, mostly to "
 "fix potential core dumps if a dictionary contains objects that sneakily "
@@ -2267,7 +2639,7 @@ msgstr ""
 "Hudson encontrando un caso que volcaba el núcleo, Tim Peters corrigiendo el "
 "error, Michael encontrando otro caso, y así sucesivamente."
 
-#: ../Doc/whatsnew/2.2.rst:1231
+#: ../Doc/whatsnew/2.2.rst:1232
 msgid ""
 "On Windows, Python can now be compiled with Borland C thanks to a number of "
 "patches contributed by Stephen Hansen, though the result isn't fully "
@@ -2277,7 +2649,7 @@ msgstr ""
 "de parches aportados por Stephen Hansen, aunque el resultado aún no es "
 "totalmente funcional.  (Pero esto *es* un progreso...)"
 
-#: ../Doc/whatsnew/2.2.rst:1235
+#: ../Doc/whatsnew/2.2.rst:1236
 msgid ""
 "Another Windows enhancement: Wise Solutions generously offered PythonLabs "
 "use of their InstallerMaster 8.1 system.  Earlier PythonLabs Windows "
@@ -2289,7 +2661,7 @@ msgstr ""
 "PythonLabs para Windows utilizaban Wise 5.0a, que estaba empezando a mostrar "
 "su edad.  (Empaquetado por Tim Peters)"
 
-#: ../Doc/whatsnew/2.2.rst:1239
+#: ../Doc/whatsnew/2.2.rst:1240
 msgid ""
 "Files ending in ``.pyw`` can now be imported on Windows. ``.pyw`` is a "
 "Windows-only thing, used to indicate that a script needs to be run using "
@@ -2298,30 +2670,32 @@ msgid ""
 "such scripts, in case they're also usable as modules.  (Implemented by David "
 "Bolen.)"
 msgstr ""
-"Los archivos que terminan en ``.pyw`` pueden importarse ahora en Windows. ``."
-"pyw`` es algo exclusivo de Windows, que se utiliza para indicar que un "
+"Los archivos que terminan en ``.pyw`` pueden importarse ahora en Windows. "
+"``.pyw`` es algo exclusivo de Windows, que se utiliza para indicar que un "
 "script debe ejecutarse utilizando PYTHONW.EXE en lugar de PYTHON.EXE para "
 "evitar que aparezca una consola DOS para mostrar la salida.  Este parche "
 "hace posible la importación de tales scripts, en caso de que también se "
 "puedan utilizar como módulos.  (Implementado por David Bolen)"
 
-#: ../Doc/whatsnew/2.2.rst:1245
+#: ../Doc/whatsnew/2.2.rst:1246
 msgid ""
 "On platforms where Python uses the C :c:func:`dlopen` function  to load "
-"extension modules, it's now possible to set the flags used  by :c:func:"
-"`dlopen` using the :func:`sys.getdlopenflags` and :func:`sys.setdlopenflags` "
-"functions. (Contributed by Bram Stolk.)"
+"extension modules, it's now possible to set the flags used  "
+"by :c:func:`dlopen` using the :func:`sys.getdlopenflags` "
+"and :func:`sys.setdlopenflags` functions. (Contributed by Bram Stolk.)"
 msgstr ""
 "En las plataformas en las que Python utiliza la función C :c:func:`dlopen` "
 "para cargar módulos de extensión, ahora es posible establecer las banderas "
-"utilizadas por :c:func:`dlopen` utilizando las funciones :func:`sys."
-"getdlopenflags` y :func:`sys.setdlopenflags`. (Contribución de Bram Stolk.)"
+"utilizadas por :c:func:`dlopen` utilizando las "
+"funciones :func:`sys.getdlopenflags` y :func:`sys.setdlopenflags`. "
+"(Contribución de Bram Stolk.)"
 
-#: ../Doc/whatsnew/2.2.rst:1250
+#: ../Doc/whatsnew/2.2.rst:1251
+#, fuzzy
 msgid ""
 "The :func:`pow` built-in function no longer supports 3 arguments when "
 "floating-point numbers are supplied. ``pow(x, y, z)`` returns ``(x**y) % "
-"z``, but this is never useful for floating point numbers, and the final "
+"z``, but this is never useful for floating-point numbers, and the final "
 "result varies unpredictably depending on the platform.  A call such as "
 "``pow(2.0, 8.0, 7.0)`` will now raise a :exc:`TypeError` exception."
 msgstr ""
@@ -2331,11 +2705,11 @@ msgstr ""
 "final varía de forma impredecible dependiendo de la plataforma.  Una llamada "
 "como ``pow(2.0, 8.0, 7.0)`` lanzará ahora una excepción :exc:`TypeError`."
 
-#: ../Doc/whatsnew/2.2.rst:1260
+#: ../Doc/whatsnew/2.2.rst:1261
 msgid "Acknowledgements"
 msgstr "Agradecimientos"
 
-#: ../Doc/whatsnew/2.2.rst:1262
+#: ../Doc/whatsnew/2.2.rst:1263
 msgid ""
 "The author would like to thank the following people for offering "
 "suggestions, corrections and assistance with various drafts of this article: "
@@ -2354,6 +2728,3 @@ msgstr ""
 "Mathewson, Paul Moore, Gustavo Niemeyer, Don O'Donnell, Joonas Paalasma, Tim "
 "Peters, Jens Quade, Tom Reinhardt, Neil Schemenauer, Guido van Rossum, Greg "
 "Ward, Edward Welbourne."
-
-#~ msgid ":c:func:`PyObject_GC_Fini` to :c:func:`PyObject_GC_UnTrack`."
-#~ msgstr ":c:func:`PyObject_GC_Fini` a :c:func:`PyObject_GC_UnTrack`."

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2021-11-09 22:34-0600\n"
 "Last-Translator: Erick G. Islas Osuna <erickisos653@gmail.com>\n"
 "Language: es\n"
@@ -19,7 +19,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/faq/gui.rst:5
 msgid "Graphic User Interface FAQ"
@@ -43,8 +43,9 @@ msgid ""
 "widget set, called :ref:`tkinter <Tkinter>`.  This is probably the easiest "
 "to install (since it comes included with most `binary distributions <https://"
 "www.python.org/downloads/>`_ of Python) and use. For more info about Tk, "
-"including pointers to the source, see the `Tcl/Tk home page <https://www.tcl."
-"tk>`_.  Tcl/Tk is fully portable to the macOS, Windows, and Unix platforms."
+"including pointers to the source, see the `Tcl/Tk home page <https://"
+"www.tcl.tk>`_.  Tcl/Tk is fully portable to the macOS, Windows, and Unix "
+"platforms."
 msgstr ""
 "Los empaquetados estándar de Python incluyen una interfaz orientada a "
 "objetos para el conjunto de widgets de Tcl/Tk, llamada :ref:`tkinter "
@@ -101,35 +102,16 @@ msgstr ""
 "variables de entorno :envvar:`TK_LIBRARY`."
 
 #: ../Doc/faq/gui.rst:49
-#, fuzzy
 msgid ""
-"To get truly stand-alone applications, the Tcl scripts that form the library "
-"have to be integrated into the application as well. One tool supporting that "
-"is SAM (stand-alone modules), which is part of the Tix distribution (https://"
-"tix.sourceforge.net/)."
+"Various third-party freeze libraries such as py2exe and cx_Freeze have "
+"handling for Tkinter applications built-in."
 msgstr ""
-"Para obtener aplicaciones verdaderamente independientes, los *scripts* Tcl "
-"que forman la biblioteca también deben integrarse en la aplicación. Una "
-"herramienta compatible es SAM (módulos independientes), que forma parte de "
-"la distribución Tix (http://tix.sourceforge.net/)."
 
 #: ../Doc/faq/gui.rst:54
-#, fuzzy
-msgid ""
-"Build Tix with SAM enabled, perform the appropriate call to :c:func:`!"
-"Tclsam_init`, etc. inside Python's :file:`Modules/tkappinit.c`, and link "
-"with libtclsam and libtksam (you might include the Tix libraries as well)."
-msgstr ""
-"Construya Tix con SAM habilitado, realice la llamada apropiada a :c:func:"
-"`Tclsam_init`, etc. dentro de Python :file:`Modules/tkappinit.c`, y enlace "
-"con libtclsam libtclsam y libtksam (también puede incluir las bibliotecas "
-"Tix)."
-
-#: ../Doc/faq/gui.rst:61
 msgid "Can I have Tk events handled while waiting for I/O?"
 msgstr "¿Puedo tener eventos Tk manejados mientras espero por *I/O*?"
 
-#: ../Doc/faq/gui.rst:63
+#: ../Doc/faq/gui.rst:56
 #, fuzzy
 msgid ""
 "On platforms other than Windows, yes, and you don't even need threads!  But "
@@ -145,12 +127,12 @@ msgstr ""
 "sea posible I/O en un descriptor de archivo. Ver :ref:`tkinter-file-"
 "handlers`."
 
-#: ../Doc/faq/gui.rst:71
+#: ../Doc/faq/gui.rst:64
 msgid "I can't get key bindings to work in Tkinter: why?"
 msgstr ""
 "No puedo hacer que los atajos de teclado funcionen en Tkinter: ¿por qué?"
 
-#: ../Doc/faq/gui.rst:73
+#: ../Doc/faq/gui.rst:66
 #, fuzzy
 msgid ""
 "An often-heard complaint is that event handlers :ref:`bound <bindings-and-"
@@ -161,7 +143,7 @@ msgstr ""
 "vinculados a eventos con el método :meth:`bind` no se manejan incluso cuando "
 "se presiona la tecla adecuada."
 
-#: ../Doc/faq/gui.rst:77
+#: ../Doc/faq/gui.rst:70
 msgid ""
 "The most common cause is that the widget to which the binding applies "
 "doesn't have \"keyboard focus\".  Check out the Tk documentation for the "

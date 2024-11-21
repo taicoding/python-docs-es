@@ -1,24 +1,28 @@
 # Copyright (C) 2001-2020, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# Maintained by the python-doc-es workteam. 
-# docs-es@python.org / https://mail.python.org/mailman3/lists/docs-es.python.org/
-# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get the list of volunteers
+# Maintained by the python-doc-es workteam.
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get
+# the list of volunteers
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 11:59-0400\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: python-doc-es\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/modulefinder.rst:2
-msgid ":mod:`modulefinder` --- Find modules used by a script"
+#, fuzzy
+msgid ":mod:`!modulefinder` --- Find modules used by a script"
 msgstr ":mod:`modulefinder` --- Buscar módulos usados por un script"
 
 #: ../Doc/library/modulefinder.rst:9
@@ -33,10 +37,10 @@ msgid ""
 "argument, after which a report of the imported modules will be printed."
 msgstr ""
 "Este módulo provee una clase :class:`ModuleFinder` que puede ser usada para "
-"determinar el conjunto de módulos importados en un script. ``modulefinder."
-"py`` puede también ejecutarse como un script, dando el nombre de un archivo "
-"de Python como argumento, tras lo cual se imprimirá un reporte de los "
-"módulos importados."
+"determinar el conjunto de módulos importados en un script. "
+"``modulefinder.py`` puede también ejecutarse como un script, dando el nombre "
+"de un archivo de Python como argumento, tras lo cual se imprimirá un reporte "
+"de los módulos importados."
 
 #: ../Doc/library/modulefinder.rst:21
 msgid ""
@@ -94,8 +98,8 @@ msgid ""
 "A dictionary mapping module names to modules. See :ref:`modulefinder-"
 "example`."
 msgstr ""
-"Un diccionario que mapea los nombres de los módulos a los módulos. Vea :ref:"
-"`modulefinder-example`."
+"Un diccionario que mapea los nombres de los módulos a los módulos. "
+"Vea :ref:`modulefinder-example`."
 
 #: ../Doc/library/modulefinder.rst:61
 msgid "Example usage of :class:`ModuleFinder`"
@@ -105,10 +109,64 @@ msgstr "Ejemplo de uso de :class:`ModuleFinder`"
 msgid "The script that is going to get analyzed later on (bacon.py)::"
 msgstr "El script que será analizado más adelante (bacon.py)::"
 
+#: ../Doc/library/modulefinder.rst:65
+msgid ""
+"import re, itertools\n"
+"\n"
+"try:\n"
+"    import baconhameggs\n"
+"except ImportError:\n"
+"    pass\n"
+"\n"
+"try:\n"
+"    import guido.python.ham\n"
+"except ImportError:\n"
+"    pass"
+msgstr ""
+
 #: ../Doc/library/modulefinder.rst:78
 msgid "The script that will output the report of bacon.py::"
 msgstr "El script que generará el reporte de bacon.py::"
 
+#: ../Doc/library/modulefinder.rst:80
+#, python-format
+msgid ""
+"from modulefinder import ModuleFinder\n"
+"\n"
+"finder = ModuleFinder()\n"
+"finder.run_script('bacon.py')\n"
+"\n"
+"print('Loaded modules:')\n"
+"for name, mod in finder.modules.items():\n"
+"    print('%s: ' % name, end='')\n"
+"    print(','.join(list(mod.globalnames.keys())[:3]))\n"
+"\n"
+"print('-'*50)\n"
+"print('Modules not imported:')\n"
+"print('\\n'.join(finder.badmodules.keys()))"
+msgstr ""
+
 #: ../Doc/library/modulefinder.rst:94
 msgid "Sample output (may vary depending on the architecture)::"
 msgstr "Resultado de ejemplo (puede variar dependiendo de la arquitectura)::"
+
+#: ../Doc/library/modulefinder.rst:96
+msgid ""
+"Loaded modules:\n"
+"_types:\n"
+"copyreg:  _inverted_registry,_slotnames,__all__\n"
+"re._compiler:  isstring,_sre,_optimize_unicode\n"
+"_sre:\n"
+"re._constants:  REPEAT_ONE,makedict,AT_END_LINE\n"
+"sys:\n"
+"re:  __module__,finditer,_expand\n"
+"itertools:\n"
+"__main__:  re,itertools,baconhameggs\n"
+"re._parser:  _PATTERNENDERS,SRE_FLAG_UNICODE\n"
+"array:\n"
+"types:  __module__,IntType,TypeType\n"
+"---------------------------------------------------\n"
+"Modules not imported:\n"
+"guido.python.ham\n"
+"baconhameggs"
+msgstr ""

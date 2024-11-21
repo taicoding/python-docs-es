@@ -10,68 +10,67 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-25 19:47+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-11-06 22:22+0100\n"
 "Last-Translator: Marcos Medrano <marcosmedrano0@gmail.com>\n"
-"Language-Team: python-doc-es\n"
 "Language: es\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.10.3\n"
-"X-Generator: Poedit 3.4\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/email.compat32-message.rst:4
 msgid ""
-":mod:`email.message.Message`: Representing an email message using the :data:"
-"`~email.policy.compat32` API"
+":mod:`email.message.Message`: Representing an email message using "
+"the :data:`~email.policy.compat32` API"
 msgstr ""
 ":mod:`email.message.Message`: Representar un mensaje de correo electrónico "
 "usando la API :data:`~email.policy.compat32`"
 
-#: ../Doc/library/email.compat32-message.rst:12
+#: ../Doc/library/email.compat32-message.rst:13
 msgid ""
-"The :class:`Message` class is very similar to the :class:`~email.message."
-"EmailMessage` class, without the methods added by that class, and with the "
-"default behavior of certain other methods being slightly different.  We also "
-"document here some methods that, while supported by the :class:`~email."
-"message.EmailMessage` class, are not recommended unless you are dealing with "
-"legacy code."
+"The :class:`Message` class is very similar to "
+"the :class:`~email.message.EmailMessage` class, without the methods added by "
+"that class, and with the default behavior of certain other methods being "
+"slightly different.  We also document here some methods that, while "
+"supported by the :class:`~email.message.EmailMessage` class, are not "
+"recommended unless you are dealing with legacy code."
 msgstr ""
-"La clase :class:`Message` es muy similar a la clase :class:`~email.message."
-"EmailMessage`, sin los métodos añadidos por esa clase y con el "
-"comportamiento predeterminado de algunos otros métodos siendo ligeramente "
-"diferente. También documentamos aquí algunos métodos que, aun siendo "
-"soportados por :class:`~email.message.EmailMessage`, no están recomendados a "
-"no ser que estés lidiando con código heredado."
+"La clase :class:`Message` es muy similar a la "
+"clase :class:`~email.message.EmailMessage`, sin los métodos añadidos por esa "
+"clase y con el comportamiento predeterminado de algunos otros métodos siendo "
+"ligeramente diferente. También documentamos aquí algunos métodos que, aun "
+"siendo soportados por :class:`~email.message.EmailMessage`, no están "
+"recomendados a no ser que estés lidiando con código heredado."
 
-#: ../Doc/library/email.compat32-message.rst:19
+#: ../Doc/library/email.compat32-message.rst:20
 msgid "The philosophy and structure of the two classes is otherwise the same."
 msgstr "Por lo demás, la filosofía y estructura de las dos clases es la misma."
 
-#: ../Doc/library/email.compat32-message.rst:21
+#: ../Doc/library/email.compat32-message.rst:22
 msgid ""
-"This document describes the behavior under the default (for :class:"
-"`Message`) policy :attr:`~email.policy.Compat32`.  If you are going to use "
-"another policy, you should be using the :class:`~email.message.EmailMessage` "
-"class instead."
+"This document describes the behavior under the default "
+"(for :class:`Message`) policy :attr:`~email.policy.Compat32`.  If you are "
+"going to use another policy, you should be using "
+"the :class:`~email.message.EmailMessage` class instead."
 msgstr ""
 "Este documento describe el comportamiento bajo la política por defecto "
 "(para :class:`Message`) :attr:`~email.policy.Compat32`. Si vas a usar otra "
-"política, deberías estar usando la clase :class:`~email.message."
-"EmailMessage` en su lugar."
+"política, deberías estar usando la "
+"clase :class:`~email.message.EmailMessage` en su lugar."
 
-#: ../Doc/library/email.compat32-message.rst:25
+#: ../Doc/library/email.compat32-message.rst:26
 msgid ""
-"An email message consists of *headers* and a *payload*.  Headers must be :"
-"rfc:`5322` style names and values, where the field name and value are "
+"An email message consists of *headers* and a *payload*.  Headers must "
+"be :rfc:`5322` style names and values, where the field name and value are "
 "separated by a colon.  The colon is not part of either the field name or the "
 "field value.  The payload may be a simple text message, or a binary object, "
 "or a structured sequence of sub-messages each with their own set of headers "
 "and their own payload.  The latter type of payload is indicated by the "
-"message having a MIME type such as :mimetype:`multipart/\\*` or :mimetype:"
-"`message/rfc822`."
+"message having a MIME type such as :mimetype:`multipart/\\*` "
+"or :mimetype:`message/rfc822`."
 msgstr ""
 "Un mensaje de correo electrónico consta de *headers* y *payload*. Los "
 "encabezados deben ser nombres y valores de estilo :rfc:`5322`, donde el "
@@ -80,10 +79,10 @@ msgstr ""
 "puede ser un mensaje de texto simple, un objeto binario o una secuencia "
 "estructurada de submensajes, cada uno con su propio conjunto de encabezados "
 "y su propia carga útil. El último tipo de carga útil se indica mediante el "
-"mensaje que tiene un tipo MIME como :mimetype:`multipart/\\*` o :mimetype:"
-"`message/rfc822`."
+"mensaje que tiene un tipo MIME como :mimetype:`multipart/\\*` "
+"o :mimetype:`message/rfc822`."
 
-#: ../Doc/library/email.compat32-message.rst:34
+#: ../Doc/library/email.compat32-message.rst:35
 msgid ""
 "The conceptual model provided by a :class:`Message` object is that of an "
 "ordered dictionary of headers with additional methods for accessing both "
@@ -100,7 +99,7 @@ msgstr ""
 "encabezados duplicados pero deben ser usados métodos especiales para acceder "
 "a ellos."
 
-#: ../Doc/library/email.compat32-message.rst:41
+#: ../Doc/library/email.compat32-message.rst:42
 msgid ""
 "The :class:`Message` pseudo-dictionary is indexed by the header names, which "
 "must be ASCII values.  The values of the dictionary are strings that are "
@@ -110,8 +109,8 @@ msgid ""
 "matched case-insensitively.  There may also be a single envelope header, "
 "also known as the *Unix-From* header or the ``From_`` header.  The *payload* "
 "is either a string or bytes, in the case of simple message objects, or a "
-"list of :class:`Message` objects, for MIME container documents (e.g. :"
-"mimetype:`multipart/\\*` and :mimetype:`message/rfc822`)."
+"list of :class:`Message` objects, for MIME container documents "
+"(e.g. :mimetype:`multipart/\\*` and :mimetype:`message/rfc822`)."
 msgstr ""
 "El pseudodiccionario :class:`Message` es indexado por los nombres de "
 "encabezados, los cuales deben ser valores ASCII. Los valores del diccionario "
@@ -122,35 +121,35 @@ msgstr ""
 "emparejados sin distinción entre mayúsculas y minúsculas. También puede "
 "haber sólo un encabezado de envoltura, también conocido como el encabezado "
 "*Unix-From* o el encabezado ``From_``. La carga (*payload*) es una cadena o "
-"bytes, en el caso de objetos de mensajes simples, o una lista de objetos :"
-"class:`Message`, para contenedores de documentos MIME (ej. :mimetype:"
-"`multipart/\\*` y :mimetype:`message/rfc822`)."
+"bytes, en el caso de objetos de mensajes simples, o una lista de "
+"objetos :class:`Message`, para contenedores de documentos MIME "
+"(ej. :mimetype:`multipart/\\*` y :mimetype:`message/rfc822`)."
 
-#: ../Doc/library/email.compat32-message.rst:52
+#: ../Doc/library/email.compat32-message.rst:53
 msgid "Here are the methods of the :class:`Message` class:"
 msgstr "Aquí están los métodos de la clase :class:`Message`:"
 
-#: ../Doc/library/email.compat32-message.rst:57
+#: ../Doc/library/email.compat32-message.rst:58
 msgid ""
 "If *policy* is specified (it must be an instance of a :mod:`~email.policy` "
 "class) use the rules it specifies to update and serialize the representation "
-"of the message.  If *policy* is not set, use the :class:`compat32 <email."
-"policy.Compat32>` policy, which maintains backward compatibility with the "
-"Python 3.2 version of the email package.  For more information see the :mod:"
-"`~email.policy` documentation."
+"of the message.  If *policy* is not set, use the :class:`compat32 "
+"<email.policy.Compat32>` policy, which maintains backward compatibility with "
+"the Python 3.2 version of the email package.  For more information see "
+"the :mod:`~email.policy` documentation."
 msgstr ""
-"Si se especifica *policy* (debe ser una instancia de una clase :mod:`~email."
-"policy`) utiliza las reglas que especifica para actualizar y serializar la "
-"representación del mensaje. Si no se define *policy*, utiliza la política :"
-"class:`compat32 <email.policy.Compat32>`, la cual mantiene compatibilidad "
-"con la versión de Python 3.2 del paquete email. Para más información "
-"consulta la documentación de :mod:`~email.policy`."
+"Si se especifica *policy* (debe ser una instancia de una "
+"clase :mod:`~email.policy`) utiliza las reglas que especifica para "
+"actualizar y serializar la representación del mensaje. Si no se define "
+"*policy*, utiliza la política :class:`compat32 <email.policy.Compat32>`, la "
+"cual mantiene compatibilidad con la versión de Python 3.2 del paquete email. "
+"Para más información consulta la documentación de :mod:`~email.policy`."
 
-#: ../Doc/library/email.compat32-message.rst:64
+#: ../Doc/library/email.compat32-message.rst:65
 msgid "The *policy* keyword argument was added."
 msgstr "El argumento de palabra clave *policy* fue añadido."
 
-#: ../Doc/library/email.compat32-message.rst:69
+#: ../Doc/library/email.compat32-message.rst:70
 msgid ""
 "Return the entire message flattened as a string.  When optional *unixfrom* "
 "is true, the envelope header is included in the returned string. *unixfrom* "
@@ -174,8 +173,8 @@ msgstr ""
 "por el método, ya que la *policy* especificada puede ser pasada al "
 "``Generator``."
 
-#: ../Doc/library/email.compat32-message.rst:79
-#: ../Doc/library/email.compat32-message.rst:121
+#: ../Doc/library/email.compat32-message.rst:80
+#: ../Doc/library/email.compat32-message.rst:122
 msgid ""
 "Flattening the message may trigger changes to the :class:`Message` if "
 "defaults need to be filled in to complete the transformation to a string "
@@ -185,14 +184,15 @@ msgstr ""
 "defecto necesita ser rellenado para completar la transformación a una cadena "
 "(por ejemplo, límites MIME pueden ser generados o modificados)."
 
-#: ../Doc/library/email.compat32-message.rst:83
+#: ../Doc/library/email.compat32-message.rst:84
 msgid ""
 "Note that this method is provided as a convenience and may not always format "
 "the message the way you want.  For example, by default it does not do the "
 "mangling of lines that begin with ``From`` that is required by the Unix mbox "
-"format.  For more flexibility, instantiate a :class:`~email.generator."
-"Generator` instance and use its :meth:`~email.generator.Generator.flatten` "
-"method directly.  For example::"
+"format.  For more flexibility, instantiate "
+"a :class:`~email.generator.Generator` instance and use "
+"its :meth:`~email.generator.Generator.flatten` method directly.  For "
+"example::"
 msgstr ""
 "Ten en cuenta que este método es proporcionado como conveniencia y puede no "
 "siempre formatear el mensaje de la forma que quieres. Por ejemplo, de forma "
@@ -201,31 +201,42 @@ msgstr ""
 "flexibilidad, instancia un :class:`~email.generator.Generator` y utiliza su "
 "método :meth:`~email.generator.Generator.flatten` directamente. Por ejemplo::"
 
-#: ../Doc/library/email.compat32-message.rst:97
+#: ../Doc/library/email.compat32-message.rst:91
+msgid ""
+"from io import StringIO\n"
+"from email.generator import Generator\n"
+"fp = StringIO()\n"
+"g = Generator(fp, mangle_from_=True, maxheaderlen=60)\n"
+"g.flatten(msg)\n"
+"text = fp.getvalue()"
+msgstr ""
+
+#: ../Doc/library/email.compat32-message.rst:98
 msgid ""
 "If the message object contains binary data that is not encoded according to "
 "RFC standards, the non-compliant data will be replaced by unicode \"unknown "
-"character\" code points.  (See also :meth:`.as_bytes` and :class:`~email."
-"generator.BytesGenerator`.)"
+"character\" code points.  (See also :meth:`.as_bytes` "
+"and :class:`~email.generator.BytesGenerator`.)"
 msgstr ""
 "Si el objeto de mensaje contiene datos binarios que no están codificados de "
 "acuerdo a los estándares RFC, los datos no compatibles serán reemplazados "
-"por puntos de código Unicode de \"carácter desconocido\". (Consulta también :"
-"meth:`.as_bytes` y :class:`~email.generator.BytesGenerator`.)"
+"por puntos de código Unicode de \"carácter desconocido\". (Consulta "
+"también :meth:`.as_bytes` y :class:`~email.generator.BytesGenerator`.)"
 
-#: ../Doc/library/email.compat32-message.rst:102
+#: ../Doc/library/email.compat32-message.rst:103
 msgid "the *policy* keyword argument was added."
 msgstr "el argumento de palabra clave *policy* fue añadido."
 
-#: ../Doc/library/email.compat32-message.rst:107
+#: ../Doc/library/email.compat32-message.rst:108
+#, fuzzy
 msgid ""
-"Equivalent to :meth:`.as_string()`.  Allows ``str(msg)`` to produce a string "
+"Equivalent to :meth:`.as_string`.  Allows ``str(msg)`` to produce a string "
 "containing the formatted message."
 msgstr ""
 "Equivalente a :meth:`.as_string()`. Permite a ``str(msg)`` producir una "
 "cadena conteniendo el mensaje formateado."
 
-#: ../Doc/library/email.compat32-message.rst:113
+#: ../Doc/library/email.compat32-message.rst:114
 msgid ""
 "Return the entire message flattened as a bytes object.  When optional "
 "*unixfrom* is true, the envelope header is included in the returned string.  "
@@ -242,14 +253,15 @@ msgstr ""
 "algo del formato producido por el método, ya que el *policy* especificado "
 "será pasado al ``BytesGenerator``."
 
-#: ../Doc/library/email.compat32-message.rst:125
+#: ../Doc/library/email.compat32-message.rst:126
 msgid ""
 "Note that this method is provided as a convenience and may not always format "
 "the message the way you want.  For example, by default it does not do the "
 "mangling of lines that begin with ``From`` that is required by the Unix mbox "
-"format.  For more flexibility, instantiate a :class:`~email.generator."
-"BytesGenerator` instance and use its :meth:`~email.generator.BytesGenerator."
-"flatten` method directly. For example::"
+"format.  For more flexibility, instantiate "
+"a :class:`~email.generator.BytesGenerator` instance and use "
+"its :meth:`~email.generator.BytesGenerator.flatten` method directly. For "
+"example::"
 msgstr ""
 "Ten en cuenta que este método es proporcionado como conveniencia y puede no "
 "siempre formatear el mensaje de la forma que quieres. Por ejemplo, de forma "
@@ -259,41 +271,53 @@ msgstr ""
 "utiliza su método :meth:`~email.generator.BytesGenerator.flatten` "
 "directamente. Por ejemplo::"
 
-#: ../Doc/library/email.compat32-message.rst:145
+#: ../Doc/library/email.compat32-message.rst:134
 msgid ""
-"Equivalent to :meth:`.as_bytes()`.  Allows ``bytes(msg)`` to produce a bytes "
+"from io import BytesIO\n"
+"from email.generator import BytesGenerator\n"
+"fp = BytesIO()\n"
+"g = BytesGenerator(fp, mangle_from_=True, maxheaderlen=60)\n"
+"g.flatten(msg)\n"
+"text = fp.getvalue()"
+msgstr ""
+
+#: ../Doc/library/email.compat32-message.rst:146
+#, fuzzy
+msgid ""
+"Equivalent to :meth:`.as_bytes`.  Allows ``bytes(msg)`` to produce a bytes "
 "object containing the formatted message."
 msgstr ""
 "Equivalente a :meth:`.as_bytes()`. Permite a ``bytes(msg)`` producir un "
 "objeto de bytes conteniendo el mensaje formateado."
 
-#: ../Doc/library/email.compat32-message.rst:153
+#: ../Doc/library/email.compat32-message.rst:154
 msgid ""
-"Return ``True`` if the message's payload is a list of sub-\\ :class:"
-"`Message` objects, otherwise return ``False``.  When :meth:`is_multipart` "
-"returns ``False``, the payload should be a string object (which might be a "
-"CTE encoded binary payload).  (Note that :meth:`is_multipart` returning "
-"``True`` does not necessarily mean that \"msg.get_content_maintype() == "
-"'multipart'\" will return the ``True``. For example, ``is_multipart`` will "
-"return ``True`` when the :class:`Message` is of type ``message/rfc822``.)"
+"Return ``True`` if the message's payload is a list of sub-"
+"\\ :class:`Message` objects, otherwise return ``False``.  "
+"When :meth:`is_multipart` returns ``False``, the payload should be a string "
+"object (which might be a CTE encoded binary payload).  (Note "
+"that :meth:`is_multipart` returning ``True`` does not necessarily mean that "
+"\"msg.get_content_maintype() == 'multipart'\" will return the ``True``. For "
+"example, ``is_multipart`` will return ``True`` when the :class:`Message` is "
+"of type ``message/rfc822``.)"
 msgstr ""
 "Retorna ``True`` si la carga del mensaje es una lista de objetos heredados "
 "de :class:`Message`, si no retorna ``False``. Cuando :meth:`is_multipart` "
 "retorna ``False``, la carga debe ser un objeto de cadena (el cual puede ser "
-"una carga CTE codificada en binario). (Ten en cuenta que :meth:"
-"`is_multipart` retornando ``True`` no significa necesariamente que \"msg."
-"get_content_maintype() == 'multipart'\" retornará ``True``. Por ejemplo, "
-"``is_multipart`` retornará ``True`` cuando el :class:`Message` es de tipo "
-"``message/rfc822``.)"
+"una carga CTE codificada en binario). (Ten en cuenta "
+"que :meth:`is_multipart` retornando ``True`` no significa necesariamente que "
+"\"msg.get_content_maintype() == 'multipart'\" retornará ``True``. Por "
+"ejemplo, ``is_multipart`` retornará ``True`` cuando el :class:`Message` es "
+"de tipo ``message/rfc822``.)"
 
-#: ../Doc/library/email.compat32-message.rst:165
+#: ../Doc/library/email.compat32-message.rst:166
 msgid ""
 "Set the message's envelope header to *unixfrom*, which should be a string."
 msgstr ""
 "Establece el mensaje del encabezado de envoltura a *unixfrom*, el cual debe "
 "ser una cadena."
 
-#: ../Doc/library/email.compat32-message.rst:170
+#: ../Doc/library/email.compat32-message.rst:171
 msgid ""
 "Return the message's envelope header.  Defaults to ``None`` if the envelope "
 "header was never set."
@@ -301,7 +325,7 @@ msgstr ""
 "Retorna el mensaje del encabezado de envoltura. Por defecto a ``None`` si el "
 "encabezado de envoltura nunca fue definido."
 
-#: ../Doc/library/email.compat32-message.rst:176
+#: ../Doc/library/email.compat32-message.rst:177
 msgid ""
 "Add the given *payload* to the current payload, which must be ``None`` or a "
 "list of :class:`Message` objects before the call. After the call, the "
@@ -312,48 +336,50 @@ msgstr ""
 "Añade el *payload* dado a la carga actual, la cual debe ser ``None`` o una "
 "lista de objetos :class:`Message` antes de la invocación. Después de la "
 "invocación, la carga siempre será una lista de objetos :class:`Message`. Si "
-"quieres definir la carga a un objeto escalar (ej. una cadena), usa :meth:"
-"`set_payload` en su lugar."
+"quieres definir la carga a un objeto escalar (ej. una cadena), "
+"usa :meth:`set_payload` en su lugar."
 
-#: ../Doc/library/email.compat32-message.rst:182
+#: ../Doc/library/email.compat32-message.rst:183
 msgid ""
 "This is a legacy method.  On the :class:`~email.emailmessage.EmailMessage` "
-"class its functionality is replaced by :meth:`~email.message.EmailMessage."
-"set_content` and the related ``make`` and ``add`` methods."
+"class its functionality is replaced "
+"by :meth:`~email.message.EmailMessage.set_content` and the related ``make`` "
+"and ``add`` methods."
 msgstr ""
-"Este es un método heredado. En la clase :class:`~email.emailmessage."
-"EmailMessage` su funcionalidad es remplazada por :meth:`~email.message."
-"EmailMessage.set_content` y los métodos relacionados ``make`` y ``add``."
+"Este es un método heredado. En la "
+"clase :class:`~email.emailmessage.EmailMessage` su funcionalidad es "
+"remplazada por :meth:`~email.message.EmailMessage.set_content` y los métodos "
+"relacionados ``make`` y ``add``."
 
-#: ../Doc/library/email.compat32-message.rst:190
+#: ../Doc/library/email.compat32-message.rst:191
 msgid ""
 "Return the current payload, which will be a list of :class:`Message` objects "
 "when :meth:`is_multipart` is ``True``, or a string when :meth:`is_multipart` "
 "is ``False``.  If the payload is a list and you mutate the list object, you "
 "modify the message's payload in place."
 msgstr ""
-"Retorna la carga (*payload*) actual, la cual será una lista de objetos :"
-"class:`Message` cuando :meth:`is_multipart` es ``True``, o una cadena "
-"cuando :meth:`is_multipart` es ``False``. Si la carga es una lista y mutas "
-"el objeto de lista, modificarás la carga del mensaje."
+"Retorna la carga (*payload*) actual, la cual será una lista de "
+"objetos :class:`Message` cuando :meth:`is_multipart` es ``True``, o una "
+"cadena cuando :meth:`is_multipart` es ``False``. Si la carga es una lista y "
+"mutas el objeto de lista, modificarás la carga del mensaje."
 
-#: ../Doc/library/email.compat32-message.rst:195
+#: ../Doc/library/email.compat32-message.rst:196
 msgid ""
 "With optional argument *i*, :meth:`get_payload` will return the *i*-th "
 "element of the payload, counting from zero, if :meth:`is_multipart` is "
 "``True``.  An :exc:`IndexError` will be raised if *i* is less than 0 or "
 "greater than or equal to the number of items in the payload.  If the payload "
-"is a string (i.e.  :meth:`is_multipart` is ``False``) and *i* is given, a :"
-"exc:`TypeError` is raised."
+"is a string (i.e.  :meth:`is_multipart` is ``False``) and *i* is given, "
+"a :exc:`TypeError` is raised."
 msgstr ""
 "Con el argumento opcional *i*, :meth:`get_payload` retornará el elemento "
-"número *i* de la carga (*payload*), contando desde cero, si :meth:"
-"`is_multipart` es ``True``. Un :exc:`IndexError` será generado si *i* es "
-"menor que 0 ó mayor o igual que el número de elementos en la carga. Si la "
-"carga es una cadena (ej. :meth:`is_multipart` es ``False``) y se define *i*, "
-"se genera un :exc:`TypeError`."
+"número *i* de la carga (*payload*), contando desde cero, "
+"si :meth:`is_multipart` es ``True``. Un :exc:`IndexError` será generado si "
+"*i* es menor que 0 ó mayor o igual que el número de elementos en la carga. "
+"Si la carga es una cadena (ej. :meth:`is_multipart` es ``False``) y se "
+"define *i*, se genera un :exc:`TypeError`."
 
-#: ../Doc/library/email.compat32-message.rst:202
+#: ../Doc/library/email.compat32-message.rst:203
 msgid ""
 "Optional *decode* is a flag indicating whether the payload should be decoded "
 "or not, according to the :mailheader:`Content-Transfer-Encoding` header. "
@@ -372,25 +398,26 @@ msgstr ""
 "debería ser decodificada o no, de acuerdo al encabezado :mailheader:`Content-"
 "Transfer-Encoding`. Cuando es ``True`` y el mensaje no es multiparte, la "
 "carga será decodificada si el valor de su encabezado es ``quoted-printable`` "
-"o ``base64``. Si se usa alguna otra codificación o falta el encabezado :"
-"mailheader:`Content-Transfer-Encoding`, la carga es retornada tal cual (sin "
-"decodificar). En todos los casos el valor retornado son datos binarios. Si "
-"el mensaje es multiparte y el indicador *decode* es ``True``, entonces se "
-"retorna ``None``. Si la carga es base64 y no fue perfectamente formada "
-"(falta relleno, tiene caracteres fuera del alfabeto base64), entonces un "
-"defecto apropiado será añadido a la propiedad defect del mensaje (:class:"
-"`~email.errors.InvalidBase64PaddingDefect` o :class:`~email.errors."
-"InvalidBase64CharactersDefect`, respectivamente)."
+"o ``base64``. Si se usa alguna otra codificación o falta el "
+"encabezado :mailheader:`Content-Transfer-Encoding`, la carga es retornada "
+"tal cual (sin decodificar). En todos los casos el valor retornado son datos "
+"binarios. Si el mensaje es multiparte y el indicador *decode* es ``True``, "
+"entonces se retorna ``None``. Si la carga es base64 y no fue perfectamente "
+"formada (falta relleno, tiene caracteres fuera del alfabeto base64), "
+"entonces un defecto apropiado será añadido a la propiedad defect del mensaje "
+"(:class:`~email.errors.InvalidBase64PaddingDefect` "
+"o :class:`~email.errors.InvalidBase64CharactersDefect`, respectivamente)."
 
-#: ../Doc/library/email.compat32-message.rst:216
+#: ../Doc/library/email.compat32-message.rst:217
 msgid ""
 "When *decode* is ``False`` (the default) the body is returned as a string "
 "without decoding the :mailheader:`Content-Transfer-Encoding`.  However, for "
 "a :mailheader:`Content-Transfer-Encoding` of 8bit, an attempt is made to "
-"decode the original bytes using the ``charset`` specified by the :mailheader:"
-"`Content-Type` header, using the ``replace`` error handler. If no "
-"``charset`` is specified, or if the ``charset`` given is not recognized by "
-"the email package, the body is decoded using the default ASCII charset."
+"decode the original bytes using the ``charset`` specified by "
+"the :mailheader:`Content-Type` header, using the ``replace`` error handler. "
+"If no ``charset`` is specified, or if the ``charset`` given is not "
+"recognized by the email package, the body is decoded using the default ASCII "
+"charset."
 msgstr ""
 "Cuando *decode* es ``False`` (por defecto) el cuerpo es retornado como una "
 "cadena sin decodificar el :mailheader:`Content-Transfer-Encoding`. Sin "
@@ -401,17 +428,19 @@ msgstr ""
 "el ``charset`` dado no es reconocido por el paquete email, el cuerpo es "
 "decodificado usando el conjunto de caracteres ASCII por defecto."
 
-#: ../Doc/library/email.compat32-message.rst:225
+#: ../Doc/library/email.compat32-message.rst:226
 msgid ""
 "This is a legacy method.  On the :class:`~email.emailmessage.EmailMessage` "
-"class its functionality is replaced by :meth:`~email.message.EmailMessage."
-"get_content` and :meth:`~email.message.EmailMessage.iter_parts`."
+"class its functionality is replaced "
+"by :meth:`~email.message.EmailMessage.get_content` "
+"and :meth:`~email.message.EmailMessage.iter_parts`."
 msgstr ""
-"Este es un método heredado. En la clase :class:`~email.emailmessage."
-"EmailMessage` su funcionalidad es remplazada por :meth:`~email.message."
-"EmailMessage.get_content` y :meth:`~email.message.EmailMessage.iter_parts`."
+"Este es un método heredado. En la "
+"clase :class:`~email.emailmessage.EmailMessage` su funcionalidad es "
+"remplazada por :meth:`~email.message.EmailMessage.get_content` "
+"y :meth:`~email.message.EmailMessage.iter_parts`."
 
-#: ../Doc/library/email.compat32-message.rst:233
+#: ../Doc/library/email.compat32-message.rst:234
 msgid ""
 "Set the entire message object's payload to *payload*.  It is the client's "
 "responsibility to ensure the payload invariants.  Optional *charset* sets "
@@ -419,78 +448,80 @@ msgid ""
 msgstr ""
 "Define la carga completa del objeto mensaje a *payload*. Es responsabilidad "
 "del cliente asegurar invariantes de carga. El argumento opcional *charset* "
-"define el conjunto de caracteres por defecto del mensaje; consulta :meth:"
-"`set_charset` para más detalles."
+"define el conjunto de caracteres por defecto del mensaje; "
+"consulta :meth:`set_charset` para más detalles."
 
-#: ../Doc/library/email.compat32-message.rst:237
+#: ../Doc/library/email.compat32-message.rst:238
 msgid ""
 "This is a legacy method.  On the :class:`~email.emailmessage.EmailMessage` "
-"class its functionality is replaced by :meth:`~email.message.EmailMessage."
-"set_content`."
+"class its functionality is replaced "
+"by :meth:`~email.message.EmailMessage.set_content`."
 msgstr ""
-"Este es un método heredado. En la clase :class:`~email.emailmessage."
-"EmailMessage` su funcionalidad es remplazada por :meth:`~email.message."
-"EmailMessage.set_content`."
+"Este es un método heredado. En la "
+"clase :class:`~email.emailmessage.EmailMessage` su funcionalidad es "
+"remplazada por :meth:`~email.message.EmailMessage.set_content`."
 
-#: ../Doc/library/email.compat32-message.rst:244
+#: ../Doc/library/email.compat32-message.rst:245
 msgid ""
-"Set the character set of the payload to *charset*, which can either be a :"
-"class:`~email.charset.Charset` instance (see :mod:`email.charset`), a string "
-"naming a character set, or ``None``.  If it is a string, it will be "
+"Set the character set of the payload to *charset*, which can either be "
+"a :class:`~email.charset.Charset` instance (see :mod:`email.charset`), a "
+"string naming a character set, or ``None``.  If it is a string, it will be "
 "converted to a :class:`~email.charset.Charset` instance.  If *charset* is "
-"``None``, the ``charset`` parameter will be removed from the :mailheader:"
-"`Content-Type` header (the message will not be otherwise modified).  "
-"Anything else will generate a :exc:`TypeError`."
+"``None``, the ``charset`` parameter will be removed from "
+"the :mailheader:`Content-Type` header (the message will not be otherwise "
+"modified).  Anything else will generate a :exc:`TypeError`."
 msgstr ""
 "Define el junto de caracteres de la carga a *charset*, el cual puede ser "
-"tanto una instancia :class:`~email.charset.Charset` (ver :mod:`email."
-"charset`), una cadena denominando un conjunto de caracteres, o ``None``. Si "
-"es una cadena, será convertida a una instancia :class:`~email.charset."
-"Charset`. Si *charset* es ``None``, el parámetro ``charset`` será eliminado "
-"del encabezado :mailheader:`Content-Type` (el mensaje no será modificado de "
-"otra manera). Cualquier otro valor lanzará un :exc:`TypeError`."
+"tanto una instancia :class:`~email.charset.Charset` "
+"(ver :mod:`email.charset`), una cadena denominando un conjunto de "
+"caracteres, o ``None``. Si es una cadena, será convertida a una "
+"instancia :class:`~email.charset.Charset`. Si *charset* es ``None``, el "
+"parámetro ``charset`` será eliminado del encabezado :mailheader:`Content-"
+"Type` (el mensaje no será modificado de otra manera). Cualquier otro valor "
+"lanzará un :exc:`TypeError`."
 
-#: ../Doc/library/email.compat32-message.rst:252
+#: ../Doc/library/email.compat32-message.rst:253
 msgid ""
 "If there is no existing :mailheader:`MIME-Version` header one will be "
 "added.  If there is no existing :mailheader:`Content-Type` header, one will "
-"be added with a value of :mimetype:`text/plain`.  Whether the :mailheader:"
-"`Content-Type` header already exists or not, its ``charset`` parameter will "
-"be set to *charset.output_charset*.   If *charset.input_charset* and "
-"*charset.output_charset* differ, the payload will be re-encoded to the "
-"*output_charset*.  If there is no existing :mailheader:`Content-Transfer-"
-"Encoding` header, then the payload will be transfer-encoded, if needed, "
-"using the specified :class:`~email.charset.Charset`, and a header with the "
-"appropriate value will be added.  If a :mailheader:`Content-Transfer-"
-"Encoding` header already exists, the payload is assumed to already be "
-"correctly encoded using that :mailheader:`Content-Transfer-Encoding` and is "
-"not modified."
+"be added with a value of :mimetype:`text/plain`.  Whether "
+"the :mailheader:`Content-Type` header already exists or not, its ``charset`` "
+"parameter will be set to *charset.output_charset*.   If "
+"*charset.input_charset* and *charset.output_charset* differ, the payload "
+"will be re-encoded to the *output_charset*.  If there is no "
+"existing :mailheader:`Content-Transfer-Encoding` header, then the payload "
+"will be transfer-encoded, if needed, using the "
+"specified :class:`~email.charset.Charset`, and a header with the appropriate "
+"value will be added.  If a :mailheader:`Content-Transfer-Encoding` header "
+"already exists, the payload is assumed to already be correctly encoded using "
+"that :mailheader:`Content-Transfer-Encoding` and is not modified."
 msgstr ""
 "Si no hay un encabezado existente :mailheader:`MIME-Version`, será añadido "
 "uno. Si no hay un encabezado existente :mailheader:`Content-Type`, será "
-"añadido uno con valor :mimetype:`text/plain`. Tanto como si el encabezado :"
-"mailheader:`Content-Type` existe actualmente como si no, su parámetro "
-"``charset`` será establecido a *charset.output_charset*. Si *charset."
-"input_charset* y *charset.output_charset* difieren, la carga será "
-"recodificada al *output_charset*. Si no hay un encabezado existente :"
-"mailheader:`Content-Transfer-Encoding`, entonces la carga será codificada "
-"por transferencia, si es necesario, usando el :class:`~email.charset."
-"Charset` especificado y un encabezado con el valor apropiado será añadido. "
-"Si ya existe un encabezado :mailheader:`Content-Transfer-Encoding`, la carga "
-"se asume que ya está correctamente codificada usando ese :mailheader:"
-"`Content-Transfer-Encoding` y no es modificada."
+"añadido uno con valor :mimetype:`text/plain`. Tanto como si el "
+"encabezado :mailheader:`Content-Type` existe actualmente como si no, su "
+"parámetro ``charset`` será establecido a *charset.output_charset*. Si "
+"*charset.input_charset* y *charset.output_charset* difieren, la carga será "
+"recodificada al *output_charset*. Si no hay un encabezado "
+"existente :mailheader:`Content-Transfer-Encoding`, entonces la carga será "
+"codificada por transferencia, si es necesario, usando "
+"el :class:`~email.charset.Charset` especificado y un encabezado con el valor "
+"apropiado será añadido. Si ya existe un encabezado :mailheader:`Content-"
+"Transfer-Encoding`, la carga se asume que ya está correctamente codificada "
+"usando ese :mailheader:`Content-Transfer-Encoding` y no es modificada."
 
-#: ../Doc/library/email.compat32-message.rst:266
+#: ../Doc/library/email.compat32-message.rst:267
 msgid ""
 "This is a legacy method.  On the :class:`~email.emailmessage.EmailMessage` "
-"class its functionality is replaced by the *charset* parameter of the :meth:"
-"`email.emailmessage.EmailMessage.set_content` method."
+"class its functionality is replaced by the *charset* parameter of "
+"the :meth:`email.emailmessage.EmailMessage.set_content` method."
 msgstr ""
-"Este es un método heredado. En la clase :class:`~email.emailmessage."
-"EmailMessage` su funcionalidad es remplazada por el parámetro *charset* del "
+"Este es un método heredado. En la "
+"clase :class:`~email.emailmessage.EmailMessage` su funcionalidad es "
+"remplazada por el parámetro *charset* del "
 "método :meth:`email.emailmessage.EmailMessage.set_content`."
 
-#: ../Doc/library/email.compat32-message.rst:274
+#: ../Doc/library/email.compat32-message.rst:275
 msgid ""
 "Return the :class:`~email.charset.Charset` instance associated with the "
 "message's payload."
@@ -498,25 +529,26 @@ msgstr ""
 "Retorna la instancia :class:`~email.charset.Charset` asociada con la carga "
 "del mensaje."
 
-#: ../Doc/library/email.compat32-message.rst:277
+#: ../Doc/library/email.compat32-message.rst:278
 msgid ""
 "This is a legacy method.  On the :class:`~email.emailmessage.EmailMessage` "
 "class it always returns ``None``."
 msgstr ""
-"Este es un método heredado. En la clase :class:`~email.emailmessage."
-"EmailMessage` siempre retorna ``None``."
+"Este es un método heredado. En la "
+"clase :class:`~email.emailmessage.EmailMessage` siempre retorna ``None``."
 
-#: ../Doc/library/email.compat32-message.rst:282
+#: ../Doc/library/email.compat32-message.rst:283
 msgid ""
 "The following methods implement a mapping-like interface for accessing the "
 "message's :rfc:`2822` headers.  Note that there are some semantic "
 "differences between these methods and a normal mapping (i.e. dictionary) "
 "interface.  For example, in a dictionary there are no duplicate keys, but "
 "here there may be duplicate message headers.  Also, in dictionaries there is "
-"no guaranteed order to the keys returned by :meth:`keys`, but in a :class:"
-"`Message` object, headers are always returned in the order they appeared in "
-"the original message, or were added to the message later.  Any header "
-"deleted and then re-added are always appended to the end of the header list."
+"no guaranteed order to the keys returned by :meth:`keys`, but in "
+"a :class:`Message` object, headers are always returned in the order they "
+"appeared in the original message, or were added to the message later.  Any "
+"header deleted and then re-added are always appended to the end of the "
+"header list."
 msgstr ""
 "Los siguientes métodos implementan una interfaz parecida a un mapeo para "
 "acceder a los encabezados :rfc:`2822` del mensaje. Ten en cuenta que hay "
@@ -530,7 +562,7 @@ msgstr ""
 "encabezado eliminado y vuelto a adicionar siempre es añadido al final de la "
 "lista de encabezados."
 
-#: ../Doc/library/email.compat32-message.rst:292
+#: ../Doc/library/email.compat32-message.rst:293
 msgid ""
 "These semantic differences are intentional and are biased toward maximal "
 "convenience."
@@ -538,7 +570,7 @@ msgstr ""
 "Esas diferencias semánticas son intencionales y están sesgadas hacia la "
 "máxima comodidad."
 
-#: ../Doc/library/email.compat32-message.rst:295
+#: ../Doc/library/email.compat32-message.rst:296
 msgid ""
 "Note that in all cases, any envelope header present in the message is not "
 "included in the mapping interface."
@@ -546,7 +578,7 @@ msgstr ""
 "Ten en cuenta que en todos los casos, cualquier encabezado de envoltura "
 "presente en el mensaje no está incluido en la interfaz de mapeo."
 
-#: ../Doc/library/email.compat32-message.rst:298
+#: ../Doc/library/email.compat32-message.rst:299
 msgid ""
 "In a model generated from bytes, any header values that (in contravention of "
 "the RFCs) contain non-ASCII bytes will, when retrieved through this "
@@ -555,14 +587,15 @@ msgid ""
 msgstr ""
 "En un modelo generado desde bytes, cualesquiera valores de encabezado que "
 "(en contravención de los RFCs) contienen bytes no ASCII serán representados, "
-"cuando sean obtenidos mediante esta interfaz, como objetos :class:`~email."
-"header.Header` con un conjunto de caracteres ``unknown-8bit``."
+"cuando sean obtenidos mediante esta interfaz, como "
+"objetos :class:`~email.header.Header` con un conjunto de caracteres "
+"``unknown-8bit``."
 
-#: ../Doc/library/email.compat32-message.rst:306
+#: ../Doc/library/email.compat32-message.rst:307
 msgid "Return the total number of headers, including duplicates."
 msgstr "Retorna el número total de encabezados, incluyendo duplicados."
 
-#: ../Doc/library/email.compat32-message.rst:311
+#: ../Doc/library/email.compat32-message.rst:312
 msgid ""
 "Return ``True`` if the message object has a field named *name*. Matching is "
 "done case-insensitively and *name* should not include the trailing colon. "
@@ -573,17 +606,23 @@ msgstr ""
 "debería incluir el caracter de doble punto final. Usado para el operador "
 "``in``, ej::"
 
-#: ../Doc/library/email.compat32-message.rst:321
+#: ../Doc/library/email.compat32-message.rst:316
+msgid ""
+"if 'message-id' in myMessage:\n"
+"   print('Message-ID:', myMessage['message-id'])"
+msgstr ""
+
+#: ../Doc/library/email.compat32-message.rst:322
 msgid ""
 "Return the value of the named header field.  *name* should not include the "
-"colon field separator.  If the header is missing, ``None`` is returned; a :"
-"exc:`KeyError` is never raised."
+"colon field separator.  If the header is missing, ``None`` is returned; "
+"a :exc:`KeyError` is never raised."
 msgstr ""
 "Retorna el valor del campo del encabezado nombrado. *name* no debe incluir "
 "el separador de campo de doble punto. Si falta un encabezado, se retorna "
 "``None``; nunca se genera un error :exc:`KeyError`."
 
-#: ../Doc/library/email.compat32-message.rst:325
+#: ../Doc/library/email.compat32-message.rst:326
 msgid ""
 "Note that if the named field appears more than once in the message's "
 "headers, exactly which of those field values will be returned is undefined.  "
@@ -595,7 +634,7 @@ msgstr ""
 "valores de campos retornados. Usa el método :meth:`get_all` para obtener los "
 "valores de todos los encabezados nombrados existentes."
 
-#: ../Doc/library/email.compat32-message.rst:333
+#: ../Doc/library/email.compat32-message.rst:334
 msgid ""
 "Add a header to the message with field name *name* and value *val*.  The "
 "field is appended to the end of the message's existing fields."
@@ -603,7 +642,7 @@ msgstr ""
 "Añade un encabezado al mensaje con el nombre de campo *name* y el valor "
 "*val*. El campo es añadido al final de los campos existentes del mensaje."
 
-#: ../Doc/library/email.compat32-message.rst:336
+#: ../Doc/library/email.compat32-message.rst:337
 msgid ""
 "Note that this does *not* overwrite or delete any existing header with the "
 "same name.  If you want to ensure that the new header is the only one "
@@ -614,7 +653,13 @@ msgstr ""
 "es el único presente en el mensaje con el nombre de campo *name*, elimina el "
 "campo primero, ej::"
 
-#: ../Doc/library/email.compat32-message.rst:346
+#: ../Doc/library/email.compat32-message.rst:341
+msgid ""
+"del msg['subject']\n"
+"msg['subject'] = 'Python roolz!'"
+msgstr ""
+
+#: ../Doc/library/email.compat32-message.rst:347
 msgid ""
 "Delete all occurrences of the field with name *name* from the message's "
 "headers.  No exception is raised if the named field isn't present in the "
@@ -624,16 +669,16 @@ msgstr ""
 "encabezados del mensaje. No se genera ninguna excepción si el encabezado "
 "nombrado no está presente en los encabezados."
 
-#: ../Doc/library/email.compat32-message.rst:353
+#: ../Doc/library/email.compat32-message.rst:354
 msgid "Return a list of all the message's header field names."
 msgstr ""
 "Retorna una lista de todos los nombres de campos de encabezados del mensaje."
 
-#: ../Doc/library/email.compat32-message.rst:358
+#: ../Doc/library/email.compat32-message.rst:359
 msgid "Return a list of all the message's field values."
 msgstr "Retorna una lista de todos los valores de campos del mensaje."
 
-#: ../Doc/library/email.compat32-message.rst:363
+#: ../Doc/library/email.compat32-message.rst:364
 msgid ""
 "Return a list of 2-tuples containing all the message's field headers and "
 "values."
@@ -641,21 +686,22 @@ msgstr ""
 "Retorna una lista de tuplas de dos elementos conteniendo todos los campos y "
 "valores de encabezados del mensaje."
 
-#: ../Doc/library/email.compat32-message.rst:369
+#: ../Doc/library/email.compat32-message.rst:370
+#, fuzzy
 msgid ""
-"Return the value of the named header field.  This is identical to :meth:"
-"`__getitem__` except that optional *failobj* is returned if the named header "
-"is missing (defaults to ``None``)."
+"Return the value of the named header field.  This is identical "
+"to :meth:`~object.__getitem__` except that optional *failobj* is returned if "
+"the named header is missing (defaults to ``None``)."
 msgstr ""
-"Retorna el valor del campo de encabezado nombrado. Esto es idéntico a :meth:"
-"`__getitem__` excepto que el argumento *failobj* es retornado si falta el "
-"encabezado nombrado (por defecto a ``None``)."
+"Retorna el valor del campo de encabezado nombrado. Esto es idéntico "
+"a :meth:`__getitem__` excepto que el argumento *failobj* es retornado si "
+"falta el encabezado nombrado (por defecto a ``None``)."
 
-#: ../Doc/library/email.compat32-message.rst:373
+#: ../Doc/library/email.compat32-message.rst:374
 msgid "Here are some additional useful methods:"
 msgstr "Aquí hay algunos métodos útiles adicionales:"
 
-#: ../Doc/library/email.compat32-message.rst:378
+#: ../Doc/library/email.compat32-message.rst:379
 msgid ""
 "Return a list of all the values for the field named *name*. If there are no "
 "such named headers in the message, *failobj* is returned (defaults to "
@@ -665,19 +711,20 @@ msgstr ""
 "no hay tales encabezados nombrados en el mensaje, retorna *failobj* (por "
 "defecto ``None``)."
 
-#: ../Doc/library/email.compat32-message.rst:385
+#: ../Doc/library/email.compat32-message.rst:386
 msgid ""
 "Extended header setting.  This method is similar to :meth:`__setitem__` "
 "except that additional header parameters can be provided as keyword "
 "arguments.  *_name* is the header field to add and *_value* is the *primary* "
 "value for the header."
 msgstr ""
-"Configuración de encabezado extendida. Este método es similar a :meth:"
-"`__setitem__` excepto que pueden ser provistos parámetros adicionales de "
-"encabezado como argumentos de palabra clave. *_name* es el campo de "
-"encabezado a añadir y *_value* es el valor *primario* para el encabezado."
+"Configuración de encabezado extendida. Este método es similar "
+"a :meth:`__setitem__` excepto que pueden ser provistos parámetros "
+"adicionales de encabezado como argumentos de palabra clave. *_name* es el "
+"campo de encabezado a añadir y *_value* es el valor *primario* para el "
+"encabezado."
 
-#: ../Doc/library/email.compat32-message.rst:390
+#: ../Doc/library/email.compat32-message.rst:391
 msgid ""
 "For each item in the keyword argument dictionary *_params*, the key is taken "
 "as the parameter name, with underscores converted to dashes (since dashes "
@@ -686,11 +733,11 @@ msgid ""
 "key will be added.  If the value contains non-ASCII characters, it can be "
 "specified as a three tuple in the format ``(CHARSET, LANGUAGE, VALUE)``, "
 "where ``CHARSET`` is a string naming the charset to be used to encode the "
-"value, ``LANGUAGE`` can usually be set to ``None`` or the empty string (see :"
-"rfc:`2231` for other possibilities), and ``VALUE`` is the string value "
+"value, ``LANGUAGE`` can usually be set to ``None`` or the empty string "
+"(see :rfc:`2231` for other possibilities), and ``VALUE`` is the string value "
 "containing non-ASCII code points.  If a three tuple is not passed and the "
-"value contains non-ASCII characters, it is automatically encoded in :rfc:"
-"`2231` format using a ``CHARSET`` of ``utf-8`` and a ``LANGUAGE`` of "
+"value contains non-ASCII characters, it is automatically encoded "
+"in :rfc:`2231` format using a ``CHARSET`` of ``utf-8`` and a ``LANGUAGE`` of "
 "``None``."
 msgstr ""
 "Para cada elemento en el diccionario de argumentos de palabra clave "
@@ -705,26 +752,46 @@ msgstr ""
 "normalmente ser definido a ``None`` o una cadena vacía (ver :rfc:`2231` para "
 "otras posibilidades) y ``VALUE`` es la cadena del valor conteniendo puntos "
 "de caracteres no ASCII. Si no se pasa una tupla de tres elementos y el valor "
-"contiene caracteres no ASCII, se codifica automáticamente en formato :rfc:"
-"`2231` usando ``CHARSET`` como ``utf-8`` y ``LANGUAGE`` como ``None``."
+"contiene caracteres no ASCII, se codifica automáticamente en "
+"formato :rfc:`2231` usando ``CHARSET`` como ``utf-8`` y ``LANGUAGE`` como "
+"``None``."
 
-#: ../Doc/library/email.compat32-message.rst:404
+#: ../Doc/library/email.compat32-message.rst:405
 msgid "Here's an example::"
 msgstr "Aquí hay un ejemplo::"
 
-#: ../Doc/library/email.compat32-message.rst:408
+#: ../Doc/library/email.compat32-message.rst:407
+msgid "msg.add_header('Content-Disposition', 'attachment', filename='bud.gif')"
+msgstr ""
+
+#: ../Doc/library/email.compat32-message.rst:409
 msgid "This will add a header that looks like ::"
 msgstr "Esto añadirá un encabezado que se verá como ::"
 
-#: ../Doc/library/email.compat32-message.rst:412
+#: ../Doc/library/email.compat32-message.rst:411
+msgid "Content-Disposition: attachment; filename=\"bud.gif\""
+msgstr ""
+
+#: ../Doc/library/email.compat32-message.rst:413
 msgid "An example with non-ASCII characters::"
 msgstr "Un ejemplo con caracteres no ASCII::"
 
-#: ../Doc/library/email.compat32-message.rst:417
+#: ../Doc/library/email.compat32-message.rst:415
+msgid ""
+"msg.add_header('Content-Disposition', 'attachment',\n"
+"               filename=('iso-8859-1', '', 'Fußballer.ppt'))"
+msgstr ""
+
+#: ../Doc/library/email.compat32-message.rst:418
 msgid "Which produces ::"
 msgstr "Lo que produce ::"
 
-#: ../Doc/library/email.compat32-message.rst:424
+#: ../Doc/library/email.compat32-message.rst:420
+msgid ""
+"Content-Disposition: attachment; filename*=\"iso-8859-1''Fu%DFballer.ppt\""
+msgstr ""
+
+#: ../Doc/library/email.compat32-message.rst:425
 msgid ""
 "Replace a header.  Replace the first header found in the message that "
 "matches *_name*, retaining header order and field name case.  If no matching "
@@ -735,23 +802,23 @@ msgstr ""
 "nombre del campo. Si no se encuentra ningún encabezado que concuerde, se "
 "genera un error :exc:`KeyError`."
 
-#: ../Doc/library/email.compat32-message.rst:431
+#: ../Doc/library/email.compat32-message.rst:432
 msgid ""
 "Return the message's content type.  The returned string is coerced to lower "
-"case of the form :mimetype:`maintype/subtype`.  If there was no :mailheader:"
-"`Content-Type` header in the message the default type as given by :meth:"
-"`get_default_type` will be returned.  Since according to :rfc:`2045`, "
-"messages always have a default type, :meth:`get_content_type` will always "
-"return a value."
+"case of the form :mimetype:`maintype/subtype`.  If there was "
+"no :mailheader:`Content-Type` header in the message the default type as "
+"given by :meth:`get_default_type` will be returned.  Since according "
+"to :rfc:`2045`, messages always have a default "
+"type, :meth:`get_content_type` will always return a value."
 msgstr ""
 "Retorna el tipo de contenido del mensaje. La cadena retornada se fuerza a "
 "letras minúsculas de la forma :mimetype:`maintype/subtype`. Si no hay ningún "
 "encabezado :mailheader:`Content-Type` en el mensaje será retornado el tipo "
-"por defecto como es dado por :meth:`get_default_type`. Dado que según :rfc:"
-"`2045`, los mensajes tienen siempre un tipo predeterminado, :meth:"
-"`get_content_type` siempre retornará un valor."
+"por defecto como es dado por :meth:`get_default_type`. Dado que "
+"según :rfc:`2045`, los mensajes tienen siempre un tipo "
+"predeterminado, :meth:`get_content_type` siempre retornará un valor."
 
-#: ../Doc/library/email.compat32-message.rst:438
+#: ../Doc/library/email.compat32-message.rst:439
 msgid ""
 ":rfc:`2045` defines a message's default type to be :mimetype:`text/plain` "
 "unless it appears inside a :mimetype:`multipart/digest` container, in which "
@@ -761,58 +828,62 @@ msgid ""
 msgstr ""
 ":rfc:`2045` define el tipo predeterminado del mensaje a :mimetype:`text/"
 "plain` a no ser que aparezca dentro de un contenedor :mimetype:`multipart/"
-"digest`, en cuyo caso sería :mimetype:`message/rfc822`. Si el encabezado :"
-"mailheader:`Content-Type` tiene una especificación de tipo inválido, :rfc:"
-"`2045` ordena que el tipo por defecto sea :mimetype:`text/plain`."
+"digest`, en cuyo caso sería :mimetype:`message/rfc822`. Si el "
+"encabezado :mailheader:`Content-Type` tiene una especificación de tipo "
+"inválido, :rfc:`2045` ordena que el tipo por defecto sea :mimetype:`text/"
+"plain`."
 
-#: ../Doc/library/email.compat32-message.rst:447
+#: ../Doc/library/email.compat32-message.rst:448
 msgid ""
 "Return the message's main content type.  This is the :mimetype:`maintype` "
 "part of the string returned by :meth:`get_content_type`."
 msgstr ""
-"Retorna el tipo de contenido principal del mensaje. Esta es la parte :"
-"mimetype:`maintype` de la cadena retornada por :meth:`get_content_type`."
+"Retorna el tipo de contenido principal del mensaje. Esta es la "
+"parte :mimetype:`maintype` de la cadena retornada "
+"por :meth:`get_content_type`."
 
-#: ../Doc/library/email.compat32-message.rst:453
+#: ../Doc/library/email.compat32-message.rst:454
 msgid ""
 "Return the message's sub-content type.  This is the :mimetype:`subtype` part "
 "of the string returned by :meth:`get_content_type`."
 msgstr ""
-"Retorna el tipo del subcontenido del mensaje. Esta es la parte :mimetype:"
-"`subtype` de la cadena retornada por :meth:`get_content_type`."
+"Retorna el tipo del subcontenido del mensaje. Esta es la "
+"parte :mimetype:`subtype` de la cadena retornada "
+"por :meth:`get_content_type`."
 
-#: ../Doc/library/email.compat32-message.rst:459
+#: ../Doc/library/email.compat32-message.rst:460
 msgid ""
 "Return the default content type.  Most messages have a default content type "
-"of :mimetype:`text/plain`, except for messages that are subparts of :"
-"mimetype:`multipart/digest` containers.  Such subparts have a default "
+"of :mimetype:`text/plain`, except for messages that are subparts "
+"of :mimetype:`multipart/digest` containers.  Such subparts have a default "
 "content type of :mimetype:`message/rfc822`."
 msgstr ""
 "Retorna el tipo del contenido por defecto. La mayoría de mensajes tienen un "
 "tipo de contenido por defecto de :mimetype:`text/plain`, excepto para "
 "mensajes que son subpartes de contenedores :mimetype:`multipart/digest`. "
-"Tales subpartes tienen como tipo de contenido predeterminado :mimetype:"
-"`message/rfc822`."
+"Tales subpartes tienen como tipo de contenido "
+"predeterminado :mimetype:`message/rfc822`."
 
-#: ../Doc/library/email.compat32-message.rst:467
+#: ../Doc/library/email.compat32-message.rst:468
 msgid ""
 "Set the default content type.  *ctype* should either be :mimetype:`text/"
 "plain` or :mimetype:`message/rfc822`, although this is not enforced.  The "
 "default content type is not stored in the :mailheader:`Content-Type` header."
 msgstr ""
-"Establece el tipo de contenido por defecto. *ctype* debería ser :mimetype:"
-"`text/plain` o :mimetype:`message/rfc822`, aunque esto no es obligatorio. El "
-"tipo de contenido predeterminado no se almacena en el encabezado :mailheader:"
-"`Content-Type`."
+"Establece el tipo de contenido por defecto. *ctype* debería "
+"ser :mimetype:`text/plain` o :mimetype:`message/rfc822`, aunque esto no es "
+"obligatorio. El tipo de contenido predeterminado no se almacena en el "
+"encabezado :mailheader:`Content-Type`."
 
-#: ../Doc/library/email.compat32-message.rst:475
+#: ../Doc/library/email.compat32-message.rst:476
 msgid ""
 "Return the message's :mailheader:`Content-Type` parameters, as a list. The "
 "elements of the returned list are 2-tuples of key/value pairs, as split on "
 "the ``'='`` sign.  The left hand side of the ``'='`` is the key, while the "
 "right hand side is the value.  If there is no ``'='`` sign in the parameter "
-"the value is the empty string, otherwise the value is as described in :meth:"
-"`get_param` and is unquoted if optional *unquote* is ``True`` (the default)."
+"the value is the empty string, otherwise the value is as described "
+"in :meth:`get_param` and is unquoted if optional *unquote* is ``True`` (the "
+"default)."
 msgstr ""
 "Retorna los parámetros del :mailheader:`Content-Type` del mensaje como una "
 "lista. Los elementos de la lista retornada son tuplas de dos elementos de "
@@ -822,29 +893,29 @@ msgstr ""
 "contrario el valor es como se describe en :meth:`get_param` y no está citado "
 "si el parámetro opcional *unquote* es ``True`` (por defecto)."
 
-#: ../Doc/library/email.compat32-message.rst:483
+#: ../Doc/library/email.compat32-message.rst:484
 msgid ""
-"Optional *failobj* is the object to return if there is no :mailheader:"
-"`Content-Type` header.  Optional *header* is the header to search instead "
-"of :mailheader:`Content-Type`."
+"Optional *failobj* is the object to return if there is "
+"no :mailheader:`Content-Type` header.  Optional *header* is the header to "
+"search instead of :mailheader:`Content-Type`."
 msgstr ""
 "El parámetro opcional *failobj* es el objeto a retornar si no hay "
 "encabezado :mailheader:`Content-Type`. El parámetro opcional *header* es el "
 "encabezado a buscar en lugar de :mailheader:`Content-Type`."
 
-#: ../Doc/library/email.compat32-message.rst:487
-#: ../Doc/library/email.compat32-message.rst:525
+#: ../Doc/library/email.compat32-message.rst:488
+#: ../Doc/library/email.compat32-message.rst:526
 msgid ""
 "This is a legacy method.  On the :class:`~email.emailmessage.EmailMessage` "
 "class its functionality is replaced by the *params* property of the "
 "individual header objects returned by the header access methods."
 msgstr ""
-"Este es un método heredado. En la clase :class:`~email.emailmessage."
-"EmailMessage` su funcionalidad es remplazada por la propiedad *params* de "
-"los objetos individuales de encabezado retornados por los métodos de acceso "
-"del encabezado."
+"Este es un método heredado. En la "
+"clase :class:`~email.emailmessage.EmailMessage` su funcionalidad es "
+"remplazada por la propiedad *params* de los objetos individuales de "
+"encabezado retornados por los métodos de acceso del encabezado."
 
-#: ../Doc/library/email.compat32-message.rst:495
+#: ../Doc/library/email.compat32-message.rst:496
 msgid ""
 "Return the value of the :mailheader:`Content-Type` header's parameter "
 "*param* as a string.  If the message has no :mailheader:`Content-Type` "
@@ -852,19 +923,19 @@ msgid ""
 "(defaults to ``None``)."
 msgstr ""
 "Retorna el valor del parámetro *param* del encabezado :mailheader:`Content-"
-"Type` como una cadena. Si el mensaje no tiene encabezado :mailheader:"
-"`Content-Type` o si no existe tal parámetro, entonces se retorna *failobj* "
-"(por defecto es ``None``)."
+"Type` como una cadena. Si el mensaje no tiene "
+"encabezado :mailheader:`Content-Type` o si no existe tal parámetro, entonces "
+"se retorna *failobj* (por defecto es ``None``)."
 
-#: ../Doc/library/email.compat32-message.rst:500
+#: ../Doc/library/email.compat32-message.rst:501
 msgid ""
-"Optional *header* if given, specifies the message header to use instead of :"
-"mailheader:`Content-Type`."
+"Optional *header* if given, specifies the message header to use instead "
+"of :mailheader:`Content-Type`."
 msgstr ""
 "El parámetro opcional *header*, si es definido, especifica el encabezado del "
 "mensaje a usar en lugar de :mailheader:`Content-Type`."
 
-#: ../Doc/library/email.compat32-message.rst:503
+#: ../Doc/library/email.compat32-message.rst:504
 msgid ""
 "Parameter keys are always compared case insensitively.  The return value can "
 "either be a string, or a 3-tuple if the parameter was :rfc:`2231` encoded.  "
@@ -882,22 +953,29 @@ msgstr ""
 "en el conjunto de caracteres ``us-ascii``. Generalmente puedes ignorar "
 "``LANGUAGE``."
 
-#: ../Doc/library/email.compat32-message.rst:511
+#: ../Doc/library/email.compat32-message.rst:512
 msgid ""
-"If your application doesn't care whether the parameter was encoded as in :"
-"rfc:`2231`, you can collapse the parameter value by calling :func:`email."
-"utils.collapse_rfc2231_value`, passing in the return value from :meth:"
-"`get_param`.  This will return a suitably decoded Unicode string when the "
-"value is a tuple, or the original string unquoted if it isn't.  For example::"
+"If your application doesn't care whether the parameter was encoded as "
+"in :rfc:`2231`, you can collapse the parameter value by "
+"calling :func:`email.utils.collapse_rfc2231_value`, passing in the return "
+"value from :meth:`get_param`.  This will return a suitably decoded Unicode "
+"string when the value is a tuple, or the original string unquoted if it "
+"isn't.  For example::"
 msgstr ""
-"Si a tu aplicación no le importa si el parámetro fue codificado según :rfc:"
-"`2231`, puedes contraer el valor del parámetro invocando :func:`email.utils."
-"collapse_rfc2231_value`, pasando el valor de retorno desde :meth:"
-"`get_param`. Esto retornará una cadena Unicode convenientemente decodificada "
-"cuando el valor es una tupla o la cadena original sin entrecomillar si no lo "
-"es. Por ejemplo::"
+"Si a tu aplicación no le importa si el parámetro fue codificado "
+"según :rfc:`2231`, puedes contraer el valor del parámetro "
+"invocando :func:`email.utils.collapse_rfc2231_value`, pasando el valor de "
+"retorno desde :meth:`get_param`. Esto retornará una cadena Unicode "
+"convenientemente decodificada cuando el valor es una tupla o la cadena "
+"original sin entrecomillar si no lo es. Por ejemplo::"
 
-#: ../Doc/library/email.compat32-message.rst:521
+#: ../Doc/library/email.compat32-message.rst:519
+msgid ""
+"rawparam = msg.get_param('foo')\n"
+"param = email.utils.collapse_rfc2231_value(rawparam)"
+msgstr ""
+
+#: ../Doc/library/email.compat32-message.rst:522
 msgid ""
 "In any case, the parameter value (either the returned string, or the "
 "``VALUE`` item in the 3-tuple) is always unquoted, unless *unquote* is set "
@@ -907,7 +985,7 @@ msgstr ""
 "elemento ``VALUE`` en la tupla de 3 elementos) siempre está sin "
 "entrecomillar, a no ser que *unquote* está establecido a ``False``."
 
-#: ../Doc/library/email.compat32-message.rst:534
+#: ../Doc/library/email.compat32-message.rst:535
 msgid ""
 "Set a parameter in the :mailheader:`Content-Type` header.  If the parameter "
 "already exists in the header, its value will be replaced with *value*.  If "
@@ -921,18 +999,18 @@ msgstr ""
 "este mensaje, será establecido a :mimetype:`text/plain` y el nuevo valor del "
 "parámetro será añadido según :rfc:`2045`."
 
-#: ../Doc/library/email.compat32-message.rst:540
+#: ../Doc/library/email.compat32-message.rst:541
 msgid ""
 "Optional *header* specifies an alternative header to :mailheader:`Content-"
 "Type`, and all parameters will be quoted as necessary unless optional "
 "*requote* is ``False`` (the default is ``True``)."
 msgstr ""
-"El parámetro opcional *header* especifica una alternativa a :mailheader:"
-"`Content-Type` y todos los parámetros serán entrecomillados si es necesario "
-"a no ser que el parámetro opcional *requote* sea ``False`` (por defecto es "
-"``True``)."
+"El parámetro opcional *header* especifica una alternativa "
+"a :mailheader:`Content-Type` y todos los parámetros serán entrecomillados si "
+"es necesario a no ser que el parámetro opcional *requote* sea ``False`` (por "
+"defecto es ``True``)."
 
-#: ../Doc/library/email.compat32-message.rst:544
+#: ../Doc/library/email.compat32-message.rst:545
 msgid ""
 "If optional *charset* is specified, the parameter will be encoded according "
 "to :rfc:`2231`. Optional *language* specifies the RFC 2231 language, "
@@ -944,7 +1022,7 @@ msgstr ""
 "especifica el lenguaje RFC 2231, por defecto una cadena vacía. Tanto "
 "*charset* como *language* deberían ser cadenas."
 
-#: ../Doc/library/email.compat32-message.rst:549
+#: ../Doc/library/email.compat32-message.rst:550
 msgid ""
 "If *replace* is ``False`` (the default) the header is moved to the end of "
 "the list of headers.  If *replace* is ``True``, the header will be updated "
@@ -954,17 +1032,17 @@ msgstr ""
 "de la lista de encabezados. Si *replace* es ``True``, el encabezado será "
 "actualizado."
 
-#: ../Doc/library/email.compat32-message.rst:553
+#: ../Doc/library/email.compat32-message.rst:554
 msgid "``replace`` keyword was added."
 msgstr "el parámetro de palabra clave ``replace`` fue añadido."
 
-#: ../Doc/library/email.compat32-message.rst:558
+#: ../Doc/library/email.compat32-message.rst:559
 msgid ""
 "Remove the given parameter completely from the :mailheader:`Content-Type` "
 "header.  The header will be re-written in place without the parameter or its "
 "value.  All values will be quoted as necessary unless *requote* is ``False`` "
-"(the default is ``True``).  Optional *header* specifies an alternative to :"
-"mailheader:`Content-Type`."
+"(the default is ``True``).  Optional *header* specifies an alternative "
+"to :mailheader:`Content-Type`."
 msgstr ""
 "Elimina el parámetro dado completamente del encabezado :mailheader:`Content-"
 "Type`. El encabezado será reescrito en sí mismo sin el parámetro o su valor. "
@@ -972,17 +1050,17 @@ msgstr ""
 "*requote* sea ``False`` (por defecto es ``True``). El parámetro opcional "
 "*header* especifica una alternativa a :mailheader:`Content-Type`."
 
-#: ../Doc/library/email.compat32-message.rst:567
+#: ../Doc/library/email.compat32-message.rst:568
 msgid ""
 "Set the main type and subtype for the :mailheader:`Content-Type` header. "
 "*type* must be a string in the form :mimetype:`maintype/subtype`, otherwise "
 "a :exc:`ValueError` is raised."
 msgstr ""
-"Establece el tipo y subtipo principal para el encabezado :mailheader:"
-"`Content-Type`. *type* debe ser una cadena de la forma :mimetype:`maintype/"
-"subtype`, si no será generado un :exc:`ValueError`."
+"Establece el tipo y subtipo principal para el "
+"encabezado :mailheader:`Content-Type`. *type* debe ser una cadena de la "
+"forma :mimetype:`maintype/subtype`, si no será generado un :exc:`ValueError`."
 
-#: ../Doc/library/email.compat32-message.rst:571
+#: ../Doc/library/email.compat32-message.rst:572
 msgid ""
 "This method replaces the :mailheader:`Content-Type` header, keeping all the "
 "parameters in place.  If *requote* is ``False``, this leaves the existing "
@@ -994,26 +1072,26 @@ msgstr ""
 "encabezado existente tal como está, en caso contrario los parámetros serán "
 "entrecomillados (por defecto)."
 
-#: ../Doc/library/email.compat32-message.rst:576
+#: ../Doc/library/email.compat32-message.rst:577
 msgid ""
-"An alternative header can be specified in the *header* argument. When the :"
-"mailheader:`Content-Type` header is set a :mailheader:`MIME-Version` header "
-"is also added."
+"An alternative header can be specified in the *header* argument. When "
+"the :mailheader:`Content-Type` header is set a :mailheader:`MIME-Version` "
+"header is also added."
 msgstr ""
 "Un encabezado alternativo puede ser especificado en el argumento *header*. "
-"Cuando el encabezado :mailheader:`Content-Type` es definido, un encabezado :"
-"mailheader:`MIME-Version` también es añadido."
+"Cuando el encabezado :mailheader:`Content-Type` es definido, un "
+"encabezado :mailheader:`MIME-Version` también es añadido."
 
-#: ../Doc/library/email.compat32-message.rst:580
+#: ../Doc/library/email.compat32-message.rst:581
 msgid ""
 "This is a legacy method.  On the :class:`~email.emailmessage.EmailMessage` "
 "class its functionality is replaced by the ``make_`` and ``add_`` methods."
 msgstr ""
-"Este es un método heredado. En la clase :class:`~email.emailmessage."
-"EmailMessage` su funcionalidad es remplazada por los métodos ``make_`` y "
-"``add_``."
+"Este es un método heredado. En la "
+"clase :class:`~email.emailmessage.EmailMessage` su funcionalidad es "
+"remplazada por los métodos ``make_`` y ``add_``."
 
-#: ../Doc/library/email.compat32-message.rst:587
+#: ../Doc/library/email.compat32-message.rst:588
 msgid ""
 "Return the value of the ``filename`` parameter of the :mailheader:`Content-"
 "Disposition` header of the message.  If the header does not have a "
@@ -1022,26 +1100,26 @@ msgid ""
 "the header is missing, then *failobj* is returned. The returned string will "
 "always be unquoted as per :func:`email.utils.unquote`."
 msgstr ""
-"Retorna el valor del parámetro ``filename`` del encabezado :mailheader:"
-"`Content-Disposition` del mensaje. Si el encabezado no tiene un parámetro "
-"``filename``, este método recurre a buscar el parámetro ``name`` en el "
-"encabezado :mailheader:`Content-Type`. Si tampoco se encuentra o falta el "
-"encabezado, entonces retorna *failobj*. La cadena retornada siempre será sin "
-"entrecomillar según :func:`email.utils.unquote`."
+"Retorna el valor del parámetro ``filename`` del "
+"encabezado :mailheader:`Content-Disposition` del mensaje. Si el encabezado "
+"no tiene un parámetro ``filename``, este método recurre a buscar el "
+"parámetro ``name`` en el encabezado :mailheader:`Content-Type`. Si tampoco "
+"se encuentra o falta el encabezado, entonces retorna *failobj*. La cadena "
+"retornada siempre será sin entrecomillar según :func:`email.utils.unquote`."
 
-#: ../Doc/library/email.compat32-message.rst:598
+#: ../Doc/library/email.compat32-message.rst:599
 msgid ""
 "Return the value of the ``boundary`` parameter of the :mailheader:`Content-"
 "Type` header of the message, or *failobj* if either the header is missing, "
 "or has no ``boundary`` parameter.  The returned string will always be "
 "unquoted as per :func:`email.utils.unquote`."
 msgstr ""
-"Retorna el valor del parámetro ``boundary`` del encabezado :mailheader:"
-"`Content-Type` del mensaje o *failobj* tanto si falta el encabezado como si "
-"no tiene parámetro ``boundary``. La cadena retornada siempre será sin "
-"entrecomillar según :func:`email.utils.unquote`."
+"Retorna el valor del parámetro ``boundary`` del "
+"encabezado :mailheader:`Content-Type` del mensaje o *failobj* tanto si falta "
+"el encabezado como si no tiene parámetro ``boundary``. La cadena retornada "
+"siempre será sin entrecomillar según :func:`email.utils.unquote`."
 
-#: ../Doc/library/email.compat32-message.rst:606
+#: ../Doc/library/email.compat32-message.rst:607
 msgid ""
 "Set the ``boundary`` parameter of the :mailheader:`Content-Type` header to "
 "*boundary*.  :meth:`set_boundary` will always quote *boundary* if "
@@ -1053,14 +1131,14 @@ msgstr ""
 "si es necesario. Se genera :exc:`~email.errors.HeaderParseError` si el "
 "objeto de mensaje no tiene encabezado :mailheader:`Content-Type`."
 
-#: ../Doc/library/email.compat32-message.rst:611
+#: ../Doc/library/email.compat32-message.rst:612
 msgid ""
-"Note that using this method is subtly different than deleting the old :"
-"mailheader:`Content-Type` header and adding a new one with the new boundary "
-"via :meth:`add_header`, because :meth:`set_boundary` preserves the order of "
-"the :mailheader:`Content-Type` header in the list of headers. However, it "
-"does *not* preserve any continuation lines which may have been present in "
-"the original :mailheader:`Content-Type` header."
+"Note that using this method is subtly different than deleting the "
+"old :mailheader:`Content-Type` header and adding a new one with the new "
+"boundary via :meth:`add_header`, because :meth:`set_boundary` preserves the "
+"order of the :mailheader:`Content-Type` header in the list of headers. "
+"However, it does *not* preserve any continuation lines which may have been "
+"present in the original :mailheader:`Content-Type` header."
 msgstr ""
 "Ten en cuenta que usar este método es sutilmente diferente a borrar el "
 "antiguo encabezado :mailheader:`Content-Type` y añadir uno nuevo con el "
@@ -1070,7 +1148,7 @@ msgstr ""
 "pueden haber estado presentes en el encabezado original :mailheader:`Content-"
 "Type`."
 
-#: ../Doc/library/email.compat32-message.rst:621
+#: ../Doc/library/email.compat32-message.rst:622
 msgid ""
 "Return the ``charset`` parameter of the :mailheader:`Content-Type` header, "
 "coerced to lower case.  If there is no :mailheader:`Content-Type` header, or "
@@ -1081,17 +1159,17 @@ msgstr ""
 "Type` o si ese encabezado no tiene parámetro ``charset``, se retorna "
 "*failobj*."
 
-#: ../Doc/library/email.compat32-message.rst:625
+#: ../Doc/library/email.compat32-message.rst:626
 msgid ""
-"Note that this method differs from :meth:`get_charset` which returns the :"
-"class:`~email.charset.Charset` instance for the default encoding of the "
+"Note that this method differs from :meth:`get_charset` which returns "
+"the :class:`~email.charset.Charset` instance for the default encoding of the "
 "message body."
 msgstr ""
 "Ten en cuenta que este método difiere de :meth:`get_charset`, el cual "
 "retorna la instancia :class:`~email.charset.Charset` para la codificación "
 "por defecto del cuerpo del mensaje."
 
-#: ../Doc/library/email.compat32-message.rst:631
+#: ../Doc/library/email.compat32-message.rst:632
 msgid ""
 "Return a list containing the character set names in the message.  If the "
 "message is a :mimetype:`multipart`, then the list will contain one element "
@@ -1102,7 +1180,7 @@ msgstr ""
 "contendrá un elemento para cada subparte en la carga (*payload*), en caso "
 "contrario será una lista de un elemento."
 
-#: ../Doc/library/email.compat32-message.rst:635
+#: ../Doc/library/email.compat32-message.rst:636
 msgid ""
 "Each item in the list will be a string which is the value of the ``charset`` "
 "parameter in the :mailheader:`Content-Type` header for the represented "
@@ -1112,24 +1190,24 @@ msgid ""
 msgstr ""
 "Cada elemento en la lista será una cadena la cual es el valor del parámetro "
 "``charset`` en el encabezado :mailheader:`Content-Type` para la subparte "
-"representada. Sin embargo, si la subparte no tiene encabezado :mailheader:"
-"`Content-Type`, no tiene parámetro ``charset`` o no es del tipo MIME :"
-"mimetype:`text` principal, entonces ese elemento en la lista retornada será "
-"*failobj*."
+"representada. Sin embargo, si la subparte no tiene "
+"encabezado :mailheader:`Content-Type`, no tiene parámetro ``charset`` o no "
+"es del tipo MIME :mimetype:`text` principal, entonces ese elemento en la "
+"lista retornada será *failobj*."
 
-#: ../Doc/library/email.compat32-message.rst:645
+#: ../Doc/library/email.compat32-message.rst:646
 msgid ""
-"Return the lowercased value (without parameters) of the message's :"
-"mailheader:`Content-Disposition` header if it has one, or ``None``.  The "
-"possible values for this method are *inline*, *attachment* or ``None`` if "
-"the message follows :rfc:`2183`."
+"Return the lowercased value (without parameters) of the "
+"message's :mailheader:`Content-Disposition` header if it has one, or "
+"``None``.  The possible values for this method are *inline*, *attachment* or "
+"``None`` if the message follows :rfc:`2183`."
 msgstr ""
-"Retorna el valor en minúsculas (sin parámetros) del encabezado del mensaje :"
-"mailheader:`Content-Disposition` si tiene uno o ``None``. Los valores "
-"posibles para este método son *inline*, *attachment* o ``None`` si el "
-"mensaje sigue el :rfc:`2183`."
+"Retorna el valor en minúsculas (sin parámetros) del encabezado del "
+"mensaje :mailheader:`Content-Disposition` si tiene uno o ``None``. Los "
+"valores posibles para este método son *inline*, *attachment* o ``None`` si "
+"el mensaje sigue el :rfc:`2183`."
 
-#: ../Doc/library/email.compat32-message.rst:654
+#: ../Doc/library/email.compat32-message.rst:655
 msgid ""
 "The :meth:`walk` method is an all-purpose generator which can be used to "
 "iterate over all the parts and subparts of a message object tree, in depth-"
@@ -1142,7 +1220,7 @@ msgstr ""
 "típicamente :meth:`walk` como iterador en un bucle ``for``; cada iteración "
 "retorna la siguiente subparte."
 
-#: ../Doc/library/email.compat32-message.rst:659
+#: ../Doc/library/email.compat32-message.rst:660
 msgid ""
 "Here's an example that prints the MIME type of every part of a multipart "
 "message structure:"
@@ -1150,19 +1228,55 @@ msgstr ""
 "Aquí hay un ejemplo que imprime el tipo MIME de cada parte de una estructura "
 "de mensaje multiparte:"
 
-#: ../Doc/library/email.compat32-message.rst:685
+#: ../Doc/library/email.compat32-message.rst:674
+msgid ""
+">>> for part in msg.walk():\n"
+"...     print(part.get_content_type())\n"
+"multipart/report\n"
+"text/plain\n"
+"message/delivery-status\n"
+"text/plain\n"
+"text/plain\n"
+"message/rfc822\n"
+"text/plain"
+msgstr ""
+
+#: ../Doc/library/email.compat32-message.rst:686
 msgid ""
 "``walk`` iterates over the subparts of any part where :meth:`is_multipart` "
 "returns ``True``, even though ``msg.get_content_maintype() == 'multipart'`` "
 "may return ``False``.  We can see this in our example by making use of the "
 "``_structure`` debug helper function:"
 msgstr ""
-"``walk`` itera sobre las subpartes de cualquier parte donde :meth:"
-"`is_multipart` retorna ``True``, aunque ``msg.get_content_maintype() == "
-"'multipart'`` puede retornar ``False``. Vemos esto en nuestro ejemplo "
-"haciendo uso de la función de ayuda de depuración ``_structure``:"
+"``walk`` itera sobre las subpartes de cualquier parte "
+"donde :meth:`is_multipart` retorna ``True``, aunque "
+"``msg.get_content_maintype() == 'multipart'`` puede retornar ``False``. "
+"Vemos esto en nuestro ejemplo haciendo uso de la función de ayuda de "
+"depuración ``_structure``:"
 
-#: ../Doc/library/email.compat32-message.rst:712
+#: ../Doc/library/email.compat32-message.rst:692
+msgid ""
+">>> for part in msg.walk():\n"
+"...     print(part.get_content_maintype() == 'multipart',\n"
+"...           part.is_multipart())\n"
+"True True\n"
+"False False\n"
+"False True\n"
+"False False\n"
+"False False\n"
+"False True\n"
+"False False\n"
+">>> _structure(msg)\n"
+"multipart/report\n"
+"    text/plain\n"
+"    message/delivery-status\n"
+"        text/plain\n"
+"        text/plain\n"
+"    message/rfc822\n"
+"        text/plain"
+msgstr ""
+
+#: ../Doc/library/email.compat32-message.rst:713
 msgid ""
 "Here the ``message`` parts are not ``multiparts``, but they do contain "
 "subparts. ``is_multipart()`` returns ``True`` and ``walk`` descends into the "
@@ -1172,7 +1286,7 @@ msgstr ""
 "subpartes. ``is_multipart()`` retorna ``True`` y ``walk`` desciende a las "
 "subpartes."
 
-#: ../Doc/library/email.compat32-message.rst:717
+#: ../Doc/library/email.compat32-message.rst:718
 msgid ""
 ":class:`Message` objects can also optionally contain two instance "
 "attributes, which can be used when generating the plain text of a MIME "
@@ -1182,7 +1296,7 @@ msgstr ""
 "instancia, los cuales pueden ser usados al generar el texto plano de un "
 "mensaje MIME."
 
-#: ../Doc/library/email.compat32-message.rst:723
+#: ../Doc/library/email.compat32-message.rst:724
 msgid ""
 "The format of a MIME document allows for some text between the blank line "
 "following the headers, and the first multipart boundary string. Normally, "
@@ -1198,28 +1312,29 @@ msgstr ""
 "viendo el texto del mensaje en crudo o viendo el mensaje en un lector no "
 "compatible con MIME, este texto puede volverse visible."
 
-#: ../Doc/library/email.compat32-message.rst:730
+#: ../Doc/library/email.compat32-message.rst:731
 msgid ""
 "The *preamble* attribute contains this leading extra-armor text for MIME "
 "documents.  When the :class:`~email.parser.Parser` discovers some text after "
 "the headers but before the first boundary string, it assigns this text to "
-"the message's *preamble* attribute.  When the :class:`~email.generator."
-"Generator` is writing out the plain text representation of a MIME message, "
-"and it finds the message has a *preamble* attribute, it will write this text "
-"in the area between the headers and the first boundary.  See :mod:`email."
-"parser` and :mod:`email.generator` for details."
+"the message's *preamble* attribute.  When "
+"the :class:`~email.generator.Generator` is writing out the plain text "
+"representation of a MIME message, and it finds the message has a *preamble* "
+"attribute, it will write this text in the area between the headers and the "
+"first boundary.  See :mod:`email.parser` and :mod:`email.generator` for "
+"details."
 msgstr ""
 "El atributo *preamble* contiene este texto de refuerzo adicional para "
 "documentos MIME. Cuando el :class:`~email.parser.Parser` descubre algo de "
 "texto después de los encabezados pero antes de la primera cadena límite, "
-"asigna este texto al atributo *preamble* del mensaje. Cuando el :class:"
-"`~email.generator.Generator` está escribiendo la representación de texto sin "
-"formato de un mensaje MIME y puede encontrar el mensaje como un atributo "
-"*preamble*, escribirá este texto en el área entre los encabezados y el "
-"primer límite. Consulta :mod:`email.parser` y :mod:`email.generator` para "
+"asigna este texto al atributo *preamble* del mensaje. Cuando "
+"el :class:`~email.generator.Generator` está escribiendo la representación de "
+"texto sin formato de un mensaje MIME y puede encontrar el mensaje como un "
+"atributo *preamble*, escribirá este texto en el área entre los encabezados y "
+"el primer límite. Consulta :mod:`email.parser` y :mod:`email.generator` para "
 "más detalles."
 
-#: ../Doc/library/email.compat32-message.rst:740
+#: ../Doc/library/email.compat32-message.rst:741
 msgid ""
 "Note that if the message object has no preamble, the *preamble* attribute "
 "will be ``None``."
@@ -1227,7 +1342,7 @@ msgstr ""
 "Ten en cuenta que si el objeto de mensaje no tiene preámbulo, el atributo "
 "*preamble* será ``None``."
 
-#: ../Doc/library/email.compat32-message.rst:746
+#: ../Doc/library/email.compat32-message.rst:747
 msgid ""
 "The *epilogue* attribute acts the same way as the *preamble* attribute, "
 "except that it contains text that appears between the last boundary and the "
@@ -1237,16 +1352,17 @@ msgstr ""
 "excepto que contiene texto que aparece entre el último límite y el fin del "
 "mensaje."
 
-#: ../Doc/library/email.compat32-message.rst:750
+#: ../Doc/library/email.compat32-message.rst:751
 msgid ""
-"You do not need to set the epilogue to the empty string in order for the :"
-"class:`~email.generator.Generator` to print a newline at the end of the file."
+"You do not need to set the epilogue to the empty string in order for "
+"the :class:`~email.generator.Generator` to print a newline at the end of the "
+"file."
 msgstr ""
-"No necesitas establecer el epílogo de la cadena vacía en orden para el :"
-"class:`~email.generator.Generator` para imprimir una nueva línea al final "
-"del archivo."
+"No necesitas establecer el epílogo de la cadena vacía en orden para "
+"el :class:`~email.generator.Generator` para imprimir una nueva línea al "
+"final del archivo."
 
-#: ../Doc/library/email.compat32-message.rst:757
+#: ../Doc/library/email.compat32-message.rst:758
 msgid ""
 "The *defects* attribute contains a list of all the problems found when "
 "parsing this message.  See :mod:`email.errors` for a detailed description of "

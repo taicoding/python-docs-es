@@ -1,23 +1,25 @@
 # Copyright (C) 2001-2020, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # Maintained by the python-doc-es workteam.
-# docs-es@python.org / https://mail.python.org/mailman3/lists/docs-es.python.org/
-# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get the list of volunteers
+# docs-es@python.org /
+# https://mail.python.org/mailman3/lists/docs-es.python.org/
+# Check https://github.com/python/python-docs-es/blob/3.8/TRANSLATORS to get
+# the list of volunteers
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-06 11:59-0400\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2020-05-08 12:05-0300\n"
-"Language-Team: python-doc-es\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Last-Translator: Marco Richetta <marcorichetta@gmail.com>\n"
 "Language: es\n"
-"X-Generator: Poedit 2.3\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/tutorial/stdlib2.rst:5
 msgid "Brief Tour of the Standard Library --- Part II"
@@ -43,6 +45,13 @@ msgstr ""
 "El módulo :mod:`reprlib` provee una versión de :func:`repr` ajustada para "
 "mostrar contenedores grandes o profundamente anidados, en forma abreviada:"
 
+#: ../Doc/tutorial/stdlib2.rst:19
+msgid ""
+">>> import reprlib\n"
+">>> reprlib.repr(set('supercalifragilisticexpialidocious'))\n"
+"\"{'a', 'c', 'd', 'e', 'f', 'g', ...}\""
+msgstr ""
+
 #: ../Doc/tutorial/stdlib2.rst:23
 msgid ""
 "The :mod:`pprint` module offers more sophisticated control over printing "
@@ -56,6 +65,20 @@ msgstr ""
 "ocupa más de una línea, el generador de \"impresiones lindas\" agrega saltos "
 "de línea y sangrías para mostrar la estructura de los datos más claramente::"
 
+#: ../Doc/tutorial/stdlib2.rst:28
+msgid ""
+">>> import pprint\n"
+">>> t = [[[['black', 'cyan'], 'white', ['green', 'red']], [['magenta',\n"
+"...     'yellow'], 'blue']]]\n"
+"...\n"
+">>> pprint.pprint(t, width=30)\n"
+"[[[['black', 'cyan'],\n"
+"   'white',\n"
+"   ['green', 'red']],\n"
+"  [['magenta', 'yellow'],\n"
+"   'blue']]]"
+msgstr ""
+
 #: ../Doc/tutorial/stdlib2.rst:39
 msgid ""
 "The :mod:`textwrap` module formats paragraphs of text to fit a given screen "
@@ -63,6 +86,21 @@ msgid ""
 msgstr ""
 "El módulo :mod:`textwrap` formatea párrafos de texto para que quepan dentro "
 "de cierto ancho de pantalla::"
+
+#: ../Doc/tutorial/stdlib2.rst:42
+msgid ""
+">>> import textwrap\n"
+">>> doc = \"\"\"The wrap() method is just like fill() except that it "
+"returns\n"
+"... a list of strings instead of one big string with newlines to separate\n"
+"... the wrapped lines.\"\"\"\n"
+"...\n"
+">>> print(textwrap.fill(doc, width=40))\n"
+"The wrap() method is just like fill()\n"
+"except that it returns a list of strings\n"
+"instead of one big string with newlines\n"
+"to separate the wrapped lines."
+msgstr ""
 
 #: ../Doc/tutorial/stdlib2.rst:53
 msgid ""
@@ -73,6 +111,21 @@ msgstr ""
 "El módulo :mod:`locale` accede a una base de datos de formatos específicos a "
 "una cultura.  El atributo *grouping* de la función *format* permite una "
 "forma directa de formatear números con separadores de grupo::"
+
+#: ../Doc/tutorial/stdlib2.rst:57
+#, python-format
+msgid ""
+">>> import locale\n"
+">>> locale.setlocale(locale.LC_ALL, 'English_United States.1252')\n"
+"'English_United States.1252'\n"
+">>> conv = locale.localeconv()          # get a mapping of conventions\n"
+">>> x = 1234567.8\n"
+">>> locale.format_string(\"%d\", x, grouping=True)\n"
+"'1,234,567'\n"
+">>> locale.format_string(\"%s%.*f\", (conv['currency_symbol'],\n"
+"...                      conv['frac_digits'], x), grouping=True)\n"
+"'$1,234,567.80'"
+msgstr ""
 
 #: ../Doc/tutorial/stdlib2.rst:72
 msgid "Templating"
@@ -104,20 +157,40 @@ msgstr ""
 "alfanuméricos sin necesidad de dejar espacios en blanco. ``$$`` genera un "
 "``$``::"
 
+#: ../Doc/tutorial/stdlib2.rst:83
+msgid ""
+">>> from string import Template\n"
+">>> t = Template('${village}folk send $$10 to $cause.')\n"
+">>> t.substitute(village='Nottingham', cause='the ditch fund')\n"
+"'Nottinghamfolk send $10 to the ditch fund.'"
+msgstr ""
+
 #: ../Doc/tutorial/stdlib2.rst:88
 msgid ""
 "The :meth:`~string.Template.substitute` method raises a :exc:`KeyError` when "
 "a placeholder is not supplied in a dictionary or a keyword argument.  For "
-"mail-merge style applications, user supplied data may be incomplete and the :"
-"meth:`~string.Template.safe_substitute` method may be more appropriate --- "
-"it will leave placeholders unchanged if data is missing::"
+"mail-merge style applications, user supplied data may be incomplete and "
+"the :meth:`~string.Template.safe_substitute` method may be more appropriate "
+"--- it will leave placeholders unchanged if data is missing::"
 msgstr ""
 "El método :meth:`~string.Template.substitute` lanza :exc:`KeyError` cuando "
 "no se suministra ningún valor para un marcador mediante un diccionario o "
 "argumento por nombre.  Para algunas aplicaciones los datos suministrados por "
-"el usuario puede ser incompletos, y el método :meth:`~string.Template."
-"safe_substitute` puede ser más apropiado: deja los marcadores inalterados "
-"cuando falten datos::"
+"el usuario puede ser incompletos, y el "
+"método :meth:`~string.Template.safe_substitute` puede ser más apropiado: "
+"deja los marcadores inalterados cuando falten datos::"
+
+#: ../Doc/tutorial/stdlib2.rst:94
+msgid ""
+">>> t = Template('Return the $item to $owner.')\n"
+">>> d = dict(item='unladen swallow')\n"
+">>> t.substitute(d)\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"KeyError: 'owner'\n"
+">>> t.safe_substitute(d)\n"
+"'Return the unladen swallow to $owner.'"
+msgstr ""
 
 #: ../Doc/tutorial/stdlib2.rst:103
 msgid ""
@@ -131,7 +204,30 @@ msgstr ""
 "puede escoger usar signos de porcentaje para los marcadores tales como la "
 "fecha actual, el número de secuencia de la imagen, o el formato de archivo::"
 
-#: ../Doc/tutorial/stdlib2.rst:125
+#: ../Doc/tutorial/stdlib2.rst:107
+#, python-format
+msgid ""
+">>> import time, os.path\n"
+">>> photofiles = ['img_1074.jpg', 'img_1076.jpg', 'img_1077.jpg']\n"
+">>> class BatchRename(Template):\n"
+"...     delimiter = '%'\n"
+"...\n"
+">>> fmt = input('Enter rename style (%d-date %n-seqnum %f-format):  ')\n"
+"Enter rename style (%d-date %n-seqnum %f-format):  Ashley_%n%f\n"
+"\n"
+">>> t = BatchRename(fmt)\n"
+">>> date = time.strftime('%d%b%y')\n"
+">>> for i, filename in enumerate(photofiles):\n"
+"...     base, ext = os.path.splitext(filename)\n"
+"...     newname = t.substitute(d=date, n=i, f=ext)\n"
+"...     print('{0} --> {1}'.format(filename, newname))\n"
+"\n"
+"img_1074.jpg --> Ashley_0.jpg\n"
+"img_1076.jpg --> Ashley_1.jpg\n"
+"img_1077.jpg --> Ashley_2.jpg"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:126
 msgid ""
 "Another application for templating is separating program logic from the "
 "details of multiple output formats.  This makes it possible to substitute "
@@ -142,33 +238,56 @@ msgstr ""
 "plantillas específicas para archivos XML, reportes en texto plano, y "
 "reportes web en HTML."
 
-#: ../Doc/tutorial/stdlib2.rst:133
+#: ../Doc/tutorial/stdlib2.rst:134
 msgid "Working with Binary Data Record Layouts"
 msgstr "Trabajar con registros estructurados conteniendo datos binarios"
 
-#: ../Doc/tutorial/stdlib2.rst:135
+#: ../Doc/tutorial/stdlib2.rst:136
 msgid ""
-"The :mod:`struct` module provides :func:`~struct.pack` and :func:`~struct."
-"unpack` functions for working with variable length binary record formats.  "
-"The following example shows how to loop through header information in a ZIP "
-"file without using the :mod:`zipfile` module.  Pack codes ``\"H\"`` and "
-"``\"I\"`` represent two and four byte unsigned numbers respectively.  The "
-"``\"<\"`` indicates that they are standard size and in little-endian byte "
-"order::"
+"The :mod:`struct` module provides :func:`~struct.pack` "
+"and :func:`~struct.unpack` functions for working with variable length binary "
+"record formats.  The following example shows how to loop through header "
+"information in a ZIP file without using the :mod:`zipfile` module.  Pack "
+"codes ``\"H\"`` and ``\"I\"`` represent two and four byte unsigned numbers "
+"respectively.  The ``\"<\"`` indicates that they are standard size and in "
+"little-endian byte order::"
 msgstr ""
-"El módulo :mod:`struct` provee las funciones :func:`~struct.pack` y :func:"
-"`~struct.unpack` para trabajar con formatos de registros binarios de "
+"El módulo :mod:`struct` provee las funciones :func:`~struct.pack` "
+"y :func:`~struct.unpack` para trabajar con formatos de registros binarios de "
 "longitud variable.  El siguiente ejemplo muestra cómo recorrer la "
-"información de encabezado en un archivo ZIP sin usar el módulo :mod:"
-"`zipfile`.  Los códigos ``\"H\"`` e ``\"I\"`` representan números sin signo "
-"de dos y cuatro bytes respectivamente.  El ``\"<\"`` indica que son de "
-"tamaño estándar y los bytes tienen ordenamiento `little-endian`::"
+"información de encabezado en un archivo ZIP sin usar el "
+"módulo :mod:`zipfile`.  Los códigos ``\"H\"`` e ``\"I\"`` representan "
+"números sin signo de dos y cuatro bytes respectivamente.  El ``\"<\"`` "
+"indica que son de tamaño estándar y los bytes tienen ordenamiento `little-"
+"endian`::"
 
-#: ../Doc/tutorial/stdlib2.rst:166
+#: ../Doc/tutorial/stdlib2.rst:144
+msgid ""
+"import struct\n"
+"\n"
+"with open('myfile.zip', 'rb') as f:\n"
+"    data = f.read()\n"
+"\n"
+"start = 0\n"
+"for i in range(3):                      # show the first 3 file headers\n"
+"    start += 14\n"
+"    fields = struct.unpack('<IIIHH', data[start:start+16])\n"
+"    crc32, comp_size, uncomp_size, filenamesize, extra_size = fields\n"
+"\n"
+"    start += 16\n"
+"    filename = data[start:start+filenamesize]\n"
+"    start += filenamesize\n"
+"    extra = data[start:start+extra_size]\n"
+"    print(filename, hex(crc32), comp_size, uncomp_size)\n"
+"\n"
+"    start += extra_size + comp_size     # skip to the next header"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:167
 msgid "Multi-threading"
 msgstr "Multi-hilos"
 
-#: ../Doc/tutorial/stdlib2.rst:168
+#: ../Doc/tutorial/stdlib2.rst:169
 msgid ""
 "Threading is a technique for decoupling tasks which are not sequentially "
 "dependent.  Threads can be used to improve the responsiveness of "
@@ -182,7 +301,7 @@ msgstr ""
 "mientras otras tareas se ejecutan en segundo plano.  Un caso de uso "
 "relacionado es ejecutar E/S en paralelo con cálculos en otro hilo."
 
-#: ../Doc/tutorial/stdlib2.rst:173
+#: ../Doc/tutorial/stdlib2.rst:174
 msgid ""
 "The following code shows how the high level :mod:`threading` module can run "
 "tasks in background while the main program continues to run::"
@@ -191,7 +310,31 @@ msgstr ""
 "puede ejecutar tareas en segundo plano mientras el programa principal "
 "continúa su ejecución::"
 
-#: ../Doc/tutorial/stdlib2.rst:197
+#: ../Doc/tutorial/stdlib2.rst:177
+msgid ""
+"import threading, zipfile\n"
+"\n"
+"class AsyncZip(threading.Thread):\n"
+"    def __init__(self, infile, outfile):\n"
+"        threading.Thread.__init__(self)\n"
+"        self.infile = infile\n"
+"        self.outfile = outfile\n"
+"\n"
+"    def run(self):\n"
+"        f = zipfile.ZipFile(self.outfile, 'w', zipfile.ZIP_DEFLATED)\n"
+"        f.write(self.infile)\n"
+"        f.close()\n"
+"        print('Finished background zip of:', self.infile)\n"
+"\n"
+"background = AsyncZip('mydata.txt', 'myarchive.zip')\n"
+"background.start()\n"
+"print('The main program continues to run in foreground.')\n"
+"\n"
+"background.join()    # Wait for the background task to finish\n"
+"print('Main program waited until background was done.')"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:198
 msgid ""
 "The principal challenge of multi-threaded applications is coordinating "
 "threads that share data or other resources.  To that end, the threading "
@@ -203,7 +346,7 @@ msgstr ""
 "*threading* provee una serie de primitivas de sincronización que incluyen "
 "bloqueos, eventos, variables de condición, y semáforos."
 
-#: ../Doc/tutorial/stdlib2.rst:202
+#: ../Doc/tutorial/stdlib2.rst:203
 msgid ""
 "While those tools are powerful, minor design errors can result in problems "
 "that are difficult to reproduce.  So, the preferred approach to task "
@@ -217,47 +360,65 @@ msgstr ""
 "pueden resultar en problemas difíciles de reproducir.  La forma preferida de "
 "coordinar tareas es concentrar todos los accesos a un recurso en un único "
 "hilo y después usar el módulo :mod:`queue` para alimentar dicho hilo con "
-"pedidos desde otros hilos.  Las aplicaciones que usan objetos :class:`~queue."
-"Queue` para comunicación y coordinación entre hilos son más fáciles de "
-"diseñar, más legibles, y más confiables."
+"pedidos desde otros hilos.  Las aplicaciones que usan "
+"objetos :class:`~queue.Queue` para comunicación y coordinación entre hilos "
+"son más fáciles de diseñar, más legibles, y más confiables."
 
-#: ../Doc/tutorial/stdlib2.rst:213
+#: ../Doc/tutorial/stdlib2.rst:214
 msgid "Logging"
 msgstr "Registrando"
 
-#: ../Doc/tutorial/stdlib2.rst:215
+#: ../Doc/tutorial/stdlib2.rst:216
 msgid ""
 "The :mod:`logging` module offers a full featured and flexible logging "
-"system. At its simplest, log messages are sent to a file or to ``sys."
-"stderr``::"
+"system. At its simplest, log messages are sent to a file or to "
+"``sys.stderr``::"
 msgstr ""
 "El módulo :mod:`logging` ofrece un sistema de registros (*logs*) completo y "
 "flexible.  En su forma más simple, los mensajes de registro se envían a un "
 "archivo o a ``sys.stderr``::"
 
-#: ../Doc/tutorial/stdlib2.rst:225
+#: ../Doc/tutorial/stdlib2.rst:219
+#, python-format
+msgid ""
+"import logging\n"
+"logging.debug('Debugging information')\n"
+"logging.info('Informational message')\n"
+"logging.warning('Warning:config file %s not found', 'server.conf')\n"
+"logging.error('Error occurred')\n"
+"logging.critical('Critical error -- shutting down')"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:226
 msgid "This produces the following output:"
 msgstr "Ésta es la salida obtenida::"
 
-#: ../Doc/tutorial/stdlib2.rst:233
+#: ../Doc/tutorial/stdlib2.rst:228
+msgid ""
+"WARNING:root:Warning:config file server.conf not found\n"
+"ERROR:root:Error occurred\n"
+"CRITICAL:root:Critical error -- shutting down"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:234
 msgid ""
 "By default, informational and debugging messages are suppressed and the "
 "output is sent to standard error.  Other output options include routing "
 "messages through email, datagrams, sockets, or to an HTTP Server.  New "
-"filters can select different routing based on message priority: :const:"
-"`~logging.DEBUG`, :const:`~logging.INFO`, :const:`~logging.WARNING`, :const:"
-"`~logging.ERROR`, and :const:`~logging.CRITICAL`."
+"filters can select different routing based on message "
+"priority: :const:`~logging.DEBUG`, :const:`~logging.INFO`, :const:`~logging.WARNING`, :const:`~logging.ERROR`, "
+"and :const:`~logging.CRITICAL`."
 msgstr ""
 "De forma predeterminada, los mensajes de depuración e informativos se "
 "suprimen, y la salida se envía al error estándar.  Otras opciones de salida "
 "incluyen mensajes de enrutamiento a través de correo electrónico, "
 "datagramas, sockets, o un servidor HTTP.  Nuevos filtros pueden seleccionar "
-"diferentes rutas basadas en la prioridad del mensaje: :const:`~logging."
-"DEBUG`, :const:`~logging.INFO`, :const:`~logging.WARNING`, :const:`~logging."
-"ERROR`, y :const:`~logging.CRITICAL` (Depuración, Informativo, Atención, "
-"Error y Crítico respectivamente)"
+"diferentes rutas basadas en la prioridad del "
+"mensaje: :const:`~logging.DEBUG`, :const:`~logging.INFO`, :const:`~logging.WARNING`, :const:`~logging.ERROR`, "
+"y :const:`~logging.CRITICAL` (Depuración, Informativo, Atención, Error y "
+"Crítico respectivamente)"
 
-#: ../Doc/tutorial/stdlib2.rst:240
+#: ../Doc/tutorial/stdlib2.rst:241
 msgid ""
 "The logging system can be configured directly from Python or can be loaded "
 "from a user editable configuration file for customized logging without "
@@ -267,11 +428,11 @@ msgstr ""
 "cargarse la configuración desde un archivo modificable por el usuario para "
 "personalizar el registro sin alterar la aplicación."
 
-#: ../Doc/tutorial/stdlib2.rst:248
+#: ../Doc/tutorial/stdlib2.rst:249
 msgid "Weak References"
 msgstr "Referencias débiles"
 
-#: ../Doc/tutorial/stdlib2.rst:250
+#: ../Doc/tutorial/stdlib2.rst:251
 msgid ""
 "Python does automatic memory management (reference counting for most objects "
 "and :term:`garbage collection` to eliminate cycles).  The memory is freed "
@@ -282,7 +443,7 @@ msgstr ""
 "ciclos).  La memoria se libera poco después de que la última referencia a la "
 "misma haya sido eliminada."
 
-#: ../Doc/tutorial/stdlib2.rst:254
+#: ../Doc/tutorial/stdlib2.rst:255
 msgid ""
 "This approach works fine for most applications but occasionally there is a "
 "need to track objects only as long as they are being used by something else. "
@@ -303,11 +464,37 @@ msgstr ""
 "*callback* para objetos *weakref*. Comúnmente las aplicaciones incluyen "
 "cacheo de objetos que son costosos de crear::"
 
-#: ../Doc/tutorial/stdlib2.rst:289
+#: ../Doc/tutorial/stdlib2.rst:263
+msgid ""
+">>> import weakref, gc\n"
+">>> class A:\n"
+"...     def __init__(self, value):\n"
+"...         self.value = value\n"
+"...     def __repr__(self):\n"
+"...         return str(self.value)\n"
+"...\n"
+">>> a = A(10)                   # create a reference\n"
+">>> d = weakref.WeakValueDictionary()\n"
+">>> d['primary'] = a            # does not create a reference\n"
+">>> d['primary']                # fetch the object if it is still alive\n"
+"10\n"
+">>> del a                       # remove the one reference\n"
+">>> gc.collect()                # run garbage collection right away\n"
+"0\n"
+">>> d['primary']                # entry was automatically removed\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"    d['primary']                # entry was automatically removed\n"
+"  File \"C:/python313/lib/weakref.py\", line 46, in __getitem__\n"
+"    o = self.data[key]()\n"
+"KeyError: 'primary'"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:290
 msgid "Tools for Working with Lists"
 msgstr "Herramientas para trabajar con listas"
 
-#: ../Doc/tutorial/stdlib2.rst:291
+#: ../Doc/tutorial/stdlib2.rst:292
 msgid ""
 "Many data structure needs can be met with the built-in list type. However, "
 "sometimes there is a need for alternative implementations with different "
@@ -317,9 +504,10 @@ msgstr ""
 "tipo integrado lista.  Sin embargo, a veces se hacen necesarias "
 "implementaciones alternativas con rendimientos distintos."
 
-#: ../Doc/tutorial/stdlib2.rst:295
+#: ../Doc/tutorial/stdlib2.rst:296
+#, fuzzy
 msgid ""
-"The :mod:`array` module provides an :class:`~array.array()` object that is "
+"The :mod:`array` module provides an :class:`~array.array` object that is "
 "like a list that stores only homogeneous data and stores it more compactly.  "
 "The following example shows an array of numbers stored as two byte unsigned "
 "binary numbers (typecode ``\"H\"``) rather than the usual 16 bytes per entry "
@@ -332,19 +520,50 @@ msgstr ""
 "``\"H\"``) en lugar de los 16 bytes por elemento habituales en listas de "
 "objetos int de Python::"
 
-#: ../Doc/tutorial/stdlib2.rst:308
+#: ../Doc/tutorial/stdlib2.rst:302
 msgid ""
-"The :mod:`collections` module provides a :class:`~collections.deque()` "
-"object that is like a list with faster appends and pops from the left side "
-"but slower lookups in the middle. These objects are well suited for "
-"implementing queues and breadth first tree searches::"
+">>> from array import array\n"
+">>> a = array('H', [4000, 10, 700, 22222])\n"
+">>> sum(a)\n"
+"26932\n"
+">>> a[1:3]\n"
+"array('H', [10, 700])"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:309
+#, fuzzy
+msgid ""
+"The :mod:`collections` module provides a :class:`~collections.deque` object "
+"that is like a list with faster appends and pops from the left side but "
+"slower lookups in the middle. These objects are well suited for implementing "
+"queues and breadth first tree searches::"
 msgstr ""
 "El módulo :mod:`collections` provee un objeto :class:`~collections.deque()` "
 "que es como una lista más rápida para agregar y quitar elementos por el lado "
 "izquierdo pero con búsquedas más lentas por el medio.  Estos objetos son "
 "adecuados para implementar colas y árboles de búsqueda a lo ancho::"
 
-#: ../Doc/tutorial/stdlib2.rst:329
+#: ../Doc/tutorial/stdlib2.rst:314
+msgid ""
+">>> from collections import deque\n"
+">>> d = deque([\"task1\", \"task2\", \"task3\"])\n"
+">>> d.append(\"task4\")\n"
+">>> print(\"Handling\", d.popleft())\n"
+"Handling task1"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:322
+msgid ""
+"unsearched = deque([starting_node])\n"
+"def breadth_first_search(unsearched):\n"
+"    node = unsearched.popleft()\n"
+"    for m in gen_moves(node):\n"
+"        if is_goal(m):\n"
+"            return m\n"
+"        unsearched.append(m)"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:330
 msgid ""
 "In addition to alternative list implementations, the library also offers "
 "other tools such as the :mod:`bisect` module with functions for manipulating "
@@ -354,7 +573,16 @@ msgstr ""
 "otras herramientas como el módulo :mod:`bisect` con funciones para manipular "
 "listas ordenadas::"
 
-#: ../Doc/tutorial/stdlib2.rst:339
+#: ../Doc/tutorial/stdlib2.rst:334
+msgid ""
+">>> import bisect\n"
+">>> scores = [(100, 'perl'), (200, 'tcl'), (400, 'lua'), (500, 'python')]\n"
+">>> bisect.insort(scores, (300, 'ruby'))\n"
+">>> scores\n"
+"[(100, 'perl'), (200, 'tcl'), (300, 'ruby'), (400, 'lua'), (500, 'python')]"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:340
 msgid ""
 "The :mod:`heapq` module provides functions for implementing heaps based on "
 "regular lists.  The lowest valued entry is always kept at position zero.  "
@@ -366,22 +594,34 @@ msgstr ""
 "posición cero. Esto es útil para aplicaciones que acceden a menudo al "
 "elemento más chico pero no quieren hacer un orden completo de la lista::"
 
-#: ../Doc/tutorial/stdlib2.rst:355
-msgid "Decimal Floating Point Arithmetic"
+#: ../Doc/tutorial/stdlib2.rst:345
+msgid ""
+">>> from heapq import heapify, heappop, heappush\n"
+">>> data = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0]\n"
+">>> heapify(data)                      # rearrange the list into heap order\n"
+">>> heappush(data, -5)                 # add a new entry\n"
+">>> [heappop(data) for i in range(3)]  # fetch the three smallest entries\n"
+"[-5, 0, 1]"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:356
+#, fuzzy
+msgid "Decimal Floating-Point Arithmetic"
 msgstr "Aritmética de punto flotante decimal"
 
-#: ../Doc/tutorial/stdlib2.rst:357
+#: ../Doc/tutorial/stdlib2.rst:358
+#, fuzzy
 msgid ""
 "The :mod:`decimal` module offers a :class:`~decimal.Decimal` datatype for "
-"decimal floating point arithmetic.  Compared to the built-in :class:`float` "
+"decimal floating-point arithmetic.  Compared to the built-in :class:`float` "
 "implementation of binary floating point, the class is especially helpful for"
 msgstr ""
 "El módulo :mod:`decimal` provee un tipo de dato :class:`~decimal.Decimal` "
-"para soportar aritmética de punto flotante decimal.  Comparado con :class:"
-"`float`, la implementación de punto flotante binario incluida, la clase es "
-"muy útil especialmente para"
+"para soportar aritmética de punto flotante decimal.  Comparado "
+"con :class:`float`, la implementación de punto flotante binario incluida, la "
+"clase es muy útil especialmente para"
 
-#: ../Doc/tutorial/stdlib2.rst:361
+#: ../Doc/tutorial/stdlib2.rst:362
 msgid ""
 "financial applications and other uses which require exact decimal "
 "representation,"
@@ -389,19 +629,19 @@ msgstr ""
 "aplicaciones financieras y otros usos que requieren representación decimal "
 "exacta,"
 
-#: ../Doc/tutorial/stdlib2.rst:363
+#: ../Doc/tutorial/stdlib2.rst:364
 msgid "control over precision,"
 msgstr "control sobre la precisión,"
 
-#: ../Doc/tutorial/stdlib2.rst:364
+#: ../Doc/tutorial/stdlib2.rst:365
 msgid "control over rounding to meet legal or regulatory requirements,"
 msgstr "control sobre el redondeo para cumplir requisitos legales,"
 
-#: ../Doc/tutorial/stdlib2.rst:365
+#: ../Doc/tutorial/stdlib2.rst:366
 msgid "tracking of significant decimal places, or"
 msgstr "seguimiento de dígitos decimales significativos, o"
 
-#: ../Doc/tutorial/stdlib2.rst:366
+#: ../Doc/tutorial/stdlib2.rst:367
 msgid ""
 "applications where the user expects the results to match calculations done "
 "by hand."
@@ -409,7 +649,7 @@ msgstr ""
 "aplicaciones donde el usuario espera que los resultados coincidan con "
 "cálculos hecho a mano."
 
-#: ../Doc/tutorial/stdlib2.rst:369
+#: ../Doc/tutorial/stdlib2.rst:370
 msgid ""
 "For example, calculating a 5% tax on a 70 cent phone charge gives different "
 "results in decimal floating point and binary floating point. The difference "
@@ -420,7 +660,16 @@ msgstr ""
 "binario. La diferencia se vuelve significativa si los resultados se "
 "redondean al centavo más próximo::"
 
-#: ../Doc/tutorial/stdlib2.rst:379
+#: ../Doc/tutorial/stdlib2.rst:374
+msgid ""
+">>> from decimal import *\n"
+">>> round(Decimal('0.70') * Decimal('1.05'), 2)\n"
+"Decimal('0.74')\n"
+">>> round(.70 * 1.05, 2)\n"
+"0.73"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:380
 msgid ""
 "The :class:`~decimal.Decimal` result keeps a trailing zero, automatically "
 "inferring four place significance from multiplicands with two place "
@@ -435,7 +684,7 @@ msgstr ""
 "cuando el punto flotante binario no puede representar exactamente cantidades "
 "decimales."
 
-#: ../Doc/tutorial/stdlib2.rst:385
+#: ../Doc/tutorial/stdlib2.rst:386
 msgid ""
 "Exact representation enables the :class:`~decimal.Decimal` class to perform "
 "modulo calculations and equality tests that are unsuitable for binary "
@@ -445,10 +694,30 @@ msgstr ""
 "cálculos de modulo y pruebas de igualdad que son inadecuadas para punto "
 "flotante binario::"
 
-#: ../Doc/tutorial/stdlib2.rst:399
+#: ../Doc/tutorial/stdlib2.rst:390
+msgid ""
+">>> Decimal('1.00') % Decimal('.10')\n"
+"Decimal('0.00')\n"
+">>> 1.00 % 0.10\n"
+"0.09999999999999995\n"
+"\n"
+">>> sum([Decimal('0.1')]*10) == Decimal('1.0')\n"
+"True\n"
+">>> 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 == 1.0\n"
+"False"
+msgstr ""
+
+#: ../Doc/tutorial/stdlib2.rst:400
 msgid ""
 "The :mod:`decimal` module provides arithmetic with as much precision as "
 "needed::"
 msgstr ""
 "El módulo :mod:`decimal` provee aritmética con tanta precisión como haga "
 "falta::"
+
+#: ../Doc/tutorial/stdlib2.rst:402
+msgid ""
+">>> getcontext().prec = 36\n"
+">>> Decimal(1) / Decimal(7)\n"
+"Decimal('0.142857142857142857142857142857142857')"
+msgstr ""

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-01-25 08:34+0800\n"
 "Last-Translator: Rodrigo Tobar <rtobarc@gmail.com>\n"
 "Language: es\n"
@@ -19,10 +19,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/base64.rst:2
-msgid ":mod:`base64` --- Base16, Base32, Base64, Base85 Data Encodings"
+#, fuzzy
+msgid ":mod:`!base64` --- Base16, Base32, Base64, Base85 Data Encodings"
 msgstr ""
 ":mod:`base64` --- Codificaciones de datos Base16, Base32, Base64, y Base85"
 
@@ -49,29 +50,30 @@ msgstr ""
 msgid ""
 "The :rfc:`4648` encodings are suitable for encoding binary data so that it "
 "can be safely sent by email, used as parts of URLs, or included as part of "
-"an HTTP POST request.  The encoding algorithm is not the same as the :"
-"program:`uuencode` program."
+"an HTTP POST request.  The encoding algorithm is not the same as "
+"the :program:`uuencode` program."
 msgstr ""
 "Las codificaciones :rfc:`4648` son adecuadas para codificar datos binarios "
 "para que puedan enviarse de forma segura por correo electrónico, usarse como "
 "parte de las URL o incluirse como parte de una solicitud HTTP POST. El "
-"algoritmo de codificación no es el mismo que el del programa :program:"
-"`uuencode`."
+"algoritmo de codificación no es el mismo que el del "
+"programa :program:`uuencode`."
 
 #: ../Doc/library/base64.rst:27
 msgid ""
 "There are two interfaces provided by this module.  The modern interface "
-"supports encoding :term:`bytes-like objects <bytes-like object>` to ASCII :"
-"class:`bytes`, and decoding :term:`bytes-like objects <bytes-like object>` "
-"or strings containing ASCII to :class:`bytes`.  Both base-64 alphabets "
-"defined in :rfc:`4648` (normal, and URL- and filesystem-safe) are supported."
+"supports encoding :term:`bytes-like objects <bytes-like object>` to "
+"ASCII :class:`bytes`, and decoding :term:`bytes-like objects <bytes-like "
+"object>` or strings containing ASCII to :class:`bytes`.  Both base-64 "
+"alphabets defined in :rfc:`4648` (normal, and URL- and filesystem-safe) are "
+"supported."
 msgstr ""
 "Hay dos interfaces proporcionadas por este módulo. La interfaz moderna "
 "admite la codificación de :term:`objetos similares a bytes <bytes-like "
 "object>` a ASCII :class:`bytes` y la decodificación de :term:`objetos "
-"similares a bytes <bytes-like object>` o cadenas que contienen ASCII a :"
-"class:`bytes`. Se admiten los dos alfabetos base 64 definidos en :rfc:`4648` "
-"(normal y seguro para URL y sistema de archivos)."
+"similares a bytes <bytes-like object>` o cadenas que contienen ASCII "
+"a :class:`bytes`. Se admiten los dos alfabetos base 64 definidos "
+"en :rfc:`4648` (normal y seguro para URL y sistema de archivos)."
 
 #: ../Doc/library/base64.rst:33
 msgid ""
@@ -79,8 +81,8 @@ msgid ""
 "provide functions for encoding and decoding to and from :term:`file objects "
 "<file object>`.  It only supports the Base64 standard alphabet, and it adds "
 "newlines every 76 characters as per :rfc:`2045`.  Note that if you are "
-"looking for :rfc:`2045` support you probably want to be looking at the :mod:"
-"`email` package instead."
+"looking for :rfc:`2045` support you probably want to be looking at "
+"the :mod:`email` package instead."
 msgstr ""
 "La interfaz heredada no admite la decodificación desde cadenas de "
 "caracteres, pero sí proporciona funciones para codificar y decodificar desde "
@@ -181,16 +183,16 @@ msgstr ""
 "Si *validate* es ``False`` (el valor predeterminado), los caracteres que no "
 "están en el alfabeto normal de base 64 ni en el alfabeto alternativo se "
 "descartan antes de la verificación del relleno. Si *validate* es ``True``, "
-"estos caracteres no alfabéticos en la entrada dan como resultado :exc:"
-"`binascii.Error`."
+"estos caracteres no alfabéticos en la entrada dan como "
+"resultado :exc:`binascii.Error`."
 
 #: ../Doc/library/base64.rst:83
 msgid ""
-"For more information about the strict base64 check, see :func:`binascii."
-"a2b_base64`"
+"For more information about the strict base64 check, "
+"see :func:`binascii.a2b_base64`"
 msgstr ""
-"Para más información sobre la verificación estricta de base64, véase :func:"
-"`binascii.a2b_base64`"
+"Para más información sobre la verificación estricta de base64, "
+"véase :func:`binascii.a2b_base64`"
 
 #: ../Doc/library/base64.rst:85
 msgid ""
@@ -231,8 +233,8 @@ msgstr ""
 msgid ""
 "Decode :term:`bytes-like object` or ASCII string *s* using the URL- and "
 "filesystem-safe alphabet, which substitutes ``-`` instead of ``+`` and ``_`` "
-"instead of ``/`` in the standard Base64 alphabet, and return the decoded :"
-"class:`bytes`."
+"instead of ``/`` in the standard Base64 alphabet, and return the "
+"decoded :class:`bytes`."
 msgstr ""
 "Decodifica :term:`objeto similar a bytes <bytes-like object>` o cadena de "
 "caracteres ASCII *s* utilizando el alfabeto seguro para URL y sistema de "
@@ -355,10 +357,11 @@ msgstr ""
 "característica no es compatible con la codificación Ascii85 \"estándar\"."
 
 #: ../Doc/library/base64.rst:194
+#, fuzzy
 msgid ""
 "*wrapcol* controls whether the output should have newline (``b'\\n'``) "
 "characters added to it. If this is non-zero, each output line will be at "
-"most this many characters long."
+"most this many characters long, excluding the trailing newline."
 msgstr ""
 "*wrapcol* controla si la salida debe tener caracteres de nueva línea "
 "(``b'\\n'``) agregados. Si esto no es cero, cada línea de salida tendrá como "
@@ -448,11 +451,33 @@ msgstr ""
 "en base85 o cadena de caracteres ASCII *b* y retorna los :class:`bytes` "
 "decodificados. El relleno se elimina implícitamente, si es necesario."
 
-#: ../Doc/library/base64.rst:247
+#: ../Doc/library/base64.rst:249
+#, fuzzy
+msgid ""
+"Encode the :term:`bytes-like object` *s* using Z85 (as used in ZeroMQ) and "
+"return the encoded :class:`bytes`.  See `Z85  specification <https://"
+"rfc.zeromq.org/spec/32/>`_ for more information."
+msgstr ""
+"Codifica el :term:`objeto similar a bytes <bytes-like object>` *b* "
+"utilizando base85 (como se usa en por ejemplo, diferencias binarias de "
+"estilo git) y retorna los :class:`bytes` codificados."
+
+#: ../Doc/library/base64.rst:258
+#, fuzzy
+msgid ""
+"Decode the Z85-encoded :term:`bytes-like object` or ASCII string *s* and "
+"return the decoded :class:`bytes`.  See `Z85  specification <https://"
+"rfc.zeromq.org/spec/32/>`_ for more information."
+msgstr ""
+"Decodifica el :term:`objeto similar a bytes <bytes-like object>` codificado "
+"en Ascii85 o cadena de caracteres ASCII *b* y retorna los :class:`bytes` "
+"decodificados."
+
+#: ../Doc/library/base64.rst:265
 msgid "The legacy interface:"
 msgstr "La interfaz antigua:"
 
-#: ../Doc/library/base64.rst:251
+#: ../Doc/library/base64.rst:269
 msgid ""
 "Decode the contents of the binary *input* file and write the resulting "
 "binary data to the *output* file. *input* and *output* must be :term:`file "
@@ -460,11 +485,11 @@ msgid ""
 "returns an empty bytes object."
 msgstr ""
 "Decodifica el contenido del archivo binario *input* y escribe los datos "
-"binarios resultantes en el archivo *output*. *input* y *output* deben ser :"
-"term:`objetos archivo <file object>`. *input* se leerá hasta que ``input."
-"readline()`` retorne un objeto de bytes vacío."
+"binarios resultantes en el archivo *output*. *input* y *output* deben "
+"ser :term:`objetos archivo <file object>`. *input* se leerá hasta que "
+"``input.readline()`` retorne un objeto de bytes vacío."
 
-#: ../Doc/library/base64.rst:259
+#: ../Doc/library/base64.rst:277
 msgid ""
 "Decode the :term:`bytes-like object` *s*, which must contain one or more "
 "lines of base64 encoded data, and return the decoded :class:`bytes`."
@@ -473,14 +498,15 @@ msgstr ""
 "debe contener una o más líneas de datos codificados en base64, y retornará "
 "los :class:`bytes` decodificados."
 
-#: ../Doc/library/base64.rst:267
+#: ../Doc/library/base64.rst:285
 msgid ""
 "Encode the contents of the binary *input* file and write the resulting "
-"base64 encoded data to the *output* file. *input* and *output* must be :term:"
-"`file objects <file object>`. *input* will be read until ``input.read()`` "
-"returns an empty bytes object. :func:`encode` inserts a newline character "
-"(``b'\\n'``) after every 76 bytes of the output, as well as ensuring that "
-"the output always ends with a newline, as per :rfc:`2045` (MIME)."
+"base64 encoded data to the *output* file. *input* and *output* must "
+"be :term:`file objects <file object>`. *input* will be read until "
+"``input.read()`` returns an empty bytes object. :func:`encode` inserts a "
+"newline character (``b'\\n'``) after every 76 bytes of the output, as well "
+"as ensuring that the output always ends with a newline, as per :rfc:`2045` "
+"(MIME)."
 msgstr ""
 "Codifica el contenido del archivo binario *input* y escribe los datos "
 "codificados en base64 resultantes en el archivo *output*. *input* y *output* "
@@ -490,7 +516,7 @@ msgstr ""
 "además de garantizar que la salida siempre termine con una nueva línea, "
 "según :rfc:`2045` (MIME)."
 
-#: ../Doc/library/base64.rst:277
+#: ../Doc/library/base64.rst:295
 msgid ""
 "Encode the :term:`bytes-like object` *s*, which can contain arbitrary binary "
 "data, and return :class:`bytes` containing the base64-encoded data, with "
@@ -503,15 +529,15 @@ msgstr ""
 "insertado después de cada 76 bytes de salida, y asegurando que haya una "
 "nueva línea final, según :rfc:`2045` (MIME)."
 
-#: ../Doc/library/base64.rst:285
+#: ../Doc/library/base64.rst:303
 msgid "An example usage of the module:"
 msgstr "Un ejemplo de uso del módulo:"
 
-#: ../Doc/library/base64.rst:298
+#: ../Doc/library/base64.rst:316
 msgid "Security Considerations"
 msgstr "Consideraciones de Seguridad"
 
-#: ../Doc/library/base64.rst:300
+#: ../Doc/library/base64.rst:318
 msgid ""
 "A new security considerations section was added to :rfc:`4648` (section 12); "
 "it's recommended to review the security section for any code deployed to "
@@ -521,18 +547,18 @@ msgstr ""
 "(sección 12); se recomienda revisar la sección de seguridad para cualquier "
 "código implementado en producción."
 
-#: ../Doc/library/base64.rst:306
+#: ../Doc/library/base64.rst:324
 msgid "Module :mod:`binascii`"
 msgstr "Módulo :mod:`binascii`"
 
-#: ../Doc/library/base64.rst:306
+#: ../Doc/library/base64.rst:324
 msgid ""
 "Support module containing ASCII-to-binary and binary-to-ASCII conversions."
 msgstr ""
 "Módulo de soporte que contiene conversiones de ASCII a binario y binario a "
 "ASCII."
 
-#: ../Doc/library/base64.rst:309
+#: ../Doc/library/base64.rst:327
 msgid ""
 ":rfc:`1521` - MIME (Multipurpose Internet Mail Extensions) Part One: "
 "Mechanisms for Specifying and Describing the Format of Internet Message "
@@ -542,7 +568,7 @@ msgstr ""
 "uno: Mecanismos para especificar y describir el formato de los cuerpos de "
 "mensajes de Internet"
 
-#: ../Doc/library/base64.rst:309
+#: ../Doc/library/base64.rst:327
 msgid ""
 "Section 5.2, \"Base64 Content-Transfer-Encoding,\" provides the definition "
 "of the base64 encoding."

@@ -10,36 +10,49 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2024-10-28 21:11-0400\n"
 "Last-Translator: David Revillas <r3v1@pm.me>\n"
-"Language-Team: python-doc-es\n"
 "Language: es_ES\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.5\n"
+"Generated-By: Babel 2.16.0\n"
 
-#: ../Doc/library/asyncio.rst:78
+#: ../Doc/library/asyncio.rst:91
 msgid "High-level APIs"
 msgstr "*APIs* de alto nivel"
 
-#: ../Doc/library/asyncio.rst:90
+#: ../Doc/library/asyncio.rst:103
 msgid "Low-level APIs"
 msgstr "*APIs* de bajo nivel"
 
-#: ../Doc/library/asyncio.rst:101
+#: ../Doc/library/asyncio.rst:114
 msgid "Guides and Tutorials"
 msgstr "Guías y tutoriales"
 
 #: ../Doc/library/asyncio.rst:2
-msgid ":mod:`asyncio` --- Asynchronous I/O"
+#, fuzzy
+msgid ":mod:`!asyncio` --- Asynchronous I/O"
 msgstr ":mod:`asyncio` --- E/S Asíncrona"
 
+#: ../Doc/library/asyncio.rst:-1
 msgid "Hello World!"
 msgstr "¡Hola Mundo!"
+
+#: ../Doc/library/asyncio.rst:13
+msgid ""
+"import asyncio\n"
+"\n"
+"async def main():\n"
+"    print('Hello ...')\n"
+"    await asyncio.sleep(1)\n"
+"    print('... World!')\n"
+"\n"
+"asyncio.run(main())"
+msgstr ""
 
 #: ../Doc/library/asyncio.rst:22
 msgid ""
@@ -106,16 +119,18 @@ msgstr ""
 "bibliotecas y frameworks* para:"
 
 #: ../Doc/library/asyncio.rst:48
+#, fuzzy
 msgid ""
 "create and manage :ref:`event loops <asyncio-event-loop>`, which provide "
-"asynchronous APIs for :meth:`networking <loop.create_server>`, running :meth:"
-"`subprocesses <loop.subprocess_exec>`, handling :meth:`OS signals <loop."
-"add_signal_handler>`, etc;"
+"asynchronous APIs for :ref:`networking <loop_create_server>`, "
+"running :ref:`subprocesses <loop_subprocess_exec>`, handling :ref:`OS "
+"signals <loop_add_signal_handler>`, etc;"
 msgstr ""
 "crear y administrar  :ref:`bucles de eventos <asyncio-event-loop>`, los "
 "cuales proveen *APIs* asíncronas para :meth:`redes <loop.create_server>`, "
-"ejecutando :meth:`subprocesos <loop.subprocess_exec>`, gestionando :meth:"
-"`señales del sistema operativo <loop.add_signal_handler>`, etc;"
+"ejecutando :meth:`subprocesos <loop.subprocess_exec>`, "
+"gestionando :meth:`señales del sistema operativo <loop.add_signal_handler>`, "
+"etc;"
 
 #: ../Doc/library/asyncio.rst:53
 msgid ""
@@ -133,30 +148,66 @@ msgstr ""
 "Bibliotecas :ref:`puente <asyncio-futures>` basadas en retrollamadas y "
 "código con sintaxis *async/wait*."
 
-#: ../Doc/library/asyncio.rst:59
-msgid "You can experiment with an ``asyncio`` concurrent context in the REPL:"
-msgstr ""
-"Puedes experimentar con un contexto concurrente de ``asyncio`` en el REPL:"
-
 #: ../Doc/includes/wasm-notavail.rst:3
-msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
+#, fuzzy
+msgid ":ref:`Availability <availability>`: not WASI."
 msgstr ":ref:`Disponibilidad <availability>`: no Emscripten, no WASI."
 
 #: ../Doc/includes/wasm-notavail.rst:5
+#, fuzzy
 msgid ""
-"This module does not work or is not available on WebAssembly platforms "
-"``wasm32-emscripten`` and ``wasm32-wasi``. See :ref:`wasm-availability` for "
-"more information."
+"This module does not work or is not available on WebAssembly. See :ref:`wasm-"
+"availability` for more information."
 msgstr ""
 "Este módulo no funciona o no está disponible para plataformas WebAssembly "
 "``wasm32-emscripten`` y ``wasm32-wasi``. Consulte :ref:`wasm-availability` "
 "para más información."
 
+#: ../Doc/library/asyncio.rst:64
+msgid "asyncio REPL"
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:65
+#, fuzzy
+msgid ""
+"You can experiment with an ``asyncio`` concurrent context in "
+"the :term:`REPL`:"
+msgstr ""
+"Puedes experimentar con un contexto concurrente de ``asyncio`` en el REPL:"
+
+#: ../Doc/library/asyncio.rst:67
+msgid ""
+"$ python -m asyncio\n"
+"asyncio REPL ...\n"
+"Use \"await\" directly instead of \"asyncio.run()\".\n"
+"Type \"help\", \"copyright\", \"credits\" or \"license\" for more "
+"information.\n"
+">>> import asyncio\n"
+">>> await asyncio.sleep(10, result='hello')\n"
+"'hello'"
+msgstr ""
+
 #: ../Doc/library/asyncio.rst:77
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``cpython.run_stdin`` with no "
+"arguments."
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:79
+msgid "(also 3.11.10, 3.10.15, 3.9.20, and 3.8.20) Emits audit events."
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:82
+msgid ""
+"Uses PyREPL if possible, in which case :envvar:`PYTHONSTARTUP` is also "
+"executed. Emits audit events."
+msgstr ""
+
+#: ../Doc/library/asyncio.rst:90
 msgid "Reference"
 msgstr "Referencias"
 
-#: ../Doc/library/asyncio.rst:110
+#: ../Doc/library/asyncio.rst:123
 msgid "The source code for asyncio can be found in :source:`Lib/asyncio/`."
 msgstr ""
 "El código fuente para asyncio puede encontrarse en :source:`Lib/asyncio/`."

@@ -8,22 +8,22 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Traduccion-filecmp\n"
+"Project-Id-Version:  Traduccion-filecmp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-11-06 22:09+0100\n"
 "Last-Translator: Marcos Medrano <marcosmedrano0@gmail.com>\n"
-"Language-Team: Enrique Giménez\n"
 "Language: es_PY\n"
+"Language-Team: Enrique Giménez\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.4\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/filecmp.rst:2
-msgid ":mod:`filecmp` --- File and Directory Comparisons"
+#, fuzzy
+msgid ":mod:`!filecmp` --- File and Directory Comparisons"
 msgstr ":mod:`filecmp`--- Comparaciones de Archivo y Directorio"
 
 #: ../Doc/library/filecmp.rst:9
@@ -86,8 +86,8 @@ msgid ""
 msgstr ""
 "La función utiliza un caché para comparaciones pasadas y los resultados, con "
 "entradas de caché invalidadas si la información de :func:`os.stat` para el "
-"fichero cambia. El caché entero puede ser limpiado utilizando :func:"
-"`clear_cache`."
+"fichero cambia. El caché entero puede ser limpiado "
+"utilizando :func:`clear_cache`."
 
 #: ../Doc/library/filecmp.rst:41
 msgid ""
@@ -115,8 +115,8 @@ msgstr ""
 
 #: ../Doc/library/filecmp.rst:51
 msgid ""
-"The *shallow* parameter has the same meaning and default value as for :func:"
-"`filecmp.cmp`."
+"The *shallow* parameter has the same meaning and default value as "
+"for :func:`filecmp.cmp`."
 msgstr ""
 "El parámetro *shallow* tiene el mismo significado y valor por defecto en "
 "cuanto a :func:`filecmp.cmp`."
@@ -148,9 +148,9 @@ msgstr "La clase :class:`dircmp`"
 #: ../Doc/library/filecmp.rst:75
 msgid ""
 "Construct a new directory comparison object, to compare the directories *a* "
-"and *b*.  *ignore* is a list of names to ignore, and defaults to :const:"
-"`filecmp.DEFAULT_IGNORES`.  *hide* is a list of names to hide, and defaults "
-"to ``[os.curdir, os.pardir]``."
+"and *b*.  *ignore* is a list of names to ignore, and defaults "
+"to :const:`filecmp.DEFAULT_IGNORES`.  *hide* is a list of names to hide, and "
+"defaults to ``[os.curdir, os.pardir]``."
 msgstr ""
 "Construye un nuevo objeto de comparación de directorio, para comparar los "
 "directorios *a* y *b*. *ignore* es una lista de nombres a ignorar, y "
@@ -158,28 +158,33 @@ msgstr ""
 "nombres a ocultar, y predetermina a ``[os.curdir, os.pardir]``."
 
 #: ../Doc/library/filecmp.rst:80
+#, fuzzy
 msgid ""
 "The :class:`dircmp` class compares files by doing *shallow* comparisons as "
-"described for :func:`filecmp.cmp`."
+"described for :func:`filecmp.cmp` by default using the *shallow* parameter."
 msgstr ""
 "La clase :class:`dircmp` compara ficheros haciendo comparaciones *shallow* "
 "como está descrito en :func:`filecmp.cmp`."
 
-#: ../Doc/library/filecmp.rst:83
+#: ../Doc/library/filecmp.rst:86
+msgid "Added the *shallow* parameter."
+msgstr ""
+
+#: ../Doc/library/filecmp.rst:88
 msgid "The :class:`dircmp` class provides the following methods:"
 msgstr "La clase :class:`dircmp` provee los siguientes métodos:"
 
-#: ../Doc/library/filecmp.rst:87
+#: ../Doc/library/filecmp.rst:92
 msgid "Print (to :data:`sys.stdout`) a comparison between *a* and *b*."
 msgstr "Imprime (a :data:`sys.stdout`) una comparación entre *a* y *b*."
 
-#: ../Doc/library/filecmp.rst:91
+#: ../Doc/library/filecmp.rst:96
 msgid ""
 "Print a comparison between *a* and *b* and common immediate subdirectories."
 msgstr ""
 "Imprime una comparación entre *a* y *b* y subdirectorios inmediatos comunes."
 
-#: ../Doc/library/filecmp.rst:96
+#: ../Doc/library/filecmp.rst:101
 msgid ""
 "Print a comparison between *a* and *b* and common subdirectories "
 "(recursively)."
@@ -187,7 +192,7 @@ msgstr ""
 "Imprime una comparación entre *a* y *b* y subdirectorios comunes "
 "(recursivamente)."
 
-#: ../Doc/library/filecmp.rst:99
+#: ../Doc/library/filecmp.rst:104
 msgid ""
 "The :class:`dircmp` class offers a number of interesting attributes that may "
 "be used to get various bits of information about the directory trees being "
@@ -197,7 +202,7 @@ msgstr ""
 "pueden ser utilizados para obtener varios bits de información sobre los "
 "árboles de directorio que están siendo comparados."
 
-#: ../Doc/library/filecmp.rst:103
+#: ../Doc/library/filecmp.rst:108
 msgid ""
 "Note that via :meth:`~object.__getattr__` hooks, all attributes are computed "
 "lazily, so there is no speed penalty if only those attributes which are "
@@ -207,43 +212,43 @@ msgstr ""
 "perezosamente computados, así que no hay penalización de velocidad si sólo "
 "esos atributos que son ligeros de computar son utilizados."
 
-#: ../Doc/library/filecmp.rst:110
+#: ../Doc/library/filecmp.rst:115
 msgid "The directory *a*."
 msgstr "El directorio *a*."
 
-#: ../Doc/library/filecmp.rst:115
+#: ../Doc/library/filecmp.rst:120
 msgid "The directory *b*."
 msgstr "El directorio *b*."
 
-#: ../Doc/library/filecmp.rst:120
+#: ../Doc/library/filecmp.rst:125
 msgid "Files and subdirectories in *a*, filtered by *hide* and *ignore*."
 msgstr "Ficheros y subdirectorios en *a*, filtrados por *hide* e *ignore*."
 
-#: ../Doc/library/filecmp.rst:125
+#: ../Doc/library/filecmp.rst:130
 msgid "Files and subdirectories in *b*, filtered by *hide* and *ignore*."
 msgstr "Ficheros y subdirectorios en *b*, filtrados por *hide* e *ignore*."
 
-#: ../Doc/library/filecmp.rst:130
+#: ../Doc/library/filecmp.rst:135
 msgid "Files and subdirectories in both *a* and *b*."
 msgstr "Ficheros y subdirectorios en *a* y *b*."
 
-#: ../Doc/library/filecmp.rst:135
+#: ../Doc/library/filecmp.rst:140
 msgid "Files and subdirectories only in *a*."
 msgstr "Ficheros y subdirectorios sólo en *a*."
 
-#: ../Doc/library/filecmp.rst:140
+#: ../Doc/library/filecmp.rst:145
 msgid "Files and subdirectories only in *b*."
 msgstr "Ficheros y subdirectorios sólo en *b*."
 
-#: ../Doc/library/filecmp.rst:145
+#: ../Doc/library/filecmp.rst:150
 msgid "Subdirectories in both *a* and *b*."
 msgstr "Subdirectorios en *a* y *b*."
 
-#: ../Doc/library/filecmp.rst:150
+#: ../Doc/library/filecmp.rst:155
 msgid "Files in both *a* and *b*."
 msgstr "Ficheros en *a* y *b*."
 
-#: ../Doc/library/filecmp.rst:155
+#: ../Doc/library/filecmp.rst:160
 msgid ""
 "Names in both *a* and *b*, such that the type differs between the "
 "directories, or names for which :func:`os.stat` reports an error."
@@ -251,7 +256,7 @@ msgstr ""
 "Nombres en *a* y *b*, de forma que el tipo difiera entre los directorios, o "
 "los nombres por los que :func:`os.stat` reporta un error."
 
-#: ../Doc/library/filecmp.rst:161
+#: ../Doc/library/filecmp.rst:166
 msgid ""
 "Files which are identical in both *a* and *b*, using the class's file "
 "comparison operator."
@@ -259,7 +264,7 @@ msgstr ""
 "Ficheros que son idénticos en *a* y *b*, utilizando el operador de "
 "comparación de fichero de la clase."
 
-#: ../Doc/library/filecmp.rst:167
+#: ../Doc/library/filecmp.rst:172
 msgid ""
 "Files which are in both *a* and *b*, whose contents differ according to the "
 "class's file comparison operator."
@@ -267,21 +272,21 @@ msgstr ""
 "Ficheros que están en *a* y *b*, cuyos contenidos difieren acorde al "
 "operador de comparación del fichero de clase."
 
-#: ../Doc/library/filecmp.rst:173
+#: ../Doc/library/filecmp.rst:178
 msgid "Files which are in both *a* and *b*, but could not be compared."
 msgstr "Ficheros que están en *a* y *b*, pero no deberían ser comparados."
 
-#: ../Doc/library/filecmp.rst:178
+#: ../Doc/library/filecmp.rst:183
 msgid ""
 "A dictionary mapping names in :attr:`common_dirs` to :class:`dircmp` "
 "instances (or MyDirCmp instances if this instance is of type MyDirCmp, a "
 "subclass of :class:`dircmp`)."
 msgstr ""
-"Un diccionario que asigna nombres en :attr:`common_dirs` a instancias :class:"
-"`dircmp` (o instancias MyDirCmp si esa instancias es del tipo MyDirCmp, una "
-"subclase de :class:`dircmp`)."
+"Un diccionario que asigna nombres en :attr:`common_dirs` a "
+"instancias :class:`dircmp` (o instancias MyDirCmp si esa instancias es del "
+"tipo MyDirCmp, una subclase de :class:`dircmp`)."
 
-#: ../Doc/library/filecmp.rst:182
+#: ../Doc/library/filecmp.rst:187
 msgid ""
 "Previously entries were always :class:`dircmp` instances. Now entries are "
 "the same type as *self*, if *self* is a subclass of :class:`dircmp`."
@@ -289,11 +294,11 @@ msgstr ""
 "Anteriormente las entradas siempre eran instancias :class:`dircmp`. Ahora "
 "son del mismo tipo que *self*, si *self* es una subclase de :class:`dircmp`."
 
-#: ../Doc/library/filecmp.rst:191
+#: ../Doc/library/filecmp.rst:196
 msgid "List of directories ignored by :class:`dircmp` by default."
 msgstr "Lista de directorios ignorados por :class:`dircmp` por defecto."
 
-#: ../Doc/library/filecmp.rst:194
+#: ../Doc/library/filecmp.rst:199
 msgid ""
 "Here is a simplified example of using the ``subdirs`` attribute to search "
 "recursively through two directories to show common different files::"
@@ -301,3 +306,18 @@ msgstr ""
 "Aquí hay un ejemplo simplificado de uso del atributo ``subdirs`` para buscar "
 "recursivamente a través de dos directorios para mostrar diferentes ficheros "
 "comunes::"
+
+#: ../Doc/library/filecmp.rst:202
+#, python-format
+msgid ""
+">>> from filecmp import dircmp\n"
+">>> def print_diff_files(dcmp):\n"
+"...     for name in dcmp.diff_files:\n"
+"...         print(\"diff_file %s found in %s and %s\" % (name, dcmp.left,\n"
+"...               dcmp.right))\n"
+"...     for sub_dcmp in dcmp.subdirs.values():\n"
+"...         print_diff_files(sub_dcmp)\n"
+"...\n"
+">>> dcmp = dircmp('dir1', 'dir2') \n"
+">>> print_diff_files(dcmp) "
+msgstr ""

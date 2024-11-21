@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2022-10-30 21:29+0100\n"
 "Last-Translator: \n"
 "Language: es\n"
@@ -19,10 +19,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/wave.rst:2
-msgid ":mod:`wave` --- Read and write WAV files"
+#, fuzzy
+msgid ":mod:`!wave` --- Read and write WAV files"
 msgstr ":mod:`wave` --- Leer y escribir archivos WAV"
 
 #: ../Doc/library/wave.rst:10
@@ -101,15 +102,15 @@ msgstr ""
 #, fuzzy
 msgid ""
 "The :func:`.open` function may be used in a :keyword:`with` statement.  When "
-"the :keyword:`!with` block completes, the :meth:`Wave_read.close()` or :meth:"
-"`Wave_write.close()` method is called."
+"the :keyword:`!with` block completes, the :meth:`Wave_read.close` "
+"or :meth:`Wave_write.close` method is called."
 msgstr ""
-"La función :func:`.open` se puede utilizar en una declaración :keyword:"
-"`with`. Cuando el bloque  :keyword:`!with` se completa, el método :meth:"
-"`Wave_read.close() <wave.Wave_read.close>` o el método :meth:`Wave_write."
-"close() <wave.Wave_write.close()>` es invocado."
+"La función :func:`.open` se puede utilizar en una "
+"declaración :keyword:`with`. Cuando el bloque  :keyword:`!with` se completa, "
+"el método :meth:`Wave_read.close() <wave.Wave_read.close>` o el "
+"método :meth:`Wave_write.close() <wave.Wave_write.close()>` es invocado."
 
-#: ../Doc/library/wave.rst:52 ../Doc/library/wave.rst:176
+#: ../Doc/library/wave.rst:52 ../Doc/library/wave.rst:184
 msgid "Added support for unseekable files."
 msgstr "Se agregó soporte para archivos no encontrados."
 
@@ -188,8 +189,8 @@ msgstr ""
 msgid ""
 "Reads and returns at most *n* frames of audio, as a :class:`bytes` object."
 msgstr ""
-"Lee y retorna como máximo *n* cuadros de audio, como un objeto :class:"
-"`bytes`."
+"Lee y retorna como máximo *n* cuadros de audio, como un "
+"objeto :class:`bytes`."
 
 #: ../Doc/library/wave.rst:124
 msgid "Rewind the file pointer to the beginning of the audio stream."
@@ -197,22 +198,32 @@ msgstr ""
 "Rebobina el puntero del archivo hasta el principio de la secuencia de audio."
 
 #: ../Doc/library/wave.rst:126
+#, fuzzy
 msgid ""
-"The following two methods are defined for compatibility with the :mod:`aifc` "
-"module, and don't do anything interesting."
+"The following two methods are defined for compatibility with the old :mod:`!"
+"aifc` module, and don't do anything interesting."
 msgstr ""
-"Los dos métodos siguientes se definen por compatibilidad con el módulo :mod:"
-"`aifc`, y no hacen nada interesante."
+"Los dos métodos siguientes se definen por compatibilidad con el "
+"módulo :mod:`aifc`, y no hacen nada interesante."
 
 #: ../Doc/library/wave.rst:132
 msgid "Returns ``None``."
 msgstr "Retorna ``None``."
 
-#: ../Doc/library/wave.rst:137
+#: ../Doc/library/wave.rst:134 ../Doc/library/wave.rst:143
+#, fuzzy
+msgid ""
+"The method only existed for compatibility with the :mod:`!aifc` module which "
+"has been removed in Python 3.13."
+msgstr ""
+"Los dos métodos siguientes se definen por compatibilidad con el "
+"módulo :mod:`aifc`, y no hacen nada interesante."
+
+#: ../Doc/library/wave.rst:141
 msgid "Raise an error."
 msgstr "Lanza un error."
 
-#: ../Doc/library/wave.rst:139
+#: ../Doc/library/wave.rst:147
 msgid ""
 "The following two methods define a term \"position\" which is compatible "
 "between them, and is otherwise implementation dependent."
@@ -220,94 +231,95 @@ msgstr ""
 "Los dos métodos siguientes definen un término \"posición\" que es compatible "
 "entre ellos y, es dependiente de la implementación."
 
-#: ../Doc/library/wave.rst:145
+#: ../Doc/library/wave.rst:153
 msgid "Set the file pointer to the specified position."
 msgstr "Establece el puntero del archivo en la posición especificada."
 
-#: ../Doc/library/wave.rst:150
+#: ../Doc/library/wave.rst:158
 msgid "Return current file pointer position."
 msgstr "Retorna la posición actual del puntero del archivo."
 
-#: ../Doc/library/wave.rst:156
+#: ../Doc/library/wave.rst:164
 msgid "Wave_write Objects"
 msgstr "Los objetos *Wave_write*"
 
-#: ../Doc/library/wave.rst:160
+#: ../Doc/library/wave.rst:168
 msgid "Write a WAV file."
 msgstr ""
 
-#: ../Doc/library/wave.rst:162
+#: ../Doc/library/wave.rst:170
 #, fuzzy
 msgid "Wave_write objects, as returned by :func:`.open`."
 msgstr ""
 "Los objetos *Wave_write*, retornados por :func:`.open`, tienen los "
 "siguientes métodos:"
 
-#: ../Doc/library/wave.rst:164
+#: ../Doc/library/wave.rst:172
 #, fuzzy
 msgid ""
 "For seekable output streams, the ``wave`` header will automatically be "
 "updated to reflect the number of frames actually written.  For unseekable "
 "streams, the *nframes* value must be accurate when the first frame data is "
-"written.  An accurate *nframes* value can be achieved either by calling :"
-"meth:`setnframes` or :meth:`setparams` with the number of frames that will "
-"be written before :meth:`close` is called and then using :meth:"
-"`writeframesraw` to write the frame data, or by calling :meth:`writeframes` "
-"with all of the frame data to be written.  In the latter case :meth:"
-"`writeframes` will calculate the number of frames in the data and set "
-"*nframes* accordingly before writing the frame data."
+"written.  An accurate *nframes* value can be achieved either by "
+"calling :meth:`setnframes` or :meth:`setparams` with the number of frames "
+"that will be written before :meth:`close` is called and then "
+"using :meth:`writeframesraw` to write the frame data, or by "
+"calling :meth:`writeframes` with all of the frame data to be written.  In "
+"the latter case :meth:`writeframes` will calculate the number of frames in "
+"the data and set *nframes* accordingly before writing the frame data."
 msgstr ""
 "Para las secuencias de salida que se pueden buscar, el encabezado de  "
 "``wave`` se actualizará automáticamente para reflejar el número de cuadros "
 "realmente escritos. Para secuencias que no se pueden buscar, el valor "
 "*nframes* debe ser preciso cuando se escriben los datos del primer cuadro. "
-"Se puede lograr un valor *nframes* preciso llamando a :meth:`~Wave_write."
-"setnframes` o :meth:`~Wave_write.setparams` con el número de cuadros que se "
-"escribirán antes de que se llame a :meth:`~Wave_write.close`  y luego se "
-"usa :meth:`~ Wave_write.writeframesraw` para escribir los datos del cuadro, "
-"o llamando a :meth:`~Wave_write.writeframes` con todos los datos del cuadro "
-"que se escribirán. En el último caso :meth:`~Wave_write.writeframes` "
-"calculará el número de cuadros en los datos y establecerá *nframes* como "
-"consecuencia antes de escribir los datos del cuadro."
+"Se puede lograr un valor *nframes* preciso llamando "
+"a :meth:`~Wave_write.setnframes` o :meth:`~Wave_write.setparams` con el "
+"número de cuadros que se escribirán antes de que se llame "
+"a :meth:`~Wave_write.close`  y luego se usa :meth:`~ "
+"Wave_write.writeframesraw` para escribir los datos del cuadro, o llamando "
+"a :meth:`~Wave_write.writeframes` con todos los datos del cuadro que se "
+"escribirán. En el último caso :meth:`~Wave_write.writeframes` calculará el "
+"número de cuadros en los datos y establecerá *nframes* como consecuencia "
+"antes de escribir los datos del cuadro."
 
-#: ../Doc/library/wave.rst:179
+#: ../Doc/library/wave.rst:187
 #, fuzzy
 msgid "Wave_write objects have the following methods:"
 msgstr ""
 "Los objetos *Wave_write*, retornados por :func:`.open`, tienen los "
 "siguientes métodos:"
 
-#: ../Doc/library/wave.rst:183
+#: ../Doc/library/wave.rst:191
 msgid ""
-"Make sure *nframes* is correct, and close the file if it was opened by :mod:"
-"`wave`.  This method is called upon object collection.  It will raise an "
-"exception if the output stream is not seekable and *nframes* does not match "
-"the number of frames actually written."
+"Make sure *nframes* is correct, and close the file if it was opened "
+"by :mod:`wave`.  This method is called upon object collection.  It will "
+"raise an exception if the output stream is not seekable and *nframes* does "
+"not match the number of frames actually written."
 msgstr ""
 "Asegúrese de que *nframes* sea correcto y cierre el archivo si fue abierto "
 "por :mod:`wave`. Este método es invocado en la colección de objetos. "
 "Levantará una excepción si la secuencia de salida no se puede buscar y "
 "*nframes* no coinciden con el número de cuadros realmente escritos."
 
-#: ../Doc/library/wave.rst:191
+#: ../Doc/library/wave.rst:199
 msgid "Set the number of channels."
 msgstr "Configure el número de canales."
 
-#: ../Doc/library/wave.rst:196
+#: ../Doc/library/wave.rst:204
 msgid "Set the sample width to *n* bytes."
 msgstr "Establezca el ancho de la muestra en *n* bytes."
 
-#: ../Doc/library/wave.rst:201
+#: ../Doc/library/wave.rst:209
 msgid "Set the frame rate to *n*."
 msgstr "Establezca la velocidad del cuadro en *n*."
 
-#: ../Doc/library/wave.rst:203
+#: ../Doc/library/wave.rst:211
 msgid "A non-integral input to this method is rounded to the nearest integer."
 msgstr ""
 "Una entrada no-entera para este método se redondea al número entero más "
 "cercano."
 
-#: ../Doc/library/wave.rst:210
+#: ../Doc/library/wave.rst:218
 msgid ""
 "Set the number of frames to *n*.  This will be changed later if the number "
 "of frames actually written is different (this update attempt will raise an "
@@ -317,7 +329,7 @@ msgstr ""
 "número de cuadros realmente escritos es diferente (este intento de "
 "actualización levantará un error si no se encuentra la secuencia de salida)."
 
-#: ../Doc/library/wave.rst:217
+#: ../Doc/library/wave.rst:225
 msgid ""
 "Set the compression type and description. At the moment, only compression "
 "type ``NONE`` is supported, meaning no compression."
@@ -326,7 +338,7 @@ msgstr ""
 "admite el tipo de compresión ``NONE``, lo que significa que no hay "
 "compresión."
 
-#: ../Doc/library/wave.rst:223
+#: ../Doc/library/wave.rst:231
 #, fuzzy
 msgid ""
 "The *tuple* should be ``(nchannels, sampwidth, framerate, nframes, comptype, "
@@ -337,23 +349,23 @@ msgstr ""
 "compname)``, con valores válidos para los métodos :meth:`set \\ *`. "
 "Establece todos los parámetros."
 
-#: ../Doc/library/wave.rst:230
+#: ../Doc/library/wave.rst:238
 msgid ""
-"Return current position in the file, with the same disclaimer for the :meth:"
-"`Wave_read.tell` and :meth:`Wave_read.setpos` methods."
+"Return current position in the file, with the same disclaimer for "
+"the :meth:`Wave_read.tell` and :meth:`Wave_read.setpos` methods."
 msgstr ""
 "Retorna la posición actual en el archivo, con el mismo descargo para los "
 "métodos :meth:`Wave_read.tell` y :meth:`Wave_read.setpos`."
 
-#: ../Doc/library/wave.rst:236
+#: ../Doc/library/wave.rst:244
 msgid "Write audio frames, without correcting *nframes*."
 msgstr "Escribe cuadros de audio, sin corregir *nframes*."
 
-#: ../Doc/library/wave.rst:238 ../Doc/library/wave.rst:249
+#: ../Doc/library/wave.rst:246 ../Doc/library/wave.rst:257
 msgid "Any :term:`bytes-like object` is now accepted."
 msgstr "Todo :term:`bytes-like object` ahora es aceptado."
 
-#: ../Doc/library/wave.rst:244
+#: ../Doc/library/wave.rst:252
 msgid ""
 "Write audio frames and make sure *nframes* is correct.  It will raise an "
 "error if the output stream is not seekable and the total number of frames "
@@ -365,24 +377,12 @@ msgstr ""
 "número total de cuadros que se han escrito después de que se haya escrito "
 "*data* no coincide con el valor establecido previamente para *nframes*."
 
-#: ../Doc/library/wave.rst:252
+#: ../Doc/library/wave.rst:260
 msgid ""
-"Note that it is invalid to set any parameters after calling :meth:"
-"`writeframes` or :meth:`writeframesraw`, and any attempt to do so will "
-"raise :exc:`wave.Error`."
+"Note that it is invalid to set any parameters after "
+"calling :meth:`writeframes` or :meth:`writeframesraw`, and any attempt to do "
+"so will raise :exc:`wave.Error`."
 msgstr ""
 "Tenga en cuenta que no es válido establecer ningún parámetro después de "
 "invocar a :meth:`writeframes` o :meth:`writeframesraw`, y cualquier intento "
 "de hacerlo levantará :exc:`wave.Error`."
-
-# Aun !=  Aún (hoy aprendí algo nuevo)
-#~ msgid ""
-#~ "The :mod:`wave` module provides a convenient interface to the WAV sound "
-#~ "format. Only files using ``WAVE_FORMAT_PCM`` are supported. Note that "
-#~ "this does not include files using ``WAVE_FORMAT_EXTENSIBLE`` even if the "
-#~ "subformat is PCM."
-#~ msgstr ""
-#~ "El módulo :mod:`wave` provee una interfaz conveniente para el formato de "
-#~ "sonido WAV. Sólo los archivos que usan ``WAVE_FORMAT_PCM`` son "
-#~ "soportados. Notar que esto no incluye archivos que usen "
-#~ "``WAVE_FORMAT_EXTENSIBLE``, aun si el sub-formato es PCM."

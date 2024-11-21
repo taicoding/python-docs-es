@@ -10,20 +10,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2024-09-09 19:28+0230\n"
 "Last-Translator: Carlos Mena Pérez <@carlosm00>\n"
-"Language-Team: python-doc-es\n"
 "Language: es\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.5\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/codecs.rst:2
-msgid ":mod:`codecs` --- Codec registry and base classes"
+#, fuzzy
+msgid ":mod:`!codecs` --- Codec registry and base classes"
 msgstr ":mod:`codecs` --- Registro de códec y clases base"
 
 #: ../Doc/library/codecs.rst:11
@@ -68,9 +68,9 @@ msgstr "Codifica *obj* utilizando el códec registrado para *encoding*."
 #: ../Doc/library/codecs.rst:40
 msgid ""
 "*Errors* may be given to set the desired error handling scheme. The default "
-"error handler is ``'strict'`` meaning that encoding errors raise :exc:"
-"`ValueError` (or a more codec specific subclass, such as :exc:"
-"`UnicodeEncodeError`). Refer to :ref:`codec-base-classes` for more "
+"error handler is ``'strict'`` meaning that encoding errors "
+"raise :exc:`ValueError` (or a more codec specific subclass, such "
+"as :exc:`UnicodeEncodeError`). Refer to :ref:`codec-base-classes` for more "
 "information on codec error handling."
 msgstr ""
 "Se pueden dar *errors* para establecer el esquema de manejo de errores "
@@ -87,17 +87,17 @@ msgstr "Decodifica *obj* utilizando el códec registrado para *encoding*."
 #: ../Doc/library/codecs.rst:50
 msgid ""
 "*Errors* may be given to set the desired error handling scheme. The default "
-"error handler is ``'strict'`` meaning that decoding errors raise :exc:"
-"`ValueError` (or a more codec specific subclass, such as :exc:"
-"`UnicodeDecodeError`). Refer to :ref:`codec-base-classes` for more "
+"error handler is ``'strict'`` meaning that decoding errors "
+"raise :exc:`ValueError` (or a more codec specific subclass, such "
+"as :exc:`UnicodeDecodeError`). Refer to :ref:`codec-base-classes` for more "
 "information on codec error handling."
 msgstr ""
 "Se pueden dar *errors* para establecer el esquema de manejo de errores "
 "deseado. El manejador de errores predeterminado es ``'estricto'``, lo que "
 "significa que los errores de decodificación generan :exc:`ValueError` (o una "
-"subclase más específica de códec, como :exc:`UnicodeDecodeError`). Consulte :"
-"ref:`codec-base-classes` para obtener más información sobre el manejo de "
-"errores de códec."
+"subclase más específica de códec, como :exc:`UnicodeDecodeError`). "
+"Consulte :ref:`codec-base-classes` para obtener más información sobre el "
+"manejo de errores de códec."
 
 #: ../Doc/library/codecs.rst:56
 msgid "The full details for each codec can also be looked up directly:"
@@ -107,8 +107,8 @@ msgstr ""
 
 #: ../Doc/library/codecs.rst:60
 msgid ""
-"Looks up the codec info in the Python codec registry and returns a :class:"
-"`CodecInfo` object as defined below."
+"Looks up the codec info in the Python codec registry and returns "
+"a :class:`CodecInfo` object as defined below."
 msgstr ""
 "Busca la información de códec en el registro de códec de Python y retorna un "
 "objeto :class:`CodecInfo` como se define a continuación."
@@ -117,8 +117,9 @@ msgstr ""
 msgid ""
 "Encodings are first looked up in the registry's cache. If not found, the "
 "list of registered search functions is scanned. If no :class:`CodecInfo` "
-"object is found, a :exc:`LookupError` is raised. Otherwise, the :class:"
-"`CodecInfo` object is stored in the cache and returned to the caller."
+"object is found, a :exc:`LookupError` is raised. Otherwise, "
+"the :class:`CodecInfo` object is stored in the cache and returned to the "
+"caller."
 msgstr ""
 "Las codificaciones se buscan primero en la memoria caché del registro. Si no "
 "se encuentran, se explora la lista de funciones de búsqueda registradas. Si "
@@ -141,39 +142,39 @@ msgstr "El nombre de la codificación."
 #: ../Doc/library/codecs.rst:82
 msgid ""
 "The stateless encoding and decoding functions. These must be functions or "
-"methods which have the same interface as the :meth:`~Codec.encode` and :meth:"
-"`~Codec.decode` methods of Codec instances (see :ref:`Codec Interface <codec-"
-"objects>`). The functions or methods are expected to work in a stateless "
-"mode."
+"methods which have the same interface as the :meth:`~Codec.encode` "
+"and :meth:`~Codec.decode` methods of Codec instances (see :ref:`Codec "
+"Interface <codec-objects>`). The functions or methods are expected to work "
+"in a stateless mode."
 msgstr ""
 "Las funciones de codificación y decodificación sin estado. Deben ser "
-"funciones o métodos que tengan la misma interfaz que los métodos :meth:"
-"`~Codec.encode` y :meth:`~Codec.decode` de instancias de *Codec* (ver :ref:"
-"`Codec Interface <codec-objects>`). Se espera que las funciones o métodos "
-"funcionen en modo sin estado."
+"funciones o métodos que tengan la misma interfaz que los "
+"métodos :meth:`~Codec.encode` y :meth:`~Codec.decode` de instancias de "
+"*Codec* (ver :ref:`Codec Interface <codec-objects>`). Se espera que las "
+"funciones o métodos funcionen en modo sin estado."
 
 #: ../Doc/library/codecs.rst:92
 msgid ""
 "Incremental encoder and decoder classes or factory functions. These have to "
-"provide the interface defined by the base classes :class:"
-"`IncrementalEncoder` and :class:`IncrementalDecoder`, respectively. "
-"Incremental codecs can maintain state."
+"provide the interface defined by the base "
+"classes :class:`IncrementalEncoder` and :class:`IncrementalDecoder`, "
+"respectively. Incremental codecs can maintain state."
 msgstr ""
 "Clases de codificación y decodificación incremental o funciones de fábrica. "
-"Deben proporcionar la interfaz definida por las clases base :class:"
-"`IncrementalEncoder` y :class:`IncrementalDecoder`, respectivamente. Los "
-"códecs incrementales pueden mantener el estado."
+"Deben proporcionar la interfaz definida por las clases "
+"base :class:`IncrementalEncoder` y :class:`IncrementalDecoder`, "
+"respectivamente. Los códecs incrementales pueden mantener el estado."
 
 #: ../Doc/library/codecs.rst:101
 msgid ""
 "Stream writer and reader classes or factory functions. These have to provide "
-"the interface defined by the base classes :class:`StreamWriter` and :class:"
-"`StreamReader`, respectively. Stream codecs can maintain state."
+"the interface defined by the base classes :class:`StreamWriter` "
+"and :class:`StreamReader`, respectively. Stream codecs can maintain state."
 msgstr ""
 "Las clases *stream*, tanto *writer* como *reader* o funciones de fábrica. "
-"Estos tienen que proporcionar la interfaz definida por las clases base :"
-"class:`StreamWriter` y :class:`StreamReader`, respectivamente. Los códecs de "
-"flujo pueden mantener el estado."
+"Estos tienen que proporcionar la interfaz definida por las clases "
+"base :class:`StreamWriter` y :class:`StreamReader`, respectivamente. Los "
+"códecs de flujo pueden mantener el estado."
 
 #: ../Doc/library/codecs.rst:106
 msgid ""
@@ -237,19 +238,19 @@ msgstr ""
 
 #: ../Doc/library/codecs.rst:143
 msgid ""
-"Look up the codec for the given encoding and return its :class:"
-"`StreamReader` class or factory function."
+"Look up the codec for the given encoding and return "
+"its :class:`StreamReader` class or factory function."
 msgstr ""
-"Busca el códec para la codificación dada y retorna su clase :class:"
-"`StreamReader` o función de fábrica."
+"Busca el códec para la codificación dada y retorna su "
+"clase :class:`StreamReader` o función de fábrica."
 
 #: ../Doc/library/codecs.rst:151
 msgid ""
-"Look up the codec for the given encoding and return its :class:"
-"`StreamWriter` class or factory function."
+"Look up the codec for the given encoding and return "
+"its :class:`StreamWriter` class or factory function."
 msgstr ""
-"Busca el códec para la codificación dada y retorna su clase :class:"
-"`StreamWriter` o función de fábrica."
+"Busca el códec para la codificación dada y retorna su "
+"clase :class:`StreamWriter` o función de fábrica."
 
 #: ../Doc/library/codecs.rst:156
 msgid ""
@@ -269,9 +270,9 @@ msgid ""
 msgstr ""
 "Registra una función de búsqueda de códec. Se espera que las funciones de "
 "búsqueda tomen un argumento, que sea el nombre de codificación en minúsculas "
-"con guiones y espacios convertidos a guiones bajos, y que retorne un objeto :"
-"class:`CodecInfo`. En caso de que una función de búsqueda no pueda encontrar "
-"una codificación dada, debería retornar ``None``."
+"con guiones y espacios convertidos a guiones bajos, y que retorne un "
+"objeto :class:`CodecInfo`. En caso de que una función de búsqueda no pueda "
+"encontrar una codificación dada, debería retornar ``None``."
 
 #: ../Doc/library/codecs.rst:167
 msgid "Hyphens and spaces are converted to underscore."
@@ -292,17 +293,17 @@ msgid ""
 "provides additional utility functions and classes that allow the use of a "
 "wider range of codecs when working with binary files:"
 msgstr ""
-"Mientras que la función incorporada :func:`open` y el módulo asociado :mod:"
-"`io` son el enfoque recomendado para trabajar con archivos de texto "
-"codificados, este módulo proporciona funciones y clases de utilidad "
+"Mientras que la función incorporada :func:`open` y el módulo "
+"asociado :mod:`io` son el enfoque recomendado para trabajar con archivos de "
+"texto codificados, este módulo proporciona funciones y clases de utilidad "
 "adicionales que permiten el uso de una gama más amplia de códecs cuando se "
 "trabaja con archivos binarios:"
 
 #: ../Doc/library/codecs.rst:186
 msgid ""
-"Open an encoded file using the given *mode* and return an instance of :class:"
-"`StreamReaderWriter`, providing transparent encoding/decoding. The default "
-"file mode is ``'r'``, meaning to open the file in read mode."
+"Open an encoded file using the given *mode* and return an instance "
+"of :class:`StreamReaderWriter`, providing transparent encoding/decoding. The "
+"default file mode is ``'r'``, meaning to open the file in read mode."
 msgstr ""
 "Abre un archivo codificado utilizando el modo dado y retorna una instancia "
 "de :class:`StreamReaderWriter`, proporcionando codificación/decodificación "
@@ -319,8 +320,8 @@ msgstr ""
 "Si el valor de *encoding* no es ``None``, entonces, los archivos codificados "
 "subyacentes siempre se abren en modo binario. No se realiza ninguna "
 "conversión automática de ``'\\n'`` al leer y escribir. El argumento *mode* "
-"puede ser cualquier modo binario aceptable para la función integrada :func:"
-"`open`; la ``'b'`` se añade automáticamente."
+"puede ser cualquier modo binario aceptable para la función "
+"integrada :func:`open`; la ``'b'`` se añade automáticamente."
 
 #: ../Doc/library/codecs.rst:198
 msgid ""
@@ -340,17 +341,17 @@ msgid ""
 "encoding error occurs."
 msgstr ""
 "pueden proporcionarse *errors* para definir el manejo de errores. El valor "
-"predeterminado es ``'estricto'``, lo que hace que se genere un :exc:"
-"`ValueError` en caso de que ocurra un error de codificación."
+"predeterminado es ``'estricto'``, lo que hace que se genere "
+"un :exc:`ValueError` en caso de que ocurra un error de codificación."
 
 #: ../Doc/library/codecs.rst:205
 msgid ""
 "*buffering* has the same meaning as for the built-in :func:`open` function. "
 "It defaults to -1 which means that the default buffer size will be used."
 msgstr ""
-"*buffering* tiene el mismo significado que para la función incorporada :func:"
-"`open`. Su valor predeterminado es -1, lo que significa que se utilizará el "
-"tamaño predeterminado del búfer."
+"*buffering* tiene el mismo significado que para la función "
+"incorporada :func:`open`. Su valor predeterminado es -1, lo que significa "
+"que se utilizará el tamaño predeterminado del búfer."
 
 #: ../Doc/library/codecs.rst:208
 msgid "The ``'U'`` mode has been removed."
@@ -392,8 +393,8 @@ msgid ""
 "encoding error occurs."
 msgstr ""
 "Pueden proporcionarse *errors* para definir el manejo de errores. Su valor "
-"predeterminado es ``'estricto'``, lo que hace que se genere :exc:"
-"`ValueError` en caso de que ocurra un error de codificación."
+"predeterminado es ``'estricto'``, lo que hace que se "
+"genere :exc:`ValueError` en caso de que ocurra un error de codificación."
 
 #: ../Doc/library/codecs.rst:233
 msgid ""
@@ -433,13 +434,13 @@ msgstr ""
 msgid ""
 "This function requires that the codec accept :class:`bytes` objects to "
 "decode. Therefore it does not support text-to-text encoders such as "
-"``rot_13``, although ``rot_13`` may be used equivalently with :func:"
-"`iterencode`."
+"``rot_13``, although ``rot_13`` may be used equivalently "
+"with :func:`iterencode`."
 msgstr ""
 "Esta función requiere que el códec acepte objetos :class:`bytes` para "
 "decodificar. Por lo tanto, no admite codificadores de texto a texto como "
-"``rot_13``, aunque ``rot_13`` puede usarse de manera equivalente con :func:"
-"`iterencode`."
+"``rot_13``, aunque ``rot_13`` puede usarse de manera equivalente "
+"con :func:`iterencode`."
 
 #: ../Doc/library/codecs.rst:256
 msgid ""
@@ -454,20 +455,21 @@ msgid ""
 "These constants define various byte sequences, being Unicode byte order "
 "marks (BOMs) for several encodings. They are used in UTF-16 and UTF-32 data "
 "streams to indicate the byte order used, and in UTF-8 as a Unicode "
-"signature. :const:`BOM_UTF16` is either :const:`BOM_UTF16_BE` or :const:"
-"`BOM_UTF16_LE` depending on the platform's native byte order, :const:`BOM` "
-"is an alias for :const:`BOM_UTF16`, :const:`BOM_LE` for :const:"
-"`BOM_UTF16_LE` and :const:`BOM_BE` for :const:`BOM_UTF16_BE`. The others "
-"represent the BOM in UTF-8 and UTF-32 encodings."
+"signature. :const:`BOM_UTF16` is either :const:`BOM_UTF16_BE` "
+"or :const:`BOM_UTF16_LE` depending on the platform's native byte "
+"order, :const:`BOM` is an alias for :const:`BOM_UTF16`, :const:`BOM_LE` "
+"for :const:`BOM_UTF16_LE` and :const:`BOM_BE` for :const:`BOM_UTF16_BE`. The "
+"others represent the BOM in UTF-8 and UTF-32 encodings."
 msgstr ""
 "Estas constantes definen varias secuencias de bytes, que son marcas de orden "
 "de bytes Unicode (BOM) para varias codificaciones. Se utilizan en flujos de "
 "datos UTF-16 y UTF-32 para indicar el orden de bytes utilizado, y en UTF-8 "
-"como firma Unicode. :const:`BOM_UTF16` es :const:`BOM_UTF16_BE` o :const:"
-"`BOM_UTF16_LE` dependiendo del orden de bytes nativo de la plataforma, :"
-"const:`BOM` es un alias para :const:`BOM_UTF16`, :const:`BOM_LE` para :const:"
-"`BOM_UTF16_LE` y :const:`BOM_BE` para :const:`BOM_UTF16_BE`. Los otros "
-"representan la lista de materiales en las codificaciones UTF-8 y UTF-32."
+"como firma Unicode. :const:`BOM_UTF16` es :const:`BOM_UTF16_BE` "
+"o :const:`BOM_UTF16_LE` dependiendo del orden de bytes nativo de la "
+"plataforma, :const:`BOM` es un alias "
+"para :const:`BOM_UTF16`, :const:`BOM_LE` para :const:`BOM_UTF16_LE` "
+"y :const:`BOM_BE` para :const:`BOM_UTF16_BE`. Los otros representan la lista "
+"de materiales en las codificaciones UTF-8 y UTF-32."
 
 #: ../Doc/library/codecs.rst:285
 msgid "Codec Base Classes"
@@ -525,8 +527,8 @@ msgid "Value"
 msgstr "Valor"
 
 #: ../Doc/library/codecs.rst:330 ../Doc/library/codecs.rst:373
-#: ../Doc/library/codecs.rst:393 ../Doc/library/codecs.rst:1327
-#: ../Doc/library/codecs.rst:1395 ../Doc/library/codecs.rst:1450
+#: ../Doc/library/codecs.rst:393 ../Doc/library/codecs.rst:1331
+#: ../Doc/library/codecs.rst:1399 ../Doc/library/codecs.rst:1454
 msgid "Meaning"
 msgstr "Significado"
 
@@ -551,8 +553,8 @@ msgid ""
 "Ignore the malformed data and continue without further notice. Implemented "
 "in :func:`ignore_errors`."
 msgstr ""
-"Ignore los datos mal formados y continúe sin previo aviso. Implementado en :"
-"func:`ignore_errors`."
+"Ignore los datos mal formados y continúe sin previo aviso. Implementado "
+"en :func:`ignore_errors`."
 
 #: ../Doc/library/codecs.rst:340
 msgid "``'replace'``"
@@ -575,15 +577,16 @@ msgstr "``'backslashreplace'``"
 #: ../Doc/library/codecs.rst:346
 msgid ""
 "Replace with backslashed escape sequences. On encoding, use hexadecimal form "
-"of Unicode code point with formats :samp:`\\\\x{hh}` :samp:`\\\\u{xxxx}` :"
-"samp:`\\\\U{xxxxxxxx}`. On decoding, use hexadecimal form of byte value with "
-"format :samp:`\\\\x{hh}`. Implemented in :func:`backslashreplace_errors`."
+"of Unicode code point with formats :samp:`\\\\x{hh}` :samp:`\\\\u{xxxx}"
+"` :samp:`\\\\U{xxxxxxxx}`. On decoding, use hexadecimal form of byte value "
+"with format :samp:`\\\\x{hh}`. Implemented "
+"in :func:`backslashreplace_errors`."
 msgstr ""
 "Reemplazar con secuencias de escape mediante barra invertida. Al codificar, "
-"emplear la forma hexadecimal del punto de código Unicode con los formatos :"
-"samp:`\\\\x{hh}` :samp:`\\\\u{xxxx}` :samp:`\\\\U{xxxxxxxx}`. Al "
-"decodificar, usa la forma hexadecimal del valor del byte con el formato :"
-"samp:`\\\\x{hh}`. Implementado en :func:`backslashreplace_errors`."
+"emplear la forma hexadecimal del punto de código Unicode con los "
+"formatos :samp:`\\\\x{hh}` :samp:`\\\\u{xxxx}` :samp:`\\\\U{xxxxxxxx}`. Al "
+"decodificar, usa la forma hexadecimal del valor del byte con el "
+"formato :samp:`\\\\x{hh}`. Implementado en :func:`backslashreplace_errors`."
 
 #: ../Doc/library/codecs.rst:355
 msgid "``'surrogateescape'``"
@@ -603,11 +606,11 @@ msgstr ""
 
 #: ../Doc/library/codecs.rst:369
 msgid ""
-"The following error handlers are only applicable to encoding (within :term:"
-"`text encodings <text encoding>`):"
+"The following error handlers are only applicable to encoding "
+"(within :term:`text encodings <text encoding>`):"
 msgstr ""
-"Los siguientes manejadores de errores solo son aplicables a :term:"
-"`codificaciones de texto <text encoding>`:"
+"Los siguientes manejadores de errores solo son aplicables "
+"a :term:`codificaciones de texto <text encoding>`:"
 
 #: ../Doc/library/codecs.rst:375
 msgid "``'xmlcharrefreplace'``"
@@ -616,8 +619,8 @@ msgstr "``'xmlcharrefreplace'``"
 #: ../Doc/library/codecs.rst:375
 msgid ""
 "Replace with XML/HTML numeric character reference, which is a decimal form "
-"of Unicode code point with format :samp:`&#{num};`. Implemented in :func:"
-"`xmlcharrefreplace_errors`."
+"of Unicode code point with format :samp:`&#{num};`. Implemented "
+"in :func:`xmlcharrefreplace_errors`."
 msgstr ""
 "Reemplazar con una referencia de carácter numérico XML/HTML, que es una "
 "forma decimal del punto de código Unicode con formato :samp:`&#{num};`. "
@@ -630,8 +633,8 @@ msgstr "``'namereplace'``"
 #: ../Doc/library/codecs.rst:381
 msgid ""
 "Replace with ``\\N{...}`` escape sequences, what appears in the braces is "
-"the Name property from Unicode Character Database. Implemented in :func:"
-"`namereplace_errors`."
+"the Name property from Unicode Character Database. Implemented "
+"in :func:`namereplace_errors`."
 msgstr ""
 "Reemplazar con secuencias de escape ``\\N{...}``, lo que aparece entre "
 "llaves, es la propiedad Nombre de la Base de datos de Caracteres Unicode. "
@@ -663,8 +666,8 @@ msgid ""
 msgstr ""
 "Permite la codificación y decodificación del punto de código sustituto "
 "(``U+D800`` - ``U+DFFF``) como punto de código normal. De lo contrario, "
-"estos códecs tratan la presencia de un punto de código sustituto en :class:"
-"`str` como un error."
+"estos códecs tratan la presencia de un punto de código sustituto "
+"en :class:`str` como un error."
 
 #: ../Doc/library/codecs.rst:402
 msgid "The ``'surrogateescape'`` and ``'surrogatepass'`` error handlers."
@@ -712,30 +715,31 @@ msgstr ""
 
 #: ../Doc/library/codecs.rst:425
 msgid ""
-"For encoding, *error_handler* will be called with a :exc:"
-"`UnicodeEncodeError` instance, which contains information about the location "
-"of the error. The error handler must either raise this or a different "
-"exception, or return a tuple with a replacement for the unencodable part of "
-"the input and a position where encoding should continue. The replacement may "
-"be either :class:`str` or :class:`bytes`. If the replacement is bytes, the "
-"encoder will simply copy them into the output buffer. If the replacement is "
-"a string, the encoder will encode the replacement. Encoding continues on "
-"original input at the specified position. Negative position values will be "
-"treated as being relative to the end of the input string. If the resulting "
-"position is out of bound an :exc:`IndexError` will be raised."
+"For encoding, *error_handler* will be called with "
+"a :exc:`UnicodeEncodeError` instance, which contains information about the "
+"location of the error. The error handler must either raise this or a "
+"different exception, or return a tuple with a replacement for the "
+"unencodable part of the input and a position where encoding should continue. "
+"The replacement may be either :class:`str` or :class:`bytes`. If the "
+"replacement is bytes, the encoder will simply copy them into the output "
+"buffer. If the replacement is a string, the encoder will encode the "
+"replacement. Encoding continues on original input at the specified position. "
+"Negative position values will be treated as being relative to the end of the "
+"input string. If the resulting position is out of bound an :exc:`IndexError` "
+"will be raised."
 msgstr ""
-"Para la codificación, se llamará a *error_handler* con una instancia :exc:"
-"`UnicodeEncodeError`, que contiene información sobre la ubicación del error. "
-"El manejador de errores debe generar esta o una excepción diferente, o "
-"retornar una tupla con un reemplazo para la parte no codificable de la "
-"entrada y una posición donde la codificación debe continuar. El reemplazo "
-"puede ser :class:`str` o :class:`bytes`. Si el reemplazo son bytes, el "
-"codificador simplemente los copiará en el búfer de salida. Si el reemplazo "
-"es una cadena de caracteres, el codificador codificará el reemplazo. La "
-"codificación continúa en la entrada original en la posición especificada. "
-"Los valores de posición negativos se tratarán como relativos al final de la "
-"cadena de entrada. Si la posición resultante está fuera del límite, se "
-"lanzará :exc:`IndexError`."
+"Para la codificación, se llamará a *error_handler* con una "
+"instancia :exc:`UnicodeEncodeError`, que contiene información sobre la "
+"ubicación del error. El manejador de errores debe generar esta o una "
+"excepción diferente, o retornar una tupla con un reemplazo para la parte no "
+"codificable de la entrada y una posición donde la codificación debe "
+"continuar. El reemplazo puede ser :class:`str` o :class:`bytes`. Si el "
+"reemplazo son bytes, el codificador simplemente los copiará en el búfer de "
+"salida. Si el reemplazo es una cadena de caracteres, el codificador "
+"codificará el reemplazo. La codificación continúa en la entrada original en "
+"la posición especificada. Los valores de posición negativos se tratarán como "
+"relativos al final de la cadena de entrada. Si la posición resultante está "
+"fuera del límite, se lanzará :exc:`IndexError`."
 
 #: ../Doc/library/codecs.rst:437
 msgid ""
@@ -743,8 +747,8 @@ msgid ""
 "or :exc:`UnicodeTranslateError` will be passed to the handler and that the "
 "replacement from the error handler will be put into the output directly."
 msgstr ""
-"La decodificación y la traducción funcionan de manera similar, excepto que :"
-"exc:`UnicodeDecodeError` o :exc:`UnicodeTranslateError` se pasarán al "
+"La decodificación y la traducción funcionan de manera similar, excepto "
+"que :exc:`UnicodeDecodeError` o :exc:`UnicodeTranslateError` se pasarán al "
 "manejador y el sustituto del manejador de errores se colocará directamente "
 "en la salida."
 
@@ -821,9 +825,9 @@ msgid ""
 msgstr ""
 "Los datos con formato incorrecto se reemplazan por una secuencia de escape "
 "con barra invertida. Al codificar, emplea la forma hexadecimal del punto de "
-"código Unicode con los formatos :samp:`\\\\x{hh}` :samp:`\\\\u{xxxx}` :samp:"
-"`\\\\U{xxxxxxxx}`. Al decodificar, usa la forma hexadecimal del valor del "
-"byte con el formato :samp:`\\\\x{hh}`."
+"código Unicode con los formatos :samp:`\\\\x{hh}` :samp:`\\\\u{xxxx}"
+"` :samp:`\\\\U{xxxxxxxx}`. Al decodificar, usa la forma hexadecimal del "
+"valor del byte con el formato :samp:`\\\\x{hh}`."
 
 #: ../Doc/library/codecs.rst:487
 msgid "Works with decoding and translating."
@@ -831,8 +835,8 @@ msgstr "Funciona con la decodificación y traducción."
 
 #: ../Doc/library/codecs.rst:493
 msgid ""
-"Implements the ``'xmlcharrefreplace'`` error handling (for encoding within :"
-"term:`text encoding` only)."
+"Implements the ``'xmlcharrefreplace'`` error handling (for encoding "
+"within :term:`text encoding` only)."
 msgstr ""
 "Implementa el manejador de errores ``'xmlcharrefreplace'`` (solo para "
 "codificar dentro de :term:`text encoding`)."
@@ -849,8 +853,8 @@ msgstr ""
 
 #: ../Doc/library/codecs.rst:503
 msgid ""
-"Implements the ``'namereplace'`` error handling (for encoding within :term:"
-"`text encoding` only)."
+"Implements the ``'namereplace'`` error handling (for encoding "
+"within :term:`text encoding` only)."
 msgstr ""
 "Implementa el manejo de errores ``'namereplace`` (solo para codificar dentro "
 "de :term:`text encoding`)."
@@ -880,7 +884,7 @@ msgstr ""
 "La clase base :class:`Codec` define estos métodos que también definen las "
 "interfaces de función del codificador y decodificador sin estado:"
 
-#: ../Doc/library/codecs.rst:525
+#: ../Doc/library/codecs.rst:527
 msgid ""
 "Encodes the object *input* and returns a tuple (output object, length "
 "consumed). For instance, :term:`text encoding` converts a string object to a "
@@ -892,7 +896,7 @@ msgstr ""
 "de caracteres en un objeto de bytes utilizando una codificación de juego de "
 "caracteres particular (por ejemplo,``cp1252`` o ``iso-8859-1``)."
 
-#: ../Doc/library/codecs.rst:530 ../Doc/library/codecs.rst:552
+#: ../Doc/library/codecs.rst:532 ../Doc/library/codecs.rst:554
 msgid ""
 "The *errors* argument defines the error handling to apply. It defaults to "
 "``'strict'`` handling."
@@ -900,17 +904,17 @@ msgstr ""
 "El argumento *errors* define el manejo de errores a aplicar. El valor "
 "predeterminado es el manejo ``estricto``."
 
-#: ../Doc/library/codecs.rst:533
+#: ../Doc/library/codecs.rst:535
 msgid ""
-"The method may not store state in the :class:`Codec` instance. Use :class:"
-"`StreamWriter` for codecs which have to keep state in order to make encoding "
-"efficient."
+"The method may not store state in the :class:`Codec` instance. "
+"Use :class:`StreamWriter` for codecs which have to keep state in order to "
+"make encoding efficient."
 msgstr ""
 "Es posible que el método no almacene estado en la instancia :class:`Codec`. "
 "Use :class:`StreamWriter` para códecs que deben mantener el estado para que "
 "la codificación sea eficiente."
 
-#: ../Doc/library/codecs.rst:537
+#: ../Doc/library/codecs.rst:539
 msgid ""
 "The encoder must be able to handle zero length input and return an empty "
 "object of the output object type in this situation."
@@ -918,7 +922,7 @@ msgstr ""
 "El codificador debe poder manejar la entrada de longitud cero y retornar un "
 "objeto vacío del tipo de objeto de salida en esta situación."
 
-#: ../Doc/library/codecs.rst:543
+#: ../Doc/library/codecs.rst:545
 msgid ""
 "Decodes the object *input* and returns a tuple (output object, length "
 "consumed). For instance, for a :term:`text encoding`, decoding converts a "
@@ -931,7 +935,7 @@ msgstr ""
 "codificación de juego de caracteres particular en un objeto de cadena de "
 "caracteres."
 
-#: ../Doc/library/codecs.rst:548
+#: ../Doc/library/codecs.rst:550
 msgid ""
 "For text encodings and bytes-to-bytes codecs, *input* must be a bytes object "
 "or one which provides the read-only buffer interface -- for example, buffer "
@@ -941,17 +945,17 @@ msgstr ""
 "objeto de bytes o uno que proporcione la interfaz de búfer de solo lectura, "
 "por ejemplo, objetos de búfer y archivos mapeados en memoria."
 
-#: ../Doc/library/codecs.rst:555
+#: ../Doc/library/codecs.rst:557
 msgid ""
-"The method may not store state in the :class:`Codec` instance. Use :class:"
-"`StreamReader` for codecs which have to keep state in order to make decoding "
-"efficient."
+"The method may not store state in the :class:`Codec` instance. "
+"Use :class:`StreamReader` for codecs which have to keep state in order to "
+"make decoding efficient."
 msgstr ""
-"Es posible que el método no almacene estado en la instancia de :class:"
-"`Codec`. Use :class:`StreamReader` para códecs que deben mantener el estado "
-"para que la decodificación sea eficiente."
+"Es posible que el método no almacene estado en la instancia "
+"de :class:`Codec`. Use :class:`StreamReader` para códecs que deben mantener "
+"el estado para que la decodificación sea eficiente."
 
-#: ../Doc/library/codecs.rst:559
+#: ../Doc/library/codecs.rst:561
 msgid ""
 "The decoder must be able to handle zero length input and return an empty "
 "object of the output object type in this situation."
@@ -959,46 +963,47 @@ msgstr ""
 "El decodificador debe poder manejar la entrada de longitud cero y retornar "
 "un objeto vacío del tipo de objeto de salida en esta situación."
 
-#: ../Doc/library/codecs.rst:564
+#: ../Doc/library/codecs.rst:566
 msgid "Incremental Encoding and Decoding"
 msgstr "Codificación y decodificación incrementales"
 
-#: ../Doc/library/codecs.rst:566
+#: ../Doc/library/codecs.rst:568
 msgid ""
 "The :class:`IncrementalEncoder` and :class:`IncrementalDecoder` classes "
 "provide the basic interface for incremental encoding and decoding. Encoding/"
 "decoding the input isn't done with one call to the stateless encoder/decoder "
-"function, but with multiple calls to the :meth:`~IncrementalEncoder.encode`/:"
-"meth:`~IncrementalDecoder.decode` method of the incremental encoder/decoder. "
-"The incremental encoder/decoder keeps track of the encoding/decoding process "
-"during method calls."
+"function, but with multiple calls to "
+"the :meth:`~IncrementalEncoder.encode`/:meth:`~IncrementalDecoder.decode` "
+"method of the incremental encoder/decoder. The incremental encoder/decoder "
+"keeps track of the encoding/decoding process during method calls."
 msgstr ""
 "Las clases :class:`IncrementalEncoder` y :class:`IncrementalDecoder` "
 "proporcionan la interfaz básica para la codificación y decodificación "
 "incrementales. La codificación/decodificación de la entrada no se realiza "
 "con una llamada a la función de codificador/decodificador sin estado, sino "
-"con varias llamadas al método :meth:`~IncrementalEncoder.encode`/:meth:"
-"`~IncrementalDecoder.decode` del codificador incremental /decodificador. El "
-"codificador/decodificador incremental realiza un seguimiento del proceso de "
-"codificación/decodificación durante las llamadas a métodos."
+"con varias llamadas al "
+"método :meth:`~IncrementalEncoder.encode`/:meth:`~IncrementalDecoder.decode` "
+"del codificador incremental /decodificador. El codificador/decodificador "
+"incremental realiza un seguimiento del proceso de codificación/"
+"decodificación durante las llamadas a métodos."
 
-#: ../Doc/library/codecs.rst:574
+#: ../Doc/library/codecs.rst:576
 msgid ""
-"The joined output of calls to the :meth:`~IncrementalEncoder.encode`/:meth:"
-"`~IncrementalDecoder.decode` method is the same as if all the single inputs "
-"were joined into one, and this input was encoded/decoded with the stateless "
-"encoder/decoder."
+"The joined output of calls to "
+"the :meth:`~IncrementalEncoder.encode`/:meth:`~IncrementalDecoder.decode` "
+"method is the same as if all the single inputs were joined into one, and "
+"this input was encoded/decoded with the stateless encoder/decoder."
 msgstr ""
-"La salida combinada de las llamadas al método :meth:`~IncrementalEncoder."
-"encode`/:meth:`~IncrementalDecoder.decode` es el mismo que si todas las "
-"entradas individuales se unieran en una, y esta entrada se codificara/"
-"decodificara con codificador/decodificador sin estado."
+"La salida combinada de las llamadas al "
+"método :meth:`~IncrementalEncoder.encode`/:meth:`~IncrementalDecoder.decode` "
+"es el mismo que si todas las entradas individuales se unieran en una, y esta "
+"entrada se codificara/decodificara con codificador/decodificador sin estado."
 
-#: ../Doc/library/codecs.rst:583
+#: ../Doc/library/codecs.rst:585
 msgid "IncrementalEncoder Objects"
 msgstr "Objetos IncrementalEncoder"
 
-#: ../Doc/library/codecs.rst:585
+#: ../Doc/library/codecs.rst:587
 msgid ""
 "The :class:`IncrementalEncoder` class is used for encoding an input in "
 "multiple steps. It defines the following methods which every incremental "
@@ -1008,11 +1013,11 @@ msgstr ""
 "varios pasos. Define los siguientes métodos que cada codificador incremental "
 "debe definir para ser compatible con el registro de códec Python."
 
-#: ../Doc/library/codecs.rst:592
+#: ../Doc/library/codecs.rst:594
 msgid "Constructor for an :class:`IncrementalEncoder` instance."
 msgstr "Constructor para una clase instancia de :class:`IncrementalEncoder`."
 
-#: ../Doc/library/codecs.rst:594
+#: ../Doc/library/codecs.rst:596
 msgid ""
 "All incremental encoders must provide this constructor interface. They are "
 "free to add additional keyword arguments, but only the ones defined here are "
@@ -1022,7 +1027,7 @@ msgstr ""
 "constructor. Son libres de agregar argumentos de palabras clave adicionales, "
 "pero el registro de códecs de Python solo utiliza los definidos aquí."
 
-#: ../Doc/library/codecs.rst:598
+#: ../Doc/library/codecs.rst:600
 msgid ""
 "The :class:`IncrementalEncoder` may implement different error handling "
 "schemes by providing the *errors* keyword argument. See :ref:`error-"
@@ -1032,39 +1037,40 @@ msgstr ""
 "de manejo de errores al proporcionar el argumento de palabra clave *errors*. "
 "Ver :ref:`error-handlers` para posibles valores."
 
-#: ../Doc/library/codecs.rst:602
+#: ../Doc/library/codecs.rst:604
 msgid ""
 "The *errors* argument will be assigned to an attribute of the same name. "
 "Assigning to this attribute makes it possible to switch between different "
-"error handling strategies during the lifetime of the :class:"
-"`IncrementalEncoder` object."
+"error handling strategies during the lifetime of "
+"the :class:`IncrementalEncoder` object."
 msgstr ""
 "El argumento *errors* se asignará a un atributo del mismo nombre. La "
 "asignación a este atributo hace posible cambiar entre diferentes estrategias "
-"de manejo de errores durante la vida útil del objeto :class:"
-"`IncrementalEncoder`."
+"de manejo de errores durante la vida útil del "
+"objeto :class:`IncrementalEncoder`."
 
-#: ../Doc/library/codecs.rst:610
+#: ../Doc/library/codecs.rst:612
 msgid ""
 "Encodes *object* (taking the current state of the encoder into account) and "
-"returns the resulting encoded object. If this is the last call to :meth:"
-"`encode` *final* must be true (the default is false)."
+"returns the resulting encoded object. If this is the last call "
+"to :meth:`encode` *final* must be true (the default is false)."
 msgstr ""
 "Codifica *object* (teniendo en cuenta el estado actual del codificador) y "
-"retorna el objeto codificado resultante. Si esta es la última llamada a :"
-"meth:`encode` *final* debe ser verdadero (el valor predeterminado es falso)."
+"retorna el objeto codificado resultante. Si esta es la última llamada "
+"a :meth:`encode` *final* debe ser verdadero (el valor predeterminado es "
+"falso)."
 
-#: ../Doc/library/codecs.rst:617
+#: ../Doc/library/codecs.rst:619
 msgid ""
-"Reset the encoder to the initial state. The output is discarded: call ``."
-"encode(object, final=True)``, passing an empty byte or text string if "
+"Reset the encoder to the initial state. The output is discarded: call "
+"``.encode(object, final=True)``, passing an empty byte or text string if "
 "necessary, to reset the encoder and to get the output."
 msgstr ""
 "Restablece el codificador al estado inicial. La salida se descarta: llama a "
 "``.encode(object, final=True)``, pasando un byte vacío o una cadena de texto "
 "si es necesario, para restablecer el codificador y obtener la salida."
 
-#: ../Doc/library/codecs.rst:624
+#: ../Doc/library/codecs.rst:626
 msgid ""
 "Return the current state of the encoder which must be an integer. The "
 "implementation should make sure that ``0`` is the most common state. (States "
@@ -1078,7 +1084,7 @@ msgstr ""
 "entero al empaquetar/serializar el estado y codificar los bytes de la cadena "
 "resultante en un entero)."
 
-#: ../Doc/library/codecs.rst:633
+#: ../Doc/library/codecs.rst:635
 msgid ""
 "Set the state of the encoder to *state*. *state* must be an encoder state "
 "returned by :meth:`getstate`."
@@ -1086,11 +1092,11 @@ msgstr ""
 "Establece el estado del codificador en *state*. *state* debe ser un estado "
 "de codificador retornado por :meth:`getstate`."
 
-#: ../Doc/library/codecs.rst:640
+#: ../Doc/library/codecs.rst:642
 msgid "IncrementalDecoder Objects"
 msgstr "Objetos IncrementalDecoder"
 
-#: ../Doc/library/codecs.rst:642
+#: ../Doc/library/codecs.rst:644
 msgid ""
 "The :class:`IncrementalDecoder` class is used for decoding an input in "
 "multiple steps. It defines the following methods which every incremental "
@@ -1100,11 +1106,11 @@ msgstr ""
 "varios pasos. Define los siguientes métodos que cada decodificador "
 "incremental debe definir para ser compatible con el registro de códec Python."
 
-#: ../Doc/library/codecs.rst:649
+#: ../Doc/library/codecs.rst:651
 msgid "Constructor for an :class:`IncrementalDecoder` instance."
 msgstr "Constructor para una instancia de :class:`IncrementalDecoder`."
 
-#: ../Doc/library/codecs.rst:651
+#: ../Doc/library/codecs.rst:653
 msgid ""
 "All incremental decoders must provide this constructor interface. They are "
 "free to add additional keyword arguments, but only the ones defined here are "
@@ -1114,7 +1120,7 @@ msgstr ""
 "constructor. Son libres de agregar argumentos de palabras clave adicionales, "
 "pero el registro de códecs de Python solo utiliza los definidos aquí."
 
-#: ../Doc/library/codecs.rst:655
+#: ../Doc/library/codecs.rst:657
 msgid ""
 "The :class:`IncrementalDecoder` may implement different error handling "
 "schemes by providing the *errors* keyword argument. See :ref:`error-"
@@ -1124,42 +1130,42 @@ msgstr ""
 "de manejo de errores al proporcionar el argumento de palabra clave *errors*. "
 "Ver :ref:`error-handlers` para posibles valores."
 
-#: ../Doc/library/codecs.rst:659
+#: ../Doc/library/codecs.rst:661
 msgid ""
 "The *errors* argument will be assigned to an attribute of the same name. "
 "Assigning to this attribute makes it possible to switch between different "
-"error handling strategies during the lifetime of the :class:"
-"`IncrementalDecoder` object."
+"error handling strategies during the lifetime of "
+"the :class:`IncrementalDecoder` object."
 msgstr ""
 "El argumento *errors* se asignará a un atributo del mismo nombre. La "
 "asignación a este atributo hace posible cambiar entre diferentes estrategias "
-"de manejo de errores durante la vida útil del objeto :class:"
-"`IncrementalDecoder`."
+"de manejo de errores durante la vida útil del "
+"objeto :class:`IncrementalDecoder`."
 
-#: ../Doc/library/codecs.rst:667
+#: ../Doc/library/codecs.rst:669
 msgid ""
 "Decodes *object* (taking the current state of the decoder into account) and "
-"returns the resulting decoded object. If this is the last call to :meth:"
-"`decode` *final* must be true (the default is false). If *final* is true the "
-"decoder must decode the input completely and must flush all buffers. If this "
-"isn't possible (e.g. because of incomplete byte sequences at the end of the "
-"input) it must initiate error handling just like in the stateless case "
-"(which might raise an exception)."
+"returns the resulting decoded object. If this is the last call "
+"to :meth:`decode` *final* must be true (the default is false). If *final* is "
+"true the decoder must decode the input completely and must flush all "
+"buffers. If this isn't possible (e.g. because of incomplete byte sequences "
+"at the end of the input) it must initiate error handling just like in the "
+"stateless case (which might raise an exception)."
 msgstr ""
 "Decodifica *object* (teniendo en cuenta el estado actual del decodificador) "
-"y retorna el objeto decodificado resultante. Si esta es la última llamada a :"
-"meth:`decode` *final* debe ser verdadero (el valor predeterminado es falso). "
-"Si *final* es verdadero, el decodificador debe decodificar la entrada por "
-"completo y debe vaciar todos los búferes. Si esto no es posible (por "
-"ejemplo, debido a secuencias de bytes incompletas al final de la entrada), "
-"debe iniciar el manejo de errores al igual que en el caso sin estado (lo que "
-"podría generar una excepción)."
+"y retorna el objeto decodificado resultante. Si esta es la última llamada "
+"a :meth:`decode` *final* debe ser verdadero (el valor predeterminado es "
+"falso). Si *final* es verdadero, el decodificador debe decodificar la "
+"entrada por completo y debe vaciar todos los búferes. Si esto no es posible "
+"(por ejemplo, debido a secuencias de bytes incompletas al final de la "
+"entrada), debe iniciar el manejo de errores al igual que en el caso sin "
+"estado (lo que podría generar una excepción)."
 
-#: ../Doc/library/codecs.rst:678
+#: ../Doc/library/codecs.rst:680
 msgid "Reset the decoder to the initial state."
 msgstr "Restablece el decodificador al estado inicial."
 
-#: ../Doc/library/codecs.rst:683
+#: ../Doc/library/codecs.rst:685
 msgid ""
 "Return the current state of the decoder. This must be a tuple with two "
 "items, the first must be the buffer containing the still undecoded input. "
@@ -1186,7 +1192,7 @@ msgstr ""
 "enteros se puede convertir en un entero al empaquetar/serializar la "
 "información y codificar los bytes de la cadena resultante en un entero)."
 
-#: ../Doc/library/codecs.rst:698
+#: ../Doc/library/codecs.rst:700
 msgid ""
 "Set the state of the decoder to *state*. *state* must be a decoder state "
 "returned by :meth:`getstate`."
@@ -1194,26 +1200,27 @@ msgstr ""
 "Establezca el estado del decodificador en *state*. *state* debe ser un "
 "estado de decodificador retornado por :meth:`getstate`."
 
-#: ../Doc/library/codecs.rst:703
+#: ../Doc/library/codecs.rst:705
 msgid "Stream Encoding and Decoding"
 msgstr "Codificación y decodificación de flujos"
 
-#: ../Doc/library/codecs.rst:706
+#: ../Doc/library/codecs.rst:708
+#, fuzzy
 msgid ""
 "The :class:`StreamWriter` and :class:`StreamReader` classes provide generic "
 "working interfaces which can be used to implement new encoding submodules "
-"very easily. See :mod:`encodings.utf_8` for an example of how this is done."
+"very easily. See :mod:`!encodings.utf_8` for an example of how this is done."
 msgstr ""
 "Las clases :class:`StreamWriter` y :class:`StreamReader` proporcionan "
 "interfaces de trabajo genéricas que se pueden usar para implementar nuevos "
 "submódulos de codificación muy fácilmente. Ir a :mod:`encodings.utf_8` para "
 "ver un ejemplo de cómo se hace esto."
 
-#: ../Doc/library/codecs.rst:714
+#: ../Doc/library/codecs.rst:716
 msgid "StreamWriter Objects"
 msgstr "Objetos StreamWriter"
 
-#: ../Doc/library/codecs.rst:716
+#: ../Doc/library/codecs.rst:718
 msgid ""
 "The :class:`StreamWriter` class is a subclass of :class:`Codec` and defines "
 "the following methods which every stream writer must define in order to be "
@@ -1223,11 +1230,11 @@ msgstr ""
 "los siguientes métodos que cada escritor del flujo debe definir para ser "
 "compatible con el registro de códecs Python."
 
-#: ../Doc/library/codecs.rst:723
+#: ../Doc/library/codecs.rst:725
 msgid "Constructor for a :class:`StreamWriter` instance."
 msgstr "Constructor para una instancia de :class:`StreamWriter`."
 
-#: ../Doc/library/codecs.rst:725
+#: ../Doc/library/codecs.rst:727
 msgid ""
 "All stream writers must provide this constructor interface. They are free to "
 "add additional keyword arguments, but only the ones defined here are used by "
@@ -1237,7 +1244,7 @@ msgstr ""
 "constructor. Son libres de agregar argumentos de palabras clave adicionales, "
 "pero el registro de códecs de Python solo utiliza los definidos aquí."
 
-#: ../Doc/library/codecs.rst:729
+#: ../Doc/library/codecs.rst:731
 msgid ""
 "The *stream* argument must be a file-like object open for writing text or "
 "binary data, as appropriate for the specific codec."
@@ -1245,7 +1252,7 @@ msgstr ""
 "El argumento *stream* debe ser un objeto tipo archivo abierto para escribir "
 "texto o datos binarios, según corresponda para el códec específico."
 
-#: ../Doc/library/codecs.rst:732
+#: ../Doc/library/codecs.rst:734
 msgid ""
 "The :class:`StreamWriter` may implement different error handling schemes by "
 "providing the *errors* keyword argument. See :ref:`error-handlers` for the "
@@ -1256,7 +1263,7 @@ msgstr ""
 "Consulte :ref:`error-handlers` para ver los manejadores de errores estándar "
 "que puede admitir el códec de flujo subyacente."
 
-#: ../Doc/library/codecs.rst:736
+#: ../Doc/library/codecs.rst:738
 msgid ""
 "The *errors* argument will be assigned to an attribute of the same name. "
 "Assigning to this attribute makes it possible to switch between different "
@@ -1267,11 +1274,11 @@ msgstr ""
 "asignación a este atributo hace posible cambiar entre diferentes estrategias "
 "de manejo de errores durante la vida útil del objeto :class:`StreamWriter`."
 
-#: ../Doc/library/codecs.rst:742
+#: ../Doc/library/codecs.rst:744
 msgid "Writes the object's contents encoded to the stream."
 msgstr "Escribe el contenido del objeto codificado en el flujo."
 
-#: ../Doc/library/codecs.rst:747
+#: ../Doc/library/codecs.rst:749
 msgid ""
 "Writes the concatenated iterable of strings to the stream (possibly by "
 "reusing the :meth:`write` method). Infinite or very large iterables are not "
@@ -1281,12 +1288,12 @@ msgstr ""
 "reutilizando el método :meth:`write`). No se admiten iterables infinitos o "
 "muy grandes. Los códecs estándar de bytes a bytes no admiten este método."
 
-#: ../Doc/library/codecs.rst:755 ../Doc/library/codecs.rst:850
+#: ../Doc/library/codecs.rst:757 ../Doc/library/codecs.rst:852
 msgid "Resets the codec buffers used for keeping internal state."
 msgstr ""
 "Restablece los búfers de códec utilizados para mantener el estado interno."
 
-#: ../Doc/library/codecs.rst:757
+#: ../Doc/library/codecs.rst:759
 msgid ""
 "Calling this method should ensure that the data on the output is put into a "
 "clean state that allows appending of new fresh data without having to rescan "
@@ -1296,7 +1303,7 @@ msgstr ""
 "en un estado limpio que permita agregar datos nuevos sin tener que volver a "
 "escanear todo el flujo para recuperar el estado."
 
-#: ../Doc/library/codecs.rst:762
+#: ../Doc/library/codecs.rst:764
 msgid ""
 "In addition to the above methods, the :class:`StreamWriter` must also "
 "inherit all other methods and attributes from the underlying stream."
@@ -1304,11 +1311,11 @@ msgstr ""
 "Además de los métodos anteriores, la clase :class:`StreamWriter` también "
 "debe heredar todos los demás métodos y atributos del flujo subyacente."
 
-#: ../Doc/library/codecs.rst:769
+#: ../Doc/library/codecs.rst:771
 msgid "StreamReader Objects"
 msgstr "Objetos StreamReader"
 
-#: ../Doc/library/codecs.rst:771
+#: ../Doc/library/codecs.rst:773
 msgid ""
 "The :class:`StreamReader` class is a subclass of :class:`Codec` and defines "
 "the following methods which every stream reader must define in order to be "
@@ -1318,11 +1325,11 @@ msgstr ""
 "los siguientes métodos que cada lector de flujo debe definir para ser "
 "compatible con el registro de códecs de Python."
 
-#: ../Doc/library/codecs.rst:778
+#: ../Doc/library/codecs.rst:780
 msgid "Constructor for a :class:`StreamReader` instance."
 msgstr "Constructor para una instancia de :class:`StreamReader`."
 
-#: ../Doc/library/codecs.rst:780
+#: ../Doc/library/codecs.rst:782
 msgid ""
 "All stream readers must provide this constructor interface. They are free to "
 "add additional keyword arguments, but only the ones defined here are used by "
@@ -1332,7 +1339,7 @@ msgstr ""
 "Son libres de agregar argumentos de palabras clave adicionales, pero el "
 "registro de códecs de Python solo utiliza los definidos aquí."
 
-#: ../Doc/library/codecs.rst:784
+#: ../Doc/library/codecs.rst:786
 msgid ""
 "The *stream* argument must be a file-like object open for reading text or "
 "binary data, as appropriate for the specific codec."
@@ -1340,7 +1347,7 @@ msgstr ""
 "El argumento *stream* debe ser un objeto tipo archivo abierto para leer "
 "texto o datos binarios, según corresponda para el códec específico."
 
-#: ../Doc/library/codecs.rst:787
+#: ../Doc/library/codecs.rst:789
 msgid ""
 "The :class:`StreamReader` may implement different error handling schemes by "
 "providing the *errors* keyword argument. See :ref:`error-handlers` for the "
@@ -1351,7 +1358,7 @@ msgstr ""
 "Consulte :ref:`error-handlers` para ver los manejadores de errores estándar "
 "que puede admitir el códec de flujo subyacente."
 
-#: ../Doc/library/codecs.rst:791
+#: ../Doc/library/codecs.rst:793
 msgid ""
 "The *errors* argument will be assigned to an attribute of the same name. "
 "Assigning to this attribute makes it possible to switch between different "
@@ -1362,19 +1369,19 @@ msgstr ""
 "asignación a este atributo hace posible cambiar entre diferentes estrategias "
 "de manejo de errores durante la vida útil del objeto :class:`StreamReader`."
 
-#: ../Doc/library/codecs.rst:795
+#: ../Doc/library/codecs.rst:797
 msgid ""
-"The set of allowed values for the *errors* argument can be extended with :"
-"func:`register_error`."
+"The set of allowed values for the *errors* argument can be extended "
+"with :func:`register_error`."
 msgstr ""
 "El conjunto de valores permitidos para el argumento *errors* se puede "
 "ampliar con :func:`register_error`."
 
-#: ../Doc/library/codecs.rst:801
+#: ../Doc/library/codecs.rst:803
 msgid "Decodes data from the stream and returns the resulting object."
 msgstr "Decodifica datos del flujo y retorna el objeto resultante."
 
-#: ../Doc/library/codecs.rst:803
+#: ../Doc/library/codecs.rst:805
 msgid ""
 "The *chars* argument indicates the number of decoded code points or bytes to "
 "return. The :func:`read` method will never return more data than requested, "
@@ -1384,7 +1391,7 @@ msgstr ""
 "bytes a retornar. El método :func:`read` nunca retornará más datos de los "
 "solicitados, pero podría retornar menos, si no hay suficientes disponibles."
 
-#: ../Doc/library/codecs.rst:808
+#: ../Doc/library/codecs.rst:810
 msgid ""
 "The *size* argument indicates the approximate maximum number of encoded "
 "bytes or code points to read for decoding. The decoder can modify this "
@@ -1398,7 +1405,7 @@ msgstr ""
 "indica leer y decodificar tanto como sea posible. Este parámetro está "
 "diseñado para evitar tener que decodificar archivos grandes en un solo paso."
 
-#: ../Doc/library/codecs.rst:815
+#: ../Doc/library/codecs.rst:817
 msgid ""
 "The *firstline* flag indicates that it would be sufficient to only return "
 "the first line, if there are decoding errors on later lines."
@@ -1406,7 +1413,7 @@ msgstr ""
 "La bandera *firstline* indica que sería suficiente retornar solo la primera "
 "línea, si hay errores de decodificación en las líneas posteriores."
 
-#: ../Doc/library/codecs.rst:819
+#: ../Doc/library/codecs.rst:821
 msgid ""
 "The method should use a greedy read strategy meaning that it should read as "
 "much data as is allowed within the definition of the encoding and the given "
@@ -1419,11 +1426,11 @@ msgstr ""
 "codificación opcionales o los marcadores de estado están disponibles en la "
 "transmisión, también deben leerse."
 
-#: ../Doc/library/codecs.rst:827
+#: ../Doc/library/codecs.rst:829
 msgid "Read one line from the input stream and return the decoded data."
 msgstr "Lee una línea del flujo de entrada y retorna los datos decodificados."
 
-#: ../Doc/library/codecs.rst:829
+#: ../Doc/library/codecs.rst:831
 msgid ""
 "*size*, if given, is passed as size argument to the stream's :meth:`read` "
 "method."
@@ -1431,14 +1438,14 @@ msgstr ""
 "*size*, si se da, se pasa como argumento de tamaño al método :meth:`read` "
 "del *stream*."
 
-#: ../Doc/library/codecs.rst:832
+#: ../Doc/library/codecs.rst:834
 msgid ""
 "If *keepends* is false line-endings will be stripped from the lines returned."
 msgstr ""
 "Si *keepends* es falso, las terminaciones de línea se eliminarán de las "
 "líneas retornadas."
 
-#: ../Doc/library/codecs.rst:838
+#: ../Doc/library/codecs.rst:840
 msgid ""
 "Read all lines available on the input stream and return them as a list of "
 "lines."
@@ -1446,7 +1453,7 @@ msgstr ""
 "Lee todas las líneas disponibles en el flujo de entrada y las retorna como "
 "una lista de líneas."
 
-#: ../Doc/library/codecs.rst:841
+#: ../Doc/library/codecs.rst:843
 msgid ""
 "Line-endings are implemented using the codec's :meth:`decode` method and are "
 "included in the list entries if *keepends* is true."
@@ -1454,15 +1461,15 @@ msgstr ""
 "Los finales de línea se implementan utilizando el método :meth:`decode` del "
 "códec y se incluyen en las entradas de la lista si *keepends* es verdadero."
 
-#: ../Doc/library/codecs.rst:844
+#: ../Doc/library/codecs.rst:846
 msgid ""
-"*sizehint*, if given, is passed as the *size* argument to the stream's :meth:"
-"`read` method."
+"*sizehint*, if given, is passed as the *size* argument to the "
+"stream's :meth:`read` method."
 msgstr ""
-"*sizehint*, si se proporciona, se pasa como argumento *size* al método :meth:"
-"`read` del *stream*."
+"*sizehint*, si se proporciona, se pasa como argumento *size* al "
+"método :meth:`read` del *stream*."
 
-#: ../Doc/library/codecs.rst:852
+#: ../Doc/library/codecs.rst:854
 msgid ""
 "Note that no stream repositioning should take place. This method is "
 "primarily intended to be able to recover from decoding errors."
@@ -1471,7 +1478,7 @@ msgstr ""
 "método está destinado principalmente a poder recuperarse de errores de "
 "decodificación."
 
-#: ../Doc/library/codecs.rst:856
+#: ../Doc/library/codecs.rst:858
 msgid ""
 "In addition to the above methods, the :class:`StreamReader` must also "
 "inherit all other methods and attributes from the underlying stream."
@@ -1479,11 +1486,11 @@ msgstr ""
 "Además de los métodos anteriores, la clase :class:`StreamReader` también "
 "debe heredar todos los demás métodos y atributos del flujo subyacente."
 
-#: ../Doc/library/codecs.rst:862
+#: ../Doc/library/codecs.rst:864
 msgid "StreamReaderWriter Objects"
 msgstr "Objetos StreamReaderWriter"
 
-#: ../Doc/library/codecs.rst:864
+#: ../Doc/library/codecs.rst:866
 msgid ""
 "The :class:`StreamReaderWriter` is a convenience class that allows wrapping "
 "streams which work in both read and write modes."
@@ -1492,15 +1499,15 @@ msgstr ""
 "permite envolver flujos que funcionan tanto en modo de lectura como de "
 "escritura."
 
-#: ../Doc/library/codecs.rst:867 ../Doc/library/codecs.rst:891
+#: ../Doc/library/codecs.rst:869 ../Doc/library/codecs.rst:893
 msgid ""
-"The design is such that one can use the factory functions returned by the :"
-"func:`lookup` function to construct the instance."
+"The design is such that one can use the factory functions returned by "
+"the :func:`lookup` function to construct the instance."
 msgstr ""
 "El diseño es tal que uno puede usar las funciones de fábrica retornadas por "
 "la función :func:`lookup` para construir la instancia."
 
-#: ../Doc/library/codecs.rst:873
+#: ../Doc/library/codecs.rst:875
 msgid ""
 "Creates a :class:`StreamReaderWriter` instance. *stream* must be a file-like "
 "object. *Reader* and *Writer* must be factory functions or classes providing "
@@ -1510,25 +1517,25 @@ msgid ""
 msgstr ""
 "Crea una instancia de :class:`StreamReaderWriter`. *stream* debe ser un "
 "objeto similar a un archivo. *Reader* y *Writer* deben ser funciones o "
-"clases de fábrica que proporcionen la interfaz :class:`StreamReader` y :"
-"class:`StreamWriter` respectivamente. El manejo de errores se realiza de la "
-"misma manera que se define para los lectores y escritores de flujos."
+"clases de fábrica que proporcionen la interfaz :class:`StreamReader` "
+"y :class:`StreamWriter` respectivamente. El manejo de errores se realiza de "
+"la misma manera que se define para los lectores y escritores de flujos."
 
-#: ../Doc/library/codecs.rst:878
+#: ../Doc/library/codecs.rst:880
 msgid ""
-":class:`StreamReaderWriter` instances define the combined interfaces of :"
-"class:`StreamReader` and :class:`StreamWriter` classes. They inherit all "
+":class:`StreamReaderWriter` instances define the combined interfaces "
+"of :class:`StreamReader` and :class:`StreamWriter` classes. They inherit all "
 "other methods and attributes from the underlying stream."
 msgstr ""
 "Las instancias :class:`StreamReaderWriter` definen las interfaces combinadas "
 "de :class:`StreamReader` y clases :class:`StreamWriter`. Heredan todos los "
 "demás métodos y atributos del flujo subyacente."
 
-#: ../Doc/library/codecs.rst:886
+#: ../Doc/library/codecs.rst:888
 msgid "StreamRecoder Objects"
 msgstr "Objetos StreamRecoder"
 
-#: ../Doc/library/codecs.rst:888
+#: ../Doc/library/codecs.rst:890
 msgid ""
 "The :class:`StreamRecoder` translates data from one encoding to another, "
 "which is sometimes useful when dealing with different encoding environments."
@@ -1536,19 +1543,20 @@ msgstr ""
 "La clase :class:`StreamRecoder` traduce datos de una codificación a otra, lo "
 "que a veces es útil cuando se trata de diferentes entornos de codificación."
 
-#: ../Doc/library/codecs.rst:897
+#: ../Doc/library/codecs.rst:899
+#, fuzzy
 msgid ""
 "Creates a :class:`StreamRecoder` instance which implements a two-way "
-"conversion: *encode* and *decode* work on the frontend — the data visible to "
-"code calling :meth:`read` and :meth:`write`, while *Reader* and *Writer* "
-"work on the backend — the data in *stream*."
+"conversion: *encode* and *decode* work on the frontend — the data visible to "
+"code calling :meth:`~StreamReader.read` and :meth:`~StreamWriter.write`, "
+"while *Reader* and *Writer* work on the backend — the data in *stream*."
 msgstr ""
 "Crea una instancia de :class:`StreamRecoder` que implementa una conversión "
 "bidireccional: *encode* y *decode* funcionan en el *frontend*: los datos "
 "visibles para la llamada de código :meth:`read` y :meth:`write`, mientras "
 "que *Reader* y *Writer* funcionan en el *backend* --- los datos en *stream*."
 
-#: ../Doc/library/codecs.rst:902
+#: ../Doc/library/codecs.rst:905
 msgid ""
 "You can use these objects to do transparent transcodings, e.g., from Latin-1 "
 "to UTF-8 and back."
@@ -1556,23 +1564,23 @@ msgstr ""
 "Puede usar estos objetos para realizar transcodificaciones transparentes, "
 "por ejemplo, de Latin-1 a UTF-8 y viceversa."
 
-#: ../Doc/library/codecs.rst:905
+#: ../Doc/library/codecs.rst:908
 msgid "The *stream* argument must be a file-like object."
 msgstr "El argumento *stream* debe ser un objeto similar a un archivo."
 
-#: ../Doc/library/codecs.rst:907
+#: ../Doc/library/codecs.rst:910
 msgid ""
 "The *encode* and *decode* arguments must adhere to the :class:`Codec` "
 "interface. *Reader* and *Writer* must be factory functions or classes "
 "providing objects of the :class:`StreamReader` and :class:`StreamWriter` "
 "interface respectively."
 msgstr ""
-"Los argumentos *encode* y *decode* deben cumplir con la interfaz de :class:"
-"`Codec`. *Reader* y *Writer* deben ser funciones o clases de fábrica que "
-"proporcionen objetos de la interfaz :class:`StreamReader` y :class:"
-"`StreamWriter` respectivamente."
+"Los argumentos *encode* y *decode* deben cumplir con la interfaz "
+"de :class:`Codec`. *Reader* y *Writer* deben ser funciones o clases de "
+"fábrica que proporcionen objetos de la interfaz :class:`StreamReader` "
+"y :class:`StreamWriter` respectivamente."
 
-#: ../Doc/library/codecs.rst:912
+#: ../Doc/library/codecs.rst:915
 msgid ""
 "Error handling is done in the same way as defined for the stream readers and "
 "writers."
@@ -1580,21 +1588,21 @@ msgstr ""
 "El manejo de errores se realiza de la misma manera que se define para los "
 "lectores y escritores de flujos."
 
-#: ../Doc/library/codecs.rst:916
+#: ../Doc/library/codecs.rst:919
 msgid ""
-":class:`StreamRecoder` instances define the combined interfaces of :class:"
-"`StreamReader` and :class:`StreamWriter` classes. They inherit all other "
-"methods and attributes from the underlying stream."
+":class:`StreamRecoder` instances define the combined interfaces "
+"of :class:`StreamReader` and :class:`StreamWriter` classes. They inherit all "
+"other methods and attributes from the underlying stream."
 msgstr ""
 "las instancias :class:`StreamRecoder` definen las interfaces combinadas de "
 "las clases :class:`StreamReader` y :class:`StreamWriter`. Heredan todos los "
 "demás métodos y atributos del flujo subyacente."
 
-#: ../Doc/library/codecs.rst:924
+#: ../Doc/library/codecs.rst:927
 msgid "Encodings and Unicode"
 msgstr "Codificaciones y Unicode"
 
-#: ../Doc/library/codecs.rst:926
+#: ../Doc/library/codecs.rst:929
 msgid ""
 "Strings are stored internally as sequences of code points in range "
 "``U+0000``--``U+10FFFF``. (See :pep:`393` for more details about the "
@@ -1616,7 +1624,7 @@ msgstr ""
 "códecs para la serialización de texto, a los que se puede consultar "
 "colectivamente mediante :term:`text encodings <text encoding>`."
 
-#: ../Doc/library/codecs.rst:936
+#: ../Doc/library/codecs.rst:939
 msgid ""
 "The simplest text encoding (called ``'latin-1'`` or ``'iso-8859-1'``) maps "
 "the code points 0--255 to the bytes ``0x0``--``0xff``, which means that a "
@@ -1635,7 +1643,7 @@ msgstr ""
 "``UnicodeEncodeError: 'latin-1' codec can't encode character '\\u1234' 'in "
 "position 3: ordinal not in range(256)``."
 
-#: ../Doc/library/codecs.rst:944
+#: ../Doc/library/codecs.rst:947
 msgid ""
 "There's another group of encodings (the so called charmap encodings) that "
 "choose a different subset of all Unicode code points and how these code "
@@ -1647,12 +1655,12 @@ msgstr ""
 "Hay otro grupo de codificaciones (las llamadas codificaciones de mapa de "
 "caracteres) que eligen un subconjunto diferente de todos los puntos de "
 "código Unicode y cómo estos puntos de código se asignan a los bytes ``0x0`` "
-"-- ``0xff``. Para ver cómo se hace esto, simplemente abra, por ejemplo :file:"
-"`encodings/cp1252.py` (que es una codificación que se usa principalmente en "
-"Windows). Hay una cadena constante con 256 caracteres que le muestra qué "
-"carácter está asignado a qué valor de byte."
+"-- ``0xff``. Para ver cómo se hace esto, simplemente abra, por "
+"ejemplo :file:`encodings/cp1252.py` (que es una codificación que se usa "
+"principalmente en Windows). Hay una cadena constante con 256 caracteres que "
+"le muestra qué carácter está asignado a qué valor de byte."
 
-#: ../Doc/library/codecs.rst:951
+#: ../Doc/library/codecs.rst:954
 msgid ""
 "All of these encodings can only encode 256 of the 1114112 code points "
 "defined in Unicode. A simple and straightforward way that can store each "
@@ -1712,7 +1720,7 @@ msgstr ""
 "cadena; como un ``ESPACIO DE ANCHO CERO SIN QUIEBRA`` es un carácter normal "
 "que se decodificará como cualquier otro."
 
-#: ../Doc/library/codecs.rst:977
+#: ../Doc/library/codecs.rst:980
 msgid ""
 "There's another encoding that is able to encode the full range of Unicode "
 "characters: UTF-8. UTF-8 is an 8-bit encoding, which means there are no "
@@ -1731,53 +1739,53 @@ msgstr ""
 "se codifican de esta manera (con x siendo bits de carga útil, que cuando se "
 "concatenan dan el carácter Unicode):"
 
-#: ../Doc/library/codecs.rst:986
+#: ../Doc/library/codecs.rst:989
 msgid "Range"
 msgstr "Rango"
 
-#: ../Doc/library/codecs.rst:986
+#: ../Doc/library/codecs.rst:989
 msgid "Encoding"
 msgstr "Codificación"
 
-#: ../Doc/library/codecs.rst:988
+#: ../Doc/library/codecs.rst:991
 msgid "``U-00000000`` ... ``U-0000007F``"
 msgstr "``U-00000000`` ... ``U-0000007F``"
 
-#: ../Doc/library/codecs.rst:988
+#: ../Doc/library/codecs.rst:991
 msgid "0xxxxxxx"
 msgstr "0xxxxxxx"
 
-#: ../Doc/library/codecs.rst:990
+#: ../Doc/library/codecs.rst:993
 msgid "``U-00000080`` ... ``U-000007FF``"
 msgstr "``U-00000080`` ... ``U-000007FF``"
 
-#: ../Doc/library/codecs.rst:990
+#: ../Doc/library/codecs.rst:993
 msgid "110xxxxx 10xxxxxx"
 msgstr "110xxxxx 10xxxxxx"
 
-#: ../Doc/library/codecs.rst:992
+#: ../Doc/library/codecs.rst:995
 msgid "``U-00000800`` ... ``U-0000FFFF``"
 msgstr "``U-00000800`` ... ``U-0000FFFF``"
 
-#: ../Doc/library/codecs.rst:992
+#: ../Doc/library/codecs.rst:995
 msgid "1110xxxx 10xxxxxx 10xxxxxx"
 msgstr "1110xxxx 10xxxxxx 10xxxxxx"
 
-#: ../Doc/library/codecs.rst:994
+#: ../Doc/library/codecs.rst:997
 msgid "``U-00010000`` ... ``U-0010FFFF``"
 msgstr "``U-00010000`` ... ``U-0010FFFF``"
 
-#: ../Doc/library/codecs.rst:994
+#: ../Doc/library/codecs.rst:997
 msgid "11110xxx 10xxxxxx 10xxxxxx 10xxxxxx"
 msgstr "11110xxx 10xxxxxx 10xxxxxx 10xxxxxx"
 
-#: ../Doc/library/codecs.rst:997
+#: ../Doc/library/codecs.rst:1000
 msgid ""
 "The least significant bit of the Unicode character is the rightmost x bit."
 msgstr ""
 "El bit menos significativo del carácter Unicode es el bit x más a la derecha."
 
-#: ../Doc/library/codecs.rst:999
+#: ../Doc/library/codecs.rst:1002
 msgid ""
 "As UTF-8 is an 8-bit encoding no BOM is required and any ``U+FEFF`` "
 "character in the decoded string (even if it's the first character) is "
@@ -1788,7 +1796,7 @@ msgstr ""
 "(incluso si es el primer carácter) se trata como un ``ESPACIO SIN QUIEBRE DE "
 "ANCHO CERO`` (*``ZERO WIDTH NO-BREAK SPACE``*)."
 
-#: ../Doc/library/codecs.rst:1003
+#: ../Doc/library/codecs.rst:1006
 msgid ""
 "Without external information it's impossible to reliably determine which "
 "encoding was used for encoding a string. Each charmap encoding can decode "
@@ -1827,7 +1835,7 @@ msgstr "SEÑALADO A LA DERECHA DE DOBLE ÁNGULO MARCA DE CITA"
 msgid "INVERTED QUESTION MARK"
 msgstr "SIGNO DE PREGUNTA INVERTIDO"
 
-#: ../Doc/library/codecs.rst:1019
+#: ../Doc/library/codecs.rst:1022
 msgid ""
 "in iso-8859-1), this increases the probability that a ``utf-8-sig`` encoding "
 "can be correctly guessed from the byte sequence. So here the BOM is not used "
@@ -1848,11 +1856,11 @@ msgstr ""
 "como los primeros tres bytes en el archivo. En UTF-8, se desaconseja el uso "
 "de la lista de materiales y, en general, debe evitarse."
 
-#: ../Doc/library/codecs.rst:1032
+#: ../Doc/library/codecs.rst:1035
 msgid "Standard Encodings"
 msgstr "Codificaciones estándar"
 
-#: ../Doc/library/codecs.rst:1034
+#: ../Doc/library/codecs.rst:1037
 msgid ""
 "Python comes with a number of codecs built-in, either implemented as C "
 "functions or with dictionaries as mapping tables. The following table lists "
@@ -1872,7 +1880,7 @@ msgstr ""
 "lugar de un guión bajo también son alias válidos; por lo tanto, por ejemplo "
 "``'utf-8'`` es un alias válido para el códec ``'utf_8'``."
 
-#: ../Doc/library/codecs.rst:1044
+#: ../Doc/library/codecs.rst:1047
 msgid ""
 "Some common encodings can bypass the codecs lookup machinery to improve "
 "performance. These optimization opportunities are only recognized by CPython "
@@ -1890,11 +1898,11 @@ msgstr ""
 "de alias alternativos para estas codificaciones puede resultar en una "
 "ejecución más lenta."
 
-#: ../Doc/library/codecs.rst:1052
+#: ../Doc/library/codecs.rst:1055
 msgid "Optimization opportunity recognized for us-ascii."
 msgstr "Oportunidad de optimización reconocida para us-ascii."
 
-#: ../Doc/library/codecs.rst:1055
+#: ../Doc/library/codecs.rst:1058
 msgid ""
 "Many of the character sets support the same languages. They vary in "
 "individual characters (e.g. whether the EURO SIGN is supported or not), and "
@@ -1906,11 +1914,11 @@ msgstr ""
 "y en la asignación de caracteres para codificar posiciones. Para los idiomas "
 "europeos en particular, generalmente existen las siguientes variantes:"
 
-#: ../Doc/library/codecs.rst:1060
+#: ../Doc/library/codecs.rst:1063
 msgid "an ISO 8859 codeset"
 msgstr "un conjunto de códigos ISO 8859"
 
-#: ../Doc/library/codecs.rst:1062
+#: ../Doc/library/codecs.rst:1065
 msgid ""
 "a Microsoft Windows code page, which is typically derived from an 8859 "
 "codeset, but replaces control characters with additional graphic characters"
@@ -1919,494 +1927,495 @@ msgstr ""
 "conjunto de códigos 8859, pero reemplaza los caracteres de control con "
 "caracteres gráficos adicionales"
 
-#: ../Doc/library/codecs.rst:1065
+#: ../Doc/library/codecs.rst:1068
 msgid "an IBM EBCDIC code page"
 msgstr "una página de códigos EBCDIC de IBM"
 
-#: ../Doc/library/codecs.rst:1067
+#: ../Doc/library/codecs.rst:1070
 msgid "an IBM PC code page, which is ASCII compatible"
 msgstr "una página de códigos de IBM PC, que es compatible con ASCII"
 
-#: ../Doc/library/codecs.rst:1072 ../Doc/library/codecs.rst:1327
-#: ../Doc/library/codecs.rst:1395 ../Doc/library/codecs.rst:1450
+#: ../Doc/library/codecs.rst:1075 ../Doc/library/codecs.rst:1331
+#: ../Doc/library/codecs.rst:1399 ../Doc/library/codecs.rst:1454
 msgid "Codec"
 msgstr "Códec"
 
-#: ../Doc/library/codecs.rst:1072 ../Doc/library/codecs.rst:1327
-#: ../Doc/library/codecs.rst:1395 ../Doc/library/codecs.rst:1450
+#: ../Doc/library/codecs.rst:1075 ../Doc/library/codecs.rst:1331
+#: ../Doc/library/codecs.rst:1399 ../Doc/library/codecs.rst:1454
 msgid "Aliases"
 msgstr "Aliases"
 
-#: ../Doc/library/codecs.rst:1072
+#: ../Doc/library/codecs.rst:1075
 msgid "Languages"
 msgstr "Lenguajes"
 
-#: ../Doc/library/codecs.rst:1074
+#: ../Doc/library/codecs.rst:1077
 msgid "ascii"
 msgstr "ascii"
 
-#: ../Doc/library/codecs.rst:1074
+#: ../Doc/library/codecs.rst:1077
 msgid "646, us-ascii"
 msgstr "646, us-ascii"
 
-#: ../Doc/library/codecs.rst:1074 ../Doc/library/codecs.rst:1080
-#: ../Doc/library/codecs.rst:1088
+#: ../Doc/library/codecs.rst:1077 ../Doc/library/codecs.rst:1083
+#: ../Doc/library/codecs.rst:1091
 msgid "English"
 msgstr "Inglés"
 
-#: ../Doc/library/codecs.rst:1076
+#: ../Doc/library/codecs.rst:1079
 msgid "big5"
 msgstr "big5"
 
-#: ../Doc/library/codecs.rst:1076
+#: ../Doc/library/codecs.rst:1079
 msgid "big5-tw, csbig5"
 msgstr "big5-tw, csbig5"
 
-#: ../Doc/library/codecs.rst:1076 ../Doc/library/codecs.rst:1078
-#: ../Doc/library/codecs.rst:1136
+#: ../Doc/library/codecs.rst:1079 ../Doc/library/codecs.rst:1081
+#: ../Doc/library/codecs.rst:1140
 msgid "Traditional Chinese"
 msgstr "Chino Tradicional"
 
-#: ../Doc/library/codecs.rst:1078
+#: ../Doc/library/codecs.rst:1081
 msgid "big5hkscs"
 msgstr "big5hkscs"
 
-#: ../Doc/library/codecs.rst:1078
+#: ../Doc/library/codecs.rst:1081
 msgid "big5-hkscs, hkscs"
 msgstr "big5-hkscs, hkscs"
 
-#: ../Doc/library/codecs.rst:1080
+#: ../Doc/library/codecs.rst:1083
 msgid "cp037"
 msgstr "cp037"
 
-#: ../Doc/library/codecs.rst:1080
+#: ../Doc/library/codecs.rst:1083
 msgid "IBM037, IBM039"
 msgstr "IBM037, IBM039"
 
-#: ../Doc/library/codecs.rst:1082
+#: ../Doc/library/codecs.rst:1085
 msgid "cp273"
 msgstr "cp273"
 
-#: ../Doc/library/codecs.rst:1082
+#: ../Doc/library/codecs.rst:1085
 msgid "273, IBM273, csIBM273"
 msgstr "273, IBM273, csIBM273"
 
-#: ../Doc/library/codecs.rst:1082
+#: ../Doc/library/codecs.rst:1085
 msgid "German"
 msgstr "Alemán"
 
-#: ../Doc/library/codecs.rst:1086
+#: ../Doc/library/codecs.rst:1089
 msgid "cp424"
 msgstr "cp424"
 
-#: ../Doc/library/codecs.rst:1086
+#: ../Doc/library/codecs.rst:1089
 msgid "EBCDIC-CP-HE, IBM424"
 msgstr "EBCDIC-CP-HE, IBM424"
 
-#: ../Doc/library/codecs.rst:1086 ../Doc/library/codecs.rst:1106
-#: ../Doc/library/codecs.rst:1116 ../Doc/library/codecs.rst:1159
-#: ../Doc/library/codecs.rst:1222
+#: ../Doc/library/codecs.rst:1089 ../Doc/library/codecs.rst:1109
+#: ../Doc/library/codecs.rst:1119 ../Doc/library/codecs.rst:1163
+#: ../Doc/library/codecs.rst:1226
 msgid "Hebrew"
 msgstr "Hebreo"
 
-#: ../Doc/library/codecs.rst:1088
+#: ../Doc/library/codecs.rst:1091
 msgid "cp437"
 msgstr "cp437"
 
-#: ../Doc/library/codecs.rst:1088
+#: ../Doc/library/codecs.rst:1091
 msgid "437, IBM437"
 msgstr "437, IBM437"
 
-#: ../Doc/library/codecs.rst:1090
+#: ../Doc/library/codecs.rst:1093
 msgid "cp500"
 msgstr "cp500"
 
-#: ../Doc/library/codecs.rst:1090
+#: ../Doc/library/codecs.rst:1093
 msgid "EBCDIC-CP-BE, EBCDIC-CP-CH, IBM500"
 msgstr "EBCDIC-CP-BE, EBCDIC-CP-CH, IBM500"
 
-#: ../Doc/library/codecs.rst:1090 ../Doc/library/codecs.rst:1099
-#: ../Doc/library/codecs.rst:1110 ../Doc/library/codecs.rst:1146
-#: ../Doc/library/codecs.rst:1153 ../Doc/library/codecs.rst:1206
-#: ../Doc/library/codecs.rst:1234 ../Doc/library/codecs.rst:1262
+#: ../Doc/library/codecs.rst:1093 ../Doc/library/codecs.rst:1102
+#: ../Doc/library/codecs.rst:1113 ../Doc/library/codecs.rst:1150
+#: ../Doc/library/codecs.rst:1157 ../Doc/library/codecs.rst:1210
+#: ../Doc/library/codecs.rst:1238 ../Doc/library/codecs.rst:1266
 msgid "Western Europe"
 msgstr "Europa Occidental"
 
-#: ../Doc/library/codecs.rst:1093
+#: ../Doc/library/codecs.rst:1096
 msgid "cp720"
 msgstr "cp720"
 
-#: ../Doc/library/codecs.rst:1093 ../Doc/library/codecs.rst:1120
-#: ../Doc/library/codecs.rst:1161 ../Doc/library/codecs.rst:1218
+#: ../Doc/library/codecs.rst:1096 ../Doc/library/codecs.rst:1123
+#: ../Doc/library/codecs.rst:1165 ../Doc/library/codecs.rst:1222
 msgid "Arabic"
 msgstr "Árabe"
 
-#: ../Doc/library/codecs.rst:1095
+#: ../Doc/library/codecs.rst:1098
 msgid "cp737"
 msgstr "cp737"
 
-#: ../Doc/library/codecs.rst:1095 ../Doc/library/codecs.rst:1126
-#: ../Doc/library/codecs.rst:1130 ../Doc/library/codecs.rst:1155
-#: ../Doc/library/codecs.rst:1220 ../Doc/library/codecs.rst:1255
+#: ../Doc/library/codecs.rst:1098 ../Doc/library/codecs.rst:1129
+#: ../Doc/library/codecs.rst:1133 ../Doc/library/codecs.rst:1159
+#: ../Doc/library/codecs.rst:1224 ../Doc/library/codecs.rst:1259
 msgid "Greek"
 msgstr "Griego"
 
-#: ../Doc/library/codecs.rst:1097
+#: ../Doc/library/codecs.rst:1100
 msgid "cp775"
 msgstr "cp775"
 
-#: ../Doc/library/codecs.rst:1097
+#: ../Doc/library/codecs.rst:1100
 msgid "IBM775"
 msgstr "IBM775"
 
-#: ../Doc/library/codecs.rst:1097 ../Doc/library/codecs.rst:1163
-#: ../Doc/library/codecs.rst:1213 ../Doc/library/codecs.rst:1230
+#: ../Doc/library/codecs.rst:1100 ../Doc/library/codecs.rst:1167
+#: ../Doc/library/codecs.rst:1217 ../Doc/library/codecs.rst:1234
 msgid "Baltic languages"
 msgstr "Lenguajes bálticos"
 
-#: ../Doc/library/codecs.rst:1099
+#: ../Doc/library/codecs.rst:1102
 msgid "cp850"
 msgstr "cp850"
 
-#: ../Doc/library/codecs.rst:1099
+#: ../Doc/library/codecs.rst:1102
 msgid "850, IBM850"
 msgstr "850, IBM850"
 
-#: ../Doc/library/codecs.rst:1101
+#: ../Doc/library/codecs.rst:1104
 msgid "cp852"
 msgstr "cp852"
 
-#: ../Doc/library/codecs.rst:1101
+#: ../Doc/library/codecs.rst:1104
 msgid "852, IBM852"
 msgstr "852, IBM852"
 
-#: ../Doc/library/codecs.rst:1101 ../Doc/library/codecs.rst:1148
-#: ../Doc/library/codecs.rst:1209 ../Doc/library/codecs.rst:1259
+#: ../Doc/library/codecs.rst:1104 ../Doc/library/codecs.rst:1152
+#: ../Doc/library/codecs.rst:1213 ../Doc/library/codecs.rst:1263
 msgid "Central and Eastern Europe"
 msgstr "Europa central y del este"
 
-#: ../Doc/library/codecs.rst:1103
+#: ../Doc/library/codecs.rst:1106
 msgid "cp855"
 msgstr "cp855"
 
-#: ../Doc/library/codecs.rst:1103
+#: ../Doc/library/codecs.rst:1106
 msgid "855, IBM855"
 msgstr "855, IBM855"
 
-#: ../Doc/library/codecs.rst:1103 ../Doc/library/codecs.rst:1150
-#: ../Doc/library/codecs.rst:1215 ../Doc/library/codecs.rst:1252
+#: ../Doc/library/codecs.rst:1106 ../Doc/library/codecs.rst:1154
+#: ../Doc/library/codecs.rst:1219 ../Doc/library/codecs.rst:1256
 msgid "Bulgarian, Byelorussian, Macedonian, Russian, Serbian"
 msgstr "Búlgaro, Bielorruso, Macedonio, Ruso, Serbio"
 
-#: ../Doc/library/codecs.rst:1106
+#: ../Doc/library/codecs.rst:1109
 msgid "cp856"
 msgstr "cp856"
 
-#: ../Doc/library/codecs.rst:1108
+#: ../Doc/library/codecs.rst:1111
 msgid "cp857"
 msgstr "cp857"
 
-#: ../Doc/library/codecs.rst:1108
+#: ../Doc/library/codecs.rst:1111
 msgid "857, IBM857"
 msgstr "857, IBM857"
 
-#: ../Doc/library/codecs.rst:1108 ../Doc/library/codecs.rst:1140
-#: ../Doc/library/codecs.rst:1157 ../Doc/library/codecs.rst:1224
-#: ../Doc/library/codecs.rst:1264
+#: ../Doc/library/codecs.rst:1111 ../Doc/library/codecs.rst:1144
+#: ../Doc/library/codecs.rst:1161 ../Doc/library/codecs.rst:1228
+#: ../Doc/library/codecs.rst:1268
 msgid "Turkish"
 msgstr "Turco"
 
-#: ../Doc/library/codecs.rst:1110
+#: ../Doc/library/codecs.rst:1113
 msgid "cp858"
 msgstr "cp858"
 
-#: ../Doc/library/codecs.rst:1110
+#: ../Doc/library/codecs.rst:1113
 msgid "858, IBM858"
 msgstr "858, IBM858"
 
-#: ../Doc/library/codecs.rst:1112
+#: ../Doc/library/codecs.rst:1115
 msgid "cp860"
 msgstr "cp860"
 
-#: ../Doc/library/codecs.rst:1112
+#: ../Doc/library/codecs.rst:1115
 msgid "860, IBM860"
 msgstr "860, IBM860"
 
-#: ../Doc/library/codecs.rst:1112
+#: ../Doc/library/codecs.rst:1115
 msgid "Portuguese"
 msgstr "Portugués"
 
-#: ../Doc/library/codecs.rst:1114
+#: ../Doc/library/codecs.rst:1117
 msgid "cp861"
 msgstr "cp861"
 
-#: ../Doc/library/codecs.rst:1114
+#: ../Doc/library/codecs.rst:1117
 msgid "861, CP-IS, IBM861"
 msgstr "861, CP-IS, IBM861"
 
-#: ../Doc/library/codecs.rst:1114 ../Doc/library/codecs.rst:1257
+#: ../Doc/library/codecs.rst:1117 ../Doc/library/codecs.rst:1261
 msgid "Icelandic"
 msgstr "Islandés"
 
-#: ../Doc/library/codecs.rst:1116
+#: ../Doc/library/codecs.rst:1119
 msgid "cp862"
 msgstr "cp862"
 
-#: ../Doc/library/codecs.rst:1116
+#: ../Doc/library/codecs.rst:1119
 msgid "862, IBM862"
 msgstr "862, IBM862"
 
-#: ../Doc/library/codecs.rst:1118
+#: ../Doc/library/codecs.rst:1121
 msgid "cp863"
 msgstr "cp863"
 
-#: ../Doc/library/codecs.rst:1118
+#: ../Doc/library/codecs.rst:1121
 msgid "863, IBM863"
 msgstr "863, IBM863"
 
-#: ../Doc/library/codecs.rst:1118
+#: ../Doc/library/codecs.rst:1121
 msgid "Canadian"
 msgstr "Canadiense"
 
-#: ../Doc/library/codecs.rst:1120
+#: ../Doc/library/codecs.rst:1123
 msgid "cp864"
 msgstr "cp864"
 
-#: ../Doc/library/codecs.rst:1120
+#: ../Doc/library/codecs.rst:1123
 msgid "IBM864"
 msgstr "IBM864"
 
-#: ../Doc/library/codecs.rst:1122
+#: ../Doc/library/codecs.rst:1125
 msgid "cp865"
 msgstr "cp865"
 
-#: ../Doc/library/codecs.rst:1122
+#: ../Doc/library/codecs.rst:1125
 msgid "865, IBM865"
 msgstr "865, IBM865"
 
-#: ../Doc/library/codecs.rst:1122
+#: ../Doc/library/codecs.rst:1125
 msgid "Danish, Norwegian"
 msgstr "Danés, Noruego"
 
-#: ../Doc/library/codecs.rst:1124
+#: ../Doc/library/codecs.rst:1127
 msgid "cp866"
 msgstr "cp866"
 
-#: ../Doc/library/codecs.rst:1124
+#: ../Doc/library/codecs.rst:1127
 msgid "866, IBM866"
 msgstr "866, IBM866"
 
-#: ../Doc/library/codecs.rst:1124 ../Doc/library/codecs.rst:1240
+#: ../Doc/library/codecs.rst:1127 ../Doc/library/codecs.rst:1244
 msgid "Russian"
 msgstr "Ruso"
 
-#: ../Doc/library/codecs.rst:1126
+#: ../Doc/library/codecs.rst:1129
 msgid "cp869"
 msgstr "cp869"
 
-#: ../Doc/library/codecs.rst:1126
+#: ../Doc/library/codecs.rst:1129
 msgid "869, CP-GR, IBM869"
 msgstr "869, CP-GR, IBM869"
 
-#: ../Doc/library/codecs.rst:1128
+#: ../Doc/library/codecs.rst:1131
 msgid "cp874"
 msgstr "cp874"
 
-#: ../Doc/library/codecs.rst:1128
+#: ../Doc/library/codecs.rst:1131
 msgid "Thai"
 msgstr "Tailandés"
 
-#: ../Doc/library/codecs.rst:1130
+#: ../Doc/library/codecs.rst:1133
 msgid "cp875"
 msgstr "cp875"
 
-#: ../Doc/library/codecs.rst:1132
+#: ../Doc/library/codecs.rst:1135
 msgid "cp932"
 msgstr "cp932"
 
-#: ../Doc/library/codecs.rst:1132
-msgid "932, ms932, mskanji, ms-kanji"
+#: ../Doc/library/codecs.rst:1135
+#, fuzzy
+msgid "932, ms932, mskanji, ms-kanji, windows-31j"
 msgstr "932, ms932, mskanji, ms-kanji"
 
-#: ../Doc/library/codecs.rst:1132 ../Doc/library/codecs.rst:1167
-#: ../Doc/library/codecs.rst:1169 ../Doc/library/codecs.rst:1171
-#: ../Doc/library/codecs.rst:1188 ../Doc/library/codecs.rst:1191
-#: ../Doc/library/codecs.rst:1196 ../Doc/library/codecs.rst:1199
-#: ../Doc/library/codecs.rst:1201 ../Doc/library/codecs.rst:1269
-#: ../Doc/library/codecs.rst:1272 ../Doc/library/codecs.rst:1275
+#: ../Doc/library/codecs.rst:1135 ../Doc/library/codecs.rst:1171
+#: ../Doc/library/codecs.rst:1173 ../Doc/library/codecs.rst:1175
+#: ../Doc/library/codecs.rst:1192 ../Doc/library/codecs.rst:1195
+#: ../Doc/library/codecs.rst:1200 ../Doc/library/codecs.rst:1203
+#: ../Doc/library/codecs.rst:1205 ../Doc/library/codecs.rst:1273
+#: ../Doc/library/codecs.rst:1276 ../Doc/library/codecs.rst:1279
 msgid "Japanese"
 msgstr "Japonés"
 
-#: ../Doc/library/codecs.rst:1134
+#: ../Doc/library/codecs.rst:1138
 msgid "cp949"
 msgstr "cp949"
 
-#: ../Doc/library/codecs.rst:1134
+#: ../Doc/library/codecs.rst:1138
 msgid "949, ms949, uhc"
 msgstr "949, ms949, uhc"
 
-#: ../Doc/library/codecs.rst:1134 ../Doc/library/codecs.rst:1173
-#: ../Doc/library/codecs.rst:1203 ../Doc/library/codecs.rst:1238
+#: ../Doc/library/codecs.rst:1138 ../Doc/library/codecs.rst:1177
+#: ../Doc/library/codecs.rst:1207 ../Doc/library/codecs.rst:1242
 msgid "Korean"
 msgstr "Coreano"
 
-#: ../Doc/library/codecs.rst:1136
+#: ../Doc/library/codecs.rst:1140
 msgid "cp950"
 msgstr "cp950"
 
-#: ../Doc/library/codecs.rst:1136
+#: ../Doc/library/codecs.rst:1140
 msgid "950, ms950"
 msgstr "950, ms950"
 
-#: ../Doc/library/codecs.rst:1138
+#: ../Doc/library/codecs.rst:1142
 msgid "cp1006"
 msgstr "cp1006"
 
-#: ../Doc/library/codecs.rst:1138
+#: ../Doc/library/codecs.rst:1142
 msgid "Urdu"
 msgstr "Urdu"
 
-#: ../Doc/library/codecs.rst:1140
+#: ../Doc/library/codecs.rst:1144
 msgid "cp1026"
 msgstr "cp1026"
 
-#: ../Doc/library/codecs.rst:1140
+#: ../Doc/library/codecs.rst:1144
 msgid "ibm1026"
 msgstr "ibm1026"
 
-#: ../Doc/library/codecs.rst:1142
+#: ../Doc/library/codecs.rst:1146
 msgid "cp1125"
 msgstr "cp1125"
 
-#: ../Doc/library/codecs.rst:1142
+#: ../Doc/library/codecs.rst:1146
 msgid "1125, ibm1125, cp866u, ruscii"
 msgstr "1125, ibm1125, cp866u, ruscii"
 
-#: ../Doc/library/codecs.rst:1142 ../Doc/library/codecs.rst:1246
+#: ../Doc/library/codecs.rst:1146 ../Doc/library/codecs.rst:1250
 msgid "Ukrainian"
 msgstr "Ucraniano"
 
-#: ../Doc/library/codecs.rst:1146
+#: ../Doc/library/codecs.rst:1150
 msgid "cp1140"
 msgstr "cp1140"
 
-#: ../Doc/library/codecs.rst:1146
+#: ../Doc/library/codecs.rst:1150
 msgid "ibm1140"
 msgstr "ibm1140"
 
-#: ../Doc/library/codecs.rst:1148
+#: ../Doc/library/codecs.rst:1152
 msgid "cp1250"
 msgstr "cp1250"
 
-#: ../Doc/library/codecs.rst:1148
+#: ../Doc/library/codecs.rst:1152
 msgid "windows-1250"
 msgstr "windows-1250"
 
-#: ../Doc/library/codecs.rst:1150
+#: ../Doc/library/codecs.rst:1154
 msgid "cp1251"
 msgstr "cp1251"
 
-#: ../Doc/library/codecs.rst:1150
+#: ../Doc/library/codecs.rst:1154
 msgid "windows-1251"
 msgstr "windows-1251"
 
-#: ../Doc/library/codecs.rst:1153
+#: ../Doc/library/codecs.rst:1157
 msgid "cp1252"
 msgstr "cp1252"
 
-#: ../Doc/library/codecs.rst:1153
+#: ../Doc/library/codecs.rst:1157
 msgid "windows-1252"
 msgstr "windows-1252"
 
-#: ../Doc/library/codecs.rst:1155
+#: ../Doc/library/codecs.rst:1159
 msgid "cp1253"
 msgstr "cp1253"
 
-#: ../Doc/library/codecs.rst:1155
+#: ../Doc/library/codecs.rst:1159
 msgid "windows-1253"
 msgstr "windows-1253"
 
-#: ../Doc/library/codecs.rst:1157
+#: ../Doc/library/codecs.rst:1161
 msgid "cp1254"
 msgstr "cp1254"
 
-#: ../Doc/library/codecs.rst:1157
+#: ../Doc/library/codecs.rst:1161
 msgid "windows-1254"
 msgstr "windows-1254"
 
-#: ../Doc/library/codecs.rst:1159
+#: ../Doc/library/codecs.rst:1163
 msgid "cp1255"
 msgstr "cp1255"
 
-#: ../Doc/library/codecs.rst:1159
+#: ../Doc/library/codecs.rst:1163
 msgid "windows-1255"
 msgstr "windows-1255"
 
-#: ../Doc/library/codecs.rst:1161
+#: ../Doc/library/codecs.rst:1165
 msgid "cp1256"
 msgstr "cp1256"
 
-#: ../Doc/library/codecs.rst:1161
+#: ../Doc/library/codecs.rst:1165
 msgid "windows-1256"
 msgstr "windows-1256"
 
-#: ../Doc/library/codecs.rst:1163
+#: ../Doc/library/codecs.rst:1167
 msgid "cp1257"
 msgstr "cp1257"
 
-#: ../Doc/library/codecs.rst:1163
+#: ../Doc/library/codecs.rst:1167
 msgid "windows-1257"
 msgstr "windows-1257"
 
-#: ../Doc/library/codecs.rst:1165
+#: ../Doc/library/codecs.rst:1169
 msgid "cp1258"
 msgstr "cp1258"
 
-#: ../Doc/library/codecs.rst:1165
+#: ../Doc/library/codecs.rst:1169
 msgid "windows-1258"
 msgstr "windows-1258"
 
-#: ../Doc/library/codecs.rst:1165
+#: ../Doc/library/codecs.rst:1169
 msgid "Vietnamese"
 msgstr "Vietnamita"
 
-#: ../Doc/library/codecs.rst:1167
+#: ../Doc/library/codecs.rst:1171
 msgid "euc_jp"
 msgstr "euc_jp"
 
-#: ../Doc/library/codecs.rst:1167
+#: ../Doc/library/codecs.rst:1171
 msgid "eucjp, ujis, u-jis"
 msgstr "eucjp, ujis, u-jis"
 
-#: ../Doc/library/codecs.rst:1169
+#: ../Doc/library/codecs.rst:1173
 msgid "euc_jis_2004"
 msgstr "euc_jis_2004"
 
-#: ../Doc/library/codecs.rst:1169
+#: ../Doc/library/codecs.rst:1173
 msgid "jisx0213, eucjis2004"
 msgstr "jisx0213, eucjis2004"
 
-#: ../Doc/library/codecs.rst:1171
+#: ../Doc/library/codecs.rst:1175
 msgid "euc_jisx0213"
 msgstr "euc_jisx0213"
 
-#: ../Doc/library/codecs.rst:1171
+#: ../Doc/library/codecs.rst:1175
 msgid "eucjisx0213"
 msgstr "eucjisx0213"
 
-#: ../Doc/library/codecs.rst:1173
+#: ../Doc/library/codecs.rst:1177
 msgid "euc_kr"
 msgstr "euc_kr"
 
-#: ../Doc/library/codecs.rst:1173
+#: ../Doc/library/codecs.rst:1177
 msgid "euckr, korean, ksc5601, ks_c-5601, ks_c-5601-1987, ksx1001, ks_x-1001"
 msgstr "euckr, korean, ksc5601, ks_c-5601, ks_c-5601-1987, ksx1001, ks_x-1001"
 
-#: ../Doc/library/codecs.rst:1177
+#: ../Doc/library/codecs.rst:1181
 msgid "gb2312"
 msgstr "gb2312"
 
-#: ../Doc/library/codecs.rst:1177
+#: ../Doc/library/codecs.rst:1181
 msgid ""
 "chinese, csiso58gb231280, euc-cn, euccn, eucgb2312-cn, gb2312-1980, "
 "gb2312-80, iso-ir-58"
@@ -2414,431 +2423,431 @@ msgstr ""
 "chinese, csiso58gb231280, euc-cn, euccn, eucgb2312-cn, gb2312-1980, "
 "gb2312-80, iso-ir-58"
 
-#: ../Doc/library/codecs.rst:1177 ../Doc/library/codecs.rst:1186
+#: ../Doc/library/codecs.rst:1181 ../Doc/library/codecs.rst:1190
 msgid "Simplified Chinese"
 msgstr "Chino simplificado"
 
-#: ../Doc/library/codecs.rst:1182
+#: ../Doc/library/codecs.rst:1186
 msgid "gbk"
 msgstr "gbk"
 
-#: ../Doc/library/codecs.rst:1182
+#: ../Doc/library/codecs.rst:1186
 msgid "936, cp936, ms936"
 msgstr "936, cp936, ms936"
 
-#: ../Doc/library/codecs.rst:1182 ../Doc/library/codecs.rst:1184
+#: ../Doc/library/codecs.rst:1186 ../Doc/library/codecs.rst:1188
 msgid "Unified Chinese"
 msgstr "Chino Unificado"
 
-#: ../Doc/library/codecs.rst:1184
+#: ../Doc/library/codecs.rst:1188
 msgid "gb18030"
 msgstr "gb18030"
 
-#: ../Doc/library/codecs.rst:1184
+#: ../Doc/library/codecs.rst:1188
 msgid "gb18030-2000"
 msgstr "gb18030-2000"
 
-#: ../Doc/library/codecs.rst:1186
+#: ../Doc/library/codecs.rst:1190
 msgid "hz"
 msgstr "hz"
 
-#: ../Doc/library/codecs.rst:1186
+#: ../Doc/library/codecs.rst:1190
 msgid "hzgb, hz-gb, hz-gb-2312"
 msgstr "hzgb, hz-gb, hz-gb-2312"
 
-#: ../Doc/library/codecs.rst:1188
+#: ../Doc/library/codecs.rst:1192
 msgid "iso2022_jp"
 msgstr "iso2022_jp"
 
-#: ../Doc/library/codecs.rst:1188
+#: ../Doc/library/codecs.rst:1192
 msgid "csiso2022jp, iso2022jp, iso-2022-jp"
 msgstr "csiso2022jp, iso2022jp, iso-2022-jp"
 
-#: ../Doc/library/codecs.rst:1191
+#: ../Doc/library/codecs.rst:1195
 msgid "iso2022_jp_1"
 msgstr "iso2022_jp_1"
 
-#: ../Doc/library/codecs.rst:1191
+#: ../Doc/library/codecs.rst:1195
 msgid "iso2022jp-1, iso-2022-jp-1"
 msgstr "iso2022jp-1, iso-2022-jp-1"
 
-#: ../Doc/library/codecs.rst:1193
+#: ../Doc/library/codecs.rst:1197
 msgid "iso2022_jp_2"
 msgstr "iso2022_jp_2"
 
-#: ../Doc/library/codecs.rst:1193
+#: ../Doc/library/codecs.rst:1197
 msgid "iso2022jp-2, iso-2022-jp-2"
 msgstr "iso2022jp-2, iso-2022-jp-2"
 
-#: ../Doc/library/codecs.rst:1193
+#: ../Doc/library/codecs.rst:1197
 msgid "Japanese, Korean, Simplified Chinese, Western Europe, Greek"
 msgstr "Japonés, Coreano, Chino simplificado, Europa occidental, Griego"
 
-#: ../Doc/library/codecs.rst:1196
+#: ../Doc/library/codecs.rst:1200
 msgid "iso2022_jp_2004"
 msgstr "iso2022_jp_2004"
 
-#: ../Doc/library/codecs.rst:1196
+#: ../Doc/library/codecs.rst:1200
 msgid "iso2022jp-2004, iso-2022-jp-2004"
 msgstr "iso2022jp-2004, iso-2022-jp-2004"
 
-#: ../Doc/library/codecs.rst:1199
+#: ../Doc/library/codecs.rst:1203
 msgid "iso2022_jp_3"
 msgstr "iso2022_jp_3"
 
-#: ../Doc/library/codecs.rst:1199
+#: ../Doc/library/codecs.rst:1203
 msgid "iso2022jp-3, iso-2022-jp-3"
 msgstr "iso2022jp-3, iso-2022-jp-3"
 
-#: ../Doc/library/codecs.rst:1201
+#: ../Doc/library/codecs.rst:1205
 msgid "iso2022_jp_ext"
 msgstr "iso2022_jp_ext"
 
-#: ../Doc/library/codecs.rst:1201
+#: ../Doc/library/codecs.rst:1205
 msgid "iso2022jp-ext, iso-2022-jp-ext"
 msgstr "iso2022jp-ext, iso-2022-jp-ext"
 
-#: ../Doc/library/codecs.rst:1203
+#: ../Doc/library/codecs.rst:1207
 msgid "iso2022_kr"
 msgstr "iso2022_kr"
 
-#: ../Doc/library/codecs.rst:1203
+#: ../Doc/library/codecs.rst:1207
 msgid "csiso2022kr, iso2022kr, iso-2022-kr"
 msgstr "csiso2022kr, iso2022kr, iso-2022-kr"
 
-#: ../Doc/library/codecs.rst:1206
+#: ../Doc/library/codecs.rst:1210
 msgid "latin_1"
 msgstr "latin_1"
 
-#: ../Doc/library/codecs.rst:1206
+#: ../Doc/library/codecs.rst:1210
 msgid "iso-8859-1, iso8859-1, 8859, cp819, latin, latin1, L1"
 msgstr "iso-8859-1, iso8859-1, 8859, cp819, latin, latin1, L1"
 
-#: ../Doc/library/codecs.rst:1209
+#: ../Doc/library/codecs.rst:1213
 msgid "iso8859_2"
 msgstr "iso8859_2"
 
-#: ../Doc/library/codecs.rst:1209
+#: ../Doc/library/codecs.rst:1213
 msgid "iso-8859-2, latin2, L2"
 msgstr "iso-8859-2, latin2, L2"
 
-#: ../Doc/library/codecs.rst:1211
+#: ../Doc/library/codecs.rst:1215
 msgid "iso8859_3"
 msgstr "iso8859_3"
 
-#: ../Doc/library/codecs.rst:1211
+#: ../Doc/library/codecs.rst:1215
 msgid "iso-8859-3, latin3, L3"
 msgstr "iso-8859-3, latin3, L3"
 
-#: ../Doc/library/codecs.rst:1211
+#: ../Doc/library/codecs.rst:1215
 msgid "Esperanto, Maltese"
 msgstr "Esperanto, Maltés"
 
-#: ../Doc/library/codecs.rst:1213
+#: ../Doc/library/codecs.rst:1217
 msgid "iso8859_4"
 msgstr "iso8859_4"
 
-#: ../Doc/library/codecs.rst:1213
+#: ../Doc/library/codecs.rst:1217
 msgid "iso-8859-4, latin4, L4"
 msgstr "iso-8859-4, latin4, L4"
 
-#: ../Doc/library/codecs.rst:1215
+#: ../Doc/library/codecs.rst:1219
 msgid "iso8859_5"
 msgstr "iso8859_5"
 
-#: ../Doc/library/codecs.rst:1215
+#: ../Doc/library/codecs.rst:1219
 msgid "iso-8859-5, cyrillic"
 msgstr "iso-8859-5, cyrillic"
 
-#: ../Doc/library/codecs.rst:1218
+#: ../Doc/library/codecs.rst:1222
 msgid "iso8859_6"
 msgstr "iso8859_6"
 
-#: ../Doc/library/codecs.rst:1218
+#: ../Doc/library/codecs.rst:1222
 msgid "iso-8859-6, arabic"
 msgstr "iso-8859-6, arabic"
 
-#: ../Doc/library/codecs.rst:1220
+#: ../Doc/library/codecs.rst:1224
 msgid "iso8859_7"
 msgstr "iso8859_7"
 
-#: ../Doc/library/codecs.rst:1220
+#: ../Doc/library/codecs.rst:1224
 msgid "iso-8859-7, greek, greek8"
 msgstr "iso-8859-7, greek, greek8"
 
-#: ../Doc/library/codecs.rst:1222
+#: ../Doc/library/codecs.rst:1226
 msgid "iso8859_8"
 msgstr "iso8859_8"
 
-#: ../Doc/library/codecs.rst:1222
+#: ../Doc/library/codecs.rst:1226
 msgid "iso-8859-8, hebrew"
 msgstr "iso-8859-8, hebrew"
 
-#: ../Doc/library/codecs.rst:1224
+#: ../Doc/library/codecs.rst:1228
 msgid "iso8859_9"
 msgstr "iso8859_9"
 
-#: ../Doc/library/codecs.rst:1224
+#: ../Doc/library/codecs.rst:1228
 msgid "iso-8859-9, latin5, L5"
 msgstr "iso-8859-9, latin5, L5"
 
-#: ../Doc/library/codecs.rst:1226
+#: ../Doc/library/codecs.rst:1230
 msgid "iso8859_10"
 msgstr "iso8859_10"
 
-#: ../Doc/library/codecs.rst:1226
+#: ../Doc/library/codecs.rst:1230
 msgid "iso-8859-10, latin6, L6"
 msgstr "iso-8859-10, latin6, L6"
 
-#: ../Doc/library/codecs.rst:1226
+#: ../Doc/library/codecs.rst:1230
 msgid "Nordic languages"
 msgstr "Lenguajes nórdicos"
 
-#: ../Doc/library/codecs.rst:1228
+#: ../Doc/library/codecs.rst:1232
 msgid "iso8859_11"
 msgstr "iso8859_11"
 
-#: ../Doc/library/codecs.rst:1228
+#: ../Doc/library/codecs.rst:1232
 msgid "iso-8859-11, thai"
 msgstr "iso-8859-11, thai"
 
-#: ../Doc/library/codecs.rst:1228
+#: ../Doc/library/codecs.rst:1232
 msgid "Thai languages"
 msgstr "Lenguajes tailandeses"
 
-#: ../Doc/library/codecs.rst:1230
+#: ../Doc/library/codecs.rst:1234
 msgid "iso8859_13"
 msgstr "iso8859_13"
 
-#: ../Doc/library/codecs.rst:1230
+#: ../Doc/library/codecs.rst:1234
 msgid "iso-8859-13, latin7, L7"
 msgstr "iso-8859-13, latin7, L7"
 
-#: ../Doc/library/codecs.rst:1232
+#: ../Doc/library/codecs.rst:1236
 msgid "iso8859_14"
 msgstr "iso8859_14"
 
-#: ../Doc/library/codecs.rst:1232
+#: ../Doc/library/codecs.rst:1236
 msgid "iso-8859-14, latin8, L8"
 msgstr "iso-8859-14, latin8, L8"
 
-#: ../Doc/library/codecs.rst:1232
+#: ../Doc/library/codecs.rst:1236
 msgid "Celtic languages"
 msgstr "Lenguajes Celtas"
 
-#: ../Doc/library/codecs.rst:1234
+#: ../Doc/library/codecs.rst:1238
 msgid "iso8859_15"
 msgstr "iso8859_15"
 
-#: ../Doc/library/codecs.rst:1234
+#: ../Doc/library/codecs.rst:1238
 msgid "iso-8859-15, latin9, L9"
 msgstr "iso-8859-15, latin9, L9"
 
-#: ../Doc/library/codecs.rst:1236
+#: ../Doc/library/codecs.rst:1240
 msgid "iso8859_16"
 msgstr "iso8859_16"
 
-#: ../Doc/library/codecs.rst:1236
+#: ../Doc/library/codecs.rst:1240
 msgid "iso-8859-16, latin10, L10"
 msgstr "iso-8859-16, latin10, L10"
 
-#: ../Doc/library/codecs.rst:1236
+#: ../Doc/library/codecs.rst:1240
 msgid "South-Eastern Europe"
 msgstr "Europa sudoriental"
 
-#: ../Doc/library/codecs.rst:1238
+#: ../Doc/library/codecs.rst:1242
 msgid "johab"
 msgstr "johab"
 
-#: ../Doc/library/codecs.rst:1238
+#: ../Doc/library/codecs.rst:1242
 msgid "cp1361, ms1361"
 msgstr "cp1361, ms1361"
 
-#: ../Doc/library/codecs.rst:1240
+#: ../Doc/library/codecs.rst:1244
 msgid "koi8_r"
 msgstr "koi8_r"
 
-#: ../Doc/library/codecs.rst:1242
+#: ../Doc/library/codecs.rst:1246
 msgid "koi8_t"
 msgstr "koi8_t"
 
-#: ../Doc/library/codecs.rst:1242
+#: ../Doc/library/codecs.rst:1246
 msgid "Tajik"
 msgstr "Tayiko"
 
-#: ../Doc/library/codecs.rst:1246
+#: ../Doc/library/codecs.rst:1250
 msgid "koi8_u"
 msgstr "koi8_u"
 
-#: ../Doc/library/codecs.rst:1248
+#: ../Doc/library/codecs.rst:1252
 msgid "kz1048"
 msgstr "kz1048"
 
-#: ../Doc/library/codecs.rst:1248
+#: ../Doc/library/codecs.rst:1252
 msgid "kz_1048, strk1048_2002, rk1048"
 msgstr "kz_1048, strk1048_2002, rk1048"
 
-#: ../Doc/library/codecs.rst:1248 ../Doc/library/codecs.rst:1266
+#: ../Doc/library/codecs.rst:1252 ../Doc/library/codecs.rst:1270
 msgid "Kazakh"
 msgstr "Kazajo"
 
-#: ../Doc/library/codecs.rst:1252
+#: ../Doc/library/codecs.rst:1256
 msgid "mac_cyrillic"
 msgstr "mac_cyrillic"
 
-#: ../Doc/library/codecs.rst:1252
+#: ../Doc/library/codecs.rst:1256
 msgid "maccyrillic"
 msgstr "maccyrillic"
 
-#: ../Doc/library/codecs.rst:1255
+#: ../Doc/library/codecs.rst:1259
 msgid "mac_greek"
 msgstr "mac_greek"
 
-#: ../Doc/library/codecs.rst:1255
+#: ../Doc/library/codecs.rst:1259
 msgid "macgreek"
 msgstr "macgreek"
 
-#: ../Doc/library/codecs.rst:1257
+#: ../Doc/library/codecs.rst:1261
 msgid "mac_iceland"
 msgstr "mac_iceland"
 
-#: ../Doc/library/codecs.rst:1257
+#: ../Doc/library/codecs.rst:1261
 msgid "maciceland"
 msgstr "maciceland"
 
-#: ../Doc/library/codecs.rst:1259
+#: ../Doc/library/codecs.rst:1263
 msgid "mac_latin2"
 msgstr "mac_latin2"
 
-#: ../Doc/library/codecs.rst:1259
+#: ../Doc/library/codecs.rst:1263
 msgid "maclatin2, maccentraleurope, mac_centeuro"
 msgstr "maclatin2, maccentraleurope, mac_centeuro"
 
-#: ../Doc/library/codecs.rst:1262
+#: ../Doc/library/codecs.rst:1266
 msgid "mac_roman"
 msgstr "mac_roman"
 
-#: ../Doc/library/codecs.rst:1262
+#: ../Doc/library/codecs.rst:1266
 msgid "macroman, macintosh"
 msgstr "macroman, macintosh"
 
-#: ../Doc/library/codecs.rst:1264
+#: ../Doc/library/codecs.rst:1268
 msgid "mac_turkish"
 msgstr "mac_turkish"
 
-#: ../Doc/library/codecs.rst:1264
+#: ../Doc/library/codecs.rst:1268
 msgid "macturkish"
 msgstr "macturkish"
 
-#: ../Doc/library/codecs.rst:1266
+#: ../Doc/library/codecs.rst:1270
 msgid "ptcp154"
 msgstr "ptcp154"
 
-#: ../Doc/library/codecs.rst:1266
+#: ../Doc/library/codecs.rst:1270
 msgid "csptcp154, pt154, cp154, cyrillic-asian"
 msgstr "csptcp154, pt154, cp154, cyrillic-asian"
 
-#: ../Doc/library/codecs.rst:1269
+#: ../Doc/library/codecs.rst:1273
 msgid "shift_jis"
 msgstr "shift_jis"
 
-#: ../Doc/library/codecs.rst:1269
+#: ../Doc/library/codecs.rst:1273
 msgid "csshiftjis, shiftjis, sjis, s_jis"
 msgstr "csshiftjis, shiftjis, sjis, s_jis"
 
-#: ../Doc/library/codecs.rst:1272
+#: ../Doc/library/codecs.rst:1276
 msgid "shift_jis_2004"
 msgstr "shift_jis_2004"
 
-#: ../Doc/library/codecs.rst:1272
+#: ../Doc/library/codecs.rst:1276
 msgid "shiftjis2004, sjis_2004, sjis2004"
 msgstr "shiftjis2004, sjis_2004, sjis2004"
 
-#: ../Doc/library/codecs.rst:1275
+#: ../Doc/library/codecs.rst:1279
 msgid "shift_jisx0213"
 msgstr "shift_jisx0213"
 
-#: ../Doc/library/codecs.rst:1275
+#: ../Doc/library/codecs.rst:1279
 msgid "shiftjisx0213, sjisx0213, s_jisx0213"
 msgstr "shiftjisx0213, sjisx0213, s_jisx0213"
 
-#: ../Doc/library/codecs.rst:1278
+#: ../Doc/library/codecs.rst:1282
 msgid "utf_32"
 msgstr "utf_32"
 
-#: ../Doc/library/codecs.rst:1278
+#: ../Doc/library/codecs.rst:1282
 msgid "U32, utf32"
 msgstr "U32, utf32"
 
-#: ../Doc/library/codecs.rst:1278 ../Doc/library/codecs.rst:1280
 #: ../Doc/library/codecs.rst:1282 ../Doc/library/codecs.rst:1284
 #: ../Doc/library/codecs.rst:1286 ../Doc/library/codecs.rst:1288
 #: ../Doc/library/codecs.rst:1290 ../Doc/library/codecs.rst:1292
-#: ../Doc/library/codecs.rst:1294
+#: ../Doc/library/codecs.rst:1294 ../Doc/library/codecs.rst:1296
+#: ../Doc/library/codecs.rst:1298
 msgid "all languages"
 msgstr "todos los lenguajes"
 
-#: ../Doc/library/codecs.rst:1280
+#: ../Doc/library/codecs.rst:1284
 msgid "utf_32_be"
 msgstr "utf_32_be"
 
-#: ../Doc/library/codecs.rst:1280
+#: ../Doc/library/codecs.rst:1284
 msgid "UTF-32BE"
 msgstr "UTF-32BE"
 
-#: ../Doc/library/codecs.rst:1282
+#: ../Doc/library/codecs.rst:1286
 msgid "utf_32_le"
 msgstr "utf_32_le"
 
-#: ../Doc/library/codecs.rst:1282
+#: ../Doc/library/codecs.rst:1286
 msgid "UTF-32LE"
 msgstr "UTF-32LE"
 
-#: ../Doc/library/codecs.rst:1284
+#: ../Doc/library/codecs.rst:1288
 msgid "utf_16"
 msgstr "utf_16"
 
-#: ../Doc/library/codecs.rst:1284
+#: ../Doc/library/codecs.rst:1288
 msgid "U16, utf16"
 msgstr "U16, utf16"
 
-#: ../Doc/library/codecs.rst:1286
+#: ../Doc/library/codecs.rst:1290
 msgid "utf_16_be"
 msgstr "utf_16_be"
 
-#: ../Doc/library/codecs.rst:1286
+#: ../Doc/library/codecs.rst:1290
 msgid "UTF-16BE"
 msgstr "UTF-16BE"
 
-#: ../Doc/library/codecs.rst:1288
+#: ../Doc/library/codecs.rst:1292
 msgid "utf_16_le"
 msgstr "utf_16_le"
 
-#: ../Doc/library/codecs.rst:1288
+#: ../Doc/library/codecs.rst:1292
 msgid "UTF-16LE"
 msgstr "UTF-16LE"
 
-#: ../Doc/library/codecs.rst:1290
+#: ../Doc/library/codecs.rst:1294
 msgid "utf_7"
 msgstr "utf_7"
 
-#: ../Doc/library/codecs.rst:1290
+#: ../Doc/library/codecs.rst:1294
 msgid "U7, unicode-1-1-utf-7"
 msgstr "U7, unicode-1-1-utf-7"
 
-#: ../Doc/library/codecs.rst:1292
+#: ../Doc/library/codecs.rst:1296
 msgid "utf_8"
 msgstr "utf_8"
 
-#: ../Doc/library/codecs.rst:1292
+#: ../Doc/library/codecs.rst:1296
 msgid "U8, UTF, utf8, cp65001"
 msgstr "U8, UTF, utf8, cp65001"
 
-#: ../Doc/library/codecs.rst:1294
+#: ../Doc/library/codecs.rst:1298
 msgid "utf_8_sig"
 msgstr "utf_8_sig"
 
-#: ../Doc/library/codecs.rst:1297
+#: ../Doc/library/codecs.rst:1301
 msgid ""
 "The utf-16\\* and utf-32\\* encoders no longer allow surrogate code points "
 "(``U+D800``--``U+DFFF``) to be encoded. The utf-32\\* decoders no longer "
@@ -2849,15 +2858,15 @@ msgstr ""
 "ya no decodifican secuencias de bytes que corresponden a puntos de código "
 "sustituto."
 
-#: ../Doc/library/codecs.rst:1303
+#: ../Doc/library/codecs.rst:1307
 msgid "``cp65001`` is now an alias to ``utf_8``."
 msgstr "``cp65001`` ahora es un alias de ``utf_8``."
 
-#: ../Doc/library/codecs.rst:1308
+#: ../Doc/library/codecs.rst:1312
 msgid "Python Specific Encodings"
 msgstr "Codificaciones específicas de Python"
 
-#: ../Doc/library/codecs.rst:1310
+#: ../Doc/library/codecs.rst:1314
 msgid ""
 "A number of predefined codecs are specific to Python, so their codec names "
 "have no meaning outside Python. These are listed in the tables below based "
@@ -2875,25 +2884,25 @@ msgstr ""
 "texto). Para los códecs asimétricos, el significado indicado describe la "
 "dirección de codificación."
 
-#: ../Doc/library/codecs.rst:1318
+#: ../Doc/library/codecs.rst:1322
 msgid "Text Encodings"
 msgstr "Codificaciones de texto"
 
-#: ../Doc/library/codecs.rst:1320
+#: ../Doc/library/codecs.rst:1324
 msgid ""
-"The following codecs provide :class:`str` to :class:`bytes` encoding and :"
-"term:`bytes-like object` to :class:`str` decoding, similar to the Unicode "
-"text encodings."
+"The following codecs provide :class:`str` to :class:`bytes` encoding "
+"and :term:`bytes-like object` to :class:`str` decoding, similar to the "
+"Unicode text encodings."
 msgstr ""
-"Los siguientes códecs proporcionan codificación de :class:`str` a :class:"
-"`bytes` y decodificación de :term:`bytes-like object` a :class:`str`, "
-"similar a las codificaciones de texto Unicode."
+"Los siguientes códecs proporcionan codificación de :class:`str` "
+"a :class:`bytes` y decodificación de :term:`bytes-like object` "
+"a :class:`str`, similar a las codificaciones de texto Unicode."
 
-#: ../Doc/library/codecs.rst:1329
+#: ../Doc/library/codecs.rst:1333
 msgid "idna"
 msgstr "idna"
 
-#: ../Doc/library/codecs.rst:1329
+#: ../Doc/library/codecs.rst:1333
 msgid ""
 "Implement :rfc:`3490`, see also :mod:`encodings.idna`. Only "
 "``errors='strict'`` is supported."
@@ -2901,53 +2910,53 @@ msgstr ""
 "Implementar :rfc:`3490`, ver también :mod:`encodings.idna`. Solo se admite "
 "``errors='strict'``."
 
-#: ../Doc/library/codecs.rst:1335
+#: ../Doc/library/codecs.rst:1339
 msgid "mbcs"
 msgstr "mbcs"
 
-#: ../Doc/library/codecs.rst:1335
+#: ../Doc/library/codecs.rst:1339
 msgid "ansi, dbcs"
 msgstr "ansi, dbcs"
 
-#: ../Doc/library/codecs.rst:1335
+#: ../Doc/library/codecs.rst:1339
 msgid ""
 "Windows only: Encode the operand according to the ANSI codepage (CP_ACP)."
 msgstr ""
 "Solo Windows: codifique el operando de acuerdo con la página de códigos ANSI "
 "(CP_ACP)."
 
-#: ../Doc/library/codecs.rst:1339
+#: ../Doc/library/codecs.rst:1343
 msgid "oem"
 msgstr "oem"
 
-#: ../Doc/library/codecs.rst:1339
+#: ../Doc/library/codecs.rst:1343
 msgid ""
 "Windows only: Encode the operand according to the OEM codepage (CP_OEMCP)."
 msgstr ""
 "Solo Windows: codifique el operando de acuerdo con la página de códigos OEM "
 "(CP_OEMCP)."
 
-#: ../Doc/library/codecs.rst:1345
+#: ../Doc/library/codecs.rst:1349
 msgid "palmos"
 msgstr "palmos"
 
-#: ../Doc/library/codecs.rst:1345
+#: ../Doc/library/codecs.rst:1349
 msgid "Encoding of PalmOS 3.5."
 msgstr "Codificación de PalmOS 3.5."
 
-#: ../Doc/library/codecs.rst:1347
+#: ../Doc/library/codecs.rst:1351
 msgid "punycode"
 msgstr "punycode"
 
-#: ../Doc/library/codecs.rst:1347
+#: ../Doc/library/codecs.rst:1351
 msgid "Implement :rfc:`3492`. Stateful codecs are not supported."
 msgstr "Implementar :rfc:`3492`. Los códecs con estado no son compatibles."
 
-#: ../Doc/library/codecs.rst:1351
+#: ../Doc/library/codecs.rst:1355
 msgid "raw_unicode_escape"
 msgstr "raw_unicode_escape"
 
-#: ../Doc/library/codecs.rst:1351
+#: ../Doc/library/codecs.rst:1355
 msgid ""
 "Latin-1 encoding with :samp:`\\\\u{XXXX}` and :samp:`\\\\U{XXXXXXXX}` for "
 "other code points. Existing backslashes are not escaped in any way. It is "
@@ -2957,11 +2966,11 @@ msgstr ""
 "otros puntos de código. Las barras invertidas existentes no se escapan de "
 "ninguna manera. Se usa en el protocolo Python *pickle*."
 
-#: ../Doc/library/codecs.rst:1361
+#: ../Doc/library/codecs.rst:1365
 msgid "undefined"
 msgstr "indefinido"
 
-#: ../Doc/library/codecs.rst:1361
+#: ../Doc/library/codecs.rst:1365
 msgid ""
 "Raise an exception for all conversions, even empty strings. The error "
 "handler is ignored."
@@ -2969,11 +2978,11 @@ msgstr ""
 "Lanza una excepción para todas las conversiones, incluso cadenas vacías. El "
 "manejador de errores se ignora."
 
-#: ../Doc/library/codecs.rst:1366
+#: ../Doc/library/codecs.rst:1370
 msgid "unicode_escape"
 msgstr "unicode_escape"
 
-#: ../Doc/library/codecs.rst:1366
+#: ../Doc/library/codecs.rst:1370
 msgid ""
 "Encoding suitable as the contents of a Unicode literal in ASCII-encoded "
 "Python source code, except that quotes are not escaped. Decode from Latin-1 "
@@ -2984,37 +2993,37 @@ msgstr ""
 "Decodificar desde el código fuente Latin-1. Tenga en cuenta que el código "
 "fuente de Python realmente usa UTF-8 por defecto."
 
-#: ../Doc/library/codecs.rst:1378
+#: ../Doc/library/codecs.rst:1382
 msgid "\"unicode_internal\" codec is removed."
 msgstr "Se elimina el códec \"unicode_internal\"."
 
-#: ../Doc/library/codecs.rst:1385
+#: ../Doc/library/codecs.rst:1389
 msgid "Binary Transforms"
 msgstr "Transformaciones Binarias"
 
-#: ../Doc/library/codecs.rst:1387
+#: ../Doc/library/codecs.rst:1391
 msgid ""
 "The following codecs provide binary transforms: :term:`bytes-like object` "
 "to :class:`bytes` mappings. They are not supported by :meth:`bytes.decode` "
 "(which only produces :class:`str` output)."
 msgstr ""
-"Los siguientes códecs proporcionan transformaciones binarias: mapeos de :"
-"term:`bytes-like object` a :class:`bytes`. No son compatibles con :meth:"
-"`bytes.decode` (que solo produce :class:`str` de salida)."
+"Los siguientes códecs proporcionan transformaciones binarias: mapeos "
+"de :term:`bytes-like object` a :class:`bytes`. No son compatibles "
+"con :meth:`bytes.decode` (que solo produce :class:`str` de salida)."
 
-#: ../Doc/library/codecs.rst:1395
+#: ../Doc/library/codecs.rst:1399
 msgid "Encoder / decoder"
 msgstr "Codificador / decodificador"
 
-#: ../Doc/library/codecs.rst:1397
+#: ../Doc/library/codecs.rst:1401
 msgid "base64_codec [#b64]_"
 msgstr "base64_codec [#b64]_"
 
-#: ../Doc/library/codecs.rst:1397
+#: ../Doc/library/codecs.rst:1401
 msgid "base64, base_64"
 msgstr "base64, base_64"
 
-#: ../Doc/library/codecs.rst:1397
+#: ../Doc/library/codecs.rst:1401
 msgid ""
 "Convert the operand to multiline MIME base64 (the result always includes a "
 "trailing ``'\\n'``)."
@@ -3022,101 +3031,97 @@ msgstr ""
 "Convierta el operando a MIME base64 multilínea (el resultado siempre incluye "
 "un ``'\\n'`` final)."
 
-#: ../Doc/library/codecs.rst:1402
+#: ../Doc/library/codecs.rst:1406
 msgid ""
 "accepts any :term:`bytes-like object` as input for encoding and decoding"
 msgstr ""
 "acepta cualquier :term:`bytes-like object` como entrada para codificar y "
 "decodificar"
 
-#: ../Doc/library/codecs.rst:1397
+#: ../Doc/library/codecs.rst:1401
 msgid ":meth:`base64.encodebytes` / :meth:`base64.decodebytes`"
 msgstr ":meth:`base64.encodebytes` / :meth:`base64.decodebytes`"
 
-#: ../Doc/library/codecs.rst:1408
+#: ../Doc/library/codecs.rst:1412
 msgid "bz2_codec"
 msgstr "bz2_codec"
 
-#: ../Doc/library/codecs.rst:1408
+#: ../Doc/library/codecs.rst:1412
 msgid "bz2"
 msgstr "bz2"
 
-#: ../Doc/library/codecs.rst:1408
+#: ../Doc/library/codecs.rst:1412
 msgid "Compress the operand using bz2."
 msgstr "Comprime el operando usando bz2."
 
-#: ../Doc/library/codecs.rst:1408
+#: ../Doc/library/codecs.rst:1412
 msgid ":meth:`bz2.compress` / :meth:`bz2.decompress`"
 msgstr ":meth:`bz2.compress` / :meth:`bz2.decompress`"
 
-#: ../Doc/library/codecs.rst:1411
+#: ../Doc/library/codecs.rst:1415
 msgid "hex_codec"
 msgstr "hex_codec"
 
-#: ../Doc/library/codecs.rst:1411
+#: ../Doc/library/codecs.rst:1415
 msgid "hex"
 msgstr "hex"
 
-#: ../Doc/library/codecs.rst:1411
+#: ../Doc/library/codecs.rst:1415
 msgid ""
 "Convert the operand to hexadecimal representation, with two digits per byte."
 msgstr ""
 "Convierte el operando en representación hexadecimal, con dos dígitos por "
 "byte."
 
-#: ../Doc/library/codecs.rst:1411
+#: ../Doc/library/codecs.rst:1415
 msgid ":meth:`binascii.b2a_hex` / :meth:`binascii.a2b_hex`"
 msgstr ":meth:`binascii.b2a_hex` / :meth:`binascii.a2b_hex`"
 
-#: ../Doc/library/codecs.rst:1416
+#: ../Doc/library/codecs.rst:1420
 msgid "quopri_codec"
 msgstr "quopri_codec"
 
-#: ../Doc/library/codecs.rst:1416
+#: ../Doc/library/codecs.rst:1420
 msgid "quopri, quotedprintable, quoted_printable"
 msgstr "quopri, quotedprintable, quoted_printable"
 
-#: ../Doc/library/codecs.rst:1416
+#: ../Doc/library/codecs.rst:1420
 msgid "Convert the operand to MIME quoted printable."
 msgstr "Convierte el operando a MIME citado imprimible."
 
-#: ../Doc/library/codecs.rst:1416
+#: ../Doc/library/codecs.rst:1420
 msgid ":meth:`quopri.encode` with ``quotetabs=True`` / :meth:`quopri.decode`"
 msgstr ":meth:`quopri.encode` con ``quotetabs=True`` / :meth:`quopri.decode`"
 
-#: ../Doc/library/codecs.rst:1420
+#: ../Doc/library/codecs.rst:1424
 msgid "uu_codec"
 msgstr "uu_codec"
 
-#: ../Doc/library/codecs.rst:1420
+#: ../Doc/library/codecs.rst:1424
 msgid "uu"
 msgstr "uu"
 
-#: ../Doc/library/codecs.rst:1420
+#: ../Doc/library/codecs.rst:1424
 msgid "Convert the operand using uuencode."
 msgstr "Convierte el operando usando uuencode."
 
-#: ../Doc/library/codecs.rst:1420
-msgid ":meth:`uu.encode` / :meth:`uu.decode`"
-msgstr ":meth:`uu.encode` / :meth:`uu.decode`"
-
-#: ../Doc/library/codecs.rst:1423
+#: ../Doc/library/codecs.rst:1427
 msgid "zlib_codec"
 msgstr "zlib_codec"
 
-#: ../Doc/library/codecs.rst:1423
+#: ../Doc/library/codecs.rst:1427
 msgid "zip, zlib"
 msgstr "zip, zlib"
 
-#: ../Doc/library/codecs.rst:1423
+#: ../Doc/library/codecs.rst:1427
 msgid "Compress the operand using gzip."
 msgstr "Comprime el operando usando gzip."
 
-#: ../Doc/library/codecs.rst:1423
+#: ../Doc/library/codecs.rst:1427
 msgid ":meth:`zlib.compress` / :meth:`zlib.decompress`"
 msgstr ":meth:`zlib.compress` / :meth:`zlib.decompress`"
 
-#: ../Doc/library/codecs.rst:1427
+#: ../Doc/library/codecs.rst:1431
 msgid ""
 "In addition to :term:`bytes-like objects <bytes-like object>`, "
 "``'base64_codec'`` also accepts ASCII-only instances of :class:`str` for "
@@ -3126,56 +3131,56 @@ msgstr ""
 "``'base64_codec'`` también acepta instancias solo ASCII de :class:`str` para "
 "decodificación"
 
-#: ../Doc/library/codecs.rst:1431
+#: ../Doc/library/codecs.rst:1435
 msgid "Restoration of the binary transforms."
 msgstr "Restauración de las transformaciones binarias."
 
-#: ../Doc/library/codecs.rst:1434
+#: ../Doc/library/codecs.rst:1438
 msgid "Restoration of the aliases for the binary transforms."
 msgstr "Restauración de los alias para las transformaciones binarias."
 
-#: ../Doc/library/codecs.rst:1441
+#: ../Doc/library/codecs.rst:1445
 msgid "Text Transforms"
 msgstr "Transformaciones de texto"
 
-#: ../Doc/library/codecs.rst:1443
+#: ../Doc/library/codecs.rst:1447
 msgid ""
-"The following codec provides a text transform: a :class:`str` to :class:"
-"`str` mapping. It is not supported by :meth:`str.encode` (which only "
-"produces :class:`bytes` output)."
+"The following codec provides a text transform: a :class:`str` "
+"to :class:`str` mapping. It is not supported by :meth:`str.encode` (which "
+"only produces :class:`bytes` output)."
 msgstr ""
-"El siguiente códec proporciona una transformación de texto: un mapeo de :"
-"class:`str` a :class:`str`. No es compatible con :meth:`str.encode` (que "
+"El siguiente códec proporciona una transformación de texto: un mapeo "
+"de :class:`str` a :class:`str`. No es compatible con :meth:`str.encode` (que "
 "solo produce :class:`bytes` de salida)."
 
-#: ../Doc/library/codecs.rst:1452
+#: ../Doc/library/codecs.rst:1456
 msgid "rot_13"
 msgstr "rot_13"
 
-#: ../Doc/library/codecs.rst:1452
+#: ../Doc/library/codecs.rst:1456
 msgid "rot13"
 msgstr "rot13"
 
-#: ../Doc/library/codecs.rst:1452
+#: ../Doc/library/codecs.rst:1456
 msgid "Return the Caesar-cypher encryption of the operand."
 msgstr "Retorna el cifrado César (*Caesar-cypher*) del operando."
 
-#: ../Doc/library/codecs.rst:1457
+#: ../Doc/library/codecs.rst:1461
 msgid "Restoration of the ``rot_13`` text transform."
 msgstr "Restauración de la transformación de texto ``rot_13``."
 
-#: ../Doc/library/codecs.rst:1460
+#: ../Doc/library/codecs.rst:1464
 msgid "Restoration of the ``rot13`` alias."
 msgstr "Restauración del alias ``rot13``."
 
-#: ../Doc/library/codecs.rst:1465
+#: ../Doc/library/codecs.rst:1469
 msgid ""
 ":mod:`encodings.idna` --- Internationalized Domain Names in Applications"
 msgstr ""
 ":mod:`encodings.idna` --- Nombres de dominio internacionalizados en "
 "aplicaciones"
 
-#: ../Doc/library/codecs.rst:1471
+#: ../Doc/library/codecs.rst:1475
 msgid ""
 "This module implements :rfc:`3490` (Internationalized Domain Names in "
 "Applications) and :rfc:`3492` (Nameprep: A Stringprep Profile for "
@@ -3187,26 +3192,27 @@ msgstr ""
 "nombres de dominio internacionalizados (IDN)). Se basa en la codificación "
 "``punycode`` y :mod:`stringprep`."
 
-#: ../Doc/library/codecs.rst:1476
+#: ../Doc/library/codecs.rst:1480
+#, fuzzy
 msgid ""
 "If you need the IDNA 2008 standard from :rfc:`5891` and :rfc:`5895`, use the "
-"third-party `idna module <https://pypi.org/project/idna/>`_."
+"third-party :pypi:`idna` module."
 msgstr ""
 "Si necesita el estándar IDNA 2008 de :rfc:`5891` y :rfc:`5895`, use el "
 "`módulo idna <https://pypi.org/project/idna/>_` de terceros."
 
-#: ../Doc/library/codecs.rst:1479
+#: ../Doc/library/codecs.rst:1483
 msgid ""
 "These RFCs together define a protocol to support non-ASCII characters in "
-"domain names. A domain name containing non-ASCII characters (such as ``www."
-"Alliancefrançaise.nu``) is converted into an ASCII-compatible encoding (ACE, "
-"such as ``www.xn--alliancefranaise-npb.nu``). The ACE form of the domain "
-"name is then used in all places where arbitrary characters are not allowed "
-"by the protocol, such as DNS queries, HTTP :mailheader:`Host` fields, and so "
-"on. This conversion is carried out in the application; if possible invisible "
-"to the user: The application should transparently convert Unicode domain "
-"labels to IDNA on the wire, and convert back ACE labels to Unicode before "
-"presenting them to the user."
+"domain names. A domain name containing non-ASCII characters (such as "
+"``www.Alliancefrançaise.nu``) is converted into an ASCII-compatible encoding "
+"(ACE, such as ``www.xn--alliancefranaise-npb.nu``). The ACE form of the "
+"domain name is then used in all places where arbitrary characters are not "
+"allowed by the protocol, such as DNS queries, HTTP :mailheader:`Host` "
+"fields, and so on. This conversion is carried out in the application; if "
+"possible invisible to the user: The application should transparently convert "
+"Unicode domain labels to IDNA on the wire, and convert back ACE labels to "
+"Unicode before presenting them to the user."
 msgstr ""
 "Estas RFC juntas definen un protocolo para admitir caracteres no ASCII en "
 "los nombres de dominio. Un nombre de dominio que contiene caracteres no "
@@ -3220,7 +3226,7 @@ msgstr ""
 "el cable, y volver a convertir las etiquetas ACE a Unicode antes de "
 "presentarlas al usuario."
 
-#: ../Doc/library/codecs.rst:1490
+#: ../Doc/library/codecs.rst:1494
 msgid ""
 "Python supports this conversion in several ways:  the ``idna`` codec "
 "performs conversion between Unicode and ACE, separating an input string into "
@@ -3231,8 +3237,8 @@ msgid ""
 "the :mod:`socket` module transparently converts Unicode host names to ACE, "
 "so that applications need not be concerned about converting host names "
 "themselves when they pass them to the socket module. On top of that, modules "
-"that have host names as function parameters, such as :mod:`http.client` and :"
-"mod:`ftplib`, accept Unicode host names (:mod:`http.client` then also "
+"that have host names as function parameters, such as :mod:`http.client` "
+"and :mod:`ftplib`, accept Unicode host names (:mod:`http.client` then also "
 "transparently sends an IDNA hostname in the :mailheader:`Host` field if it "
 "sends that field at all)."
 msgstr ""
@@ -3246,12 +3252,12 @@ msgstr ""
 "transparente los nombres de host Unicode a ACE, por lo que las aplicaciones "
 "no necesitan preocuparse por convertir los nombres de host ellos mismos "
 "cuando los pasan al módulo de socket. Además de eso, los módulos que tienen "
-"nombres de host como parámetros de función, como :mod:`http.client` y :mod:"
-"`ftplib`, aceptan nombres de host Unicode (:mod:`http.client` y luego "
-"también envían un mensaje transparente IDNA *hostname* en el campo :"
-"mailheader:`Host` si envía ese campo)."
+"nombres de host como parámetros de función, como :mod:`http.client` "
+"y :mod:`ftplib`, aceptan nombres de host Unicode (:mod:`http.client` y luego "
+"también envían un mensaje transparente IDNA *hostname* en el "
+"campo :mailheader:`Host` si envía ese campo)."
 
-#: ../Doc/library/codecs.rst:1503
+#: ../Doc/library/codecs.rst:1507
 msgid ""
 "When receiving host names from the wire (such as in reverse name lookup), no "
 "automatic conversion to Unicode is performed: applications wishing to "
@@ -3262,7 +3268,7 @@ msgstr ""
 "aplicaciones que deseen presentar dichos nombres de host al usuario deben "
 "decodificarlos en Unicode."
 
-#: ../Doc/library/codecs.rst:1507
+#: ../Doc/library/codecs.rst:1511
 msgid ""
 "The module :mod:`encodings.idna` also implements the nameprep procedure, "
 "which performs certain normalizations on host names, to achieve case-"
@@ -3275,7 +3281,7 @@ msgstr ""
 "internacionales y unificar caracteres similares. Las funciones *nameprep* se "
 "pueden usar directamente si lo desea."
 
-#: ../Doc/library/codecs.rst:1515
+#: ../Doc/library/codecs.rst:1519
 msgid ""
 "Return the nameprepped version of *label*. The implementation currently "
 "assumes query strings, so ``AllowUnassigned`` is true."
@@ -3284,7 +3290,7 @@ msgstr ""
 "*label*. La implementación actualmente asume cadenas de caracteres de "
 "consulta, por lo que ``AllowUnassigned`` es verdadero."
 
-#: ../Doc/library/codecs.rst:1521
+#: ../Doc/library/codecs.rst:1525
 msgid ""
 "Convert a label to ASCII, as specified in :rfc:`3490`. ``UseSTD3ASCIIRules`` "
 "is assumed to be false."
@@ -3292,27 +3298,23 @@ msgstr ""
 "Convierte una etiqueta a ASCII, como se especifica en :rfc:`3490`. Se supone "
 "que ``UseSTD3ASCIIRules`` es falso."
 
-#: ../Doc/library/codecs.rst:1527
+#: ../Doc/library/codecs.rst:1531
 msgid "Convert a label to Unicode, as specified in :rfc:`3490`."
 msgstr "Convierte una etiqueta a Unicode, como se especifica en :rfc:`3490`."
 
-#: ../Doc/library/codecs.rst:1531
+#: ../Doc/library/codecs.rst:1535
 msgid ":mod:`encodings.mbcs` --- Windows ANSI codepage"
 msgstr ":mod:`encodings.mbcs` --- Página de códigos ANSI de Windows"
 
-#: ../Doc/library/codecs.rst:1536
+#: ../Doc/library/codecs.rst:1540
 msgid "This module implements the ANSI codepage (CP_ACP)."
 msgstr "Este módulo implementa la página de códigos ANSI (CP_ACP)."
 
-#: ../Doc/library/codecs.rst:1538
+#: ../Doc/library/codecs.rst:1542
 msgid ":ref:`Availability <availability>`: Windows."
 msgstr ":ref:`Disponibilidad <availability>`: Windows."
 
-#: ../Doc/library/codecs.rst:1540
-msgid "Support any error handler."
-msgstr "Admite cualquier manejador de errores."
-
-#: ../Doc/library/codecs.rst:1543
+#: ../Doc/library/codecs.rst:1544
 msgid ""
 "Before 3.2, the *errors* argument was ignored; ``'replace'`` was always used "
 "to encode, and ``'ignore'`` to decode."
@@ -3320,11 +3322,15 @@ msgstr ""
 "Antes de 3.2, se ignoraba el argumento *errors*; ``'replace'`` siempre se "
 "usó para codificar e ``'ignore'`` para decodificar."
 
-#: ../Doc/library/codecs.rst:1549
+#: ../Doc/library/codecs.rst:1548
+msgid "Support any error handler."
+msgstr "Admite cualquier manejador de errores."
+
+#: ../Doc/library/codecs.rst:1553
 msgid ":mod:`encodings.utf_8_sig` --- UTF-8 codec with BOM signature"
 msgstr ":mod:`encodings.utf_8_sig` --- Códec UTF-8 con firma BOM"
 
-#: ../Doc/library/codecs.rst:1555
+#: ../Doc/library/codecs.rst:1559
 msgid ""
 "This module implements a variant of the UTF-8 codec. On encoding, a UTF-8 "
 "encoded BOM will be prepended to the UTF-8 encoded bytes. For the stateful "

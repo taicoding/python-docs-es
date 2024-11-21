@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2021-12-09 10:09+0800\n"
 "Last-Translator: Rodrigo Tobar <rtobarc@gmail.com>\n"
 "Language: es_ES\n"
@@ -19,7 +19,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/installing/index.rst:7
 msgid "Installing Python Modules"
@@ -64,8 +64,8 @@ msgid ""
 "packaging user guide`_."
 msgstr ""
 "Esta guía cubre la parte de instalación del proceso. Para obtener una guía "
-"para crear y compartir sus propios proyectos de Python, consulta la :ref:"
-"`guía de distribución <distributing-index>`."
+"para crear y compartir sus propios proyectos de Python, consulta "
+"la :ref:`guía de distribución <distributing-index>`."
 
 #: ../Doc/installing/index.rst:28
 msgid ""
@@ -199,6 +199,10 @@ msgstr ""
 "El siguiente comando instalará la última versión de un módulo y sus "
 "dependencias desde el Índice de Paquetes de Python::"
 
+#: ../Doc/installing/index.rst:84
+msgid "python -m pip install SomePackage"
+msgstr ""
+
 #: ../Doc/installing/index.rst:88
 msgid ""
 "For POSIX users (including macOS and Linux users), the examples in this "
@@ -230,6 +234,12 @@ msgstr ""
 "intérprete de comandos, el nombre del paquete y la versión deben ir entre "
 "comillas dobles::"
 
+#: ../Doc/installing/index.rst:100
+msgid ""
+"python -m pip install SomePackage==1.0.4    # specific version\n"
+"python -m pip install \"SomePackage>=1.0.4\"  # minimum version"
+msgstr ""
+
 #: ../Doc/installing/index.rst:103
 msgid ""
 "Normally, if a suitable module is already installed, attempting to install "
@@ -239,6 +249,10 @@ msgstr ""
 "Normalmente, si ya hay instalado un módulo adecuado, intentar instalarlo "
 "otra vez no tendrá efecto alguno. Actualizar módulos existentes requiere que "
 "se solicite explícitamente::"
+
+#: ../Doc/installing/index.rst:107
+msgid "python -m pip install --upgrade SomePackage"
+msgstr ""
 
 #: ../Doc/installing/index.rst:109
 msgid ""
@@ -255,9 +269,9 @@ msgid ""
 "Installing packages into an active virtual environment uses the commands "
 "shown above."
 msgstr ""
-"La creación de entornos virtuales se realiza a través de el módulo :mod:"
-"`venv`. Instalar paquetes en un entorno virtual activo usa los comandos "
-"mostrados arriba."
+"La creación de entornos virtuales se realiza a través de el "
+"módulo :mod:`venv`. Instalar paquetes en un entorno virtual activo usa los "
+"comandos mostrados arriba."
 
 #: ../Doc/installing/index.rst:118
 msgid ""
@@ -351,6 +365,14 @@ msgstr ""
 "Python en combinación con la opción ``-m`` para ejecutar la copia apropiada "
 "de ``pip`` ::"
 
+#: ../Doc/installing/index.rst:171
+msgid ""
+"python2   -m pip install SomePackage  # default Python 2\n"
+"python2.7 -m pip install SomePackage  # specifically Python 2.7\n"
+"python3   -m pip install SomePackage  # default Python 3\n"
+"python3.4 -m pip install SomePackage  # specifically Python 3.4"
+msgstr ""
+
 #: ../Doc/installing/index.rst:176
 msgid "Appropriately versioned ``pip`` commands may also be available."
 msgstr ""
@@ -364,6 +386,14 @@ msgid ""
 msgstr ""
 "En Windows, use el lanzador de Python ``py`` en combinación con el "
 "interruptor ``-m`` ::"
+
+#: ../Doc/installing/index.rst:181
+msgid ""
+"py -2   -m pip install SomePackage  # default Python 2\n"
+"py -2.7 -m pip install SomePackage  # specifically Python 2.7\n"
+"py -3   -m pip install SomePackage  # default Python 3\n"
+"py -3.4 -m pip install SomePackage  # specifically Python 3.4"
+msgstr ""
 
 #: ../Doc/installing/index.rst:195
 msgid "Common installation issues"
@@ -406,15 +436,19 @@ msgid ""
 msgstr ""
 "Es posible que ``pip`` no se instale por defecto. Una posible solución es::"
 
+#: ../Doc/installing/index.rst:215
+msgid "python -m ensurepip --default-pip"
+msgstr ""
+
 #: ../Doc/installing/index.rst:217
 msgid ""
-"There are also additional resources for `installing pip. <https://packaging."
-"python.org/en/latest/tutorials/installing-packages/#ensure-pip-setuptools-"
-"and-wheel-are-up-to-date>`__"
+"There are also additional resources for `installing pip. <https://"
+"packaging.python.org/en/latest/tutorials/installing-packages/#ensure-pip-"
+"setuptools-and-wheel-are-up-to-date>`__"
 msgstr ""
-"También hay recursos adicionales para `installing pip. <https://packaging."
-"python.org/en/latest/tutorials/installing-packages/#ensure-pip-setuptools-"
-"and-wheel-are-up-to-date>`__"
+"También hay recursos adicionales para `installing pip. <https://"
+"packaging.python.org/en/latest/tutorials/installing-packages/#ensure-pip-"
+"setuptools-and-wheel-are-up-to-date>`__"
 
 #: ../Doc/installing/index.rst:222
 msgid "Installing binary extensions"
@@ -447,10 +481,10 @@ msgstr ""
 
 #: ../Doc/installing/index.rst:234
 msgid ""
-"Some of the solutions for installing `scientific software <https://packaging."
-"python.org/science/>`__ that are not yet available as pre-built ``wheel`` "
-"files may also help with obtaining other binary extensions without needing "
-"to build them locally."
+"Some of the solutions for installing `scientific software <https://"
+"packaging.python.org/science/>`__ that are not yet available as pre-built "
+"``wheel`` files may also help with obtaining other binary extensions without "
+"needing to build them locally."
 msgstr ""
 "Algunas de las soluciones para instalar `software científico <https://"
 "packaging.python.org/science/>`__ aún no disponible como archivo ``wheel`` "
@@ -459,8 +493,8 @@ msgstr ""
 
 #: ../Doc/installing/index.rst:241
 msgid ""
-"`Python Packaging User Guide: Binary Extensions <https://packaging.python."
-"org/extensions/>`__"
+"`Python Packaging User Guide: Binary Extensions <https://"
+"packaging.python.org/extensions/>`__"
 msgstr ""
 "`Guía de usuario de empaquetado de Python: Extensiones binarias <https://"
 "packaging.python.org/extensions/>`__"

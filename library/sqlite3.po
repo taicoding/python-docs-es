@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-01-04 10:09-0300\n"
 "Last-Translator: Alfonso Areiza Guerra <alfareiza@gmail.com>\n"
 "Language: es\n"
@@ -19,17 +19,18 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/sqlite3.rst:2
-msgid ":mod:`sqlite3` --- DB-API 2.0 interface for SQLite databases"
+#, fuzzy
+msgid ":mod:`!sqlite3` --- DB-API 2.0 interface for SQLite databases"
 msgstr ":mod:`sqlite3` --- DB-API 2.0 interfaz para bases de datos SQLite"
 
 #: ../Doc/library/sqlite3.rst:9
 msgid "**Source code:** :source:`Lib/sqlite3/`"
 msgstr "**Código fuente:** :source:`Lib/sqlite3/`"
 
-#: ../Doc/library/sqlite3.rst:23
+#: ../Doc/library/sqlite3.rst:25
 msgid ""
 "SQLite is a C library that provides a lightweight disk-based database that "
 "doesn't require a separate server process and allows accessing the database "
@@ -45,26 +46,27 @@ msgstr ""
 "es posible prototipar una aplicación usando SQLite y luego transferir el "
 "código a una base de datos más grande como PostgreSQL u Oracle."
 
-#: ../Doc/library/sqlite3.rst:30
+#: ../Doc/library/sqlite3.rst:32
+#, fuzzy
 msgid ""
 "The :mod:`!sqlite3` module was written by Gerhard Häring.  It provides an "
-"SQL interface compliant with the DB-API 2.0 specification described by :pep:"
-"`249`, and requires SQLite 3.7.15 or newer."
+"SQL interface compliant with the DB-API 2.0 specification described "
+"by :pep:`249`, and requires SQLite 3.15.2 or newer."
 msgstr ""
 "El módulo :mod:`!sqlite3` fue escrito por Gerhard Häring. Proporciona una "
-"interfaz SQL compatible con la especificación DB-API 2.0 descrita por :pep:"
-"`249` y requiere SQLite 3.7.15 o posterior."
+"interfaz SQL compatible con la especificación DB-API 2.0 descrita "
+"por :pep:`249` y requiere SQLite 3.7.15 o posterior."
 
-#: ../Doc/library/sqlite3.rst:34
+#: ../Doc/library/sqlite3.rst:36
 msgid "This document includes four main sections:"
 msgstr "Esta documentación contiene cuatro secciones principales:"
 
-#: ../Doc/library/sqlite3.rst:36
+#: ../Doc/library/sqlite3.rst:38
 msgid ":ref:`sqlite3-tutorial` teaches how to use the :mod:`!sqlite3` module."
 msgstr ""
 ":ref:`sqlite3-tutorial` enseña como usar el módulo :mod:`!sqlite3` module."
 
-#: ../Doc/library/sqlite3.rst:37
+#: ../Doc/library/sqlite3.rst:39
 msgid ""
 ":ref:`sqlite3-reference` describes the classes and functions this module "
 "defines."
@@ -72,11 +74,11 @@ msgstr ""
 ":ref:`sqlite3-reference` describe las clases y funciones que se definen en "
 "este módulo."
 
-#: ../Doc/library/sqlite3.rst:39
+#: ../Doc/library/sqlite3.rst:41
 msgid ":ref:`sqlite3-howtos` details how to handle specific tasks."
 msgstr ":ref:`sqlite3-howtos` detalla como manipular tareas específicas."
 
-#: ../Doc/library/sqlite3.rst:40
+#: ../Doc/library/sqlite3.rst:42
 msgid ""
 ":ref:`sqlite3-explanation` provides in-depth background on transaction "
 "control."
@@ -84,11 +86,11 @@ msgstr ""
 ":ref:`sqlite3-explanation` proporciona en profundidad información sobre el "
 "control transaccional."
 
-#: ../Doc/library/sqlite3.rst:47
+#: ../Doc/library/sqlite3.rst:49
 msgid "https://www.sqlite.org"
 msgstr "https://www.sqlite.org"
 
-#: ../Doc/library/sqlite3.rst:46
+#: ../Doc/library/sqlite3.rst:48
 msgid ""
 "The SQLite web page; the documentation describes the syntax and the "
 "available data types for the supported SQL dialect."
@@ -96,27 +98,27 @@ msgstr ""
 "La página web SQLite; la documentación describe la sintaxis y los tipos de "
 "datos disponibles para el lenguaje SQL soportado."
 
-#: ../Doc/library/sqlite3.rst:50
+#: ../Doc/library/sqlite3.rst:52
 msgid "https://www.w3schools.com/sql/"
 msgstr "https://www.w3schools.com/sql/"
 
-#: ../Doc/library/sqlite3.rst:50
+#: ../Doc/library/sqlite3.rst:52
 msgid "Tutorial, reference and examples for learning SQL syntax."
 msgstr "Tutorial, referencia y ejemplos para aprender sintaxis SQL."
 
-#: ../Doc/library/sqlite3.rst:52
+#: ../Doc/library/sqlite3.rst:54
 msgid ":pep:`249` - Database API Specification 2.0"
 msgstr ":pep:`249` - Especificación de la API 2.0 de base de datos"
 
-#: ../Doc/library/sqlite3.rst:53
+#: ../Doc/library/sqlite3.rst:55
 msgid "PEP written by Marc-André Lemburg."
 msgstr "PEP escrito por Marc-André Lemburg."
 
-#: ../Doc/library/sqlite3.rst:66
+#: ../Doc/library/sqlite3.rst:68
 msgid "Tutorial"
 msgstr "Tutorial"
 
-#: ../Doc/library/sqlite3.rst:68
+#: ../Doc/library/sqlite3.rst:70
 msgid ""
 "In this tutorial, you will create a database of Monty Python movies using "
 "basic :mod:`!sqlite3` functionality. It assumes a fundamental understanding "
@@ -127,7 +129,7 @@ msgstr ""
 "fundamental de conceptos de bases de dados, como `cursors`_ y "
 "`transactions`_."
 
-#: ../Doc/library/sqlite3.rst:73
+#: ../Doc/library/sqlite3.rst:75
 #, fuzzy
 msgid ""
 "First, we need to create a new database and open a database connection to "
@@ -140,7 +142,13 @@ msgstr ""
 "creará una conexión con la base de datos :file:`tutorial.db` en el "
 "directorio actual, y de no existir, se creará automáticamente:"
 
-#: ../Doc/library/sqlite3.rst:84
+#: ../Doc/library/sqlite3.rst:81
+msgid ""
+"import sqlite3\n"
+"con = sqlite3.connect(\"tutorial.db\")"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:86
 msgid ""
 "The returned :class:`Connection` object ``con`` represents the connection to "
 "the on-disk database."
@@ -148,24 +156,29 @@ msgstr ""
 "El retorno será un objecto de la clase :class:`Connection` representado en "
 "``con`` como una base de datos local."
 
-#: ../Doc/library/sqlite3.rst:87
+#: ../Doc/library/sqlite3.rst:89
 msgid ""
 "In order to execute SQL statements and fetch results from SQL queries, we "
-"will need to use a database cursor. Call :meth:`con.cursor() <Connection."
-"cursor>` to create the :class:`Cursor`:"
+"will need to use a database cursor. Call :meth:`con.cursor() "
+"<Connection.cursor>` to create the :class:`Cursor`:"
 msgstr ""
 "Con el fin de ejecutar sentencias SQL y obtener resultados de consultas SQL, "
-"necesitaremos usar un cursor para la base de datos. Llamando :meth:`con."
-"cursor() <Connection.cursor>` se creará el :class:`Cursor`:"
+"necesitaremos usar un cursor para la base de datos. "
+"Llamando :meth:`con.cursor() <Connection.cursor>` se creará "
+"el :class:`Cursor`:"
 
-#: ../Doc/library/sqlite3.rst:95
+#: ../Doc/library/sqlite3.rst:93
+msgid "cur = con.cursor()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:97
 msgid ""
 "Now that we've got a database connection and a cursor, we can create a "
 "database table ``movie`` with columns for title, release year, and review "
 "score. For simplicity, we can just use column names in the table declaration "
 "-- thanks to the `flexible typing`_ feature of SQLite, specifying the data "
-"types is optional. Execute the ``CREATE TABLE`` statement by calling :meth:"
-"`cur.execute(...) <Cursor.execute>`:"
+"types is optional. Execute the ``CREATE TABLE`` statement by "
+"calling :meth:`cur.execute(...) <Cursor.execute>`:"
 msgstr ""
 "Ahora que hemos configurado una conexión y un cursor, podemos crear una "
 "tabla ``movie`` con las columnas *title*, *release year*, y *review score*. "
@@ -174,49 +187,78 @@ msgstr ""
 "especificar los tipos de datos es opcional. Ejecuta la sentencia ``CREATE "
 "TABLE`` llamando :meth:`cur.execute(...) <Cursor.execute>`:"
 
-#: ../Doc/library/sqlite3.rst:111
+#: ../Doc/library/sqlite3.rst:106
+msgid "cur.execute(\"CREATE TABLE movie(title, year, score)\")"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:113
 msgid ""
 "We can verify that the new table has been created by querying the "
 "``sqlite_master`` table built-in to SQLite, which should now contain an "
 "entry for the ``movie`` table definition (see `The Schema Table`_ for "
-"details). Execute that query by calling :meth:`cur.execute(...) <Cursor."
-"execute>`, assign the result to ``res``, and call :meth:`res.fetchone() "
-"<Cursor.fetchone>` to fetch the resulting row:"
+"details). Execute that query by calling :meth:`cur.execute(...) "
+"<Cursor.execute>`, assign the result to ``res``, and "
+"call :meth:`res.fetchone() <Cursor.fetchone>` to fetch the resulting row:"
 msgstr ""
 "Podemos verificar que una nueva tabla ha sido creada consultando la tabla "
 "``sqlite_master`` incorporada en SQLite, la cual ahora debería contener una "
 "entrada para la tabla ``movie`` (consulte `The Schema Table`_ para más "
 "información). Ejecute esa consulta llamando a :meth:`cur.execute(...) "
-"<Cursor.execute>`, asigne el resultado a ``res`` y llame a :meth:`res."
-"fetchone() <Cursor.fetchone>` para obtener la fila resultante:"
+"<Cursor.execute>`, asigne el resultado a ``res`` y llame "
+"a :meth:`res.fetchone() <Cursor.fetchone>` para obtener la fila resultante:"
 
-#: ../Doc/library/sqlite3.rst:125
+#: ../Doc/library/sqlite3.rst:121
 msgid ""
-"We can see that the table has been created, as the query returns a :class:"
-"`tuple` containing the table's name. If we query ``sqlite_master`` for a non-"
-"existent table ``spam``, :meth:`!res.fetchone()` will return ``None``:"
+">>> res = cur.execute(\"SELECT name FROM sqlite_master\")\n"
+">>> res.fetchone()\n"
+"('movie',)"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:127
+#, fuzzy
+msgid ""
+"We can see that the table has been created, as the query returns "
+"a :class:`tuple` containing the table's name. If we query ``sqlite_master`` "
+"for a non-existent table ``spam``, :meth:`!res.fetchone` will return "
+"``None``:"
 msgstr ""
 "Podemos observar que la tabla ha sido creada, ya que la consulta retorna "
 "una :class:`tuple` conteniendo los nombres de la tabla. Si consultamos "
-"``sqlite_master`` para una tabla no existente ``spam``, :meth:`!res."
-"fetchone()` retornará ``None``:"
+"``sqlite_master`` para una tabla no existente ``spam``, :meth:`!"
+"res.fetchone()` retornará ``None``:"
 
-#: ../Doc/library/sqlite3.rst:136
+#: ../Doc/library/sqlite3.rst:132
+msgid ""
+">>> res = cur.execute(\"SELECT name FROM sqlite_master WHERE name='spam'\")\n"
+">>> res.fetchone() is None\n"
+"True"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:138
 msgid ""
 "Now, add two rows of data supplied as SQL literals by executing an "
-"``INSERT`` statement, once again by calling :meth:`cur.execute(...) <Cursor."
-"execute>`:"
+"``INSERT`` statement, once again by calling :meth:`cur.execute(...) "
+"<Cursor.execute>`:"
 msgstr ""
 "Ahora, agrega dos filas de datos proporcionados como SQL literales, "
-"ejecutando la sentencia ``INSERT``, una vez más llamando a :meth:`cur."
-"execute(...) <Cursor.execute>`:"
+"ejecutando la sentencia ``INSERT``, una vez más llamando "
+"a :meth:`cur.execute(...) <Cursor.execute>`:"
 
-#: ../Doc/library/sqlite3.rst:148
+#: ../Doc/library/sqlite3.rst:142
+msgid ""
+"cur.execute(\"\"\"\n"
+"    INSERT INTO movie VALUES\n"
+"        ('Monty Python and the Holy Grail', 1975, 8.2),\n"
+"        ('And Now for Something Completely Different', 1971, 7.5)\n"
+"\"\"\")"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:150
 msgid ""
 "The ``INSERT`` statement implicitly opens a transaction, which needs to be "
 "committed before changes are saved in the database (see :ref:`sqlite3-"
-"controlling-transactions` for details). Call :meth:`con.commit() <Connection."
-"commit>` on the connection object to commit the transaction:"
+"controlling-transactions` for details). Call :meth:`con.commit() "
+"<Connection.commit>` on the connection object to commit the transaction:"
 msgstr ""
 "La sentencia ``INSERT`` implícitamente abre una transacción, la cual "
 "necesita ser confirmada antes que los cambios sean guardados en la base de "
@@ -224,20 +266,31 @@ msgstr ""
 "información). Llamando a :meth:`con.commit() <Connection.commit>` sobre el "
 "objeto de la conexión, se confirmará la transacción:"
 
-#: ../Doc/library/sqlite3.rst:158
+#: ../Doc/library/sqlite3.rst:156
+msgid "con.commit()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:160
 msgid ""
 "We can verify that the data was inserted correctly by executing a ``SELECT`` "
 "query. Use the now-familiar :meth:`cur.execute(...) <Cursor.execute>` to "
-"assign the result to ``res``, and call :meth:`res.fetchall() <Cursor."
-"fetchall>` to return all resulting rows:"
+"assign the result to ``res``, and call :meth:`res.fetchall() "
+"<Cursor.fetchall>` to return all resulting rows:"
 msgstr ""
 "Podemos verificar que la información fue introducida correctamente "
-"ejecutando la consulta ``SELECT``. Ejecute el ahora conocido :meth:`cur."
-"execute(...) <Cursor.execute>` para asignar el resultado a ``res``, y luego "
-"llame a :meth:`res.fetchall() <Cursor.fetchall>` para obtener todas las "
-"filas como resultado:"
+"ejecutando la consulta ``SELECT``. Ejecute el ahora "
+"conocido :meth:`cur.execute(...) <Cursor.execute>` para asignar el resultado "
+"a ``res``, y luego llame a :meth:`res.fetchall() <Cursor.fetchall>` para "
+"obtener todas las filas como resultado:"
 
-#: ../Doc/library/sqlite3.rst:170
+#: ../Doc/library/sqlite3.rst:166
+msgid ""
+">>> res = cur.execute(\"SELECT score FROM movie\")\n"
+">>> res.fetchall()\n"
+"[(8.2,), (7.5,)]"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:172
 msgid ""
 "The result is a :class:`list` of two :class:`!tuple`\\s, one per row, each "
 "containing that row's ``score`` value."
@@ -245,15 +298,26 @@ msgstr ""
 "El resultado es una :class:`list` de dos :class:`!tuple`\\s, una por fila, "
 "cada una conteniendo el valor del ``score`` de esa fila."
 
-#: ../Doc/library/sqlite3.rst:173
+#: ../Doc/library/sqlite3.rst:175
 msgid ""
-"Now, insert three more rows by calling :meth:`cur.executemany(...) <Cursor."
-"executemany>`:"
+"Now, insert three more rows by calling :meth:`cur.executemany(...) "
+"<Cursor.executemany>`:"
 msgstr ""
 "Ahora, introduzca tres filas más llamando :meth:`cur.executemany(...) "
 "<Cursor.executemany>`:"
 
-#: ../Doc/library/sqlite3.rst:186
+#: ../Doc/library/sqlite3.rst:178
+msgid ""
+"data = [\n"
+"    (\"Monty Python Live at the Hollywood Bowl\", 1982, 7.9),\n"
+"    (\"Monty Python's The Meaning of Life\", 1983, 7.5),\n"
+"    (\"Monty Python's Life of Brian\", 1979, 8.0),\n"
+"]\n"
+"cur.executemany(\"INSERT INTO movie VALUES(?, ?, ?)\", data)\n"
+"con.commit()  # Remember to commit the transaction after executing INSERT."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:188
 msgid ""
 "Notice that ``?`` placeholders are used to bind ``data`` to the query. "
 "Always use placeholders instead of :ref:`string formatting <tut-formatting>` "
@@ -266,7 +330,7 @@ msgstr ""
 "así evitará `SQL injection attacks`_ (consulte :ref:`sqlite3-placeholders` "
 "para más información)."
 
-#: ../Doc/library/sqlite3.rst:192
+#: ../Doc/library/sqlite3.rst:194
 msgid ""
 "We can verify that the new rows were inserted by executing a ``SELECT`` "
 "query, this time iterating over the results of the query:"
@@ -274,7 +338,19 @@ msgstr ""
 "Podemos verificar que las nuevas filas fueron introducidas ejecutando una "
 "consulta ``SELECT``, esta vez iterando sobre los resultados de la consulta:"
 
-#: ../Doc/library/sqlite3.rst:206
+#: ../Doc/library/sqlite3.rst:198
+msgid ""
+">>> for row in cur.execute(\"SELECT year, title FROM movie ORDER BY "
+"year\"):\n"
+"...     print(row)\n"
+"(1971, 'And Now for Something Completely Different')\n"
+"(1975, 'Monty Python and the Holy Grail')\n"
+"(1979, \"Monty Python's Life of Brian\")\n"
+"(1982, 'Monty Python Live at the Hollywood Bowl')\n"
+"(1983, \"Monty Python's The Meaning of Life\")"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:208
 msgid ""
 "Each row is a two-item :class:`tuple` of ``(year, title)``, matching the "
 "columns selected in the query."
@@ -282,18 +358,34 @@ msgstr ""
 "Cada fila es una :class:`tuple` de dos items con ``(year, title)``, donde "
 "las columnas seleccionadas coinciden con la consulta."
 
-#: ../Doc/library/sqlite3.rst:209
+#: ../Doc/library/sqlite3.rst:211
 msgid ""
-"Finally, verify that the database has been written to disk by calling :meth:"
-"`con.close() <Connection.close>` to close the existing connection, opening a "
-"new one, creating a new cursor, then querying the database:"
+"Finally, verify that the database has been written to disk by "
+"calling :meth:`con.close() <Connection.close>` to close the existing "
+"connection, opening a new one, creating a new cursor, then querying the "
+"database:"
 msgstr ""
 "Finalmente, se puede verificar que la base de datos ha sido escrita en "
 "disco, llamando :meth:`con.close() <Connection.close>` para cerrar la "
 "conexión existente, abriendo una nueva, creando un nuevo cursor y luego "
 "consultando la base de datos:"
 
-#: ../Doc/library/sqlite3.rst:224
+#: ../Doc/library/sqlite3.rst:216
+msgid ""
+">>> con.close()\n"
+">>> new_con = sqlite3.connect(\"tutorial.db\")\n"
+">>> new_cur = new_con.cursor()\n"
+">>> res = new_cur.execute(\"SELECT title, year FROM movie ORDER BY score "
+"DESC\")\n"
+">>> title, year = res.fetchone()\n"
+">>> print(f'The highest scoring Monty Python movie is {title!r}, released in "
+"{year}')\n"
+"The highest scoring Monty Python movie is 'Monty Python and the Holy Grail', "
+"released in 1975\n"
+">>> new_con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:227
 msgid ""
 "You've now created an SQLite database using the :mod:`!sqlite3` module, "
 "inserted data and retrieved values from it in multiple ways."
@@ -301,47 +393,47 @@ msgstr ""
 "Ahora ha creado una base de datos SQLite usando el módulo :mod:`!sqlite3`, "
 "insertado datos y recuperado valores de varias maneras."
 
-#: ../Doc/library/sqlite3.rst:236
+#: ../Doc/library/sqlite3.rst:239
 msgid ":ref:`sqlite3-howtos` for further reading:"
 msgstr ":ref:`sqlite3-howtos` para lecturas de interés:"
 
-#: ../Doc/library/sqlite3.rst:238
+#: ../Doc/library/sqlite3.rst:241
 msgid ":ref:`sqlite3-placeholders`"
 msgstr ":ref:`sqlite3-placeholders`"
 
-#: ../Doc/library/sqlite3.rst:239
+#: ../Doc/library/sqlite3.rst:242
 msgid ":ref:`sqlite3-adapters`"
 msgstr ":ref:`sqlite3-adapters`"
 
-#: ../Doc/library/sqlite3.rst:240
+#: ../Doc/library/sqlite3.rst:243
 msgid ":ref:`sqlite3-converters`"
 msgstr ":ref:`sqlite3-converters`"
 
-#: ../Doc/library/sqlite3.rst:241 ../Doc/library/sqlite3.rst:625
+#: ../Doc/library/sqlite3.rst:244 ../Doc/library/sqlite3.rst:615
 msgid ":ref:`sqlite3-connection-context-manager`"
 msgstr ":ref:`sqlite3-connection-context-manager`"
 
-#: ../Doc/library/sqlite3.rst:242
+#: ../Doc/library/sqlite3.rst:245
 #, fuzzy
 msgid ":ref:`sqlite3-howto-row-factory`"
 msgstr ":ref:`sqlite3-adapters`"
 
-#: ../Doc/library/sqlite3.rst:244
+#: ../Doc/library/sqlite3.rst:247
 msgid ""
 ":ref:`sqlite3-explanation` for in-depth background on transaction control."
 msgstr ""
 ":ref:`sqlite3-explanation` para obtener información detallada sobre el "
 "control de transacciones.."
 
-#: ../Doc/library/sqlite3.rst:249
+#: ../Doc/library/sqlite3.rst:252
 msgid "Reference"
 msgstr "Referencia"
 
-#: ../Doc/library/sqlite3.rst:257
+#: ../Doc/library/sqlite3.rst:260
 msgid "Module functions"
 msgstr "Funciones del módulo"
 
-#: ../Doc/library/sqlite3.rst:265
+#: ../Doc/library/sqlite3.rst:268
 msgid "Open a connection to an SQLite database."
 msgstr "Abre una conexión con una base de datos SQLite."
 
@@ -349,19 +441,19 @@ msgstr "Abre una conexión con una base de datos SQLite."
 msgid "Parameters"
 msgstr "Parámetros"
 
-#: ../Doc/library/sqlite3.rst:267
+#: ../Doc/library/sqlite3.rst:270
 msgid ""
 "The path to the database file to be opened. You can pass ``\":memory:\"`` to "
 "create an `SQLite database existing only in memory <https://sqlite.org/"
 "inmemorydb.html>`_, and open a connection to it."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:274
+#: ../Doc/library/sqlite3.rst:277
 #, fuzzy
 msgid ""
-"How many seconds the connection should wait before raising an :exc:"
-"`OperationalError` when a table is locked. If another connection opens a "
-"transaction to modify a table, that table will be locked until the "
+"How many seconds the connection should wait before raising "
+"an :exc:`OperationalError` when a table is locked. If another connection "
+"opens a transaction to modify a table, that table will be locked until the "
 "transaction is committed. Default five seconds."
 msgstr ""
 "Cuántos segundos la conexión debe esperar antes de lanzar una excepción si "
@@ -369,38 +461,38 @@ msgstr ""
 "transacción para alterar la base de datos, será bloqueada antes que la "
 "transacción sea confirmada. Por defecto son 5 segundos."
 
-#: ../Doc/library/sqlite3.rst:281
+#: ../Doc/library/sqlite3.rst:284
 msgid ""
 "Control whether and how data types not :ref:`natively supported by SQLite "
 "<sqlite3-types>` are looked up to be converted to Python types, using the "
 "converters registered with :func:`register_converter`. Set it to any "
-"combination (using ``|``, bitwise or) of :const:`PARSE_DECLTYPES` and :const:"
-"`PARSE_COLNAMES` to enable this. Column names takes precedence over declared "
-"types if both flags are set. Types cannot be detected for generated fields "
-"(for example ``max(data)``), even when the *detect_types* parameter is set; :"
-"class:`str` will be returned instead. By default (``0``), type detection is "
-"disabled."
+"combination (using ``|``, bitwise or) of :const:`PARSE_DECLTYPES` "
+"and :const:`PARSE_COLNAMES` to enable this. Column names takes precedence "
+"over declared types if both flags are set. Types cannot be detected for "
+"generated fields (for example ``max(data)``), even when the *detect_types* "
+"parameter is set; :class:`str` will be returned instead. By default (``0``), "
+"type detection is disabled."
 msgstr ""
 "Controla si y cómo los tipos de datos no :ref:`soportados de forma nativa po "
 "SQLite <sqlite3-types>` son buscados para ser convertidos en tipos Python, "
 "usando convertidores registrados con :func:`register_converter`. Se puede "
-"establecer para cualquier combinación (usando ``|``, bit a bit or) de :const:"
-"`PARSE_DECLTYPES` y :const:`PARSE_COLNAMES` para habilitarlo. Los nombres de "
-"columnas tienen prioridad sobre los tipos declarados si se establecen ambos "
-"indicadores. Algunos tipos no pueden ser detectados por campos generados "
-"(por ejemplo ``max(data)``), incluso cuando el parámetro *detect_types* es "
-"establecido; :class:`str` será el retorno en su lugar. Por defecto (``0``), "
-"la detección de tipos está deshabilitada."
+"establecer para cualquier combinación (usando ``|``, bit a bit or) "
+"de :const:`PARSE_DECLTYPES` y :const:`PARSE_COLNAMES` para habilitarlo. Los "
+"nombres de columnas tienen prioridad sobre los tipos declarados si se "
+"establecen ambos indicadores. Algunos tipos no pueden ser detectados por "
+"campos generados (por ejemplo ``max(data)``), incluso cuando el parámetro "
+"*detect_types* es establecido; :class:`str` será el retorno en su lugar. Por "
+"defecto (``0``), la detección de tipos está deshabilitada."
 
-#: ../Doc/library/sqlite3.rst:295
+#: ../Doc/library/sqlite3.rst:298
 #, fuzzy
 msgid ""
-"Control legacy transaction handling behaviour. See :attr:`Connection."
-"isolation_level` and :ref:`sqlite3-transaction-control-isolation-level` for "
-"more information. Can be ``\"DEFERRED\"`` (default), ``\"EXCLUSIVE\"`` or "
-"``\"IMMEDIATE\"``; or ``None`` to disable opening transactions implicitly. "
-"Has no effect unless :attr:`Connection.autocommit` is set to :const:"
-"`~sqlite3.LEGACY_TRANSACTION_CONTROL` (the default)."
+"Control legacy transaction handling behaviour. "
+"See :attr:`Connection.isolation_level` and :ref:`sqlite3-transaction-control-"
+"isolation-level` for more information. Can be ``\"DEFERRED\"`` (default), "
+"``\"EXCLUSIVE\"`` or ``\"IMMEDIATE\"``; or ``None`` to disable opening "
+"transactions implicitly. Has no effect unless :attr:`Connection.autocommit` "
+"is set to :const:`~sqlite3.LEGACY_TRANSACTION_CONTROL` (the default)."
 msgstr ""
 "El :attr:`~Connection.isolation_level` de la conexión, controla si y cómo "
 "las transacciones son implícitamente abiertas. Puede ser ``\"DEFERRED\"`` "
@@ -408,7 +500,7 @@ msgstr ""
 "deshabilitar transacciones abiertas implícitamente. Consulte :ref:`sqlite3-"
 "controlling-transactions` para más información."
 
-#: ../Doc/library/sqlite3.rst:305
+#: ../Doc/library/sqlite3.rst:308
 #, fuzzy
 msgid ""
 "If ``True`` (default), :exc:`ProgrammingError` will be raised if the "
@@ -422,7 +514,7 @@ msgstr ""
 "hilos; de ser así, las operaciones de escritura deben ser serializadas por "
 "el usuario para evitar daños en los datos."
 
-#: ../Doc/library/sqlite3.rst:314
+#: ../Doc/library/sqlite3.rst:317
 msgid ""
 "A custom subclass of :class:`Connection` to create the connection with, if "
 "not the default :class:`Connection` class."
@@ -430,7 +522,7 @@ msgstr ""
 "Una subclase personalizada de :class:`Connection` con la que crear la "
 "conexión, sino la :class:`Connection` será la predeterminada."
 
-#: ../Doc/library/sqlite3.rst:318
+#: ../Doc/library/sqlite3.rst:321
 msgid ""
 "The number of statements that :mod:`!sqlite3` should internally cache for "
 "this connection, to avoid parsing overhead. By default, 128 statements."
@@ -439,7 +531,7 @@ msgstr ""
 "en caché para esta conexión, para evitar la sobrecarga de análisis. El valor "
 "predeterminada, son 128 instrucciones."
 
-#: ../Doc/library/sqlite3.rst:323
+#: ../Doc/library/sqlite3.rst:326
 msgid ""
 "If set to ``True``, *database* is interpreted as a :abbr:`URI (Uniform "
 "Resource Identifier)` with a file path and an optional query string. The "
@@ -453,20 +545,20 @@ msgstr ""
 "``\"file:\"``, y la ruta puede ser relativa o absoluta. La consulta permite "
 "pasar parámetros a SQLite, habilitando varias :ref:`sqlite3-uri-tricks`."
 
-#: ../Doc/library/sqlite3.rst:332
+#: ../Doc/library/sqlite3.rst:335
 msgid ""
-"Control :pep:`249` transaction handling behaviour. See :attr:`Connection."
-"autocommit` and :ref:`sqlite3-transaction-control-autocommit` for more "
-"information. *autocommit* currently defaults to :const:`~sqlite3."
-"LEGACY_TRANSACTION_CONTROL`. The default will change to ``False`` in a "
-"future Python release."
+"Control :pep:`249` transaction handling behaviour. "
+"See :attr:`Connection.autocommit` and :ref:`sqlite3-transaction-control-"
+"autocommit` for more information. *autocommit* currently defaults "
+"to :const:`~sqlite3.LEGACY_TRANSACTION_CONTROL`. The default will change to "
+"``False`` in a future Python release."
 msgstr ""
 
 #: ../Doc/library/sqlite3.rst
 msgid "Return type"
 msgstr "Tipo de retorno"
 
-#: ../Doc/library/sqlite3.rst:343
+#: ../Doc/library/sqlite3.rst:346
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``sqlite3.connect`` with argument "
 "``database``."
@@ -474,7 +566,7 @@ msgstr ""
 "Lanza un :ref:`auditing event <auditing>` ``sqlite3.connect`` con el "
 "argumento ``database``."
 
-#: ../Doc/library/sqlite3.rst:344
+#: ../Doc/library/sqlite3.rst:347
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``sqlite3.connect/handle`` with "
 "argument ``connection_handle``."
@@ -482,27 +574,36 @@ msgstr ""
 "Lanza un :ref:`auditing event <auditing>` ``sqlite3.connect/handle`` con el "
 "argumento ``connection_handle``."
 
-#: ../Doc/library/sqlite3.rst:346
-msgid "The *uri* parameter."
+#: ../Doc/library/sqlite3.rst:349
+#, fuzzy
+msgid "Added the *uri* parameter."
 msgstr "Parámetro *uri*."
 
-#: ../Doc/library/sqlite3.rst:349
+#: ../Doc/library/sqlite3.rst:352
 msgid ""
 "*database* can now also be a :term:`path-like object`, not only a string."
 msgstr ""
 "*database* ahora también puede ser un :term:`path-like object`, no solo una "
 "cadena de caracteres."
 
-#: ../Doc/library/sqlite3.rst:352
-msgid "The ``sqlite3.connect/handle`` auditing event."
-msgstr "El evento de auditoría ``sqlite3.connect/handle``."
-
 #: ../Doc/library/sqlite3.rst:355
 #, fuzzy
-msgid "The *autocommit* parameter."
+msgid "Added the ``sqlite3.connect/handle`` auditing event."
+msgstr "El evento de auditoría ``sqlite3.connect/handle``."
+
+#: ../Doc/library/sqlite3.rst:358
+#, fuzzy
+msgid "Added the *autocommit* parameter."
 msgstr "Parámetro *uri*."
 
-#: ../Doc/library/sqlite3.rst:360
+#: ../Doc/library/sqlite3.rst:361
+msgid ""
+"Positional use of the parameters *timeout*, *detect_types*, "
+"*isolation_level*, *check_same_thread*, *factory*, *cached_statements*, and "
+"*uri* is deprecated. They will become keyword-only parameters in Python 3.15."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:369
 msgid ""
 "Return ``True`` if the string *statement* appears to contain one or more "
 "complete SQL statements. No syntactic verification or parsing of any kind is "
@@ -515,11 +616,19 @@ msgstr ""
 "caracteres literales sin cerrar y que la sentencia se termine con un punto y "
 "coma."
 
-#: ../Doc/library/sqlite3.rst:366
+#: ../Doc/library/sqlite3.rst:375
 msgid "For example:"
 msgstr "Por ejemplo:"
 
-#: ../Doc/library/sqlite3.rst:375
+#: ../Doc/library/sqlite3.rst:377
+msgid ""
+">>> sqlite3.complete_statement(\"SELECT foo FROM bar;\")\n"
+"True\n"
+">>> sqlite3.complete_statement(\"SELECT foo\")\n"
+"False"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:384
 msgid ""
 "This function may be useful during command-line input to determine if the "
 "entered text seems to form a complete SQL statement, or if additional input "
@@ -529,13 +638,13 @@ msgstr ""
 "si los textos introducidos parecen formar una sentencia completa SQL, o si "
 "una entrada adicional se necesita antes de llamar a :meth:`~Cursor.execute`."
 
-#: ../Doc/library/sqlite3.rst:379
+#: ../Doc/library/sqlite3.rst:388
 msgid ""
 "See :func:`!runsource` in :source:`Lib/sqlite3/__main__.py` for real-world "
 "use."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:384
+#: ../Doc/library/sqlite3.rst:393
 msgid ""
 "Enable or disable callback tracebacks. By default you will not get any "
 "tracebacks in user-defined functions, aggregates, converters, authorizer "
@@ -547,18 +656,18 @@ msgstr ""
 "obtendrá ningún *tracebacks* en funciones *aggregates*, *converters*, "
 "autorizador de *callbacks* etc, definidas por el usuario. Si quieres "
 "depurarlas, se puede llamar esta función con *flag* establecida como "
-"``True``. Después se obtendrán *tracebacks* de los *callbacks* en ``sys."
-"stderr``. Usar :const:`False` para deshabilitar la característica de nuevo."
+"``True``. Después se obtendrán *tracebacks* de los *callbacks* en "
+"``sys.stderr``. Usar :const:`False` para deshabilitar la característica de "
+"nuevo."
 
-#: ../Doc/library/sqlite3.rst:391
+#: ../Doc/library/sqlite3.rst:402
 msgid ""
-"Register an :func:`unraisable hook handler <sys.unraisablehook>` for an "
-"improved debug experience:"
+"Errors in user-defined function callbacks are logged as unraisable "
+"exceptions. Use an :func:`unraisable hook handler <sys.unraisablehook>` for "
+"introspection of the failed callback."
 msgstr ""
-"Registra una :func:`unraisable hook handler <sys.unraisablehook>` para una "
-"experiencia de depuración mejorada:"
 
-#: ../Doc/library/sqlite3.rst:417
+#: ../Doc/library/sqlite3.rst:408
 #, fuzzy
 msgid ""
 "Register an *adapter* :term:`callable` to adapt the Python type *type* into "
@@ -571,7 +680,7 @@ msgstr ""
 "único argumento, y debe retornar un valor de un :ref:`tipo que SQLite "
 "entiende de forma nativa <sqlite3-types>`."
 
-#: ../Doc/library/sqlite3.rst:425
+#: ../Doc/library/sqlite3.rst:416
 #, fuzzy
 msgid ""
 "Register the *converter* :term:`callable` to convert SQLite objects of type "
@@ -588,7 +697,7 @@ msgstr ""
 "deseado. Consulte el parámetro *detect_types* de :func:`connect` para más "
 "información en cuanto a cómo funciona la detección de tipos."
 
-#: ../Doc/library/sqlite3.rst:433
+#: ../Doc/library/sqlite3.rst:424
 msgid ""
 "Note: *typename* and the name of the type in your query are matched case-"
 "insensitively."
@@ -596,18 +705,18 @@ msgstr ""
 "Nota: *typename* y el nombre del tipo en tu consulta coinciden sin "
 "distinción entre mayúsculas y minúsculas."
 
-#: ../Doc/library/sqlite3.rst:440
+#: ../Doc/library/sqlite3.rst:431
 msgid "Module constants"
 msgstr "Constantes del módulo"
 
-#: ../Doc/library/sqlite3.rst:444
+#: ../Doc/library/sqlite3.rst:435
 msgid ""
 "Set :attr:`~Connection.autocommit` to this constant to select old style (pre-"
 "Python 3.12) transaction control behaviour. See :ref:`sqlite3-transaction-"
 "control-isolation-level` for more information."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:450
+#: ../Doc/library/sqlite3.rst:441
 msgid ""
 "Pass this flag value to the *detect_types* parameter of :func:`connect` to "
 "look up a converter function by using the type name, parsed from the query "
@@ -619,7 +728,12 @@ msgstr ""
 "nombre de la columna consultada, como la llave de diccionario del conversor. "
 "El nombre del tipo debe estar entre corchetes (``[]``)."
 
-#: ../Doc/library/sqlite3.rst:460
+#: ../Doc/library/sqlite3.rst:447
+msgid ""
+"SELECT p as \"p [point]\" FROM test;  ! will look up converter \"point\""
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:451
 msgid ""
 "This flag may be combined with :const:`PARSE_DECLTYPES` using the ``|`` "
 "(bitwise or) operator."
@@ -627,7 +741,7 @@ msgstr ""
 "Esta flag puede ser combinada con :const:`PARSE_DECLTYPES` usando el "
 "operador ``|`` (*bitwise or*) ."
 
-#: ../Doc/library/sqlite3.rst:465
+#: ../Doc/library/sqlite3.rst:456
 msgid ""
 "Pass this flag value to the *detect_types* parameter of :func:`connect` to "
 "look up a converter function using the declared types for each column. The "
@@ -642,7 +756,16 @@ msgstr ""
 "palabra del tipo declarado como la llave del diccionario conversor. Por "
 "ejemplo:"
 
-#: ../Doc/library/sqlite3.rst:481
+#: ../Doc/library/sqlite3.rst:464
+msgid ""
+"CREATE TABLE test(\n"
+"   i integer primary key,  ! will look up a converter named \"integer\"\n"
+"   p point,                ! will look up a converter named \"point\"\n"
+"   n number(10)            ! will look up a converter named \"number\"\n"
+" )"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:472
 msgid ""
 "This flag may be combined with :const:`PARSE_COLNAMES` using the ``|`` "
 "(bitwise or) operator."
@@ -650,7 +773,7 @@ msgstr ""
 "Esta puede ser combinada con :const:`PARSE_COLNAMES` usando el operador ``|"
 "`` (*bitwise or*)."
 
-#: ../Doc/library/sqlite3.rst:488
+#: ../Doc/library/sqlite3.rst:479
 #, fuzzy
 msgid ""
 "Flags that should be returned by the *authorizer_callback* :term:`callable` "
@@ -659,24 +782,24 @@ msgstr ""
 "Flags que deben ser retornadas por el invocable *authorizer_callback* que se "
 "le pasa a :meth:`Connection.set_authorizer`, para indicar lo siguiente:"
 
-#: ../Doc/library/sqlite3.rst:491
+#: ../Doc/library/sqlite3.rst:482
 msgid "Access is allowed (:const:`!SQLITE_OK`),"
 msgstr "Acceso es permitido (:const:`!SQLITE_OK`),"
 
-#: ../Doc/library/sqlite3.rst:492
+#: ../Doc/library/sqlite3.rst:483
 msgid ""
 "The SQL statement should be aborted with an error (:const:`!SQLITE_DENY`)"
 msgstr ""
 "La sentencia SQL debería ser abortada con un error (:const:`!SQLITE_DENY`)"
 
-#: ../Doc/library/sqlite3.rst:493
+#: ../Doc/library/sqlite3.rst:484
 msgid ""
 "The column should be treated as a ``NULL`` value (:const:`!SQLITE_IGNORE`)"
 msgstr ""
 "La columna debería ser tratada como un valor ``NULL`` (:const:`!"
 "SQLITE_IGNORE`)"
 
-#: ../Doc/library/sqlite3.rst:497
+#: ../Doc/library/sqlite3.rst:488
 msgid ""
 "String constant stating the supported DB-API level. Required by the DB-API. "
 "Hard-coded to ``\"2.0\"``."
@@ -684,7 +807,7 @@ msgstr ""
 "Cadena de caracteres constante que indica el nivel DB-API soportado. "
 "Requerido por DB-API. Codificado de forma rígida en ``\"2.0\"``."
 
-#: ../Doc/library/sqlite3.rst:502
+#: ../Doc/library/sqlite3.rst:493
 msgid ""
 "String constant stating the type of parameter marker formatting expected by "
 "the :mod:`!sqlite3` module. Required by the DB-API. Hard-coded to "
@@ -694,26 +817,26 @@ msgstr ""
 "parámetros esperado por el módulo :mod:`!sqlite3`. Requerido por DB-API. "
 "Codificado de forma rígida en ``\"qmark\"``."
 
-#: ../Doc/library/sqlite3.rst:508
+#: ../Doc/library/sqlite3.rst:499
 msgid "The ``named`` DB-API parameter style is also supported."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:512
+#: ../Doc/library/sqlite3.rst:503
 msgid ""
 "Version number of the runtime SQLite library as a :class:`string <str>`."
 msgstr ""
-"El número de versión de la librería SQLite en tiempo de ejecución, como una :"
-"class:`cadena de caracteres <str>`."
+"El número de versión de la librería SQLite en tiempo de ejecución, como "
+"una :class:`cadena de caracteres <str>`."
 
-#: ../Doc/library/sqlite3.rst:516
+#: ../Doc/library/sqlite3.rst:507
 msgid ""
-"Version number of the runtime SQLite library as a :class:`tuple` of :class:"
-"`integers <int>`."
+"Version number of the runtime SQLite library as a :class:`tuple` "
+"of :class:`integers <int>`."
 msgstr ""
-"El número de versión de la librería SQLite en tiempo de ejecución, como una :"
-"class:`tupla <tuple>` de :class:`enteros <int>`."
+"El número de versión de la librería SQLite en tiempo de ejecución, como "
+"una :class:`tupla <tuple>` de :class:`enteros <int>`."
 
-#: ../Doc/library/sqlite3.rst:521
+#: ../Doc/library/sqlite3.rst:512
 msgid ""
 "Integer constant required by the DB-API 2.0, stating the level of thread "
 "safety the :mod:`!sqlite3` module supports. This attribute is set based on "
@@ -726,7 +849,7 @@ msgstr ""
 "threadsafe.html>`_ por defecto con el que la biblioteca SQLite se compila. "
 "Los modos de subprocesamiento de SQLite son:"
 
-#: ../Doc/library/sqlite3.rst:526
+#: ../Doc/library/sqlite3.rst:517
 msgid ""
 "**Single-thread**: In this mode, all mutexes are disabled and SQLite is "
 "unsafe to use in more than a single thread at once."
@@ -734,7 +857,7 @@ msgstr ""
 "**Single-thread**: En este modo, todos los *mutexes* son deshabilitados y no "
 "es seguro usar SQLite en más de un solo hilo a la vez."
 
-#: ../Doc/library/sqlite3.rst:528
+#: ../Doc/library/sqlite3.rst:519
 msgid ""
 "**Multi-thread**: In this mode, SQLite can be safely used by multiple "
 "threads provided that no single database connection is used simultaneously "
@@ -744,7 +867,7 @@ msgstr ""
 "dado que que ninguna conexión de base de datos sea usada simultáneamente en "
 "dos o más hilos."
 
-#: ../Doc/library/sqlite3.rst:531
+#: ../Doc/library/sqlite3.rst:522
 msgid ""
 "**Serialized**: In serialized mode, SQLite can be safely used by multiple "
 "threads with no restriction."
@@ -752,7 +875,7 @@ msgstr ""
 "**Serialized**: En el modo serializado, es seguro usar SQLite por varios "
 "hilos sin restricción."
 
-#: ../Doc/library/sqlite3.rst:534
+#: ../Doc/library/sqlite3.rst:525
 msgid ""
 "The mappings from SQLite threading modes to DB-API 2.0 threadsafety levels "
 "are as follows:"
@@ -760,69 +883,69 @@ msgstr ""
 "Las asignaciones de los modos de subprocesos SQLite a los niveles de "
 "seguridad de subprocesos de DB-API 2.0 son las siguientes:"
 
-#: ../Doc/library/sqlite3.rst:538
+#: ../Doc/library/sqlite3.rst:529
 msgid "SQLite threading mode"
 msgstr "Modo de subprocesamiento SQLite"
 
-#: ../Doc/library/sqlite3.rst:538
-msgid "`threadsafety`_"
-msgstr "`threadsafety`_"
+#: ../Doc/library/sqlite3.rst:529
+msgid ":pep:`threadsafety <0249#threadsafety>`"
+msgstr ""
 
-#: ../Doc/library/sqlite3.rst:538
+#: ../Doc/library/sqlite3.rst:529
 msgid "`SQLITE_THREADSAFE`_"
 msgstr "`SQLITE_THREADSAFE`_"
 
-#: ../Doc/library/sqlite3.rst:538
+#: ../Doc/library/sqlite3.rst:529
 msgid "DB-API 2.0 meaning"
 msgstr "Significado de DB-API 2.0"
 
-#: ../Doc/library/sqlite3.rst:541
+#: ../Doc/library/sqlite3.rst:532
 msgid "single-thread"
 msgstr "single-thread"
 
-#: ../Doc/library/sqlite3.rst:541
+#: ../Doc/library/sqlite3.rst:532
 msgid "0"
 msgstr "0"
 
-#: ../Doc/library/sqlite3.rst:541
+#: ../Doc/library/sqlite3.rst:532
 msgid "Threads may not share the module"
 msgstr "Hilos no pueden compartir el módulo"
 
-#: ../Doc/library/sqlite3.rst:544
+#: ../Doc/library/sqlite3.rst:535
 msgid "multi-thread"
 msgstr "multi-thread"
 
-#: ../Doc/library/sqlite3.rst:544 ../Doc/library/sqlite3.rst:547
+#: ../Doc/library/sqlite3.rst:535 ../Doc/library/sqlite3.rst:538
 msgid "1"
 msgstr "1"
 
-#: ../Doc/library/sqlite3.rst:544
+#: ../Doc/library/sqlite3.rst:535
 msgid "2"
 msgstr "2"
 
-#: ../Doc/library/sqlite3.rst:544
+#: ../Doc/library/sqlite3.rst:535
 msgid "Threads may share the module, but not connections"
 msgstr "Hilos pueden compartir el módulo, pero no conexiones"
 
-#: ../Doc/library/sqlite3.rst:547
+#: ../Doc/library/sqlite3.rst:538
 msgid "serialized"
 msgstr "serialized"
 
-#: ../Doc/library/sqlite3.rst:547
+#: ../Doc/library/sqlite3.rst:538
 msgid "3"
 msgstr "3"
 
-#: ../Doc/library/sqlite3.rst:547
+#: ../Doc/library/sqlite3.rst:538
 msgid "Threads may share the module, connections and cursors"
 msgstr "Hilos pueden compartir el módulo, conexiones y cursores"
 
-#: ../Doc/library/sqlite3.rst:554
+#: ../Doc/library/sqlite3.rst:544
 msgid "Set *threadsafety* dynamically instead of hard-coding it to ``1``."
 msgstr ""
 "Establece *threadsafety* dinámicamente en vez de codificarlo rígidamente a "
 "``1``."
 
-#: ../Doc/library/sqlite3.rst:559
+#: ../Doc/library/sqlite3.rst:549
 msgid ""
 "Version number of this module as a :class:`string <str>`. This is not the "
 "version of the SQLite library."
@@ -830,78 +953,86 @@ msgstr ""
 "El número de versión de este módulo, como una :class:`cadena de caracteres "
 "<str>`. Este no es la versión de la librería SQLite."
 
-#: ../Doc/library/sqlite3.rst:565 ../Doc/library/sqlite3.rst:575
+#: ../Doc/library/sqlite3.rst:552 ../Doc/library/sqlite3.rst:562
 msgid ""
 "This constant used to reflect the version number of the ``pysqlite`` "
 "package, a third-party library which used to upstream changes to :mod:`!"
 "sqlite3`. Today, it carries no meaning or practical value."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:569
+#: ../Doc/library/sqlite3.rst:559
 msgid ""
 "Version number of this module as a :class:`tuple` of :class:`integers "
 "<int>`. This is not the version of the SQLite library."
 msgstr ""
-"El número de versión de este módulo, como una :class:`tupla <tuple>` de :"
-"class:`enteros <int>`. Este no es la versión de la librería SQLite."
+"El número de versión de este módulo, como una :class:`tupla <tuple>` "
+"de :class:`enteros <int>`. Este no es la versión de la librería SQLite."
 
-#: ../Doc/library/sqlite3.rst:596
+#: ../Doc/library/sqlite3.rst:586
 msgid ""
-"These constants are used for the :meth:`Connection.setconfig` and :meth:"
-"`~Connection.getconfig` methods."
+"These constants are used for the :meth:`Connection.setconfig` "
+"and :meth:`~Connection.getconfig` methods."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:599
+#: ../Doc/library/sqlite3.rst:589
 msgid ""
 "The availability of these constants varies depending on the version of "
 "SQLite Python was compiled with."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:606
+#: ../Doc/library/sqlite3.rst:596
 msgid "https://www.sqlite.org/c3ref/c_dbconfig_defensive.html"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:607
+#: ../Doc/library/sqlite3.rst:597
 msgid "SQLite docs: Database Connection Configuration Options"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:613
+#: ../Doc/library/sqlite3.rst:603
 msgid "Connection objects"
 msgstr "Objetos de conexión"
 
-#: ../Doc/library/sqlite3.rst:617
+#: ../Doc/library/sqlite3.rst:607
 msgid ""
 "Each open SQLite database is represented by a ``Connection`` object, which "
-"is created using :func:`sqlite3.connect`. Their main purpose is creating :"
-"class:`Cursor` objects, and :ref:`sqlite3-controlling-transactions`."
+"is created using :func:`sqlite3.connect`. Their main purpose is "
+"creating :class:`Cursor` objects, and :ref:`sqlite3-controlling-"
+"transactions`."
 msgstr ""
 "Cada base de datos SQLite abierta es representada por un objeto "
 "``Connection``, el cual se crea usando :func:`sqlite3.connect`. Su objetivo "
 "principal es crear objetos :class:`Cursor`, y :ref:`sqlite3-controlling-"
 "transactions`."
 
-#: ../Doc/library/sqlite3.rst:624
+#: ../Doc/library/sqlite3.rst:614
 msgid ":ref:`sqlite3-connection-shortcuts`"
 msgstr ":ref:`sqlite3-connection-shortcuts`"
 
-#: ../Doc/library/sqlite3.rst:627
+#: ../Doc/library/sqlite3.rst:620
+msgid ""
+"A :exc:`ResourceWarning` is emitted if :meth:`close` is not called before "
+"a :class:`!Connection` object is deleted."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:623
 msgid "An SQLite database connection has the following attributes and methods:"
 msgstr ""
 "Una conexión a una base de datos SQLite tiene los siguientes atributos y "
 "métodos:"
 
-#: ../Doc/library/sqlite3.rst:631
+#: ../Doc/library/sqlite3.rst:627
 #, fuzzy
 msgid ""
 "Create and return a :class:`Cursor` object. The cursor method accepts a "
-"single optional parameter *factory*. If supplied, this must be a :term:"
-"`callable` returning an instance of :class:`Cursor` or its subclasses."
+"single optional parameter *factory*. If supplied, this must be "
+"a :term:`callable` returning an instance of :class:`Cursor` or its "
+"subclasses."
 msgstr ""
 "Crea y retorna un objeto :class:`Cursor`. El método cursor acepta un único "
 "parámetro opcional *factory*. Si es agregado, éste debe ser un invocable que "
 "retorna una instancia de :class:`Cursor` o sus subclases."
 
-#: ../Doc/library/sqlite3.rst:638
+#: ../Doc/library/sqlite3.rst:634
 msgid ""
 "Open a :class:`Blob` handle to an existing :abbr:`BLOB (Binary Large "
 "OBject)`."
@@ -909,19 +1040,19 @@ msgstr ""
 "Abre una :class:`Blob` para manejar un :abbr:`BLOB (Binary Large OBject)` "
 "existente."
 
-#: ../Doc/library/sqlite3.rst:641
+#: ../Doc/library/sqlite3.rst:637
 msgid "The name of the table where the blob is located."
 msgstr "El nombre de la tabla donde el *blob* está ubicado."
 
-#: ../Doc/library/sqlite3.rst:644
+#: ../Doc/library/sqlite3.rst:640
 msgid "The name of the column where the blob is located."
 msgstr "El nombre de la columna donde el *blob* está ubicado."
 
-#: ../Doc/library/sqlite3.rst:647
+#: ../Doc/library/sqlite3.rst:643
 msgid "The name of the row where the blob is located."
 msgstr "El nombre de la fila donde el *blob* está ubicado."
 
-#: ../Doc/library/sqlite3.rst:650
+#: ../Doc/library/sqlite3.rst:646
 msgid ""
 "Set to ``True`` if the blob should be opened without write permissions. "
 "Defaults to ``False``."
@@ -929,7 +1060,7 @@ msgstr ""
 "Se define como ``True`` si el *blob* deberá ser abierto sin permisos de "
 "escritura. El valor por defecto es ``False``."
 
-#: ../Doc/library/sqlite3.rst:655
+#: ../Doc/library/sqlite3.rst:651
 msgid ""
 "The name of the database where the blob is located. Defaults to ``\"main\"``."
 msgstr ""
@@ -940,11 +1071,11 @@ msgstr ""
 msgid "Raises"
 msgstr "Lanza"
 
-#: ../Doc/library/sqlite3.rst:659
+#: ../Doc/library/sqlite3.rst:655
 msgid "When trying to open a blob in a ``WITHOUT ROWID`` table."
 msgstr "Cuando se intenta abrir un *blob* en una tabla ``WITHOUT ROWID``."
 
-#: ../Doc/library/sqlite3.rst:666
+#: ../Doc/library/sqlite3.rst:662
 msgid ""
 "The blob size cannot be changed using the :class:`Blob` class. Use the SQL "
 "function ``zeroblob`` to create a blob with a fixed size."
@@ -952,23 +1083,23 @@ msgstr ""
 "El tamaño de un *blob* no puede ser cambiado usando la clase :class:`Blob`. "
 "Usa la función de SQL ``zeroblob`` para crear un *blob* con un tamaño fijo."
 
-#: ../Doc/library/sqlite3.rst:673
+#: ../Doc/library/sqlite3.rst:669
 msgid ""
 "Commit any pending transaction to the database. If :attr:`autocommit` is "
-"``True``, or there is no open transaction, this method does nothing. If :"
-"attr:`!autocommit` is ``False``, a new transaction is implicitly opened if a "
-"pending transaction was committed by this method."
+"``True``, or there is no open transaction, this method does nothing. "
+"If :attr:`!autocommit` is ``False``, a new transaction is implicitly opened "
+"if a pending transaction was committed by this method."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:681
+#: ../Doc/library/sqlite3.rst:677
 msgid ""
 "Roll back to the start of any pending transaction. If :attr:`autocommit` is "
-"``True``, or there is no open transaction, this method does nothing. If :"
-"attr:`!autocommit` is ``False``, a new transaction is implicitly opened if a "
-"pending transaction was rolled back by this method."
+"``True``, or there is no open transaction, this method does nothing. "
+"If :attr:`!autocommit` is ``False``, a new transaction is implicitly opened "
+"if a pending transaction was rolled back by this method."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:689
+#: ../Doc/library/sqlite3.rst:685
 #, fuzzy
 msgid ""
 "Close the database connection. If :attr:`autocommit` is ``False``, any "
@@ -981,7 +1112,7 @@ msgstr ""
 "pendiente, esta no será guardada; asegúrese de :meth:`commit` antes de "
 "cerrar la conexión, para evitar perder los cambios realizados."
 
-#: ../Doc/library/sqlite3.rst:699
+#: ../Doc/library/sqlite3.rst:695
 msgid ""
 "Create a new :class:`Cursor` object and call :meth:`~Cursor.execute` on it "
 "with the given *sql* and *parameters*. Return the new cursor object."
@@ -989,7 +1120,7 @@ msgstr ""
 "Crea un nuevo objeto :class:`Cursor` y llama :meth:`~Cursor.execute` con los "
 "parámetros y el SQL dados. Retorna el nuevo objeto cursor."
 
-#: ../Doc/library/sqlite3.rst:705
+#: ../Doc/library/sqlite3.rst:701
 msgid ""
 "Create a new :class:`Cursor` object and call :meth:`~Cursor.executemany` on "
 "it with the given *sql* and *parameters*. Return the new cursor object."
@@ -997,7 +1128,7 @@ msgstr ""
 "Crea una nueva :class:`Cursor` object and call :meth:`~Cursor.executemany` "
 "con los parámetros y el SQL dados. Retorna el nuevo objeto cursor."
 
-#: ../Doc/library/sqlite3.rst:711
+#: ../Doc/library/sqlite3.rst:707
 msgid ""
 "Create a new :class:`Cursor` object and call :meth:`~Cursor.executescript` "
 "on it with the given *sql_script*. Return the new cursor object."
@@ -1005,15 +1136,15 @@ msgstr ""
 "Crea una nueva :class:`Cursor` object and call :meth:`~Cursor.executescript` "
 "con el *sql_script* dado. Retorna el nuevo objeto cursor."
 
-#: ../Doc/library/sqlite3.rst:717
+#: ../Doc/library/sqlite3.rst:713
 msgid "Create or remove a user-defined SQL function."
 msgstr "Crea o elimina una función SQL definida por el usuario."
 
-#: ../Doc/library/sqlite3.rst:719
+#: ../Doc/library/sqlite3.rst:715
 msgid "The name of the SQL function."
 msgstr "El nombre de la función SQL."
 
-#: ../Doc/library/sqlite3.rst:722
+#: ../Doc/library/sqlite3.rst:718
 msgid ""
 "The number of arguments the SQL function can accept. If ``-1``, it may take "
 "any number of arguments."
@@ -1021,7 +1152,7 @@ msgstr ""
 "El número de argumentos que la función SQL puede aceptar. Si es ``-1``, "
 "podrá entonces recibir cualquier cantidad de argumentos."
 
-#: ../Doc/library/sqlite3.rst:726
+#: ../Doc/library/sqlite3.rst:722
 #, fuzzy
 msgid ""
 "A :term:`callable` that is called when the SQL function is invoked. The "
@@ -1033,7 +1164,7 @@ msgstr ""
 "<sqlite3-types>`. Se establece como ``None`` para eliminar una función SQL "
 "existente."
 
-#: ../Doc/library/sqlite3.rst:733
+#: ../Doc/library/sqlite3.rst:729
 msgid ""
 "If ``True``, the created SQL function is marked as `deterministic <https://"
 "sqlite.org/deterministic.html>`_, which allows SQLite to perform additional "
@@ -1043,30 +1174,45 @@ msgstr ""
 "`determinista <https://sqlite.org/deterministic.html>`_, lo cual permite a "
 "SQLite realizar optimizaciones adicionales."
 
-#: ../Doc/library/sqlite3.rst:738
-msgid "If *deterministic* is used with SQLite versions older than 3.8.3."
-msgstr "Si *deterministic* se usa con versiones anteriores a SQLite 3.8.3."
-
-#: ../Doc/library/sqlite3.rst:741
-msgid "The *deterministic* parameter."
+#: ../Doc/library/sqlite3.rst:734
+#, fuzzy
+msgid "Added the *deterministic* parameter."
 msgstr "El parámetro *deterministic*."
 
-#: ../Doc/library/sqlite3.rst:744 ../Doc/library/sqlite3.rst:782
-#: ../Doc/library/sqlite3.rst:845 ../Doc/library/sqlite3.rst:1115
-#: ../Doc/library/sqlite3.rst:1415 ../Doc/library/sqlite3.rst:1552
-#: ../Doc/library/sqlite3.rst:1591
+#: ../Doc/library/sqlite3.rst:737 ../Doc/library/sqlite3.rst:781
+#: ../Doc/library/sqlite3.rst:849 ../Doc/library/sqlite3.rst:1128
+#: ../Doc/library/sqlite3.rst:1550 ../Doc/library/sqlite3.rst:1593
 msgid "Example:"
 msgstr "Ejemplo:"
 
-#: ../Doc/library/sqlite3.rst:760
+#: ../Doc/library/sqlite3.rst:739
+msgid ""
+">>> import hashlib\n"
+">>> def md5sum(t):\n"
+"...     return hashlib.md5(t).hexdigest()\n"
+">>> con = sqlite3.connect(\":memory:\")\n"
+">>> con.create_function(\"md5\", 1, md5sum)\n"
+">>> for row in con.execute(\"SELECT md5(?)\", (b\"foo\",)):\n"
+"...     print(row)\n"
+"('acbd18db4cc2f85cedef654fccc4a4d8',)\n"
+">>> con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:753
+msgid ""
+"Passing *name*, *narg*, and *func* as keyword arguments is deprecated. These "
+"parameters will become positional-only in Python 3.15."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:759
 msgid "Create or remove a user-defined SQL aggregate function."
 msgstr "Crea o elimina una función agregada SQL definida por el usuario."
 
-#: ../Doc/library/sqlite3.rst:762
+#: ../Doc/library/sqlite3.rst:761
 msgid "The name of the SQL aggregate function."
 msgstr "El nombre de la función agregada SQL."
 
-#: ../Doc/library/sqlite3.rst:765
+#: ../Doc/library/sqlite3.rst:764
 msgid ""
 "The number of arguments the SQL aggregate function can accept. If ``-1``, it "
 "may take any number of arguments."
@@ -1074,7 +1220,7 @@ msgstr ""
 "El número de argumentos que la función agregada SQL puede aceptar. Si es "
 "``-1``, podrá entonces recibir cualquier cantidad de argumentos."
 
-#: ../Doc/library/sqlite3.rst:769
+#: ../Doc/library/sqlite3.rst:768
 msgid ""
 "A class must implement the following methods:  * ``step()``: Add a row to "
 "the aggregate. * ``finalize()``: Return the final result of the aggregate "
@@ -1089,23 +1235,23 @@ msgstr ""
 "es controlado por *n_arg*. Establece ``None`` para eliminar una función "
 "agregada SQL existente."
 
-#: ../Doc/library/sqlite3.rst:770
+#: ../Doc/library/sqlite3.rst:769
 msgid "A class must implement the following methods:"
 msgstr "Una clase debe implementar los siguiente métodos:"
 
-#: ../Doc/library/sqlite3.rst:772
+#: ../Doc/library/sqlite3.rst:771
 msgid "``step()``: Add a row to the aggregate."
 msgstr "``step()``: Agrega una fila al *aggregate*."
 
-#: ../Doc/library/sqlite3.rst:773 ../Doc/library/sqlite3.rst:829
+#: ../Doc/library/sqlite3.rst:772 ../Doc/library/sqlite3.rst:833
 msgid ""
 "``finalize()``: Return the final result of the aggregate as :ref:`a type "
 "natively supported by SQLite <sqlite3-types>`."
 msgstr ""
-"``finalize()``: Retorna el final del resultado del aggregate como una :ref:"
-"`un tipo soportado nativamente por SQLite <sqlite3-types>`."
+"``finalize()``: Retorna el final del resultado del aggregate como "
+"una :ref:`un tipo soportado nativamente por SQLite <sqlite3-types>`."
 
-#: ../Doc/library/sqlite3.rst:776
+#: ../Doc/library/sqlite3.rst:775
 msgid ""
 "The number of arguments that the ``step()`` method must accept is controlled "
 "by *n_arg*."
@@ -1113,20 +1259,49 @@ msgstr ""
 "La cantidad de argumentos que el método ``step()`` acepta es controlado por "
 "*n_arg*."
 
-#: ../Doc/library/sqlite3.rst:779
+#: ../Doc/library/sqlite3.rst:778
 msgid "Set to ``None`` to remove an existing SQL aggregate function."
 msgstr "Establece ``None`` para eliminar una función agregada SQL existente."
 
-#: ../Doc/library/sqlite3.rst:814
+#: ../Doc/library/sqlite3.rst:783
+msgid ""
+"class MySum:\n"
+"    def __init__(self):\n"
+"        self.count = 0\n"
+"\n"
+"    def step(self, value):\n"
+"        self.count += value\n"
+"\n"
+"    def finalize(self):\n"
+"        return self.count\n"
+"\n"
+"con = sqlite3.connect(\":memory:\")\n"
+"con.create_aggregate(\"mysum\", 1, MySum)\n"
+"cur = con.execute(\"CREATE TABLE test(i)\")\n"
+"cur.execute(\"INSERT INTO test(i) VALUES(1)\")\n"
+"cur.execute(\"INSERT INTO test(i) VALUES(2)\")\n"
+"cur.execute(\"SELECT mysum(i) FROM test\")\n"
+"print(cur.fetchone()[0])\n"
+"\n"
+"con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:812
+msgid ""
+"Passing *name*, *n_arg*, and *aggregate_class* as keyword arguments is "
+"deprecated. These parameters will become positional-only in Python 3.15."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:818
 msgid "Create or remove a user-defined aggregate window function."
 msgstr ""
 "Crea o elimina una función agregada de ventana definida por el usuario."
 
-#: ../Doc/library/sqlite3.rst:816
+#: ../Doc/library/sqlite3.rst:820
 msgid "The name of the SQL aggregate window function to create or remove."
 msgstr "El nombre de la función agregada de ventana a ser creada o eliminada."
 
-#: ../Doc/library/sqlite3.rst:819
+#: ../Doc/library/sqlite3.rst:823
 msgid ""
 "The number of arguments the SQL aggregate window function can accept. If "
 "``-1``, it may take any number of arguments."
@@ -1134,7 +1309,7 @@ msgstr ""
 "La cantidad de argumentos que la función agregada de ventana SQL acepta. Si "
 "es ``-1``, podrá entonces recibir cualquier cantidad de argumentos."
 
-#: ../Doc/library/sqlite3.rst:823
+#: ../Doc/library/sqlite3.rst:827
 msgid ""
 "A class that must implement the following methods:  * ``step()``: Add a row "
 "to the current window. * ``value()``: Return the current value of the "
@@ -1154,23 +1329,23 @@ msgstr ""
 "controlados por *num_params*. Establece ``None`` para eliminar una función "
 "agregada de ventana SQL."
 
-#: ../Doc/library/sqlite3.rst:824
+#: ../Doc/library/sqlite3.rst:828
 msgid "A class that must implement the following methods:"
 msgstr "Una clase debe implementar los siguientes métodos:"
 
-#: ../Doc/library/sqlite3.rst:826
+#: ../Doc/library/sqlite3.rst:830
 msgid "``step()``: Add a row to the current window."
 msgstr "``step()``: Agrega una fila a la ventana actual."
 
-#: ../Doc/library/sqlite3.rst:827
+#: ../Doc/library/sqlite3.rst:831
 msgid "``value()``: Return the current value of the aggregate."
 msgstr "``value()``: Retorna el valor actual al *aggregate*."
 
-#: ../Doc/library/sqlite3.rst:828
+#: ../Doc/library/sqlite3.rst:832
 msgid "``inverse()``: Remove a row from the current window."
 msgstr "``inverse()``: Elimina una fila de la ventana actual."
 
-#: ../Doc/library/sqlite3.rst:832
+#: ../Doc/library/sqlite3.rst:836
 msgid ""
 "The number of arguments that the ``step()`` and ``value()`` methods must "
 "accept is controlled by *num_params*."
@@ -1178,13 +1353,13 @@ msgstr ""
 "La cantidad de argumentos que los métodos ``step()`` y ``value()`` pueden "
 "aceptar son controlados por *num_params*."
 
-#: ../Doc/library/sqlite3.rst:835
+#: ../Doc/library/sqlite3.rst:839
 msgid "Set to ``None`` to remove an existing SQL aggregate window function."
 msgstr ""
 "Establece ``None`` para eliminar una función agregada de ventana SQL "
 "existente."
 
-#: ../Doc/library/sqlite3.rst:837
+#: ../Doc/library/sqlite3.rst:841
 msgid ""
 "If used with a version of SQLite older than 3.25.0, which does not support "
 "aggregate window functions."
@@ -1192,7 +1367,55 @@ msgstr ""
 "Si es usado con una versión de SQLite inferior a 3.25.0, la cual no soporte "
 "funciones agregadas de ventana."
 
-#: ../Doc/library/sqlite3.rst:900
+#: ../Doc/library/sqlite3.rst:851
+msgid ""
+"# Example taken from https://www.sqlite.org/windowfunctions.html#udfwinfunc\n"
+"class WindowSumInt:\n"
+"    def __init__(self):\n"
+"        self.count = 0\n"
+"\n"
+"    def step(self, value):\n"
+"        \"\"\"Add a row to the current window.\"\"\"\n"
+"        self.count += value\n"
+"\n"
+"    def value(self):\n"
+"        \"\"\"Return the current value of the aggregate.\"\"\"\n"
+"        return self.count\n"
+"\n"
+"    def inverse(self, value):\n"
+"        \"\"\"Remove a row from the current window.\"\"\"\n"
+"        self.count -= value\n"
+"\n"
+"    def finalize(self):\n"
+"        \"\"\"Return the final value of the aggregate.\n"
+"\n"
+"        Any clean-up actions should be placed here.\n"
+"        \"\"\"\n"
+"        return self.count\n"
+"\n"
+"\n"
+"con = sqlite3.connect(\":memory:\")\n"
+"cur = con.execute(\"CREATE TABLE test(x, y)\")\n"
+"values = [\n"
+"    (\"a\", 4),\n"
+"    (\"b\", 5),\n"
+"    (\"c\", 3),\n"
+"    (\"d\", 8),\n"
+"    (\"e\", 1),\n"
+"]\n"
+"cur.executemany(\"INSERT INTO test VALUES(?, ?)\", values)\n"
+"con.create_window_function(\"sumint\", 1, WindowSumInt)\n"
+"cur.execute(\"\"\"\n"
+"    SELECT x, sumint(y) OVER (\n"
+"        ORDER BY x ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING\n"
+"    ) AS sum_y\n"
+"    FROM test ORDER BY x\n"
+"\"\"\")\n"
+"print(cur.fetchall())\n"
+"con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:905
 msgid ""
 "Create a collation named *name* using the collating function *callable*. "
 "*callable* is passed two :class:`string <str>` arguments, and it should "
@@ -1202,28 +1425,49 @@ msgstr ""
 "A *callable* se le pasan dos argumentos :class:`string <str>`, y este "
 "debería retornar un :class:`entero <int>`:"
 
-#: ../Doc/library/sqlite3.rst:904
+#: ../Doc/library/sqlite3.rst:909
 msgid "``1`` if the first is ordered higher than the second"
 msgstr "``1`` si el primero es ordenado más alto que el segundo"
 
-#: ../Doc/library/sqlite3.rst:905
+#: ../Doc/library/sqlite3.rst:910
 msgid "``-1`` if the first is ordered lower than the second"
 msgstr "``-1`` si el primero es ordenado más pequeño que el segundo"
 
-#: ../Doc/library/sqlite3.rst:906
+#: ../Doc/library/sqlite3.rst:911
 msgid "``0`` if they are ordered equal"
 msgstr "``0`` si están ordenados de manera igual"
 
-#: ../Doc/library/sqlite3.rst:908
+#: ../Doc/library/sqlite3.rst:913
 msgid "The following example shows a reverse sorting collation:"
 msgstr "El siguiente ejemplo muestra una ordenación de colación inversa:"
 
-#: ../Doc/library/sqlite3.rst:936
+#: ../Doc/library/sqlite3.rst:915
+msgid ""
+"def collate_reverse(string1, string2):\n"
+"    if string1 == string2:\n"
+"        return 0\n"
+"    elif string1 < string2:\n"
+"        return 1\n"
+"    else:\n"
+"        return -1\n"
+"\n"
+"con = sqlite3.connect(\":memory:\")\n"
+"con.create_collation(\"reverse\", collate_reverse)\n"
+"\n"
+"cur = con.execute(\"CREATE TABLE test(x)\")\n"
+"cur.executemany(\"INSERT INTO test(x) VALUES(?)\", [(\"a\",), (\"b\",)])\n"
+"cur.execute(\"SELECT x FROM test ORDER BY x COLLATE reverse\")\n"
+"for row in cur:\n"
+"    print(row)\n"
+"con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:941
 msgid "Remove a collation function by setting *callable* to ``None``."
 msgstr ""
 "Elimina una función de colación al establecer el *callable* como ``None``."
 
-#: ../Doc/library/sqlite3.rst:938
+#: ../Doc/library/sqlite3.rst:943
 msgid ""
 "The collation name can contain any Unicode character.  Earlier, only ASCII "
 "characters were allowed."
@@ -1231,25 +1475,25 @@ msgstr ""
 "El nombre de la colación puede contener cualquier caracter Unicode. "
 "Anteriormente, solamente caracteres ASCII eran permitidos."
 
-#: ../Doc/library/sqlite3.rst:945
+#: ../Doc/library/sqlite3.rst:950
 #, fuzzy
 msgid ""
 "Call this method from a different thread to abort any queries that might be "
-"executing on the connection. Aborted queries will raise an :exc:"
-"`OperationalError`."
+"executing on the connection. Aborted queries will raise "
+"an :exc:`OperationalError`."
 msgstr ""
 "Se puede llamar este método desde un hilo diferente para abortar cualquier "
 "consulta que pueda estar ejecutándose en la conexión. Consultas abortadas "
 "lanzaran una excepción."
 
-#: ../Doc/library/sqlite3.rst:952
+#: ../Doc/library/sqlite3.rst:957
 #, fuzzy
 msgid ""
 "Register :term:`callable` *authorizer_callback* to be invoked for each "
 "attempt to access a column of a table in the database. The callback should "
-"return one of :const:`SQLITE_OK`, :const:`SQLITE_DENY`, or :const:"
-"`SQLITE_IGNORE` to signal how access to the column should be handled by the "
-"underlying SQLite library."
+"return one of :const:`SQLITE_OK`, :const:`SQLITE_DENY`, "
+"or :const:`SQLITE_IGNORE` to signal how access to the column should be "
+"handled by the underlying SQLite library."
 msgstr ""
 "Registra un invocable *authorizer_callback* que será invocado por cada "
 "intento de acceso a la columna de la tabla en la base de datos. La "
@@ -1257,7 +1501,7 @@ msgstr ""
 "un :const:`SQLITE_IGNORE` para indicar cómo el acceso a la columna deberá "
 "ser manipulado por las capas inferiores de la biblioteca SQLite."
 
-#: ../Doc/library/sqlite3.rst:959
+#: ../Doc/library/sqlite3.rst:964
 msgid ""
 "The first argument to the callback signifies what kind of operation is to be "
 "authorized. The second and third argument will be arguments or ``None`` "
@@ -1274,7 +1518,7 @@ msgstr ""
 "intentos de acceso o ``None`` si este intento de acceso es directo desde el "
 "código SQL de entrada."
 
-#: ../Doc/library/sqlite3.rst:966
+#: ../Doc/library/sqlite3.rst:971
 msgid ""
 "Please consult the SQLite documentation about the possible values for the "
 "first argument and the meaning of the second and third argument depending on "
@@ -1286,16 +1530,22 @@ msgstr ""
 "dependiendo del primero. Todas las constantes necesarias están disponibles "
 "en el módulo :mod:`!sqlite3`."
 
-#: ../Doc/library/sqlite3.rst:970
+#: ../Doc/library/sqlite3.rst:975
 msgid "Passing ``None`` as *authorizer_callback* will disable the authorizer."
 msgstr ""
 "Pasando ``None`` como *authorizer_callback* deshabilitará el autorizador."
 
-#: ../Doc/library/sqlite3.rst:972
+#: ../Doc/library/sqlite3.rst:977
 msgid "Added support for disabling the authorizer using ``None``."
 msgstr "Agregado soporte para deshabilitar el autorizador usando ``None``."
 
-#: ../Doc/library/sqlite3.rst:978
+#: ../Doc/library/sqlite3.rst:980
+msgid ""
+"Passing *authorizer_callback* as a keyword argument is deprecated. The "
+"parameter will become positional-only in Python 3.15."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:987
 #, fuzzy
 msgid ""
 "Register :term:`callable` *progress_handler* to be invoked for every *n* "
@@ -1308,7 +1558,7 @@ msgstr ""
 "recibir llamados de SQLite durante una operación de larga duración, como por "
 "ejemplo la actualización de una GUI."
 
-#: ../Doc/library/sqlite3.rst:983
+#: ../Doc/library/sqlite3.rst:992
 msgid ""
 "If you want to clear any previously installed progress handler, call the "
 "method with ``None`` for *progress_handler*."
@@ -1316,7 +1566,7 @@ msgstr ""
 "Si se desea limpiar cualquier *progress_handler* instalado anteriormente, "
 "llame el método con ``None`` para *progress_handler*."
 
-#: ../Doc/library/sqlite3.rst:986
+#: ../Doc/library/sqlite3.rst:995
 #, fuzzy
 msgid ""
 "Returning a non-zero value from the handler function will terminate the "
@@ -1326,7 +1576,13 @@ msgstr ""
 "Retornando un valor diferente a 0 de la función gestora terminará la actual "
 "consulta en ejecución y causará lanzar una excepción :exc:`OperationalError`."
 
-#: ../Doc/library/sqlite3.rst:993
+#: ../Doc/library/sqlite3.rst:999
+msgid ""
+"Passing *progress_handler* as a keyword argument is deprecated. The "
+"parameter will become positional-only in Python 3.15."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1006
 #, fuzzy
 msgid ""
 "Register :term:`callable` *trace_callback* to be invoked for each SQL "
@@ -1335,40 +1591,48 @@ msgstr ""
 "Registra un invocable *trace_callback* que será llamado por cada sentencia "
 "SQL que sea de hecho ejecutada por el *backend* de SQLite."
 
-#: ../Doc/library/sqlite3.rst:996
+#: ../Doc/library/sqlite3.rst:1009
 msgid ""
 "The only argument passed to the callback is the statement (as :class:`str`) "
 "that is being executed. The return value of the callback is ignored. Note "
-"that the backend does not only run statements passed to the :meth:`Cursor."
-"execute` methods.  Other sources include the :ref:`transaction management "
-"<sqlite3-controlling-transactions>` of the :mod:`!sqlite3` module and the "
-"execution of triggers defined in the current database."
+"that the backend does not only run statements passed to "
+"the :meth:`Cursor.execute` methods.  Other sources include "
+"the :ref:`transaction management <sqlite3-controlling-transactions>` of "
+"the :mod:`!sqlite3` module and the execution of triggers defined in the "
+"current database."
 msgstr ""
-"El único argumento pasado a la retrollamada es la declaración (como :class:"
-"`str`) que se está ejecutando. El valor de retorno de la retrollamada es "
-"ignorado. Tenga en cuenta que el backend no solo ejecuta declaraciones "
-"pasadas a los métodos :meth:`Cursor.execute`. Otras fuentes incluyen el :ref:"
-"`transaction management <sqlite3-controlling-transactions>` del módulo :mod:"
-"`!sqlite3` y la ejecución de disparadores definidos en la base de datos "
-"actual."
+"El único argumento pasado a la retrollamada es la declaración "
+"(como :class:`str`) que se está ejecutando. El valor de retorno de la "
+"retrollamada es ignorado. Tenga en cuenta que el backend no solo ejecuta "
+"declaraciones pasadas a los métodos :meth:`Cursor.execute`. Otras fuentes "
+"incluyen el :ref:`transaction management <sqlite3-controlling-transactions>` "
+"del módulo :mod:`!sqlite3` y la ejecución de disparadores definidos en la "
+"base de datos actual."
 
-#: ../Doc/library/sqlite3.rst:1004
+#: ../Doc/library/sqlite3.rst:1017
 msgid "Passing ``None`` as *trace_callback* will disable the trace callback."
 msgstr ""
 "Pasando ``None`` como *trace_callback* deshabilitará el *trace callback*."
 
-#: ../Doc/library/sqlite3.rst:1007
+#: ../Doc/library/sqlite3.rst:1020
 msgid ""
 "Exceptions raised in the trace callback are not propagated. As a development "
 "and debugging aid, use :meth:`~sqlite3.enable_callback_tracebacks` to enable "
 "printing tracebacks from exceptions raised in the trace callback."
 msgstr ""
 "Las excepciones que se producen en la llamada de retorno no se propagan. "
-"Como ayuda para el desarrollo y la depuración, utilice :meth:`~sqlite3."
-"enable_callback_tracebacks` para habilitar la impresión de *tracebacks* de "
-"las excepciones que se producen en la llamada de retorno."
+"Como ayuda para el desarrollo y la depuración, "
+"utilice :meth:`~sqlite3.enable_callback_tracebacks` para habilitar la "
+"impresión de *tracebacks* de las excepciones que se producen en la llamada "
+"de retorno."
 
-#: ../Doc/library/sqlite3.rst:1017
+#: ../Doc/library/sqlite3.rst:1027
+msgid ""
+"Passing *trace_callback* as a keyword argument is deprecated. The parameter "
+"will become positional-only in Python 3.15."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1034
 msgid ""
 "Enable the SQLite engine to load SQLite extensions from shared libraries if "
 "*enabled* is ``True``; else, disallow loading SQLite extensions. SQLite "
@@ -1383,13 +1647,13 @@ msgstr ""
 "enteras. Una extensión bien conocida es *fulltext-search* distribuida con "
 "SQLite."
 
-#: ../Doc/library/sqlite3.rst:1026
+#: ../Doc/library/sqlite3.rst:1043
 msgid ""
 "The :mod:`!sqlite3` module is not built with loadable extension support by "
 "default, because some platforms (notably macOS) have SQLite libraries which "
 "are compiled without this feature. To get loadable extension support, you "
-"must pass the :option:`--enable-loadable-sqlite-extensions` option to :"
-"program:`configure`."
+"must pass the :option:`--enable-loadable-sqlite-extensions` option "
+"to :program:`configure`."
 msgstr ""
 "El módulo :mod:`!sqlite3` no está construido con soporte de extensión "
 "cargable de forma predeterminada, porque algunas plataformas (especialmente "
@@ -1397,7 +1661,7 @@ msgstr ""
 "obtener soporte para extensiones cargables, debe pasar la opción :option:`--"
 "enable-loadable-sqlite-extensions` a :program:`configure`."
 
-#: ../Doc/library/sqlite3.rst:1033
+#: ../Doc/library/sqlite3.rst:1050
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``sqlite3.enable_load_extension`` "
 "with arguments ``connection``, ``enabled``."
@@ -1405,11 +1669,41 @@ msgstr ""
 "Lanza un :ref:`auditing event <auditing>` ``sqlite3.enable_load_extension`` "
 "con los argumentos ``connection``, ``enabled``."
 
-#: ../Doc/library/sqlite3.rst:1037
+#: ../Doc/library/sqlite3.rst:1054
 msgid "Added the ``sqlite3.enable_load_extension`` auditing event."
 msgstr "Agregado el evento de auditoría ``sqlite3.enable_load_extension``."
 
-#: ../Doc/library/sqlite3.rst:1080
+#: ../Doc/library/sqlite3.rst:1060
+msgid ""
+"con.enable_load_extension(True)\n"
+"\n"
+"# Load the fulltext search extension\n"
+"con.execute(\"select load_extension('./fts3.so')\")\n"
+"\n"
+"# alternatively you can load the extension using an API call:\n"
+"# con.load_extension(\"./fts3.so\")\n"
+"\n"
+"# disable extension loading again\n"
+"con.enable_load_extension(False)\n"
+"\n"
+"# example from SQLite wiki\n"
+"con.execute(\"CREATE VIRTUAL TABLE recipe USING fts3(name, ingredients)\")\n"
+"con.executescript(\"\"\"\n"
+"    INSERT INTO recipe (name, ingredients) VALUES('broccoli stew', 'broccoli "
+"peppers cheese tomatoes');\n"
+"    INSERT INTO recipe (name, ingredients) VALUES('pumpkin stew', 'pumpkin "
+"onions garlic celery');\n"
+"    INSERT INTO recipe (name, ingredients) VALUES('broccoli pie', 'broccoli "
+"cheese onions flour');\n"
+"    INSERT INTO recipe (name, ingredients) VALUES('pumpkin pie', 'pumpkin "
+"sugar flour butter');\n"
+"    \"\"\")\n"
+"for row in con.execute(\"SELECT rowid, name, ingredients FROM recipe WHERE "
+"name MATCH 'pie'\"):\n"
+"    print(row)"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1086
 #, fuzzy
 msgid ""
 "Load an SQLite extension from a shared library. Enable extension loading "
@@ -1419,19 +1713,19 @@ msgstr ""
 "Se debe habilitar la carga de extensiones con :meth:`enable_load_extension` "
 "antes de llamar este método."
 
-#: ../Doc/library/sqlite3.rst:1084
+#: ../Doc/library/sqlite3.rst:1090
 #, fuzzy
 msgid "The path to the SQLite extension."
 msgstr "El nombre de la función SQL."
 
-#: ../Doc/library/sqlite3.rst:1088
+#: ../Doc/library/sqlite3.rst:1094
 msgid ""
 "Entry point name. If ``None`` (the default), SQLite will come up with an "
 "entry point name of its own; see the SQLite docs `Loading an Extension`_ for "
 "details."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1097
+#: ../Doc/library/sqlite3.rst:1103
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``sqlite3.load_extension`` with "
 "arguments ``connection``, ``path``."
@@ -1439,31 +1733,59 @@ msgstr ""
 "Lanza un :ref:`auditing event <auditing>` ``sqlite3.load_extension`` con "
 "argumentos ``connection``, ``path``."
 
-#: ../Doc/library/sqlite3.rst:1101
+#: ../Doc/library/sqlite3.rst:1107
 msgid "Added the ``sqlite3.load_extension`` auditing event."
 msgstr "Agregado el evento de auditoría ``sqlite3.load_extension``."
 
-#: ../Doc/library/sqlite3.rst:1104
+#: ../Doc/library/sqlite3.rst:1110
 #, fuzzy
-msgid "The *entrypoint* parameter."
+msgid "Added the *entrypoint* parameter."
 msgstr "Parámetro *uri*."
 
-#: ../Doc/library/sqlite3.rst:1111
+#: ../Doc/library/sqlite3.rst:1117
 msgid ""
 "Return an :term:`iterator` to dump the database as SQL source code. Useful "
-"when saving an in-memory database for later restoration. Similar to the ``."
-"dump`` command in the :program:`sqlite3` shell."
+"when saving an in-memory database for later restoration. Similar to the "
+"``.dump`` command in the :program:`sqlite3` shell."
 msgstr ""
 "Retorna un :term:`iterator` para volcar la base de datos en un texto de "
 "formato SQL. Es útil cuando guardamos una base de datos en memoria para una "
 "posterior restauración. Esta función provee las mismas capacidades que el "
 "comando ``.dump`` en el *shell* :program:`sqlite3`."
 
-#: ../Doc/library/sqlite3.rst:1129
+#: ../Doc/library/sqlite3.rst:1121
+msgid ""
+"An optional ``LIKE`` pattern for database objects to dump, e.g. "
+"``prefix_%``. If ``None`` (the default), all database objects will be "
+"included."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1130
+#, python-format
+msgid ""
+"# Convert file example.db to SQL dump file dump.sql\n"
+"con = sqlite3.connect('example.db')\n"
+"with open('dump.sql', 'w') as f:\n"
+"    for line in con.iterdump():\n"
+"        f.write('%s\\n' % line)\n"
+"con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1141 ../Doc/library/sqlite3.rst:1215
+#, fuzzy
+msgid ":ref:`sqlite3-howto-encoding`"
+msgstr ":ref:`sqlite3-adapters`"
+
+#: ../Doc/library/sqlite3.rst:1143
+#, fuzzy
+msgid "Added the *filter* parameter."
+msgstr "Parámetro *uri*."
+
+#: ../Doc/library/sqlite3.rst:1148
 msgid "Create a backup of an SQLite database."
 msgstr "Crea una copia de seguridad de la base de datos SQLite."
 
-#: ../Doc/library/sqlite3.rst:1131
+#: ../Doc/library/sqlite3.rst:1150
 msgid ""
 "Works even if the database is being accessed by other clients or "
 "concurrently by the same connection."
@@ -1471,11 +1793,11 @@ msgstr ""
 "Funciona incluso si la base de datos está siendo accedida por otros clientes "
 "al mismo tiempo sobre la misma conexión."
 
-#: ../Doc/library/sqlite3.rst:1134
+#: ../Doc/library/sqlite3.rst:1153
 msgid "The database connection to save the backup to."
 msgstr "La conexión de la base de datos para guardar la copia de seguridad."
 
-#: ../Doc/library/sqlite3.rst:1137
+#: ../Doc/library/sqlite3.rst:1156
 msgid ""
 "The number of pages to copy at a time. If equal to or less than ``0``, the "
 "entire database is copied in a single step. Defaults to ``-1``."
@@ -1484,7 +1806,7 @@ msgstr ""
 "``0``, toda la base de datos será copiada en un solo paso. El valor por "
 "defecto es ``-1``."
 
-#: ../Doc/library/sqlite3.rst:1143
+#: ../Doc/library/sqlite3.rst:1162
 #, fuzzy
 msgid ""
 "If set to a :term:`callable`, it is invoked with three integer arguments for "
@@ -1498,7 +1820,7 @@ msgstr ""
 "copiadas, y el *total* que indica le número total de páginas. El valor por "
 "defecto es ``None``."
 
-#: ../Doc/library/sqlite3.rst:1152
+#: ../Doc/library/sqlite3.rst:1171
 msgid ""
 "The name of the database to back up. Either ``\"main\"`` (the default) for "
 "the main database, ``\"temp\"`` for the temporary database, or the name of a "
@@ -1509,7 +1831,7 @@ msgstr ""
 "datos temporal, o el nombre de una base de datos personalizada adjuntada "
 "usando la sentencia ``ATTACH DATABASE``."
 
-#: ../Doc/library/sqlite3.rst:1159
+#: ../Doc/library/sqlite3.rst:1178
 msgid ""
 "The number of seconds to sleep between successive attempts to back up "
 "remaining pages."
@@ -1517,38 +1839,66 @@ msgstr ""
 "Número de segundos a dormir entre sucesivos intentos para respaldar páginas "
 "restantes."
 
-#: ../Doc/library/sqlite3.rst:1163
+#: ../Doc/library/sqlite3.rst:1182
 msgid "Example 1, copy an existing database into another:"
 msgstr "Ejemplo 1, copiar una base de datos existente en otra:"
 
-#: ../Doc/library/sqlite3.rst:1182
+#: ../Doc/library/sqlite3.rst:1184
+msgid ""
+"def progress(status, remaining, total):\n"
+"    print(f'Copied {total-remaining} of {total} pages...')\n"
+"\n"
+"src = sqlite3.connect('example.db')\n"
+"dst = sqlite3.connect('backup.db')\n"
+"with dst:\n"
+"    src.backup(dst, pages=1, progress=progress)\n"
+"dst.close()\n"
+"src.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1201
 msgid "Example 2, copy an existing database into a transient copy:"
 msgstr ""
 "Ejemplo 2: copiar una base de datos existente en una copia transitoria:"
 
-#: ../Doc/library/sqlite3.rst:1194
+#: ../Doc/library/sqlite3.rst:1203
+msgid ""
+"src = sqlite3.connect('example.db')\n"
+"dst = sqlite3.connect(':memory:')\n"
+"src.backup(dst)\n"
+"dst.close()\n"
+"src.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1219
 msgid "Get a connection runtime limit."
 msgstr "Obtiene el límite de tiempo de ejecución de una conexión."
 
-#: ../Doc/library/sqlite3.rst:1196
+#: ../Doc/library/sqlite3.rst:1221
 msgid "The `SQLite limit category`_ to be queried."
 msgstr "La `SQLite limit category`_ a ser consultada."
 
-#: ../Doc/library/sqlite3.rst:1201 ../Doc/library/sqlite3.rst:1238
+#: ../Doc/library/sqlite3.rst:1226 ../Doc/library/sqlite3.rst:1263
 msgid "If *category* is not recognised by the underlying SQLite library."
 msgstr ""
 "Si *category* no se reconoce por las capas inferiores de la biblioteca "
 "SQLite."
 
-#: ../Doc/library/sqlite3.rst:1204
+#: ../Doc/library/sqlite3.rst:1229
 msgid ""
-"Example, query the maximum length of an SQL statement for :class:"
-"`Connection` ``con`` (the default is 1000000000):"
+"Example, query the maximum length of an SQL statement "
+"for :class:`Connection` ``con`` (the default is 1000000000):"
 msgstr ""
-"Ejemplo, consulta el tamaño máximo de una sentencia SQL para la :class:"
-"`Connection` ``con`` (el valor por defecto es 1000000000):"
+"Ejemplo, consulta el tamaño máximo de una sentencia SQL para "
+"la :class:`Connection` ``con`` (el valor por defecto es 1000000000):"
 
-#: ../Doc/library/sqlite3.rst:1224
+#: ../Doc/library/sqlite3.rst:1239
+msgid ""
+">>> con.getlimit(sqlite3.SQLITE_LIMIT_SQL_LENGTH)\n"
+"1000000000"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1249
 #, fuzzy
 msgid ""
 "Set a connection runtime limit. Attempts to increase a limit above its hard "
@@ -1561,42 +1911,50 @@ msgstr ""
 "límite superior duro. Independientemente de si se cambió o no el límite, se "
 "retorna el valor anterior del límite."
 
-#: ../Doc/library/sqlite3.rst:1229
+#: ../Doc/library/sqlite3.rst:1254
 msgid "The `SQLite limit category`_ to be set."
 msgstr "La `SQLite limit category`_ a ser establecido."
 
-#: ../Doc/library/sqlite3.rst:1232
+#: ../Doc/library/sqlite3.rst:1257
 msgid ""
 "The value of the new limit. If negative, the current limit is unchanged."
 msgstr "El valor del nuevo límite. Si es negativo, el límite actual no cambia."
 
-#: ../Doc/library/sqlite3.rst:1241
+#: ../Doc/library/sqlite3.rst:1266
 msgid ""
 "Example, limit the number of attached databases to 1 for :class:`Connection` "
 "``con`` (the default limit is 10):"
 msgstr ""
-"Por ejemplo, limite el número de bases de datos adjuntas a 1 para la :class:"
-"`Connection` ``con`` (el valor por defecto es 10):"
+"Por ejemplo, limite el número de bases de datos adjuntas a 1 para "
+"la :class:`Connection` ``con`` (el valor por defecto es 10):"
 
-#: ../Doc/library/sqlite3.rst:1258
+#: ../Doc/library/sqlite3.rst:1269
+msgid ""
+">>> con.setlimit(sqlite3.SQLITE_LIMIT_ATTACHED, 1)\n"
+"10\n"
+">>> con.getlimit(sqlite3.SQLITE_LIMIT_ATTACHED)\n"
+"1"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1287
 msgid "Query a boolean connection configuration option."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1260 ../Doc/library/sqlite3.rst:1271
+#: ../Doc/library/sqlite3.rst:1289 ../Doc/library/sqlite3.rst:1300
 msgid "A :ref:`SQLITE_DBCONFIG code <sqlite3-dbconfig-constants>`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1269
+#: ../Doc/library/sqlite3.rst:1298
 msgid "Set a boolean connection configuration option."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1274
+#: ../Doc/library/sqlite3.rst:1303
 msgid ""
 "``True`` if the configuration option should be enabled (default); ``False`` "
 "if it should be disabled."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1282
+#: ../Doc/library/sqlite3.rst:1311
 msgid ""
 "Serialize a database into a :class:`bytes` object.  For an ordinary on-disk "
 "database file, the serialization is just a copy of the disk file.  For an in-"
@@ -1611,13 +1969,13 @@ msgstr ""
 "escribiría en el disco si se hiciera una copia de seguridad de esa base de "
 "datos en el disco."
 
-#: ../Doc/library/sqlite3.rst:1288
+#: ../Doc/library/sqlite3.rst:1317
 msgid "The database name to be serialized. Defaults to ``\"main\"``."
 msgstr ""
 "El nombre de la base de datos a ser serializada. El valor por defecto es "
 "``\"main\"``."
 
-#: ../Doc/library/sqlite3.rst:1296
+#: ../Doc/library/sqlite3.rst:1325
 msgid ""
 "This method is only available if the underlying SQLite library has the "
 "serialize API."
@@ -1625,29 +1983,29 @@ msgstr ""
 "Este método solo está disponible si las capas internas de la biblioteca "
 "SQLite tienen la API *serialise*."
 
-#: ../Doc/library/sqlite3.rst:1304
+#: ../Doc/library/sqlite3.rst:1333
 msgid ""
-"Deserialize a :meth:`serialized <serialize>` database into a :class:"
-"`Connection`. This method causes the database connection to disconnect from "
-"database *name*, and reopen *name* as an in-memory database based on the "
-"serialization contained in *data*."
+"Deserialize a :meth:`serialized <serialize>` database into "
+"a :class:`Connection`. This method causes the database connection to "
+"disconnect from database *name*, and reopen *name* as an in-memory database "
+"based on the serialization contained in *data*."
 msgstr ""
-"Deserializa una base de datos :meth:`serializsda <serialize>` en una clase :"
-"class:`Connection`. Este método hace que la conexión de base de datos se "
-"desconecte de la base de datos *name*, y la abre nuevamente como una base de "
-"datos en memoria, basada en la serialización contenida en *data*."
+"Deserializa una base de datos :meth:`serializsda <serialize>` en una "
+"clase :class:`Connection`. Este método hace que la conexión de base de datos "
+"se desconecte de la base de datos *name*, y la abre nuevamente como una base "
+"de datos en memoria, basada en la serialización contenida en *data*."
 
-#: ../Doc/library/sqlite3.rst:1310
+#: ../Doc/library/sqlite3.rst:1339
 msgid "A serialized database."
 msgstr "Una base de datos serializada."
 
-#: ../Doc/library/sqlite3.rst:1313
+#: ../Doc/library/sqlite3.rst:1342
 msgid "The database name to deserialize into. Defaults to ``\"main\"``."
 msgstr ""
 "El nombre de la base de datos a ser deserializada. El valor por defecto es "
 "``\"main\"``."
 
-#: ../Doc/library/sqlite3.rst:1317
+#: ../Doc/library/sqlite3.rst:1346
 msgid ""
 "If the database connection is currently involved in a read transaction or a "
 "backup operation."
@@ -1655,15 +2013,15 @@ msgstr ""
 "Si la conexión con la base de datos está actualmente involucrada en una "
 "transacción de lectura o una operación de copia de seguridad."
 
-#: ../Doc/library/sqlite3.rst:1321
+#: ../Doc/library/sqlite3.rst:1350
 msgid "If *data* does not contain a valid SQLite database."
 msgstr "Si *data* no contiene una base de datos SQLite válida."
 
-#: ../Doc/library/sqlite3.rst:1324
+#: ../Doc/library/sqlite3.rst:1353
 msgid "If :func:`len(data) <len>` is larger than ``2**63 - 1``."
 msgstr "Si :func:`len(data) <len>` es más grande que ``2**63 - 1``."
 
-#: ../Doc/library/sqlite3.rst:1329
+#: ../Doc/library/sqlite3.rst:1358
 msgid ""
 "This method is only available if the underlying SQLite library has the "
 "deserialize API."
@@ -1671,56 +2029,56 @@ msgstr ""
 "Este método solo está disponible si las capas internas de la biblioteca "
 "SQLite tienen la API *deserialize*."
 
-#: ../Doc/library/sqlite3.rst:1336
+#: ../Doc/library/sqlite3.rst:1365
 msgid ""
 "This attribute controls :pep:`249`-compliant transaction behaviour. :attr:`!"
 "autocommit` has three allowed values:"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1339
+#: ../Doc/library/sqlite3.rst:1368
 msgid ""
-"``False``: Select :pep:`249`-compliant transaction behaviour, implying that :"
-"mod:`!sqlite3` ensures a transaction is always open. Use :meth:`commit` and :"
-"meth:`rollback` to close transactions."
+"``False``: Select :pep:`249`-compliant transaction behaviour, implying "
+"that :mod:`!sqlite3` ensures a transaction is always open. "
+"Use :meth:`commit` and :meth:`rollback` to close transactions."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1343
+#: ../Doc/library/sqlite3.rst:1372
 msgid "This is the recommended value of :attr:`!autocommit`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1345
+#: ../Doc/library/sqlite3.rst:1374
 msgid ""
-"``True``: Use SQLite's `autocommit mode`_. :meth:`commit` and :meth:"
-"`rollback` have no effect in this mode."
+"``True``: Use SQLite's `autocommit mode`_. :meth:`commit` "
+"and :meth:`rollback` have no effect in this mode."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1348
+#: ../Doc/library/sqlite3.rst:1377
 msgid ""
 ":data:`LEGACY_TRANSACTION_CONTROL`: Pre-Python 3.12 (non-:pep:`249`-"
 "compliant) transaction control. See :attr:`isolation_level` for more details."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1352
+#: ../Doc/library/sqlite3.rst:1381
 msgid "This is currently the default value of :attr:`!autocommit`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1354
+#: ../Doc/library/sqlite3.rst:1383
 msgid ""
 "Changing :attr:`!autocommit` to ``False`` will open a new transaction, and "
 "changing it to ``True`` will commit any pending transaction."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1357
+#: ../Doc/library/sqlite3.rst:1386
 msgid "See :ref:`sqlite3-transaction-control-autocommit` for more details."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1361
+#: ../Doc/library/sqlite3.rst:1390
 msgid ""
-"The :attr:`isolation_level` attribute has no effect unless :attr:"
-"`autocommit` is :data:`LEGACY_TRANSACTION_CONTROL`."
+"The :attr:`isolation_level` attribute has no effect "
+"unless :attr:`autocommit` is :data:`LEGACY_TRANSACTION_CONTROL`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1368
+#: ../Doc/library/sqlite3.rst:1397
 msgid ""
 "This read-only attribute corresponds to the low-level SQLite `autocommit "
 "mode`_."
@@ -1728,15 +2086,15 @@ msgstr ""
 "Este atributo de solo lectura corresponde al `autocommit mode`_ de SQLite de "
 "bajo nivel."
 
-#: ../Doc/library/sqlite3.rst:1371
+#: ../Doc/library/sqlite3.rst:1400
 msgid ""
 "``True`` if a transaction is active (there are uncommitted changes), "
 "``False`` otherwise."
 msgstr ""
-"``True`` si una transacción está activa (existen cambios sin confirmar),"
-"``False`` en caso contrario."
+"``True`` si una transacción está activa (existen cambios sin "
+"confirmar),``False`` en caso contrario."
 
-#: ../Doc/library/sqlite3.rst:1378
+#: ../Doc/library/sqlite3.rst:1407
 #, fuzzy
 msgid ""
 "Controls the :ref:`legacy transaction handling mode <sqlite3-transaction-"
@@ -1753,7 +2111,7 @@ msgstr ""
 "al `SQLite transaction behaviour`_, de las capas inferiores, implícitamente "
 "se realiza :ref:`transaction management <sqlite3-controlling-transactions>`."
 
-#: ../Doc/library/sqlite3.rst:1386
+#: ../Doc/library/sqlite3.rst:1415
 msgid ""
 "If not overridden by the *isolation_level* parameter of :func:`connect`, the "
 "default is ``\"\"``, which is an alias for ``\"DEFERRED\"``."
@@ -1761,7 +2119,7 @@ msgstr ""
 "Si no se sobreescribe por el parámetro *isolation_level* de :func:`connect`, "
 "el valor predeterminado es ``\"\"``, que es un alias para ``\"DEFERRED\"``."
 
-#: ../Doc/library/sqlite3.rst:1391
+#: ../Doc/library/sqlite3.rst:1420
 msgid ""
 "Using :attr:`autocommit` to control transaction handling is recommended over "
 "using :attr:`!isolation_level`. :attr:`!isolation_level` has no effect "
@@ -1769,28 +2127,27 @@ msgid ""
 "default)."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1398
+#: ../Doc/library/sqlite3.rst:1427
 msgid ""
 "The initial :attr:`~Cursor.row_factory` for :class:`Cursor` objects created "
-"from this connection. Assigning to this attribute does not affect the :attr:"
-"`!row_factory` of existing cursors belonging to this connection, only new "
-"ones. Is ``None`` by default, meaning each row is returned as a :class:"
-"`tuple`."
+"from this connection. Assigning to this attribute does not affect "
+"the :attr:`!row_factory` of existing cursors belonging to this connection, "
+"only new ones. Is ``None`` by default, meaning each row is returned as "
+"a :class:`tuple`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1405 ../Doc/library/sqlite3.rst:1718
-#: ../Doc/library/sqlite3.rst:1741
+#: ../Doc/library/sqlite3.rst:1434 ../Doc/library/sqlite3.rst:1720
+#: ../Doc/library/sqlite3.rst:1743
 #, fuzzy
 msgid "See :ref:`sqlite3-howto-row-factory` for more details."
 msgstr ":ref:`sqlite3-howtos` para lecturas de interés:"
 
-#: ../Doc/library/sqlite3.rst:1409
+#: ../Doc/library/sqlite3.rst:1438
 #, fuzzy
 msgid ""
 "A :term:`callable` that accepts a :class:`bytes` parameter and returns a "
 "text representation of it. The callable is invoked for SQLite values with "
-"the ``TEXT`` data type. By default, this attribute is set to :class:`str`. "
-"If you want to return ``bytes`` instead, set *text_factory* to ``bytes``."
+"the ``TEXT`` data type. By default, this attribute is set to :class:`str`."
 msgstr ""
 "A invocable que acepta una :class:`bytes`como parámetro y retorna una "
 "representación del texto de el. El invocable es llamado por valores SQLite "
@@ -1798,7 +2155,12 @@ msgstr ""
 "una :class:`str`. Si quieres retornar en su lugar, ``bytes``, entonces se "
 "establece  *text_factory* como ``bytes``."
 
-#: ../Doc/library/sqlite3.rst:1449
+#: ../Doc/library/sqlite3.rst:1443
+#, fuzzy
+msgid "See :ref:`sqlite3-howto-encoding` for more details."
+msgstr ":ref:`sqlite3-howtos` para lecturas de interés:"
+
+#: ../Doc/library/sqlite3.rst:1447
 msgid ""
 "Return the total number of database rows that have been modified, inserted, "
 "or deleted since the database connection was opened."
@@ -1807,16 +2169,16 @@ msgstr ""
 "modificadas, insertadas o borradas desde que la conexión a la base de datos "
 "fue abierta."
 
-#: ../Doc/library/sqlite3.rst:1456
+#: ../Doc/library/sqlite3.rst:1454
 msgid "Cursor objects"
 msgstr "Objetos cursor"
 
-#: ../Doc/library/sqlite3.rst:1458
+#: ../Doc/library/sqlite3.rst:1456
 msgid ""
 "A ``Cursor`` object represents a `database cursor`_ which is used to execute "
 "SQL statements, and manage the context of a fetch operation. Cursors are "
-"created using :meth:`Connection.cursor`, or by using any of the :ref:"
-"`connection shortcut methods <sqlite3-connection-shortcuts>`."
+"created using :meth:`Connection.cursor`, or by using any of "
+"the :ref:`connection shortcut methods <sqlite3-connection-shortcuts>`."
 msgstr ""
 "Un objeto ``Cursor`` representa un `database cursor`_ que se utiliza para "
 "ejecutar sentencias SQL y administrar el contexto de una operación de "
@@ -1824,100 +2186,117 @@ msgstr ""
 "usar alguno de los :ref:`connection shortcut methods <sqlite3-connection-"
 "shortcuts>`."
 
-#: ../Doc/library/sqlite3.rst:1465
+#: ../Doc/library/sqlite3.rst:1463
 msgid ""
-"Cursor objects are :term:`iterators <iterator>`, meaning that if you :meth:"
-"`~Cursor.execute` a ``SELECT`` query, you can simply iterate over the cursor "
-"to fetch the resulting rows:"
+"Cursor objects are :term:`iterators <iterator>`, meaning that if "
+"you :meth:`~Cursor.execute` a ``SELECT`` query, you can simply iterate over "
+"the cursor to fetch the resulting rows:"
 msgstr ""
 "Los objetos cursores son :term:`iterators <iterator>`, lo que significa que "
 "si :meth:`~Cursor.execute` una consulta ``SELECT``, simplemente podrás "
 "iterar sobre el cursor para obtener las filas resultantes:"
 
-#: ../Doc/library/sqlite3.rst:1490
+#: ../Doc/library/sqlite3.rst:1474
+msgid ""
+"for row in cur.execute(\"SELECT t FROM data\"):\n"
+"    print(row)"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1488
 msgid "A :class:`Cursor` instance has the following attributes and methods."
 msgstr ""
 "Una instancia :class:`Cursor` tiene los siguientes atributos y métodos."
 
-#: ../Doc/library/sqlite3.rst:1497
+#: ../Doc/library/sqlite3.rst:1495
 msgid ""
-"Execute SQL a single SQL statement, optionally binding Python values using :"
-"ref:`placeholders <sqlite3-placeholders>`."
+"Execute a single SQL statement, optionally binding Python values "
+"using :ref:`placeholders <sqlite3-placeholders>`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1501
+#: ../Doc/library/sqlite3.rst:1499
 msgid "A single SQL statement."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1504
+#: ../Doc/library/sqlite3.rst:1502
 msgid ""
 "Python values to bind to placeholders in *sql*. A :class:`!dict` if named "
 "placeholders are used. A :term:`!sequence` if unnamed placeholders are used. "
 "See :ref:`sqlite3-placeholders`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1511
+#: ../Doc/library/sqlite3.rst:1509
 msgid "If *sql* contains more than one SQL statement."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1514
+#: ../Doc/library/sqlite3.rst:1512
 #, fuzzy
 msgid ""
-"If :attr:`~Connection.autocommit` is :data:`LEGACY_TRANSACTION_CONTROL`, :"
-"attr:`~Connection.isolation_level` is not ``None``, *sql* is an ``INSERT``, "
-"``UPDATE``, ``DELETE``, or ``REPLACE`` statement, and there is no open "
-"transaction, a transaction is implicitly opened before executing *sql*."
+"If :attr:`~Connection.autocommit` "
+"is :data:`LEGACY_TRANSACTION_CONTROL`, :attr:`~Connection.isolation_level` "
+"is not ``None``, *sql* is an ``INSERT``, ``UPDATE``, ``DELETE``, or "
+"``REPLACE`` statement, and there is no open transaction, a transaction is "
+"implicitly opened before executing *sql*."
 msgstr ""
 "Si el :attr:`~Connection.isolation_level` no es ``None``, y *sql* es una "
 "sentencia ``INSERT``, ``UPDATE``, ``DELETE``, o ``REPLACE``, y no hay "
 "transacciones abierta, entonces una transacción se abre implícitamente antes "
 "de ejecutar el *sql*."
 
-#: ../Doc/library/sqlite3.rst:1523
+#: ../Doc/library/sqlite3.rst:1521
 msgid ""
 ":exc:`DeprecationWarning` is emitted if :ref:`named placeholders <sqlite3-"
-"placeholders>` are used and *parameters* is a sequence instead of a :class:"
-"`dict`. Starting with Python 3.14, :exc:`ProgrammingError` will be raised "
-"instead."
+"placeholders>` are used and *parameters* is a sequence instead of "
+"a :class:`dict`. Starting with Python 3.14, :exc:`ProgrammingError` will be "
+"raised instead."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1529
+#: ../Doc/library/sqlite3.rst:1527
 msgid "Use :meth:`executescript` to execute multiple SQL statements."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1533
+#: ../Doc/library/sqlite3.rst:1531
 msgid ""
 "For every item in *parameters*, repeatedly execute the :ref:`parameterized "
 "<sqlite3-placeholders>` :abbr:`DML (Data Manipulation Language)` SQL "
 "statement *sql*."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1537
+#: ../Doc/library/sqlite3.rst:1535
 msgid "Uses the same implicit transaction handling as :meth:`~Cursor.execute`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1539
+#: ../Doc/library/sqlite3.rst:1537
 msgid "A single SQL DML statement."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1542
+#: ../Doc/library/sqlite3.rst:1540
 msgid ""
 "An :term:`!iterable` of parameters to bind with the placeholders in *sql*. "
 "See :ref:`sqlite3-placeholders`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1548
+#: ../Doc/library/sqlite3.rst:1546
 msgid ""
 "If *sql* contains more than one SQL statement, or is not a DML statement."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1565
+#: ../Doc/library/sqlite3.rst:1552
+msgid ""
+"rows = [\n"
+"    (\"row1\",),\n"
+"    (\"row2\",),\n"
+"]\n"
+"# cur is an sqlite3.Cursor object\n"
+"cur.executemany(\"INSERT INTO data VALUES(?)\", rows)"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1567
 msgid ""
 "Any resulting rows are discarded, including DML statements with `RETURNING "
 "clauses`_."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1572
+#: ../Doc/library/sqlite3.rst:1574
 msgid ""
 ":exc:`DeprecationWarning` is emitted if :ref:`named placeholders <sqlite3-"
 "placeholders>` are used and the items in *parameters* are sequences instead "
@@ -1925,25 +2304,37 @@ msgid ""
 "be raised instead."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1581
+#: ../Doc/library/sqlite3.rst:1583
 #, fuzzy
 msgid ""
-"Execute the SQL statements in *sql_script*. If the :attr:`~Connection."
-"autocommit` is :data:`LEGACY_TRANSACTION_CONTROL` and there is a pending "
-"transaction, an implicit ``COMMIT`` statement is executed first. No other "
-"implicit transaction control is performed; any transaction control must be "
-"added to *sql_script*."
+"Execute the SQL statements in *sql_script*. If "
+"the :attr:`~Connection.autocommit` is :data:`LEGACY_TRANSACTION_CONTROL` and "
+"there is a pending transaction, an implicit ``COMMIT`` statement is executed "
+"first. No other implicit transaction control is performed; any transaction "
+"control must be added to *sql_script*."
 msgstr ""
 "Ejecuta las sentencias SQL en *sql_script*. Si hay una transacción "
 "pendiente, primero se ejecuta una instrucción ``COMMIT`` implícitamente. No "
 "se realiza ningún otro control de transacción implícito; Cualquier control "
 "de transacción debe agregarse a *sql_script*."
 
-#: ../Doc/library/sqlite3.rst:1589
+#: ../Doc/library/sqlite3.rst:1591
 msgid "*sql_script* must be a :class:`string <str>`."
 msgstr "*sql_script* debe ser una instancia de :class:`string <str>`."
 
-#: ../Doc/library/sqlite3.rst:1607
+#: ../Doc/library/sqlite3.rst:1595
+msgid ""
+"# cur is an sqlite3.Cursor object\n"
+"cur.executescript(\"\"\"\n"
+"    BEGIN;\n"
+"    CREATE TABLE person(firstname, lastname, age);\n"
+"    CREATE TABLE book(title, author, published);\n"
+"    CREATE TABLE publisher(name, address);\n"
+"    COMMIT;\n"
+"\"\"\")"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1608
 #, fuzzy
 msgid ""
 "If :attr:`~Cursor.row_factory` is ``None``, return the next row query result "
@@ -1955,7 +2346,7 @@ msgstr ""
 "contrario, páselo a la fábrica de filas y retorne su resultado. Retorna "
 "``None`` si no hay más datos disponibles."
 
-#: ../Doc/library/sqlite3.rst:1615
+#: ../Doc/library/sqlite3.rst:1616
 msgid ""
 "Return the next set of rows of a query result as a :class:`list`. Return an "
 "empty list if no more rows are available."
@@ -1964,7 +2355,7 @@ msgstr ""
 "una :class:`list`. Una lista vacía será retornada cuando no hay más filas "
 "disponibles."
 
-#: ../Doc/library/sqlite3.rst:1618
+#: ../Doc/library/sqlite3.rst:1619
 msgid ""
 "The number of rows to fetch per call is specified by the *size* parameter. "
 "If *size* is not given, :attr:`arraysize` determines the number of rows to "
@@ -1976,7 +2367,7 @@ msgstr ""
 "determinará el número de filas que se van a recuperar. Si hay menos filas "
 "*size* disponibles, se retornan tantas filas como estén disponibles."
 
-#: ../Doc/library/sqlite3.rst:1624
+#: ../Doc/library/sqlite3.rst:1625
 msgid ""
 "Note there are performance considerations involved with the *size* "
 "parameter. For optimal performance, it is usually best to use the arraysize "
@@ -1988,58 +2379,67 @@ msgstr ""
 "*arraysize*. Si el parámetro *size* es usado, entonces es mejor retener el "
 "mismo valor de una llamada :meth:`fetchmany` a la siguiente."
 
-#: ../Doc/library/sqlite3.rst:1631
+#: ../Doc/library/sqlite3.rst:1632
 msgid ""
 "Return all (remaining) rows of a query result as a :class:`list`. Return an "
 "empty list if no rows are available. Note that the :attr:`arraysize` "
 "attribute can affect the performance of this operation."
 msgstr ""
-"Retorna todas las filas (restantes) de un resultado de consulta como :class:"
-"`list`. Retorna una lista vacía si no hay filas disponibles. Tenga en cuenta "
-"que el atributo :attr:`arraysize` puede afectar al rendimiento de esta "
-"operación."
+"Retorna todas las filas (restantes) de un resultado de consulta "
+"como :class:`list`. Retorna una lista vacía si no hay filas disponibles. "
+"Tenga en cuenta que el atributo :attr:`arraysize` puede afectar al "
+"rendimiento de esta operación."
 
-#: ../Doc/library/sqlite3.rst:1638
+#: ../Doc/library/sqlite3.rst:1639
 msgid "Close the cursor now (rather than whenever ``__del__`` is called)."
 msgstr "Cierra el cursor ahora (en lugar que cuando ``__del__`` es llamado)"
 
-#: ../Doc/library/sqlite3.rst:1640
+#: ../Doc/library/sqlite3.rst:1641
 msgid ""
-"The cursor will be unusable from this point forward; a :exc:"
-"`ProgrammingError` exception will be raised if any operation is attempted "
-"with the cursor."
+"The cursor will be unusable from this point forward; "
+"a :exc:`ProgrammingError` exception will be raised if any operation is "
+"attempted with the cursor."
 msgstr ""
-"El cursor no será usable de este punto en adelante; una excepción :exc:"
-"`ProgrammingError` será lanzada si se intenta cualquier operación con el "
-"cursor."
+"El cursor no será usable de este punto en adelante; una "
+"excepción :exc:`ProgrammingError` será lanzada si se intenta cualquier "
+"operación con el cursor."
 
-#: ../Doc/library/sqlite3.rst:1645 ../Doc/library/sqlite3.rst:1649
+#: ../Doc/library/sqlite3.rst:1646 ../Doc/library/sqlite3.rst:1650
 msgid "Required by the DB-API. Does nothing in :mod:`!sqlite3`."
 msgstr "Requerido por la DB-API. No hace nada en :mod:`!sqlite3`."
 
-#: ../Doc/library/sqlite3.rst:1653
+#: ../Doc/library/sqlite3.rst:1654
 msgid ""
-"Read/write attribute that controls the number of rows returned by :meth:"
-"`fetchmany`. The default value is 1 which means a single row would be "
-"fetched per call."
+"Read/write attribute that controls the number of rows returned "
+"by :meth:`fetchmany`. The default value is 1 which means a single row would "
+"be fetched per call."
 msgstr ""
 "Atributo de lectura/escritura que controla el número de filas retornadas "
 "por :meth:`fetchmany`. El valor por defecto es 1, lo cual significa que una "
 "única fila será obtenida por llamada."
 
-#: ../Doc/library/sqlite3.rst:1658
+#: ../Doc/library/sqlite3.rst:1659
 msgid ""
 "Read-only attribute that provides the SQLite database :class:`Connection` "
-"belonging to the cursor.  A :class:`Cursor` object created by calling :meth:"
-"`con.cursor() <Connection.cursor>` will have a :attr:`connection` attribute "
-"that refers to *con*:"
+"belonging to the cursor.  A :class:`Cursor` object created by "
+"calling :meth:`con.cursor() <Connection.cursor>` will have "
+"a :attr:`connection` attribute that refers to *con*:"
 msgstr ""
 "Este atributo de solo lectura que provee la :class:`Connection` de la base "
 "de datos SQLite pertenece al cursor. Un objeto :class:`Cursor` creado "
-"llamando a :meth:`con.cursor() <Connection.cursor>` tendrá un atributo :attr:"
-"`connection` que hace referencia a *con*:"
+"llamando a :meth:`con.cursor() <Connection.cursor>` tendrá un "
+"atributo :attr:`connection` que hace referencia a *con*:"
 
-#: ../Doc/library/sqlite3.rst:1672
+#: ../Doc/library/sqlite3.rst:1664
+msgid ""
+">>> con = sqlite3.connect(\":memory:\")\n"
+">>> cur = con.cursor()\n"
+">>> cur.connection == con\n"
+"True\n"
+">>> con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1674
 msgid ""
 "Read-only attribute that provides the column names of the last query. To "
 "remain compatible with the Python DB API, it returns a 7-tuple for each "
@@ -2050,13 +2450,13 @@ msgstr ""
 "Python, retornará una tupla de 7 elementos para cada columna donde los "
 "últimos seis elementos de cada tupla son ``Ninguno``."
 
-#: ../Doc/library/sqlite3.rst:1676
+#: ../Doc/library/sqlite3.rst:1678
 msgid "It is set for ``SELECT`` statements without any matching rows as well."
 msgstr ""
 "También es configurado para sentencias ``SELECT`` sin ninguna fila "
 "coincidente."
 
-#: ../Doc/library/sqlite3.rst:1680
+#: ../Doc/library/sqlite3.rst:1682
 msgid ""
 "Read-only attribute that provides the row id of the last inserted row. It is "
 "only updated after successful ``INSERT`` or ``REPLACE`` statements using "
@@ -2072,15 +2472,15 @@ msgstr ""
 "o si se produjo un error en la inserción, el valor de ``lastrowid`` se deja "
 "sin cambios. El valor inicial de ``lastrowid`` es ``None``."
 
-#: ../Doc/library/sqlite3.rst:1688
+#: ../Doc/library/sqlite3.rst:1690
 msgid "Inserts into ``WITHOUT ROWID`` tables are not recorded."
 msgstr "Las inserciones en tablas ``WITHOUT ROWID`` no se registran."
 
-#: ../Doc/library/sqlite3.rst:1690
+#: ../Doc/library/sqlite3.rst:1692
 msgid "Added support for the ``REPLACE`` statement."
 msgstr "Se agregó soporte para sentencias ``REPLACE``."
 
-#: ../Doc/library/sqlite3.rst:1695
+#: ../Doc/library/sqlite3.rst:1697
 #, fuzzy
 msgid ""
 "Read-only attribute that provides the number of modified rows for "
@@ -2096,7 +2496,7 @@ msgstr ""
 "Table Expression)`. Sólo se actualiza mediante los métodos :meth:`execute` "
 "y :meth:`executemany`."
 
-#: ../Doc/library/sqlite3.rst:1706
+#: ../Doc/library/sqlite3.rst:1708
 msgid ""
 "Control how a row fetched from this :class:`!Cursor` is represented. If "
 "``None``, a row is represented as a :class:`tuple`. Can be set to the "
@@ -2105,30 +2505,30 @@ msgid ""
 "and returns a custom object representing an SQLite row."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1713
+#: ../Doc/library/sqlite3.rst:1715
 msgid ""
 "Defaults to what :attr:`Connection.row_factory` was set to when the :class:`!"
-"Cursor` was created. Assigning to this attribute does not affect :attr:"
-"`Connection.row_factory` of the parent connection."
+"Cursor` was created. Assigning to this attribute does not "
+"affect :attr:`Connection.row_factory` of the parent connection."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1729
+#: ../Doc/library/sqlite3.rst:1731
 msgid "Row objects"
 msgstr "Objetos fila (*Row*)"
 
-#: ../Doc/library/sqlite3.rst:1733
+#: ../Doc/library/sqlite3.rst:1735
 msgid ""
-"A :class:`!Row` instance serves as a highly optimized :attr:`~Connection."
-"row_factory` for :class:`Connection` objects. It supports iteration, "
-"equality testing, :func:`len`, and :term:`mapping` access by column name and "
-"index."
+"A :class:`!Row` instance serves as a highly "
+"optimized :attr:`~Connection.row_factory` for :class:`Connection` objects. "
+"It supports iteration, equality testing, :func:`len`, and :term:`mapping` "
+"access by column name and index."
 msgstr ""
-"Una instancia de :class:`!Row` sirve como una instancia :attr:`~Connection."
-"row_factory` altamente optimizada para objetos :class:`Connection`. Admite "
-"iteración, pruebas de igualdad, acceso a :func:`len` y :term:`mapping` por "
-"nombre de columna e índice."
+"Una instancia de :class:`!Row` sirve como una "
+"instancia :attr:`~Connection.row_factory` altamente optimizada para "
+"objetos :class:`Connection`. Admite iteración, pruebas de igualdad, acceso "
+"a :func:`len` y :term:`mapping` por nombre de columna e índice."
 
-#: ../Doc/library/sqlite3.rst:1738
+#: ../Doc/library/sqlite3.rst:1740
 #, fuzzy
 msgid ""
 "Two :class:`!Row` objects compare equal if they have identical column names "
@@ -2137,38 +2537,38 @@ msgstr ""
 "Dos objetos de fila comparan iguales si tienen columnas iguales y miembros "
 "iguales."
 
-#: ../Doc/library/sqlite3.rst:1745
+#: ../Doc/library/sqlite3.rst:1747
 msgid ""
 "Return a :class:`list` of column names as :class:`strings <str>`. "
-"Immediately after a query, it is the first member of each tuple in :attr:"
-"`Cursor.description`."
+"Immediately after a query, it is the first member of each tuple "
+"in :attr:`Cursor.description`."
 msgstr ""
-"Este método retorna una :class:`list` con los nombre de columnas como :class:"
-"`strings <str>`. Inmediatamente después de una consulta, es el primer "
-"miembro de cada tupla en :attr:`Cursor.description`."
+"Este método retorna una :class:`list` con los nombre de columnas "
+"como :class:`strings <str>`. Inmediatamente después de una consulta, es el "
+"primer miembro de cada tupla en :attr:`Cursor.description`."
 
-#: ../Doc/library/sqlite3.rst:1749
+#: ../Doc/library/sqlite3.rst:1751
 msgid "Added support of slicing."
 msgstr "Agrega soporte para segmentación."
 
-#: ../Doc/library/sqlite3.rst:1756
+#: ../Doc/library/sqlite3.rst:1758
 msgid "Blob objects"
 msgstr "Objetos fila (*Row*)"
 
-#: ../Doc/library/sqlite3.rst:1762
+#: ../Doc/library/sqlite3.rst:1764
 msgid ""
 "A :class:`Blob` instance is a :term:`file-like object` that can read and "
-"write data in an SQLite :abbr:`BLOB (Binary Large OBject)`. Call :func:"
-"`len(blob) <len>` to get the size (number of bytes) of the blob. Use indices "
-"and :term:`slices <slice>` for direct access to the blob data."
+"write data in an SQLite :abbr:`BLOB (Binary Large OBject)`. "
+"Call :func:`len(blob) <len>` to get the size (number of bytes) of the blob. "
+"Use indices and :term:`slices <slice>` for direct access to the blob data."
 msgstr ""
 "Una instancia :class:`Blob` es un :term:`file-like object` que puede leer y "
-"escribir datos en un SQLite :abbr:`BLOB (Binary Large OBject)`. Llame a :"
-"func:`len(blob) <len>` para obtener el tamaño (número de bytes) del blob. "
+"escribir datos en un SQLite :abbr:`BLOB (Binary Large OBject)`. Llame "
+"a :func:`len(blob) <len>` para obtener el tamaño (número de bytes) del blob. "
 "Use índices y :term:`slices <slice>` para obtener acceso directo a los datos "
 "del blob."
 
-#: ../Doc/library/sqlite3.rst:1767
+#: ../Doc/library/sqlite3.rst:1769
 msgid ""
 "Use the :class:`Blob` as a :term:`context manager` to ensure that the blob "
 "handle is closed after use."
@@ -2176,47 +2576,69 @@ msgstr ""
 "Use :class:`Blob` como :term:`context manager` para asegurarse de que el "
 "identificador de blob se cierra después de su uso."
 
-#: ../Doc/library/sqlite3.rst:1797
+#: ../Doc/library/sqlite3.rst:1772
+msgid ""
+"con = sqlite3.connect(\":memory:\")\n"
+"con.execute(\"CREATE TABLE test(blob_col blob)\")\n"
+"con.execute(\"INSERT INTO test(blob_col) VALUES(zeroblob(13))\")\n"
+"\n"
+"# Write to our blob, using two write operations:\n"
+"with con.blobopen(\"test\", \"blob_col\", 1) as blob:\n"
+"    blob.write(b\"hello, \")\n"
+"    blob.write(b\"world.\")\n"
+"    # Modify the first and last bytes of our blob\n"
+"    blob[0] = ord(\"H\")\n"
+"    blob[-1] = ord(\"!\")\n"
+"\n"
+"# Read the contents of our blob\n"
+"with con.blobopen(\"test\", \"blob_col\", 1) as blob:\n"
+"    greeting = blob.read()\n"
+"\n"
+"print(greeting)  # outputs \"b'Hello, world!'\"\n"
+"con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:1800
 msgid "Close the blob."
 msgstr "Cierra el *blob*."
 
-#: ../Doc/library/sqlite3.rst:1799
+#: ../Doc/library/sqlite3.rst:1802
 msgid ""
-"The blob will be unusable from this point onward.  An :class:`~sqlite3."
-"Error` (or subclass) exception will be raised if any further operation is "
-"attempted with the blob."
+"The blob will be unusable from this point onward.  "
+"An :class:`~sqlite3.Error` (or subclass) exception will be raised if any "
+"further operation is attempted with the blob."
 msgstr ""
-"El cursor no será usable de este punto en adelante; una excepción :class:"
-"`~sqlite3.Error` (o subclase) será lanzada si se intenta cualquier operación "
-"con el cursor."
+"El cursor no será usable de este punto en adelante; una "
+"excepción :class:`~sqlite3.Error` (o subclase) será lanzada si se intenta "
+"cualquier operación con el cursor."
 
-#: ../Doc/library/sqlite3.rst:1805
+#: ../Doc/library/sqlite3.rst:1808
 msgid ""
 "Read *length* bytes of data from the blob at the current offset position. If "
 "the end of the blob is reached, the data up to :abbr:`EOF (End of File)` "
-"will be returned.  When *length* is not specified, or is negative, :meth:"
-"`~Blob.read` will read until the end of the blob."
+"will be returned.  When *length* is not specified, or is "
+"negative, :meth:`~Blob.read` will read until the end of the blob."
 msgstr ""
 "Leer bytes *length* de datos del blob en la posición de desplazamiento "
-"actual. Si se alcanza el final del blob, se devolverán los datos hasta :abbr:"
-"`EOF (End of File)`. Cuando *length* no se especifica, o es negativo, :meth:"
-"`~Blob.read` se leerá hasta el final del blob."
+"actual. Si se alcanza el final del blob, se devolverán los datos "
+"hasta :abbr:`EOF (End of File)`. Cuando *length* no se especifica, o es "
+"negativo, :meth:`~Blob.read` se leerá hasta el final del blob."
 
-#: ../Doc/library/sqlite3.rst:1813
+#: ../Doc/library/sqlite3.rst:1816
 msgid ""
 "Write *data* to the blob at the current offset.  This function cannot change "
-"the blob length.  Writing beyond the end of the blob will raise :exc:"
-"`ValueError`."
+"the blob length.  Writing beyond the end of the blob will "
+"raise :exc:`ValueError`."
 msgstr ""
 "Escriba *data* en el blob en el desplazamiento actual. Esta función no puede "
 "cambiar la longitud del blob. Escribir más allá del final del blob generará "
 "un :exc:`ValueError`."
 
-#: ../Doc/library/sqlite3.rst:1819
+#: ../Doc/library/sqlite3.rst:1822
 msgid "Return the current access position of the blob."
 msgstr "Devolver la posición de acceso actual del blob."
 
-#: ../Doc/library/sqlite3.rst:1823
+#: ../Doc/library/sqlite3.rst:1826
 #, fuzzy
 msgid ""
 "Set the current access position of the blob to *offset*.  The *origin* "
@@ -2226,15 +2648,15 @@ msgid ""
 msgstr ""
 "Establezca la posición de acceso actual del blob en *offset*. El valor "
 "predeterminado del argumento *origin* es :data:`os. SEEK_SET` "
-"(posicionamiento absoluto de blobs). Otros valores para *origin* son :data:"
-"`os. SEEK_CUR` (busca en relación con la posición actual) y :data:`os. "
-"SEEK_END` (buscar en relación con el final del blob)."
+"(posicionamiento absoluto de blobs). Otros valores para *origin* "
+"son :data:`os. SEEK_CUR` (busca en relación con la posición actual) "
+"y :data:`os. SEEK_END` (buscar en relación con el final del blob)."
 
-#: ../Doc/library/sqlite3.rst:1831
+#: ../Doc/library/sqlite3.rst:1834
 msgid "PrepareProtocol objects"
 msgstr "Objetos PrepareProtocol"
 
-#: ../Doc/library/sqlite3.rst:1835
+#: ../Doc/library/sqlite3.rst:1838
 msgid ""
 "The PrepareProtocol type's single purpose is to act as a :pep:`246` style "
 "adaption protocol for objects that can :ref:`adapt themselves <sqlite3-"
@@ -2244,15 +2666,15 @@ msgstr ""
 "adaptación de estilo :pep:`246` para objetos que pueden :ref:`adapt "
 "themselves <sqlite3-conform>` a :ref:`native SQLite types <sqlite3-types>`."
 
-#: ../Doc/library/sqlite3.rst:1843
+#: ../Doc/library/sqlite3.rst:1846
 msgid "Exceptions"
 msgstr "Excepciones"
 
-#: ../Doc/library/sqlite3.rst:1845
+#: ../Doc/library/sqlite3.rst:1848
 msgid "The exception hierarchy is defined by the DB-API 2.0 (:pep:`249`)."
 msgstr "La jerarquía de excepciones está definida por DB-API 2.0 (:pep:`249`)."
 
-#: ../Doc/library/sqlite3.rst:1849
+#: ../Doc/library/sqlite3.rst:1852
 msgid ""
 "This exception is not currently raised by the :mod:`!sqlite3` module, but "
 "may be raised by applications using :mod:`!sqlite3`, for example if a user-"
@@ -2264,17 +2686,17 @@ msgstr ""
 "si una función definida por el usuario trunca datos durante la inserción. "
 "``Warning`` es una subclase de :exc:`Exception`."
 
-#: ../Doc/library/sqlite3.rst:1856
+#: ../Doc/library/sqlite3.rst:1859
 msgid ""
 "The base class of the other exceptions in this module. Use this to catch all "
 "errors with one single :keyword:`except` statement. ``Error`` is a subclass "
 "of :exc:`Exception`."
 msgstr ""
 "La clase base de las otras excepciones de este módulo. Use esto para "
-"detectar todos los errores con una sola instrucción :keyword:`except`."
-"``Error`` is una subclase de :exc:`Exception`."
+"detectar todos los errores con una sola "
+"instrucción :keyword:`except`.``Error`` is una subclase de :exc:`Exception`."
 
-#: ../Doc/library/sqlite3.rst:1860
+#: ../Doc/library/sqlite3.rst:1863
 msgid ""
 "If the exception originated from within the SQLite library, the following "
 "two attributes are added to the exception:"
@@ -2282,15 +2704,15 @@ msgstr ""
 "Si la excepción se originó dentro de la biblioteca SQLite, se agregan los "
 "siguientes dos atributos a la excepción:"
 
-#: ../Doc/library/sqlite3.rst:1865
+#: ../Doc/library/sqlite3.rst:1868
 msgid ""
-"The numeric error code from the `SQLite API <https://sqlite.org/rescode."
-"html>`_"
+"The numeric error code from the `SQLite API <https://sqlite.org/"
+"rescode.html>`_"
 msgstr ""
-"El código de error numérico de `SQLite API <https://sqlite.org/rescode."
-"html>`_"
+"El código de error numérico de `SQLite API <https://sqlite.org/"
+"rescode.html>`_"
 
-#: ../Doc/library/sqlite3.rst:1872
+#: ../Doc/library/sqlite3.rst:1875
 msgid ""
 "The symbolic name of the numeric error code from the `SQLite API <https://"
 "sqlite.org/rescode.html>`_"
@@ -2298,7 +2720,7 @@ msgstr ""
 "El nombre simbólico del código de error numérico de `SQLite API <https://"
 "sqlite.org/rescode.html>`_"
 
-#: ../Doc/library/sqlite3.rst:1879
+#: ../Doc/library/sqlite3.rst:1882
 msgid ""
 "Exception raised for misuse of the low-level SQLite C API. In other words, "
 "if this exception is raised, it probably indicates a bug in the :mod:`!"
@@ -2306,10 +2728,10 @@ msgid ""
 msgstr ""
 "Excepción lanzada por el uso indebido de la API de SQLite C de bajo nivel. "
 "En otras palabras, si se lanza esta excepción, probablemente indica un error "
-"en el módulo :mod:`!sqlite3`. ``InterfaceError`` es una subclase de :exc:"
-"`Error`."
+"en el módulo :mod:`!sqlite3`. ``InterfaceError`` es una subclase "
+"de :exc:`Error`."
 
-#: ../Doc/library/sqlite3.rst:1886
+#: ../Doc/library/sqlite3.rst:1889
 msgid ""
 "Exception raised for errors that are related to the database. This serves as "
 "the base exception for several types of database errors. It is only raised "
@@ -2321,7 +2743,7 @@ msgstr ""
 "genera implícitamente a través de las subclases especializadas. "
 "``DatabaseError`` es una subclase de :exc:`Error`."
 
-#: ../Doc/library/sqlite3.rst:1893
+#: ../Doc/library/sqlite3.rst:1896
 msgid ""
 "Exception raised for errors caused by problems with the processed data, like "
 "numeric values out of range, and strings which are too long. ``DataError`` "
@@ -2331,7 +2753,7 @@ msgstr ""
 "procesados, como valores numéricos fuera de rango y cadenas de caracteres "
 "demasiado largas. ``DataError`` es una subclase de :exc:`DatabaseError`."
 
-#: ../Doc/library/sqlite3.rst:1899
+#: ../Doc/library/sqlite3.rst:1902
 msgid ""
 "Exception raised for errors that are related to the database's operation, "
 "and not necessarily under the control of the programmer. For example, the "
@@ -2341,19 +2763,19 @@ msgstr ""
 "Excepción lanzada por errores que están relacionados con el funcionamiento "
 "de la base de datos y no necesariamente bajo el control del programador. Por "
 "ejemplo, no se encuentra la ruta de la base de datos o no se pudo procesar "
-"una transacción. ``OperationalError`` es una subclase de :exc:"
-"`DatabaseError`."
+"una transacción. ``OperationalError`` es una subclase "
+"de :exc:`DatabaseError`."
 
-#: ../Doc/library/sqlite3.rst:1907
+#: ../Doc/library/sqlite3.rst:1910
 msgid ""
 "Exception raised when the relational integrity of the database is affected, "
 "e.g. a foreign key check fails.  It is a subclass of :exc:`DatabaseError`."
 msgstr ""
 "Excepción lanzada cuando la integridad de la base de datos es afectada, por "
-"ejemplo la comprobación de una llave foránea falla. Es una subclase de :exc:"
-"`DatabaseError`."
+"ejemplo la comprobación de una llave foránea falla. Es una subclase "
+"de :exc:`DatabaseError`."
 
-#: ../Doc/library/sqlite3.rst:1912
+#: ../Doc/library/sqlite3.rst:1915
 msgid ""
 "Exception raised when SQLite encounters an internal error. If this is "
 "raised, it may indicate that there is a problem with the runtime SQLite "
@@ -2361,22 +2783,22 @@ msgid ""
 msgstr ""
 "Se genera una excepción cuando SQLite encuentra un error interno. Si se "
 "genera esto, puede indicar que hay un problema con la biblioteca SQLite en "
-"tiempo de ejecución. ``InternalError`` es una subclase de :exc:"
-"`DatabaseError`."
+"tiempo de ejecución. ``InternalError`` es una subclase "
+"de :exc:`DatabaseError`."
 
-#: ../Doc/library/sqlite3.rst:1919
+#: ../Doc/library/sqlite3.rst:1922
 msgid ""
 "Exception raised for :mod:`!sqlite3` API programming errors, for example "
 "supplying the wrong number of bindings to a query, or trying to operate on a "
-"closed :class:`Connection`. ``ProgrammingError`` is a subclass of :exc:"
-"`DatabaseError`."
+"closed :class:`Connection`. ``ProgrammingError`` is a subclass "
+"of :exc:`DatabaseError`."
 msgstr ""
 "Excepción lanzada por errores de programación de la API de :mod:`!sqlite3`, "
 "por ejemplo, proporcionar el número incorrecto de enlaces a una consulta, o "
 "intentar operar en una :class:`Connection` cerrada. ``ProgrammingError`` es "
 "una subclase de :exc:`DatabaseError`."
 
-#: ../Doc/library/sqlite3.rst:1926
+#: ../Doc/library/sqlite3.rst:1929
 msgid ""
 "Exception raised in case a method or database API is not supported by the "
 "underlying SQLite library. For example, setting *deterministic* to ``True`` "
@@ -2390,11 +2812,11 @@ msgstr ""
 "SQLite subyacente no admite funciones *deterministic*. ``NotSupportedError`` "
 "es una subclase de :exc:`DatabaseError`."
 
-#: ../Doc/library/sqlite3.rst:1936
+#: ../Doc/library/sqlite3.rst:1939
 msgid "SQLite and Python types"
 msgstr "SQLite y tipos de Python"
 
-#: ../Doc/library/sqlite3.rst:1938
+#: ../Doc/library/sqlite3.rst:1941
 msgid ""
 "SQLite natively supports the following types: ``NULL``, ``INTEGER``, "
 "``REAL``, ``TEXT``, ``BLOB``."
@@ -2402,71 +2824,71 @@ msgstr ""
 "SQLite soporta de forma nativa los siguientes tipos: ``NULL``, ``INTEGER``, "
 "``REAL``, ``TEXT``, ``BLOB``."
 
-#: ../Doc/library/sqlite3.rst:1941
+#: ../Doc/library/sqlite3.rst:1944
 msgid ""
 "The following Python types can thus be sent to SQLite without any problem:"
 msgstr ""
 "Los siguientes tipos de Python se pueden enviar a SQLite sin problema alguno:"
 
-#: ../Doc/library/sqlite3.rst:1944 ../Doc/library/sqlite3.rst:1961
+#: ../Doc/library/sqlite3.rst:1947 ../Doc/library/sqlite3.rst:1964
 msgid "Python type"
 msgstr "Tipo de Python"
 
-#: ../Doc/library/sqlite3.rst:1944 ../Doc/library/sqlite3.rst:1961
+#: ../Doc/library/sqlite3.rst:1947 ../Doc/library/sqlite3.rst:1964
 msgid "SQLite type"
 msgstr "Tipo de SQLite"
 
-#: ../Doc/library/sqlite3.rst:1946 ../Doc/library/sqlite3.rst:1963
+#: ../Doc/library/sqlite3.rst:1949 ../Doc/library/sqlite3.rst:1966
 msgid "``None``"
 msgstr "``None``"
 
-#: ../Doc/library/sqlite3.rst:1946 ../Doc/library/sqlite3.rst:1963
+#: ../Doc/library/sqlite3.rst:1949 ../Doc/library/sqlite3.rst:1966
 msgid "``NULL``"
 msgstr "``NULL``"
 
-#: ../Doc/library/sqlite3.rst:1948 ../Doc/library/sqlite3.rst:1965
+#: ../Doc/library/sqlite3.rst:1951 ../Doc/library/sqlite3.rst:1968
 msgid ":class:`int`"
 msgstr ":class:`int`"
 
-#: ../Doc/library/sqlite3.rst:1948 ../Doc/library/sqlite3.rst:1965
+#: ../Doc/library/sqlite3.rst:1951 ../Doc/library/sqlite3.rst:1968
 msgid "``INTEGER``"
 msgstr "``INTEGER``"
 
-#: ../Doc/library/sqlite3.rst:1950 ../Doc/library/sqlite3.rst:1967
+#: ../Doc/library/sqlite3.rst:1953 ../Doc/library/sqlite3.rst:1970
 msgid ":class:`float`"
 msgstr ":class:`float`"
 
-#: ../Doc/library/sqlite3.rst:1950 ../Doc/library/sqlite3.rst:1967
+#: ../Doc/library/sqlite3.rst:1953 ../Doc/library/sqlite3.rst:1970
 msgid "``REAL``"
 msgstr "``REAL``"
 
-#: ../Doc/library/sqlite3.rst:1952
+#: ../Doc/library/sqlite3.rst:1955
 msgid ":class:`str`"
 msgstr ":class:`str`"
 
-#: ../Doc/library/sqlite3.rst:1952 ../Doc/library/sqlite3.rst:1969
+#: ../Doc/library/sqlite3.rst:1955 ../Doc/library/sqlite3.rst:1972
 msgid "``TEXT``"
 msgstr "``TEXT``"
 
-#: ../Doc/library/sqlite3.rst:1954 ../Doc/library/sqlite3.rst:1972
+#: ../Doc/library/sqlite3.rst:1957 ../Doc/library/sqlite3.rst:1975
 msgid ":class:`bytes`"
 msgstr ":class:`bytes`"
 
-#: ../Doc/library/sqlite3.rst:1954 ../Doc/library/sqlite3.rst:1972
+#: ../Doc/library/sqlite3.rst:1957 ../Doc/library/sqlite3.rst:1975
 msgid "``BLOB``"
 msgstr "``BLOB``"
 
-#: ../Doc/library/sqlite3.rst:1958
+#: ../Doc/library/sqlite3.rst:1961
 msgid "This is how SQLite types are converted to Python types by default:"
 msgstr ""
 "De esta forma es como los tipos de SQLite son convertidos a tipos de Python "
 "por defecto:"
 
-#: ../Doc/library/sqlite3.rst:1969
+#: ../Doc/library/sqlite3.rst:1972
 msgid "depends on :attr:`~Connection.text_factory`, :class:`str` by default"
 msgstr "depende de :attr:`~Connection.text_factory`, :class:`str` por defecto"
 
-#: ../Doc/library/sqlite3.rst:1975
+#: ../Doc/library/sqlite3.rst:1978
 msgid ""
 "The type system of the :mod:`!sqlite3` module is extensible in two ways: you "
 "can store additional Python types in an SQLite database via :ref:`object "
@@ -2477,52 +2899,52 @@ msgstr ""
 "El sistema de tipos del módulo :mod:`!sqlite3` es extensible en dos formas: "
 "se puede almacenar tipos de Python adicionales en una base de datos SQLite "
 "vía a :ref:`objetos adaptadores <sqlite3-adapters>`, y se puede permitir "
-"que :mod:`!sqlite3` convierta tipos SQLite a diferentes tipos de Python vía :"
-"ref:`converters <sqlite3-converters>`."
+"que :mod:`!sqlite3` convierta tipos SQLite a diferentes tipos de Python "
+"vía :ref:`converters <sqlite3-converters>`."
 
-#: ../Doc/library/sqlite3.rst:1985
+#: ../Doc/library/sqlite3.rst:1988
 #, fuzzy
 msgid "Default adapters and converters (deprecated)"
 msgstr "Adaptadores y convertidores por defecto"
 
-#: ../Doc/library/sqlite3.rst:1989
+#: ../Doc/library/sqlite3.rst:1992
 msgid ""
 "The default adapters and converters are deprecated as of Python 3.12. "
 "Instead, use the :ref:`sqlite3-adapter-converter-recipes` and tailor them to "
 "your needs."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1993
+#: ../Doc/library/sqlite3.rst:1996
 #, fuzzy
 msgid "The deprecated default adapters and converters consist of:"
 msgstr "Adaptadores y convertidores por defecto"
 
-#: ../Doc/library/sqlite3.rst:1995
+#: ../Doc/library/sqlite3.rst:1998
 msgid ""
 "An adapter for :class:`datetime.date` objects to :class:`strings <str>` in "
 "`ISO 8601`_ format."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1997
+#: ../Doc/library/sqlite3.rst:2000
 msgid ""
 "An adapter for :class:`datetime.datetime` objects to strings in ISO 8601 "
 "format."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1999
+#: ../Doc/library/sqlite3.rst:2002
 msgid ""
-"A converter for :ref:`declared <sqlite3-converters>` \"date\" types to :"
-"class:`datetime.date` objects."
+"A converter for :ref:`declared <sqlite3-converters>` \"date\" types "
+"to :class:`datetime.date` objects."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2001
+#: ../Doc/library/sqlite3.rst:2004
 msgid ""
 "A converter for declared \"timestamp\" types to :class:`datetime.datetime` "
 "objects. Fractional parts will be truncated to 6 digits (microsecond "
 "precision)."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2007
+#: ../Doc/library/sqlite3.rst:2010
 msgid ""
 "The default \"timestamp\" converter ignores UTC offsets in the database and "
 "always returns a naive :class:`datetime.datetime` object. To preserve UTC "
@@ -2535,39 +2957,43 @@ msgstr ""
 "los convertidores deshabilitados o registre un convertidor que reconozca la "
 "compensación con :func:`register_converter`."
 
-#: ../Doc/library/sqlite3.rst:2020
+#: ../Doc/library/sqlite3.rst:2023
 msgid "Command-line interface"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2022
+#: ../Doc/library/sqlite3.rst:2025
 msgid ""
 "The :mod:`!sqlite3` module can be invoked as a script, using the "
 "interpreter's :option:`-m` switch, in order to provide a simple SQLite "
 "shell. The argument signature is as follows::"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2029
+#: ../Doc/library/sqlite3.rst:2030
+msgid "python -m sqlite3 [-h] [-v] [filename] [sql]"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2032
 msgid "Type ``.quit`` or CTRL-D to exit the shell."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2035
+#: ../Doc/library/sqlite3.rst:2038
 msgid "Print CLI help."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2039
+#: ../Doc/library/sqlite3.rst:2042
 msgid "Print underlying SQLite library version."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2047
+#: ../Doc/library/sqlite3.rst:2050
 msgid "How-to guides"
 msgstr "Guías prácticas"
 
-#: ../Doc/library/sqlite3.rst:2052
+#: ../Doc/library/sqlite3.rst:2055
 msgid "How to use placeholders to bind values in SQL queries"
 msgstr ""
 "Cómo usar marcadores de posición para vincular valores en consultas SQL"
 
-#: ../Doc/library/sqlite3.rst:2054
+#: ../Doc/library/sqlite3.rst:2057
 #, fuzzy
 msgid ""
 "SQL operations usually need to use values from Python variables. However, "
@@ -2581,7 +3007,19 @@ msgstr ""
 "los `SQL injection attacks`_ (see the `xkcd webcomic <https://xkcd.com/327/"
 ">`_ para ver un ejemplo gracioso de lo que puede ir mal)::"
 
-#: ../Doc/library/sqlite3.rst:2067
+#: ../Doc/library/sqlite3.rst:2062
+#, python-format
+msgid ""
+">>> # Never do this -- insecure!\n"
+">>> symbol = input()\n"
+"' OR TRUE; --\n"
+">>> sql = \"SELECT * FROM stocks WHERE symbol = '%s'\" % symbol\n"
+">>> print(sql)\n"
+"SELECT * FROM stocks WHERE symbol = '' OR TRUE; --'\n"
+">>> cur.execute(sql)"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2070
 msgid ""
 "Instead, use the DB-API's parameter substitution. To insert a variable into "
 "a query string, use a placeholder in the string, and substitute the actual "
@@ -2589,7 +3027,7 @@ msgid ""
 "second argument of the cursor's :meth:`~Cursor.execute` method."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2072
+#: ../Doc/library/sqlite3.rst:2075
 #, fuzzy
 msgid ""
 "An SQL statement may use one of two kinds of placeholders: question marks "
@@ -2602,29 +3040,51 @@ msgid ""
 msgstr ""
 "En su lugar, utilice la sustitución de parámetros de la DB-API. Para "
 "insertar una variable en una consulta, use un marcador de posición en la "
-"consulta y sustituya los valores reales en la consulta como una :class:"
-"`tuple` de valores al segundo argumento de :meth:`~Cursor.execute`. Una "
-"sentencia SQL puede utilizar uno de dos tipos de marcadores de posición: "
-"signos de interrogación (estilo qmark) o marcadores de posición con nombre "
-"(estilo con nombre). Para el estilo qmark, ``parameters`` debe ser un :term:"
-"`sequence <sequence>`. Para el estilo nombrado, puede ser una instancia :"
-"term:`sequence <sequence>` o :class:`dict`. La longitud de :term:`sequence "
-"<sequence>` debe coincidir con el número de marcadores de posición, o se "
-"lanzará un :exc:`ProgrammingError`. Si se proporciona un :class:`dict`, debe "
+"consulta y sustituya los valores reales en la consulta como "
+"una :class:`tuple` de valores al segundo argumento "
+"de :meth:`~Cursor.execute`. Una sentencia SQL puede utilizar uno de dos "
+"tipos de marcadores de posición: signos de interrogación (estilo qmark) o "
+"marcadores de posición con nombre (estilo con nombre). Para el estilo qmark, "
+"``parameters`` debe ser un :term:`sequence <sequence>`. Para el estilo "
+"nombrado, puede ser una instancia :term:`sequence <sequence>` "
+"o :class:`dict`. La longitud de :term:`sequence <sequence>` debe coincidir "
+"con el número de marcadores de posición, o se lanzará "
+"un :exc:`ProgrammingError`. Si se proporciona un :class:`dict`, debe "
 "contener claves para todos los parámetros nombrados. Cualquier item "
 "adicional se ignorará. Aquí un ejemplo de ambos estilos:"
 
-#: ../Doc/library/sqlite3.rst:2109
+#: ../Doc/library/sqlite3.rst:2086
+msgid ""
+"con = sqlite3.connect(\":memory:\")\n"
+"cur = con.execute(\"CREATE TABLE lang(name, first_appeared)\")\n"
+"\n"
+"# This is the named style used with executemany():\n"
+"data = (\n"
+"    {\"name\": \"C\", \"year\": 1972},\n"
+"    {\"name\": \"Fortran\", \"year\": 1957},\n"
+"    {\"name\": \"Python\", \"year\": 1991},\n"
+"    {\"name\": \"Go\", \"year\": 2009},\n"
+")\n"
+"cur.executemany(\"INSERT INTO lang VALUES(:name, :year)\", data)\n"
+"\n"
+"# This is the qmark style used in a SELECT query:\n"
+"params = (1972,)\n"
+"cur.execute(\"SELECT * FROM lang WHERE first_appeared = ?\", params)\n"
+"print(cur.fetchall())\n"
+"con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2113
 msgid ""
 ":pep:`249` numeric placeholders are *not* supported. If used, they will be "
 "interpreted as named placeholders."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2116
+#: ../Doc/library/sqlite3.rst:2120
 msgid "How to adapt custom Python types to SQLite values"
 msgstr "Cómo adaptar tipos de Python personalizados a valores de SQLite"
 
-#: ../Doc/library/sqlite3.rst:2118
+#: ../Doc/library/sqlite3.rst:2122
 msgid ""
 "SQLite supports only a limited set of data types natively. To store custom "
 "Python types in SQLite databases, *adapt* them to one of the :ref:`Python "
@@ -2635,7 +3095,7 @@ msgstr ""
 "adáptelos a uno de los :ref:`tipos Python que SQLite entiende de forma "
 "nativa <sqlite3-types>`."
 
-#: ../Doc/library/sqlite3.rst:2122
+#: ../Doc/library/sqlite3.rst:2126
 msgid ""
 "There are two ways to adapt Python objects to SQLite types: letting your "
 "object adapt itself, or using an *adapter callable*. The latter will take "
@@ -2651,11 +3111,11 @@ msgstr ""
 "desarrollador de aplicaciones, puede tener más sentido tomar el control "
 "directo registrando funciones de adaptador personalizadas."
 
-#: ../Doc/library/sqlite3.rst:2134
+#: ../Doc/library/sqlite3.rst:2138
 msgid "How to write adaptable objects"
 msgstr "Cómo escribir objetos adaptables"
 
-#: ../Doc/library/sqlite3.rst:2136
+#: ../Doc/library/sqlite3.rst:2140
 msgid ""
 "Suppose we have a :class:`!Point` class that represents a pair of "
 "coordinates, ``x`` and ``y``, in a Cartesian coordinate system. The "
@@ -2669,14 +3129,32 @@ msgstr ""
 "de coordenadas se almacenará como una cadena de texto en la base de datos, "
 "utilizando un punto y coma para separar las coordenadas. Esto se puede "
 "implementar agregando un método ``__conform__(self, protocol)`` que retorna "
-"el valor adaptado. El objeto pasado a *protocolo* será de tipo :class:"
-"`PrepareProtocol`."
+"el valor adaptado. El objeto pasado a *protocolo* será de "
+"tipo :class:`PrepareProtocol`."
 
-#: ../Doc/library/sqlite3.rst:2167
+#: ../Doc/library/sqlite3.rst:2148
+msgid ""
+"class Point:\n"
+"    def __init__(self, x, y):\n"
+"        self.x, self.y = x, y\n"
+"\n"
+"    def __conform__(self, protocol):\n"
+"        if protocol is sqlite3.PrepareProtocol:\n"
+"            return f\"{self.x};{self.y}\"\n"
+"\n"
+"con = sqlite3.connect(\":memory:\")\n"
+"cur = con.cursor()\n"
+"\n"
+"cur.execute(\"SELECT ?\", (Point(4.0, -3.2),))\n"
+"print(cur.fetchone()[0])\n"
+"con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2172
 msgid "How to register adapter callables"
 msgstr "Como registrar un adaptador invocable"
 
-#: ../Doc/library/sqlite3.rst:2169
+#: ../Doc/library/sqlite3.rst:2174
 msgid ""
 "The other possibility is to create a function that converts the Python "
 "object to an SQLite-compatible type. This function can then be registered "
@@ -2686,11 +3164,30 @@ msgstr ""
 "tipo compatible de SQLite. Esta función puede de esta forma ser registrada "
 "usando un :func:`register_adapter`."
 
-#: ../Doc/library/sqlite3.rst:2199
+#: ../Doc/library/sqlite3.rst:2178
+msgid ""
+"class Point:\n"
+"    def __init__(self, x, y):\n"
+"        self.x, self.y = x, y\n"
+"\n"
+"def adapt_point(point):\n"
+"    return f\"{point.x};{point.y}\"\n"
+"\n"
+"sqlite3.register_adapter(Point, adapt_point)\n"
+"\n"
+"con = sqlite3.connect(\":memory:\")\n"
+"cur = con.cursor()\n"
+"\n"
+"cur.execute(\"SELECT ?\", (Point(1.0, 2.5),))\n"
+"print(cur.fetchone()[0])\n"
+"con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2205
 msgid "How to convert SQLite values to custom Python types"
 msgstr "Como convertir valores SQLite a tipos de Python personalizados"
 
-#: ../Doc/library/sqlite3.rst:2201
+#: ../Doc/library/sqlite3.rst:2207
 msgid ""
 "Writing an adapter lets you convert *from* custom Python types *to* SQLite "
 "values. To be able to convert *from* SQLite values *to* custom Python types, "
@@ -2700,7 +3197,7 @@ msgstr ""
 "Python *a* valores SQLite. Para poder convertir *de* valores SQLite *a* "
 "tipos personalizados de Python, usamos *convertidores*."
 
-#: ../Doc/library/sqlite3.rst:2206
+#: ../Doc/library/sqlite3.rst:2212
 msgid ""
 "Let's go back to the :class:`!Point` class. We stored the x and y "
 "coordinates separated via semicolons as strings in SQLite."
@@ -2708,7 +3205,7 @@ msgstr ""
 "Regresemos a la clase :class:`!Point`. Almacenamos las coordenadas x y y "
 "separadas por punto y coma como una cadena de caracteres en SQLite."
 
-#: ../Doc/library/sqlite3.rst:2209
+#: ../Doc/library/sqlite3.rst:2215
 msgid ""
 "First, we'll define a converter function that accepts the string as a "
 "parameter and constructs a :class:`!Point` object from it."
@@ -2716,15 +3213,23 @@ msgstr ""
 "Primero, se define una función de conversión que acepta la cadena de texto "
 "como un parámetro y construya un objeto :class:`!Point` de ahí."
 
-#: ../Doc/library/sqlite3.rst:2214
+#: ../Doc/library/sqlite3.rst:2220
 msgid ""
 "Converter functions are **always** passed a :class:`bytes` object, no matter "
 "the underlying SQLite data type."
 msgstr ""
-"Las funciones de conversión **siempre** son llamadas con un objeto :class:"
-"`bytes`, no importa bajo qué tipo de dato se envió el valor a SQLite."
+"Las funciones de conversión **siempre** son llamadas con un "
+"objeto :class:`bytes`, no importa bajo qué tipo de dato se envió el valor a "
+"SQLite."
 
 #: ../Doc/library/sqlite3.rst:2223
+msgid ""
+"def convert_point(s):\n"
+"    x, y = map(float, s.split(b\";\"))\n"
+"    return Point(x, y)"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2229
 msgid ""
 "We now need to tell :mod:`!sqlite3` when it should convert a given SQLite "
 "value. This is done when connecting to a database, using the *detect_types* "
@@ -2734,67 +3239,171 @@ msgstr ""
 "valor dado SQLite. Esto se hace cuando se conecta a una base de datos, "
 "utilizando el parámetro *detect_types* de :func:`connect`. Hay tres opciones:"
 
-#: ../Doc/library/sqlite3.rst:2227
+#: ../Doc/library/sqlite3.rst:2233
 msgid "Implicit: set *detect_types* to :const:`PARSE_DECLTYPES`"
 msgstr "Implícito: establece *detect_types* para que :const:`PARSE_DECLTYPES`"
 
-#: ../Doc/library/sqlite3.rst:2228
+#: ../Doc/library/sqlite3.rst:2234
 msgid "Explicit: set *detect_types* to :const:`PARSE_COLNAMES`"
 msgstr "Explícito: establece *detect_types* para que :const:`PARSE_COLNAMES`"
 
-#: ../Doc/library/sqlite3.rst:2229
+#: ../Doc/library/sqlite3.rst:2235
 msgid ""
-"Both: set *detect_types* to ``sqlite3.PARSE_DECLTYPES | sqlite3."
-"PARSE_COLNAMES``. Column names take precedence over declared types."
+"Both: set *detect_types* to ``sqlite3.PARSE_DECLTYPES | "
+"sqlite3.PARSE_COLNAMES``. Column names take precedence over declared types."
 msgstr ""
-"Ambos: establece *detect_types* para ``sqlite3.PARSE_DECLTYPES | sqlite3."
-"PARSE_COLNAMES``. Los nombres de columna tienen prioridad sobre los tipos "
-"declarados."
+"Ambos: establece *detect_types* para ``sqlite3.PARSE_DECLTYPES | "
+"sqlite3.PARSE_COLNAMES``. Los nombres de columna tienen prioridad sobre los "
+"tipos declarados."
 
-#: ../Doc/library/sqlite3.rst:2233
+#: ../Doc/library/sqlite3.rst:2239
 msgid "The following example illustrates the implicit and explicit approaches:"
 msgstr "El siguiente ejemplo ilustra ambos enfoques:"
 
-#: ../Doc/library/sqlite3.rst:2284
+#: ../Doc/library/sqlite3.rst:2241
+msgid ""
+"class Point:\n"
+"    def __init__(self, x, y):\n"
+"        self.x, self.y = x, y\n"
+"\n"
+"    def __repr__(self):\n"
+"        return f\"Point({self.x}, {self.y})\"\n"
+"\n"
+"def adapt_point(point):\n"
+"    return f\"{point.x};{point.y}\"\n"
+"\n"
+"def convert_point(s):\n"
+"    x, y = list(map(float, s.split(b\";\")))\n"
+"    return Point(x, y)\n"
+"\n"
+"# Register the adapter and converter\n"
+"sqlite3.register_adapter(Point, adapt_point)\n"
+"sqlite3.register_converter(\"point\", convert_point)\n"
+"\n"
+"# 1) Parse using declared types\n"
+"p = Point(4.0, -3.2)\n"
+"con = sqlite3.connect(\":memory:\", detect_types=sqlite3.PARSE_DECLTYPES)\n"
+"cur = con.execute(\"CREATE TABLE test(p point)\")\n"
+"\n"
+"cur.execute(\"INSERT INTO test(p) VALUES(?)\", (p,))\n"
+"cur.execute(\"SELECT p FROM test\")\n"
+"print(\"with declared types:\", cur.fetchone()[0])\n"
+"cur.close()\n"
+"con.close()\n"
+"\n"
+"# 2) Parse using column names\n"
+"con = sqlite3.connect(\":memory:\", detect_types=sqlite3.PARSE_COLNAMES)\n"
+"cur = con.execute(\"CREATE TABLE test(p)\")\n"
+"\n"
+"cur.execute(\"INSERT INTO test(p) VALUES(?)\", (p,))\n"
+"cur.execute('SELECT p AS \"p [point]\" FROM test')\n"
+"print(\"with column names:\", cur.fetchone()[0])\n"
+"cur.close()\n"
+"con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2292
 msgid "Adapter and converter recipes"
 msgstr "Ejemplos para adaptadores y convertidores"
 
-#: ../Doc/library/sqlite3.rst:2286
+#: ../Doc/library/sqlite3.rst:2294
 msgid "This section shows recipes for common adapters and converters."
 msgstr ""
 "En esta sección se muestran ejemplos para adaptadores y convertidores "
 "comunes."
 
-#: ../Doc/library/sqlite3.rst:2348
+#: ../Doc/library/sqlite3.rst:2296
+msgid ""
+"import datetime\n"
+"import sqlite3\n"
+"\n"
+"def adapt_date_iso(val):\n"
+"    \"\"\"Adapt datetime.date to ISO 8601 date.\"\"\"\n"
+"    return val.isoformat()\n"
+"\n"
+"def adapt_datetime_iso(val):\n"
+"    \"\"\"Adapt datetime.datetime to timezone-naive ISO 8601 date.\"\"\"\n"
+"    return val.isoformat()\n"
+"\n"
+"def adapt_datetime_epoch(val):\n"
+"    \"\"\"Adapt datetime.datetime to Unix timestamp.\"\"\"\n"
+"    return int(val.timestamp())\n"
+"\n"
+"sqlite3.register_adapter(datetime.date, adapt_date_iso)\n"
+"sqlite3.register_adapter(datetime.datetime, adapt_datetime_iso)\n"
+"sqlite3.register_adapter(datetime.datetime, adapt_datetime_epoch)\n"
+"\n"
+"def convert_date(val):\n"
+"    \"\"\"Convert ISO 8601 date to datetime.date object.\"\"\"\n"
+"    return datetime.date.fromisoformat(val.decode())\n"
+"\n"
+"def convert_datetime(val):\n"
+"    \"\"\"Convert ISO 8601 datetime to datetime.datetime object.\"\"\"\n"
+"    return datetime.datetime.fromisoformat(val.decode())\n"
+"\n"
+"def convert_timestamp(val):\n"
+"    \"\"\"Convert Unix epoch timestamp to datetime.datetime object.\"\"\"\n"
+"    return datetime.datetime.fromtimestamp(int(val))\n"
+"\n"
+"sqlite3.register_converter(\"date\", convert_date)\n"
+"sqlite3.register_converter(\"datetime\", convert_datetime)\n"
+"sqlite3.register_converter(\"timestamp\", convert_timestamp)"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2356
 msgid "How to use connection shortcut methods"
 msgstr "Cómo utilizar los métodos de acceso directo de conexión"
 
-#: ../Doc/library/sqlite3.rst:2350
+#: ../Doc/library/sqlite3.rst:2358
 msgid ""
-"Using the :meth:`~Connection.execute`, :meth:`~Connection.executemany`, and :"
-"meth:`~Connection.executescript` methods of the :class:`Connection` class, "
-"your code can be written more concisely because you don't have to create the "
-"(often superfluous) :class:`Cursor` objects explicitly. Instead, the :class:"
-"`Cursor` objects are created implicitly and these shortcut methods return "
-"the cursor objects. This way, you can execute a ``SELECT`` statement and "
-"iterate over it directly using only a single call on the :class:`Connection` "
-"object."
+"Using the :meth:`~Connection.execute`, :meth:`~Connection.executemany`, "
+"and :meth:`~Connection.executescript` methods of the :class:`Connection` "
+"class, your code can be written more concisely because you don't have to "
+"create the (often superfluous) :class:`Cursor` objects explicitly. Instead, "
+"the :class:`Cursor` objects are created implicitly and these shortcut "
+"methods return the cursor objects. This way, you can execute a ``SELECT`` "
+"statement and iterate over it directly using only a single call on "
+"the :class:`Connection` object."
 msgstr ""
-"Usando los métodos :meth:`~Connection.execute`, :meth:`~Connection."
-"executemany`, y :meth:`~Connection.executescript` de la clase :class:"
-"`Connection`, su código se puede escribir de manera más concisa porque no "
-"tiene que crear los (a menudo superfluo) objetos :class:`Cursor` "
-"explícitamente. Por el contrario, los objetos :class:`Cursor` son creados "
-"implícitamente y esos métodos de acceso directo retornarán objetos cursores. "
-"De esta forma, se puede ejecutar una sentencia ``SELECT`` e iterar sobre "
-"ella directamente usando un simple llamado sobre el objeto de clase :class:"
-"`Connection`."
+"Usando los "
+"métodos :meth:`~Connection.execute`, :meth:`~Connection.executemany`, "
+"y :meth:`~Connection.executescript` de la clase :class:`Connection`, su "
+"código se puede escribir de manera más concisa porque no tiene que crear los "
+"(a menudo superfluo) objetos :class:`Cursor` explícitamente. Por el "
+"contrario, los objetos :class:`Cursor` son creados implícitamente y esos "
+"métodos de acceso directo retornarán objetos cursores. De esta forma, se "
+"puede ejecutar una sentencia ``SELECT`` e iterar sobre ella directamente "
+"usando un simple llamado sobre el objeto de clase :class:`Connection`."
 
-#: ../Doc/library/sqlite3.rst:2391
+#: ../Doc/library/sqlite3.rst:2367
+msgid ""
+"# Create and fill the table.\n"
+"con = sqlite3.connect(\":memory:\")\n"
+"con.execute(\"CREATE TABLE lang(name, first_appeared)\")\n"
+"data = [\n"
+"    (\"C++\", 1985),\n"
+"    (\"Objective-C\", 1984),\n"
+"]\n"
+"con.executemany(\"INSERT INTO lang(name, first_appeared) VALUES(?, ?)\", "
+"data)\n"
+"\n"
+"# Print the table contents\n"
+"for row in con.execute(\"SELECT name, first_appeared FROM lang\"):\n"
+"    print(row)\n"
+"\n"
+"print(\"I just deleted\", con.execute(\"DELETE FROM lang\").rowcount, "
+"\"rows\")\n"
+"\n"
+"# close() is not a shortcut method and it's not called automatically;\n"
+"# the connection object should be closed manually\n"
+"con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2399
 msgid "How to use the connection context manager"
 msgstr "Como usar la conexión con un administrador de contexto"
 
-#: ../Doc/library/sqlite3.rst:2393
+#: ../Doc/library/sqlite3.rst:2401
 #, fuzzy
 msgid ""
 "A :class:`Connection` object can be used as a context manager that "
@@ -2813,7 +3422,7 @@ msgstr ""
 "falla, o si el cuerpo del ``with`` lanza una excepción que no es capturada, "
 "la transacción se revierte."
 
-#: ../Doc/library/sqlite3.rst:2404
+#: ../Doc/library/sqlite3.rst:2412
 #, fuzzy
 msgid ""
 "If there is no open transaction upon leaving the body of the ``with`` "
@@ -2823,27 +3432,61 @@ msgstr ""
 "Si no hay una transacción abierta al salir del cuerpo de la declaración "
 "``with``, el administrador de contexto no funciona."
 
-#: ../Doc/library/sqlite3.rst:2410
+#: ../Doc/library/sqlite3.rst:2417
+#, fuzzy
 msgid ""
 "The context manager neither implicitly opens a new transaction nor closes "
-"the connection."
+"the connection. If you need a closing context manager, consider "
+"using :meth:`contextlib.closing`."
 msgstr ""
 "El administrador de contexto no abre implícitamente una nueva transacción ni "
 "cierra la conexión."
 
-#: ../Doc/library/sqlite3.rst:2443
+#: ../Doc/library/sqlite3.rst:2421
+msgid ""
+"con = sqlite3.connect(\":memory:\")\n"
+"con.execute(\"CREATE TABLE lang(id INTEGER PRIMARY KEY, name VARCHAR UNIQUE)"
+"\")\n"
+"\n"
+"# Successful, con.commit() is called automatically afterwards\n"
+"with con:\n"
+"    con.execute(\"INSERT INTO lang(name) VALUES(?)\", (\"Python\",))\n"
+"\n"
+"# con.rollback() is called after the with block finishes with an exception,\n"
+"# the exception is still raised and must be caught\n"
+"try:\n"
+"    with con:\n"
+"        con.execute(\"INSERT INTO lang(name) VALUES(?)\", (\"Python\",))\n"
+"except sqlite3.IntegrityError:\n"
+"    print(\"couldn't add Python twice\")\n"
+"\n"
+"# Connection object used as context manager only commits or rollbacks "
+"transactions,\n"
+"# so the connection object should be closed manually\n"
+"con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2451
 msgid "How to work with SQLite URIs"
 msgstr "Como trabajar con URIs SQLite"
 
-#: ../Doc/library/sqlite3.rst:2445
+#: ../Doc/library/sqlite3.rst:2453
 msgid "Some useful URI tricks include:"
 msgstr "Algunos trucos útiles de URI incluyen:"
 
-#: ../Doc/library/sqlite3.rst:2447
+#: ../Doc/library/sqlite3.rst:2455
 msgid "Open a database in read-only mode:"
 msgstr "Abra una base de datos en modo de solo lectura:"
 
-#: ../Doc/library/sqlite3.rst:2456
+#: ../Doc/library/sqlite3.rst:2457
+msgid ""
+">>> con = sqlite3.connect(\"file:tutorial.db?mode=ro\", uri=True)\n"
+">>> con.execute(\"CREATE TABLE readonly(data)\")\n"
+"Traceback (most recent call last):\n"
+"OperationalError: attempt to write a readonly database"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2464
 msgid ""
 "Do not implicitly create a new database file if it does not already exist; "
 "will raise :exc:`~sqlite3.OperationalError` if unable to create a new file:"
@@ -2852,11 +3495,33 @@ msgstr ""
 "esto lanzará un :exc:`~sqlite3.OperationalError` si no puede crear un nuevo "
 "archivo:"
 
-#: ../Doc/library/sqlite3.rst:2466
+#: ../Doc/library/sqlite3.rst:2467
+msgid ""
+">>> con = sqlite3.connect(\"file:nosuchdb.db?mode=rw\", uri=True)\n"
+"Traceback (most recent call last):\n"
+"OperationalError: unable to open database file"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2474
 msgid "Create a shared named in-memory database:"
 msgstr "Crea un nombre compartido sobre una base de datos en memoria:"
 
-#: ../Doc/library/sqlite3.rst:2480
+#: ../Doc/library/sqlite3.rst:2476
+msgid ""
+"db = \"file:mem1?mode=memory&cache=shared\"\n"
+"con1 = sqlite3.connect(db, uri=True)\n"
+"con2 = sqlite3.connect(db, uri=True)\n"
+"with con1:\n"
+"    con1.execute(\"CREATE TABLE shared(data)\")\n"
+"    con1.execute(\"INSERT INTO shared VALUES(28)\")\n"
+"res = con2.execute(\"SELECT data FROM shared\")\n"
+"assert res.fetchone() == (28,)\n"
+"\n"
+"con1.close()\n"
+"con2.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2490
 msgid ""
 "More information about this feature, including a list of parameters, can be "
 "found in the `SQLite URI documentation`_."
@@ -2864,26 +3529,26 @@ msgstr ""
 "Más información sobre esta característica, incluyendo una lista de opciones "
 "reconocidas, pueden encontrarse en `SQLite URI documentation`_."
 
-#: ../Doc/library/sqlite3.rst:2489
+#: ../Doc/library/sqlite3.rst:2499
 msgid "How to create and use row factories"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2491
-msgid ""
-"By default, :mod:`!sqlite3` represents each row as a :class:`tuple`. If a :"
-"class:`!tuple` does not suit your needs, you can use the :class:`sqlite3."
-"Row` class or a custom :attr:`~Cursor.row_factory`."
-msgstr ""
-
-#: ../Doc/library/sqlite3.rst:2496
-msgid ""
-"While :attr:`!row_factory` exists as an attribute both on the :class:"
-"`Cursor` and the :class:`Connection`, it is recommended to set :class:"
-"`Connection.row_factory`, so all cursors created from the connection will "
-"use the same row factory."
-msgstr ""
-
 #: ../Doc/library/sqlite3.rst:2501
+msgid ""
+"By default, :mod:`!sqlite3` represents each row as a :class:`tuple`. If "
+"a :class:`!tuple` does not suit your needs, you can use "
+"the :class:`sqlite3.Row` class or a custom :attr:`~Cursor.row_factory`."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2506
+msgid ""
+"While :attr:`!row_factory` exists as an attribute both on "
+"the :class:`Cursor` and the :class:`Connection`, it is recommended to "
+"set :class:`Connection.row_factory`, so all cursors created from the "
+"connection will use the same row factory."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2511
 msgid ""
 ":class:`!Row` provides indexed and case-insensitive named access to columns, "
 "with minimal memory overhead and performance impact over a :class:`!tuple`. "
@@ -2891,11 +3556,32 @@ msgid ""
 "attribute:"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2511
+#: ../Doc/library/sqlite3.rst:2516
+msgid ""
+">>> con = sqlite3.connect(\":memory:\")\n"
+">>> con.row_factory = sqlite3.Row"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2521
 msgid "Queries now return :class:`!Row` objects:"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2528
+#: ../Doc/library/sqlite3.rst:2523
+msgid ""
+">>> res = con.execute(\"SELECT 'Earth' AS name, 6378 AS radius\")\n"
+">>> row = res.fetchone()\n"
+">>> row.keys()\n"
+"['name', 'radius']\n"
+">>> row[0]         # Access by index.\n"
+"'Earth'\n"
+">>> row[\"name\"]    # Access by name.\n"
+"'Earth'\n"
+">>> row[\"RADIUS\"]  # Column names are case-insensitive.\n"
+"6378\n"
+">>> con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2539
 msgid ""
 "The ``FROM`` clause can be omitted in the ``SELECT`` statement, as in the "
 "above example. In such cases, SQLite returns a single row with columns "
@@ -2903,41 +3589,130 @@ msgid ""
 "alias``."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2533
+#: ../Doc/library/sqlite3.rst:2544
 msgid ""
 "You can create a custom :attr:`~Cursor.row_factory` that returns each row as "
 "a :class:`dict`, with column names mapped to values:"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2542
+#: ../Doc/library/sqlite3.rst:2547
+msgid ""
+"def dict_factory(cursor, row):\n"
+"    fields = [column[0] for column in cursor.description]\n"
+"    return {key: value for key, value in zip(fields, row)}"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2553
 msgid ""
 "Using it, queries now return a :class:`!dict` instead of a :class:`!tuple`:"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2552
+#: ../Doc/library/sqlite3.rst:2555
+msgid ""
+">>> con = sqlite3.connect(\":memory:\")\n"
+">>> con.row_factory = dict_factory\n"
+">>> for row in con.execute(\"SELECT 1 AS a, 2 AS b\"):\n"
+"...     print(row)\n"
+"{'a': 1, 'b': 2}\n"
+">>> con.close()"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2564
 msgid "The following row factory returns a :term:`named tuple`:"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2563
+#: ../Doc/library/sqlite3.rst:2566
+msgid ""
+"from collections import namedtuple\n"
+"\n"
+"def namedtuple_factory(cursor, row):\n"
+"    fields = [column[0] for column in cursor.description]\n"
+"    cls = namedtuple(\"Row\", fields)\n"
+"    return cls._make(row)"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2575
 msgid ":func:`!namedtuple_factory` can be used as follows:"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2578
+#: ../Doc/library/sqlite3.rst:2577
 msgid ""
-"With some adjustments, the above recipe can be adapted to use a :class:"
-"`~dataclasses.dataclass`, or any other custom class, instead of a :class:"
-"`~collections.namedtuple`."
+">>> con = sqlite3.connect(\":memory:\")\n"
+">>> con.row_factory = namedtuple_factory\n"
+">>> cur = con.execute(\"SELECT 1 AS a, 2 AS b\")\n"
+">>> row = cur.fetchone()\n"
+">>> row\n"
+"Row(a=1, b=2)\n"
+">>> row[0]  # Indexed access.\n"
+"1\n"
+">>> row.b   # Attribute access.\n"
+"2\n"
+">>> con.close()"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2586
+#: ../Doc/library/sqlite3.rst:2591
+msgid ""
+"With some adjustments, the above recipe can be adapted to use "
+"a :class:`~dataclasses.dataclass`, or any other custom class, instead of "
+"a :class:`~collections.namedtuple`."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2599
+msgid "How to handle non-UTF-8 text encodings"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2601
+msgid ""
+"By default, :mod:`!sqlite3` uses :class:`str` to adapt SQLite values with "
+"the ``TEXT`` data type. This works well for UTF-8 encoded text, but it might "
+"fail for other encodings and invalid UTF-8. You can use a "
+"custom :attr:`~Connection.text_factory` to handle such cases."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2607
+msgid ""
+"Because of SQLite's `flexible typing`_, it is not uncommon to encounter "
+"table columns with the ``TEXT`` data type containing non-UTF-8 encodings, or "
+"even arbitrary data. To demonstrate, let's assume we have a database with "
+"ISO-8859-2 (Latin-2) encoded text, for example a table of Czech-English "
+"dictionary entries. Assuming we now have a :class:`Connection` "
+"instance :py:data:`!con` connected to this database, we can decode the "
+"Latin-2 encoded text using this :attr:`~Connection.text_factory`:"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2616
+msgid "con.text_factory = lambda data: str(data, encoding=\"latin2\")"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2620
+msgid ""
+"For invalid UTF-8 or arbitrary data in stored in ``TEXT`` table columns, you "
+"can use the following technique, borrowed from the :ref:`unicode-howto`:"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2623
+msgid "con.text_factory = lambda data: str(data, errors=\"surrogateescape\")"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2629
+msgid ""
+"The :mod:`!sqlite3` module API does not support strings containing "
+"surrogates."
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2634
+msgid ":ref:`unicode-howto`"
+msgstr ""
+
+#: ../Doc/library/sqlite3.rst:2640
 msgid "Explanation"
 msgstr "Explicación"
 
-#: ../Doc/library/sqlite3.rst:2592
+#: ../Doc/library/sqlite3.rst:2646
 msgid "Transaction control"
 msgstr "Control transaccional"
 
-#: ../Doc/library/sqlite3.rst:2594
+#: ../Doc/library/sqlite3.rst:2648
 msgid ""
 ":mod:`!sqlite3` offers multiple methods of controlling whether, when and how "
 "database transactions are opened and closed. :ref:`sqlite3-transaction-"
@@ -2945,123 +3720,124 @@ msgid ""
 "isolation-level` retains the pre-Python 3.12 behaviour."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2603
+#: ../Doc/library/sqlite3.rst:2657
 msgid "Transaction control via the ``autocommit`` attribute"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2605
+#: ../Doc/library/sqlite3.rst:2659
 msgid ""
-"The recommended way of controlling transaction behaviour is through the :"
-"attr:`Connection.autocommit` attribute, which should preferably be set using "
-"the *autocommit* parameter of :func:`connect`."
+"The recommended way of controlling transaction behaviour is through "
+"the :attr:`Connection.autocommit` attribute, which should preferably be set "
+"using the *autocommit* parameter of :func:`connect`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2610
+#: ../Doc/library/sqlite3.rst:2664
 msgid ""
 "It is suggested to set *autocommit* to ``False``, which implies :pep:`249`-"
 "compliant transaction control. This means:"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2614
+#: ../Doc/library/sqlite3.rst:2668
 msgid ""
-":mod:`!sqlite3` ensures that a transaction is always open, so :func:"
-"`connect`, :meth:`Connection.commit`, and :meth:`Connection.rollback` will "
-"implicitly open a new transaction (immediately after closing the pending "
-"one, for the latter two). :mod:`!sqlite3` uses ``BEGIN DEFERRED`` statements "
-"when opening transactions."
+":mod:`!sqlite3` ensures that a transaction is always open, "
+"so :func:`connect`, :meth:`Connection.commit`, "
+"and :meth:`Connection.rollback` will implicitly open a new transaction "
+"(immediately after closing the pending one, for the latter two). :mod:`!"
+"sqlite3` uses ``BEGIN DEFERRED`` statements when opening transactions."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2619
+#: ../Doc/library/sqlite3.rst:2673
 msgid "Transactions should be committed explicitly using :meth:`!commit`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2620
+#: ../Doc/library/sqlite3.rst:2674
 msgid "Transactions should be rolled back explicitly using :meth:`!rollback`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2621
+#: ../Doc/library/sqlite3.rst:2675
 msgid ""
-"An implicit rollback is performed if the database is :meth:`~Connection."
-"close`-ed with pending changes."
+"An implicit rollback is performed if the database "
+"is :meth:`~Connection.close`-ed with pending changes."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2624
+#: ../Doc/library/sqlite3.rst:2678
 msgid ""
 "Set *autocommit* to ``True`` to enable SQLite's `autocommit mode`_. In this "
 "mode, :meth:`Connection.commit` and :meth:`Connection.rollback` have no "
 "effect. Note that SQLite's autocommit mode is distinct from the :pep:`249`-"
-"compliant :attr:`Connection.autocommit` attribute; use :attr:`Connection."
-"in_transaction` to query the low-level SQLite autocommit mode."
+"compliant :attr:`Connection.autocommit` attribute; "
+"use :attr:`Connection.in_transaction` to query the low-level SQLite "
+"autocommit mode."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2632
+#: ../Doc/library/sqlite3.rst:2686
 msgid ""
 "Set *autocommit* to :data:`LEGACY_TRANSACTION_CONTROL` to leave transaction "
-"control behaviour to the :attr:`Connection.isolation_level` attribute. See :"
-"ref:`sqlite3-transaction-control-isolation-level` for more information."
+"control behaviour to the :attr:`Connection.isolation_level` attribute. "
+"See :ref:`sqlite3-transaction-control-isolation-level` for more information."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2641
+#: ../Doc/library/sqlite3.rst:2695
 msgid "Transaction control via the ``isolation_level`` attribute"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2645
+#: ../Doc/library/sqlite3.rst:2699
 msgid ""
-"The recommended way of controlling transactions is via the :attr:"
-"`~Connection.autocommit` attribute. See :ref:`sqlite3-transaction-control-"
-"autocommit`."
+"The recommended way of controlling transactions is via "
+"the :attr:`~Connection.autocommit` attribute. See :ref:`sqlite3-transaction-"
+"control-autocommit`."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2649
+#: ../Doc/library/sqlite3.rst:2703
 msgid ""
-"If :attr:`Connection.autocommit` is set to :data:"
-"`LEGACY_TRANSACTION_CONTROL` (the default), transaction behaviour is "
-"controlled using the :attr:`Connection.isolation_level` attribute. "
+"If :attr:`Connection.autocommit` is set "
+"to :data:`LEGACY_TRANSACTION_CONTROL` (the default), transaction behaviour "
+"is controlled using the :attr:`Connection.isolation_level` attribute. "
 "Otherwise, :attr:`!isolation_level` has no effect."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:2655
+#: ../Doc/library/sqlite3.rst:2709
 msgid ""
 "If the connection attribute :attr:`~Connection.isolation_level` is not "
-"``None``, new transactions are implicitly opened before :meth:`~Cursor."
-"execute` and :meth:`~Cursor.executemany` executes ``INSERT``, ``UPDATE``, "
-"``DELETE``, or ``REPLACE`` statements; for other statements, no implicit "
-"transaction handling is performed. Use the :meth:`~Connection.commit` and :"
-"meth:`~Connection.rollback` methods to respectively commit and roll back "
-"pending transactions. You can choose the underlying `SQLite transaction "
-"behaviour`_ — that is, whether and what type of ``BEGIN`` statements :mod:`!"
-"sqlite3` implicitly executes – via the :attr:`~Connection.isolation_level` "
-"attribute."
+"``None``, new transactions are implicitly opened "
+"before :meth:`~Cursor.execute` and :meth:`~Cursor.executemany` executes "
+"``INSERT``, ``UPDATE``, ``DELETE``, or ``REPLACE`` statements; for other "
+"statements, no implicit transaction handling is performed. Use "
+"the :meth:`~Connection.commit` and :meth:`~Connection.rollback` methods to "
+"respectively commit and roll back pending transactions. You can choose the "
+"underlying `SQLite transaction behaviour`_ — that is, whether and what type "
+"of ``BEGIN`` statements :mod:`!sqlite3` implicitly executes – via "
+"the :attr:`~Connection.isolation_level` attribute."
 msgstr ""
 "Si el atributo de conexión :attr:`~Connection.isolation_level` no es "
-"``None``, las nuevas transacciones se abrirán implícitamente antes de :meth:"
-"`~Cursor.execute` y :meth:`~Cursor.executemany` ejecutará sentencias "
-"``INSERT``, ``UPDATE``, ``DELETE`` o ``REPLACE``; para otras sentencias, no "
-"se realiza ningún manejo de transacción implícito. Utilice los métodos :meth:"
-"`~Connection.commit` y :meth:`~Connection.rollback` para confirmar y "
-"deshacer respectivamente las transacciones pendientes. Puede elegir el "
-"`SQLite transaction behaviour`_  subyacente, es decir, si y qué tipo de "
-"declaraciones ``BEGIN`` :mod:`!sqlite3` se ejecutarán implícitamente, a "
-"través del atributo :attr:`~Connection.isolation_level`."
+"``None``, las nuevas transacciones se abrirán implícitamente antes "
+"de :meth:`~Cursor.execute` y :meth:`~Cursor.executemany` ejecutará "
+"sentencias ``INSERT``, ``UPDATE``, ``DELETE`` o ``REPLACE``; para otras "
+"sentencias, no se realiza ningún manejo de transacción implícito. Utilice "
+"los métodos :meth:`~Connection.commit` y :meth:`~Connection.rollback` para "
+"confirmar y deshacer respectivamente las transacciones pendientes. Puede "
+"elegir el `SQLite transaction behaviour`_  subyacente, es decir, si y qué "
+"tipo de declaraciones ``BEGIN`` :mod:`!sqlite3` se ejecutarán "
+"implícitamente, a través del atributo :attr:`~Connection.isolation_level`."
 
-#: ../Doc/library/sqlite3.rst:2668
+#: ../Doc/library/sqlite3.rst:2722
 msgid ""
 "If :attr:`~Connection.isolation_level` is set to ``None``, no transactions "
 "are implicitly opened at all. This leaves the underlying SQLite library in "
 "`autocommit mode`_, but also allows the user to perform their own "
 "transaction handling using explicit SQL statements. The underlying SQLite "
-"library autocommit mode can be queried using the :attr:`~Connection."
-"in_transaction` attribute."
+"library autocommit mode can be queried using "
+"the :attr:`~Connection.in_transaction` attribute."
 msgstr ""
 "Si :attr:`~Connection.isolation_level` se establece como ``None``, no se "
 "abre ninguna transacción implícitamente. Esto deja la biblioteca SQLite "
 "subyacente en `autocommit mode`_, pero también permite que el usuario "
 "realice su propio manejo de transacciones usando declaraciones SQL "
 "explícitas. El modo de confirmación automática de la biblioteca SQLite "
-"subyacente se puede consultar mediante el atributo :attr:`~Connection."
-"in_transaction`."
+"subyacente se puede consultar mediante el "
+"atributo :attr:`~Connection.in_transaction`."
 
-#: ../Doc/library/sqlite3.rst:2676
+#: ../Doc/library/sqlite3.rst:2730
 msgid ""
 "The :meth:`~Cursor.executescript` method implicitly commits any pending "
 "transaction before execution of the given SQL script, regardless of the "
@@ -3071,7 +3847,7 @@ msgstr ""
 "transacción pendiente antes de la ejecución del script SQL dado, "
 "independientemente del valor de :attr:`~Connection.isolation_level`."
 
-#: ../Doc/library/sqlite3.rst:2680
+#: ../Doc/library/sqlite3.rst:2734
 msgid ""
 ":mod:`!sqlite3` used to implicitly commit an open transaction before DDL "
 "statements.  This is no longer the case."
@@ -3079,157 +3855,20 @@ msgstr ""
 ":mod:`!sqlite3` solía realizar commit en transacciones implícitamente antes "
 "de sentencias DDL. Este ya no es el caso."
 
-#: ../Doc/library/sqlite3.rst:2684
+#: ../Doc/library/sqlite3.rst:2738
 msgid ""
-"The recommended way of controlling transactions is now via the :attr:"
-"`~Connection.autocommit` attribute."
+"The recommended way of controlling transactions is now via "
+"the :attr:`~Connection.autocommit` attribute."
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1492
+#: ../Doc/library/sqlite3.rst:1490
 msgid "? (question mark)"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1492 ../Doc/library/sqlite3.rst:1493
+#: ../Doc/library/sqlite3.rst:1490 ../Doc/library/sqlite3.rst:1491
 msgid "in SQL statements"
 msgstr ""
 
-#: ../Doc/library/sqlite3.rst:1493
+#: ../Doc/library/sqlite3.rst:1491
 msgid ": (colon)"
 msgstr ""
-
-#~ msgid ""
-#~ "The path to the database file to be opened. Pass ``\":memory:\"`` to open "
-#~ "a connection to a database that is in RAM instead of on disk."
-#~ msgstr ""
-#~ "La ruta al archivo de la base de datos que se pretende abrir. Pasa ``\":"
-#~ "memory:\"`` para abrir la conexión con la base de datos en memoria RAM en "
-#~ "lugar de el disco local."
-
-#~ msgid ""
-#~ "The :mod:`!sqlite3` module supports both ``qmark`` and ``numeric`` DB-API "
-#~ "parameter styles, because that is what the underlying SQLite library "
-#~ "supports. However, the DB-API does not allow multiple values for the "
-#~ "``paramstyle`` attribute."
-#~ msgstr ""
-#~ "El módulo :mod:`!sqlite3` soporta los parámetros de estilo DB-API "
-#~ "``qmark`` y ``numeric``, porque eso es lo que admite la biblioteca. Sin "
-#~ "embargo, la DB-API no permite varios valores para el atributo "
-#~ "``paramstyle``."
-
-#~ msgid ""
-#~ "Commit any pending transaction to the database. If there is no open "
-#~ "transaction, this method is a no-op."
-#~ msgstr ""
-#~ "Guarda cualquier transacción pendiente en la base de datos. Si no hay "
-#~ "transacciones abiertas, este método es un *no-op*."
-
-#~ msgid ""
-#~ "Roll back to the start of any pending transaction. If there is no open "
-#~ "transaction, this method is a no-op."
-#~ msgstr ""
-#~ "Restaura a su comienzo, cualquier transacción pendiente. Si no hay "
-#~ "transacciones abiertas, este método es un *no-op*."
-
-#~ msgid ""
-#~ "A callable that accepts two arguments, a :class:`Cursor` object and the "
-#~ "raw row results as a :class:`tuple`, and returns a custom object "
-#~ "representing an SQLite row."
-#~ msgstr ""
-#~ "Un objeto invocable que acepta dos argumentos, un objeto :class:`Cursor` "
-#~ "y los resultados de la fila sin procesar como una :class:`tupla <tuple>`, "
-#~ "y retorna un objeto personalizado que representa una fila SQLite."
-
-#~ msgid ""
-#~ "If returning a tuple doesn't suffice and you want name-based access to "
-#~ "columns, you should consider setting :attr:`row_factory` to the highly "
-#~ "optimized :class:`sqlite3.Row` type. :class:`Row` provides both index-"
-#~ "based and case-insensitive name-based access to columns with almost no "
-#~ "memory overhead. It will probably be better than your own custom "
-#~ "dictionary-based approach or even a db_row based solution."
-#~ msgstr ""
-#~ "Si retorna una tupla no es suficiente y desea acceso basado en nombres a "
-#~ "las columnas se debe considerar configurar :attr:`row_factory` a la "
-#~ "altamente optimizada tipo :class:`sqlite3.Row`. :class:`Row` provee ambos "
-#~ "accesos a columnas basada en índice y tipado insensible con casi nada de "
-#~ "sobrecoste de memoria. Será probablemente mejor que tú propio enfoque de "
-#~ "basado en diccionario personalizado o incluso mejor que una solución "
-#~ "basada en *db_row*."
-
-#~ msgid ""
-#~ "Execute SQL statement *sql*. Bind values to the statement using :ref:"
-#~ "`placeholders <sqlite3-placeholders>` that map to the :term:`sequence` "
-#~ "or :class:`dict` *parameters*."
-#~ msgstr ""
-#~ "Ejecuta una sentencia SQL *sql*. Los valores pueden vincularse a la "
-#~ "sentencia utilizando :ref:`placeholders <sqlite3-placeholders>` que mapea "
-#~ "*parameters* :term:`sequence` o :class:`dict` ."
-
-#~ msgid ""
-#~ ":meth:`execute` will only execute a single SQL statement. If you try to "
-#~ "execute more than one statement with it, it will raise a :exc:"
-#~ "`ProgrammingError`. Use :meth:`executescript` if you want to execute "
-#~ "multiple SQL statements with one call."
-#~ msgstr ""
-#~ ":meth:`execute` solamente ejecutará sentencias únicas SQL. Si intenta "
-#~ "ejecutar más de una instrucción con él, se lanzará un :exc:"
-#~ "`ProgrammingError`. Use :meth:`executescript` si desea ejecutar varias "
-#~ "instrucciones SQL con una sola llamada."
-
-#~ msgid ""
-#~ "Execute :ref:`parameterized <sqlite3-placeholders>` SQL statement *sql* "
-#~ "against all parameter sequences or mappings found in the sequence "
-#~ "*parameters*.  It is also possible to use an :term:`iterator` yielding "
-#~ "parameters instead of a sequence. Uses the same implicit transaction "
-#~ "handling as :meth:`~Cursor.execute`."
-#~ msgstr ""
-#~ "Ejecuta una sentencia SQL *sql* :ref:`parameterized <sqlite3-"
-#~ "placeholders>` contra todas las secuencias de parámetros o asignaciones "
-#~ "encontradas en la secuencia *parameters*. También es posible utilizar un :"
-#~ "term:`iterator` que produzca parámetros en lugar de una secuencia. "
-#~ "Utiliza el mismo control de transacciones implícitas que :meth:`~Cursor."
-#~ "execute`."
-
-#~ msgid ""
-#~ "There are default adapters for the date and datetime types in the "
-#~ "datetime module. They will be sent as ISO dates/ISO timestamps to SQLite."
-#~ msgstr ""
-#~ "Hay adaptadores por defecto para los tipos date y datetime en el módulo "
-#~ "datetime. Éstos serán enviados como fechas/marcas de tiempo ISO a SQLite."
-
-#~ msgid ""
-#~ "The default converters are registered under the name \"date\" for :class:"
-#~ "`datetime.date` and under the name \"timestamp\" for :class:`datetime."
-#~ "datetime`."
-#~ msgstr ""
-#~ "Los convertidores por defecto están registrados bajo el nombre \"date\" "
-#~ "para :class:`datetime.date` y bajo el mismo nombre para \"timestamp\" "
-#~ "para :class:`datetime.datetime`."
-
-#~ msgid ""
-#~ "This way, you can use date/timestamps from Python without any additional "
-#~ "fiddling in most cases. The format of the adapters is also compatible "
-#~ "with the experimental SQLite date/time functions."
-#~ msgstr ""
-#~ "De esta forma, se puede usar date/timestamps para Python sin ajuste "
-#~ "adicional en la mayoría de los casos. El formato de los adaptadores "
-#~ "también es compatible con las funciones experimentales de SQLite date/"
-#~ "time."
-
-#~ msgid "The following example demonstrates this."
-#~ msgstr "El siguiente ejemplo demuestra esto."
-
-#~ msgid ""
-#~ "If a timestamp stored in SQLite has a fractional part longer than 6 "
-#~ "numbers, its value will be truncated to microsecond precision by the "
-#~ "timestamp converter."
-#~ msgstr ""
-#~ "Si un *timestamp* almacenado en SQLite tiene una parte fraccional mayor a "
-#~ "6 números, este valor será truncado a precisión de microsegundos por el "
-#~ "convertidor de *timestamp*."
-
-#~ msgid ""
-#~ "The :mod:`!sqlite3` module does not adhere to the transaction handling "
-#~ "recommended by :pep:`249`."
-#~ msgstr ""
-#~ "El :mod:`!sqlite3` no cumple con el manejo de transacciones recomendado "
-#~ "por :pep:`249`."

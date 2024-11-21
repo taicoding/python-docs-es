@@ -10,20 +10,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2023-10-18 19:42-0500\n"
 "Last-Translator: Cristian Danilo Rengifo Parra <ingcrengifo@gmail.com>\n"
-"Language-Team: python-doc-es\n"
 "Language: es_CO\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.4\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/copy.rst:2
-msgid ":mod:`copy` --- Shallow and deep copy operations"
+#, fuzzy
+msgid ":mod:`!copy` --- Shallow and deep copy operations"
 msgstr ":mod:`copy` --- Operaciones de copia superficial y profunda"
 
 #: ../Doc/library/copy.rst:7
@@ -50,18 +50,26 @@ msgid "Interface summary:"
 msgstr "Resumen de la interfaz:"
 
 #: ../Doc/library/copy.rst:22
-msgid "Return a shallow copy of *x*."
+#, fuzzy
+msgid "Return a shallow copy of *obj*."
 msgstr "Retorna una copia superficial de *x*."
 
 #: ../Doc/library/copy.rst:27
-msgid "Return a deep copy of *x*."
+#, fuzzy
+msgid "Return a deep copy of *obj*."
 msgstr "Retorna una copia profunda de *x*."
 
 #: ../Doc/library/copy.rst:32
+msgid ""
+"Creates a new object of the same type as *obj*, replacing fields with values "
+"from *changes*."
+msgstr ""
+
+#: ../Doc/library/copy.rst:40
 msgid "Raised for module specific errors."
 msgstr "Levantado para errores específicos del módulo."
 
-#: ../Doc/library/copy.rst:36
+#: ../Doc/library/copy.rst:44
 msgid ""
 "The difference between shallow and deep copying is only relevant for "
 "compound objects (objects that contain other objects, like lists or class "
@@ -71,7 +79,7 @@ msgstr ""
 "objetos compuestos (objetos que contienen otros objetos, como listas o "
 "instancias de clase):"
 
-#: ../Doc/library/copy.rst:39
+#: ../Doc/library/copy.rst:47
 msgid ""
 "A *shallow copy* constructs a new compound object and then (to the extent "
 "possible) inserts *references* into it to the objects found in the original."
@@ -80,7 +88,7 @@ msgstr ""
 "luego (en la medida de lo posible) inserta *references* en él a los objetos "
 "encontrados en el original."
 
-#: ../Doc/library/copy.rst:42
+#: ../Doc/library/copy.rst:50
 msgid ""
 "A *deep copy* constructs a new compound object and then, recursively, "
 "inserts *copies* into it of the objects found in the original."
@@ -89,7 +97,7 @@ msgstr ""
 "luego, recursivamente, inserta *copias* en él de los objetos encontrados en "
 "el original."
 
-#: ../Doc/library/copy.rst:45
+#: ../Doc/library/copy.rst:53
 msgid ""
 "Two problems often exist with deep copy operations that don't exist with "
 "shallow copy operations:"
@@ -97,7 +105,7 @@ msgstr ""
 "A menudo existen dos problemas con las operaciones de copia profunda que no "
 "existen con las operaciones de copia superficial:"
 
-#: ../Doc/library/copy.rst:48
+#: ../Doc/library/copy.rst:56
 msgid ""
 "Recursive objects (compound objects that, directly or indirectly, contain a "
 "reference to themselves) may cause a recursive loop."
@@ -105,7 +113,7 @@ msgstr ""
 "Los objetos recursivos (objetos compuestos que, directa o indirectamente, "
 "contienen una referencia a sí mismos) pueden causar un bucle recursivo."
 
-#: ../Doc/library/copy.rst:51
+#: ../Doc/library/copy.rst:59
 msgid ""
 "Because deep copy copies everything it may copy too much, such as data which "
 "is intended to be shared between copies."
@@ -113,11 +121,11 @@ msgstr ""
 "Debido a que la copia profunda copia todo, puede copiar demasiado, como los "
 "datos que deben compartirse entre copias."
 
-#: ../Doc/library/copy.rst:54
+#: ../Doc/library/copy.rst:62
 msgid "The :func:`deepcopy` function avoids these problems by:"
 msgstr "La función :func:`deepcopy` evita estos problemas al:"
 
-#: ../Doc/library/copy.rst:56
+#: ../Doc/library/copy.rst:64
 msgid ""
 "keeping a ``memo`` dictionary of objects already copied during the current "
 "copying pass; and"
@@ -125,7 +133,7 @@ msgstr ""
 "mantener un diccionario ``memo`` de objetos ya copiados durante la "
 "aprobación de copia actual; y"
 
-#: ../Doc/library/copy.rst:59
+#: ../Doc/library/copy.rst:67
 msgid ""
 "letting user-defined classes override the copying operation or the set of "
 "components copied."
@@ -133,13 +141,13 @@ msgstr ""
 "permitiendo que las clases definidas por el usuario anulen la operación de "
 "copia o el conjunto de componentes copiados."
 
-#: ../Doc/library/copy.rst:62
+#: ../Doc/library/copy.rst:70
 msgid ""
 "This module does not copy types like module, method, stack trace, stack "
 "frame, file, socket, window, or any similar types.  It does \"copy\" "
 "functions and classes (shallow and deeply), by returning the original object "
-"unchanged; this is compatible with the way these are treated by the :mod:"
-"`pickle` module."
+"unchanged; this is compatible with the way these are treated by "
+"the :mod:`pickle` module."
 msgstr ""
 "Este módulo no copia tipos como módulo, método, seguimiento de pila, marco "
 "de pila, archivo, socket, ventana,  o cualquier tipo similar.  Sí \"copia\" "
@@ -147,17 +155,18 @@ msgstr ""
 "original sin cambios; Esto es compatible con la forma en que son tratados "
 "por el módulo :mod:`pickle`."
 
-#: ../Doc/library/copy.rst:67
+#: ../Doc/library/copy.rst:75
 msgid ""
 "Shallow copies of dictionaries can be made using :meth:`dict.copy`, and of "
 "lists by assigning a slice of the entire list, for example, ``copied_list = "
 "original_list[:]``."
 msgstr ""
-"Se pueden hacer copias superficiales de los diccionarios usando :meth:`dict."
-"copy`, y de las listas mediante la asignación de una porción de la lista "
-"completa, por ejemplo, ``lista_copiada = lista_original[:]``."
+"Se pueden hacer copias superficiales de los diccionarios "
+"usando :meth:`dict.copy`, y de las listas mediante la asignación de una "
+"porción de la lista completa, por ejemplo, ``lista_copiada = "
+"lista_original[:]``."
 
-#: ../Doc/library/copy.rst:73
+#: ../Doc/library/copy.rst:81
 msgid ""
 "Classes can use the same interfaces to control copying that they use to "
 "control pickling.  See the description of module :mod:`pickle` for "
@@ -165,22 +174,31 @@ msgid ""
 "registered pickle functions from the :mod:`copyreg` module."
 msgstr ""
 "Las clases pueden usar las mismas interfaces para controlar la copia que "
-"usan para controlar el *pickling*. Consulte la descripción del módulo :mod:"
-"`pickle` para obtener información sobre estos métodos. De hecho, el módulo :"
-"mod:`copy` utiliza las funciones de *pickle* registradas del módulo :mod:"
-"`copyreg`."
+"usan para controlar el *pickling*. Consulte la descripción del "
+"módulo :mod:`pickle` para obtener información sobre estos métodos. De hecho, "
+"el módulo :mod:`copy` utiliza las funciones de *pickle* registradas del "
+"módulo :mod:`copyreg`."
 
-#: ../Doc/library/copy.rst:82
+#: ../Doc/library/copy.rst:92
 msgid ""
 "In order for a class to define its own copy implementation, it can define "
-"special methods :meth:`__copy__` and :meth:`__deepcopy__`.  The former is "
-"called to implement the shallow copy operation; no additional arguments are "
-"passed. The latter is called to implement the deep copy operation; it is "
-"passed one argument, the ``memo`` dictionary.  If the :meth:`__deepcopy__` "
-"implementation needs to make a deep copy of a component, it should call the :"
-"func:`deepcopy` function with the component as first argument and the memo "
-"dictionary as second argument. The memo dictionary should be treated as an "
-"opaque object."
+"special methods :meth:`~object.__copy__` and :meth:`~object.__deepcopy__`."
+msgstr ""
+
+#: ../Doc/library/copy.rst:98
+msgid ""
+"Called to implement the shallow copy operation; no additional arguments are "
+"passed."
+msgstr ""
+
+#: ../Doc/library/copy.rst:104
+#, fuzzy
+msgid ""
+"Called to implement the deep copy operation; it is passed one argument, the "
+"*memo* dictionary.  If the ``__deepcopy__`` implementation needs to make a "
+"deep copy of a component, it should call the :func:`~copy.deepcopy` function "
+"with the component as first argument and the *memo* dictionary as second "
+"argument. The *memo* dictionary should be treated as an opaque object."
 msgstr ""
 "Para que una clase pueda definir su propia implementación de copia, puede "
 "definir métodos especiales :meth:`__copy__` y :meth:`__deepcopy__`. El "
@@ -192,11 +210,25 @@ msgstr ""
 "con el componente como primer argumento y el diccionario memo como segundo "
 "argumento. El diccionario de notas debe tratarse como un objeto opcional."
 
-#: ../Doc/library/copy.rst:95
+#: ../Doc/library/copy.rst:114
+msgid ""
+"Function :func:`!copy.replace` is more limited than :func:`~copy.copy` "
+"and :func:`~copy.deepcopy`, and only supports named tuples created "
+"by :func:`~collections.namedtuple`, :mod:`dataclasses`, and other classes "
+"which define method :meth:`~object.__replace__`."
+msgstr ""
+
+#: ../Doc/library/copy.rst:122
+msgid ""
+"This method should create a new object of the same type, replacing fields "
+"with values from *changes*."
+msgstr ""
+
+#: ../Doc/library/copy.rst:129
 msgid "Module :mod:`pickle`"
 msgstr "Módulo :mod:`pickle`"
 
-#: ../Doc/library/copy.rst:95
+#: ../Doc/library/copy.rst:129
 msgid ""
 "Discussion of the special methods used to support object state retrieval and "
 "restoration."
@@ -204,18 +236,23 @@ msgstr ""
 "Discusión de los métodos especiales utilizados para apoyar la recuperación y "
 "restauración del estado del objeto."
 
-#: ../Doc/library/copy.rst:71
+#: ../Doc/library/copy.rst:79
 msgid "module"
 msgstr "módulo"
 
-#: ../Doc/library/copy.rst:71
+#: ../Doc/library/copy.rst:79
 msgid "pickle"
 msgstr "pickle"
 
-#: ../Doc/library/copy.rst:78
+#: ../Doc/library/copy.rst:86
 msgid "__copy__() (copy protocol)"
 msgstr "__copy__() (protocolo de copia)"
 
-#: ../Doc/library/copy.rst:78
+#: ../Doc/library/copy.rst:86
 msgid "__deepcopy__() (copy protocol)"
+msgstr "__deepcopy__() (protocolo de copia)"
+
+#: ../Doc/library/copy.rst:111
+#, fuzzy
+msgid "__replace__() (replace protocol)"
 msgstr "__deepcopy__() (protocolo de copia)"

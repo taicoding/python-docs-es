@@ -10,20 +10,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.11\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2024-11-07 23:03-0400\n"
 "Last-Translator: \n"
-"Language-Team: python-doc-es\n"
 "Language: es_CO\n"
+"Language-Team: python-doc-es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Generated-By: Babel 2.13.0\n"
-"X-Generator: Poedit 3.5\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/termios.rst:2
-msgid ":mod:`termios` --- POSIX style tty control"
+#, fuzzy
+msgid ":mod:`!termios` --- POSIX style tty control"
 msgstr ":mod:`termios` ---Control tty estilo POSIX"
 
 #: ../Doc/library/termios.rst:14
@@ -40,17 +40,22 @@ msgstr ""
 "S tty estilo POSIX *termios* configurado durante la instalación."
 
 #: ../Doc/library/termios.rst:19
+msgid ":ref:`Availability <availability>`: Unix."
+msgstr ""
+
+#: ../Doc/library/termios.rst:21
 msgid ""
 "All functions in this module take a file descriptor *fd* as their first "
-"argument.  This can be an integer file descriptor, such as returned by ``sys."
-"stdin.fileno()``, or a :term:`file object`, such as ``sys.stdin`` itself."
+"argument.  This can be an integer file descriptor, such as returned by "
+"``sys.stdin.fileno()``, or a :term:`file object`, such as ``sys.stdin`` "
+"itself."
 msgstr ""
 "Todas las funciones de este módulo toman un descriptor de archivo *fd* como "
 "primer argumento. Puede ser un descriptor de archivo entero, como el que "
 "retorna ``sys.stdin.fileno()``, o un :term:`file object`, como el propio "
 "``sys.stdin``."
 
-#: ../Doc/library/termios.rst:23
+#: ../Doc/library/termios.rst:25
 msgid ""
 "This module also defines all the constants needed to work with the functions "
 "provided here; these have the same name as their counterparts in C.  Please "
@@ -62,11 +67,11 @@ msgstr ""
 "contrapartes en C. Consulte la documentación de su sistema para obtener más "
 "información sobre el uso de estas interfaces de control de terminal."
 
-#: ../Doc/library/termios.rst:28
+#: ../Doc/library/termios.rst:30
 msgid "The module defines the following functions:"
 msgstr "El módulo define las siguientes funciones:"
 
-#: ../Doc/library/termios.rst:33
+#: ../Doc/library/termios.rst:35
 msgid ""
 "Return a list containing the tty attributes for file descriptor *fd*, as "
 "follows: ``[iflag, oflag, cflag, lflag, ispeed, ospeed, cc]`` where *cc* is "
@@ -85,14 +90,12 @@ msgstr ""
 "así como la indexación en el arreglo *cc*, debe realizarse utilizando las "
 "constantes simbólicas definidas en el módulo  :mod:`termios` ."
 
-#: ../Doc/library/termios.rst:44
+#: ../Doc/library/termios.rst:46
+#, fuzzy
 msgid ""
 "Set the tty attributes for file descriptor *fd* from the *attributes*, which "
 "is a list like the one returned by :func:`tcgetattr`.  The *when* argument "
-"determines when the attributes are changed: :const:`TCSANOW` to change "
-"immediately, :const:`TCSADRAIN` to change after transmitting all queued "
-"output, or :const:`TCSAFLUSH` to change after transmitting all queued output "
-"and discarding all queued input."
+"determines when the attributes are changed:"
 msgstr ""
 "Establezca los atributos tty para el descriptor de archivo *fd* de los "
 "*atributos*, que es una lista como la retornada por :func:`tcgetattr`.  El "
@@ -101,7 +104,21 @@ msgstr ""
 "transmitir toda la salida en cola, o :const:`TCSAFLUSH` para cambiar después "
 "de transmitir toda la salida en cola y descartar toda la entrada en cola."
 
-#: ../Doc/library/termios.rst:54
+#: ../Doc/library/termios.rst:52
+msgid "Change attributes immediately."
+msgstr ""
+
+#: ../Doc/library/termios.rst:56
+msgid "Change attributes after transmitting all queued output."
+msgstr ""
+
+#: ../Doc/library/termios.rst:60
+msgid ""
+"Change attributes after transmitting all queued output and discarding all "
+"queued input."
+msgstr ""
+
+#: ../Doc/library/termios.rst:66
 msgid ""
 "Send a break on file descriptor *fd*.  A zero *duration* sends a break for "
 "0.25--0.5 seconds; a nonzero *duration* has a system dependent meaning."
@@ -110,84 +127,100 @@ msgstr ""
 "una pausa de 0.25 a 0.5 segundos;  una *duración* distinta de cero tiene un "
 "significado dependiente del sistema."
 
-#: ../Doc/library/termios.rst:60
+#: ../Doc/library/termios.rst:72
 msgid ""
 "Wait until all output written to file descriptor *fd* has been transmitted."
 msgstr ""
 "Espere hasta que se haya transmitido toda la salida escrita en el descriptor "
 "de archivo *fd*."
 
-#: ../Doc/library/termios.rst:65
+#: ../Doc/library/termios.rst:77
 msgid ""
 "Discard queued data on file descriptor *fd*.  The *queue* selector specifies "
 "which queue: :const:`TCIFLUSH` for the input queue, :const:`TCOFLUSH` for "
 "the output queue, or :const:`TCIOFLUSH` for both queues."
 msgstr ""
 "Descartar datos en cola en el descriptor de archivo *fd*. El selector "
-"*queue* especifica qué cola: :const:`TCIFLUSH` para la cola de entrada, :"
-"const:`TCOFLUSH` para la cola de salida, o :const:`TCIOFLUSH` para ambas "
-"colas."
+"*queue* especifica qué cola: :const:`TCIFLUSH` para la cola de "
+"entrada, :const:`TCOFLUSH` para la cola de salida, o :const:`TCIOFLUSH` para "
+"ambas colas."
 
-#: ../Doc/library/termios.rst:72
+#: ../Doc/library/termios.rst:84
 msgid ""
 "Suspend or resume input or output on file descriptor *fd*.  The *action* "
 "argument can be :const:`TCOOFF` to suspend output, :const:`TCOON` to restart "
 "output, :const:`TCIOFF` to suspend input, or :const:`TCION` to restart input."
 msgstr ""
 "Suspender o reanudar la entrada o salida en el descriptor de archivo *fd*. "
-"El argumento *action* puede ser  :const:`TCOOFF` para suspender la salida, :"
-"const:`TCOON` para reiniciar la salida, :const:`TCIOFF` para suspender la "
-"entrada, o :const:`TCION` para reiniciar la entrada."
+"El argumento *action* puede ser  :const:`TCOOFF` para suspender la "
+"salida, :const:`TCOON` para reiniciar la salida, :const:`TCIOFF` para "
+"suspender la entrada, o :const:`TCION` para reiniciar la entrada."
 
-#: ../Doc/library/termios.rst:79
+#: ../Doc/library/termios.rst:91
 msgid ""
 "Return a tuple ``(ws_row, ws_col)`` containing the tty window size for file "
-"descriptor *fd*. Requires :const:`termios.TIOCGWINSZ` or :const:`termios."
-"TIOCGSIZE`."
+"descriptor *fd*. Requires :const:`termios.TIOCGWINSZ` "
+"or :const:`termios.TIOCGSIZE`."
 msgstr ""
 "Devuelve una tupla ``(ws_row, ws_col)`` que contiene el tamaño de la ventana "
 "tty para el descriptor de archivo *fd*. Requiere :const:`termios.TIOCGWINSZ` "
 "o :const:`termios.TIOCGSIZE`."
 
-#: ../Doc/library/termios.rst:88
+#: ../Doc/library/termios.rst:100
 msgid ""
 "Set the tty window size for file descriptor *fd* from *winsize*, which is a "
-"two-item tuple ``(ws_row, ws_col)`` like the one returned by :func:"
-"`tcgetwinsize`. Requires at least one of the pairs (:const:`termios."
-"TIOCGWINSZ`, :const:`termios.TIOCSWINSZ`); (:const:`termios.TIOCGSIZE`, :"
-"const:`termios.TIOCSSIZE`) to be defined."
+"two-item tuple ``(ws_row, ws_col)`` like the one returned "
+"by :func:`tcgetwinsize`. Requires at least one of the pairs "
+"(:const:`termios.TIOCGWINSZ`, :const:`termios.TIOCSWINSZ`); "
+"(:const:`termios.TIOCGSIZE`, :const:`termios.TIOCSSIZE`) to be defined."
 msgstr ""
 "Establezca el tamaño de la ventana tty para el descriptor de archivo *fd* de "
 "*winsize*, que es un tupla de dos elementos ``(ws_row, ws_col)`` como la "
-"devuelta por :func:`tcgetwinsize`. Requiere que al menos uno de los pares (:"
-"const:`termios.TIOCGWINSZ`, :const:`termios.TIOCSWINSZ`); (:const:`termios."
-"TIOCGSIZE`, :const:`termios.TIOCSSIZE`) por definir."
+"devuelta por :func:`tcgetwinsize`. Requiere que al menos uno de los pares "
+"(:const:`termios.TIOCGWINSZ`, :const:`termios.TIOCSWINSZ`); "
+"(:const:`termios.TIOCGSIZE`, :const:`termios.TIOCSSIZE`) por definir."
 
-#: ../Doc/library/termios.rst:99
+#: ../Doc/library/termios.rst:111
 msgid "Module :mod:`tty`"
 msgstr "Módulo :mod:`tty`"
 
-#: ../Doc/library/termios.rst:100
+#: ../Doc/library/termios.rst:112
 msgid "Convenience functions for common terminal control operations."
 msgstr ""
 "Funciones de conveniencia para operaciones comunes de control de terminal."
 
-#: ../Doc/library/termios.rst:106
+#: ../Doc/library/termios.rst:118
 msgid "Example"
 msgstr "Ejemplo"
 
-#: ../Doc/library/termios.rst:108
+#: ../Doc/library/termios.rst:120
 msgid ""
 "Here's a function that prompts for a password with echoing turned off.  Note "
-"the technique using a separate :func:`tcgetattr` call and a :keyword:"
-"`try` ... :keyword:`finally` statement to ensure that the old tty attributes "
-"are restored exactly no matter what happens::"
+"the technique using a separate :func:`tcgetattr` call and "
+"a :keyword:`try` ... :keyword:`finally` statement to ensure that the old tty "
+"attributes are restored exactly no matter what happens::"
 msgstr ""
 "Aquí hay una función que solicita una contraseña con el eco desactivado. "
-"Tenga en cuenta la técnica utilizando una llamada separada  :func:"
-"`tcgetattr` y una sentencia :keyword:`try` ... :keyword:`finally`  para "
-"asegurarse de que los antiguos atributos tty se restauran exactamente sin "
-"importar lo que suceda::"
+"Tenga en cuenta la técnica utilizando una llamada "
+"separada  :func:`tcgetattr` y una "
+"sentencia :keyword:`try` ... :keyword:`finally`  para asegurarse de que los "
+"antiguos atributos tty se restauran exactamente sin importar lo que suceda::"
+
+#: ../Doc/library/termios.rst:125
+msgid ""
+"def getpass(prompt=\"Password: \"):\n"
+"    import termios, sys\n"
+"    fd = sys.stdin.fileno()\n"
+"    old = termios.tcgetattr(fd)\n"
+"    new = termios.tcgetattr(fd)\n"
+"    new[3] = new[3] & ~termios.ECHO          # lflags\n"
+"    try:\n"
+"        termios.tcsetattr(fd, termios.TCSADRAIN, new)\n"
+"        passwd = input(prompt)\n"
+"    finally:\n"
+"        termios.tcsetattr(fd, termios.TCSADRAIN, old)\n"
+"    return passwd"
+msgstr ""
 
 #: ../Doc/library/termios.rst:8
 msgid "POSIX"

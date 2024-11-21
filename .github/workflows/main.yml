@@ -23,10 +23,10 @@ jobs:
           fetch-depth: 2
 
       # Instalación de dependencias
-      - name: Preparar Python v3.11
+      - name: Preparar Python v3.13
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.13"
           cache: "pip"
       - name: Configura dpkg/apt para ejecutarse de manera eficiente
         uses: abbbi/github-actions-tune@v1

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 19:43+0200\n"
+"POT-Creation-Date: 2024-11-21 16:38-0300\n"
 "PO-Revision-Date: 2020-06-24 22:27+0200\n"
 "Last-Translator: Cristián Maureira-Fredes <cmaureirafredes@gmail.com>\n"
 "Language: es\n"
@@ -19,7 +19,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: ../Doc/library/contextlib.rst:2
 msgid ""
@@ -34,13 +34,13 @@ msgstr "**Código fuente:** :source:`Lib/contextlib.py`"
 
 #: ../Doc/library/contextlib.rst:11
 msgid ""
-"This module provides utilities for common tasks involving the :keyword:"
-"`with` statement. For more information see also :ref:`typecontextmanager` "
-"and :ref:`context-managers`."
+"This module provides utilities for common tasks involving "
+"the :keyword:`with` statement. For more information see "
+"also :ref:`typecontextmanager` and :ref:`context-managers`."
 msgstr ""
 "Este módulo proporciona utilidades para tareas comunes que involucran la "
-"declaración :keyword:`with`. Para obtener más información, consulte también :"
-"ref:`typecontextmanager` y :ref:`context-managers`."
+"declaración :keyword:`with`. Para obtener más información, consulte "
+"también :ref:`typecontextmanager` y :ref:`context-managers`."
 
 #: ../Doc/library/contextlib.rst:17
 msgid "Utilities"
@@ -52,39 +52,43 @@ msgstr "Funciones y clases proporcionadas:"
 
 #: ../Doc/library/contextlib.rst:23
 msgid ""
-"An :term:`abstract base class` for classes that implement :meth:`object."
-"__enter__` and :meth:`object.__exit__`. A default implementation for :meth:"
-"`object.__enter__` is provided which returns ``self`` while :meth:`object."
-"__exit__` is an abstract method which by default returns ``None``. See also "
-"the definition of :ref:`typecontextmanager`."
+"An :term:`abstract base class` for classes that "
+"implement :meth:`object.__enter__` and :meth:`object.__exit__`. A default "
+"implementation for :meth:`object.__enter__` is provided which returns "
+"``self`` while :meth:`object.__exit__` is an abstract method which by "
+"default returns ``None``. See also the definition "
+"of :ref:`typecontextmanager`."
 msgstr ""
 "Una :term:`clase base abstracta <abstract base class>` para clases que "
 "implementan :meth:`object.__enter__` y :meth:`object.__exit__`. Se "
 "proporciona una implementación predeterminada para :meth:`object.__enter__` "
 "que retorna ``self`` mientras que :meth:`object.__exit__` es un método "
-"abstracto que por defecto retorna ``None``. Véase también la definición de :"
-"ref:`typecontextmanager`."
+"abstracto que por defecto retorna ``None``. Véase también la definición "
+"de :ref:`typecontextmanager`."
 
 #: ../Doc/library/contextlib.rst:34
 msgid ""
-"An :term:`abstract base class` for classes that implement :meth:`object."
-"__aenter__` and :meth:`object.__aexit__`. A default implementation for :meth:"
-"`object.__aenter__` is provided which returns ``self`` while :meth:`object."
-"__aexit__` is an abstract method which by default returns ``None``. See also "
-"the definition of :ref:`async-context-managers`."
+"An :term:`abstract base class` for classes that "
+"implement :meth:`object.__aenter__` and :meth:`object.__aexit__`. A default "
+"implementation for :meth:`object.__aenter__` is provided which returns "
+"``self`` while :meth:`object.__aexit__` is an abstract method which by "
+"default returns ``None``. See also the definition of :ref:`async-context-"
+"managers`."
 msgstr ""
 "Una :term:`clase base abstracta <abstract base class>` para clases que "
 "implementan :meth:`object.__aenter__` y :meth:`object.__aexit__`. Se "
 "proporciona una implementación predeterminada para :meth:`object.__aenter__` "
 "que retorna ``self`` mientras que :meth:`object.__aexit__` es un método "
-"abstracto que por defecto retorna ``None``. Véase también la definición de :"
-"ref:`async-context-managers`."
+"abstracto que por defecto retorna ``None``. Véase también la definición "
+"de :ref:`async-context-managers`."
 
 #: ../Doc/library/contextlib.rst:46
+#, fuzzy
 msgid ""
 "This function is a :term:`decorator` that can be used to define a factory "
 "function for :keyword:`with` statement context managers, without needing to "
-"create a class or separate :meth:`__enter__` and :meth:`__exit__` methods."
+"create a class or separate :meth:`~object.__enter__` "
+"and :meth:`~object.__exit__` methods."
 msgstr ""
 "Esta función es :term:`decorador` que se puede usar para definir una función "
 "de fábrica para gestores de contexto de declaración :keyword:`with`, sin "
@@ -95,8 +99,8 @@ msgstr ""
 msgid ""
 "While many objects natively support use in with statements, sometimes a "
 "resource needs to be managed that isn't a context manager in its own right, "
-"and doesn't implement a ``close()`` method for use with ``contextlib."
-"closing``"
+"and doesn't implement a ``close()`` method for use with "
+"``contextlib.closing``"
 msgstr ""
 "Si bien muchos objetos admiten de forma nativa el uso con declaraciones, a "
 "veces es necesario administrar un recurso que no sea un administrador de "
@@ -111,9 +115,31 @@ msgstr ""
 "Un ejemplo abstracto sería el siguiente para garantizar la gestión correcta "
 "de los recursos::"
 
+#: ../Doc/library/contextlib.rst:57
+msgid ""
+"from contextlib import contextmanager\n"
+"\n"
+"@contextmanager\n"
+"def managed_resource(*args, **kwds):\n"
+"    # Code to acquire resource, e.g.:\n"
+"    resource = acquire_resource(*args, **kwds)\n"
+"    try:\n"
+"        yield resource\n"
+"    finally:\n"
+"        # Code to release resource, e.g.:\n"
+"        release_resource(resource)"
+msgstr ""
+
 #: ../Doc/library/contextlib.rst:69
 msgid "The function can then be used like this::"
 msgstr "La función se puede usar así:"
+
+#: ../Doc/library/contextlib.rst:71
+msgid ""
+">>> with managed_resource(timeout=3600) as resource:\n"
+"...     # Resource is released at the end of this block,\n"
+"...     # even if code in the block raises an exception"
+msgstr ""
 
 #: ../Doc/library/contextlib.rst:75
 msgid ""
@@ -128,27 +154,27 @@ msgstr ""
 
 #: ../Doc/library/contextlib.rst:79
 msgid ""
-"At the point where the generator yields, the block nested in the :keyword:"
-"`with` statement is executed.  The generator is then resumed after the block "
-"is exited. If an unhandled exception occurs in the block, it is reraised "
-"inside the generator at the point where the yield occurred.  Thus, you can "
-"use a :keyword:`try`...\\ :keyword:`except`...\\ :keyword:`finally` "
-"statement to trap the error (if any), or ensure that some cleanup takes "
-"place. If an exception is trapped merely in order to log it or to perform "
-"some action (rather than to suppress it entirely), the generator must "
-"reraise that exception. Otherwise the generator context manager will "
-"indicate to the :keyword:`!with` statement that the exception has been "
-"handled, and execution will resume with the statement immediately following "
-"the :keyword:`!with` statement."
+"At the point where the generator yields, the block nested in "
+"the :keyword:`with` statement is executed.  The generator is then resumed "
+"after the block is exited. If an unhandled exception occurs in the block, it "
+"is reraised inside the generator at the point where the yield occurred.  "
+"Thus, you can use a :keyword:`try`...\\ :keyword:`except`..."
+"\\ :keyword:`finally` statement to trap the error (if any), or ensure that "
+"some cleanup takes place. If an exception is trapped merely in order to log "
+"it or to perform some action (rather than to suppress it entirely), the "
+"generator must reraise that exception. Otherwise the generator context "
+"manager will indicate to the :keyword:`!with` statement that the exception "
+"has been handled, and execution will resume with the statement immediately "
+"following the :keyword:`!with` statement."
 msgstr ""
 "En el punto donde el generador cede, se ejecuta el bloque anidado en la "
 "palabra clave :keyword:`with`. El generador se reanuda luego de salir del "
 "bloque. Si se produce una excepción no controlada en el bloque, se vuelve a "
 "plantear dentro del generador en el punto donde se produjo el rendimiento. "
-"Por lo tanto, puede usar una declaración :keyword:`try`...\\ :keyword:"
-"`except`...\\ :keyword:`finally` para atrapar el error (si lo hay), o "
-"asegurarse de que se realice una limpieza. Si una excepción queda atrapada "
-"simplemente para registrarla o realizar alguna acción (en lugar de "
+"Por lo tanto, puede usar una declaración :keyword:`try`..."
+"\\ :keyword:`except`...\\ :keyword:`finally` para atrapar el error (si lo "
+"hay), o asegurarse de que se realice una limpieza. Si una excepción queda "
+"atrapada simplemente para registrarla o realizar alguna acción (en lugar de "
 "suprimirla por completo), el generador debe volver a generar esa excepción. "
 "De lo contrario, el administrador de contexto del generador indicará a la "
 "palabra clave :keyword:`!with` que se ha manejado la excepción, y la "
@@ -169,9 +195,9 @@ msgstr ""
 "de contexto que crea se puedan usar como decoradores, así como en "
 "declaraciones :keyword:`with`. Cuando se usa como decorador, se crea "
 "implícitamente una nueva instancia de generador en cada llamada de función "
-"(esto permite que los gestores de contexto \"de-un-tiro\" creados por :func:"
-"`contextmanager` cumplan el requisito de que los gestores de contexto "
-"admitan múltiples invocaciones para ser utilizado como decoradores)."
+"(esto permite que los gestores de contexto \"de-un-tiro\" creados "
+"por :func:`contextmanager` cumplan el requisito de que los gestores de "
+"contexto admitan múltiples invocaciones para ser utilizado como decoradores)."
 
 #: ../Doc/library/contextlib.rst:98
 msgid "Use of :class:`ContextDecorator`."
@@ -179,29 +205,47 @@ msgstr "Uso de :class:`ContextDecorator`."
 
 #: ../Doc/library/contextlib.rst:104
 msgid ""
-"Similar to :func:`~contextlib.contextmanager`, but creates an :ref:"
-"`asynchronous context manager <async-context-managers>`."
+"Similar to :func:`~contextlib.contextmanager`, but creates "
+"an :ref:`asynchronous context manager <async-context-managers>`."
 msgstr ""
-"Similar a :func:`~contextlib.contextmanager`, pero crea un :ref:"
-"`administrador de contexto asíncrono <async-context-managers>`."
+"Similar a :func:`~contextlib.contextmanager`, pero crea "
+"un :ref:`administrador de contexto asíncrono <async-context-managers>`."
 
 #: ../Doc/library/contextlib.rst:107
+#, fuzzy
 msgid ""
 "This function is a :term:`decorator` that can be used to define a factory "
 "function for :keyword:`async with` statement asynchronous context managers, "
-"without needing to create a class or separate :meth:`__aenter__` and :meth:"
-"`__aexit__` methods. It must be applied to an :term:`asynchronous generator` "
-"function."
+"without needing to create a class or separate :meth:`~object.__aenter__` "
+"and :meth:`~object.__aexit__` methods. It must be applied to "
+"an :term:`asynchronous generator` function."
 msgstr ""
 "Esta función es :term:`decorador` que se puede utilizar para definir una "
-"función de fábrica para gestores de contexto asíncrono de declaración :"
-"keyword:`async with`, sin necesidad de crear una clase o separar :meth:"
-"`__aenter__` y métodos :meth:`__aexit__`. Debe aplicarse a una función :term:"
-"`asynchronous generator`."
+"función de fábrica para gestores de contexto asíncrono de "
+"declaración :keyword:`async with`, sin necesidad de crear una clase o "
+"separar :meth:`__aenter__` y métodos :meth:`__aexit__`. Debe aplicarse a una "
+"función :term:`asynchronous generator`."
 
 #: ../Doc/library/contextlib.rst:113
 msgid "A simple example::"
 msgstr "Un ejemplo simple::"
+
+#: ../Doc/library/contextlib.rst:115
+msgid ""
+"from contextlib import asynccontextmanager\n"
+"\n"
+"@asynccontextmanager\n"
+"async def get_connection():\n"
+"    conn = await acquire_db_connection()\n"
+"    try:\n"
+"        yield conn\n"
+"    finally:\n"
+"        await release_db_connection(conn)\n"
+"\n"
+"async def get_all_users():\n"
+"    async with get_connection() as conn:\n"
+"        return conn.query('SELECT ...')"
+msgstr ""
 
 #: ../Doc/library/contextlib.rst:131
 msgid ""
@@ -210,6 +254,24 @@ msgid ""
 msgstr ""
 "Los administradores de contexto definidos con :func:`asynccontextmanager` se "
 "pueden utilizar como decoradores o con declaraciones :keyword:`async with`:"
+
+#: ../Doc/library/contextlib.rst:134
+msgid ""
+"import time\n"
+"from contextlib import asynccontextmanager\n"
+"\n"
+"@asynccontextmanager\n"
+"async def timeit():\n"
+"    now = time.monotonic()\n"
+"    try:\n"
+"        yield\n"
+"    finally:\n"
+"        print(f'it took {time.monotonic() - now}s to run')\n"
+"\n"
+"@timeit()\n"
+"async def main():\n"
+"    # ... async code ..."
+msgstr ""
 
 #: ../Doc/library/contextlib.rst:149
 msgid ""
@@ -220,17 +282,18 @@ msgid ""
 msgstr ""
 "Cuando se utiliza como decorador, se crea implícitamente una nueva instancia "
 "de generador en cada llamada de función. Esto permite que los "
-"administradores de contexto de otro modo \"únicos\" creados por :func:"
-"`asynccontextmanager` cumplan con el requisito de que los administradores de "
-"contexto admitan múltiples invocaciones para ser utilizados como decoradores."
+"administradores de contexto de otro modo \"únicos\" creados "
+"por :func:`asynccontextmanager` cumplan con el requisito de que los "
+"administradores de contexto admitan múltiples invocaciones para ser "
+"utilizados como decoradores."
 
 #: ../Doc/library/contextlib.rst:154
 msgid ""
 "Async context managers created with :func:`asynccontextmanager` can be used "
 "as decorators."
 msgstr ""
-"Los administradores de contexto asíncronos creados con :func:"
-"`asynccontextmanager` se pueden utilizar como decoradores."
+"Los administradores de contexto asíncronos creados "
+"con :func:`asynccontextmanager` se pueden utilizar como decoradores."
 
 #: ../Doc/library/contextlib.rst:161
 msgid ""
@@ -240,9 +303,31 @@ msgstr ""
 "retorna un gestor de contexto que cierra *thing* al completar el bloque. "
 "Esto es básicamente equivalente a::"
 
+#: ../Doc/library/contextlib.rst:164
+msgid ""
+"from contextlib import contextmanager\n"
+"\n"
+"@contextmanager\n"
+"def closing(thing):\n"
+"    try:\n"
+"        yield thing\n"
+"    finally:\n"
+"        thing.close()"
+msgstr ""
+
 #: ../Doc/library/contextlib.rst:173
 msgid "And lets you write code like this::"
 msgstr "Y te permite escribir código como este::"
+
+#: ../Doc/library/contextlib.rst:175
+msgid ""
+"from contextlib import closing\n"
+"from urllib.request import urlopen\n"
+"\n"
+"with closing(urlopen('https://www.python.org')) as page:\n"
+"    for line in page:\n"
+"        print(line)"
+msgstr ""
 
 #: ../Doc/library/contextlib.rst:182
 msgid ""
@@ -252,7 +337,17 @@ msgstr ""
 "sin necesidad de cerrar explícitamente la ``page``. Incluso si se produce un "
 "error, se llamará a ``page.close()`` cuando salga el bloque :keyword:`with`."
 
-#: ../Doc/library/contextlib.rst:188
+#: ../Doc/library/contextlib.rst:187
+msgid ""
+"Most types managing resources support the :term:`context manager` protocol, "
+"which closes *thing* on leaving the :keyword:`with` statement. As "
+"such, :func:`!closing` is most useful for third party types that don't "
+"support context managers. This example is purely for illustration purposes, "
+"as :func:`~urllib.request.urlopen` would normally be used in a context "
+"manager."
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:196
 msgid ""
 "Return an async context manager that calls the ``aclose()`` method of "
 "*thing* upon completion of the block.  This is basically equivalent to::"
@@ -261,7 +356,19 @@ msgstr ""
 "``aclose()`` de *thing* una vez completado el bloque. Esto es básicamente "
 "equivalente a:"
 
-#: ../Doc/library/contextlib.rst:200
+#: ../Doc/library/contextlib.rst:199
+msgid ""
+"from contextlib import asynccontextmanager\n"
+"\n"
+"@asynccontextmanager\n"
+"async def aclosing(thing):\n"
+"    try:\n"
+"        yield thing\n"
+"    finally:\n"
+"        await thing.aclose()"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:208
 msgid ""
 "Significantly, ``aclosing()`` supports deterministic cleanup of async "
 "generators when they happen to exit early by :keyword:`break` or an "
@@ -271,7 +378,17 @@ msgstr ""
 "generadores asincrónicos cuando salen temprano por :keyword:`break` o una "
 "excepción. Por ejemplo::"
 
-#: ../Doc/library/contextlib.rst:211
+#: ../Doc/library/contextlib.rst:212
+msgid ""
+"from contextlib import aclosing\n"
+"\n"
+"async with aclosing(my_generator()) as values:\n"
+"    async for value in values:\n"
+"        if value == 42:\n"
+"            break"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:219
 msgid ""
 "This pattern ensures that the generator's async exit code is executed in the "
 "same context as its iterations (so that exceptions and context variables "
@@ -284,7 +401,7 @@ msgstr ""
 "código de salida no se ejecute después de la vida útil de alguna tarea de la "
 "que depende)."
 
-#: ../Doc/library/contextlib.rst:223
+#: ../Doc/library/contextlib.rst:231
 msgid ""
 "Return a context manager that returns *enter_result* from ``__enter__``, but "
 "otherwise does nothing. It is intended to be used as a stand-in for an "
@@ -294,11 +411,38 @@ msgstr ""
 "pero de lo contrario no hace nada. Está destinado a ser utilizado como un "
 "sustituto para un administrador de contexto opcional, por ejemplo:"
 
-#: ../Doc/library/contextlib.rst:237
+#: ../Doc/library/contextlib.rst:235
+msgid ""
+"def myfunction(arg, ignore_exceptions=False):\n"
+"    if ignore_exceptions:\n"
+"        # Use suppress to ignore all exceptions.\n"
+"        cm = contextlib.suppress(Exception)\n"
+"    else:\n"
+"        # Do not ignore any exceptions, cm has no effect.\n"
+"        cm = contextlib.nullcontext()\n"
+"    with cm:\n"
+"        # Do something"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:245
 msgid "An example using *enter_result*::"
 msgstr "Un ejemplo usando *enter_result*::"
 
-#: ../Doc/library/contextlib.rst:250
+#: ../Doc/library/contextlib.rst:247
+msgid ""
+"def process_file(file_or_path):\n"
+"    if isinstance(file_or_path, str):\n"
+"        # If string, open file\n"
+"        cm = open(file_or_path)\n"
+"    else:\n"
+"        # Caller is responsible for closing file\n"
+"        cm = nullcontext(file_or_path)\n"
+"\n"
+"    with cm as file:\n"
+"        # Perform processing on the file"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:258
 msgid ""
 "It can also be used as a stand-in for :ref:`asynchronous context managers "
 "<async-context-managers>`::"
@@ -306,11 +450,25 @@ msgstr ""
 "También se puede utilizar como sustituto de :ref:`asynchronous context "
 "managers <async-context-managers>`:"
 
-#: ../Doc/library/contextlib.rst:266
+#: ../Doc/library/contextlib.rst:261
+msgid ""
+"async def send_http(session=None):\n"
+"    if not session:\n"
+"        # If no http session, create it with aiohttp\n"
+"        cm = aiohttp.ClientSession()\n"
+"    else:\n"
+"        # Caller is responsible for closing the session\n"
+"        cm = nullcontext(session)\n"
+"\n"
+"    async with cm as session:\n"
+"        # Send http requests with session"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:274
 msgid ":term:`asynchronous context manager` support was added."
 msgstr "Se agregó compatibilidad con :term:`asynchronous context manager`."
 
-#: ../Doc/library/contextlib.rst:273
+#: ../Doc/library/contextlib.rst:281
 msgid ""
 "Return a context manager that suppresses any of the specified exceptions if "
 "they occur in the body of a :keyword:`!with` statement and then resumes "
@@ -318,11 +476,11 @@ msgid ""
 "statement."
 msgstr ""
 "Retorna un administrador de contexto que suprime cualquiera de las "
-"excepciones especificadas si ocurren en el cuerpo de una instrucción :"
-"keyword:`!with` y luego reanuda la ejecución con la primera instrucción que "
-"sigue al final de la instrucción :keyword:`!with`."
+"excepciones especificadas si ocurren en el cuerpo de una "
+"instrucción :keyword:`!with` y luego reanuda la ejecución con la primera "
+"instrucción que sigue al final de la instrucción :keyword:`!with`."
 
-#: ../Doc/library/contextlib.rst:278
+#: ../Doc/library/contextlib.rst:286
 msgid ""
 "As with any other mechanism that completely suppresses exceptions, this "
 "context manager should be used only to cover very specific errors where "
@@ -334,40 +492,67 @@ msgstr ""
 "errores muy específicos en los que se sabe que continuar silenciosamente con "
 "la ejecución del programa es lo correcto."
 
-#: ../Doc/library/contextlib.rst:283
+#: ../Doc/library/contextlib.rst:291
 msgid "For example::"
 msgstr "Por ejemplo::"
 
 #: ../Doc/library/contextlib.rst:293
+msgid ""
+"from contextlib import suppress\n"
+"\n"
+"with suppress(FileNotFoundError):\n"
+"    os.remove('somefile.tmp')\n"
+"\n"
+"with suppress(FileNotFoundError):\n"
+"    os.remove('someotherfile.tmp')"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:301
 msgid "This code is equivalent to::"
 msgstr "Este código es equivalente a::"
 
-#: ../Doc/library/contextlib.rst:305 ../Doc/library/contextlib.rst:352
-#: ../Doc/library/contextlib.rst:362 ../Doc/library/contextlib.rst:379
+#: ../Doc/library/contextlib.rst:303
+msgid ""
+"try:\n"
+"    os.remove('somefile.tmp')\n"
+"except FileNotFoundError:\n"
+"    pass\n"
+"\n"
+"try:\n"
+"    os.remove('someotherfile.tmp')\n"
+"except FileNotFoundError:\n"
+"    pass"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:313 ../Doc/library/contextlib.rst:362
+#: ../Doc/library/contextlib.rst:372 ../Doc/library/contextlib.rst:389
 msgid "This context manager is :ref:`reentrant <reentrant-cms>`."
 msgstr "Este gestor de contexto es :ref:`reentrant <reentrant-cms>`."
 
-#: ../Doc/library/contextlib.rst:307
+#: ../Doc/library/contextlib.rst:315
+#, fuzzy
 msgid ""
-"If the code within the :keyword:`!with` block raises an :exc:"
-"`ExceptionGroup`, suppressed exceptions are removed from the group.  If any "
-"exceptions in the group are not suppressed, a group containing them is re-"
-"raised."
+"If the code within the :keyword:`!with` block raises "
+"a :exc:`BaseExceptionGroup`, suppressed exceptions are removed from the "
+"group.  Any exceptions of the group which are not suppressed are re-raised "
+"in a new group which is created using the original "
+"group's :meth:`~BaseExceptionGroup.derive` method."
 msgstr ""
-"Si el código dentro del bloque de :keyword:`!with` lanza una :exc:"
-"`ExceptionGroup`, las excepciones suprimidas son retiradas del grupo. Si "
-"algunas excepciones en el grupo no están suprimidas, un grupo que las "
-"contiene se lanza."
+"Si el código dentro del bloque de :keyword:`!with` lanza "
+"una :exc:`ExceptionGroup`, las excepciones suprimidas son retiradas del "
+"grupo. Si algunas excepciones en el grupo no están suprimidas, un grupo que "
+"las contiene se lanza."
 
-#: ../Doc/library/contextlib.rst:313
+#: ../Doc/library/contextlib.rst:323
+#, fuzzy
 msgid ""
-"``suppress`` now supports suppressing exceptions raised as part of an :exc:"
-"`ExceptionGroup`."
+"``suppress`` now supports suppressing exceptions raised as part of "
+"a :exc:`BaseExceptionGroup`."
 msgstr ""
-"Ahora ``supress`` admite suprimir excepciones lanzadas como parte de un :exc:"
-"`ExceptionGroup`."
+"Ahora ``supress`` admite suprimir excepciones lanzadas como parte de "
+"un :exc:`ExceptionGroup`."
 
-#: ../Doc/library/contextlib.rst:319
+#: ../Doc/library/contextlib.rst:329
 msgid ""
 "Context manager for temporarily redirecting :data:`sys.stdout` to another "
 "file or file-like object."
@@ -375,7 +560,7 @@ msgstr ""
 "Administrador de contexto para redirigir temporalmente :data:`sys.stdout` a "
 "otro archivo u objeto similar a un archivo."
 
-#: ../Doc/library/contextlib.rst:322
+#: ../Doc/library/contextlib.rst:332
 msgid ""
 "This tool adds flexibility to existing functions or classes whose output is "
 "hardwired to stdout."
@@ -383,21 +568,28 @@ msgstr ""
 "Esta herramienta agrega flexibilidad a las funciones o clases existentes "
 "cuya salida está programada para stdout."
 
-#: ../Doc/library/contextlib.rst:325
+#: ../Doc/library/contextlib.rst:335
 msgid ""
 "For example, the output of :func:`help` normally is sent to *sys.stdout*. "
-"You can capture that output in a string by redirecting the output to an :"
-"class:`io.StringIO` object. The replacement stream is returned from the "
-"``__enter__`` method and so is available as the target of the :keyword:"
-"`with` statement::"
+"You can capture that output in a string by redirecting the output to "
+"an :class:`io.StringIO` object. The replacement stream is returned from the "
+"``__enter__`` method and so is available as the target of "
+"the :keyword:`with` statement::"
 msgstr ""
 "Por ejemplo, la salida de :func:`help` normalmente se envía a *sys.stdout*. "
-"Puede capturar esa salida en una cadena redirigiendo la salida a un objeto :"
-"class:`io.StringIO`. La secuencia de reemplazo se retorna desde el método "
-"``__enter__`` y, por lo tanto, está disponible como destino de la "
+"Puede capturar esa salida en una cadena redirigiendo la salida a un "
+"objeto :class:`io.StringIO`. La secuencia de reemplazo se retorna desde el "
+"método ``__enter__`` y, por lo tanto, está disponible como destino de la "
 "declaración :keyword:`with`:"
 
-#: ../Doc/library/contextlib.rst:335
+#: ../Doc/library/contextlib.rst:341
+msgid ""
+"with redirect_stdout(io.StringIO()) as f:\n"
+"    help(pow)\n"
+"s = f.getvalue()"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:345
 msgid ""
 "To send the output of :func:`help` to a file on disk, redirect the output to "
 "a regular file::"
@@ -405,11 +597,24 @@ msgstr ""
 "Para enviar la salida de :func:`help` a un archivo en el disco, redirija la "
 "salida a un archivo normal::"
 
-#: ../Doc/library/contextlib.rst:342
+#: ../Doc/library/contextlib.rst:348
+msgid ""
+"with open('help.txt', 'w') as f:\n"
+"    with redirect_stdout(f):\n"
+"        help(pow)"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:352
 msgid "To send the output of :func:`help` to *sys.stderr*::"
 msgstr "Para enviar la salida de :func:`help` a *sys.stderr*::"
 
-#: ../Doc/library/contextlib.rst:347
+#: ../Doc/library/contextlib.rst:354
+msgid ""
+"with redirect_stdout(sys.stderr):\n"
+"    help(pow)"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:357
 msgid ""
 "Note that the global side effect on :data:`sys.stdout` means that this "
 "context manager is not suitable for use in library code and most threaded "
@@ -422,15 +627,15 @@ msgstr ""
 "subprocesos. Tampoco tiene efecto en la salida de subprocesos. Sin embargo, "
 "sigue siendo un enfoque útil para muchos scripts de utilidad."
 
-#: ../Doc/library/contextlib.rst:359
-msgid ""
-"Similar to :func:`~contextlib.redirect_stdout` but redirecting :data:`sys."
-"stderr` to another file or file-like object."
-msgstr ""
-"Similar a :func:`~contextlib.redirect_stdout` pero redirigiendo :data:`sys."
-"stderr` a otro archivo u objeto similar a un archivo."
-
 #: ../Doc/library/contextlib.rst:369
+msgid ""
+"Similar to :func:`~contextlib.redirect_stdout` but "
+"redirecting :data:`sys.stderr` to another file or file-like object."
+msgstr ""
+"Similar a :func:`~contextlib.redirect_stdout` pero "
+"redirigiendo :data:`sys.stderr` a otro archivo u objeto similar a un archivo."
+
+#: ../Doc/library/contextlib.rst:379
 msgid ""
 "Non parallel-safe context manager to change the current working directory. "
 "As this changes a global state, the working directory, it is not suitable "
@@ -447,7 +652,7 @@ msgstr ""
 "del programa se abandona temporalmente; a menos que se desee explícitamente, "
 "no debe ceder el paso cuando este administrador de contexto está activo."
 
-#: ../Doc/library/contextlib.rst:376
+#: ../Doc/library/contextlib.rst:386
 msgid ""
 "This is a simple wrapper around :func:`~os.chdir`, it changes the current "
 "working directory upon entering and restores the old one on exit."
@@ -455,14 +660,14 @@ msgstr ""
 "Este es un contenedor simple alrededor de :func:`~os.chdir`, cambia el "
 "directorio de trabajo actual al ingresar y restaura el anterior al salir."
 
-#: ../Doc/library/contextlib.rst:386
+#: ../Doc/library/contextlib.rst:396
 msgid ""
 "A base class that enables a context manager to also be used as a decorator."
 msgstr ""
 "Una clase base que permite que un administrador de contexto también se use "
 "como decorador."
 
-#: ../Doc/library/contextlib.rst:388
+#: ../Doc/library/contextlib.rst:398
 msgid ""
 "Context managers inheriting from ``ContextDecorator`` have to implement "
 "``__enter__`` and ``__exit__`` as normal. ``__exit__`` retains its optional "
@@ -473,7 +678,7 @@ msgstr ""
 "conserva su manejo opcional de excepciones incluso cuando se usa como "
 "decorador."
 
-#: ../Doc/library/contextlib.rst:392
+#: ../Doc/library/contextlib.rst:402
 msgid ""
 "``ContextDecorator`` is used by :func:`contextmanager`, so you get this "
 "functionality automatically."
@@ -481,26 +686,73 @@ msgstr ""
 "``ContextDecorator`` es utilizado por :func:`contextmanager`, por lo que "
 "obtiene esta funcionalidad automáticamente."
 
-#: ../Doc/library/contextlib.rst:395
+#: ../Doc/library/contextlib.rst:405
 msgid "Example of ``ContextDecorator``::"
 msgstr "Ejemplo de ``ContextDecorator``::"
 
-#: ../Doc/library/contextlib.rst:408 ../Doc/library/contextlib.rst:480
+#: ../Doc/library/contextlib.rst:407
+msgid ""
+"from contextlib import ContextDecorator\n"
+"\n"
+"class mycontext(ContextDecorator):\n"
+"    def __enter__(self):\n"
+"        print('Starting')\n"
+"        return self\n"
+"\n"
+"    def __exit__(self, *exc):\n"
+"        print('Finishing')\n"
+"        return False"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:418 ../Doc/library/contextlib.rst:490
 msgid "The class can then be used like this::"
 msgstr "La clase se puede usar así:"
 
-#: ../Doc/library/contextlib.rst:426
+#: ../Doc/library/contextlib.rst:420
+msgid ""
+">>> @mycontext()\n"
+"... def function():\n"
+"...     print('The bit in the middle')\n"
+"...\n"
+">>> function()\n"
+"Starting\n"
+"The bit in the middle\n"
+"Finishing\n"
+"\n"
+">>> with mycontext():\n"
+"...     print('The bit in the middle')\n"
+"...\n"
+"Starting\n"
+"The bit in the middle\n"
+"Finishing"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:436
 msgid ""
 "This change is just syntactic sugar for any construct of the following form::"
 msgstr ""
 "Este cambio es solo azúcar sintáctico para cualquier construcción de la "
 "siguiente forma:"
 
-#: ../Doc/library/contextlib.rst:432
+#: ../Doc/library/contextlib.rst:438
+msgid ""
+"def f():\n"
+"    with cm():\n"
+"        # Do stuff"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:442
 msgid "``ContextDecorator`` lets you instead write::"
 msgstr "``ContextDecorator`` le permite escribir en su lugar::"
 
-#: ../Doc/library/contextlib.rst:438
+#: ../Doc/library/contextlib.rst:444
+msgid ""
+"@cm()\n"
+"def f():\n"
+"    # Do stuff"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:448
 msgid ""
 "It makes it clear that the ``cm`` applies to the whole function, rather than "
 "just a piece of it (and saving an indentation level is nice, too)."
@@ -508,7 +760,7 @@ msgstr ""
 "Deja en claro que el ``cm`` se aplica a toda la función, en lugar de solo "
 "una parte de ella (y guardar un nivel de sangría también es bueno)."
 
-#: ../Doc/library/contextlib.rst:441
+#: ../Doc/library/contextlib.rst:451
 msgid ""
 "Existing context managers that already have a base class can be extended by "
 "using ``ContextDecorator`` as a mixin class::"
@@ -518,27 +770,76 @@ msgstr ""
 
 #: ../Doc/library/contextlib.rst:454
 msgid ""
+"from contextlib import ContextDecorator\n"
+"\n"
+"class mycontext(ContextBaseClass, ContextDecorator):\n"
+"    def __enter__(self):\n"
+"        return self\n"
+"\n"
+"    def __exit__(self, *exc):\n"
+"        return False"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:464
+msgid ""
 "As the decorated function must be able to be called multiple times, the "
 "underlying context manager must support use in multiple :keyword:`with` "
 "statements. If this is not the case, then the original construct with the "
 "explicit :keyword:`!with` statement inside the function should be used."
 msgstr ""
 "Como la función decorada debe poder llamarse varias veces, el gestor de "
-"contexto subyacente debe admitir el uso en múltiples declaraciones :keyword:"
-"`with`. Si este no es el caso, se debe utilizar la construcción original con "
-"la declaración explícita :keyword:`!with` dentro de la función."
+"contexto subyacente debe admitir el uso en múltiples "
+"declaraciones :keyword:`with`. Si este no es el caso, se debe utilizar la "
+"construcción original con la declaración explícita :keyword:`!with` dentro "
+"de la función."
 
-#: ../Doc/library/contextlib.rst:464
+#: ../Doc/library/contextlib.rst:474
 msgid ""
 "Similar to :class:`ContextDecorator` but only for asynchronous functions."
 msgstr ""
 "Similar a :class:`ContextDecorator` pero solo para funciones asincrónicas."
 
-#: ../Doc/library/contextlib.rst:466
+#: ../Doc/library/contextlib.rst:476
 msgid "Example of ``AsyncContextDecorator``::"
 msgstr "Ejemplo de ``AsyncContextDecorator``:"
 
-#: ../Doc/library/contextlib.rst:505
+#: ../Doc/library/contextlib.rst:478
+msgid ""
+"from asyncio import run\n"
+"from contextlib import AsyncContextDecorator\n"
+"\n"
+"class mycontext(AsyncContextDecorator):\n"
+"    async def __aenter__(self):\n"
+"        print('Starting')\n"
+"        return self\n"
+"\n"
+"    async def __aexit__(self, *exc):\n"
+"        print('Finishing')\n"
+"        return False"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:492
+msgid ""
+">>> @mycontext()\n"
+"... async def function():\n"
+"...     print('The bit in the middle')\n"
+"...\n"
+">>> run(function())\n"
+"Starting\n"
+"The bit in the middle\n"
+"Finishing\n"
+"\n"
+">>> async def function():\n"
+"...    async with mycontext():\n"
+"...         print('The bit in the middle')\n"
+"...\n"
+">>> run(function())\n"
+"Starting\n"
+"The bit in the middle\n"
+"Finishing"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:515
 msgid ""
 "A context manager that is designed to make it easy to programmatically "
 "combine other context managers and cleanup functions, especially those that "
@@ -549,7 +850,7 @@ msgstr ""
 "especialmente aquellas que son opcionales o que de otro modo son impulsadas "
 "por los datos de entrada."
 
-#: ../Doc/library/contextlib.rst:509
+#: ../Doc/library/contextlib.rst:519
 msgid ""
 "For example, a set of files may easily be handled in a single with statement "
 "as follows::"
@@ -557,15 +858,25 @@ msgstr ""
 "Por ejemplo, un conjunto de archivos puede manejarse fácilmente en una sola "
 "declaración de la siguiente manera:"
 
-#: ../Doc/library/contextlib.rst:518
+#: ../Doc/library/contextlib.rst:522
 msgid ""
-"The :meth:`__enter__` method returns the :class:`ExitStack` instance, and "
-"performs no additional operations."
+"with ExitStack() as stack:\n"
+"    files = [stack.enter_context(open(fname)) for fname in filenames]\n"
+"    # All opened files will automatically be closed at the end of\n"
+"    # the with statement, even if attempts to open files later\n"
+"    # in the list raise an exception"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:528
+#, fuzzy
+msgid ""
+"The :meth:`~object.__enter__` method returns the :class:`ExitStack` "
+"instance, and performs no additional operations."
 msgstr ""
 "El método :meth:`__enter__` retorna la instancia :class:`ExitStack` y no "
 "realiza operaciones adicionales."
 
-#: ../Doc/library/contextlib.rst:521
+#: ../Doc/library/contextlib.rst:531
 msgid ""
 "Each instance maintains a stack of registered callbacks that are called in "
 "reverse order when the instance is closed (either explicitly or implicitly "
@@ -578,7 +889,7 @@ msgstr ""
 "que las retrollamadas *no* se invocan implícitamente cuando la instancia de "
 "la pila de contexto se recolecta basura."
 
-#: ../Doc/library/contextlib.rst:526
+#: ../Doc/library/contextlib.rst:536
 msgid ""
 "This stack model is used so that context managers that acquire their "
 "resources in their ``__init__`` method (such as file objects) can be handled "
@@ -588,7 +899,7 @@ msgstr ""
 "adquieren sus recursos en su método ``__init__`` (como los objetos de "
 "archivo) se puedan manejar correctamente."
 
-#: ../Doc/library/contextlib.rst:530
+#: ../Doc/library/contextlib.rst:540
 msgid ""
 "Since registered callbacks are invoked in the reverse order of registration, "
 "this ends up behaving as if multiple nested :keyword:`with` statements had "
@@ -604,7 +915,7 @@ msgstr ""
 "retrollamada interna suprime o reemplaza una excepción, las retrollamadas "
 "externas se pasarán argumentos basados en ese estado actualizado."
 
-#: ../Doc/library/contextlib.rst:537
+#: ../Doc/library/contextlib.rst:547
 msgid ""
 "This is a relatively low level API that takes care of the details of "
 "correctly unwinding the stack of exit callbacks. It provides a suitable "
@@ -616,26 +927,27 @@ msgstr ""
 "una base adecuada para administradores de contexto de nivel superior que "
 "manipulan la pila de salida en formas específicas de la aplicación."
 
-#: ../Doc/library/contextlib.rst:546
+#: ../Doc/library/contextlib.rst:556
+#, fuzzy
 msgid ""
-"Enters a new context manager and adds its :meth:`__exit__` method to the "
-"callback stack. The return value is the result of the context manager's own :"
-"meth:`__enter__` method."
+"Enters a new context manager and adds its :meth:`~object.__exit__` method to "
+"the callback stack. The return value is the result of the context manager's "
+"own :meth:`~object.__enter__` method."
 msgstr ""
-"Ingresa a un nuevo administrador de contexto y agrega su método :meth:"
-"`__exit__` a la pila de retrollamada. El valor de retorno es el resultado "
-"del método propio del administrador de contexto :meth:`__enter__`."
+"Ingresa a un nuevo administrador de contexto y agrega su "
+"método :meth:`__exit__` a la pila de retrollamada. El valor de retorno es el "
+"resultado del método propio del administrador de contexto :meth:`__enter__`."
 
-#: ../Doc/library/contextlib.rst:550
+#: ../Doc/library/contextlib.rst:560
 msgid ""
 "These context managers may suppress exceptions just as they normally would "
 "if used directly as part of a :keyword:`with` statement."
 msgstr ""
 "Estos administradores de contexto pueden suprimir excepciones tal como lo "
-"harían normalmente si se usaran directamente como parte de una declaración :"
-"keyword:`with`."
+"harían normalmente si se usaran directamente como parte de una "
+"declaración :keyword:`with`."
 
-#: ../Doc/library/contextlib.rst:553
+#: ../Doc/library/contextlib.rst:563
 msgid ""
 "Raises :exc:`TypeError` instead of :exc:`AttributeError` if *cm* is not a "
 "context manager."
@@ -643,43 +955,50 @@ msgstr ""
 "Lanza :exc:`TypeError` en lugar de :exc:`AttributeError` si *cm* no es un "
 "administrador de contexto."
 
-#: ../Doc/library/contextlib.rst:559
-msgid "Adds a context manager's :meth:`__exit__` method to the callback stack."
+#: ../Doc/library/contextlib.rst:569
+#, fuzzy
+msgid ""
+"Adds a context manager's :meth:`~object.__exit__` method to the callback "
+"stack."
 msgstr ""
 "Agrega un método de gestor de contexto :meth:`__exit__` a la pila de "
 "retrollamada."
 
-#: ../Doc/library/contextlib.rst:561
+#: ../Doc/library/contextlib.rst:571
+#, fuzzy
 msgid ""
 "As ``__enter__`` is *not* invoked, this method can be used to cover part of "
-"an :meth:`__enter__` implementation with a context manager's own :meth:"
-"`__exit__` method."
+"an :meth:`~object.__enter__` implementation with a context manager's "
+"own :meth:`~object.__exit__` method."
 msgstr ""
 "Como ``__enter__`` *no* se invoca, este método se puede usar para cubrir "
 "parte de una implementación :meth:`__enter__` con un método propio del "
 "gestor de contexto :meth:`__exit__`."
 
-#: ../Doc/library/contextlib.rst:565
+#: ../Doc/library/contextlib.rst:575
+#, fuzzy
 msgid ""
 "If passed an object that is not a context manager, this method assumes it is "
-"a callback with the same signature as a context manager's :meth:`__exit__` "
-"method and adds it directly to the callback stack."
+"a callback with the same signature as a context "
+"manager's :meth:`~object.__exit__` method and adds it directly to the "
+"callback stack."
 msgstr ""
 "Si se pasa un objeto que no es un administrador de contexto, este método "
-"supone que es una retrollamada con la misma firma que el método :meth:"
-"`__exit__` de un gestor de contexto y lo agrega directamente a la pila de "
-"retrollamada."
+"supone que es una retrollamada con la misma firma que el "
+"método :meth:`__exit__` de un gestor de contexto y lo agrega directamente a "
+"la pila de retrollamada."
 
-#: ../Doc/library/contextlib.rst:569
+#: ../Doc/library/contextlib.rst:579
+#, fuzzy
 msgid ""
 "By returning true values, these callbacks can suppress exceptions the same "
-"way context manager :meth:`__exit__` methods can."
+"way context manager :meth:`~object.__exit__` methods can."
 msgstr ""
 "Al retornar valores verdaderos, estas retrollamadas pueden suprimir "
-"excepciones de la misma manera que el gestor de contexto los métodos :meth:"
-"`__exit__` pueden hacerlo."
+"excepciones de la misma manera que el gestor de contexto los "
+"métodos :meth:`__exit__` pueden hacerlo."
 
-#: ../Doc/library/contextlib.rst:572
+#: ../Doc/library/contextlib.rst:582
 msgid ""
 "The passed in object is returned from the function, allowing this method to "
 "be used as a function decorator."
@@ -687,7 +1006,7 @@ msgstr ""
 "El objeto pasado se retorna desde la función, lo que permite que este método "
 "se use como decorador de funciones."
 
-#: ../Doc/library/contextlib.rst:577
+#: ../Doc/library/contextlib.rst:587
 msgid ""
 "Accepts an arbitrary callback function and arguments and adds it to the "
 "callback stack."
@@ -695,7 +1014,7 @@ msgstr ""
 "Acepta una función de retrollamada arbitraria y argumentos y la agrega a la "
 "pila de retrollamada."
 
-#: ../Doc/library/contextlib.rst:580
+#: ../Doc/library/contextlib.rst:590
 msgid ""
 "Unlike the other methods, callbacks added this way cannot suppress "
 "exceptions (as they are never passed the exception details)."
@@ -704,7 +1023,7 @@ msgstr ""
 "manera no pueden suprimir excepciones (ya que nunca se pasan los detalles de "
 "excepción)."
 
-#: ../Doc/library/contextlib.rst:583
+#: ../Doc/library/contextlib.rst:593
 msgid ""
 "The passed in callback is returned from the function, allowing this method "
 "to be used as a function decorator."
@@ -712,7 +1031,7 @@ msgstr ""
 "La retrollamada pasada se retorna desde la función, lo que permite que este "
 "método se use como decorador de funciones."
 
-#: ../Doc/library/contextlib.rst:588
+#: ../Doc/library/contextlib.rst:598
 msgid ""
 "Transfers the callback stack to a fresh :class:`ExitStack` instance and "
 "returns it. No callbacks are invoked by this operation - instead, they will "
@@ -724,7 +1043,7 @@ msgstr ""
 "invocarán cuando se cierre la nueva pila (ya sea explícita o implícitamente "
 "al final de una instrucción :keyword:`with`)."
 
-#: ../Doc/library/contextlib.rst:593
+#: ../Doc/library/contextlib.rst:603
 msgid ""
 "For example, a group of files can be opened as an \"all or nothing\" "
 "operation as follows::"
@@ -732,7 +1051,19 @@ msgstr ""
 "Por ejemplo, un grupo de archivos se puede abrir como una operación de "
 "\"todo o nada\" de la siguiente manera:"
 
-#: ../Doc/library/contextlib.rst:607
+#: ../Doc/library/contextlib.rst:606
+msgid ""
+"with ExitStack() as stack:\n"
+"    files = [stack.enter_context(open(fname)) for fname in filenames]\n"
+"    # Hold onto the close method, but don't call it yet.\n"
+"    close_files = stack.pop_all().close\n"
+"    # If opening any file fails, all previously opened files will be\n"
+"    # closed automatically. If all files are opened successfully,\n"
+"    # they will remain open even after the with statement ends.\n"
+"    # close_files() can then be invoked explicitly to close them all."
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:617
 msgid ""
 "Immediately unwinds the callback stack, invoking callbacks in the reverse "
 "order of registration. For any context managers and exit callbacks "
@@ -743,32 +1074,36 @@ msgstr ""
 "retrollamadas de salida registradas, los argumentos pasados indicarán que no "
 "se produjo ninguna excepción."
 
-#: ../Doc/library/contextlib.rst:614
+#: ../Doc/library/contextlib.rst:624
 msgid ""
-"An :ref:`asynchronous context manager <async-context-managers>`, similar to :"
-"class:`ExitStack`, that supports combining both synchronous and asynchronous "
-"context managers, as well as having coroutines for cleanup logic."
+"An :ref:`asynchronous context manager <async-context-managers>`, similar "
+"to :class:`ExitStack`, that supports combining both synchronous and "
+"asynchronous context managers, as well as having coroutines for cleanup "
+"logic."
 msgstr ""
-"Un :ref:`gestor de contexto asíncrono <async-context-managers>`, similar a :"
-"class:`ExitStack`, que admite la combinación de gestores de contexto "
+"Un :ref:`gestor de contexto asíncrono <async-context-managers>`, similar "
+"a :class:`ExitStack`, que admite la combinación de gestores de contexto "
 "síncrono y asíncrono, además de tener rutinas para la lógica de limpieza."
 
-#: ../Doc/library/contextlib.rst:619
+#: ../Doc/library/contextlib.rst:629
+#, fuzzy
 msgid ""
-"The :meth:`close` method is not implemented, :meth:`aclose` must be used "
-"instead."
+"The :meth:`~ExitStack.close` method is not implemented; :meth:`aclose` must "
+"be used instead."
 msgstr ""
 "El método :meth:`close` no está implementado, :meth:`aclose` debe usarse en "
 "su lugar."
 
-#: ../Doc/library/contextlib.rst:624
+#: ../Doc/library/contextlib.rst:634
+#, fuzzy
 msgid ""
-"Similar to :meth:`enter_context` but expects an asynchronous context manager."
+"Similar to :meth:`ExitStack.enter_context` but expects an asynchronous "
+"context manager."
 msgstr ""
 "Similar a :meth:`enter_context` pero espera un administrador de contexto "
 "asíncrono."
 
-#: ../Doc/library/contextlib.rst:627
+#: ../Doc/library/contextlib.rst:637
 msgid ""
 "Raises :exc:`TypeError` instead of :exc:`AttributeError` if *cm* is not an "
 "asynchronous context manager."
@@ -776,32 +1111,45 @@ msgstr ""
 "Lanza :exc:`TypeError` en lugar de :exc:`AttributeError` si *cm* no es un "
 "administrador de contexto asíncrono."
 
-#: ../Doc/library/contextlib.rst:633
+#: ../Doc/library/contextlib.rst:643
+#, fuzzy
 msgid ""
-"Similar to :meth:`push` but expects either an asynchronous context manager "
-"or a coroutine function."
+"Similar to :meth:`ExitStack.push` but expects either an asynchronous context "
+"manager or a coroutine function."
 msgstr ""
 "Similar a :meth:`push` pero espera un gestor de contexto asíncrono o una "
 "función de rutina."
 
-#: ../Doc/library/contextlib.rst:638
-msgid "Similar to :meth:`callback` but expects a coroutine function."
+#: ../Doc/library/contextlib.rst:648
+#, fuzzy
+msgid "Similar to :meth:`ExitStack.callback` but expects a coroutine function."
 msgstr "Similar a :meth:`callback` pero espera una función de rutina."
 
-#: ../Doc/library/contextlib.rst:642
-msgid "Similar to :meth:`close` but properly handles awaitables."
+#: ../Doc/library/contextlib.rst:652
+#, fuzzy
+msgid "Similar to :meth:`ExitStack.close` but properly handles awaitables."
 msgstr ""
 "Similar a :meth:`close` pero maneja adecuadamente los objetos de espera."
 
-#: ../Doc/library/contextlib.rst:644
+#: ../Doc/library/contextlib.rst:654
 msgid "Continuing the example for :func:`asynccontextmanager`::"
 msgstr "Continuando con el ejemplo para :func:`asynccontextmanager`::"
 
 #: ../Doc/library/contextlib.rst:656
+msgid ""
+"async with AsyncExitStack() as stack:\n"
+"    connections = [await stack.enter_async_context(get_connection())\n"
+"        for i in range(5)]\n"
+"    # All opened connections will automatically be released at the end of\n"
+"    # the async with statement, even if attempts to open a connection\n"
+"    # later in the list raise an exception."
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:666
 msgid "Examples and Recipes"
 msgstr "Ejemplos y recetas"
 
-#: ../Doc/library/contextlib.rst:658
+#: ../Doc/library/contextlib.rst:668
 msgid ""
 "This section describes some examples and recipes for making effective use of "
 "the tools provided by :mod:`contextlib`."
@@ -809,11 +1157,11 @@ msgstr ""
 "Esta sección describe algunos ejemplos y recetas para hacer un uso efectivo "
 "de las herramientas proporcionadas por :mod:`contextlib`."
 
-#: ../Doc/library/contextlib.rst:663
+#: ../Doc/library/contextlib.rst:673
 msgid "Supporting a variable number of context managers"
 msgstr "Apoyando un número variable de gestores de contexto"
 
-#: ../Doc/library/contextlib.rst:665
+#: ../Doc/library/contextlib.rst:675
 msgid ""
 "The primary use case for :class:`ExitStack` is the one given in the class "
 "documentation: supporting a variable number of context managers and other "
@@ -830,7 +1178,18 @@ msgstr ""
 "colección de archivos especificada por el usuario), o de que algunos de los "
 "gestores de contexto sean opcionales:"
 
-#: ../Doc/library/contextlib.rst:680
+#: ../Doc/library/contextlib.rst:682
+msgid ""
+"with ExitStack() as stack:\n"
+"    for resource in resources:\n"
+"        stack.enter_context(resource)\n"
+"    if need_special_resource():\n"
+"        special = acquire_special_resource()\n"
+"        stack.callback(release_special_resource, special)\n"
+"    # Perform operations that use the acquired resources"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:690
 msgid ""
 "As shown, :class:`ExitStack` also makes it quite easy to use :keyword:`with` "
 "statements to manage arbitrary resources that don't natively support the "
@@ -840,17 +1199,17 @@ msgstr ""
 "usar :keyword:`with` para administrar recursos arbitrarios que no admiten de "
 "forma nativa el protocolo de gestión de contexto."
 
-#: ../Doc/library/contextlib.rst:686
+#: ../Doc/library/contextlib.rst:696
 msgid "Catching exceptions from ``__enter__`` methods"
 msgstr "Capturando excepciones de los métodos ``__enter__``"
 
-#: ../Doc/library/contextlib.rst:688
+#: ../Doc/library/contextlib.rst:698
 msgid ""
 "It is occasionally desirable to catch exceptions from an ``__enter__`` "
-"method implementation, *without* inadvertently catching exceptions from the :"
-"keyword:`with` statement body or the context manager's ``__exit__`` method. "
-"By using :class:`ExitStack` the steps in the context management protocol can "
-"be separated slightly in order to allow this::"
+"method implementation, *without* inadvertently catching exceptions from "
+"the :keyword:`with` statement body or the context manager's ``__exit__`` "
+"method. By using :class:`ExitStack` the steps in the context management "
+"protocol can be separated slightly in order to allow this::"
 msgstr ""
 "Ocasionalmente es deseable capturar excepciones de una implementación del "
 "método ``__enter__``, *sin* capturar inadvertidamente excepciones del cuerpo "
@@ -858,15 +1217,27 @@ msgstr ""
 "contexto. Al usar :class:`ExitStack`, los pasos en el protocolo de gestor de "
 "contexto se pueden separar ligeramente para permitir esto::"
 
-#: ../Doc/library/contextlib.rst:703
+#: ../Doc/library/contextlib.rst:704
+msgid ""
+"stack = ExitStack()\n"
+"try:\n"
+"    x = stack.enter_context(cm)\n"
+"except Exception:\n"
+"    # handle __enter__ exception\n"
+"else:\n"
+"    with stack:\n"
+"        # Handle normal case"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:713
 msgid ""
 "Actually needing to do this is likely to indicate that the underlying API "
-"should be providing a direct resource management interface for use with :"
-"keyword:`try`/:keyword:`except`/:keyword:`finally` statements, but not all "
-"APIs are well designed in that regard. When a context manager is the only "
-"resource management API provided, then :class:`ExitStack` can make it easier "
-"to handle various situations that can't be handled directly in a :keyword:"
-"`with` statement."
+"should be providing a direct resource management interface for use "
+"with :keyword:`try`/:keyword:`except`/:keyword:`finally` statements, but not "
+"all APIs are well designed in that regard. When a context manager is the "
+"only resource management API provided, then :class:`ExitStack` can make it "
+"easier to handle various situations that can't be handled directly in "
+"a :keyword:`with` statement."
 msgstr ""
 "Es probable que la necesidad de hacer esto indique que la API subyacente "
 "debería proporcionar una interfaz de administración de recursos directa para "
@@ -874,24 +1245,25 @@ msgstr ""
 "las API están bien diseñados en ese sentido. Cuando un administrador de "
 "contexto es la única API de administración de recursos proporcionada, "
 "entonces :class:`ExitStack` puede facilitar el manejo de diversas "
-"situaciones que no se pueden manejar directamente en una declaración :"
-"keyword:`with`."
+"situaciones que no se pueden manejar directamente en una "
+"declaración :keyword:`with`."
 
-#: ../Doc/library/contextlib.rst:713
+#: ../Doc/library/contextlib.rst:723
 msgid "Cleaning up in an ``__enter__`` implementation"
 msgstr "Limpieza en una implementación ``__enter__``"
 
-#: ../Doc/library/contextlib.rst:715
+#: ../Doc/library/contextlib.rst:725
+#, fuzzy
 msgid ""
 "As noted in the documentation of :meth:`ExitStack.push`, this method can be "
-"useful in cleaning up an already allocated resource if later steps in the :"
-"meth:`__enter__` implementation fail."
+"useful in cleaning up an already allocated resource if later steps in "
+"the :meth:`~object.__enter__` implementation fail."
 msgstr ""
 "Como se señala en la documentación de :meth:`ExitStack.push`, este método "
 "puede ser útil para limpiar un recurso ya asignado si fallan los pasos "
 "posteriores en :meth:`__enter__`."
 
-#: ../Doc/library/contextlib.rst:719
+#: ../Doc/library/contextlib.rst:729
 msgid ""
 "Here's an example of doing this for a context manager that accepts resource "
 "acquisition and release functions, along with an optional validation "
@@ -902,11 +1274,49 @@ msgstr ""
 "función de validación opcional, y las asigna al protocolo de administración "
 "de contexto::"
 
-#: ../Doc/library/contextlib.rst:759
+#: ../Doc/library/contextlib.rst:733
+msgid ""
+"from contextlib import contextmanager, AbstractContextManager, ExitStack\n"
+"\n"
+"class ResourceManager(AbstractContextManager):\n"
+"\n"
+"    def __init__(self, acquire_resource, release_resource, "
+"check_resource_ok=None):\n"
+"        self.acquire_resource = acquire_resource\n"
+"        self.release_resource = release_resource\n"
+"        if check_resource_ok is None:\n"
+"            def check_resource_ok(resource):\n"
+"                return True\n"
+"        self.check_resource_ok = check_resource_ok\n"
+"\n"
+"    @contextmanager\n"
+"    def _cleanup_on_error(self):\n"
+"        with ExitStack() as stack:\n"
+"            stack.push(self)\n"
+"            yield\n"
+"            # The validation check passed and didn't raise an exception\n"
+"            # Accordingly, we want to keep the resource, and pass it\n"
+"            # back to our caller\n"
+"            stack.pop_all()\n"
+"\n"
+"    def __enter__(self):\n"
+"        resource = self.acquire_resource()\n"
+"        with self._cleanup_on_error():\n"
+"            if not self.check_resource_ok(resource):\n"
+"                msg = \"Failed validation for {!r}\"\n"
+"                raise RuntimeError(msg.format(resource))\n"
+"        return resource\n"
+"\n"
+"    def __exit__(self, *exc_details):\n"
+"        # We don't need to duplicate any of our resource release logic\n"
+"        self.release_resource()"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:769
 msgid "Replacing any use of ``try-finally`` and flag variables"
 msgstr "Reemplazar cualquier uso de ``try-finally`` y marcar variables"
 
-#: ../Doc/library/contextlib.rst:761
+#: ../Doc/library/contextlib.rst:771
 msgid ""
 "A pattern you will sometimes see is a ``try-finally`` statement with a flag "
 "variable to indicate whether or not the body of the ``finally`` clause "
@@ -918,7 +1328,19 @@ msgstr ""
 "debe ejecutarse o no. En su forma más simple (que ya no puede manejarse "
 "simplemente usando una cláusula ``except`` en su lugar), se parece a esto::"
 
-#: ../Doc/library/contextlib.rst:775
+#: ../Doc/library/contextlib.rst:776
+msgid ""
+"cleanup_needed = True\n"
+"try:\n"
+"    result = perform_operation()\n"
+"    if result:\n"
+"        cleanup_needed = False\n"
+"finally:\n"
+"    if cleanup_needed:\n"
+"        cleanup_resources()"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:785
 msgid ""
 "As with any ``try`` statement based code, this can cause problems for "
 "development and review, because the setup code and the cleanup code can end "
@@ -929,7 +1351,7 @@ msgstr ""
 "configuración y el código de limpieza pueden terminar separados por "
 "secciones de código arbitrariamente largas."
 
-#: ../Doc/library/contextlib.rst:779
+#: ../Doc/library/contextlib.rst:789
 msgid ""
 ":class:`ExitStack` makes it possible to instead register a callback for "
 "execution at the end of a ``with`` statement, and then later decide to skip "
@@ -939,15 +1361,27 @@ msgstr ""
 "al final de una instrucción ``with``, y luego decide omitir la ejecución de "
 "esa retrollamada::"
 
-#: ../Doc/library/contextlib.rst:791
+#: ../Doc/library/contextlib.rst:793
 msgid ""
-"This allows the intended cleanup up behaviour to be made explicit up front, "
+"from contextlib import ExitStack\n"
+"\n"
+"with ExitStack() as stack:\n"
+"    stack.callback(cleanup_resources)\n"
+"    result = perform_operation()\n"
+"    if result:\n"
+"        stack.pop_all()"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:801
+#, fuzzy
+msgid ""
+"This allows the intended cleanup behaviour to be made explicit up front, "
 "rather than requiring a separate flag variable."
 msgstr ""
 "Esto permite que el comportamiento de limpieza previsto se haga explícito "
 "por adelantado, en lugar de requerir una variable de indicador separada."
 
-#: ../Doc/library/contextlib.rst:794
+#: ../Doc/library/contextlib.rst:804
 msgid ""
 "If a particular application uses this pattern a lot, it can be simplified "
 "even further by means of a small helper class::"
@@ -955,17 +1389,49 @@ msgstr ""
 "Si una aplicación particular usa mucho este patrón, puede simplificarse aún "
 "más por medio de una pequeña clase auxiliar::"
 
-#: ../Doc/library/contextlib.rst:812
+#: ../Doc/library/contextlib.rst:807
+msgid ""
+"from contextlib import ExitStack\n"
+"\n"
+"class Callback(ExitStack):\n"
+"    def __init__(self, callback, /, *args, **kwds):\n"
+"        super().__init__()\n"
+"        self.callback(callback, *args, **kwds)\n"
+"\n"
+"    def cancel(self):\n"
+"        self.pop_all()\n"
+"\n"
+"with Callback(cleanup_resources) as cb:\n"
+"    result = perform_operation()\n"
+"    if result:\n"
+"        cb.cancel()"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:822
 msgid ""
 "If the resource cleanup isn't already neatly bundled into a standalone "
-"function, then it is still possible to use the decorator form of :meth:"
-"`ExitStack.callback` to declare the resource cleanup in advance::"
+"function, then it is still possible to use the decorator form "
+"of :meth:`ExitStack.callback` to declare the resource cleanup in advance::"
 msgstr ""
 "Si la limpieza del recurso no está bien agrupada en una función "
-"independiente, entonces todavía es posible usar la forma decoradora de :meth:"
-"`ExitStack.callback` para declarar la limpieza del recurso por adelantado::"
+"independiente, entonces todavía es posible usar la forma decoradora "
+"de :meth:`ExitStack.callback` para declarar la limpieza del recurso por "
+"adelantado::"
 
 #: ../Doc/library/contextlib.rst:827
+msgid ""
+"from contextlib import ExitStack\n"
+"\n"
+"with ExitStack() as stack:\n"
+"    @stack.callback\n"
+"    def cleanup_resources():\n"
+"        ...\n"
+"    result = perform_operation()\n"
+"    if result:\n"
+"        stack.pop_all()"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:837
 msgid ""
 "Due to the way the decorator protocol works, a callback function declared "
 "this way cannot take any parameters. Instead, any resources to be released "
@@ -976,11 +1442,11 @@ msgstr ""
 "cambio, se debe acceder a los recursos que se liberarán como variables de "
 "cierre."
 
-#: ../Doc/library/contextlib.rst:833
+#: ../Doc/library/contextlib.rst:843
 msgid "Using a context manager as a function decorator"
 msgstr "Usar un gestor de contexto como decorador de funciones"
 
-#: ../Doc/library/contextlib.rst:835
+#: ../Doc/library/contextlib.rst:845
 msgid ""
 ":class:`ContextDecorator` makes it possible to use a context manager in both "
 "an ordinary ``with`` statement and also as a function decorator."
@@ -988,7 +1454,7 @@ msgstr ""
 ":class:`ContextDecorator` hace posible usar un gestor de contexto tanto en "
 "una instrucción ordinaria ``with`` como también como decorador de funciones."
 
-#: ../Doc/library/contextlib.rst:838
+#: ../Doc/library/contextlib.rst:848
 msgid ""
 "For example, it is sometimes useful to wrap functions or groups of "
 "statements with a logger that can track the time of entry and time of exit.  "
@@ -999,47 +1465,83 @@ msgstr ""
 "Por ejemplo, a veces es útil envolver funciones o grupos de declaraciones "
 "con un registrador que puede rastrear la hora de entrada y la hora de "
 "salida. En lugar de escribir tanto un decorador de funciones como un "
-"administrador de contexto para la tarea, heredar de :class:"
-"`ContextDecorator` proporciona ambas capacidades en una sola definición::"
+"administrador de contexto para la tarea, heredar "
+"de :class:`ContextDecorator` proporciona ambas capacidades en una sola "
+"definición::"
 
-#: ../Doc/library/contextlib.rst:859
+#: ../Doc/library/contextlib.rst:854
+#, python-format
+msgid ""
+"from contextlib import ContextDecorator\n"
+"import logging\n"
+"\n"
+"logging.basicConfig(level=logging.INFO)\n"
+"\n"
+"class track_entry_and_exit(ContextDecorator):\n"
+"    def __init__(self, name):\n"
+"        self.name = name\n"
+"\n"
+"    def __enter__(self):\n"
+"        logging.info('Entering: %s', self.name)\n"
+"\n"
+"    def __exit__(self, exc_type, exc, exc_tb):\n"
+"        logging.info('Exiting: %s', self.name)"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:869
 msgid "Instances of this class can be used as both a context manager::"
 msgstr ""
 "Las instancias de esta clase se pueden usar como un gestor de contexto::"
 
-#: ../Doc/library/contextlib.rst:865
+#: ../Doc/library/contextlib.rst:871
+msgid ""
+"with track_entry_and_exit('widget loader'):\n"
+"    print('Some time consuming activity goes here')\n"
+"    load_widget()"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:875
 msgid "And also as a function decorator::"
 msgstr "Y también como decorador de funciones::"
 
-#: ../Doc/library/contextlib.rst:872
+#: ../Doc/library/contextlib.rst:877
+msgid ""
+"@track_entry_and_exit('widget loader')\n"
+"def activity():\n"
+"    print('Some time consuming activity goes here')\n"
+"    load_widget()"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:882
+#, fuzzy
 msgid ""
 "Note that there is one additional limitation when using context managers as "
-"function decorators: there's no way to access the return value of :meth:"
-"`__enter__`. If that value is needed, then it is still necessary to use an "
-"explicit ``with`` statement."
+"function decorators: there's no way to access the return value "
+"of :meth:`~object.__enter__`. If that value is needed, then it is still "
+"necessary to use an explicit ``with`` statement."
 msgstr ""
 "Tenga en cuenta que hay una limitación adicional cuando se usan "
 "administradores de contexto como decoradores de funciones: no hay forma de "
 "acceder al valor de retorno de :meth:`__enter__`. Si se necesita ese valor, "
 "aún es necesario usar una declaración explícita ``with``."
 
-#: ../Doc/library/contextlib.rst:880
+#: ../Doc/library/contextlib.rst:890
 msgid ":pep:`343` - The \"with\" statement"
 msgstr ":pep:`343` - La declaración \"with\""
 
-#: ../Doc/library/contextlib.rst:880
+#: ../Doc/library/contextlib.rst:890
 msgid ""
 "The specification, background, and examples for the Python :keyword:`with` "
 "statement."
 msgstr ""
-"La especificación, antecedentes y ejemplos de la declaración de Python :"
-"keyword:`with`."
+"La especificación, antecedentes y ejemplos de la declaración de "
+"Python :keyword:`with`."
 
-#: ../Doc/library/contextlib.rst:886
+#: ../Doc/library/contextlib.rst:896
 msgid "Single use, reusable and reentrant context managers"
 msgstr "Gestores de contexto de uso único, reutilizables y reentrantes"
 
-#: ../Doc/library/contextlib.rst:888
+#: ../Doc/library/contextlib.rst:898
 msgid ""
 "Most context managers are written in a way that means they can only be used "
 "effectively in a :keyword:`with` statement once. These single use context "
@@ -1047,24 +1549,24 @@ msgid ""
 "them a second time will trigger an exception or otherwise not work correctly."
 msgstr ""
 "La mayoría de los gestores de contexto están escritos de una manera que "
-"significa que solo se pueden usar de manera efectiva en una declaración :"
-"keyword:`with` una vez. Estos administradores de contexto de un solo uso "
-"deben crearse de nuevo cada vez que se usan; si intenta usarlos por segunda "
-"vez, se activará una excepción o, de lo contrario, no funcionará "
+"significa que solo se pueden usar de manera efectiva en una "
+"declaración :keyword:`with` una vez. Estos administradores de contexto de un "
+"solo uso deben crearse de nuevo cada vez que se usan; si intenta usarlos por "
+"segunda vez, se activará una excepción o, de lo contrario, no funcionará "
 "correctamente."
 
-#: ../Doc/library/contextlib.rst:894
+#: ../Doc/library/contextlib.rst:904
 msgid ""
 "This common limitation means that it is generally advisable to create "
 "context managers directly in the header of the :keyword:`with` statement "
 "where they are used (as shown in all of the usage examples above)."
 msgstr ""
 "Esta limitación común significa que generalmente es aconsejable crear "
-"gestores de contexto directamente en el encabezado de la palabra clave :"
-"keyword:`with` donde se usan (como se muestra en todos los ejemplos de uso "
-"anteriores)."
+"gestores de contexto directamente en el encabezado de la palabra "
+"clave :keyword:`with` donde se usan (como se muestra en todos los ejemplos "
+"de uso anteriores)."
 
-#: ../Doc/library/contextlib.rst:898
+#: ../Doc/library/contextlib.rst:908
 msgid ""
 "Files are an example of effectively single use context managers, since the "
 "first :keyword:`with` statement will close the file, preventing any further "
@@ -1074,7 +1576,7 @@ msgstr ""
 "la primera :keyword:`with` cerrará el archivo, evitando cualquier otra "
 "operación de E/S que use ese objeto de archivo."
 
-#: ../Doc/library/contextlib.rst:902
+#: ../Doc/library/contextlib.rst:912
 msgid ""
 "Context managers created using :func:`contextmanager` are also single use "
 "context managers, and will complain about the underlying generator failing "
@@ -1084,11 +1586,34 @@ msgstr ""
 "gestores de contexto de un solo uso, y se quejarán de la falla del generador "
 "subyacente si se intenta usarlos por segunda vez::"
 
-#: ../Doc/library/contextlib.rst:930
+#: ../Doc/library/contextlib.rst:916
+msgid ""
+">>> from contextlib import contextmanager\n"
+">>> @contextmanager\n"
+"... def singleuse():\n"
+"...     print(\"Before\")\n"
+"...     yield\n"
+"...     print(\"After\")\n"
+"...\n"
+">>> cm = singleuse()\n"
+">>> with cm:\n"
+"...     pass\n"
+"...\n"
+"Before\n"
+"After\n"
+">>> with cm:\n"
+"...     pass\n"
+"...\n"
+"Traceback (most recent call last):\n"
+"    ...\n"
+"RuntimeError: generator didn't yield"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:940
 msgid "Reentrant context managers"
 msgstr "Gestores contextuales reentrantes"
 
-#: ../Doc/library/contextlib.rst:932
+#: ../Doc/library/contextlib.rst:942
 msgid ""
 "More sophisticated context managers may be \"reentrant\". These context "
 "managers can not only be used in multiple :keyword:`with` statements, but "
@@ -1097,20 +1622,38 @@ msgid ""
 msgstr ""
 "Los gestores de contexto más sofisticados pueden ser \"reentrantes\". Estos "
 "administradores de contexto no solo se pueden usar en múltiples "
-"declaraciones :keyword:`with`, sino que también se pueden usar *inside* a :"
-"keyword:`!with` que ya está usando el mismo gestor de contexto."
+"declaraciones :keyword:`with`, sino que también se pueden usar *inside* "
+"a :keyword:`!with` que ya está usando el mismo gestor de contexto."
 
-#: ../Doc/library/contextlib.rst:937
+#: ../Doc/library/contextlib.rst:947
 msgid ""
 ":class:`threading.RLock` is an example of a reentrant context manager, as "
 "are :func:`suppress`, :func:`redirect_stdout`, and :func:`chdir`. Here's a "
 "very simple example of reentrant use::"
 msgstr ""
 ":class:`threading.RLock` es un ejemplo de administrador de contexto "
-"reentrante, al igual que :func:`suppress`, :func:`redirect_stdout` y :func:"
-"`chdir`. Aquí hay un ejemplo muy simple de uso de reentrada:"
+"reentrante, al igual que :func:`suppress`, :func:`redirect_stdout` "
+"y :func:`chdir`. Aquí hay un ejemplo muy simple de uso de reentrada:"
 
-#: ../Doc/library/contextlib.rst:956
+#: ../Doc/library/contextlib.rst:951
+msgid ""
+">>> from contextlib import redirect_stdout\n"
+">>> from io import StringIO\n"
+">>> stream = StringIO()\n"
+">>> write_to_stream = redirect_stdout(stream)\n"
+">>> with write_to_stream:\n"
+"...     print(\"This is written to the stream rather than stdout\")\n"
+"...     with write_to_stream:\n"
+"...         print(\"This is also written to the stream\")\n"
+"...\n"
+">>> print(\"This is written directly to stdout\")\n"
+"This is written directly to stdout\n"
+">>> print(stream.getvalue())\n"
+"This is written to the stream rather than stdout\n"
+"This is also written to the stream"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:966
 msgid ""
 "Real world examples of reentrancy are more likely to involve multiple "
 "functions calling each other and hence be far more complicated than this "
@@ -1120,23 +1663,23 @@ msgstr ""
 "múltiples funciones que se llaman entre sí y, por lo tanto, sean mucho más "
 "complicadas que este ejemplo."
 
-#: ../Doc/library/contextlib.rst:960
+#: ../Doc/library/contextlib.rst:970
 msgid ""
 "Note also that being reentrant is *not* the same thing as being thread "
 "safe. :func:`redirect_stdout`, for example, is definitely not thread safe, "
-"as it makes a global modification to the system state by binding :data:`sys."
-"stdout` to a different stream."
+"as it makes a global modification to the system state by "
+"binding :data:`sys.stdout` to a different stream."
 msgstr ""
 "Tenga en cuenta también que ser reentrante *no* es lo mismo que ser seguro "
 "para subprocesos. :func:`redirect_stdout`, por ejemplo, definitivamente no "
 "es seguro para subprocesos, ya que realiza una modificación global al estado "
 "del sistema al vincular :data:`sys.stdout` a una secuencia diferente."
 
-#: ../Doc/library/contextlib.rst:969
+#: ../Doc/library/contextlib.rst:979
 msgid "Reusable context managers"
 msgstr "Gestores contextuales reutilizables"
 
-#: ../Doc/library/contextlib.rst:971
+#: ../Doc/library/contextlib.rst:981
 msgid ""
 "Distinct from both single use and reentrant context managers are "
 "\"reusable\" context managers (or, to be completely explicit, \"reusable, "
@@ -1154,28 +1697,58 @@ msgstr ""
 "si la instancia específica del administrador de contexto ya se ha utilizado "
 "en una declaración que contiene."
 
-#: ../Doc/library/contextlib.rst:978
+#: ../Doc/library/contextlib.rst:988
 msgid ""
 ":class:`threading.Lock` is an example of a reusable, but not reentrant, "
-"context manager (for a reentrant lock, it is necessary to use :class:"
-"`threading.RLock` instead)."
+"context manager (for a reentrant lock, it is necessary to "
+"use :class:`threading.RLock` instead)."
 msgstr ""
 ":class:`threading.Lock` es un ejemplo de un gestor de contexto reutilizable, "
-"pero no reentrante (para un bloqueo reentrante, es necesario usar :class:"
-"`threading.RLock` en su lugar)."
+"pero no reentrante (para un bloqueo reentrante, es necesario "
+"usar :class:`threading.RLock` en su lugar)."
 
-#: ../Doc/library/contextlib.rst:982
+#: ../Doc/library/contextlib.rst:992
 msgid ""
-"Another example of a reusable, but not reentrant, context manager is :class:"
-"`ExitStack`, as it invokes *all* currently registered callbacks when leaving "
-"any with statement, regardless of where those callbacks were added::"
+"Another example of a reusable, but not reentrant, context manager "
+"is :class:`ExitStack`, as it invokes *all* currently registered callbacks "
+"when leaving any with statement, regardless of where those callbacks were "
+"added::"
 msgstr ""
 "Otro ejemplo de un administrador de contexto reutilizable, pero no "
 "reentrante es :class:`ExitStack`, ya que invoca *all* las retrollamadas "
 "registradas actualmente al dejar cualquier con declaración, "
 "independientemente de dónde se agregaron esas retrollamadas::"
 
-#: ../Doc/library/contextlib.rst:1013
+#: ../Doc/library/contextlib.rst:997
+msgid ""
+">>> from contextlib import ExitStack\n"
+">>> stack = ExitStack()\n"
+">>> with stack:\n"
+"...     stack.callback(print, \"Callback: from first context\")\n"
+"...     print(\"Leaving first context\")\n"
+"...\n"
+"Leaving first context\n"
+"Callback: from first context\n"
+">>> with stack:\n"
+"...     stack.callback(print, \"Callback: from second context\")\n"
+"...     print(\"Leaving second context\")\n"
+"...\n"
+"Leaving second context\n"
+"Callback: from second context\n"
+">>> with stack:\n"
+"...     stack.callback(print, \"Callback: from outer context\")\n"
+"...     with stack:\n"
+"...         stack.callback(print, \"Callback: from inner context\")\n"
+"...         print(\"Leaving inner context\")\n"
+"...     print(\"Leaving outer context\")\n"
+"...\n"
+"Leaving inner context\n"
+"Callback: from inner context\n"
+"Callback: from outer context\n"
+"Leaving outer context"
+msgstr ""
+
+#: ../Doc/library/contextlib.rst:1023
 msgid ""
 "As the output from the example shows, reusing a single stack object across "
 "multiple with statements works correctly, but attempting to nest them will "
@@ -1187,10 +1760,26 @@ msgstr ""
 "anidarlos hará que la pila se borre al final de la declaración más interna, "
 "lo que es poco probable que sea un comportamiento deseable."
 
-#: ../Doc/library/contextlib.rst:1018
+#: ../Doc/library/contextlib.rst:1028
 msgid ""
 "Using separate :class:`ExitStack` instances instead of reusing a single "
 "instance avoids that problem::"
 msgstr ""
 "El uso de instancias separadas :class:`ExitStack` en lugar de reutilizar una "
 "sola instancia evita ese problema::"
+
+#: ../Doc/library/contextlib.rst:1031
+msgid ""
+">>> from contextlib import ExitStack\n"
+">>> with ExitStack() as outer_stack:\n"
+"...     outer_stack.callback(print, \"Callback: from outer context\")\n"
+"...     with ExitStack() as inner_stack:\n"
+"...         inner_stack.callback(print, \"Callback: from inner context\")\n"
+"...         print(\"Leaving inner context\")\n"
+"...     print(\"Leaving outer context\")\n"
+"...\n"
+"Leaving inner context\n"
+"Callback: from inner context\n"
+"Leaving outer context\n"
+"Callback: from outer context"
+msgstr ""
