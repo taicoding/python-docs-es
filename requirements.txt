@@ -1,6 +1,6 @@
 docutils==0.20.1
 pip
-Pygments==2.16.1
+Pygments>=2.17.0
 PyICU
 polib
 pospell>=1.1
