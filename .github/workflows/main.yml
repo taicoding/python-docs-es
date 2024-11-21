@@ -75,9 +75,12 @@ jobs:
       - name: TRANSLATORS
         run: |
           diff -Naur TRANSLATORS <(LANG=es python scripts/sort.py < TRANSLATORS)
-      - name: Powrap
-        if: steps.po-files-to-check.outputs.any_po_files_to_check == 'true'
-        run: powrap --diff --check --quiet ${{ steps.po-files-to-check.outputs.po_files_to_check }}
+      # FIXME
+      # Se deshabilita porque el CI usa gettext 0.21 que es muy antiguo
+      # y la mayoría de los sistemas usa 0.22.X
+      #- name: Powrap
+      #  if: steps.po-files-to-check.outputs.any_po_files_to_check == 'true'
+      #  run: powrap --diff --check --quiet ${{ steps.po-files-to-check.outputs.po_files_to_check }}
       - name: Sphinx lint
         if: steps.po-files-to-check.outputs.any_po_files_to_check == 'true'
         run: sphinx-lint ${{ steps.po-files-to-check.outputs.po_files_to_check }}
