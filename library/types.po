@@ -8,18 +8,19 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.8\n"
+"Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-12 19:43+0200\n"
-"PO-Revision-Date: 2021-12-14 07:45-0500\n"
-"Last-Translator: Adolfo Hristo David Roque Gámez <aroquega@gmail.com>\n"
-"Language: es\n"
+"PO-Revision-Date: 2024-11-18 16:17-0300\n"
+"Last-Translator: Carlos A. Crespo <lvccrespo@gmail.com>\n"
 "Language-Team: python-doc-es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.13.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../Doc/library/types.rst:2
 msgid ":mod:`types` --- Dynamic type creation and names for built-in types"
@@ -154,7 +155,6 @@ msgstr ""
 "Resuelve las entradas MRO dinámicamente según lo especificado por :pep:`560`."
 
 #: ../Doc/library/types.rst:76
-#, fuzzy
 msgid ""
 "This function looks for items in *bases* that are not instances of :class:"
 "`type`, and returns a tuple where each such object that has an :meth:"
@@ -163,12 +163,12 @@ msgid ""
 "it doesn't have an :meth:`!__mro_entries__` method, then it is included in "
 "the return tuple unchanged."
 msgstr ""
-"Esta función busca elementos en *bases* que no son instancias de :class:"
-"`type` y retorna una tupla donde cada uno de estos objetos que tiene un "
-"método ``__mro_entries__`` se reemplaza con un resultado desempaquetado de "
-"llamar a este método.  Si un elemento *bases* es una instancia de :class:"
-"`type` o no tiene un método ``__mro_entries__``, se incluye en el retorno la "
-"tupla sin cambios."
+"Esta función busca elementos en *bases* que no sean instancias de :class:"
+"`type`, y retorna una tupla donde cada objeto que tenga un método :meth:"
+"`~object.__mro_entries__` es reemplazado por el resultado desempaquetado de "
+"llamar a dicho método. Si un elemento de *bases* es una instancia de :class:"
+"`type`, o no tiene un método :meth:`!__mro_entries__`, entonces es incluido "
+"sin cambios en la tupla de retorno."
 
 #: ../Doc/library/types.rst:87
 msgid ""
@@ -177,6 +177,10 @@ msgid ""
 "(following the mechanisms laid out in :pep:`560`). This is useful for "
 "introspecting :ref:`Generics <user-defined-generics>`."
 msgstr ""
+"Retorna la tupla de objetos originalmente dados como bases de *cls* antes de "
+"que el método :meth:`~object.__mro_entries__` sea llamado en cualquier base "
+"(siguiendo los mecanismos establecidos en :pep:`560`). Esto es útil para "
+"introspección :ref:`Genéricos <user-defined-generics>`."
 
 #: ../Doc/library/types.rst:92
 msgid ""
@@ -184,10 +188,13 @@ msgid ""
 "the value of ``cls.__orig_bases__``. For classes without the "
 "``__orig_bases__`` attribute, ``cls.__bases__`` is returned."
 msgstr ""
+"Para las clases que tienen un atributo ``__orig_bases__``, esta función "
+"retorna el valor de ``cls.__orig_bases__``. Para clases sin el atributo "
+"``__orig_bases__``, se retorna ``cls.__bases__``."
 
 #: ../Doc/library/types.rst:97
 msgid "Examples::"
-msgstr ""
+msgstr "Ejemplos::"
 
 #: ../Doc/library/types.rst:127
 msgid ":pep:`560` - Core support for typing module and generic types"
@@ -397,13 +404,12 @@ msgstr ""
 "El :term:`loader` que cargó el módulo. El valor predeterminado es ``None``."
 
 #: ../Doc/library/types.rst:281
-#, fuzzy
 msgid ""
 "This attribute is to match :attr:`importlib.machinery.ModuleSpec.loader` as "
 "stored in the :attr:`__spec__` object."
 msgstr ""
-"Este atributo va a coincidir con :attr:`importlib.machinery.ModuleSpec."
-"loader` como se almacena en el objeto attr:`__spec__`."
+"Este atributo debe coincidir con :attr:`importlib.machinery.ModuleSpec."
+"loader` como almacenado en el objeto :attr:`__spec__`."
 
 #: ../Doc/library/types.rst:285
 msgid ""
@@ -444,13 +450,12 @@ msgstr ""
 "El valor predeterminado es ``None``."
 
 #: ../Doc/library/types.rst:306
-#, fuzzy
 msgid ""
 "This attribute is to match :attr:`importlib.machinery.ModuleSpec.parent` as "
 "stored in the :attr:`__spec__` object."
 msgstr ""
-"Este atributo va a coincidir con :attr:`importlib.machinery.ModuleSpec."
-"parent` como se guarda en el objeto attr:`__spec__`."
+"Este atributo debe coincidir con :attr:`importlib.machinery.ModuleSpec."
+"parent` como almacenado en el objeto :attr:`__spec__`."
 
 #: ../Doc/library/types.rst:310
 msgid ""
@@ -500,32 +505,32 @@ msgstr "Este tipo ahora puede heredarse."
 
 #: ../Doc/library/types.rst:357
 msgid ":ref:`Generic Alias Types<types-genericalias>`"
-msgstr ""
+msgstr ":ref:`Tipos de alias genéricos<types-genericalias>`"
 
 #: ../Doc/library/types.rst:357
 msgid "In-depth documentation on instances of :class:`!types.GenericAlias`"
 msgstr ""
+"Documentación detallada sobre instancias de :class:`!types.GenericAlias`"
 
 #: ../Doc/library/types.rst:359
 msgid ":pep:`585` - Type Hinting Generics In Standard Collections"
-msgstr ""
+msgstr ":pep:`585` - Sugerencias de tipo genéricas en colecciones estándar"
 
 #: ../Doc/library/types.rst:360
 msgid "Introducing the :class:`!types.GenericAlias` class"
-msgstr ""
+msgstr "Presentando la clase :class:`!types.GenericAlias`"
 
 #: ../Doc/library/types.rst:364
 msgid "The type of :ref:`union type expressions<types-union>`."
 msgstr "El tipo de :ref:`union type expressions<types-union>`."
 
 #: ../Doc/library/types.rst:370
-#, fuzzy
 msgid ""
 "The type of traceback objects such as found in ``sys.exception()."
 "__traceback__``."
 msgstr ""
-"El tipo de objetos *traceback* tal como los encontrados en ``sys.exc_info()"
-"[2]``."
+"El tipo de objetos de rastreo como los que se encuentran en ``sys."
+"exception().__traceback__``."
 
 #: ../Doc/library/types.rst:372
 msgid ""
@@ -669,9 +674,8 @@ msgstr ""
 "Retorna un iterador inverso sobre las claves de la asignación subyacente."
 
 #: ../Doc/library/types.rst:469
-#, fuzzy
 msgid "Return a hash of the underlying mapping."
-msgstr "Retorna una copia superficial de la asignación subyacente."
+msgstr "Retorna un hash del mapeo subyacente."
 
 #: ../Doc/library/types.rst:475
 msgid "Additional Utility Classes and Functions"
@@ -750,7 +754,6 @@ msgid "Coroutine Utility Functions"
 msgstr "Funciones de utilidad de corutina"
 
 #: ../Doc/library/types.rst:531
-#, fuzzy
 msgid ""
 "This function transforms a :term:`generator` function into a :term:"
 "`coroutine function` which returns a generator-based coroutine. The "
@@ -759,11 +762,12 @@ msgid ""
 "However, it may not necessarily implement the :meth:`~object.__await__` "
 "method."
 msgstr ""
-"Esta función transforma una función :term:`generador` en una función :term:"
-"`coroutine` que retorna una corrutina basada en un generador. La corrutina "
-"basada en un generador sigue siendo un :term:`generator iterator`, pero "
-"también se considera un objeto :term:`coroutine` y es :term:`awaitable`.  "
-"Sin embargo, no puede necesariamente implementar el método :meth:`__await__`."
+"Esta función transforma una función :term:`generator` en una :term:"
+"`coroutine function` que retorna una corrutina basada en generador. La "
+"corrutina basada en generador sigue siendo un :term:`generator iterator`, "
+"pero también se considera un objeto :term:`coroutine` y es :term:`awaitable`."
+"Sin embargo, es posible que no implemente necesariamente el método :meth:"
+"`~object.__await__`."
 
 #: ../Doc/library/types.rst:538
 msgid "If *gen_func* is a generator function, it will be modified in-place."
@@ -783,8 +787,8 @@ msgstr ""
 
 #: ../Doc/library/types.rst:189
 msgid "built-in function"
-msgstr ""
+msgstr "built-in function"
 
 #: ../Doc/library/types.rst:189
 msgid "compile"
-msgstr ""
+msgstr "compile"
