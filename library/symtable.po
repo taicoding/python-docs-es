@@ -39,8 +39,8 @@ msgid ""
 msgstr ""
 "Las tablas de símbolos son generadas por el compilador a partir del AST "
 "justo antes de que el bytecode sea generado. La tabla de símbolos es "
-"responsable de calcular el ámbito de cada identificador en el "
-"código.  :mod:`symtable` provee una interfaz para examinar esas tablas."
+"responsable de calcular el ámbito de cada identificador en el código.  :mod:"
+"`symtable` provee una interfaz para examinar esas tablas."
 
 #: ../Doc/library/symtable.rst:22
 msgid "Generating Symbol Tables"
@@ -111,8 +111,8 @@ msgstr "Un espacio de nombres para el bloque. El constructor no es público."
 
 #: ../Doc/library/symtable.rst:88
 msgid ""
-"Return the type of the symbol table.  Possible values are members of "
-"the :class:`SymbolTableType` enumeration."
+"Return the type of the symbol table.  Possible values are members of the :"
+"class:`SymbolTableType` enumeration."
 msgstr ""
 
 #: ../Doc/library/symtable.rst:91
@@ -145,8 +145,8 @@ msgid ""
 "``'top'`` if the table is global (:meth:`get_type` returns ``'module'``). "
 "For type parameter scopes (which are used for generic classes, functions, "
 "and type aliases), it is the name of the underlying class, function, or type "
-"alias. For type alias scopes, it is the name of the type alias. "
-"For :class:`~typing.TypeVar` bound scopes, it is the name of the ``TypeVar``."
+"alias. For type alias scopes, it is the name of the type alias. For :class:"
+"`~typing.TypeVar` bound scopes, it is the name of the ``TypeVar``."
 msgstr ""
 "Retorna el nombre de la tabla. Es el nombre de la clase si la tabla es para "
 "una clase, el nombre de la función si la tabla es para una función o "
@@ -180,8 +180,8 @@ msgstr ""
 
 #: ../Doc/library/symtable.rst:135
 msgid ""
-"Return a view object containing the names of symbols in the table. See "
-"the :ref:`documentation of view objects <dict-views>`."
+"Return a view object containing the names of symbols in the table. See the :"
+"ref:`documentation of view objects <dict-views>`."
 msgstr ""
 "Retorna una vista de objeto que contiene los nombres de los símbolos en la "
 "tabla. Lee la :ref:`documentación de vistas de objetos <dict-views>`."
@@ -203,11 +203,11 @@ msgstr "Retorna una lista de las tablas de símbolos anidadas."
 #: ../Doc/library/symtable.rst:153
 #, fuzzy
 msgid ""
-"A namespace for a function or method.  This class inherits "
-"from :class:`SymbolTable`."
+"A namespace for a function or method.  This class inherits from :class:"
+"`SymbolTable`."
 msgstr ""
-"Un espacio de nombres para una función o método. Esta clase hereda "
-"de :class:`SymbolTable`."
+"Un espacio de nombres para una función o método. Esta clase hereda de :class:"
+"`SymbolTable`."
 
 #: ../Doc/library/symtable.rst:158
 msgid "Return a tuple containing names of parameters to this function."
@@ -239,8 +239,8 @@ msgstr ""
 #, fuzzy
 msgid "A namespace of a class.  This class inherits from :class:`SymbolTable`."
 msgstr ""
-"Un espacio de nombres de una clase. Esta clase hereda "
-"de :class:`SymbolTable`."
+"Un espacio de nombres de una clase. Esta clase hereda de :class:"
+"`SymbolTable`."
 
 #: ../Doc/library/symtable.rst:183
 #, fuzzy
@@ -380,8 +380,8 @@ msgid ""
 "bound to this name, a :exc:`ValueError` is raised."
 msgstr ""
 "Retorna el espacio de nombre vinculado a este nombre. Si hay más de un "
-"espacio de nombre vinculado o ninguno a ese nombre se levanta "
-"un :exc:`ValueError`."
+"espacio de nombre vinculado o ninguno a ese nombre se levanta un :exc:"
+"`ValueError`."
 
 #: ../Doc/library/symtable.rst:299
 msgid "Command-Line Usage"

@@ -26,18 +26,19 @@ msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:4
 msgid ""
-"The ``ma_version_tag`` field in :c:type:`PyDictObject` for extension "
-"modules (:pep:`699`; :gh:`101193`)."
+"The ``ma_version_tag`` field in :c:type:`PyDictObject` for extension modules "
+"(:pep:`699`; :gh:`101193`)."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:7
 msgid ""
-"Creating :c:data:`immutable types <Py_TPFLAGS_IMMUTABLETYPE>` with "
-"mutable bases (:gh:`95388`)."
+"Creating :c:data:`immutable types <Py_TPFLAGS_IMMUTABLETYPE>` with mutable "
+"bases (:gh:`95388`)."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:10
-msgid "Functions to configure Python's initialization, deprecated in Python 3.11:"
+msgid ""
+"Functions to configure Python's initialization, deprecated in Python 3.11:"
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:12
@@ -61,8 +62,8 @@ msgstr ""
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:21
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:71
 msgid ""
-"The :c:func:`Py_InitializeFromConfig` API should be used with "
-":c:type:`PyConfig` instead."
+"The :c:func:`Py_InitializeFromConfig` API should be used with :c:type:"
+"`PyConfig` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:24
@@ -82,7 +83,8 @@ msgid ":c:var:`Py_QuietFlag`: Use :c:member:`PyConfig.quiet` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:32
-msgid ":c:var:`Py_InteractiveFlag`: Use :c:member:`PyConfig.interactive` instead."
+msgid ""
+":c:var:`Py_InteractiveFlag`: Use :c:member:`PyConfig.interactive` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:34
@@ -101,32 +103,30 @@ msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:40
 msgid ""
-":c:var:`Py_BytesWarningFlag`: Use :c:member:`PyConfig.bytes_warning` "
-"instead."
+":c:var:`Py_BytesWarningFlag`: Use :c:member:`PyConfig.bytes_warning` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:42
 msgid ""
-":c:var:`Py_FrozenFlag`: Use :c:member:`PyConfig.pathconfig_warnings` "
-"instead."
+":c:var:`Py_FrozenFlag`: Use :c:member:`PyConfig.pathconfig_warnings` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:44
 msgid ""
-":c:var:`Py_IgnoreEnvironmentFlag`: Use "
-":c:member:`PyConfig.use_environment` instead."
+":c:var:`Py_IgnoreEnvironmentFlag`: Use :c:member:`PyConfig.use_environment` "
+"instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:46
 msgid ""
-":c:var:`Py_DontWriteBytecodeFlag`: Use "
-":c:member:`PyConfig.write_bytecode` instead."
+":c:var:`Py_DontWriteBytecodeFlag`: Use :c:member:`PyConfig.write_bytecode` "
+"instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:48
 msgid ""
-":c:var:`Py_NoUserSiteDirectory`: Use "
-":c:member:`PyConfig.user_site_directory` instead."
+":c:var:`Py_NoUserSiteDirectory`: Use :c:member:`PyConfig."
+"user_site_directory` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:50
@@ -137,8 +137,8 @@ msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:52
 msgid ""
-":c:var:`Py_HashRandomizationFlag`: Use :c:member:`PyConfig.use_hash_seed`"
-" and :c:member:`PyConfig.hash_seed` instead."
+":c:var:`Py_HashRandomizationFlag`: Use :c:member:`PyConfig.use_hash_seed` "
+"and :c:member:`PyConfig.hash_seed` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:55
@@ -147,37 +147,36 @@ msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:57
 msgid ""
-":c:var:`Py_LegacyWindowsFSEncodingFlag`: Use "
-":c:member:`PyPreConfig.legacy_windows_fs_encoding` instead."
+":c:var:`Py_LegacyWindowsFSEncodingFlag`: Use :c:member:`PyPreConfig."
+"legacy_windows_fs_encoding` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:59
 msgid ""
-":c:var:`Py_LegacyWindowsStdioFlag`: Use "
-":c:member:`PyConfig.legacy_windows_stdio` instead."
+":c:var:`Py_LegacyWindowsStdioFlag`: Use :c:member:`PyConfig."
+"legacy_windows_stdio` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:61
 msgid ""
-":c:var:`!Py_FileSystemDefaultEncoding`: Use "
-":c:member:`PyConfig.filesystem_encoding` instead."
+":c:var:`!Py_FileSystemDefaultEncoding`: Use :c:member:`PyConfig."
+"filesystem_encoding` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:63
 msgid ""
-":c:var:`!Py_HasFileSystemDefaultEncoding`: Use "
-":c:member:`PyConfig.filesystem_encoding` instead."
+":c:var:`!Py_HasFileSystemDefaultEncoding`: Use :c:member:`PyConfig."
+"filesystem_encoding` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:65
 msgid ""
-":c:var:`!Py_FileSystemDefaultEncodeErrors`: Use "
-":c:member:`PyConfig.filesystem_errors` instead."
+":c:var:`!Py_FileSystemDefaultEncodeErrors`: Use :c:member:`PyConfig."
+"filesystem_errors` instead."
 msgstr ""
 
 #: ../Doc/deprecations/c-api-pending-removal-in-3.14.rst:67
 msgid ""
-":c:var:`!Py_UTF8Mode`: Use :c:member:`PyPreConfig.utf8_mode` instead. "
-"(see :c:func:`Py_PreInitialize`)"
+":c:var:`!Py_UTF8Mode`: Use :c:member:`PyPreConfig.utf8_mode` instead. (see :"
+"c:func:`Py_PreInitialize`)"
 msgstr ""
-

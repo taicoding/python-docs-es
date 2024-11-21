@@ -52,20 +52,20 @@ msgstr ""
 
 #: ../Doc/library/plistlib.rst:27
 msgid ""
-"To write out and to parse a plist file, use the :func:`dump` "
-"and :func:`load` functions."
+"To write out and to parse a plist file, use the :func:`dump` and :func:"
+"`load` functions."
 msgstr ""
-"Para escribir y analizar un archivo plist usa las funciones :func:`dump` "
-"y :func:`load`."
+"Para escribir y analizar un archivo plist usa las funciones :func:`dump` y :"
+"func:`load`."
 
 #: ../Doc/library/plistlib.rst:30
 #, fuzzy
 msgid ""
-"To work with plist data in bytes or string objects, use :func:`dumps` "
-"and :func:`loads`."
+"To work with plist data in bytes or string objects, use :func:`dumps` and :"
+"func:`loads`."
 msgstr ""
-"Para trabajar con datos plist en objetos de bytes usa :func:`dumps` "
-"y :func:`loads`."
+"Para trabajar con datos plist en objetos de bytes usa :func:`dumps` y :func:"
+"`loads`."
 
 #: ../Doc/library/plistlib.rst:33
 msgid ""
@@ -74,9 +74,8 @@ msgid ""
 "or :class:`datetime.datetime` objects."
 msgstr ""
 "Los valores pueden ser cadenas, enteros, flotantes, booleanos, tuplas, "
-"listas, diccionarios (pero solo con claves de "
-"cadena), :class:`bytes`, :class:`bytearray` u "
-"objetos :class:`datetime.datetime`."
+"listas, diccionarios (pero solo con claves de cadena), :class:`bytes`, :"
+"class:`bytearray` u objetos :class:`datetime.datetime`."
 
 #: ../Doc/library/plistlib.rst:37
 msgid "New API, old API deprecated.  Support for binary format plists added."
@@ -229,9 +228,9 @@ msgid ""
 "When *skipkeys* is false (the default) the function raises :exc:`TypeError` "
 "when a key of a dictionary is not a string, otherwise such keys are skipped."
 msgstr ""
-"Cuando *skipkeys* es falso (el valor por defecto) la función "
-"lanza :exc:`TypeError` cuando una clave del diccionario no es una cadena de "
-"caracteres, si no tales claves serán omitidas."
+"Cuando *skipkeys* es falso (el valor por defecto) la función lanza :exc:"
+"`TypeError` cuando una clave del diccionario no es una cadena de caracteres, "
+"si no tales claves serán omitidas."
 
 #: ../Doc/library/plistlib.rst:119
 msgid ""
@@ -258,9 +257,8 @@ msgstr ""
 
 #: ../Doc/library/plistlib.rst:137
 msgid ""
-"Return *value* as a plist-formatted bytes object. See the documentation "
-"for :func:`dump` for an explanation of the keyword arguments of this "
-"function."
+"Return *value* as a plist-formatted bytes object. See the documentation for :"
+"func:`dump` for an explanation of the keyword arguments of this function."
 msgstr ""
 "Retorna *value* como un objeto de bytes con formato plist. Consulte la "
 "documentación de :func:`dump` para una explicación de los argumentos de "

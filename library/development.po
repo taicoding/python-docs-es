@@ -38,9 +38,9 @@ msgstr ""
 "ejemplo, el módulo :mod:`pydoc` toma un módulo y genera documentación basada "
 "en el contenido del módulo.  Los módulos :mod:`doctest` y :mod:`unittest` "
 "contienen frameworks para escribir pruebas unitarias que ejecutan y validan "
-"automáticamente el código, verificando que se produce la salida "
-"esperada.  :program:`2to3` puede traducir el código fuente de Python 2.x en "
-"código válido de Python 3.x."
+"automáticamente el código, verificando que se produce la salida esperada.  :"
+"program:`2to3` puede traducir el código fuente de Python 2.x en código "
+"válido de Python 3.x."
 
 #: ../Doc/library/development.rst:13
 msgid "The list of modules described in this chapter is:"

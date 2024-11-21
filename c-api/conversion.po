@@ -34,8 +34,8 @@ msgstr ""
 #: ../Doc/c-api/conversion.rst:13
 msgid ""
 "Output not more than *size* bytes to *str* according to the format string "
-"*format* and the extra arguments. See the Unix man "
-"page :manpage:`snprintf(3)`."
+"*format* and the extra arguments. See the Unix man page :manpage:"
+"`snprintf(3)`."
 msgstr ""
 "Salida de no más de *size* bytes a *str* según la cadena de caracteres de "
 "formato *format* y los argumentos adicionales. Consulte la página de manual "
@@ -44,8 +44,8 @@ msgstr ""
 #: ../Doc/c-api/conversion.rst:19
 msgid ""
 "Output not more than *size* bytes to *str* according to the format string "
-"*format* and the variable argument list *va*. Unix man "
-"page :manpage:`vsnprintf(3)`."
+"*format* and the variable argument list *va*. Unix man page :manpage:"
+"`vsnprintf(3)`."
 msgstr ""
 "Salida de no más de *size* bytes a *str* según la cadena de caracteres de "
 "formato *format* y la lista de argumentos variables *va*. Página de manual "
@@ -142,9 +142,9 @@ msgstr ""
 #: ../Doc/c-api/conversion.rst:63
 msgid ""
 "If the converted value falls out of range of corresponding return type, "
-"range error occurs (:c:data:`errno` is set to :c:macro:`!ERANGE`) "
-"and :c:macro:`!ULONG_MAX` is returned.  If no conversion can be performed, "
-"``0`` is returned."
+"range error occurs (:c:data:`errno` is set to :c:macro:`!ERANGE`) and :c:"
+"macro:`!ULONG_MAX` is returned.  If no conversion can be performed, ``0`` is "
+"returned."
 msgstr ""
 
 #: ../Doc/c-api/conversion.rst:68
@@ -186,13 +186,13 @@ msgstr ""
 
 #: ../Doc/c-api/conversion.rst:95
 msgid ""
-"If ``endptr`` is ``NULL``, convert the whole string.  "
-"Raise :exc:`ValueError` and return ``-1.0`` if the string is not a valid "
-"representation of a floating-point number."
+"If ``endptr`` is ``NULL``, convert the whole string.  Raise :exc:"
+"`ValueError` and return ``-1.0`` if the string is not a valid representation "
+"of a floating-point number."
 msgstr ""
-"Si ``endptr`` es ``NULL``, convierte toda la cadena de caracteres. "
-"Lanza :exc:`ValueError` y retorna ``-1.0`` si la cadena de caracteres no es "
-"una representación válida de un número de punto flotante."
+"Si ``endptr`` es ``NULL``, convierte toda la cadena de caracteres. Lanza :"
+"exc:`ValueError` y retorna ``-1.0`` si la cadena de caracteres no es una "
+"representación válida de un número de punto flotante."
 
 # set -> configura. ¿"define" quizás?. Revisar en varios lugares del archivo
 #: ../Doc/c-api/conversion.rst:99
@@ -255,8 +255,8 @@ msgid ""
 msgstr ""
 "*format_code*  debe ser uno de ``'e'``, ``'E'``, ``'f'``, ``'F'``, ``'g'``, "
 "``'G'`` or ``'r'``.  Para ``'r'``, la *precision* suministrada debe ser 0 y "
-"se ignora.  El código de formato ``'r'`` especifica el formato "
-"estándar :func:`repr`."
+"se ignora.  El código de formato ``'r'`` especifica el formato estándar :"
+"func:`repr`."
 
 #: ../Doc/c-api/conversion.rst:131
 msgid ""
@@ -311,8 +311,8 @@ msgid ""
 msgstr ""
 "El valor de retorno es un puntero a *buffer* con la cadena de caracteres "
 "convertida o ``NULL`` si la conversión falla. La persona que llama es "
-"responsable de liberar la cadena de caracteres retornada llamando "
-"a :c:func:`PyMem_Free`."
+"responsable de liberar la cadena de caracteres retornada llamando a :c:func:"
+"`PyMem_Free`."
 
 #: ../Doc/c-api/conversion.rst:157
 #, fuzzy

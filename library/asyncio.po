@@ -122,15 +122,14 @@ msgstr ""
 #, fuzzy
 msgid ""
 "create and manage :ref:`event loops <asyncio-event-loop>`, which provide "
-"asynchronous APIs for :ref:`networking <loop_create_server>`, "
-"running :ref:`subprocesses <loop_subprocess_exec>`, handling :ref:`OS "
-"signals <loop_add_signal_handler>`, etc;"
+"asynchronous APIs for :ref:`networking <loop_create_server>`, running :ref:"
+"`subprocesses <loop_subprocess_exec>`, handling :ref:`OS signals "
+"<loop_add_signal_handler>`, etc;"
 msgstr ""
 "crear y administrar  :ref:`bucles de eventos <asyncio-event-loop>`, los "
 "cuales proveen *APIs* asíncronas para :meth:`redes <loop.create_server>`, "
-"ejecutando :meth:`subprocesos <loop.subprocess_exec>`, "
-"gestionando :meth:`señales del sistema operativo <loop.add_signal_handler>`, "
-"etc;"
+"ejecutando :meth:`subprocesos <loop.subprocess_exec>`, gestionando :meth:"
+"`señales del sistema operativo <loop.add_signal_handler>`, etc;"
 
 #: ../Doc/library/asyncio.rst:53
 msgid ""
@@ -170,8 +169,8 @@ msgstr ""
 #: ../Doc/library/asyncio.rst:65
 #, fuzzy
 msgid ""
-"You can experiment with an ``asyncio`` concurrent context in "
-"the :term:`REPL`:"
+"You can experiment with an ``asyncio`` concurrent context in the :term:"
+"`REPL`:"
 msgstr ""
 "Puedes experimentar con un contexto concurrente de ``asyncio`` en el REPL:"
 

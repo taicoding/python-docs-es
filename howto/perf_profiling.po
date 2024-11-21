@@ -273,14 +273,13 @@ msgstr "Cómo habilitar el soporte de creación de perfiles ``perf``"
 msgid ""
 "``perf`` profiling support can be enabled either from the start using the "
 "environment variable :envvar:`PYTHONPERFSUPPORT` or the :option:`-X perf <-"
-"X>` option, or dynamically using :func:`sys.activate_stack_trampoline` "
-"and :func:`sys.deactivate_stack_trampoline`."
+"X>` option, or dynamically using :func:`sys.activate_stack_trampoline` and :"
+"func:`sys.deactivate_stack_trampoline`."
 msgstr ""
 "El soporte de creación de perfiles ``perf`` se puede habilitar desde el "
 "principio usando la variable de entorno :envvar:`PYTHONPERFSUPPORT` o la "
-"opción :option:`-X perf <-X>`, o dinámicamente "
-"usando :func:`sys.activate_stack_trampoline` "
-"y :func:`sys.deactivate_stack_trampoline`."
+"opción :option:`-X perf <-X>`, o dinámicamente usando :func:`sys."
+"activate_stack_trampoline` y :func:`sys.deactivate_stack_trampoline`."
 
 #: ../Doc/howto/perf_profiling.rst:160
 msgid ""
@@ -392,9 +391,9 @@ msgstr ""
 
 #: ../Doc/howto/perf_profiling.rst:220
 msgid ""
-"To enable this mode, you can use the environment "
-"variable :envvar:`PYTHON_PERF_JIT_SUPPORT` or the :option:`-X perf_jit <-X>` "
-"option, which will enable the JIT mode for the ``perf`` profiler."
+"To enable this mode, you can use the environment variable :envvar:"
+"`PYTHON_PERF_JIT_SUPPORT` or the :option:`-X perf_jit <-X>` option, which "
+"will enable the JIT mode for the ``perf`` profiler."
 msgstr ""
 
 #: ../Doc/howto/perf_profiling.rst:226

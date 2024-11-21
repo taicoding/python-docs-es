@@ -215,8 +215,8 @@ msgstr ""
 "Una lista de objetos :class:`Class` que describen las clases base inmediatas "
 "de la clase que se está describiendo. Las clases que se denominan "
 "superclases pero que no son detectables por :func:`readmodule_ex` se "
-"enumeran como una cadena con el nombre de clase en lugar de "
-"objetos :class:`Class`."
+"enumeran como una cadena con el nombre de clase en lugar de objetos :class:"
+"`Class`."
 
 #: ../Doc/library/pyclbr.rst:169
 #, fuzzy

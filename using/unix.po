@@ -124,8 +124,8 @@ msgstr ""
 
 #: ../Doc/using/unix.rst:54
 msgid ""
-"pkg_add ftp://ftp.openbsd.org/pub/OpenBSD/4.2/packages/i386/"
-"python-2.5.1p2.tgz"
+"pkg_add ftp://ftp.openbsd.org/pub/OpenBSD/4.2/packages/i386/python-2.5.1p2."
+"tgz"
 msgstr ""
 
 #: ../Doc/using/unix.rst:60
@@ -164,8 +164,8 @@ msgid ""
 "in the root of the Python source tree."
 msgstr ""
 ":ref:`Opciones de configuración <configure-options>` y las advertencias para "
-"plataformas Unix específicas están ampliamente documentadas en el "
-"archivo :source:`README.rst` en la raíz del árbol de fuentes de Python."
+"plataformas Unix específicas están ampliamente documentadas en el archivo :"
+"source:`README.rst` en la raíz del árbol de fuentes de Python."
 
 #: ../Doc/using/unix.rst:80
 msgid ""
@@ -173,10 +173,10 @@ msgid ""
 "``make altinstall`` is therefore recommended instead of ``make install`` "
 "since it only installs :file:`{exec_prefix}/bin/python{version}`."
 msgstr ""
-"``make install`` puede sobreescribir o enmascarar el "
-"binario :file:`python3`. Por lo tanto se recomienda ``make altinstall`` en "
-"lugar de ``make install`` debido a que sólo instala :file:`{exec_prefix}/bin/"
-"python{version}`."
+"``make install`` puede sobreescribir o enmascarar el binario :file:"
+"`python3`. Por lo tanto se recomienda ``make altinstall`` en lugar de ``make "
+"install`` debido a que sólo instala :file:`{exec_prefix}/bin/python{version}"
+"`."
 
 #: ../Doc/using/unix.rst:86
 msgid "Python-related paths and files"
@@ -293,8 +293,8 @@ msgid ""
 "To use shell commands in your Python scripts, look at the :mod:`subprocess` "
 "module."
 msgstr ""
-"Para usar comandos de shell en sus scripts de Python, mire el "
-"módulo :mod:`subprocess`."
+"Para usar comandos de shell en sus scripts de Python, mire el módulo :mod:"
+"`subprocess`."
 
 #: ../Doc/using/unix.rst:134
 msgid "Custom OpenSSL"

@@ -266,8 +266,8 @@ msgstr ""
 msgid ""
 "Setting both *altinstall* and *default_pip* will trigger :exc:`ValueError`."
 msgstr ""
-"Establecer tanto *altinstall* como *default_pip* "
-"desencadenará :exc:`ValueError`."
+"Establecer tanto *altinstall* como *default_pip* desencadenará :exc:"
+"`ValueError`."
 
 #: ../Doc/library/ensurepip.rst:122
 msgid ""
@@ -287,8 +287,8 @@ msgstr ""
 
 #: ../Doc/library/ensurepip.rst:129
 msgid ""
-"The bootstrapping process has side effects on both ``sys.path`` and "
-"``os.environ``. Invoking the command line interface in a subprocess instead "
+"The bootstrapping process has side effects on both ``sys.path`` and ``os."
+"environ``. Invoking the command line interface in a subprocess instead "
 "allows these side effects to be avoided."
 msgstr ""
 "El proceso de ejecución tiene efectos secundarios tanto en ``sys.path`` como "

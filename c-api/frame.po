@@ -56,8 +56,8 @@ msgstr "Véase también :ref:`Reflexión <reflection>`."
 
 #: ../Doc/c-api/frame.rst:24
 msgid ""
-"The type of frame objects. It is the same object "
-"as :py:class:`types.FrameType` in the Python layer."
+"The type of frame objects. It is the same object as :py:class:`types."
+"FrameType` in the Python layer."
 msgstr ""
 
 #: ../Doc/c-api/frame.rst:29
@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../Doc/c-api/frame.rst:38
 msgid ""
-"Previously, this function was only available after including "
-"``<frameobject.h>``."
+"Previously, this function was only available after including ``<frameobject."
+"h>``."
 msgstr ""
 
 #: ../Doc/c-api/frame.rst:43
@@ -169,9 +169,9 @@ msgstr ""
 msgid ""
 "Get the *frame*'s :attr:`~frame.f_locals` attribute. If the frame refers to "
 "an :term:`optimized scope`, this returns a write-through proxy object that "
-"allows modifying the locals. In all other cases (classes, "
-"modules, :func:`exec`, :func:`eval`) it returns the mapping representing the "
-"frame locals directly (as described for :func:`locals`)."
+"allows modifying the locals. In all other cases (classes, modules, :func:"
+"`exec`, :func:`eval`) it returns the mapping representing the frame locals "
+"directly (as described for :func:`locals`)."
 msgstr ""
 
 #: ../Doc/c-api/frame.rst:134

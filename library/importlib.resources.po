@@ -75,10 +75,10 @@ msgid ""
 msgstr ""
 "Este módulo proporciona una funcionalidad similar a `pkg_resources <https://"
 "setuptools.readthedocs.io/en/latest/pkg_resources.html>`_ `Acceso a los "
-"recursos básicos <https://setuptools.readthedocs.io/en/latest/"
-"pkg_resources.html#basic-resource-access>`_ sin la sobrecarga de rendimiento "
-"de ese paquete. Esto facilita la lectura de los recursos incluidos en los "
-"paquetes, con una semántica más estable y consistente."
+"recursos básicos <https://setuptools.readthedocs.io/en/latest/pkg_resources."
+"html#basic-resource-access>`_ sin la sobrecarga de rendimiento de ese "
+"paquete. Esto facilita la lectura de los recursos incluidos en los paquetes, "
+"con una semántica más estable y consistente."
 
 #: ../Doc/library/importlib.resources.rst:43
 msgid ""
@@ -104,8 +104,8 @@ msgstr ""
 
 #: ../Doc/library/importlib.resources.rst:55
 msgid ""
-"Represents an anchor for resources, either a :class:`module object "
-"<types.ModuleType>` or a module name as a string. Defined as ``Union[str, "
+"Represents an anchor for resources, either a :class:`module object <types."
+"ModuleType>` or a module name as a string. Defined as ``Union[str, "
 "ModuleType]``."
 msgstr ""
 
@@ -133,10 +133,9 @@ msgstr ""
 msgid ""
 "*package* parameter was renamed to *anchor*. *anchor* can now be a non-"
 "package module and if omitted will default to the caller's module. *package* "
-"is still accepted for compatibility but will raise "
-"a :exc:`DeprecationWarning`. Consider passing the anchor positionally or "
-"using ``importlib_resources >= 5.10`` for a compatible interface on older "
-"Pythons."
+"is still accepted for compatibility but will raise a :exc:"
+"`DeprecationWarning`. Consider passing the anchor positionally or using "
+"``importlib_resources >= 5.10`` for a compatible interface on older Pythons."
 msgstr ""
 
 #: ../Doc/library/importlib.resources.rst:84
@@ -190,9 +189,8 @@ msgstr ""
 
 #: ../Doc/library/importlib.resources.rst:112
 msgid ""
-"*anchor* is an :class:`~importlib.resources.Anchor`, as "
-"in :func:`~importlib.resources.files`. Unlike in ``files``, it may not be "
-"omitted."
+"*anchor* is an :class:`~importlib.resources.Anchor`, as in :func:`~importlib."
+"resources.files`. Unlike in ``files``, it may not be omitted."
 msgstr ""
 
 #: ../Doc/library/importlib.resources.rst:116

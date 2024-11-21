@@ -263,8 +263,8 @@ msgid ""
 "Set a factory used by :meth:`loop.create_task` to create :class:`Tasks "
 "<Task>`."
 msgstr ""
-"Establece una fábrica utilizada por :meth:`loop.create_task` para "
-"crear :class:`Tareas <Task>`."
+"Establece una fábrica utilizada por :meth:`loop.create_task` para crear :"
+"class:`Tareas <Task>`."
 
 #: ../Doc/library/asyncio-llapi-index.rst:127
 msgid ":meth:`loop.get_task_factory`"
@@ -275,8 +275,8 @@ msgid ""
 "Get the factory :meth:`loop.create_task` uses to create :class:`Tasks "
 "<Task>`."
 msgstr ""
-"Obtiene la fábrica :meth:`loop.create_task` que se usa para "
-"crear :class:`Tareas <Task>`."
+"Obtiene la fábrica :meth:`loop.create_task` que se usa para crear :class:"
+"`Tareas <Task>`."
 
 #: ../Doc/library/asyncio-llapi-index.rst:132
 msgid "DNS"
@@ -676,14 +676,12 @@ msgstr "Retorna el protocolo actual."
 #: ../Doc/library/asyncio-llapi-index.rst:314
 msgid ""
 "Transports that can receive data (TCP and Unix connections, pipes, etc).  "
-"Returned from methods "
-"like :meth:`loop.create_connection`, :meth:`loop.create_unix_connection`, :meth:`loop.connect_read_pipe`, "
-"etc:"
+"Returned from methods like :meth:`loop.create_connection`, :meth:`loop."
+"create_unix_connection`, :meth:`loop.connect_read_pipe`, etc:"
 msgstr ""
 "Transportes que pueden recibir datos (conexiones TCP y Unix, *pipes*, etc). "
-"Retornan de métodos "
-"como :meth:`loop.create_connection`, :meth:`loop.create_unix_connection`, :meth:`loop.connect_read`, "
-"etc:"
+"Retornan de métodos como :meth:`loop.create_connection`, :meth:`loop."
+"create_unix_connection`, :meth:`loop.connect_read`, etc:"
 
 #: ../Doc/library/asyncio-llapi-index.rst:319
 msgid "Read Transports"
@@ -716,14 +714,12 @@ msgstr "Reanuda la recepción."
 #: ../Doc/library/asyncio-llapi-index.rst:334
 msgid ""
 "Transports that can Send data (TCP and Unix connections, pipes, etc).  "
-"Returned from methods "
-"like :meth:`loop.create_connection`, :meth:`loop.create_unix_connection`, :meth:`loop.connect_write_pipe`, "
-"etc:"
+"Returned from methods like :meth:`loop.create_connection`, :meth:`loop."
+"create_unix_connection`, :meth:`loop.connect_write_pipe`, etc:"
 msgstr ""
 "Transportes que pueden enviar datos (conexiones TCP y Unix, *pipes*, etc). "
-"Retornan de métodos "
-"como :meth:`loop.create_connection`, :meth:`loop.create_unix_connection`, :meth:`loop.connect_write_pipe`, "
-"etc:"
+"Retornan de métodos como :meth:`loop.create_connection`, :meth:`loop."
+"create_unix_connection`, :meth:`loop.connect_write_pipe`, etc:"
 
 #: ../Doc/library/asyncio-llapi-index.rst:339
 msgid "Write Transports"
@@ -772,11 +768,11 @@ msgstr "Cierra el transporte inmediatamente."
 
 #: ../Doc/library/asyncio-llapi-index.rst:359
 msgid ""
-":meth:`transport.get_write_buffer_size() "
-"<WriteTransport.get_write_buffer_size>`"
+":meth:`transport.get_write_buffer_size() <WriteTransport."
+"get_write_buffer_size>`"
 msgstr ""
-":meth:`transport.get_write_buffer_size() "
-"<WriteTransport.get_write_buffer_size>`"
+":meth:`transport.get_write_buffer_size() <WriteTransport."
+"get_write_buffer_size>`"
 
 #: ../Doc/library/asyncio-llapi-index.rst:361
 msgid "Return the current size of the output buffer."
@@ -784,11 +780,11 @@ msgstr "Retorna el tamaño actual del búfer de salida."
 
 #: ../Doc/library/asyncio-llapi-index.rst:363
 msgid ""
-":meth:`transport.get_write_buffer_limits() "
-"<WriteTransport.get_write_buffer_limits>`"
+":meth:`transport.get_write_buffer_limits() <WriteTransport."
+"get_write_buffer_limits>`"
 msgstr ""
-":meth:`transport.get_write_buffer_limits() "
-"<WriteTransport.get_write_buffer_limits>`"
+":meth:`transport.get_write_buffer_limits() <WriteTransport."
+"get_write_buffer_limits>`"
 
 # water marks estrá traducido como "límite" en las páginas a la que apunta
 # este archivo. Mantuve el mismo criterio. En caso de corregir deberíamos
@@ -803,11 +799,11 @@ msgstr ""
 
 #: ../Doc/library/asyncio-llapi-index.rst:367
 msgid ""
-":meth:`transport.set_write_buffer_limits() "
-"<WriteTransport.set_write_buffer_limits>`"
+":meth:`transport.set_write_buffer_limits() <WriteTransport."
+"set_write_buffer_limits>`"
 msgstr ""
-":meth:`transport.set_write_buffer_limits() "
-"<WriteTransport.set_write_buffer_limits>`"
+":meth:`transport.set_write_buffer_limits() <WriteTransport."
+"set_write_buffer_limits>`"
 
 #: ../Doc/library/asyncio-llapi-index.rst:369
 msgid "Set new high and low water marks for write flow control."
@@ -837,11 +833,11 @@ msgstr ":meth:`transport.abort() <DatagramTransport.abort>`"
 
 #: ../Doc/library/asyncio-llapi-index.rst:386
 msgid ""
-"Low-level transport abstraction over subprocesses. Returned "
-"by :meth:`loop.subprocess_exec` and :meth:`loop.subprocess_shell`:"
+"Low-level transport abstraction over subprocesses. Returned by :meth:`loop."
+"subprocess_exec` and :meth:`loop.subprocess_shell`:"
 msgstr ""
-"Abstracción de transporte de bajo nivel sobre subprocesos. Retornado "
-"por :meth:`loop.subprocess_exec` y :meth:`loop.subprocess_shell`:"
+"Abstracción de transporte de bajo nivel sobre subprocesos. Retornado por :"
+"meth:`loop.subprocess_exec` y :meth:`loop.subprocess_shell`:"
 
 #: ../Doc/library/asyncio-llapi-index.rst:390
 msgid "Subprocess Transports"
@@ -857,11 +853,11 @@ msgstr "Retorna el id de proceso del subproceso."
 
 #: ../Doc/library/asyncio-llapi-index.rst:398
 msgid ""
-":meth:`transport.get_pipe_transport() "
-"<SubprocessTransport.get_pipe_transport>`"
+":meth:`transport.get_pipe_transport() <SubprocessTransport."
+"get_pipe_transport>`"
 msgstr ""
-":meth:`transport.get_pipe_transport() "
-"<SubprocessTransport.get_pipe_transport>`"
+":meth:`transport.get_pipe_transport() <SubprocessTransport."
+"get_pipe_transport>`"
 
 #: ../Doc/library/asyncio-llapi-index.rst:400
 msgid ""
@@ -1025,8 +1021,8 @@ msgstr ""
 msgid ""
 "Called when a previous send or receive operation raises an :class:`OSError`."
 msgstr ""
-"Se llama cuando una operación de envío o recepción anterior genera "
-"un :class:`OSError`."
+"Se llama cuando una operación de envío o recepción anterior genera un :class:"
+"`OSError`."
 
 #: ../Doc/library/asyncio-llapi-index.rst:482
 msgid "Subprocess Protocols"
@@ -1036,8 +1032,8 @@ msgstr "Protocolos de subprocesos"
 #, fuzzy
 msgid "``callback`` :meth:`~SubprocessProtocol.pipe_data_received`"
 msgstr ""
-"``callback`` :meth:`pipe_data_received() "
-"<SubprocessProtocol.pipe_data_received>`"
+"``callback`` :meth:`pipe_data_received() <SubprocessProtocol."
+"pipe_data_received>`"
 
 #: ../Doc/library/asyncio-llapi-index.rst:488
 msgid ""
@@ -1050,8 +1046,8 @@ msgstr ""
 #, fuzzy
 msgid "``callback`` :meth:`~SubprocessProtocol.pipe_connection_lost`"
 msgstr ""
-"``callback`` :meth:`pipe_connection_lost() "
-"<SubprocessProtocol.pipe_connection_lost>`"
+"``callback`` :meth:`pipe_connection_lost() <SubprocessProtocol."
+"pipe_connection_lost>`"
 
 #: ../Doc/library/asyncio-llapi-index.rst:492
 msgid ""
@@ -1067,9 +1063,9 @@ msgstr ""
 
 #: ../Doc/library/asyncio-llapi-index.rst:497
 msgid ""
-"Called when the child process has exited. It can be called "
-"before :meth:`~SubprocessProtocol.pipe_data_received` "
-"and :meth:`~SubprocessProtocol.pipe_connection_lost` methods."
+"Called when the child process has exited. It can be called before :meth:"
+"`~SubprocessProtocol.pipe_data_received` and :meth:`~SubprocessProtocol."
+"pipe_connection_lost` methods."
 msgstr ""
 
 #: ../Doc/library/asyncio-llapi-index.rst:503
@@ -1078,9 +1074,9 @@ msgstr "Políticas de bucle de eventos"
 
 #: ../Doc/library/asyncio-llapi-index.rst:505
 msgid ""
-"Policies is a low-level mechanism to alter the behavior of functions "
-"like :func:`asyncio.get_event_loop`.  See also the main :ref:`policies "
-"section <asyncio-policies>` for more details."
+"Policies is a low-level mechanism to alter the behavior of functions like :"
+"func:`asyncio.get_event_loop`.  See also the main :ref:`policies section "
+"<asyncio-policies>` for more details."
 msgstr ""
 "Las políticas son un mecanismo de bajo nivel para alterar el comportamiento "
 "de funciones como :func:`asyncio.get_event_loop`. Vea también la sección "

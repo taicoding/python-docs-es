@@ -116,12 +116,12 @@ msgstr ""
 #: ../Doc/c-api/slice.rst:60
 msgid ""
 "This function is considered not safe for resizable sequences. Its invocation "
-"should be replaced by a combination of :c:func:`PySlice_Unpack` "
-"and :c:func:`PySlice_AdjustIndices` where ::"
+"should be replaced by a combination of :c:func:`PySlice_Unpack` and :c:func:"
+"`PySlice_AdjustIndices` where ::"
 msgstr ""
 "Esta función se considera no segura para secuencias redimensionables. Su "
-"invocación debe ser reemplazada por una combinación "
-"de :c:func:`PySlice_Unpack` y :c:func:`PySlice_AdjustIndices` donde::"
+"invocación debe ser reemplazada por una combinación de :c:func:"
+"`PySlice_Unpack` y :c:func:`PySlice_AdjustIndices` donde::"
 
 #: ../Doc/c-api/slice.rst:64
 msgid ""
@@ -153,9 +153,9 @@ msgid ""
 msgstr ""
 "Si ``Py_LIMITED_API`` no se establece o establece el valor entre "
 "``0x03050400`` y ``0x03060000`` (sin incluir) o ``0x03060100`` o un "
-"superior :c:func:`!PySlice_GetIndicesEx` se implementa como un macro "
-"usando :c:func:`! PySlice_Unpack` y :c:func:`!PySlice_AdjustIndices`. Los "
-"argumentos *start*, *stop* y *step* se evalúan más de una vez."
+"superior :c:func:`!PySlice_GetIndicesEx` se implementa como un macro usando :"
+"c:func:`! PySlice_Unpack` y :c:func:`!PySlice_AdjustIndices`. Los argumentos "
+"*start*, *stop* y *step* se evalúan más de una vez."
 
 #: ../Doc/c-api/slice.rst:86
 msgid ""
@@ -212,12 +212,12 @@ msgstr "Objeto elipsis"
 #: ../Doc/c-api/slice.rst:123
 #, fuzzy
 msgid ""
-"The Python ``Ellipsis`` object.  This object has no methods.  "
-"Like :c:data:`Py_None`, it is an :term:`immortal` singleton object."
+"The Python ``Ellipsis`` object.  This object has no methods.  Like :c:data:"
+"`Py_None`, it is an :term:`immortal` singleton object."
 msgstr ""
-"El objeto ``Elipsis`` de Python. Este objeto no tiene métodos. Al igual "
-"que :c:data:`Py_None`, es un objeto singleton `inmortal <https://"
-"peps.python.org/pep-0683/>`_."
+"El objeto ``Elipsis`` de Python. Este objeto no tiene métodos. Al igual que :"
+"c:data:`Py_None`, es un objeto singleton `inmortal <https://peps.python.org/"
+"pep-0683/>`_."
 
 #: ../Doc/c-api/slice.rst:126
 msgid ":c:data:`Py_Ellipsis` is immortal."
