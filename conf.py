@@ -31,8 +31,8 @@ from conf import *
 
 # Call patchlevel with the proper path to get the version from
 # instead of hardcoding it
-from patchlevel import get_header_version_info
-version, release = get_header_version_info(os.path.abspath('cpython/Doc'))
+from patchlevel import get_version_info
+version, release = get_version_info()
 
 project = 'Python en Español'
 year = time.strftime("%Y")
