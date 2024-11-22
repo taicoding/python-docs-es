@@ -29,23 +29,7 @@ sys.path.append(os.path.abspath('cpython/Doc/includes'))
 sys.path.insert(0, os.path.abspath('cpython/Doc'))
 from conf import *
 
-# FIXME
-# For fixing the warnings that state that 'cwe', 'cve' roles are already
-# defined.
-#
-# WARNING: role 'cve' is already registered, it will be overridden [app.add_role]
-# WARNING: role 'cwe' is already registered, it will be overridden [app.add_role]
-del extlinks["cwe"]
-del extlinks["cve"]
-
-# Call patchlevel with the proper path to get the version from
-# instead of hardcoding it
-from patchlevel import get_version_info
-version, release = get_version_info()
-
 project = 'Python en Español'
-year = time.strftime("%Y")
-copyright = f'2001-{year}, Python Software Foundation'
 
 html_theme_path = ['cpython/Doc/tools']
 templates_path = ['cpython/Doc/tools/templates']
